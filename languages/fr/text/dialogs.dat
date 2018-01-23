@@ -1,0 +1,492 @@
+dialog{
+  id = "_cannot_lift_should_cut",
+  skip = "all",
+  text = [[
+Il te faudrait quelque
+chose de tranchant pour
+couper ces buissons...
+]]
+}
+
+dialog{
+  id = "_cannot_lift_still_too_heavy",
+  skip = "all",
+  text = [[
+C'est beaucoup trop
+lourd pour toi !
+]]
+}
+
+dialog{
+  id = "_cannot_lift_too_heavy",
+  skip = "all",
+  text = [[
+Oh là là, c'est
+bien trop lourd !
+
+Tu n'y arriveras jamais
+rien que par la force
+de tes bras !
+]]
+}
+
+dialog{
+  id = "_crystal",
+  skip = "all",
+  text = [[
+C'est un interrupteur
+de cristal. Frappe-le
+avec quelque chose...
+]]
+}
+
+dialog{
+  id = "_empty_chest",
+  text = [[
+Ce coffre est vide !
+Tant pis pour toi !
+]]
+}
+
+dialog{
+  id = "_shop.amount_full",
+  text = [[
+Tu es déjà au maximum !
+]]
+}
+
+dialog{
+  id = "_shop.not_enough_money",
+  skip = "all",
+  text = [[
+Désolé, mais tu n'as
+pas assez d'argent !
+]]
+}
+
+dialog{
+  id = "_shop.question",
+  question = "1",
+  text = [[
+Prix : $v rubis.
+Acheter
+Ne pas acheter
+]]
+}
+
+dialog{
+  id = "_treasure.bone_key.1",
+  icon = "20",
+  text = [[
+Tu as trouvé la
+Clé d'Os !$0
+]]
+}
+
+dialog{
+  id = "_treasure.fire_stone.1",
+  icon = "34",
+  text = [[
+Tu as trouvé la
+Pierre de Feu !$0
+]]
+}
+
+dialog{
+  id = "_treasure.flippers.1",
+  icon = "26",
+  text = [[
+Tu as trouvé les
+Palmes !$0
+
+Tu peux désormais
+nager en eau
+profonde !
+]]
+}
+
+dialog{
+  id = "_treasure.heart.1",
+  icon = "84",
+  text = [[
+Tu as trouvé
+un Coeur de Vie !
+]]
+}
+
+dialog{
+  id = "_treasure.mystic_mirror.1",
+  icon = "14",
+  text = [[
+Tu as trouvé le
+Miroir Mystique !$0
+
+A quoi peut-il bien
+servir ?
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.1",
+  icon = "90",
+  text = [[
+Tu as trouvé
+1 rubis !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.2",
+  icon = "91",
+  text = [[
+Tu as trouvé
+5 rubis !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.3",
+  icon = "92",
+  text = [[
+Tu as trouvé
+20 rubis !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.4",
+  icon = "93",
+  text = [[
+Tu as trouvé
+50 rubis !
+Merveilleux !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.5",
+  icon = "94",
+  text = [[
+Tu as trouvé
+100 rubis !
+Fantastique !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.6",
+  icon = "95",
+  text = [[
+Tu as trouvé
+300 rubis !
+Incroyable !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee_bag.2",
+  icon = "52",
+  text = [[
+Tu as trouvé le
+Grand Sac de Rubis !$0
+
+Il peut contenir
+jusqu'à 300 rubis !
+]]
+}
+
+dialog{
+  id = "_treasure.rupee_bag.3",
+  icon = "53",
+  text = [[
+Tu as trouvé le
+Sac de Rubis Géant !$0
+
+Il peut contenir
+jusqu'à 999 rubis !
+]]
+}
+
+dialog{
+  id = "_treasure.shield.1",
+  icon = "63",
+  text = [[
+Tu as trouvé le
+Bouclier !$0
+
+Tu peux repousser
+les attaques des
+ennemis !
+]]
+}
+
+dialog{
+  id = "_treasure.shield.2",
+  icon = "64",
+  text = [[
+Tu as trouvé le
+Bouclier de Feu !$0
+Tu es désormais
+protégé contre les
+attaques
+enflammées !
+]]
+}
+
+dialog{
+  id = "_treasure.shield.3",
+  icon = "65",
+  text = [[
+Tu as trouvé le
+Bouclier Miroir !$0
+
+Tu peux désormais
+contrer les lasers !
+]]
+}
+
+dialog{
+  id = "_treasure.sword.1",
+  icon = "66",
+  text = [[
+Tu as obtenu l'Epée
+du Courage !$0
+
+Tu peux croiser le
+fer et affronter
+les ennemis !
+]]
+}
+
+dialog{
+  id = "_treasure.sword.2",
+  icon = "67",
+  next = "_treasure.sword.2.1",
+  text = [[
+$1Tu as trouvé
+l'épée de légende !$0$0$0
+Cette nouvelle épée
+]]
+}
+
+dialog{
+  id = "_treasure.sword.2.1",
+  text = [[
+te permettra de repousser
+les forces du mal !!
+
+]]
+}
+
+dialog{
+  id = "_treasure.sword.3",
+  icon = "68",
+  text = [[
+$1Tu as trouvé
+l'Epée de Quatre !$0$0$0
+
+Cette nouvelle Epée
+a été trouvée au pic César.
+]]
+}
+
+dialog{
+  id = "_treasure.sword.4",
+  icon = "69",
+  text = [[
+Tu as trouvé la Lame
+Purificatrice !$0
+La puissance de
+cette épée ultime
+dépasse
+l'entendement...
+]]
+}
+
+dialog{
+  id = "city.npc.1",
+  text = [[
+Derrière la montagne se cache un secret.
+]]
+}
+
+dialog{
+  id = "dungeon_3.too_lightweight",
+  text = [[
+Hé ! Mais tu es trop léger !
+]]
+}
+
+dialog{
+  id = "forest.mirror_npc.give_mirror",
+  question = "1",
+  text = [[
+Bouhouhouh...
+Je suis trop triste,
+je veux un miroir !
+Donne-moi ce miroir !
+Oui
+Pas question
+]]
+}
+
+dialog{
+  id = "forest.mirror_npc.want_mirror",
+  text = [[
+Bouhouhouh...
+Je suis trop triste,
+je veux un miroir !
+]]
+}
+
+dialog{
+  id = "forest.mirror_npc.yes",
+  text = [[
+Oh !
+Comment pourrais-je
+te remercier ?
+]]
+}
+
+dialog{
+  id = "inventory.item.bone_key.1",
+  icon = "20",
+  text = [[
+La Clé d'Os.
+Mais où est donc la
+serrure ?
+]]
+}
+
+dialog{
+  id = "inventory.item.fire_stone.1",
+  icon = "34",
+  text = [[
+Une magnifique
+Pierre de Feu.
+]]
+}
+
+dialog{
+  id = "inventory.item.flippers.1",
+  icon = "26",
+  text = [[
+Les Palmes te
+permettent de nager
+en eau profonde.
+]]
+}
+
+dialog{
+  id = "inventory.item.mystic_mirror.1",
+  icon = "14",
+  text = [[
+Le Miroir Mystique.
+A quoi peut-il bien
+servir ?
+]]
+}
+
+dialog{
+  id = "library.collector",
+  text = [[
+Admirez ce magnifique
+ouvrage sur les pierres
+rares.
+Tout ceci est
+fascinant !
+]]
+}
+
+dialog{
+  id = "library.collector.done",
+  text = [[
+Ma collection s'étoffe
+de jour en jour.
+
+Mais attention, ce ne
+sont pas des roches !
+Ce sont des minerais.
+]]
+}
+
+dialog{
+  id = "library.collector.fire_stone_no",
+  text = [[
+Oh, très bien, je
+comprends.
+
+Pardonnez-moi de vous
+avoir importuné cher
+monsieur.
+]]
+}
+
+dialog{
+  id = "library.collector.fire_stone_yes",
+  text = [[
+Oh, merci mon cher ami.
+Voici une authentique
+clé que j'ai gagnée à
+un pari contre l'une de
+mes connaissances.
+A quoi sert-elle ?
+Je l'ignore !
+]]
+}
+
+dialog{
+  id = "library.collector.wants_fire_stone",
+  question = "1",
+  text = [[
+Oh, vous possédez une
+Pierre de Feu ?
+Je commence justement
+une collection de
+minerais. Voudriez-vous
+m'échanger votre pierre
+contre cette Clé d'Os ?
+Oui
+Non
+]]
+}
+
+dialog{
+  id = "library.receptionnist",
+  text = [[
+Bienvenue à la
+Bibliothèque
+d'Hyrule.
+Que puis-je faire
+pour vous ?
+]]
+}
+
+dialog{
+  id = "out.f6.chest_game.wrong_chest",
+  text = [[
+Voyons-voir... Est-ce le bon choix ?
+
+
+Non, ce n'est pas le bon choix...
+Choisis-bien la prochaine fois...
+]]
+}
+
+dialog{
+  id = "save_dialog.no",
+  text = [[
+test
+]]
+}
+
+dialog{
+  id = "save_dialog.yes",
+  question = "1",
+  text = [[
+Sauvegarder la partie ?
+          $? Oui
+          $? Non
+]]
+}
+

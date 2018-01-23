@@ -1,0 +1,358 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1600,
+  height = 1680,
+  min_layer = -1,
+  max_layer = 2,
+  tileset = "dungeon/gray",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1464,
+  width = 272,
+  height = 192,
+  pattern = "floor.5-1",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 1440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1440,
+  width = 128,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 1464,
+  width = 24,
+  height = 192,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 1656,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1656,
+  width = 128,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1656,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1464,
+  width = 24,
+  height = 192,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 1656,
+  width = 128,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 1656,
+  width = 8,
+  height = 16,
+  pattern = "door_main.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 1632,
+  width = 32,
+  height = 24,
+  pattern = "door_main.2.floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 1656,
+  width = 8,
+  height = 16,
+  pattern = "door_main.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 1648,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.2-8",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1648,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.1-8",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 1624,
+  width = 8,
+  height = 24,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 1624,
+  width = 8,
+  height = 24,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 1624,
+  width = 32,
+  height = 8,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 1440,
+  width = 128,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 1448,
+  width = 16,
+  height = 16,
+  pattern = "door.1",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 1448,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 1448,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1416,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-5",
+}
+
+separator{
+  layer = 0,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 232,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 632,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 0,
+  x = 952,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 0,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 472,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 712,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 1192,
+  width = 640,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 960,
+  y = 1192,
+  width = 640,
+  height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 792,
+  y = 1664,
+  width = 16,
+  height = 16,
+  destination_map = "out/f1 - g1 - h1 - i1",
+}
+
+destination{
+  name = "from_outside",
+  layer = 0,
+  x = 800,
+  y = 1661,
+  direction = 1,
+}
+
+tile{
+  layer = 1,
+  x = 792,
+  y = 1672,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-2",
+}
+
+tile{
+  layer = 2,
+  x = 792,
+  y = 1432,
+  width = 16,
+  height = 16,
+  pattern = "floor.2-1",
+}
+
+tile{
+  layer = 2,
+  x = 792,
+  y = 1440,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.1-2",
+}
+
+tile{
+  layer = 2,
+  x = 784,
+  y = 1440,
+  width = 32,
+  height = 8,
+  pattern = "door_top.1-2",
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 1432,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 952,
+  width = 1600,
+  height = 16,
+}
+

@@ -1,0 +1,395 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1600,
+  height = 1680,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "dungeon/14",
+  music = "zbom/field",
+}
+
+enemy{
+  layer = 0,
+  x = 800,
+  y = -347,
+  direction = 0,
+  breed = "alttp/bari_blue",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 1560,
+  width = 240,
+  height = 48,
+  pattern = "522",
+}
+
+tile{
+  layer = 1,
+  x = 424,
+  y = 1480,
+  width = 112,
+  height = 80,
+  pattern = "522",
+}
+
+tile{
+  layer = 1,
+  x = 424,
+  y = 1456,
+  width = 48,
+  height = 24,
+  pattern = "49",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = 1480,
+  width = 24,
+  height = 64,
+  pattern = "51",
+}
+
+tile{
+  layer = 1,
+  x = 536,
+  y = 1480,
+  width = 24,
+  height = 64,
+  pattern = "50",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 1536,
+  width = 48,
+  height = 24,
+  pattern = "49",
+}
+
+tile{
+  layer = 1,
+  x = 552,
+  y = 1536,
+  width = 48,
+  height = 24,
+  pattern = "49",
+}
+
+tile{
+  layer = 1,
+  x = 336,
+  y = 1560,
+  width = 24,
+  height = 48,
+  pattern = "51",
+}
+
+tile{
+  layer = 1,
+  x = 600,
+  y = 1560,
+  width = 24,
+  height = 48,
+  pattern = "50",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 1608,
+  width = 240,
+  height = 24,
+  pattern = "52",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = 1456,
+  width = 24,
+  height = 24,
+  pattern = "45",
+}
+
+tile{
+  layer = 1,
+  x = 536,
+  y = 1456,
+  width = 24,
+  height = 24,
+  pattern = "46",
+}
+
+tile{
+  layer = 1,
+  x = 336,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "45",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "56",
+}
+
+tile{
+  layer = 1,
+  x = 536,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "55",
+}
+
+tile{
+  layer = 1,
+  x = 600,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "46",
+}
+
+tile{
+  layer = 1,
+  x = 336,
+  y = 1608,
+  width = 24,
+  height = 24,
+  pattern = "47",
+}
+
+tile{
+  layer = 1,
+  x = 600,
+  y = 1608,
+  width = 24,
+  height = 24,
+  pattern = "48",
+}
+
+tile{
+  layer = 1,
+  x = 488,
+  y = 1456,
+  width = 48,
+  height = 24,
+  pattern = "49",
+}
+
+tile{
+  layer = 1,
+  x = 488,
+  y = 1464,
+  width = 8,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 1,
+  x = 464,
+  y = 1464,
+  width = 8,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 1,
+  x = 472,
+  y = 1464,
+  width = 16,
+  height = 16,
+  pattern = "76",
+}
+
+tile{
+  layer = 1,
+  x = 320,
+  y = 1200,
+  width = 24,
+  height = 24,
+  pattern = "45",
+}
+
+enemy{
+  layer = 1,
+  x = 432,
+  y = 1493,
+  direction = 3,
+  breed = "lizalfos",
+  treasure_name = "bomb",
+}
+
+enemy{
+  layer = 1,
+  x = 528,
+  y = 1493,
+  direction = 3,
+  breed = "lizalfos",
+  treasure_name = "bomb",
+}
+
+destination{
+  name = "destination",
+  layer = 1,
+  x = 480,
+  y = 1573,
+  direction = 1,
+}
+
+tile{
+  layer = 2,
+  x = 464,
+  y = 1456,
+  width = 32,
+  height = 8,
+  pattern = "437",
+}
+
+tile{
+  layer = 2,
+  x = 464,
+  y = 1456,
+  width = 32,
+  height = 8,
+  pattern = "152",
+}
+
+tile{
+  layer = 2,
+  x = 320,
+  y = 1224,
+  width = 24,
+  height = 192,
+  pattern = "51",
+}
+
+tile{
+  layer = 2,
+  x = 320,
+  y = 1416,
+  width = 24,
+  height = 24,
+  pattern = "47",
+}
+
+tile{
+  layer = 2,
+  x = 344,
+  y = 1416,
+  width = 128,
+  height = 24,
+  pattern = "52",
+}
+
+tile{
+  layer = 2,
+  x = 488,
+  y = 1416,
+  width = 128,
+  height = 24,
+  pattern = "52",
+}
+
+tile{
+  layer = 2,
+  x = 616,
+  y = 1416,
+  width = 24,
+  height = 24,
+  pattern = "48",
+}
+
+separator{
+  layer = 2,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 632,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 952,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 472,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 712,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 320,
+  y = 952,
+  width = 1280,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 1192,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 1432,
+  width = 1600,
+  height = 16,
+}
+

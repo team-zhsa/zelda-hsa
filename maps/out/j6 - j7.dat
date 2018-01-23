@@ -1,0 +1,37 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1280,
+  height = 1440,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "forest",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 48,
+  width = 16,
+  height = 1392,
+  pattern = "forest.4",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "forest.corner_reverse.4",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 32,
+  width = 512,
+  height = 16,
+  pattern = "forest.2",
+}
+
