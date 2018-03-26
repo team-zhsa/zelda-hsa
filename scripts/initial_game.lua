@@ -14,11 +14,9 @@ function initial_game:initialize_new_savegame(game)
 
   -- You can modify this function to set the initial life and equipment
   -- and the starting location.
-  game:set_starting_location("out/f4", nil)
+  game:set_starting_location("house/time_temple", nil)
 
-  sol.language.set_language("fr")
-
-  game:set_max_life(12)
+  game:set_max_life(64)
   game:set_life(game:get_max_life())
   game:set_max_money(100)
   game:set_ability("lift", 1)

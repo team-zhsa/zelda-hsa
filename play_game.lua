@@ -52,7 +52,7 @@ end
 
 -- Returns whether the current map is in the outside world.
 function game:is_in_outside_world()
-  return self:get_map():get_world() == "outside"
+  return self:get_map():get_world() == "outside_world"
 end
 
 -- Returns whether the current map is in a dungeon.

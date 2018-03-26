@@ -9,15 +9,6 @@ properties{
   music = "Temple_du_Temps",
 }
 
-tile{
-  layer = 0,
-  x = 232,
-  y = 600,
-  width = 16,
-  height = 16,
-  pattern = "336",
-}
-
 teletransporter{
   layer = 0,
   x = 232,
@@ -430,6 +421,15 @@ tile{
   width = 8,
   height = 16,
   pattern = "465",
+}
+
+tile{
+  layer = 1,
+  x = 232,
+  y = 600,
+  width = 16,
+  height = 16,
+  pattern = "336",
 }
 
 custom_entity{

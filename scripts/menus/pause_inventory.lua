@@ -3,7 +3,7 @@ local inventory_submenu = submenu:new()
 
 local item_names = {
   "feather",
-  "bombs_counter",
+  "bomb_counter",
   "bow",
   "lamp",
   "pegasus_shoes",

@@ -3,11 +3,11 @@ properties{
   y = 5760,
   width = 1280,
   height = 1440,
-  min_layer = 0,
+  min_layer = -2,
   max_layer = 2,
   world = "outside",
   tileset = "light_world",
-  music = "zmc/shield/fsa_royal_guardian",
+  music = "King_Dodongo_(OoT)",
 }
 
 tile{
@@ -5029,7 +5029,7 @@ destination{
   name = "from_castle",
   layer = 0,
   x = 640,
-  y = 189,
+  y = 229,
   direction = 3,
 }
 
@@ -5416,7 +5416,7 @@ destructible{
 teletransporter{
   layer = 0,
   x = 632,
-  y = 152,
+  y = 160,
   width = 16,
   height = 16,
   destination_map = "castle/1f",

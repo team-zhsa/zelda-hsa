@@ -22,3 +22,8 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+function puzzle_switch_1:on_activated()
+  sol.timer.start(map, 1500)
+  game:set_life(0)
+end

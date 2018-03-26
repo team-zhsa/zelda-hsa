@@ -1,0 +1,459 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1600,
+  height = 1680,
+  min_layer = -1,
+  max_layer = 2,
+  tileset = "dungeon/light_green",
+  music = "Château_de_Lorule_2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 224,
+  height = 128,
+  pattern = "floor_low.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 40,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 128,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 48,
+  width = 8,
+  height = 128,
+  pattern = "wall_border.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 176,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 176,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 176,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 40,
+  width = 24,
+  height = 144,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 40,
+  width = 24,
+  height = 144,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 184,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 184,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 184,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 184,
+  width = 8,
+  height = 16,
+  pattern = "door_main.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 184,
+  width = 8,
+  height = 16,
+  pattern = "door_main.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 160,
+  width = 32,
+  height = 24,
+  pattern = "door_main.2.floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "door_main.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 176,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 176,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 80,
+  width = 32,
+  height = 8,
+  pattern = "cauldron.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "cauldron.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "cauldron.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "cauldron.hole-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 104,
+  width = 32,
+  height = 8,
+  pattern = "cauldron.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 80,
+  width = 32,
+  height = 8,
+  pattern = "cauldron.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "cauldron.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "cauldron.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "cauldron.hole-2",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 104,
+  width = 32,
+  height = 8,
+  pattern = "cauldron.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 48,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-2",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 152,
+  width = 8,
+  height = 24,
+  pattern = "floor_border.3",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 152,
+  width = 8,
+  height = 24,
+  pattern = "floor_border.3",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 152,
+  width = 32,
+  height = 8,
+  pattern = "floor_border.3",
+}
+
+npc{
+  layer = 0,
+  x = 160,
+  y = 93,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/gerudo_hesla",
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 160,
+  y = 197,
+  direction = 1,
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 200,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-2",
+}
+
+tile{
+  layer = 1,
+  x = 144,
+  y = 200,
+  width = 32,
+  height = 8,
+  pattern = "door_top.2-2",
+}
+
+separator{
+  layer = 2,
+  x = 8,
+  y = 1432,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 632,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 952,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1680,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 472,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 712,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 952,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 1192,
+  width = 1600,
+  height = 16,
+}
+

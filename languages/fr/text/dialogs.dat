@@ -5,7 +5,7 @@ dialog{
 Il te faudrait quelque
 chose de tranchant pour
 couper ces buissons...
-]]
+]],
 }
 
 dialog{
@@ -14,7 +14,7 @@ dialog{
   text = [[
 C'est beaucoup trop
 lourd pour toi !
-]]
+]],
 }
 
 dialog{
@@ -27,7 +27,7 @@ bien trop lourd !
 Tu n'y arriveras jamais
 rien que par la force
 de tes bras !
-]]
+]],
 }
 
 dialog{
@@ -37,7 +37,7 @@ dialog{
 C'est un interrupteur
 de cristal. Frappe-le
 avec quelque chose...
-]]
+]],
 }
 
 dialog{
@@ -45,14 +45,14 @@ dialog{
   text = [[
 Ce coffre est vide !
 Tant pis pour toi !
-]]
+]],
 }
 
 dialog{
   id = "_shop.amount_full",
   text = [[
 Tu es déjà au maximum !
-]]
+]],
 }
 
 dialog{
@@ -61,7 +61,7 @@ dialog{
   text = [[
 Désolé, mais tu n'as
 pas assez d'argent !
-]]
+]],
 }
 
 dialog{
@@ -71,7 +71,7 @@ dialog{
 Prix : $v rubis.
 Acheter
 Ne pas acheter
-]]
+]],
 }
 
 dialog{
@@ -80,7 +80,7 @@ dialog{
   text = [[
 Tu as trouvé la
 Clé d'Os !$0
-]]
+]],
 }
 
 dialog{
@@ -89,7 +89,7 @@ dialog{
   text = [[
 Tu as trouvé la
 Pierre de Feu !$0
-]]
+]],
 }
 
 dialog{
@@ -102,7 +102,7 @@ Palmes !$0
 Tu peux désormais
 nager en eau
 profonde !
-]]
+]],
 }
 
 dialog{
@@ -111,7 +111,7 @@ dialog{
   text = [[
 Tu as trouvé
 un Coeur de Vie !
-]]
+]],
 }
 
 dialog{
@@ -123,7 +123,42 @@ Miroir Mystique !$0
 
 A quoi peut-il bien
 servir ?
-]]
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.1",
+  text = [[
+Tu as trouvé un Quart de Coeur !
+Recolte-en encore 3 pour former un
+réceptacle !
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.2",
+  text = [[
+Tu as trouvé un Quart de Coeur !
+Recolte-en encore 2 pour former un
+réceptacle !
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.3",
+  text = [[
+Tu as trouvé un Quart de Coeur !
+Recolte-en encore 1 pour former un
+réceptacle !
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.4",
+  text = [[
+Tu as trouvé un Réceptacle de Coeur !
+Ton énergie augmente d'un coeur !
+]],
 }
 
 dialog{
@@ -132,7 +167,7 @@ dialog{
   text = [[
 Tu as trouvé
 1 rubis !
-]]
+]],
 }
 
 dialog{
@@ -141,7 +176,7 @@ dialog{
   text = [[
 Tu as trouvé
 5 rubis !
-]]
+]],
 }
 
 dialog{
@@ -150,7 +185,7 @@ dialog{
   text = [[
 Tu as trouvé
 20 rubis !
-]]
+]],
 }
 
 dialog{
@@ -160,7 +195,7 @@ dialog{
 Tu as trouvé
 50 rubis !
 Merveilleux !
-]]
+]],
 }
 
 dialog{
@@ -170,7 +205,7 @@ dialog{
 Tu as trouvé
 100 rubis !
 Fantastique !
-]]
+]],
 }
 
 dialog{
@@ -180,7 +215,7 @@ dialog{
 Tu as trouvé
 300 rubis !
 Incroyable !
-]]
+]],
 }
 
 dialog{
@@ -192,7 +227,7 @@ Grand Sac de Rubis !$0
 
 Il peut contenir
 jusqu'à 300 rubis !
-]]
+]],
 }
 
 dialog{
@@ -204,7 +239,7 @@ Sac de Rubis Géant !$0
 
 Il peut contenir
 jusqu'à 999 rubis !
-]]
+]],
 }
 
 dialog{
@@ -217,7 +252,7 @@ Bouclier !$0
 Tu peux repousser
 les attaques des
 ennemis !
-]]
+]],
 }
 
 dialog{
@@ -230,7 +265,7 @@ Tu es désormais
 protégé contre les
 attaques
 enflammées !
-]]
+]],
 }
 
 dialog{
@@ -242,7 +277,7 @@ Bouclier Miroir !$0
 
 Tu peux désormais
 contrer les lasers !
-]]
+]],
 }
 
 dialog{
@@ -255,7 +290,7 @@ du Courage !$0
 Tu peux croiser le
 fer et affronter
 les ennemis !
-]]
+]],
 }
 
 dialog{
@@ -266,7 +301,7 @@ dialog{
 $1Tu as trouvé
 l'épée de légende !$0$0$0
 Cette nouvelle épée
-]]
+]],
 }
 
 dialog{
@@ -275,7 +310,7 @@ dialog{
 te permettra de repousser
 les forces du mal !!
 
-]]
+]],
 }
 
 dialog{
@@ -287,7 +322,7 @@ l'Epée de Quatre !$0$0$0
 
 Cette nouvelle Epée
 a été trouvée au pic César.
-]]
+]],
 }
 
 dialog{
@@ -300,21 +335,36 @@ La puissance de
 cette épée ultime
 dépasse
 l'entendement...
-]]
+]],
 }
 
 dialog{
   id = "city.npc.1",
   text = [[
 Derrière la montagne se cache un secret.
-]]
+]],
+}
+
+dialog{
+  id = "credits",
+  text = [[
+- Codage : lucifer
+- Graphismes : lucifer, linkff, ML_;
+- Développage et site : Salade_Verte_;
+- Idées : bp_;
+Un grand merci à :
+- Nintendo (R) pour The legend of Zelda;
+- ChristophoZS, et toute l'équipe de Solarus;
+- Vous, qui avez eu la patience de terminer
+The Legend of Zelda : Hyrule's Adventure
+]],
 }
 
 dialog{
   id = "dungeon_3.too_lightweight",
   text = [[
 Hé ! Mais tu es trop léger !
-]]
+]],
 }
 
 dialog{
@@ -327,7 +377,7 @@ je veux un miroir !
 Donne-moi ce miroir !
 Oui
 Pas question
-]]
+]],
 }
 
 dialog{
@@ -336,7 +386,7 @@ dialog{
 Bouhouhouh...
 Je suis trop triste,
 je veux un miroir !
-]]
+]],
 }
 
 dialog{
@@ -345,7 +395,7 @@ dialog{
 Oh !
 Comment pourrais-je
 te remercier ?
-]]
+]],
 }
 
 dialog{
@@ -355,7 +405,7 @@ dialog{
 La Clé d'Os.
 Mais où est donc la
 serrure ?
-]]
+]],
 }
 
 dialog{
@@ -364,7 +414,7 @@ dialog{
   text = [[
 Une magnifique
 Pierre de Feu.
-]]
+]],
 }
 
 dialog{
@@ -374,7 +424,7 @@ dialog{
 Les Palmes te
 permettent de nager
 en eau profonde.
-]]
+]],
 }
 
 dialog{
@@ -384,7 +434,7 @@ dialog{
 Le Miroir Mystique.
 A quoi peut-il bien
 servir ?
-]]
+]],
 }
 
 dialog{
@@ -395,7 +445,7 @@ ouvrage sur les pierres
 rares.
 Tout ceci est
 fascinant !
-]]
+]],
 }
 
 dialog{
@@ -407,7 +457,7 @@ de jour en jour.
 Mais attention, ce ne
 sont pas des roches !
 Ce sont des minerais.
-]]
+]],
 }
 
 dialog{
@@ -419,7 +469,7 @@ comprends.
 Pardonnez-moi de vous
 avoir importuné cher
 monsieur.
-]]
+]],
 }
 
 dialog{
@@ -432,7 +482,7 @@ un pari contre l'une de
 mes connaissances.
 A quoi sert-elle ?
 Je l'ignore !
-]]
+]],
 }
 
 dialog{
@@ -448,7 +498,7 @@ m'échanger votre pierre
 contre cette Clé d'Os ?
 Oui
 Non
-]]
+]],
 }
 
 dialog{
@@ -459,7 +509,7 @@ Bibliothèque
 d'Hyrule.
 Que puis-je faire
 pour vous ?
-]]
+]],
 }
 
 dialog{
@@ -470,14 +520,14 @@ Voyons-voir... Est-ce le bon choix ?
 
 Non, ce n'est pas le bon choix...
 Choisis-bien la prochaine fois...
-]]
+]],
 }
 
 dialog{
   id = "save_dialog.no",
   text = [[
 test
-]]
+]],
 }
 
 dialog{
@@ -487,6 +537,6 @@ dialog{
 Sauvegarder la partie ?
           $? Oui
           $? Non
-]]
+]],
 }
 

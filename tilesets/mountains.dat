@@ -2053,6 +2053,7 @@ tile_pattern{
   y = 784,
   width = 8,
   height = 8,
+  repeat_mode = "vertical",
 }
 
 tile_pattern{
@@ -2073,6 +2074,18 @@ tile_pattern{
   y = 784,
   width = 8,
   height = 8,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "285",
+  ground = "hole",
+  default_layer = 0,
+  x = 16,
+  y = 736,
+  width = 8,
+  height = 16,
+  repeat_mode = "vertical",
 }
 
 tile_pattern{
@@ -2266,6 +2279,50 @@ tile_pattern{
   y = 840,
   width = 16,
   height = 24,
+}
+
+tile_pattern{
+  id = "302",
+  ground = "wall",
+  default_layer = 0,
+  x = 128,
+  y = 704,
+  width = 16,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "303",
+  ground = "wall",
+  default_layer = 0,
+  x = 128,
+  y = 688,
+  width = 16,
+  height = 16,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "304",
+  ground = "wall",
+  default_layer = 0,
+  x = 112,
+  y = 688,
+  width = 16,
+  height = 16,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "305",
+  ground = "wall",
+  default_layer = 0,
+  x = 112,
+  y = 704,
+  width = 16,
+  height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{

@@ -13,6 +13,7 @@ local game = map:get_game()
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
   map:open_doors("door_sensor_1_a")
+  map:open_doors("door_sensor_2_a")
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
@@ -42,3 +43,19 @@ end
 function door_sensor_1_c:on_dead()
   map:open_doors("door_sensor_1_a")
 end
+
+function door_sensor_2_b:on_activated()
+  map:close_doors("door_sensor_2_a")
+  door_sensor_2_b:set_enabled(false)
+end
+
+function door_sensor_2_c:on_dead()
+  map:open_doors("door_sensor_2_a")
+end
+
+sol.timer.start(map, 1000, function()
+  local num_calls = 0
+  game:remove_life(2)
+   num_calls = num_calls + 1
+  return num_calls < 120
+end)

@@ -1,10 +1,10 @@
 local item = ...
 
 local message_id = {
-  "found_piece_of_heart.first",
-  "found_piece_of_heart.second",
-  "found_piece_of_heart.third",
-  "found_piece_of_heart.fourth"
+  "found_piece_of_heart.1",
+  "found_piece_of_heart.2",
+  "found_piece_of_heart.3",
+  "found_piece_of_heart.4"
 }
 
 function item:on_created()
