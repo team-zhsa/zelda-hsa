@@ -1,4 +1,4 @@
--- Lua script of map dungeon_5/1f.
+-- Lua script of map d4.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

@@ -5,7 +5,7 @@ local body_speed = 80
 -- Manhandla: Boss with multiple heads to attack. This defines the body segment and creates the heads (green, red, blue, purple) dynamically.
 
 function enemy:on_created()
-  self:set_life(5); self:set_damage(4)
+  self:set_life(4); self:set_damage(2)
   self:create_sprite("enemies/manhandla")
   self:set_size(24, 24); self:set_origin(12, 12)
   self:set_hurt_style("boss")

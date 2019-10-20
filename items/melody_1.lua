@@ -25,7 +25,7 @@ function item:on_using()
     local map = game:get_map()
     local hero = map:get_hero()
     local ocarina = game:get_item("ocarina")
-    ocarina:playing_song("ocarina/montagne")
+    ocarina:playing_song("items/ocarina_1")
 
     item:set_finished()
 end

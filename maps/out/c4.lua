@@ -22,3 +22,7 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+function border_c4_w:on_activated()
+  game:start_dialog("scripts.misc.world.mapbound")
+end

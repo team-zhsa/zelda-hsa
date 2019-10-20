@@ -1,15 +1,13 @@
 local enemy = ...
-local behavior = require("enemies/generic/tektite")
 
--- Tektite: a jumping enemy which moves toward the hero.
+local behavior = require("enemies/lib/towards_hero")
 
 local properties = {
-  main_sprite = "enemies/tektite_blue",
-  life = 3,
-  damage = 4,
-  normal_speed = 48,
-  faster_speed = 72,
-  max_height = 24
+  sprite = "enemies/" .. enemy:get_breed(),
+  life = 2,
+  damage = 1,
+  normal_speed = 64,
+  faster_speed = 64,
 }
 
 behavior:create(enemy, properties)

@@ -1,9 +1,12 @@
 -- A torch that can be lit by fire and unlit by ice.
 -- Methods: is_lit(), set_lit()
 -- Events: on_lit(), on_unlit()
--- The state is preserved accross maps if the torch has a name, until the world changes.
 -- The initial state depends on the direction: unlit if direction 0, lit otherwise.
+--
+-- Torches whose name starts with "timed_torch" have a limited light duration.
+-- You can also use torch:set_duration() for more control.
 local torch = ...
+local map = torch:get_map()
 local sprite
 
 function torch:on_created()
@@ -16,26 +19,15 @@ function torch:on_created()
   end
   sprite = torch:get_sprite()
 
-  local lit
-
-  local name = torch:get_name()
-  if name ~= nil then
-    -- See in the game object.
-    local game = torch:get_game()
-    local map_id = game:get_map():get_id()
-    if game.lit_torches_by_map ~= nil and
-        game.lit_torches_by_map[map_id] ~= nil then
-      lit = game.lit_torches_by_map[map_id][name]
-    end
-  end
-
-  -- Not info in the game, use the setting of the map.
-  if lit == nil then
-    lit = torch:get_direction() ~= 0
-  end
+  local lit = torch:get_direction() ~= 0
 
   sprite:set_direction(0)
   torch:set_lit(lit)
+
+  local name = torch:get_name()
+  if name ~= nil and name:match("^timed_torch") then
+    torch:set_duration(10000)
+  end
 end
 
 function torch:is_lit()
@@ -46,21 +38,27 @@ function torch:set_lit(lit)
 
   if lit then
     sprite:set_animation("lit")
+    if torch.duration ~= nil then
+      sol.timer.start(torch, torch.duration, function()
+        torch:set_lit(false)
+      end)
+    end
   else
     sprite:set_animation("unlit")
   end
 
-  local name = torch:get_name()
-  if name ~= nil then
-    -- Store the state into the game.
-    -- game_manager should clear game.lit_torches_by_map when the world changes.
-    local game = torch:get_game()
-    local map_id = game:get_map():get_id()
-    game.lit_torches_by_map = game.lit_torches_by_map or {}
-    game.lit_torches_by_map[map_id] = game.lit_torches_by_map[map_id] or {}
-    game.lit_torches_by_map[map_id][name] = lit
+  if map.torch_changed ~= nil then
+    map:torch_changed(torch, lit)
   end
+end
 
+function torch:get_duration()
+  return torch.duration
+end
+
+-- Sets the light duration. nil means unlimited.
+function torch:set_duration(duration)
+  torch.duration = duration
 end
 
 local function on_collision(torch, other, torch_sprite, other_sprite)
@@ -120,9 +118,3 @@ end)
 
 torch:add_collision_test("sprite", on_collision)
 torch:add_collision_test("overlapping", on_collision)
-
--- Reset torches info if the world changes.
-local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("notify_world_changed", function(game, previous_world, new_world)
-  game.lit_torches_by_map = nil
-end)

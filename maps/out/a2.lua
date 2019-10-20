@@ -10,7 +10,7 @@
 local map = ...
 local game = map:get_game()
 
--- Event called at initialization time, as soon as this map becomes is loaded.
+-- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
   -- You can initialize the movement and sprites of various
@@ -21,4 +21,9 @@ end
 -- that is, when the player takes control of the hero.
 function map:on_opening_transition_finished()
 
+end
+
+function bound_s:on_activated()
+  game:start_dialog("scripts.misc.world.mapbound")
+  hero:set_direction(0)
 end

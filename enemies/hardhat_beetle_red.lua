@@ -1,16 +1,22 @@
 local enemy = ...
-local behavior = require("enemies/generic/toward_hero")
 
 -- Red Hardhat Beetle.
 
+local behavior = require("enemies/lib/towards_hero")
+
 local properties = {
-  sprite = "enemies/hardhat_beetle_red",
-  life = 5,
-  damage = 4,
+  sprite = "enemies/" .. enemy:get_breed(),
+  life = 8,
+  damage = 6,
   normal_speed = 32,
   faster_speed = 48,
-  push_hero_on_sword = true
+  hurt_style = "monster",
+  push_hero_on_sword = true,
+  movement_create = function()
+    local m = sol.movement.create("random")
+    m:set_smooth(true)
+    return m
+  end
 }
-behavior:create(enemy, properties)
 
-enemy:set_attack_consequence("fire", 1)
+behavior:create(enemy, properties)

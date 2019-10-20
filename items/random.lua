@@ -5,26 +5,13 @@ local item = ...
 
 -- Probability of each item between 0 and 1000.
 local probabilities = {
-  [{ "bomb", 1 }]       = 8,    -- 1 bomb.
-  [{ "bomb", 2 }]       = 5,    -- 3 bombs.
-  [{ "bomb", 3 }]       = 2,    -- 8 bombs.
-  [{ "arrow", 1 }]      = 8,    -- 1 arrow.
-  [{ "arrow", 2 }]      = 5,    -- 5 arrows.
-  [{ "arrow", 3 }]      = 2,    -- 10 arrows.
   [{ "rupee", 1 }]      = 50,   -- 1 rupee.
   [{ "rupee", 2 }]      = 15,   -- 5 rupees.
-  [{ "rupee", 3 }]      = 5,    -- 20 rupees.
-  [{ "magic_flask", 1}] = 20,   -- Small magic jar.
-  [{ "magic_flask", 2}] = 8,    -- Big magic jar.
-  [{ "heart", 1}]       = 25,  -- Heart.
-  [{ "fairy", 1}]       = 2,    -- Fairy.
-  [{ "carrot", 1}]      = 2,    -- Carrot.
-  [{ "alchemy", 1}]     = 1.5,  -- Alchemy Stone (rare drop item).
-  [{ "plume", 1 }]      = 1,    -- Goddess Plume (rare drop item).
-  [{ "jade", 1 }]       = 1,    -- Mystic jade (rare drop item).
+  [{ "heart", 1}]       = 100,  -- Heart.
 }
 
 function item:on_pickable_created(pickable)
+
   local treasure_name, treasure_variant = self:choose_random_item()
   if treasure_name ~= nil then
     local map = pickable:get_map()
@@ -42,13 +29,16 @@ end
 
 -- Returns an item name and variant.
 function item:choose_random_item()
+
   local random = math.random(1000)
   local sum = 0
+
   for key, probability in pairs(probabilities) do
     sum = sum + probability
     if random < sum then
       return key[1], key[2]
     end
   end
+
   return nil
 end

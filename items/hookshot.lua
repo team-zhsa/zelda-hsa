@@ -1,57 +1,64 @@
-local item = ...
-
 -- Hookshot similar to the one of Zelda A Link to the Past.
 -- Author: Christopho
 --
 -- It can hurt enemies, activate crystals and solid switches,
 -- catch entities and transport the hero accross cliffs and bad grounds.
+-- Edit the file hookshot_config.lua to change settings like the speed
+-- and which entities are hookable.
 --
 -- * Required resources:
+--
 -- - An animation "hookshot" in the hero sprites (at least for the tunic).
--- - A sprite "entities/hookshot" with animations "hookshot" (the default) and "link".
+-- - A sprite "entities/hookshot" with animations "hookshot"
+--   (the default) and "link".
 -- - A sound "hookshot".
 --
 -- * Hurting enemies:
+--
 -- Two new methods are available on enemies:
--- enemy:get_attack_hookshot() and enemy:set_attack_hookshot().
--- Call enemy:set_attack_hookshot() from your enemy scripts to define how they react:
+-- enemy:get_hookshot_reaction() and enemy:set_hookshot_reaction().
+-- Call enemy:set_hookshot_reaction() from your enemy scripts
+-- to define how they react:
 -- immobilize him, hurt him, do nothing, etc.
 -- The allowed values are the same as in enemy:set_attack_consequence().
 --
 -- * Activating mechanisms:
+--
 -- Solid switches and crystals can be activated by the hookshot.
 --
 -- * Catching entities:
--- You can customize which entities can be caught.
--- A list of entity types that can be caught is defined below.
--- You can also allow individual entities to be caught by defining a method
--- is_hookshot_catchable() returning true.
+--
+-- You can customize which entities can be cought.
+-- A list of entity types that can be cought is defined in
+-- hookshot_config.lua, feel free to change it.
+-- You can also allow individual entities to be cought by defining a method
+-- is_catchable_with_hookshot() returning true.
 --
 -- * Transporting the hero:
+--
 -- You can customize which entities the hookshot can hook to.
--- A list of entity types that are hookable is defined below.
+-- A list of entity types that are hookable is defined in
+-- hookshot_config.lua, feel free to change it.
 -- You can also allow individual entities to be hookable by defining a method
--- is_hookshot_hook() returning true.
+-- is_hookable() returning true.
 -- If the hero arrives inside an obstacle after the hookshot transportation,
--- his position is automatically adjusted to the last legal position along the way.
+-- his position is automatically adjusted to the last legal position along
+-- the way.
 
-local distance = 208   -- Distance in pixels
-local speed = 240   -- Speed in pixels per second.
--- What types of entities can be caught.
--- Additionally, all entities that have a method "is_hookshot_catchable(true)"
-local catchable_entity_types = { "pickable" }
--- What types of entities the hookshot can attach to.
--- Additionally, all entities that have a method "is_hookshot_hook(true)"
-local hook_entity_types = { "destructible" }
+local item = ...
+
+local config = require("items/hookshot_config.lua")
 
 function item:on_created()
-  self:set_savegame_variable("i1819")
-  self:set_assignable(true)
+
+  item:set_savegame_variable("possession_hookshot")
+  item:set_assignable(true)
 end
 
 -- Function called when the hero uses the hookshot item.
 -- Creates a hookshot entity and sets up the movement.
 function item:on_using()
+
   local going_back = false
   local sound_timer
   local direction
@@ -59,13 +66,14 @@ function item:on_using()
   local hero = map:get_hero()
   local x, y, layer = hero:get_position()
   local direction = hero:get_direction()
-  local hookshot 
+  local hookshot
   local hookshot_sprite
   local link_sprite
-  local entities_caught = {}
+  local entities_cought = {}
   local hooked_entity
   local hooked
   local leader
+
   local go
   local go_back
   local hook_to_entity
@@ -75,10 +83,18 @@ function item:on_using()
   -- Also used for the invisible leader entity used when hooked.
   local function set_can_traverse_rules(entity)
     entity:set_can_traverse("crystal", true)
-    entity:set_can_traverse("crystal_block", true)
+    entity:set_can_traverse("crystal_block", false)
     entity:set_can_traverse("hero", true)
     entity:set_can_traverse("jumper", true)
-    entity:set_can_traverse("stairs", false)  -- TODO only inner stairs should be obstacle and only when on their lowest layer.
+    entity:set_can_traverse("stairs", function(hookshot, stairs)
+      if not stairs:is_inner() then
+        return false
+      end
+      -- Inner stairs can be traversed if the hookshot is above.
+      local _, _, hookshot_layer = hookshot:get_position()
+      local _, _, stairs_layer = stairs:get_position()
+      return hookshot_layer > stairs_layer
+    end)
     entity:set_can_traverse("stream", true)
     entity:set_can_traverse("switch", true)
     entity:set_can_traverse("teletransporter", true)
@@ -87,22 +103,28 @@ function item:on_using()
     entity:set_can_traverse_ground("hole", true)
     entity:set_can_traverse_ground("lava", true)
     entity:set_can_traverse_ground("prickles", true)
-    entity:set_can_traverse_ground("low_wall", true)  -- Needed for cliffs.
+    -- TODO traversable types and grounds should be configurable
+    entity:set_can_traverse_ground("low_wall", true)  -- Needed for inner stairs.
     entity.apply_cliffs = true
   end
 
   -- Returns if the hero would land on an obstacle at the specified coordinates.
   -- This is similar to entity:test_obstacles() but also checks layers below
   -- in case the ground is empty (because the hero will fall there).
+  -- TODO this work should be done by the engine, maybe with an additional parameter
+  -- to entity:test_obstacles().
   local function test_hero_obstacle_layers(candidate_x, candidate_y, candidate_layer)
+
     local hero_x, hero_y, hero_layer = hero:get_position()
     candidate_layer = candidate_layer or hero_layer
     if hero:test_obstacles(candidate_x - hero_x, candidate_y - hero_y, candidate_layer) then
-      return true       -- Found an obstacle.
+      -- Found an obstacle.
+      return true
     end
 
-    if candidate_layer == 0 then
-      return false      -- Cannot go deeper and no obstacle was found.
+    if candidate_layer == map:get_min_layer() then
+      -- Cannot go deeper and no obstacle was found.
+      return false
     end
 
     -- Test if we are on empty ground.
@@ -120,12 +142,13 @@ function item:on_using()
 
   -- Starts the hookshot movement from the hero.
   function go()
+
     local movement = sol.movement.create("straight")
     local angle = direction * math.pi / 2
-    movement:set_speed(speed)
+    movement:set_speed(config.speed)
     movement:set_angle(angle)
     movement:set_smooth(false)
-    movement:set_max_distance(distance)
+    movement:set_max_distance(config.distance)
     movement:start(hookshot)
 
     function movement:on_obstacle_reached()
@@ -143,18 +166,20 @@ function item:on_using()
       return true  -- Repeat the timer.
     end)
     sol.audio.play_sound("hookshot")
+
   end
 
   -- Makes the hookshot come back to the hero.
   -- Does nothing if the hookshot is already going back.
   function go_back()
+
     if going_back then
       return
     end
 
     local movement = sol.movement.create("straight")
     local angle = (direction + 2) * math.pi / 2
-    movement:set_speed(speed)
+    movement:set_speed(config.speed)
     movement:set_angle(angle)
     movement:set_smooth(false)
     movement:set_max_distance(hookshot:get_distance(hero))
@@ -163,7 +188,8 @@ function item:on_using()
     going_back = true
 
     function movement:on_position_changed()
-      for _, entity in ipairs(entities_caught) do
+
+      for _, entity in ipairs(entities_cought) do
         entity:set_position(hookshot:get_position())
       end
     end
@@ -175,8 +201,10 @@ function item:on_using()
 
   -- Attaches the hookshot to an entity and makes the hero fly there.
   function hook_to_entity(entity)
+
     if hooked then
-      return      -- Already hooked.
+      -- Already hooked.
+      return
     end
 
     hooked_entity = entity
@@ -201,7 +229,7 @@ function item:on_using()
 
     local movement = sol.movement.create("straight")
     local angle = direction * math.pi / 2
-    movement:set_speed(speed)
+    movement:set_speed(config.speed)
     movement:set_angle(angle)
     movement:set_smooth(false)
     movement:set_max_distance(hookshot:get_distance(hero))
@@ -223,6 +251,7 @@ function item:on_using()
     function movement:on_position_changed()
       -- Teletransporters, holes, etc. are avoided because the hero is jumping.
       hero:set_position(leader:get_position())
+
       -- Remember all intermediate positions to find a legal place
       -- for the hero later in case he ends up in a wall.
       past_positions[#past_positions + 1] = { leader:get_position() }
@@ -230,7 +259,8 @@ function item:on_using()
 
     function movement:on_finished()
       stop()
-      if hero:test_obstacles(0, 0) then
+
+      if test_hero_obstacle_layers(hero:get_position()) then
         -- The hero ended up in a wall.
         local fixed_position = past_positions[1]  -- Initial position in case none is legal.
         for i = #past_positions, 2, -1 do
@@ -240,6 +270,7 @@ function item:on_using()
             break
           end
         end
+
         hero:set_position(unpack(fixed_position))
         hero:set_invincible(true, 1000)
         hero:set_blinking(true, 1000)
@@ -249,6 +280,7 @@ function item:on_using()
 
   -- Destroys the hookshot and restores control to the player.
   function stop()
+
     hero:unfreeze()
     if hookshot ~= nil then
       sound_timer:stop()
@@ -281,6 +313,7 @@ function item:on_using()
   link_sprite:set_animation("link")
 
   function hookshot:on_pre_draw()
+
     -- Draw the links.
     local num_links = 7
     local dxy = {
@@ -312,12 +345,15 @@ function item:on_using()
 
   -- Set up collisions.
   hookshot:add_collision_test("overlapping", function(hookshot, entity)
+
     local entity_type = entity:get_type()
+
     if entity_type == "hero" then
       -- Reaching the hero while going back: stop the hookshot.
       if going_back then
         stop()
       end
+
     elseif entity_type == "crystal" then
       -- Activate crystals.
       if not hooked and not going_back then
@@ -325,6 +361,7 @@ function item:on_using()
         map:change_crystal_state()
         go_back()
       end
+
     elseif entity_type == "switch" then
       -- Activate solid switches.
       local switch = entity
@@ -333,6 +370,7 @@ function item:on_using()
           not going_back and
           sprite ~= nil and
           sprite:get_animation_set() == "entities/solid_switch" then
+
         if switch:is_activated() then
           sol.audio.play_sound("sword_tapping")
         else
@@ -341,14 +379,16 @@ function item:on_using()
         end
         go_back()
       end
-    elseif entity.is_hookshot_catchable ~= nil and entity:is_hookshot_catchable() then
+
+    elseif entity.is_catchable_with_hookshot ~= nil and entity:is_catchable_with_hookshot() then
       -- Catch the entity with the hookshot.
       if not hooked and not going_back then
-        entities_caught[#entities_caught + 1] = entity
+        entities_cought[#entities_cought + 1] = entity
         entity:set_position(hookshot:get_position())
-        hookshot:set_modified_ground("traversable")  -- Don't let the caught entity fall in holes.
+        hookshot:set_modified_ground("traversable")  -- Don't let the cought entity fall in holes.
         go_back()
       end
+
     end
   end)
 
@@ -361,16 +401,21 @@ function item:on_using()
 
   -- Custom collision test for hooks: there is a collision with a hook if
   -- the facing point of the hookshot overlaps the hook's bounding box.
-  -- We cannot use the built-in "facing" collision mode because it would
-  -- test the facing point of the hook, not the one of of the hookshot.
-  -- And we cannot reverse the test because the hook is not necessarily a custom entity.
+  -- We cannot use the built-in "facing" collision mode because
+  -- it would test the facing point of the hook, not the one of
+  -- of the hookshot.
+  -- And we cannot reverse the test because the hook
+  -- is not necessarily a custom entity.
   local function test_hook_collision(hookshot, entity)
+
     if hooked or going_back then
-      return      -- No need to check coordinates, we are already hooked.
+      -- No need to check coordinates, we are already hooked.
+      return
     end
 
-    if entity.is_hookshot_hook == nil or not entity:is_hookshot_hook() then
-      return      -- Don't bother check coordinates, we don't care about this entity.
+    if entity.is_hookable == nil or not entity:is_hookable() then
+      -- Don't bother check coordinates, we don't care about this entity.
+      return
     end
 
     local facing_x, facing_y = hookshot:get_center_position()
@@ -380,27 +425,31 @@ function item:on_using()
   end
 
   hookshot:add_collision_test(test_hook_collision, function(hookshot, entity)
+
     if hooked or going_back then
       return
     end
 
-    if entity.is_hookshot_hook ~= nil and entity:is_hookshot_hook() then
-      hook_to_entity(entity)      -- Hook to this entity.
+    if entity.is_hookable ~= nil and entity:is_hookable() then
+      -- Hook to this entity.
+      hook_to_entity(entity)
     end
   end)
 
   -- Detect enemies.
   hookshot:add_collision_test("sprite", function(hookshot, entity, hookshot_sprite, enemy_sprite)
+
     local entity_type = entity:get_type()
     if entity_type == "enemy" then
       local enemy = entity
       if hooked then
         return
       end
-      local reaction = enemy:get_attack_hookshot(enemy_sprite)
+      local reaction = enemy:get_hookshot_reaction(enemy_sprite)
       enemy:receive_attack_consequence("hookshot", reaction)
       go_back()
     end
+
   end)
 
   -- Start the movement.
@@ -415,51 +464,58 @@ local function initialize_meta()
 
   -- Add Lua hookhost properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
-  if enemy_meta.get_attack_hookshot ~= nil then
-    return    -- Already done.
+  if enemy_meta.get_hookshot_reaction ~= nil then
+    -- Already done.
+    return
   end
 
-  enemy_meta.attack_hookshot = 1  -- 1 life point by default.
-  enemy_meta.attack_hookshot_sprite = {}
-  function enemy_meta:get_attack_hookshot(sprite)
-    if sprite ~= nil and self.attack_hookshot_sprite[sprite] ~= nil then
-      return self.attack_hookshot_sprite[sprite]
+  enemy_meta.hookshot_reaction = config.default_enemy_reaction or "immobilized"
+  enemy_meta.hookshot_reaction_sprite = {}
+  function enemy_meta:get_hookshot_reaction(sprite)
+
+    if sprite ~= nil and self.hookshot_reaction_sprite[sprite] ~= nil then
+      return self.hookshot_reaction_sprite[sprite]
     end
-    return self.attack_hookshot
+    return self.hookshot_reaction
   end
 
-  function enemy_meta:set_attack_hookshot(reaction, sprite)
-    self.attack_hookshot = reaction
+  function enemy_meta:set_hookshot_reaction(reaction, sprite)
+
+    self.hookshot_reaction = reaction
   end
 
-  function enemy_meta:set_attack_hookshot_sprite(sprite, reaction)
-    self.attack_hookshot_sprite[sprite] = reaction
+  function enemy_meta:set_hookshot_reaction_sprite(sprite, reaction)
+
+    self.hookshot_reaction_sprite[sprite] = reaction
   end
 
-  -- Change the default enemy:set_invincible() to also take into account the hookshot.
+  -- Change the default enemy:set_invincible() to also
+  -- take into account the hookshot.
   local previous_set_invincible = enemy_meta.set_invincible
   function enemy_meta:set_invincible()
     previous_set_invincible(self)
-    self:set_attack_hookshot("ignored")
+    self:set_hookshot_reaction("ignored")
   end
   local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
   function enemy_meta:set_invincible_sprite(sprite)
     previous_set_invincible_sprite(self, sprite)
-    self:set_attack_hookshot_sprite(sprite, "ignored")
+    self:set_hookshot_reaction_sprite(sprite, "ignored")
   end
 
   -- Set up entity types catchable with the hookshot.
-  for _, entity_type in ipairs(catchable_entity_types) do
+  for _, entity_type in ipairs(config.catchable_entity_types) do
     local meta = sol.main.get_metatable(entity_type)
-    function meta:is_hookshot_catchable()
+
+    function meta:is_catchable_with_hookshot()
       return true
     end
   end
 
   -- Set up entity types hookable with the hookshot.
-  for _, entity_type in ipairs(hook_entity_types) do
+  for _, entity_type in ipairs(config.hookable_entity_types) do
     local meta = sol.main.get_metatable(entity_type)
-    function meta:is_hookshot_hook()
+
+    function meta:is_hookable()
       return true
     end
   end

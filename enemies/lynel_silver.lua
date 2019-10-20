@@ -5,7 +5,7 @@ local enemy = ...
 local can_shoot = true
 
 function enemy:on_created()
-  self:set_life(20); self:set_damage(16)
+  self:set_life(720); self:set_damage(28)
   self:create_sprite("enemies/lynel_silver")
   self:set_size(32, 32); self:set_origin(16, 27)
   self:set_pushed_back_when_hurt(false)

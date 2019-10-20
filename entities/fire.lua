@@ -7,7 +7,7 @@ local enemies_touched = { }
 
 fire:set_size(8, 8)
 fire:set_origin(4, 5)
-sprite = fire:create_sprite("entities/fire")
+sprite = fire:get_sprite() or fire:create_sprite("entities/fire")
 sprite:set_direction(fire:get_direction())
 
 -- Remove the sprite if the animation finishes.
@@ -73,7 +73,7 @@ fire:add_collision_test(bush_collision_test, function(fire, entity)
     end
     local bush = entity
 
-    local bush_sprite = get_destructible_sprite(bush)
+    local bush_sprite = entity:get_sprite()
     if bush_sprite:get_animation() ~= "on_ground" then
       -- Possibly already being destroyed.
       return
@@ -81,7 +81,7 @@ fire:add_collision_test(bush_collision_test, function(fire, entity)
 
     fire:stop_movement()
     sprite:set_animation("stopped")
-    sol.audio.play_sound("lamp")
+    sol.audio.play_sound("flame")
 
     -- TODO remove this when the engine provides a function destructible:destroy()
     local bush_sprite_id = bush_sprite:get_animation_set()
@@ -125,9 +125,22 @@ fire:add_collision_test("sprite", function(fire, entity)
       fire:remove()
     end)
   end
+  if entity:get_type() == "enemy" then
+    local enemy = entity
+    if enemies_touched[enemy] then
+      -- If protected we don't want to play the sound repeatedly.
+      return
+    end
+    enemies_touched[enemy] = true
+    local reaction = enemy:get_fire_reaction(enemy_sprite)
+    enemy:receive_attack_consequence("fire", reaction)
+
+    sol.timer.start(fire, 200, function()
+      fire:remove()
+    end)
+  end
 end)
 
 function fire:on_obstacle_reached()
-
   fire:remove()
 end

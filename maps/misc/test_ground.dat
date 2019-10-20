@@ -1,0 +1,44 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Absolute Dungeon 01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  pattern = "floor.12-1",
+}
+
+chest{
+  layer = 0,
+  x = 24,
+  y = 13,
+  treasure_name = "sword",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 40,
+  y = 13,
+  treasure_name = "tunic",
+  treasure_variant = 2,
+  sprite = "entities/chest",
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 112,
+  y = 133,
+  direction = 1,
+}
+

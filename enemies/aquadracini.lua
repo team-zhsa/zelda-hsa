@@ -4,7 +4,7 @@ local behavior = require("enemies/generic/waiting_hero")
 -- Aquadracini: Small flying dragon.
 
 local properties = {
-  sprite = "enemies/zbom/aquadracini",
+  sprite = "enemies/aquadracini",
   life = 2,
   damage = 2,
   normal_speed = 32,

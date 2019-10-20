@@ -1,13 +1,16 @@
 local enemy = ...
+local behavior = require("enemies/generic/soldier")
 
 -- Blue knight soldier.
 
-sol.main.load_file("enemies/generic_soldier")(enemy)
-enemy:set_properties({
+local properties = {
   main_sprite = "enemies/blue_knight_soldier",
   sword_sprite = "enemies/blue_knight_soldier_sword",
-  life = 3,
-  damage = 2,
+  life = 6,
+  damage = 6,
+  normal_speed = 40,
+  faster_speed = 48,
   play_hero_seen_sound = true
-})
+}
 
+behavior:create(enemy, properties)

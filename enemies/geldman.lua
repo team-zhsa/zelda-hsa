@@ -5,8 +5,8 @@ local behavior = require("enemies/generic/waiting_hero")
 
 local properties = {
   sprite = "enemies/geldman",
-  life = 3,
-  damage = 2,
+  life = 10,
+  damage = 6,
   normal_speed = 40,
   faster_speed = 48,
   waking_distance = 200

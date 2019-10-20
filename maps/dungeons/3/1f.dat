@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_3",
   floor = 0,
-  tileset = "20",
+  tileset = "Absolute Dungeon 07",
   music = "zmc/shield/fsa_tower_of_flames",
 }
 
@@ -155,6 +155,24 @@ tile{
   width = 48,
   height = 16,
   pattern = "wall_hole.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1488,
+  width = 224,
+  height = 144,
+  pattern = "floor.6-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1632,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
 }
 
 tile{
@@ -2153,15 +2171,6 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 688,
-  y = 1488,
-  width = 224,
-  height = 144,
-  pattern = "floor.6-1",
 }
 
 tile{
@@ -12269,15 +12278,6 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 688,
-  y = 1632,
-  width = 224,
-  height = 8,
-  pattern = "wall_border.2-2",
 }
 
 tile{
