@@ -15,3 +15,11 @@ for teletransporter in map:get_entities() do
     hero:teleport("out/c6", "respawn")
   end
 end
+
+function map:on_started()
+  sol.surface.create("fogs/desert_fog.png")
+end
+
+function map:on_draw()
+  sol.surface.create("fogs/desert_fog.png")
+end

@@ -1,4 +1,4 @@
--- Lua script of map dungeon_15_2f reversed.
+-- Lua script of map dungeons/15/2f_ reversed.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -10,7 +10,7 @@
 local map = ...
 local game = map:get_game()
 
--- Event called at initialization time, as soon as this map becomes is loaded.
+-- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
   -- You can initialize the movement and sprites of various

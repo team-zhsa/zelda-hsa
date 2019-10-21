@@ -1322,45 +1322,19 @@ Je vais te corriger !!
 }
 
 dialog{
+  id = "maps.dungeons.1.boss_dying",
+  text = [[
+AAAAHHHHH !
+Je me meurs !!!!
+]],
+}
+
+dialog{
   id = "maps.dungeons.1.boss_welcome",
   text = [[
-GRRR ! GRR !      
-UN INTRRRUS !
-]],
-}
-
-dialog{
-  id = "maps.dungeons.1.indication",
-  text = [[
-...MARAIS...    
-La route mène au
-marais fleuri.
-]],
-}
-
-dialog{
-  id = "maps.dungeons.1.owl_1",
-  text = [[
-Si tu vois les pointes,    
-pense à utiliser ton
-bouclier.
-]],
-}
-
-dialog{
-  id = "maps.dungeons.1.owl_2",
-  text = [[
-Si une porte ne s'ouvre
-pas, déplace un bloc.
-]],
-}
-
-dialog{
-  id = "maps.dungeons.1.owl_3",
-  text = [[
-Si tu vois les pointes,    
-pense à utiliser ton
-bouclier.
+TOOOIIIIII !
+Que oses-tu faire dans
+MON repaire !!!?
 ]],
 }
 
@@ -1368,8 +1342,8 @@ dialog{
   id = "maps.dungeons.1.welcome",
   skip = "current",
   text = [[
-        Niveau 1       
-     Cave Flagello
+       Donjon 1      
+   Ruines du Palais
 ]],
 }
 
@@ -2971,14 +2945,6 @@ il y a 5 ans.
 }
 
 dialog{
-  id = "maps.out.c5.to_village",
-  text = [[
-
-<-- Village Gerudo
-]],
-}
-
-dialog{
   id = "maps.out.east_prairie.sign_1",
   text = [[
 Château Canulet 
@@ -3031,33 +2997,6 @@ dialog{
   id = "maps.out.egg_of_the_dream_fish.sign_3",
   text = [[
 Mt Tamaranch
-]],
-}
-
-dialog{
-  id = "maps.out.f4.shop.bombs",
-  text = [[
-Voici des bombes 
-artisanales pas
-cher !
-]],
-}
-
-dialog{
-  id = "maps.out.f4.shop.rupee",
-  text = [[
-C'est un rubis,
-très cher.
-]],
-}
-
-dialog{
-  id = "maps.out.f4.shop.wine",
-  text = [[
-Voici du bon vin rouge !
-Tu veux goûter?
-C'est 15 rubis!
-Sensations garanties!
 ]],
 }
 
@@ -3118,6 +3057,41 @@ Oh là là !! J'me sens
 tout drôle !
 Faut m'reposer avant 
 d'rentrer.
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_village.to_village",
+  text = [[
+
+<-- Village Gerudo
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.shop.bombs",
+  text = [[
+Voici des bombes 
+artisanales pas
+cher !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.shop.rupee",
+  text = [[
+C'est un rubis,
+très cher.
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.shop.wine",
+  text = [[
+Voici du bon vin rouge !
+Tu veux goûter?
+C'est 15 rubis!
+Sensations garanties!
 ]],
 }
 
@@ -3594,14 +3568,6 @@ dialog{
   text = [[
 Est : Enfin !
 Vill. des Animaux
-]],
-}
-
-dialog{
-  id = "maps.us.a1.car1",
-  text = [[
-Hé toi ! Dégage de
-mon chemin !
 ]],
 }
 
@@ -4296,6 +4262,26 @@ dialog{
 Une tunique rouge 
 pour le plus beau
 des héros !
+]],
+}
+
+dialog{
+  id = "scripts.menus.save_menu.continue",
+  question = "1",
+  text = [[
+Continuer ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "scripts.menus.save_menu.save",
+  question = "1",
+  text = [[
+Sauvegarder la partie ?
+Oui
+Non
 ]],
 }
 

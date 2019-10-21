@@ -1,8 +1,13 @@
 local map= ...
 local game = map:get_game()
 
+function welcome:on_activated()
+  game:start_dialog("maps.dungeons.1.welcome")
+end
+
 function map:on_started()
   door_28_e_top:set_enabled(false)
+  boss_door:set_open(true)
 end
 
 function door_28_e_sensor:on_collision_explosion()
@@ -17,7 +22,7 @@ end
 
 function switch_door_23_n1:on_activated()
   door_23_n1:open()
-  sol.timer.start(25000, function()
+  sol.timer.start(map, 25000, function()
       door_23_n1:close()
   end)
 end
@@ -36,5 +41,6 @@ end
 
 function boss_s:on_activated()
   map:close_doors("boss_door")
+  gaem:start_dialog("maps.dungeons.1.boss_welcome")
   sol.audio.play_music("boss")
 end
