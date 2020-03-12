@@ -2,7 +2,7 @@ local enemy = ...
 
 -- Skeleton: goes in a random direction.
 
-enemy:set_life(3)
+enemy:set_life(6)
 enemy:set_damage(2)
 
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

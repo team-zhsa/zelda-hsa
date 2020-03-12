@@ -10,9 +10,10 @@
 local map = ...
 local game = map:get_game()
 
+
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
+	boss_2:set_enabled(false)
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
@@ -23,9 +24,17 @@ function map:on_opening_transition_finished()
 
 end
 
-function s_2/_1:on_activated()
-  if s_2/_2:is_activated() and s_2/_3:is_activated() and s_2/_4:is_activated() then
+function s_28_1:on_activated()
+  if s_28_2:is_activated() and s_28_3:is_activated() and s_28_4:is_activated() then
     map:open_doors("27_n_d")
     sol.audio.play_sound("common/secret_discover_minor")
   end
 end
+
+-- When stalfos boss 1 is dead, create a stalfos knight.
+
+function boss_1:on_dead()
+
+	boss_2:set_enabled(true)
+end
+	

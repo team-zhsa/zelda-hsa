@@ -17,3 +17,25 @@ tile{
   pattern = "14667",
 }
 
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/a3",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/b2",
+  destination = "_side",
+}
+

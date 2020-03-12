@@ -1,12 +1,16 @@
 local map= ...
 local game = map:get_game()
 
+require("scripts/maps/separator_manager")
+
 function welcome:on_activated()
   game:start_dialog("maps.dungeons.1.welcome")
 end
 
 function map:on_started()
   door_28_e_top:set_enabled(false)
+  after_boss:set_enabled(true)
+	auto_enemy_boss:set_enabled(false)
   boss_door:set_open(true)
 end
 
@@ -22,25 +26,35 @@ end
 
 function switch_door_23_n1:on_activated()
   door_23_n1:open()
-  sol.timer.start(map, 25000, function()
+  sol.timer.start(map, 15000, function()
       door_23_n1:close()
   end)
 end
 
+
+function mini_boss_sensor:on_activated()
+  map:close_doors("mini_boss_boss_door")
+  sol.audio.play_music("miniboss")
+end
+
+function auto_enemy_mini_boss:on_dead()
+  map:open_doors("mini_boss_boss_door")
+  sol.audio.play_music("dungeon/grave")
+end
+
 --Exit the dungeon once the boss defeated
-function boss_e:on_dead()
+function auto_enemy_boss:on_dead()
   sol.timer.start(map, 2000, function()
     hero:start_victory()
-    sol.audio.play_music(music_id, function()
-      sol.timer.start(map, 2000, function()
-        hero:teleport("out/a1", from_dungeon)
-      end)
+    sol.audio.play_music("victory", function()
+       after_boss:set_enabled(true)
     end)
   end)
 end
 
-function boss_s:on_activated()
+function boss_sensor:on_activated()
+	auto_enemy_boss:set_enabled(true)
   map:close_doors("boss_door")
-  gaem:start_dialog("maps.dungeons.1.boss_welcome")
+  game:start_dialog("maps.dungeons.1.boss_welcome")
   sol.audio.play_music("boss")
 end

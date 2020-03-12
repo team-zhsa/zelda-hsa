@@ -5,32 +5,46 @@ properties{
   height = 1680,
   min_layer = -1,
   max_layer = 3,
+  world = "dungeon_2",
+  floor = -1,
   tileset = "Absolute Dungeon 07",
-  music = "dungeon/forest_temple",
+  music = "dungeon/temple_forest",
 }
 
 tile{
-  layer = -1,
-  x = 696,
-  y = 1000,
-  width = 96,
-  height = 24,
-  pattern = "wall_low.1-1",
+  layer = 0,
+  x = 600,
+  y = 1088,
+  width = 24,
+  height = 80,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 808,
-  y = 1000,
-  width = 96,
-  height = 24,
-  pattern = "wall_low.1-1",
+  layer = 0,
+  x = 600,
+  y = 992,
+  width = 24,
+  height = 80,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 656,
-  y = 1328,
+  layer = 0,
+  x = 280,
+  y = 1088,
+  width = 24,
+  height = 80,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1088,
   width = 24,
   height = 80,
   pattern = "wall.3-2",
@@ -38,202 +52,168 @@ tile{
 }
 
 tile{
-  layer = -1,
-  x = 696,
-  y = 1376,
-  width = 96,
-  height = 24,
-  pattern = "wall_low.2-1",
-}
-
-tile{
-  layer = -1,
-  x = 808,
-  y = 1376,
-  width = 96,
-  height = 24,
-  pattern = "wall_low.2-1",
-}
-
-tile{
-  layer = -1,
-  x = 712,
-  y = 1032,
-  width = 176,
-  height = 336,
-  pattern = "floor.12-2",
-}
-
-tile{
-  layer = -1,
-  x = 704,
-  y = 1024,
-  width = 8,
-  height = 8,
-  pattern = "wall_low_border.corner.1-2",
-}
-
-tile{
-  layer = -1,
-  x = 704,
-  y = 1032,
-  width = 8,
-  height = 336,
-  pattern = "wall_low_border.3-2",
-}
-
-tile{
-  layer = -1,
-  x = 888,
-  y = 1032,
-  width = 8,
-  height = 336,
-  pattern = "wall_low_border.4-2",
-}
-
-tile{
-  layer = -1,
-  x = 888,
-  y = 1024,
-  width = 8,
-  height = 8,
-  pattern = "wall_low_border.corner.2-2",
-}
-
-tile{
-  layer = -1,
-  x = 712,
-  y = 1024,
-  width = 176,
-  height = 8,
-  pattern = "wall_low_border.1-2",
-}
-
-tile{
-  layer = -1,
-  x = 712,
-  y = 1368,
-  width = 176,
-  height = 8,
-  pattern = "wall_low_border.2-2",
-}
-
-tile{
-  layer = -1,
-  x = 704,
-  y = 1368,
-  width = 8,
-  height = 8,
-  pattern = "wall_low_border.corner.3-2",
-}
-
-tile{
-  layer = -1,
-  x = 888,
-  y = 1368,
-  width = 8,
-  height = 8,
-  pattern = "wall_low_border.corner.4-2",
-}
-
-tile{
-  layer = -1,
-  x = 680,
-  y = 1000,
+  layer = 0,
+  x = 336,
+  y = 848,
   width = 24,
-  height = 24,
-  pattern = "wall_low.corner.1-1",
+  height = 80,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 896,
-  y = 1000,
+  layer = 0,
+  x = 336,
+  y = 752,
   width = 24,
-  height = 24,
-  pattern = "wall_low.corner.2-1",
+  height = 80,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 896,
-  y = 1024,
-  width = 24,
-  height = 352,
-  pattern = "wall_low.4-1",
+  layer = 0,
+  x = 608,
+  y = 1456,
+  width = 208,
+  height = 176,
+  pattern = "floor.12-1",
 }
 
 tile{
-  layer = -1,
-  x = 680,
-  y = 1024,
-  width = 24,
-  height = 352,
-  pattern = "wall_low.3-1",
+  layer = 0,
+  x = 672,
+  y = 1520,
+  width = 80,
+  height = 16,
+  pattern = "907",
+  tileset = "Full Hyrule",
 }
 
 tile{
-  layer = -1,
-  x = 680,
-  y = 1376,
-  width = 24,
-  height = 24,
-  pattern = "wall_low.corner.3-1",
-}
-
-tile{
-  layer = -1,
-  x = 896,
-  y = 1376,
-  width = 24,
-  height = 24,
-  pattern = "wall_low.corner.4-1",
-}
-
-tile{
-  layer = -1,
-  x = 680,
-  y = 976,
+  layer = 0,
+  x = 368,
+  y = 1560,
   width = 240,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 608,
+  y = 1448,
+  width = 208,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1456,
+  width = 8,
+  height = 112,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 1456,
+  width = 8,
+  height = 176,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 1632,
+  width = 448,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1448,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 1448,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 1632,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1424,
+  width = 224,
   height = 24,
   pattern = "wall.1-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 656,
-  y = 992,
+  layer = 0,
+  x = 576,
+  y = 1448,
   width = 24,
-  height = 320,
+  height = 96,
   pattern = "wall.3-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 920,
-  y = 1000,
+  layer = 0,
+  x = 824,
+  y = 1448,
   width = 24,
-  height = 400,
+  height = 192,
   pattern = "wall.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 680,
-  y = 1400,
-  width = 240,
+  layer = 0,
+  x = 360,
+  y = 1640,
+  width = 464,
   height = 24,
   pattern = "wall.2-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
-  layer = -1,
-  x = 656,
-  y = 976,
+  layer = 0,
+  x = 576,
+  y = 1424,
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
@@ -241,9 +221,9 @@ tile{
 }
 
 tile{
-  layer = -1,
-  x = 920,
-  y = 976,
+  layer = 0,
+  x = 824,
+  y = 1424,
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
@@ -251,19 +231,9 @@ tile{
 }
 
 tile{
-  layer = -1,
-  x = 656,
-  y = 1400,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
-}
-
-tile{
-  layer = -1,
-  x = 920,
-  y = 1400,
+  layer = 0,
+  x = 824,
+  y = 1640,
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
@@ -272,27 +242,925 @@ tile{
 
 tile{
   layer = 0,
-  x = 600,
-  y = 1232,
+  x = 80,
+  y = 296,
+  width = 16,
+  height = 128,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 312,
+  width = 32,
+  height = 96,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 328,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 376,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 448,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 288,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 280,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1320,
+  y = 288,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 288,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 432,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1320,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1320,
+  y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1320,
+  y = 256,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1296,
+  y = 280,
   width = 24,
-  height = 80,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 280,
+  width = 24,
+  height = 160,
   pattern = "wall.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 368,
-  y = 1248,
-  width = 224,
-  height = 144,
-  pattern = "floor.12-1",
+  x = 1320,
+  y = 440,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
+  x = 1296,
+  y = 256,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 256,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1296,
+  y = 440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 288,
+  width = 176,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 280,
+  width = 176,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 288,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 432,
+  width = 176,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 256,
+  width = 176,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 280,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 440,
+  width = 176,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 256,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 304,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 384,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 1432,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 280,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 264,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 272,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 280,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 296,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 296,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 312,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 440,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 432,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 424,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 408,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 424,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 408,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 392,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 336,
+  width = 8,
+  height = 48,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 392,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 312,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 336,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 1432,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 1432,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1536,
+  width = 224,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 576,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner_reverse.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1632,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1568,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1560,
+  width = 24,
+  height = 32,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1640,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1536,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+}
+
+tile{
+  layer = 0,
   x = 368,
+  y = 1568,
+  width = 240,
+  height = 64,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 1488,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 1480,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1488,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 1488,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 1632,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1480,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 1480,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1632,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 1632,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1456,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1480,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 1480,
+  width = 24,
+  height = 112,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1640,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1456,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 1456,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1640,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 1640,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 1248,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
   y = 1240,
   width = 224,
   height = 8,
@@ -302,7 +1170,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 360,
+  x = 40,
   y = 1248,
   width = 8,
   height = 144,
@@ -312,7 +1180,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 272,
   y = 1248,
   width = 8,
   height = 144,
@@ -322,7 +1190,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 48,
   y = 1392,
   width = 224,
   height = 8,
@@ -332,7 +1200,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 360,
+  x = 40,
   y = 1240,
   width = 8,
   height = 8,
@@ -342,7 +1210,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 272,
   y = 1240,
   width = 8,
   height = 8,
@@ -352,7 +1220,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 360,
+  x = 40,
   y = 1392,
   width = 8,
   height = 8,
@@ -362,7 +1230,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 272,
   y = 1392,
   width = 8,
   height = 8,
@@ -372,7 +1240,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 360,
+  x = 40,
   y = 1216,
   width = 240,
   height = 24,
@@ -382,7 +1250,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 16,
   y = 1240,
   width = 24,
   height = 160,
@@ -392,17 +1260,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 600,
-  y = 1328,
+  x = 280,
+  y = 1240,
   width = 24,
-  height = 80,
+  height = 160,
   pattern = "wall.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 360,
+  x = 40,
   y = 1400,
   width = 240,
   height = 24,
@@ -412,7 +1280,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 16,
   y = 1216,
   width = 24,
   height = 24,
@@ -422,7 +1290,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 600,
+  x = 280,
   y = 1216,
   width = 24,
   height = 24,
@@ -432,7 +1300,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 16,
   y = 1400,
   width = 24,
   height = 24,
@@ -442,7 +1310,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 600,
+  x = 280,
   y = 1400,
   width = 24,
   height = 24,
@@ -452,189 +1320,3204 @@ tile{
 
 tile{
   layer = 0,
-  x = 680,
-  y = 1296,
-  width = 240,
-  height = 48,
+  x = 48,
+  y = 768,
+  width = 224,
+  height = 384,
   pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 760,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 680,
-  y = 1288,
+  x = 40,
+  y = 768,
   width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
+  height = 384,
+  pattern = "wall_border.3-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 680,
-  y = 1344,
+  x = 272,
+  y = 768,
+  width = 8,
+  height = 384,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 1152,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 760,
   width = 8,
   height = 8,
-  pattern = "barrier.border-1",
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 736,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 760,
+  width = 24,
+  height = 400,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 752,
+  width = 24,
+  height = 80,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 1160,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 768,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 760,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 912,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 736,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 760,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 920,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
   x = 688,
-  y = 1288,
+  y = 768,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 760,
   width = 224,
   height = 8,
-  pattern = "barrier.1-1",
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
   x = 688,
-  y = 1344,
+  y = 912,
   width = 224,
   height = 8,
-  pattern = "barrier.1-1",
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
   x = 912,
-  y = 1288,
+  y = 760,
   width = 8,
   height = 8,
-  pattern = "barrier.border-1",
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
   x = 912,
-  y = 1344,
+  y = 912,
   width = 8,
   height = 8,
-  pattern = "barrier.border-1",
+  pattern = "wall_border.corner.4-2",
   tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 704,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 680,
+  y = 736,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 720,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 656,
+  y = 760,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
-  x = 736,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 920,
+  y = 760,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 920,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 288,
+  width = 544,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 280,
+  width = 544,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 288,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 288,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 432,
+  width = 544,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 256,
+  width = 560,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 280,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 280,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 440,
+  width = 560,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 256,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 256,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 440,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 528,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 520,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 528,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 528,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 672,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 520,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 520,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 672,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 672,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 496,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 520,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 520,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 680,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 496,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 496,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 680,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 680,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 528,
+  width = 544,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 520,
+  width = 544,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 528,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 528,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 672,
+  width = 544,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 520,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 520,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 672,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 672,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 496,
+  width = 560,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 520,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 520,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 680,
+  width = 560,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 496,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 496,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 680,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 1560,
+  y = 680,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1608,
+  width = 24,
+  height = 32,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 1608,
+  width = 24,
+  height = 32,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
 }
 
 tile{
   layer = 0,
   x = 752,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  y = 1512,
+  width = 8,
+  height = 32,
+  pattern = "121",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 768,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 744,
+  y = 1504,
+  width = 8,
+  height = 8,
+  pattern = "122",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 784,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 736,
+  y = 1496,
+  width = 8,
+  height = 8,
+  pattern = "122",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 800,
-  y = 1208,
+  x = 720,
+  y = 1488,
   width = 16,
-  height = 16,
-  pattern = "torch_off",
+  height = 8,
+  pattern = "123",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 816,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 712,
+  y = 1496,
+  width = 8,
+  height = 8,
+  pattern = "124",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 832,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 704,
+  y = 1504,
+  width = 8,
+  height = 8,
+  pattern = "124",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 848,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 680,
+  y = 1504,
+  width = 24,
+  height = 8,
+  pattern = "123",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 864,
-  y = 1208,
-  width = 16,
-  height = 16,
-  pattern = "torch_off",
+  x = 672,
+  y = 1512,
+  width = 8,
+  height = 8,
+  pattern = "124",
+  tileset = "Full Hyrule",
 }
 
 tile{
   layer = 0,
-  x = 880,
-  y = 1208,
+  x = 664,
+  y = 1520,
+  width = 8,
+  height = 8,
+  pattern = "124",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1528,
+  width = 8,
+  height = 8,
+  pattern = "118",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 1536,
+  width = 8,
+  height = 8,
+  pattern = "118",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1544,
+  width = 8,
+  height = 8,
+  pattern = "118",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "118",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "118",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 1568,
+  width = 24,
+  height = 8,
+  pattern = "119",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "120",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "120",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 1544,
+  width = 8,
+  height = 8,
+  pattern = "120",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "114",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 1568,
+  width = 8,
+  height = 8,
+  pattern = "114",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "114",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 1544,
+  width = 8,
+  height = 8,
+  pattern = "114",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 1496,
+  width = 8,
+  height = 8,
+  pattern = "117",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1488,
+  width = 8,
+  height = 8,
+  pattern = "117",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 1504,
+  width = 8,
+  height = 8,
+  pattern = "117",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1536,
+  width = 8,
+  height = 8,
+  pattern = "115",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 1544,
+  width = 8,
+  height = 8,
+  pattern = "115",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "115",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1560,
+  width = 8,
+  height = 8,
+  pattern = "115",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 1568,
+  width = 8,
+  height = 8,
+  pattern = "115",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1512,
+  width = 8,
+  height = 8,
+  pattern = "116",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 1504,
+  width = 8,
+  height = 8,
+  pattern = "116",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 1496,
+  width = 8,
+  height = 8,
+  pattern = "116",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 1488,
+  width = 8,
+  height = 8,
+  pattern = "116",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 1504,
+  width = 32,
+  height = 16,
+  pattern = "907",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1536,
+  width = 48,
+  height = 16,
+  pattern = "907",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 1552,
   width = 16,
   height = 16,
-  pattern = "torch_off",
+  pattern = "907",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1512,
+  width = 32,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1536,
+  width = 8,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 1552,
+  width = 8,
+  height = 16,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1536,
+  width = 8,
+  height = 16,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 1536,
+  width = 8,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 1512,
+  width = 8,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 1496,
+  width = 16,
+  height = 8,
+  pattern = "13892",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1512,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1512,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1552,
+  width = 48,
+  height = 8,
+  pattern = "2203",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1512,
+  width = 48,
+  height = 40,
+  pattern = "2202",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 1008,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 1000,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
   tileset = "Absolute Dungeon 07",
 }
 
-chest{
+tile{
+  layer = 0,
+  x = 360,
+  y = 1008,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 1008,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 1152,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1000,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 1000,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 976,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 992,
+  width = 24,
+  height = 80,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1160,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 976,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 976,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
   layer = 0,
   x = 688,
-  y = 1309,
-  treasure_name = "small_key",
-  treasure_savegame_variable = "chest_d2_28",
-  sprite = "entities/Chests/chest_LttP",
+  y = 1008,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1000,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1008,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1008,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1152,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1000,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1000,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1152,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 976,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 1000,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 1000,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1160,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 976,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 976,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 1160,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 848,
+  width = 24,
+  height = 224,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 824,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 768,
+  width = 8,
+  height = 96,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 840,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 800,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 840,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 800,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 824,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 824,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 768,
+  width = 8,
+  height = 48,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 816,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 800,
+  width = 40,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 768,
+  width = 8,
+  height = 8,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 808,
+  width = 8,
+  height = 32,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 840,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 832,
+  width = 8,
+  height = 32,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 864,
+  width = 64,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 840,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 776,
+  width = 40,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 768,
+  width = 8,
+  height = 8,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 800,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 784,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 832,
+  width = 8,
+  height = 104,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 944,
+  width = 8,
+  height = 40,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 896,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 824,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 872,
+  width = 8,
+  height = 112,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 920,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 968,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 944,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 968,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 984,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 960,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 1008,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 864,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 936,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 992,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 872,
+  width = 8,
+  height = 64,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 896,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 840,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 984,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 1008,
+  width = 40,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 936,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 936,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 888,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 936,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 960,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 824,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 840,
+  width = 40,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 912,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 888,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 872,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 896,
+  width = 8,
+  height = 40,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 944,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 992,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 992,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 1008,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 1008,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 800,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 824,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 808,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 784,
+  width = 8,
+  height = 56,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 848,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 944,
+  width = 8,
+  height = 40,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 992,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 984,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 968,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 896,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 864,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 872,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+switch{
+  layer = 0,
+  x = 64,
+  y = 992,
+  subtype = "walkable",
+  sprite = "entities/Switches/switch",
+  needs_block = true,
+  inactivate_when_leaving = true,
+}
+
+switch{
+  layer = 0,
+  x = 232,
+  y = 968,
+  subtype = "walkable",
+  sprite = "entities/Switches/switch",
+  needs_block = true,
+  inactivate_when_leaving = true,
+}
+
+switch{
+  layer = 0,
+  x = 88,
+  y = 920,
+  subtype = "walkable",
+  sprite = "entities/Switches/switch",
+  needs_block = true,
+  inactivate_when_leaving = true,
+}
+
+stream{
+  layer = 0,
+  x = 96,
+  y = 821,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+}
+
+stream{
+  layer = 0,
+  x = 120,
+  y = 845,
+  direction = 2,
+  sprite = "entities/Streams/conveyor_belt1",
+}
+
+stream{
+  layer = 0,
+  x = 136,
+  y = 797,
+  direction = 0,
+  sprite = "entities/Streams/conveyor_belt1",
+}
+
+stream{
+  layer = 0,
+  x = 120,
+  y = 885,
+  direction = 0,
+  sprite = "entities/Streams/conveyor_belt1",
+}
+
+block{
+  layer = 0,
+  x = 72,
+  y = 773,
+  sprite = "entities/block",
+  pushable = true,
+  pullable = false,
+}
+
+block{
+  layer = 0,
+  x = 96,
+  y = 773,
+  sprite = "entities/block",
+  pushable = true,
+  pullable = false,
+}
+
+block{
+  layer = 0,
+  x = 120,
+  y = 773,
+  sprite = "entities/block",
+  pushable = true,
+  pullable = false,
+}
+
+enemy{
+  layer = 0,
+  x = 144,
+  y = 1325,
+  direction = 0,
+  breed = "armos_big",
+}
+
+tile{
+  layer = 1,
+  x = 704,
+  y = 1424,
+  width = 32,
+  height = 8,
+  pattern = "door_top.stairs.1-2",
+}
+
+tile{
+  layer = 1,
+  x = 712,
+  y = 1424,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_up.1-1",
+}
+
+tile{
+  layer = 1,
+  x = 120,
+  y = 736,
+  width = 16,
+  height = 16,
+  pattern = "vines1.top",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 120,
+  y = 752,
+  width = 16,
+  height = 16,
+  pattern = "vines1.bottom",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 184,
+  y = 1216,
+  width = 16,
+  height = 16,
+  pattern = "vines1.top",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 184,
+  y = 1232,
+  width = 16,
+  height = 16,
+  pattern = "vines1.bottom",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 120,
+  y = 1216,
+  width = 16,
+  height = 16,
+  pattern = "vines1.top",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 120,
+  y = 1232,
+  width = 16,
+  height = 16,
+  pattern = "vines1.bottom",
+  tileset = "oh_cave",
+}
+
+tile{
+  layer = 1,
+  x = 688,
+  y = 1480,
+  width = 48,
+  height = 32,
+  pattern = "2210",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 1,
+  x = 680,
+  y = 1480,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 1,
+  x = 688,
+  y = 1472,
+  width = 48,
+  height = 8,
+  pattern = "1487",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 1,
+  x = 688,
+  y = 1480,
+  width = 48,
+  height = 48,
+  pattern = "7155",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 1,
+  x = 688,
+  y = 1528,
+  width = 48,
+  height = 8,
+  pattern = "1490",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 1,
+  x = 736,
+  y = 1480,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+  tileset = "Full Hyrule",
 }
 

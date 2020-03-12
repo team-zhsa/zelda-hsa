@@ -5,11 +5,11 @@ local enemy = ...
 local can_shoot = true
 
 function enemy:on_created()
-  self:set_life(120); self:set_damage(6)
+  self:set_life(20); self:set_damage(2)
   self:create_sprite("enemies/lynel")
   self:set_size(32, 32); self:set_origin(16, 27)
   self:set_pushed_back_when_hurt(false)
-  self:set_attack_arrow("protected")
+  --self:set_attack_arrow("protected")
   self:set_attack_consequence("boomerang", "protected")
   self:set_attack_consequence("fire", "protected")
 end
@@ -38,7 +38,7 @@ local function shoot_fire()
   sprite:set_animation("shooting")
   enemy:stop_movement()
   sol.timer.start(enemy, 500, function()
-    sol.audio.play_sound("lamp")
+    sol.audio.play_sound("items/lamp/on")
     local flame = enemy:create_enemy({
       breed = "projectiles/fire_shot",
       x = dxy[direction + 1][1],

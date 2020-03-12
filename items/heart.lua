@@ -6,6 +6,7 @@ function item:on_created()
   self:set_shadow("small")
   self:set_can_disappear(true)
   self:set_brandish_when_picked(false)
+  self:set_sound_when_brandished("common/get_small_item1")
 end
 
 function item:on_obtaining(variant, savegame_variable)
@@ -17,7 +18,7 @@ function item:on_pickable_created(pickable)
 
   if pickable:get_falling_height() ~= 0 then
     -- Replace the default falling movement by a special one.
-    local trajectory = {
+    --[[local trajectory = {
       { 0,  0},
       { 0, -2},
       { 0, -2},
@@ -49,7 +50,8 @@ function item:on_pickable_created(pickable)
     m:set_loop(false)
     m:set_ignore_obstacles(true)
     m:start(pickable)
-  end
+  end--]]
+end
 
 end
 

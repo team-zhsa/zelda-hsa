@@ -1322,10 +1322,68 @@ Je vais te corriger !!
 }
 
 dialog{
-  id = "maps.dungeons.1.boss_dying",
+  id = "maps.caves.goron.generic_1",
   text = [[
-AAAAHHHHH !
-Je me meurs !!!!
+Salut Hylien !
+Je me sens si bien
+dans ce rocher !
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.generic_2",
+  text = [[
+Salut !
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.generic_3",
+  text = [[
+Un goron, ça mange
+des rochers ! Tu 
+le savais, toi ?
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.generic_4",
+  text = [[
+Comment vas-tu ?
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.rock_ask",
+  question = "1",
+  text = [[
+Salut ! J'aurais besoin de 
+ton aide pour rapporter
+des rochers.
+Pourrais-tu le faire ?
+Oui, avec plaisir !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.rock_no",
+  text = [[
+Bon, tant pis. Une
+autre fois, peut-
+être ?
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.rock_yes",
+  text = [[
+Super ! Descends au
+dernier sous-sol de
+notre grotte et vas
+voir Dungor, à côté
+de la grotte du chef.
+Il te dira quoi faire
 ]],
 }
 
@@ -1344,6 +1402,16 @@ dialog{
   text = [[
        Donjon 1      
    Ruines du Palais
+]],
+}
+
+dialog{
+  id = "maps.dungeons.1.zelda",
+  text = [[
+Tu as vaincu le monstre
+du donjon. 
+
+Tiens
 ]],
 }
 
@@ -1579,7 +1647,7 @@ repoussé le mal par
 de multiples occasions.
 
 
-Mais là,$0 il avait affaire
+Il avait affaire
 à un magicien,$0
 ayant pouvoir de
 transformer en peinture
@@ -1597,14 +1665,14 @@ Il récupéra donc l'épée
 de Légende dans les Bois.
 
 
-L'esthète alla au château
-d'Hyrule,$0 prenant alors
-son contrôle total.
+Ce magicien alla au
+château d'Hyrule,$0 prenant
+alors son contrôle total.
 Mais ce héros le 
 transperça alors.
 
 Il arriva dans un monde
-très ténèbreux.
+très ténèbreux, Lorule.
 
 Là,$0 il vit ce magicien,$0
 qui fusionna avec la bête
@@ -1616,16 +1684,17 @@ les 7 sages d'Hyrule
 
 
 Il découvrit son but :$0
-rétablir la paix avec...$0
-les trois triangles d'or
-formant la Triforce.
+rétablir la paix avec la
+Triforce.
 
 
 Celui qui la touche...$0
 en formulant un voeu...$0
 aura son voeu exaucé.
-Quand il finit sa quête,$0
-le héros fit voeu de paix.
+
+Nul ne sait quel voeu fit
+ce héros, mais il redonna
+à Lorule sa beauté d'antan.$0
 
 Il se maria à la princesse
 Zelda et devint Roi 
@@ -3096,6 +3165,297 @@ Sensations garanties!
 }
 
 dialog{
+  id = "maps.out.kakarico_village.fishman_1",
+  question = "1",
+  text = [[
+Une partie de pêche, 
+mon gars ?
+
+Ça ne te coûtera que 
+10 rubis... 
+
+
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.fishman_2",
+  skip = "all",
+  text = [[
+Avec < et > de +, évalue 
+la distance de ton
+lancer.  
+Dès que le poisson est     
+ferré, presse vite AïB
+pour le remonter !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.fishman_3",
+  skip = "all",
+  text = [[
+Vis ta vie !     
+Sois un peu plus motivé !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.grand_ma_1",
+  skip = "all",
+  text = [[
+YOUPI! J'ai la  
+pêche ! Et toi ? 
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.grand_ma_2",
+  skip = "all",
+  text = [[
+Il s'est passé  
+une véritable   
+tragédie chez ma
+voisine d'en    
+face ! Que faire ?
+Moi, je ne sais 
+que balayer !!
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_1",
+  skip = "all",
+  text = [[
+M'sieu !
+Pour sauvegarder,    
+appuyez sur tous
+les boutons à la fois !
+Heu, je n'en sais pas
+plus, je ne suis qu'un
+gosse !
+
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_10",
+  skip = "all",
+  text = [[
+Où allez-vous tous les
+deux ? Mais non, je    
+n'insinue rien ! Moi, je 
+ne suis qu'un gosse !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_11",
+  skip = "all",
+  text = [[
+Hé M'sieu !      
+A propos du Gîte des
+Rêves... A l'intérieur,  
+il y a un...   
+Mais comme je ne suis
+qu'un gosse, je n'en  
+dirai pas plus !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_2",
+  skip = "all",
+  text = [[
+Ben... Après une
+sauvegarde, vous
+pouvez redémarrer 
+à la dernière porte  
+par laquelle vous êtes
+passé ! Pourquoi ? 
+Je n'en sais rien, 
+je suis un môme !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_3",
+  skip = "all",
+  text = [[
+Consultez la carte de 
+l'île en appuyant     
+sur SELECT. Après, je 
+ne sais pas trop car je
+ne suis qu'un gosse !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_4",
+  skip = "all",
+  text = [[
+Si vos coeurs 
+diminuent trop, entrez 
+dans une maison ou 
+une grotte. Pourquoi ? 
+Je ne sais pas, je suis
+trop petit !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_5",
+  skip = "all",
+  text = [[
+M'sieu ! Que     
+pensez-vous de Marine ? 
+Moi ? Ben ! Je ne suis 
+qu'un gosse !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_6",
+  skip = "all",
+  text = [[
+M'sieu! D'où vous 
+venez ? De l'extérieur ? 
+Je ne connais pas ce 
+mot, je suis trop petit !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_7",
+  skip = "all",
+  text = [[
+L'Oeuf Sacré du Mt
+Tamaranch ? Il paraît
+que le Poisson-Rêve    
+dort dedans. Je ne sais
+pas, je suis un môme !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_8",
+  skip = "all",
+  text = [[
+Depuis quand nous 
+vivons sur cette île ?  
+Qu'est-ce que cela 
+signifie : depuis 
+quand ?   
+N'oubliez pas que je 
+ne suis qu'un gosse !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_9",
+  skip = "all",
+  text = [[
+Souvent, Marine va
+toute seule regarder 
+la mer. Pourquoi ? 
+Je ne sais pas moi,   
+je ne suis qu'un gosse !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.kids_alert_moblins",
+  text = [[
+M'sieu ! M'sieu !         
+C'est terrible, c'est 
+horrible ! C'est 
+c'est... des Gogo...     
+des Momo... des 
+Moblins sont venus 
+dans le village ! 
+Ils étaient une armée... 
+Ils...ils...    
+Ils sont sortis !
+Ils sont entrés !
+Oui, c'est ça !  
+Ils sont entrés là et 
+ils ont pris le 
+Minou, non non... 
+Ils ont pris Toutou !!        
+... ... ... ... 
+... ... ... ... 
+Il vaudrait mieux que
+tu ailles voir ce qui
+s'est passé !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.marine_1",
+  skip = "all",
+  text = [[
+Bonjour $v !  
+Tarkin est parti dans
+la forêt chercher des    
+champignons.    
+Moi,je préfère chanter.        
+Ecoute ceci : c'est la 
+Ballade du Poisson-Rêve.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.marine_2",
+  skip = "all",
+  text = [[
+$v, Tarkin   
+fait la sieste à la 
+maison. Je préfère      
+chanter. Oui ! Pourquoi
+pas la Ballade du 
+Poisson-Rêve ?
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.marine_3",
+  skip = "all",
+  text = [[
+J'adore chanter!
+Et toi $v , qu'est-ce 
+que tu aimes ?
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.sign_1",
+  skip = "all",
+  text = [[
+Chez le sage
+Sahasrahla
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.thief_message",
+  text = [[
+Tu as pu sortir sans 
+payer ?  Tu n'as pas 
+honte, voyou ?!
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.weathercock",
+  skip = "all",
+  text = [[
+Ci-gît le Coq Volant.
+]],
+}
+
+dialog{
   id = "maps.out.kanalet_castle.monkey_1",
   text = [[
 Kiiiki ! Quoi ?   
@@ -3165,297 +3525,6 @@ TALON : Ne t'inquiète pas,
 Malon. Je vais l'accueillir
 et lui dire que nous
 n'avons rien préparé.
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.fishman_1",
-  question = "1",
-  text = [[
-Une partie de pêche, 
-mon gars ?
-
-Ça ne te coûtera que 
-10 rubis... 
-
-
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.fishman_2",
-  skip = "all",
-  text = [[
-Avec < et > de +, évalue 
-la distance de ton
-lancer.  
-Dès que le poisson est     
-ferré, presse vite AïB
-pour le remonter !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.fishman_3",
-  skip = "all",
-  text = [[
-Vis ta vie !     
-Sois un peu plus motivé !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.grand_ma_1",
-  skip = "all",
-  text = [[
-YOUPI! J'ai la  
-pêche ! Et toi ? 
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.grand_ma_2",
-  skip = "all",
-  text = [[
-Il s'est passé  
-une véritable   
-tragédie chez ma
-voisine d'en    
-face ! Que faire ?
-Moi, je ne sais 
-que balayer !!
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_1",
-  skip = "all",
-  text = [[
-M'sieu !
-Pour sauvegarder,    
-appuyez sur tous
-les boutons à la fois !
-Heu, je n'en sais pas
-plus, je ne suis qu'un
-gosse !
-
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_10",
-  skip = "all",
-  text = [[
-Où allez-vous tous les
-deux ? Mais non, je    
-n'insinue rien ! Moi, je 
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_11",
-  skip = "all",
-  text = [[
-Hé M'sieu !      
-A propos du Gîte des
-Rêves... A l'intérieur,  
-il y a un...   
-Mais comme je ne suis
-qu'un gosse, je n'en  
-dirai pas plus !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_2",
-  skip = "all",
-  text = [[
-Ben... Après une
-sauvegarde, vous
-pouvez redémarrer 
-à la dernière porte  
-par laquelle vous êtes
-passé ! Pourquoi ? 
-Je n'en sais rien, 
-je suis un môme !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_3",
-  skip = "all",
-  text = [[
-Consultez la carte de 
-l'île en appuyant     
-sur SELECT. Après, je 
-ne sais pas trop car je
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_4",
-  skip = "all",
-  text = [[
-Si vos coeurs 
-diminuent trop, entrez 
-dans une maison ou 
-une grotte. Pourquoi ? 
-Je ne sais pas, je suis
-trop petit !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_5",
-  skip = "all",
-  text = [[
-M'sieu ! Que     
-pensez-vous de Marine ? 
-Moi ? Ben ! Je ne suis 
-qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_6",
-  skip = "all",
-  text = [[
-M'sieu! D'où vous 
-venez ? De l'extérieur ? 
-Je ne connais pas ce 
-mot, je suis trop petit !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_7",
-  skip = "all",
-  text = [[
-L'Oeuf Sacré du Mt
-Tamaranch ? Il paraît
-que le Poisson-Rêve    
-dort dedans. Je ne sais
-pas, je suis un môme !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_8",
-  skip = "all",
-  text = [[
-Depuis quand nous 
-vivons sur cette île ?  
-Qu'est-ce que cela 
-signifie : depuis 
-quand ?   
-N'oubliez pas que je 
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_9",
-  skip = "all",
-  text = [[
-Souvent, Marine va
-toute seule regarder 
-la mer. Pourquoi ? 
-Je ne sais pas moi,   
-je ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.kids_alert_moblins",
-  text = [[
-M'sieu ! M'sieu !         
-C'est terrible, c'est 
-horrible ! C'est 
-c'est... des Gogo...     
-des Momo... des 
-Moblins sont venus 
-dans le village ! 
-Ils étaient une armée... 
-Ils...ils...    
-Ils sont sortis !
-Ils sont entrés !
-Oui, c'est ça !  
-Ils sont entrés là et 
-ils ont pris le 
-Minou, non non... 
-Ils ont pris Toutou !!        
-... ... ... ... 
-... ... ... ... 
-Il vaudrait mieux que
-tu ailles voir ce qui
-s'est passé !
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.marine_1",
-  skip = "all",
-  text = [[
-Bonjour $v !  
-Tarkin est parti dans
-la forêt chercher des    
-champignons.    
-Moi,je préfère chanter.        
-Ecoute ceci : c'est la 
-Ballade du Poisson-Rêve.
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.marine_2",
-  skip = "all",
-  text = [[
-$v, Tarkin   
-fait la sieste à la 
-maison. Je préfère      
-chanter. Oui ! Pourquoi
-pas la Ballade du 
-Poisson-Rêve ?
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.marine_3",
-  skip = "all",
-  text = [[
-J'adore chanter!
-Et toi $v , qu'est-ce 
-que tu aimes ?
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.sign_1",
-  skip = "all",
-  text = [[
-Forêt Enchantée 
-(Un peu énigmatique)
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.thief_message",
-  text = [[
-Tu as pu sortir sans 
-payer ?  Tu n'as pas 
-honte, voyou ?!
-]],
-}
-
-dialog{
-  id = "maps.out.mabe_village.weathercock",
-  skip = "all",
-  text = [[
-Ci-gît le Coq Volant.
 ]],
 }
 
@@ -3536,6 +3605,13 @@ dialog{
   text = [[
 Château Canulet 
 10 min. Est, puis Nord
+]],
+}
+
+dialog{
+  id = "maps.out.west_mountains.sign.mount_lazare",
+  text = [[
+Pic Lazare : 2 cm
 ]],
 }
 
@@ -4266,22 +4342,20 @@ des héros !
 }
 
 dialog{
-  id = "scripts.menus.save_menu.continue",
+  id = "scripts.menus.quit_menu.continue",
   question = "1",
   text = [[
-Continuer ?
+Quitter la partie ?
 Oui
 Non
 ]],
 }
 
 dialog{
-  id = "scripts.menus.save_menu.save",
-  question = "1",
+  id = "scripts.menus.quit_menu.save",
   text = [[
-Sauvegarder la partie ?
-Oui
-Non
+Votre partie a été
+sauvegardée.
 ]],
 }
 

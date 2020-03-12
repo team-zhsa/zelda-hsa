@@ -9,7 +9,7 @@ end
 
 function item:on_variant_changed(variant)
 
-  self:get_game():set_max_money(99999)
+  self:get_game():set_max_money(999)
 
 end
 

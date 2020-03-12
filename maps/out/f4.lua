@@ -19,11 +19,7 @@ local function random_walk(npc)
 end
 
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
-	random_walk(auto_npc)
-	random_walk(auto_npc_2)
-	random_walk(auto_npc_3)
-	random_walk(auto_npc_4)
+function map:on_started() 
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
