@@ -45,17 +45,17 @@ end
 
 for npc in map:get_entities("goron") do
 	function npc:on_interaction()
-		local rand = math.random(1,12)
-		if rand == 1 or rand == 2 or rand == 3 then
+		local rand = math.random(1,4)
+		if rand == 1 then
 			print("rand 1")
 			game:start_dialog("maps.caves.goron.generic_1")
-		elseif rand == 4 or rand == 5 or rand == 6 then
+		elseif rand == 2 then
 			print("rand 2")
 			game:start_dialog("maps.caves.goron.generic_2")
-		elseif rand == 7 or rand == 8 or rand == 9 then
+		elseif rand == 3 then
 			print("rand 3")
 			game:start_dialog("maps.caves.goron.generic_3")
-		elseif rand == 10 or rand == 11 or rand == 12 then
+		elseif rand == 4 then
 			print("rand 4")
 			game:start_dialog("maps.caves.goron.generic_4")
 		end
