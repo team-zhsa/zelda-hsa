@@ -2,7 +2,7 @@
 
 local console = {
   font = "minecraftia_mono",            -- Font of the console (monospaced).
-  font_size = 9,                        -- Font size in pixels.
+  font_size = 10,                        -- Font size in pixels.
   char_width = 6,                       -- Character width in pixels.
   line_spacing = 3,                     -- Space between two lines in pixels.
 
@@ -73,6 +73,12 @@ local function environment_index(environment, key)
       return function(...)
         game:get_hero():teleport(...)
       end
+    elseif key == "nohurt" then
+			if game:get_hero():is_invincible(false) then
+        game:get_hero():set_invincible()
+			elseif game:get_hero():is_invincible() then
+        game:get_hero():set_invincible(false)
+			end
     end
 
     local entity = game:get_map():get_entity(key)

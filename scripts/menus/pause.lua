@@ -14,7 +14,7 @@ local function initialize_pause_features(game)
   end
 
   local inventory_builder = require("scripts/menus/pause_inventory")
-  local map_builder = require("scripts/menus/pause_map")
+  local map_builder = require("scripts/menus/map_test")
   local quest_builder = require("scripts/menus/pause_quest")
   local options_builder = require("scripts/menus/pause_options")
 
@@ -29,7 +29,7 @@ local function initialize_pause_features(game)
       inventory_builder:new(game),
       map_builder:new(game),
       quest_builder:new(game),
-     options_builder:new(game)
+      options_builder:new(game)
 
     }
 

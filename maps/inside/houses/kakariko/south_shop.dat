@@ -1,0 +1,287 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Absolute Dungeon 03",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 200,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 224,
+  height = 144,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 40,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 192,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 72,
+  width = 8,
+  height = 8,
+  pattern = "counter.1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 80,
+  width = 224,
+  height = 8,
+  pattern = "counter.5",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 72,
+  width = 224,
+  height = 8,
+  pattern = "counter.2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "counter.4",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 72,
+  width = 8,
+  height = 8,
+  pattern = "counter.3",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "counter.6",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "counter.7",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "counter.9",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 88,
+  width = 224,
+  height = 16,
+  pattern = "counter.8",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 224,
+  y = 72,
+  treasure_name = "random_west",
+  treasure_variant = 3,
+  price = 20,
+  font = "white_digits",
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 176,
+  y = 72,
+  treasure_name = "heart",
+  price = 5,
+  font = "white_digits",
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 64,
+  y = 72,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  price = 15,
+  font = "white_digits",
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 112,
+  y = 72,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  price = 10,
+  font = "white_digits",
+  dialog = "",
+}
+

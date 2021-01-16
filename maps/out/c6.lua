@@ -9,6 +9,8 @@
 
 local map = ...
 local game = map:get_game()
+local fog = sol.surface.create("fogs/desert_fog.png")
+
 
 for teletransporter in map:get_entities() do
   function teletransporter:on_activated()
@@ -16,10 +18,7 @@ for teletransporter in map:get_entities() do
   end
 end
 
-function map:on_started()
-  sol.surface.create("fogs/desert_fog.png")
-end
-
-function map:on_draw()
-  sol.surface.create("fogs/desert_fog.png")
+function map:on_draw(dst_surface)
+	fog:draw(dst_surface)
+	fog:set_opacity(220)
 end

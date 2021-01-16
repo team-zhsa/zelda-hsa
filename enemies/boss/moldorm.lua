@@ -13,7 +13,7 @@ local movement_body_3
 local movement_tail
 local is_dead = false
 
-enemy:create_sprite("enemies/" .. enemy:get_breed())
+enemy:create_sprite("enemies/moldorme")
 
 function enemy:on_created()
 

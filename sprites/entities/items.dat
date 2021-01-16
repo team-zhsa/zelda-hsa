@@ -37,6 +37,13 @@ animation{
   },
 }
 animation{
+  name = "blue_key",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 624, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "blue_potion",
   src_image = "entities/items.png",
   directions = {
@@ -208,7 +215,8 @@ animation{
   name = "fire_rod",
   src_image = "entities/items.png",
   directions = {
-    { x = 304, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 128, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 128, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -244,6 +252,13 @@ animation{
   },
 }
 animation{
+  name = "green_key",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 608, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "green_potion",
   src_image = "entities/items.png",
   directions = {
@@ -254,6 +269,9 @@ animation{
   name = "hammer",
   src_image = "entities/items.png",
   directions = {
+    { x = 64, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 64, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 64, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 64, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
@@ -297,7 +315,6 @@ animation{
   frame_to_loop_on = 0,
   directions = {
     { x = 128, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 128, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -306,7 +323,6 @@ animation{
   frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {
-    { x = 144, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
@@ -364,6 +380,9 @@ animation{
   name = "lamp",
   src_image = "entities/items.png",
   directions = {
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
@@ -536,6 +555,41 @@ animation{
   },
 }
 animation{
+  name = "random_east",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+  },
+}
+animation{
+  name = "random_mountains",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+  },
+}
+animation{
+  name = "random_south",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+  },
+}
+animation{
+  name = "random_west",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+  },
+}
+animation{
+  name = "red_key",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 640, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "red_potion",
   src_image = "entities/items.png",
   directions = {
@@ -565,6 +619,7 @@ animation{
   directions = {
     { x = 464, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 464, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 464, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 464, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
@@ -643,8 +698,8 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 512, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 512, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 512, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 512, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -660,5 +715,12 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 368, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "yellow_key",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 656, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }

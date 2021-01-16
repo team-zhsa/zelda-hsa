@@ -9,16 +9,31 @@
 
 local map = ...
 local game = map:get_game()
+local hero = map:get_hero()
+local light_manager = require("scripts/maps/light_manager")
+require("scripts/states/running")
+local credits = require("scripts/menus/credits")
+local house_manager = require("scripts/maps/house_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
+	light_manager:init(map)
+--	hero:fall_from_ceiling(320)
+  map:set_light(1)
+--	sol.menu.start(map, credits, true)
 end
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
 
+function tp:on_activated()
+		dungeon_tp:set_enabled(false)
+end
+
+local text = sol.text_surface.create{
+	text_key = "version",
+	horizontal_alignment = "center",
+	font = "alttp",
+}
+
+function map:on_draw(dst_surface)
+	text:draw(dst_surface, 160, 220)
 end

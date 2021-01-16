@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
-  music = "gerudo",
+  music = "outside/gerudo",
 }
 
 tile{
@@ -161,6 +161,78 @@ tile{
   width = 32,
   height = 32,
   pattern = "8306",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 976,
+  width = 32,
+  height = 32,
+  pattern = "8306",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 1120,
+  width = 32,
+  height = 32,
+  pattern = "8306",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 656,
+  width = 32,
+  height = 32,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 560,
+  width = 32,
+  height = 32,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 176,
+  width = 32,
+  height = 32,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 1008,
+  width = 32,
+  height = 32,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 1248,
+  width = 32,
+  height = 32,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 1328,
+  width = 32,
+  height = 32,
+  pattern = "110",
 }
 
 teletransporter{
@@ -1103,6 +1175,24 @@ tile{
   layer = 1,
   x = 344,
   y = 720,
+  width = 32,
+  height = 16,
+  pattern = "8305",
+}
+
+tile{
+  layer = 1,
+  x = 544,
+  y = 960,
+  width = 32,
+  height = 16,
+  pattern = "8305",
+}
+
+tile{
+  layer = 1,
+  x = 432,
+  y = 1104,
   width = 32,
   height = 16,
   pattern = "8305",

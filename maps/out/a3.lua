@@ -9,29 +9,27 @@
 
 local map = ...
 local game = map:get_game()
-local function random_walk(npc)
+
+function guard_walk()
   local m = sol.movement.create("random_path")
-  m:set_speed(32)
-  m:start(npc)
-  npc:get_sprite():set_animation("walking")
+  m:set_speed(50)
+	m:start(npc_guard)
 end
 
 -- Event called at initialization time, as soon as this map becomes is loaded.
 function map:on_started()
-	random_walk(moving_npc)
-	random_walk(moving_npc_1)
-	random_walk(moving_npc_2)
-	random_walk(moving_npc_3)
-	random_walk(moving_npc_4)
-	random_walk(moving_npc_5)
-	random_walk(moving_npc_6)
-	random_walk(moving_npc_7)
-	random_walk(moving_npc_8)
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
+	guard_walk()
 
 end
 
+function npc_camper:on_interaction()
+	if not game:get_value("kakarico_bridge") then
+		game:start_dialog("maps.out.kakarico_village.camper_1")
+	elseif game:get_value("kakrico_bridge", 1) then
+		game:start_dialog("maps.out.kakarico_village.camper_2")
+	end
+end
+
+function map:on_draw()
+  game:set_world_rain_mode("outside_world", "rain")
+end

@@ -43,6 +43,28 @@ soulever.
 }
 
 dialog{
+  id = "_cannot_open_without_big_key",
+  text = [[
+Tu ne peux sûremùent pas ouvrir
+cette porte avec les petites clés
+que tu as !
+Essaie d'en trouver une plus
+grande.
+]],
+}
+
+dialog{
+  id = "_cannot_open_without_small_key",
+  text = [[
+Rien à faire, cette porte semble
+bloquée...
+
+Essaie de trouver une clé qui
+pourrait l'ouvrir.
+]],
+}
+
+dialog{
   id = "_shop.amount_full",
   text = [[
 Tu es déjà au maximum !
@@ -91,9 +113,7 @@ Utilise l'Arc et les
 dialog{
   id = "_treasure.arrow.1.1",
   text = [[
-Flèches pour vaincre
-des ennemis à
-distance.
+
 ]],
 }
 
@@ -344,12 +364,10 @@ dialog{
   id = "_treasure.bow.1",
   icon = "2",
   text = [[
-Tu as trouvé l'Arc !$0
-Trouve des Flèches
-et tu pourras
-vaincre à distance
-les ennemis
-coriaces !
+Tu as trouvé l'Arc !$0 Trouve
+des Flèches et tu pourras
+vaincre à distance les
+ennemis coriaces !
 ]],
 }
 
@@ -550,8 +568,8 @@ chaîne s'étire!
 dialog{
   id = "_treasure.instrument_1.1",
   text = [[
-Tu as le violon
-des vagues !
+Tu as obtenu le pendentif du
+COURAGE.
 ]],
 }
 
@@ -1126,12 +1144,10 @@ dialog{
   id = "_treasure.small_key.1",
   icon = "72",
   text = [[
-Tu as trouvé une
-Petite Clé !
-
-Tu peux ouvrir une
-porte verrouillée
-dans les environs.
+Tu as trouvé une petite Clé !
+Tu peux ouvrir une porte
+verrouillée dans les
+environs.
 ]],
 }
 
@@ -1179,13 +1195,10 @@ dialog{
   text = [[
 Tu as trouvé la
 Cotte de Mailles
-bleue !$0
-Elle te protège
-mieux contre les
-ennemis et te permet
-de résister aux
-températures les
-plus glaciales...
+rouge !$0 Elle te
+protège de manière
+plus efficace contre
+les ennemis !
 ]],
 }
 
@@ -1195,10 +1208,14 @@ dialog{
   text = [[
 Tu as trouvé la
 Cotte de Mailles
-rouge !$0 Elle te
-protège de manière
-plus efficace contre
-les ennemis !
+bleue !$0
+Elle te protège
+mieux contre les
+ennemis et te permet
+de résister aux
+températures les
+plus glaciales...
+
 ]],
 }
 
@@ -1209,6 +1226,15 @@ dialog{
 Tu as acheté du vin !
 Attention, tu peux
 devenir ivre !
+]],
+}
+
+dialog{
+  id = "_treasure.yellow_key.1",
+  text = [[
+Tu as obtenu une clé jaune.
+Je me demande bien à quoi elle
+pourrait bien servir...$1  Une idée ?
 ]],
 }
 
@@ -1233,28 +1259,46 @@ Tu peux la garder !
 }
 
 dialog{
-  id = "hint",
+  id = "codes.1",
   text = [[
+Le mot demandé est :
+Page 5, Ligne 4, Mot 3
 ]],
 }
 
 dialog{
-  id = "hint.dungeons.2.illusion.start",
+  id = "codes.2",
   text = [[
-La fatigue t'enlace :
-tu es en dehors de toi.
-
-Joue le Cantique des Cieux,
-ils t'emporteront.
+Le mot demandé est :
+Page 8, Ligne 10, Mot 5
 ]],
 }
 
 dialog{
-  id = "hint.dungeons.2.illusion.stop",
+  id = "codes.3",
   text = [[
-Quand tu es perdu
-au fond des bois,
-le chant de l'éveil te sauvera.
+Le mot demandé est :
+Page 2, Ligne 7, Mot 10
+]],
+}
+
+dialog{
+  id = "codes.4",
+  text = [[
+Le mot demandé est :
+Page 8, Ligne 6, Mot 9
+]],
+}
+
+dialog{
+  id = "codes.question",
+  text = [[
+Ceci est une protection
+anti-copie. Merci de 
+consulter votre manuel.
+Appuyez sur les 
+interrupteurs correspondant
+au mot demandé.
 ]],
 }
 
@@ -1318,6 +1362,12 @@ Tu dois être le
 mercenaire envoyé par      
 Mme Miaou Miaou.
 Je vais te corriger !!
+]],
+}
+
+dialog{
+  id = "maps.caves.goron.ascii",
+  text = [[
 ]],
 }
 
@@ -1390,9 +1440,26 @@ Il te dira quoi faire
 dialog{
   id = "maps.dungeons.1.boss_welcome",
   text = [[
-TOOOIIIIII !
-Que oses-tu faire dans
-MON repaire !!!?
+Je suis TENTACLOPO, le maître
+de ce donjon !!!
+
+Je vais te corriger !!!
+]],
+}
+
+dialog{
+  id = "maps.dungeons.1.pendant",
+  text = [[
+$v ! Je suis Zelda ! Je vois que
+tu as réussi à vaincre tous les
+monstres des Ruines.
+C'est pourquoi je te remets
+le premier pendentif : celui du
+COURAGE.
+Le voici.
+Maintenant, consulte ta carte
+et vas en A4. Tu y trouveras le
+prochain temple.
 ]],
 }
 
@@ -1400,18 +1467,33 @@ dialog{
   id = "maps.dungeons.1.welcome",
   skip = "current",
   text = [[
-       Donjon 1      
-   Ruines du Palais
+            Donjon 1      
+        Ruines du Palais
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.1.zelda",
+  id = "maps.dungeons.10.treasure.need_keys",
   text = [[
-Tu as vaincu le monstre
-du donjon. 
+Pour accéder au coffre, il te faut
+déverrouiller quatre blocs avec
+les clés suivantes :
+- Rouge
+- Vert
+- Jaune
+- Bleu
 
-Tiens
+Elles sont aux quatre coins du
+donjon, à toi de les trouver !
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.blue_chest_wrong",
+  text = [[
+Réfléchis un peu...
+Le coffre bleu s'ouvre avec la
+clé BLEUE.
 ]],
 }
 
@@ -1422,6 +1504,44 @@ HI HI HI !!
 Attends un peu,
 que je m'occupe de 
 toi... HI HI!
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.hint.arrows",
+  text = [[
+A un croisement, suis toujours
+les flèches qui sont FACE A TOI.
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.hint.corridor",
+  text = [[
+Dans la grande salle, plante une
+graine, l'eau s'en ira.
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.hint.cyclop",
+  text = [[
+Là où il y a quatre cyclopes, tu
+n'en vois que DEUX.
+L'oeil se crèvera et tu verras le
+monde en BLEU.
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.hint.stalfos",
+  text = [[
+Le SANS-CHAIR perça celui qui
+n'était pas préparé.$0
+
+Prends garde à toi si tu ne sais
+pas ce que tu verras entre les
+FEES.
 ]],
 }
 
@@ -1635,73 +1755,54 @@ Veux-tu la tester ici ?
 dialog{
   id = "maps.houses.hyrule_castle.waking_up",
   text = [[
-$1Il y a fort longtemps,$0
-dans le merveilleux
-royaume d'Hyrule,
-bordé de montagnes,$0
-de mers et forêts,$0
-vécut un jeune héros.
-Il était tout de vert
-vêtu,$0 et avait déjà
-repoussé le mal par
-de multiples occasions.
+$1Il y a fort longtemps,$0 dans
+le merveilleux royaume d'Hyrule,
+bordé de montagnes,$0 de mers
+et forêts,$0 vécut un jeune héros.
 
 
-Il avait affaire
-à un magicien,$0
-ayant pouvoir de
-transformer en peinture
-toutes choses.
+Il était tout de vert vêtu,$0 et avait
+déjà repoussé le mal par de
+multiples occasions.
+Il eut affaire à un magicien,$0
+ayant pouvoir de transformer
+en peinture toutes choses.
+Il alla chercher les 3 pendentifs
+de Vertu, $0 afin de pouvoir
+posséder l'épée de Légende.
+Dans trois donjons,$0 il vainquit
+des monstres.$0 Il récupéra
+cette épée dans les Bois.
+Ce magicien alla au château
+d'Hyrule,$0 prenant alors son
+contrôle total.
+Mais ce héros le transperça
+alors.
 
-Il alla chercher les 3
-pendentifs de Vertu, $0
-afin de pouvoir posséder
-l'épée de Légende.
+Il arriva dans un monde très
+ténébreux, Lorule.
 
-
-Dans trois donjons,$0
-il vanquit des monstres.$0
-Il récupéra donc l'épée
-de Légende dans les Bois.
-
-
-Ce magicien alla au
-château d'Hyrule,$0 prenant
-alors son contrôle total.
-Mais ce héros le 
-transperça alors.
-
-Il arriva dans un monde
-très ténèbreux, Lorule.
-
-Là,$0 il vit ce magicien,$0
-qui fusionna avec la bête
-des ténèbres...$0Ganon.
-Par la même occasion,$0
-le sorcier dispersa...$0
-les 7 sages d'Hyrule
-à travers 7 donjons.
-
-
-Il découvrit son but :$0
-rétablir la paix avec la
-Triforce.
-
-
-Celui qui la touche...$0
-en formulant un voeu...$0
+Là,$0 il vit ce magicien,$0 qui
+fusionna avec la bête des
+ténèbres...$0GANON.
+Par la même occasion,$0 le
+sorcier dispersa les 7 sages
+d'Hyrule à travers 7 donjons.
+Il découvrit son but :$0 rétablir
+la paix avec la TRIFORCE.
+Celui qui la touche...$0 en
+formulant un voeu...$0
 aura son voeu exaucé.
-
 Nul ne sait quel voeu fit
 ce héros, mais il redonna
 à Lorule sa beauté d'antan.$0
-
 Il se maria à la princesse
 Zelda et devint Roi 
 du royaume d'Hyrule.
-
 C'est 3 ans après cela...$0
 que commence...
+
+
 
 L'AVENTURE D'HYRULE
 ]],
@@ -1749,21 +1850,7 @@ Tu peux la garder !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.grandpa_house.grandpa_1",
-  skip = "all",
-  text = [[
-Heu... Hum...   
-Comment dire?   
-Téléphone...    
-A l'extérieur...
-Pépé le Ramollo n'a pas 
-l'air d'être un grand 
-causeur...
-]],
-}
-
-dialog{
-  id = "maps.houses.mabe_village.library.book_1.content",
+  id = "maps.houses.kakarico_village.library.book_1.content",
   text = [[
 Choisis l'objet 
 désiré dans     
@@ -1781,7 +1868,7 @@ plus adéquat !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_1.question",
+  id = "maps.houses.kakarico_village.library.book_1.question",
   question = "1",
   text = [[
 CHOISIR     
@@ -1794,7 +1881,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_2.content",
+  id = "maps.houses.kakarico_village.library.book_2.content",
   text = [[
 Appuie sur      
 SELECT          
@@ -1817,7 +1904,7 @@ tu n'auras pas
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_2.question",
+  id = "maps.houses.kakarico_village.library.book_2.question",
   question = "1",
   text = [[
 CONSEILS    
@@ -1830,7 +1917,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_3.content",
+  id = "maps.houses.kakarico_village.library.book_3.content",
   text = [[
 Cette technique 
 spéciale        
@@ -1852,7 +1939,7 @@ peux le faire ?
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_3.question",
+  id = "maps.houses.kakarico_village.library.book_3.question",
   question = "1",
   text = [[
 TOUT SUR L'EPEE 
@@ -1865,7 +1952,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_4.content",
+  id = "maps.houses.kakarico_village.library.book_4.content",
   text = [[
 En maintenant   
 A ou B enfoncé, 
@@ -1883,7 +1970,7 @@ des lasers !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_4.question",
+  id = "maps.houses.kakarico_village.library.book_4.question",
   question = "1",
   text = [[
 DE LA BONNE   
@@ -1896,7 +1983,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_5.content",
+  id = "maps.houses.kakarico_village.library.book_5.content",
   text = [[
 Pour reprendre  
 une bombe       
@@ -1914,7 +2001,7 @@ cette astuce ?
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_5.question",
+  id = "maps.houses.kakarico_village.library.book_5.question",
   question = "1",
   text = [[
 LES BOMBES
@@ -1927,7 +2014,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_6.content",
+  id = "maps.houses.kakarico_village.library.book_6.content",
   text = [[
 Sur Cocolint,   
 il y a des      
@@ -1950,7 +2037,7 @@ encore apparu
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_6.question",
+  id = "maps.houses.kakarico_village.library.book_6.question",
   question = "1",
   text = [[
 TELEPORTATION
@@ -1963,7 +2050,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_7.question",
+  id = "maps.houses.kakarico_village.library.book_7.question",
   question = "1",
   text = [[
 ATLAS DE    
@@ -1982,7 +2069,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_8.content",
+  id = "maps.houses.kakarico_village.library.book_8.content",
   text = [[
 Impossible !     
 Il te faut      
@@ -1994,7 +2081,7 @@ caractères...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.library.book_8.question",
+  id = "maps.houses.kakarico_village.library.book_8.question",
   question = "1",
   text = [[
 MYSTERES    
@@ -2007,7 +2094,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.marine_1",
+  id = "maps.houses.kakarico_village.marine_house.marine_1",
   skip = "all",
   text = [[
 Suis la route du Sud,
@@ -2021,7 +2108,7 @@ Sois prudent...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.marine_2",
+  id = "maps.houses.kakarico_village.marine_house.marine_2",
   text = [[
 Ah! Enfin...    
 J'ai cru que tu n'allais
@@ -2037,7 +2124,7 @@ Cocolint !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.tarin_1",
+  id = "maps.houses.kakarico_village.marine_house.tarin_1",
   text = [[
 Salut $v ! T'es 
 réveillé...
@@ -2054,7 +2141,7 @@ J'te l'donne !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.tarin_2",
+  id = "maps.houses.kakarico_village.marine_house.tarin_2",
   skip = "all",
   text = [[
 Salut $v !    
@@ -2071,7 +2158,7 @@ y'en a partout !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.tarin_3",
+  id = "maps.houses.kakarico_village.marine_house.tarin_3",
   skip = "all",
   text = [[
 Hé mon gars,    
@@ -2082,7 +2169,7 @@ dire !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.tarin_4",
+  id = "maps.houses.kakarico_village.marine_house.tarin_4",
   skip = "all",
   text = [[
 Je suis éreinté !
@@ -2093,7 +2180,7 @@ ZZZ...ZZZ...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.marine_house.tarin_5",
+  id = "maps.houses.kakarico_village.marine_house.tarin_5",
   skip = "all",
   text = [[
 J'avais la dalle alors 
@@ -2107,7 +2194,7 @@ fais comm'moi.
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.meow_meow_1",
+  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_1",
   text = [[
 Hmmm...         
 Mon Toutou est si fier     
@@ -2116,7 +2203,7 @@ de son pelage !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.meow_meow_2",
+  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_2",
   text = [[
 Au secours !     
 Quelle horreur ! 
@@ -2129,7 +2216,7 @@ mon Toutou !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.meow_meow_3",
+  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_3",
   text = [[
 Ah! Tu m'as ramené 
 mon Toutou adoré !   
@@ -2143,7 +2230,7 @@ merci !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.meow_meow_4",
+  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_4",
   text = [[
 Je te suis vraiment 
 reconnaissante ! 
@@ -2159,7 +2246,7 @@ Petit veinard...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.small_bowwow_1_1",
+  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_1_1",
   text = [[
 Ouaf Ouaf !      
 Ouaf Ouaf !
@@ -2167,7 +2254,7 @@ Ouaf Ouaf !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.small_bowwow_2_1",
+  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_1",
   text = [[
 Ouaf Ouaf ! 
 Je suis un 
@@ -2178,7 +2265,7 @@ accessoires à la mode !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.small_bowwow_2_2",
+  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_2",
   question = "1",
   text = [[
 Ouaf Ouaf ! 
@@ -2197,7 +2284,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.small_bowwow_2_3",
+  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_3",
   text = [[
 Je n'arrive pas à 
 y croire...   
@@ -2206,7 +2293,7 @@ Tu es nul !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.meow_meow_house.small_bowwow_2_4",
+  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_4",
   text = [[
 Génial, merci !  
 En échange,     
@@ -2215,7 +2302,7 @@ voici ma patée ...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.father_1",
+  id = "maps.houses.kakarico_village.quadruplets_house.father_1",
   text = [[
 Je suis Papounet le papa 
 des quadruplés.     
@@ -2227,7 +2314,7 @@ hein?
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.mother_1",
+  id = "maps.houses.kakarico_village.quadruplets_house.mother_1",
   text = [[
 J'ai trop de bébés ! 
 Ils se ressemblent tous
@@ -2241,7 +2328,7 @@ pu l'avoir.
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.mother_2",
+  id = "maps.houses.kakarico_village.quadruplets_house.mother_2",
   question = "1",
   text = [[
 Tu offres ce Yoshi        
@@ -2254,7 +2341,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.mother_3",
+  id = "maps.houses.kakarico_village.quadruplets_house.mother_3",
   text = [[
 Tant pis...     
 C'est dommage !
@@ -2262,7 +2349,7 @@ C'est dommage !
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.mother_4",
+  id = "maps.houses.kakarico_village.quadruplets_house.mother_4",
   text = [[
 Oh ! Merci !      
 Tu es un gentil
@@ -2273,7 +2360,7 @@ te donne ceci.
 }
 
 dialog{
-  id = "maps.houses.mabe_village.quadruplets_house.mother_5",
+  id = "maps.houses.kakarico_village.quadruplets_house.mother_5",
   text = [[
 Ces quatre là se
 ressemblent tant
@@ -2283,24 +2370,15 @@ je m'y perds...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.merchant_1",
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_1",
+  skip = "all",
   text = [[
-Bienvenue !      
-Apporte ici ce que tu       
-veux acheter.
+
 ]],
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.merchant_2",
-  text = [[
-Hé! Une minute! 
-Tu dois payer!
-]],
-}
-
-dialog{
-  id = "maps.houses.mabe_village.shop_2.merchant_3",
+  id = "maps.houses.kakarico_village.shop_2.merchant_3",
   text = [[
 Désolé petit !   
 Tu n'as pas assez 
@@ -2310,7 +2388,7 @@ Reviens donc plus tard.
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.merchant_4",
+  id = "maps.houses.kakarico_village.shop_2.merchant_4",
   text = [[
 Mama mia ! Tu n'es 
 pas encore rôdé...  
@@ -2320,7 +2398,7 @@ choses inutiles ?
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.merchant_5",
+  id = "maps.houses.kakarico_village.shop_2.merchant_5",
   text = [[
 Je t'avais bien dit de
 me payer. Tu vas le       
@@ -2329,7 +2407,19 @@ regretter...
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.product_bombs",
+  id = "maps.houses.kakarico_village.shop_2.merchant_welcome",
+  question = "1",
+  text = [[
+Bienvenue chez l'oncle Tom !
+Si tu veux acheter quoi que ce
+ce soit, choisis sur le comptoir.
+Si tu veux un objet aléatoire,
+sélectionne l'objet de droite.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.shop_2.product_bombs",
   question = "1",
   text = [[
 10 Bombes   
@@ -2342,7 +2432,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.product_heart",
+  id = "maps.houses.kakarico_village.shop_2.product_heart",
   question = "1",
   text = [[
 Trois Coeurs   
@@ -2355,7 +2445,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.product_shield",
+  id = "maps.houses.kakarico_village.shop_2.product_shield",
   question = "1",
   text = [[
 Bouclier        
@@ -2368,7 +2458,7 @@ Non
 }
 
 dialog{
-  id = "maps.houses.mabe_village.shop_2.product_shovel",
+  id = "maps.houses.kakarico_village.shop_2.product_shovel",
   question = "1",
   text = [[
 Pelle de qualité
@@ -3014,6 +3104,14 @@ il y a 5 ans.
 }
 
 dialog{
+  id = "maps.out._boundaries",
+  text = [[
+Vous ne pouvez pas aller plus
+loin.
+]],
+}
+
+dialog{
   id = "maps.out.east_prairie.sign_1",
   text = [[
 Château Canulet 
@@ -3066,14 +3164,6 @@ dialog{
   id = "maps.out.egg_of_the_dream_fish.sign_3",
   text = [[
 Mt Tamaranch
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign.sanctuary",
-  text = [[
-<--Vill. Cocorico
-Domaine Zora-->
 ]],
 }
 
@@ -3138,6 +3228,80 @@ dialog{
 }
 
 dialog{
+  id = "maps.out.hylia_lake.sign_1",
+  text = [[
+Devant vous se trouve la baie du
+Tourne-main ou de l'ogre, je ne
+sais plus !
+]],
+}
+
+dialog{
+  id = "maps.out.hylia_lake.sign_2",
+  text = [[
+Nord : Cimetière
+Est : Sanctuaire
+Plus à l'est : Lac Zora
+Sud : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.hylia_lake.sign_3",
+  text = [[
+Vous êtes ici.
+Là : --> *
+]],
+}
+
+dialog{
+  id = "maps.out.hylia_lake.sign_4",
+  text = [[
+Vous êtes sur le sentier :
+G FIN
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.generic_2",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.generic_3",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.generic_4",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.generic_5",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.rich_woman",
+  text = [[
+Encore vous ?! Seules les riches
+personnes se réservent le droit
+de fouler le sol de mon domicile,
+et encore, seulement sur
+ordonnance !
+
+$0.$0.$0.$0 Maintenant, sortez de
+chez moi,
+ou j'appelle la police !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.shop.bombs",
   text = [[
 Voici des bombes 
@@ -3165,31 +3329,25 @@ Sensations garanties!
 }
 
 dialog{
-  id = "maps.out.kakarico_village.fishman_1",
-  question = "1",
+  id = "maps.out.kakarico_village.camper_1",
   text = [[
-Une partie de pêche, 
-mon gars ?
-
-Ça ne te coûtera que 
-10 rubis... 
-
-
-Oui
-Non
+Depuis que les ponts sont tombés,
+on doit passer par le lac Hylia.
+$0.$0.$0.$0Quelle perte de temps !
+Moi, je reste ici en profitant du
+village !
 ]],
 }
 
 dialog{
-  id = "maps.out.kakarico_village.fishman_2",
+  id = "maps.out.kakarico_village.camper_2",
   skip = "all",
   text = [[
-Avec < et > de +, évalue 
-la distance de ton
-lancer.  
-Dès que le poisson est     
-ferré, presse vite AïB
-pour le remonter !
+Moi, je sais pas quand ils
+vont r'mettr' les ponts, mais
+je te dis de pas aller dans la
+forêt ! On sait pas c'qui arrive
+à c'qui rentre !
 ]],
 }
 
@@ -3199,15 +3357,6 @@ dialog{
   text = [[
 Vis ta vie !     
 Sois un peu plus motivé !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.grand_ma_1",
-  skip = "all",
-  text = [[
-YOUPI! J'ai la  
-pêche ! Et toi ? 
 ]],
 }
 
@@ -3430,11 +3579,102 @@ que tu aimes ?
 }
 
 dialog{
+  id = "maps.out.kakarico_village.maze_2",
+  question = "1",
+  text = [[
+Hey ! Tu veux participer au
+nouveau jeu du labyrinthe ?
+Ca fera 20 rubis la partie !
+Jouer ?
+Oui !
+Non, plus tard.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_3_no",
+  text = [[
+Bon plus tard alors.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_3_yes",
+  text = [[
+Tu as 60 secondes pour aller
+actionner l'interrupteur là-bas
+et en revenir.
+Si tu gagnes, tu auras une
+superbe réconpense !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_activate_switch",
+  text = [[
+Tu dois activer l'interrupteur
+là-bas pour gagner.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_loose",
+  text = [[
+Tu as perdu...
+Reviens une autre fois si tu veux
+rejouer !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_loose_dial",
+  text = [[
+C'est perdu !
+Pas de chance...
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze_won",
+  text = [[
+C'est gagné !
+Tiens, voilà ta réconpense :
+]],
+}
+
+dialog{
   id = "maps.out.kakarico_village.sign_1",
   skip = "all",
   text = [[
-Chez le sage
-Sahasrahla
+Chez le sage Sahasrahla
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.sign_2",
+  text = [[
+Nord : Le lac Hylia
+Est : Le village Cocorico
+
+Ouest : Un autre pays où il fait
+bon vivre.
+
+$0.$0.$0.$0Mais l'accès est bloqué
+par une fichue barrière, quel
+dommage !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.sign_3",
+  text = [[
+Est : Pont de Cocorico Nord
+Sud-est : Pont de Cocorico Sud $0
+Bah en fait y a plus de pont !
+La société des ponts d'Hyrule
+n'est en aucun cas tenue
+responsable des chutes de curieux
+qui tombent des ponts ! Merci
 ]],
 }
 
@@ -3529,7 +3769,7 @@ n'avons rien préparé.
 }
 
 dialog{
-  id = "maps.out.prairie.dungeon_3_lock",
+  id = "maps.out.south_castle.dungeon_3_lock",
   text = [[
 Une serrure ici?
 Hum, voyons :   
@@ -3538,17 +3778,25 @@ Serrure Cyclope
 }
 
 dialog{
-  id = "maps.out.prairie.sign_1",
-  skip = "all",
+  id = "maps.out.south_castle.sign.sanctuary",
   text = [[
-Est : Prairie   
-Plus à l'Est :  
-Village des Animaux
+<--Vill. Cocorico
+Domaine Zora-->
 ]],
 }
 
 dialog{
-  id = "maps.out.prairie.sign_2",
+  id = "maps.out.south_castle.sign_1",
+  skip = "all",
+  text = [[
+Nord : La ville d'Hyrule
+Sud : La plaine
+Plus au Sud : Le marais boueux
+]],
+}
+
+dialog{
+  id = "maps.out.south_castle.sign_2",
   skip = "all",
   text = [[
 Château Canulet 
@@ -3609,14 +3857,7 @@ Château Canulet
 }
 
 dialog{
-  id = "maps.out.west_mountains.sign.mount_lazare",
-  text = [[
-Pic Lazare : 2 cm
-]],
-}
-
-dialog{
-  id = "maps.out.west_mt_tamaranch.owl_statue_1",
+  id = "maps.out.west_mountains.owl_statue_1",
   text = [[
 VA VOIR L'OEUF SACRE.
 IL REPOND AUX SONS.
@@ -3624,15 +3865,14 @@ IL REPOND AUX SONS.
 }
 
 dialog{
-  id = "maps.out.west_mt_tamaranch.sign_1",
+  id = "maps.out.west_mountains.sign_1",
   text = [[
-Accès interdit! 
-(sauf Toutou)
+Devant vous : Pic Lazare,  2 cm
 ]],
 }
 
 dialog{
-  id = "maps.out.west_mt_tamaranch.sign_2",
+  id = "maps.out.west_mountains.sign_2",
   text = [[
 Est : Mrs Anémones  
 Sud : Forêt Enchantée
@@ -3741,6 +3981,45 @@ Non
 }
 
 dialog{
+  id = "scripts.menus.credits",
+  text = [[
+Merci beaucoup d'avoir
+joué à The Legend of
+Zelda : Hyrule's Adventure
+
+La team ZeldaHSA remercie:
+
+Nintendo Co., Ltd.
+Linkff
+Lucifer
+Salade_verte
+Jul
+Vibel
+BP
+MetalZelda
+Matt Wright
+La team Solarus
+PhoenixII54
+alexgleason
+Froggy77
+
+et vous
+pour leur long travail
+à imaginer et créer
+ce jeu auquel vous avez
+pris le plaisir de jouer,
+les musiques,
+le code du jeu,
+les idées principales,
+les graphismes.
+
+Nous remecrcions aussi
+notre équipe de bêta-
+testeurs.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.angler_key.1",
   icon = "41",
   skip = "all",
@@ -3780,8 +4059,7 @@ dialog{
   icon = "4",
   skip = "all",
   text = [[
-Utilise le Boomerang
-pour immobiliser les
+Utilise le Boomerang pour immobiliser les
 ennemis ou attraper
 des objets à
 distance.

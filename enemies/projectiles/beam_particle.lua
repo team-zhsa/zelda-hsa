@@ -1,5 +1,5 @@
 local enemy = ...
-local particle_sprite = "enemies/beamos_particle"
+local particle_sprite = "enemies/dungeons/beamos_particle"
 local damage = 1
 
 -- Default parameters of the beam particle.

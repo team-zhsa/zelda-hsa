@@ -171,7 +171,7 @@ local function initialize_hud_features(game)
       end
 
       if enabled then
-        sol.timer.start(hud, 50, check_hud)
+        sol.timer.start(game, 50, check_hud)
       end
     end
   end

@@ -20,60 +20,12 @@ local function initialize_dungeon_features(game)
       rows = 6,
       cols= 7,
       teletransporter_end_dungeon = {
-        map_id = "out/a4_south_mabe_village",
-        destination_name = "dungeon_1_2_A"
+        map_id = "out/a1",
+        destination_name = "from_dungeon"
       },
-      secrets = {
-        [0] = {        
-          [25] = {
-            savegame = "dungeon_1_feather",
-            signal = false
-          },
-          [28] = {
-            savegame = "dungeon_1_boss_key",
-            signal = true
-          },
-          [30] = {
-            savegame = "dungeon_1_beak_of_stone",
-            signal = false
-          },
-          [35] = {
-            savegame = "dungeon_1_rupee_1",
-            signal = false
-          },
-          [36] = {
-            savegame = "dungeon_1_small_key_3",
-            signal = true
-          },
-          [44] = {
-            savegame = "dungeon_1_small_key_2",
-            signal = true
-          },
-          [45] = {
-            savegame = "dungeon_1_map",
-            signal = false
-          },
-          [51] = {
-            savegame = "dungeon_1_small_key_1",
-            signal = true
-          }
-        }
-      },
-      small_boss = {
-        floor = 0,
-        breed = "boss/rolling_bones",
-        x = 640 + 1440,
-        y = 720 + 365
-      },
-      boss = {
-        floor = 0,
-        breed = "boss/moldorm",
-        x = 640 + 1440,
-        y = 720 + 365
-      }
     },
    [2] = {
-      lowest_floor = 0,
+      lowest_floor = -2,
       highest_floor = 0,
       rows = 7,
       cols= 6,
@@ -82,106 +34,25 @@ local function initialize_dungeon_features(game)
         destination_name = "dungeon_2_2_A"
       },
       maps = { "dungeons/2/1f"},
-      secrets = {
-        [0] = {        
-          [2] = {
-            savegame = "dungeon_2_power_bracelet",
-            signal = false
-          },
-          [4] = {
-            savegame = "dungeon_2_small_key_5",
-            signal = true
-          },
-          [11] = {
-            savegame = "dungeon_2_map",
-            signal = false
-          },
-          [14] = {
-            savegame = "dungeon_2_boss_key",
-            signal = true
-          },
-          [34] = {
-            savegame = "dungeon_2_beak_of_stone",
-            signal = false
-          },
-          [44] = {
-            savegame = "dungeon_2_small_key_1",
-            signal = true
-          },
-          [46] = {
-            savegame = "dungeon_2_small_key_2",
-            signal = true
-          },
-          [51] = {
-            savegame = "dungeon_2_rupee_1",
-            signal = false
-          },
-          [52] = {
-            savegame = "dungeon_2_compass",
-            signal = false
-          },
-          [53] = {
-            savegame = "dungeon_2_small_key_3",
-            signal = true
-          },
-          [54] = {
-            savegame = "dungeon_2_small_key_4",
-            signal = true
-          },
-        }
-      },
-      small_boss = {
-        breed = "boss/hinox_master",
-      },
-      boss = {
-        floor = 0,
-        breed = "boss/genie",
-        x = 640 + 1440,
-        y = 720 + 365
-      }
    },
    [3] = {
         lowest_floor = -1,
         highest_floor = 0,
         rows = 8,
         cols= 4,
-        secrets = {
-        },
-        boss = {
-          floor = 0,
-          x = 640 + 1440,
-          y = 720 + 365,
-          savegame_variable = "dungeon_3_boss",
-        }
       },
  [4] = {
         lowest_floor = -1,
         highest_floor = 0,
         rows = 7,
         cols= 6,
-        secrets = {
         },
-        boss = {
-          floor = 0,
-          x = 640 + 1440,
-          y = 720 + 365,
-          savegame_variable = "dungeon_4_boss",
-        }
-      },
  [5] = {
         lowest_floor = 0,
         highest_floor = 0,
         rows = 7,
         cols= 8,
-        secrets = {
-        },
-        boss = {
-          floor = 0,
-          x = 640 + 1440,
-          y = 720 + 365,
-          savegame_variable = "dungeon_6_boss",
-        }
-      }
+      },
     }
 
   -- Returns the index of the current dungeon if any, or nil.

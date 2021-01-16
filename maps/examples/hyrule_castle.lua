@@ -1,4 +1,4 @@
--- Lua script of map examples/hyrule_castle.
+-- Lua script of map full_hyrule/Hyrule Castle.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

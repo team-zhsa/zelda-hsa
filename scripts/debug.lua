@@ -40,10 +40,10 @@ function debug:on_key_pressed(key, modifiers)
 
     -- In-game cheating keys.
     if key == "p" then
-      game:add_life(5)
-    elseif key == "m" then
-      game:remove_life(4)
+      game:add_life(4)
     elseif key == "o" then
+      game:remove_life(4)
+    elseif key == "m" then
       game:add_money(50)
     elseif key == "l" then
       game:remove_money(15)
@@ -94,11 +94,11 @@ function debug:on_key_pressed(key, modifiers)
         hero:set_position(x, y, layer + 1)
       end
     elseif key == "r" then
-      if hero:get_walking_speed() == 384 then
+      if hero:get_walking_speed() == 400 then
         hero:set_walking_speed(debug.normal_walking_speed)
       else
         debug.normal_walking_speed = hero:get_walking_speed()
-        hero:set_walking_speed(384)
+        hero:set_walking_speed(400)
       end
     elseif key == "s" then
       local statistics = statistics_manager:new(game)

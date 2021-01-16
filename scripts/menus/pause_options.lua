@@ -1,5 +1,6 @@
 local submenu = require("scripts/menus/pause_submenu")
 local language_manager = require("scripts/language_manager")
+local shader_manager = require("scripts/shader_manager")
 
 local options_submenu = submenu:new()
 
@@ -29,7 +30,7 @@ function options_submenu:on_started()
     vertical_alignment = "top",
     font = font,
     font_size = font_size,
-    text = sol.video.get_mode(),
+    text = sol.video.get_shader(),
     color = self.text_color,
   }
   self.video_mode_text:set_xy(center_x + 74, center_y - 58)
@@ -239,8 +240,8 @@ function options_submenu:on_command_pressed(command)
       sol.audio.play_sound("danger")
       if self.cursor_position == 1 then
         -- Change the video mode.
-        sol.video.switch_mode()
         self.video_mode_text:set_text(sol.video.get_mode())
+    		sol.video.switch_mode()
       else
         -- Customize a game command.
         self:set_caption("options.caption.press_key")

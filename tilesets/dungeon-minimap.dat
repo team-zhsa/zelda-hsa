@@ -28007,6 +28007,7 @@ tile_pattern{
   y = { 384, 384, 384 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -36411,6 +36412,7 @@ tile_pattern{
   y = { 416, 416, 416 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -36781,6 +36783,7 @@ tile_pattern{
   y = { 56, 56, 56 },
   width = 32,
   height = 56,
+  frame_delay = 250,
   repeat_mode = "none",
 }
 
@@ -36821,10 +36824,12 @@ tile_pattern{
   id = "lava",
   ground = "lava",
   default_layer = 0,
-  x = { 584, 584, 584, 584 },
-  y = { 368, 384, 400, 384 },
+  x = { 584, 584, 584 },
+  y = { 368, 384, 400 },
   width = 16,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
 }
 
 tile_pattern{
@@ -36835,6 +36840,7 @@ tile_pattern{
   y = { 368, 384, 400 },
   width = 16,
   height = 16,
+  frame_delay = 250,
   scrolling = "parallax",
 }
 
@@ -37312,10 +37318,12 @@ tile_pattern{
   id = "poison",
   ground = "prickles",
   default_layer = 0,
-  x = { 600, 616, 632, 616 },
-  y = { 400, 400, 400, 400 },
+  x = { 600, 616, 632 },
+  y = { 400, 400, 400 },
   width = 16,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
 }
 
 tile_pattern{
@@ -38300,6 +38308,7 @@ tile_pattern{
   y = { 496, 496, 496 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -40073,10 +40082,12 @@ tile_pattern{
   id = "torch",
   ground = "wall",
   default_layer = 0,
-  x = { 488, 504, 520, 504 },
-  y = { 320, 320, 320, 320 },
+  x = { 488, 504, 520 },
+  y = { 320, 320, 320 },
   width = 16,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -40095,10 +40106,12 @@ tile_pattern{
   id = "torch_big.top",
   ground = "wall",
   default_layer = 1,
-  x = { 488, 504, 520, 504 },
-  y = { 336, 336, 336, 336 },
+  x = { 488, 504, 520 },
+  y = { 336, 336, 336 },
   width = 16,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -48024,10 +48037,12 @@ tile_pattern{
   id = "wall_torch.1",
   ground = "wall",
   default_layer = 0,
-  x = { 456, 456, 456, 456 },
-  y = { 240, 256, 272, 256 },
+  x = { 456, 456, 456 },
+  y = { 240, 256, 272 },
   width = 32,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -48035,10 +48050,12 @@ tile_pattern{
   id = "wall_torch.2",
   ground = "wall",
   default_layer = 0,
-  x = { 504, 504, 504, 504 },
-  y = { 272, 288, 304, 288 },
+  x = { 504, 504, 504 },
+  y = { 272, 288, 304 },
   width = 32,
   height = 16,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -48046,10 +48063,12 @@ tile_pattern{
   id = "wall_torch.3",
   ground = "wall",
   default_layer = 0,
-  x = { 456, 472, 488, 472 },
-  y = { 288, 288, 288, 288 },
+  x = { 456, 472, 488 },
+  y = { 288, 288, 288 },
   width = 16,
   height = 32,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -48057,10 +48076,12 @@ tile_pattern{
   id = "wall_torch.4",
   ground = "wall",
   default_layer = 0,
-  x = { 488, 504, 520, 504 },
-  y = { 240, 240, 240, 240 },
+  x = { 488, 504, 520 },
+  y = { 240, 240, 240 },
   width = 16,
   height = 32,
+  frame_delay = 250,
+  mirror_loop = true,
   repeat_mode = "none",
 }
 
@@ -48336,6 +48357,7 @@ tile_pattern{
   y = { 80, 80, 80 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -48346,6 +48368,7 @@ tile_pattern{
   y = { 96, 96, 96 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -48400,6 +48423,7 @@ tile_pattern{
   y = { 64, 64, 64 },
   width = 16,
   height = 16,
+  frame_delay = 250,
 }
 
 tile_pattern{
@@ -48542,6 +48566,7 @@ tile_pattern{
   y = { 208, 216, 224 },
   width = 32,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "none",
 }
 
@@ -48553,6 +48578,7 @@ tile_pattern{
   y = { 240, 248, 256 },
   width = 32,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "none",
 }
 
@@ -48564,6 +48590,7 @@ tile_pattern{
   y = { 232, 232, 232 },
   width = 8,
   height = 32,
+  frame_delay = 250,
   repeat_mode = "none",
 }
 
@@ -48575,6 +48602,7 @@ tile_pattern{
   y = { 208, 208, 208 },
   width = 8,
   height = 32,
+  frame_delay = 250,
   repeat_mode = "none",
 }
 
@@ -48630,6 +48658,7 @@ tile_pattern{
   y = { 128, 128, 128 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48641,6 +48670,7 @@ tile_pattern{
   y = { 120, 120, 120 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48652,6 +48682,7 @@ tile_pattern{
   y = { 112, 112, 112 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48663,6 +48694,7 @@ tile_pattern{
   y = { 136, 136, 136 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48674,6 +48706,7 @@ tile_pattern{
   y = { 144, 144, 144 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48685,6 +48718,7 @@ tile_pattern{
   y = { 152, 152, 152 },
   width = 16,
   height = 8,
+  frame_delay = 250,
   repeat_mode = "horizontal",
 }
 
@@ -48696,6 +48730,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 
@@ -48707,6 +48742,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 
@@ -48718,6 +48754,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 
@@ -48729,6 +48766,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 
@@ -48740,6 +48778,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 
@@ -48751,6 +48790,7 @@ tile_pattern{
   y = { 160, 176, 192 },
   width = 8,
   height = 16,
+  frame_delay = 250,
   repeat_mode = "vertical",
 }
 

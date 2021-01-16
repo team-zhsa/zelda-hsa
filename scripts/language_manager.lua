@@ -17,7 +17,8 @@ end
 function language_manager:get_dialog_font(language)
 
   -- No font differences between languages (for now).
-  return "la", 11
+	-- ALTTP font can have up to 32 chars in one box.
+  return "alttp", 11
 end
 
 -- Returns the font and font size to be used to display text in menus
@@ -25,7 +26,7 @@ end
 function language_manager:get_menu_font(language)
 
   -- No font differences between languages (for now).
-  return "minecraftia", 8
+  return "alttp", 10
 end
 
 return language_manager

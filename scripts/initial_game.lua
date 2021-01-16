@@ -19,7 +19,8 @@ function initial_game:initialize_new_savegame(game)
   game:get_item("rupee_bag"):set_variant(1)
   game:set_ability("sword", 0)
   game:set_value("main_quest", 1)
-  game:set_starting_location("inside/castle/1f", "start_game")
+  game:set_value("hour_of_day", 0)
+  game:set_starting_location("inside/castle/rooms", "start_game")
 
 end
 

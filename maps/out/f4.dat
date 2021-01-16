@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
-  music = "main_town",
+  music = "inside/castle_courtyard",
 }
 
 tile{
@@ -13246,8 +13246,8 @@ teletransporter{
   y = 80,
   width = 16,
   height = 16,
-  destination_map = "houses/castle/1f",
-  destination = "from_outside",
+  destination_map = "inside/castle/1f",
+  destination = "a",
 }
 
 npc{
@@ -17934,10 +17934,28 @@ door{
 }
 
 door{
-  name = "quest_potion_door_5",
+  name = "green_door",
   layer = 1,
   x = 136,
   y = 800,
+  direction = 1,
+  sprite = "entities/doors/Outside/door_light01",
+}
+
+door{
+  name = "house_door",
+  layer = 1,
+  x = 1128,
+  y = 800,
+  direction = 1,
+  sprite = "entities/doors/Outside/door_light01",
+}
+
+door{
+  name = "bar_door",
+  layer = 1,
+  x = 984,
+  y = 816,
   direction = 1,
   sprite = "entities/doors/Outside/door_light01",
 }

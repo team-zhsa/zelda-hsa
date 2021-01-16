@@ -14,7 +14,7 @@
    * cut : scalar => define how much the light is "cut" from the base cut \in [0,1] 0 no cut, 1 full cut
    
    * angle : scalar => alias for aperture that defines it from the **angle in degrees**
-]]
+--]]
 
 local light = ...
 local game = light:get_game()

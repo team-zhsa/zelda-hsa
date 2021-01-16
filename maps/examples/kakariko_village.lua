@@ -1,4 +1,4 @@
--- Lua script of map examples/Kakariko Village.
+-- Lua script of map full_hyrule/Kakariko Village.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

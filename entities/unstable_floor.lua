@@ -8,7 +8,7 @@ also destroy all other entities with the prefix: entity_name .. "_unstable_assoc
 -- Variables
 local entity = ...
 local default_sprite_id = "entities/cave_hole"
-local break_sound = "misc/ground_crumble"
+local break_sound = "stone" --TODO find another sound
 local time_resistance = 1500 -- The time it resists with hero above. In milliseconds.
 
 -- Include scripts
@@ -56,7 +56,7 @@ entity:register_event("on_created", function()
           audio_manager:play_sound(break_sound)
           local entity_name = entity:get_name()
           if entity_name then
-            local prefix = entity_name .. "_unstable_associate_"
+            local prefix = entity_name .. "_unstable_bg_"
             for entity_map in entity:get_map():get_entities(prefix) do
               entity_map:remove()
             end

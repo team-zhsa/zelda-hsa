@@ -22,3 +22,59 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+for npc in map:get_entities("magic_booth") do
+	function magic_booth:on_interaction()
+		if not game:get_value("dungeon_2_crossing_puzzle") then
+			game:start_dialog("maps.dungeons.2.hint.arrows")
+		elseif not game:get_value("dungeon_2_holes_puzzle") then
+			game:start_dialog("maps.dungeons.2.hint.holes")
+		elseif not game:get_value("dungeon_2_cyclop_puzzle") then
+			game:start_dialog("maps.dungeons.2.hint.cyclop")
+		end
+	end
+end
+
+function sensor_cross_puzzle:on_activated()
+	game:set_value("puzzle_cross_from_south", 1)
+	wall_cross_puzzle:set_enabled(false)
+	wall_cross_puzzle_4:set_enabled(false)
+	sensor_cross_puzzle_4:set_enabled(false)
+end
+
+function sensor_cross_puzzle_3:on_activated()
+	game:set_value("puzzle_cross_from_east", 1)
+	wall_cross_puzzle_2:set_enabled(false)
+	wall_cross_puzzle_4:set_enabled(false)
+	sensor_cross_puzzle_2:set_enabled(false)
+end
+
+function sensor_cross_puzzle_2:on_activated()
+	game:set_value("puzzle_cross_from_north", 1)
+	wall_cross_puzzle_2:set_enabled(false)
+	wall_cross_puzzle_3:set_enabled(false)
+	sensor_cross_puzzle_4:set_enabled(false)
+end
+
+function sensor_cross_puzzle_4:on_activated()
+	game:set_value("puzzle_cross_from_north", 1)
+	wall_cross_puzzle:set_enabled(false)
+	wall_cross_puzzle_3:set_enabled(false)
+	sensor_cross_puzzle:set_enabled(false)
+end
+
+local function teleport_sensor(to_sensor, from_sensor)
+  local hero_x, hero_y = hero:get_position()
+  local to_sensor_x, to_sensor_y = to_sensor:get_position()
+  local from_sensor_x, from_sensor_y = from_sensor:get_position()
+ 
+  hero:set_position(hero_x - from_sensor_x + to_sensor_x, hero_y - from_sensor_y + to_sensor_y)
+end
+ 
+function sensor_corridor_from_13:on_activated()
+  teleport_sensor(sensor_corridor_to_13, self)
+end
+ 
+function sensor_corridor_from_25:on_activated()
+  teleport_sensor(sensor_corridor_to_25, self)
+end

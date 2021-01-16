@@ -8,11 +8,12 @@ local item_names_assignable = {
   "pegasus_shoes",
   "bombs_counter",
 	"wine",
+  "lamp",
+	"boomerang",
   "shovel",
   "bow",
   "hookshot",
   "hammer",
-	"boomerang",
   "fire_rod",
 }
 local item_names_static = {
@@ -90,7 +91,7 @@ function inventory_submenu:on_draw(dst_surface)
   -- Draw the cursor caption.
   self:draw_caption(dst_surface)
 
-  --[[Draw each inventory static item.
+  --Draw each inventory static item.
   local y = 90
   local k = 0
   local x = 64
@@ -103,7 +104,7 @@ function inventory_submenu:on_draw(dst_surface)
     end
     -- Next item position (they are on the same column).
     y = y + cell_size + cell_spacing
-  end--]]
+  end
 
   -- Draw each inventory assignable item.
   local y = 90
@@ -355,8 +356,8 @@ function inventory_submenu:assign_item(slot)
       local x1 = 63 + 32 * self.cursor_column
       local y1 = 90 + 32 * self.cursor_row
 
-      local x2 = (slot == 1) and 20 or 72
-      local y2 = 46
+      local x2 = (slot == 1) and 237 or 284
+      local y2 = 16
 
       self.item_assigned_sprite:set_xy(x1, y1)
       local movement = sol.movement.create("target")

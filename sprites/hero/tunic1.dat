@@ -188,6 +188,14 @@ animation{
   },
 }
 animation{
+  name = "diving",
+  src_image = "hero/underwater.png",
+  frame_delay = 100,
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 4 },
+  },
+}
+animation{
   name = "drop",
   src_image = "hero/drop.tunic.png",
   directions = {
@@ -215,10 +223,10 @@ animation{
   frame_delay = 50,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 24, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 48, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 72, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 2, num_columns = 1 },
+    { x = 0, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 24, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 48, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 72, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
@@ -255,7 +263,7 @@ animation{
 animation{
   name = "hammer",
   src_image = "hero/hammer.tunic.png",
-  frame_delay = 150,
+  frame_delay = 100,
   directions = {
     { x = 0, y = 0, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 7 },
     { x = 0, y = 40, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 7 },

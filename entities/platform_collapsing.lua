@@ -95,7 +95,7 @@ sol.timer.start(entity, 10, function()
     if found then
 
       local speed=0
-      local anim="moving"
+      local anim="walking"
       local state = hero:get_state()
 
       if needs_carrying=="false" or (needs_carrying=="true" and hero:get_state() == "carrying") then
@@ -104,7 +104,7 @@ sol.timer.start(entity, 10, function()
 
       --Display the angry visage (or whathever is used to mark the carriable requirement
       if needs_carrying=="true" then
-        anim="moving_pot"
+        anim="stopped"
       end
 
       sprite:set_animation(anim)
@@ -115,7 +115,7 @@ sol.timer.start(entity, 10, function()
       end
     else
       movement:set_speed(0)
-      sprite:set_animation("moving")
+      sprite:set_animation("walking")
     end
     return true
   end)

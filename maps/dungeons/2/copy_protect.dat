@@ -1,0 +1,717 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Absolute Dungeon 09",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 200,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 192,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 40,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+switch{
+  name = "switch_a",
+  layer = 0,
+  x = 48,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_b",
+  layer = 0,
+  x = 64,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_c",
+  layer = 0,
+  x = 80,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/Switches/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_d",
+  layer = 0,
+  x = 96,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_e",
+  layer = 0,
+  x = 112,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_f",
+  layer = 0,
+  x = 128,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_g",
+  layer = 0,
+  x = 144,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_h",
+  layer = 0,
+  x = 160,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_i",
+  layer = 0,
+  x = 176,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_j",
+  layer = 0,
+  x = 192,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_k",
+  layer = 0,
+  x = 208,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_l",
+  layer = 0,
+  x = 224,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_m",
+  layer = 0,
+  x = 240,
+  y = 48,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_n",
+  layer = 0,
+  x = 64,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_o",
+  layer = 0,
+  x = 80,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_p",
+  layer = 0,
+  x = 96,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_q",
+  layer = 0,
+  x = 112,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_r",
+  layer = 0,
+  x = 128,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_s",
+  layer = 0,
+  x = 144,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_t",
+  layer = 0,
+  x = 160,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_u",
+  layer = 0,
+  x = 176,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_v",
+  layer = 0,
+  x = 192,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_w",
+  layer = 0,
+  x = 208,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_x",
+  layer = 0,
+  x = 224,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_y",
+  layer = 0,
+  x = 240,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+switch{
+  name = "switch_z",
+  layer = 0,
+  x = 256,
+  y = 176,
+  subtype = "walkable",
+  sprite = "entities/switch",
+  sound = "objects/on_switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 160,
+  y = 125,
+  direction = 1,
+}
+
+tile{
+  layer = 2,
+  x = 48,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "14",
+}
+
+tile{
+  layer = 2,
+  x = 64,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "15",
+}
+
+tile{
+  layer = 2,
+  x = 80,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "16",
+}
+
+tile{
+  layer = 2,
+  x = 96,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "17",
+}
+
+tile{
+  layer = 2,
+  x = 224,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "25",
+}
+
+tile{
+  layer = 2,
+  x = 144,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "20",
+}
+
+tile{
+  layer = 2,
+  x = 96,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "29",
+}
+
+tile{
+  layer = 2,
+  x = 80,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "28",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "30",
+}
+
+tile{
+  layer = 2,
+  x = 208,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "36",
+}
+
+tile{
+  layer = 2,
+  x = 192,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "23",
+}
+
+tile{
+  layer = 2,
+  x = 176,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "34",
+}
+
+tile{
+  layer = 2,
+  x = 176,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "22",
+}
+
+tile{
+  layer = 2,
+  x = 128,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "31",
+}
+
+tile{
+  layer = 2,
+  x = 192,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "35",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "18",
+}
+
+tile{
+  layer = 2,
+  x = 160,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "33",
+}
+
+tile{
+  layer = 2,
+  x = 64,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "27",
+}
+
+tile{
+  layer = 2,
+  x = 128,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "19",
+}
+
+tile{
+  layer = 2,
+  x = 160,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "21",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "38",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "26",
+}
+
+tile{
+  layer = 2,
+  x = 208,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "24",
+}
+
+tile{
+  layer = 2,
+  x = 224,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "37",
+}
+
+tile{
+  layer = 2,
+  x = 144,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "32",
+}
+
+tile{
+  layer = 2,
+  x = 256,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "39",
+}
+

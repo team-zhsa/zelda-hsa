@@ -14,10 +14,11 @@ end
 
 function submenu:on_started()
 
+
   self.background_surfaces = sol.surface.create("menus/pause_submenus.png")
   self.title_surfaces = sol.surface.create("menus/pause_submenus.png", true)
   self.title_arrows = sol.surface.create("menus/pause_submenus.png")
---  self.caption_background = sol.surface.create("menus/pause_submenus.png") 
+	self.caption_background = sol.surface.create("menus/pause_submenus.png") 
   self.save_dialog_background = sol.surface.create("menus/dialog_background.png")
   self.save_dialog_cursor = sol.sprite.create("menus/dialog_cursor")
   self.save_dialog_cursor_pos = "left"

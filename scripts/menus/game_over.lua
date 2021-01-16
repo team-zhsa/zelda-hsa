@@ -108,7 +108,7 @@ local function initialize_game_over_features(game)
           else
             -- No fairy: game over.
             state = "menu"
-            sol.audio.play_music("cutscene/ganondorf_is_alive")
+            sol.audio.play_music("cutscenes/game_over")
             fairy_sprite:set_xy(76, 112)  -- Cursor.
             cursor_position = 0
             local death_count = game:get_value("death_count") or 0

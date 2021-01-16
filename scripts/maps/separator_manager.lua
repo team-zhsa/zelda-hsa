@@ -5,7 +5,7 @@
 -- - Blocks prefixed by "auto_block".
 --
 -- Usage from a map script:
--- local separator_manager = require("maps/lib/separator_manager.lua")
+-- local separator_manager = require("scripts/maps/separator_manager.lua")
 -- separator_manager:manage_map(map)
 -- If you prefer, you can also enable it automatically on all maps from game:on_map_changed().
 

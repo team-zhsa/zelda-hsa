@@ -18,7 +18,7 @@ end
 
 function map:is_side_view()
 
-  if map:get_side_view()
+  if map:get_side_view() then
     return true
   end
 

@@ -7,9 +7,14 @@
 
 require("scripts/multi_events")
 local initial_game = require("scripts/initial_game")
-
 local game_manager = {}
 local destructible_meta = sol.main.get_metatable("destructible")
+local boundaries = sol.main.get_metatable("sensor")
+
+
+require("scripts/weather/snow_manager")
+require("scripts/weather/rain_manager")
+require("scripts/weather/hail_manager")
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
@@ -61,6 +66,11 @@ function game_manager:create(file)
     game.magic_decreasing = magic_decreasing
   end
 
+	local alpha_warn = sol.surface.create("hud/version.png")
+	function game:on_draw(dst_surface)
+		alpha_warn:draw(dst_surface, 6, 16)
+	end
+
   return game
 end
 
@@ -83,5 +93,6 @@ end
       end
     end
   end
+
 
 return game_manager

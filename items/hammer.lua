@@ -2,7 +2,7 @@ local item = ...
 local game = item:get_game()
 
 function item:on_created()
-
+	item:set_sound_when_brandished("common/big_item")
   item:set_savegame_variable("possession_hammer")
   item:set_assignable(true)
   item:set_pushed_stake(false)
@@ -23,9 +23,9 @@ function item:on_using()
   item:set_pushed_stake(false)
   sol.timer.start(map, 200, function()
     if item:has_pushed_stake() then
-      sol.audio.play_sound("hammer_stake")  -- Successfully pushed a stake.
+      sol.audio.play_sound("items/hammer/heavy_block_hit")  -- Successfully pushed a stake.
     else
-      sol.audio.play_sound("hammer")  -- No stake was pushed.
+      sol.audio.play_sound("items/hammer/hit")  -- No stake was pushed.
     end
     item:set_pushed_stake(false)
   end)

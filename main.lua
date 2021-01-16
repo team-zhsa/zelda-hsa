@@ -2,8 +2,10 @@
 
 require("scripts/features")
 local shader_manager = require("scripts/shader_manager")
-local initial_menus_config = require("scripts/menus/initial_menus_config")
+local initial_menus_config = require("scripts/initial_menus/menus_config")
 local initial_menus = {}
+local effect_manager = require('scripts/maps/effect_manager')
+local gb = require('scripts/maps/gb_effect')
 
 -- This function is called when Solarus starts.
 function sol.main:on_started()
@@ -47,10 +49,7 @@ end
 function sol.main:on_key_pressed(key, modifiers)
 
   local handled = false
-  if key == "f5" then
-    -- F5: change the video mode.
-    shader_manager:switch_shader()
-  elseif key == "f11" or
+  if key == "f11" or
     (key == "return" and (modifiers.alt or modifiers.control)) then
     -- F11 or Ctrl + return or Alt + Return: switch fullscreen.
     sol.video.set_fullscreen(not sol.video.is_fullscreen())
@@ -63,6 +62,14 @@ function sol.main:on_key_pressed(key, modifiers)
     -- Escape in title screens: stop the program.
     sol.main.exit()
     handled = true
+	elseif key == "f5" then
+      -- F5: Change the video mode.
+      shader_manager:switch_shader()
+      handled = true
+    elseif key == 'f9' then
+      -- F9: Set GameBoy mode. 
+      effect_manager:set_effect(game, gb)
+      handled = true
   end
 
   return handled

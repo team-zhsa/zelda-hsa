@@ -35,7 +35,7 @@ function entity:on_interaction()
   hero:set_invincible(true)
   hero:freeze()
   
-  hero:get_sprite():set_animation("lifting_heavy")
+  hero:get_sprite():set_animation("lifting")
   local shieldid = hero:get_shield_sprite_id()
   hero:set_shield_sprite_id("")
 

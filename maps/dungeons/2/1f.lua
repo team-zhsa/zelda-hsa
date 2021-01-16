@@ -13,9 +13,7 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-	boss_2:set_enabled(false)
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
+	chest_20_blue_key:set_enabled(false)
 end
 
 -- Event called after the opening transition effect of the map,
@@ -24,17 +22,35 @@ function map:on_opening_transition_finished()
 
 end
 
-function s_28_1:on_activated()
-  if s_28_2:is_activated() and s_28_3:is_activated() and s_28_4:is_activated() then
-    map:open_doors("27_n_d")
+function switch_28_1:on_activated()
+  if switch_28_2:is_activated() and switch_28_3:is_activated() and switch_28_4:is_activated() then
+    map:open_doors("door_27_n1")
     sol.audio.play_sound("common/secret_discover_minor")
   end
 end
 
--- When stalfos boss 1 is dead, create a stalfos knight.
-
-function boss_1:on_dead()
-
-	boss_2:set_enabled(true)
+function switch_28_2:on_activated()
+  if switch_28_1:is_activated() and switch_28_3:is_activated() and switch_28_4:is_activated() then
+    map:open_doors("door_27_n1")
+    sol.audio.play_sound("common/secret_discover_minor")
+  end
 end
-	
+
+function switch_28_3:on_activated()
+  if switch_28_2:is_activated() and switch_28_1:is_activated() and switch_28_4:is_activated() then
+    map:open_doors("door_27_n1")
+    sol.audio.play_sound("common/secret_discover_minor")
+  end
+end
+
+function switch_28_4:on_activated()
+  if switch_28_2:is_activated() and switch_28_3:is_activated() and switch_28_1:is_activated() then
+    map:open_doors("door_27_n1")
+    sol.audio.play_sound("common/secret_discover_minor")
+  end
+end
+
+function switch_20_chest:on_activated()
+	chest_20_blue_key:set_enabled(true)
+	game:set_value("dungeon_1_blue_key", 1)
+end

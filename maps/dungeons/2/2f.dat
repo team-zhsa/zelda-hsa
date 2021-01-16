@@ -5,6 +5,213 @@ properties{
   height = 1680,
   min_layer = 0,
   max_layer = 2,
+  world = "dungeon_2",
+  floor = 1,
   tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 768,
+  width = 224,
+  height = 144,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 760,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 768,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 912,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 760,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 736,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 760,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 760,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 920,
+  width = 240,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 736,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 920,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+  tileset = "Absolute Dungeon 07",
+}
+
+tile{
+  layer = 2,
+  x = 800,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "15",
+}
+
+tile{
+  layer = 2,
+  x = 808,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "28",
+}
+
+tile{
+  layer = 2,
+  x = 816,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "32",
+}
+
+tile{
+  layer = 2,
+  x = 824,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "32",
 }
 
