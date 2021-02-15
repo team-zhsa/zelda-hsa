@@ -17,7 +17,7 @@ local map = enemy:get_map()
 local hero = map:get_hero()
 local sprite
 local movement
-local phase = 3
+local phase = 1
 local x, y, layer = enemy:get_position()
 local m = sol.movement.create("target")
 

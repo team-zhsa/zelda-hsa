@@ -1,8 +1,8 @@
 local submenu = require("scripts/menus/pause_submenu")
 local map_submenu = submenu:new()
 
-local outside_world_size = { width = 3184, height = 2048 }
-local outside_world_minimap_size = { width = 207, height = 133 }  -- TODO
+local outside_world_size = { width = 16640, height = 10080 }
+local outside_world_minimap_size = { width = 150, height = 140 }  -- TODO
 local max_floors_displayed = 6
 
 function map_submenu:on_started()

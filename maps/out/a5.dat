@@ -1,6 +1,6 @@
 properties{
   x = 0,
-  y = 0,
+  y = 5760,
   width = 1280,
   height = 1440,
   min_layer = 0,
@@ -2855,12 +2855,30 @@ tile{
 
 custom_entity{
   layer = 0,
-  x = 376,
+  x = 384,
   y = 205,
-  width = 128,
+  width = 120,
   height = 160,
   direction = 0,
   sprite = "entities/entrance_dungeon_4",
+}
+
+destination{
+  name = "from_lost_woods",
+  layer = 0,
+  x = 248,
+  y = 93,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 144,
+  y = 712,
+  width = 128,
+  height = 24,
+  destination_map = "out/a6",
+  destination = "from_kokiri",
 }
 
 tile{

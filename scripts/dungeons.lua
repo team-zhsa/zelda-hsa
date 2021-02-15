@@ -27,8 +27,8 @@ local function initialize_dungeon_features(game)
    [2] = {
       lowest_floor = -2,
       highest_floor = 0,
-      rows = 7,
-      cols= 6,
+      rows = 6,
+      cols= 7,
       teletransporter_end_dungeon = {
         map_id = "out/b1_egg_of_the_dream_fish",
         destination_name = "dungeon_2_2_A"

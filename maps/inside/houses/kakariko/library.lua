@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/kakarico/windmil_1fl.
+-- Lua script of map inside/houses/kakariko/library.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

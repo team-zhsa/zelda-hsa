@@ -1,6 +1,6 @@
 properties{
   x = 0,
-  y = 0,
+  y = 8640,
   width = 1280,
   height = 1440,
   min_layer = 0,
@@ -7391,6 +7391,17 @@ destructible{
   destruction_sound = "objects/e_bush",
   weight = 1,
   can_be_cut = true,
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/a6",
+  destination = "_side",
 }
 
 tile{

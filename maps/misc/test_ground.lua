@@ -19,7 +19,7 @@ local house_manager = require("scripts/maps/house_manager")
 function map:on_started()
 	light_manager:init(map)
 --	hero:fall_from_ceiling(320)
-  map:set_light(1)
+  map:set_light(0)
 --	sol.menu.start(map, credits, true)
 end
 
@@ -36,4 +36,8 @@ local text = sol.text_surface.create{
 
 function map:on_draw(dst_surface)
 	text:draw(dst_surface, 160, 220)
+end
+
+function sensor_light:on_activating()
+	map:set_light(0)
 end

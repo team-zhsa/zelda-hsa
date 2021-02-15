@@ -68,7 +68,7 @@ function game_manager:create(file)
 
 	local alpha_warn = sol.surface.create("hud/version.png")
 	function game:on_draw(dst_surface)
-		alpha_warn:draw(dst_surface, 6, 16)
+		--alpha_warn:draw(dst_surface, 6, 16)
 	end
 
   return game

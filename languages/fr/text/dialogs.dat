@@ -45,11 +45,19 @@ soulever.
 dialog{
   id = "_cannot_open_without_big_key",
   text = [[
-Tu ne peux sûremùent pas ouvrir
+Tu ne peux sûrement pas ouvrir
 cette porte avec les petites clés
 que tu as !
 Essaie d'en trouver une plus
 grande.
+]],
+}
+
+dialog{
+  id = "_cannot_open_without_blue_key",
+  text = [[
+Il te faut une clé bleue pour
+ouvrir la serrure !
 ]],
 }
 
@@ -1259,6 +1267,150 @@ Tu peux la garder !
 }
 
 dialog{
+  id = "cocorico.arrow_minigame.already_playing",
+  skip = "current",
+  text = [[
+Heu je ne crois pas que me parler
+t'aide à faire grand chose...
+Concentre-toi sur la cible!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.not_bow",
+  skip = "current",
+  text = [[
+Bienvenue dans mon stand de tir
+jeune homme! Je constate que
+tu n'as pas d'arc donc je suis au
+regret de t'annoncer que tu n'as
+rien à faire ici. Reviens me voir
+si tu trouves un arc d'accord?
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.not_enough_money",
+  skip = "current",
+  text = [[
+Hola n'essaie pas de m'arnaquer
+petit! Tu n'as pas assez d'argent!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.play_question",
+  question = "1",
+  skip = "current",
+  text = [[
+Bienvenue jeune homme!
+Voici mon stand de tir! 
+Les règles sont très simples:
+Tu bénéficies de 10 flèches pour
+atteindre la cible au fond de la
+pièce. Touche la au moins 8 fois
+pour remporter un prix! 
+Fais preuve de précision et de
+patience et tu repartiras 
+vainqueur d'ici!
+Enfin dernière précision:
+une partie te coutera 20 rubis.
+Alors intéressé?
+Oui
+Non 
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.playing_end",
+  skip = "current",
+  text = [[
+C'est terminé!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.playing_finished",
+  skip = "current",
+  text = [[
+Ah on dirait que ce générateur
+d'obstacles déconne encore...
+Maudit programme...
+Je m'en charge pour qu'à ton
+retour tout soit à nouveau
+opérationnel ne t'en fais pas!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.playing_no",
+  skip = "current",
+  text = [[
+Oh comme tu veux... 
+Après tout rien ne t'oblige
+à jouer n'est-ce pas?
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.playing_start",
+  skip = "current",
+  text = [[
+C'est à toi de jouer!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.playing_yes",
+  skip = "current",
+  text = [[
+Super! Je te prépare tout ça!
+Laisse moi un petit moment...
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.results_calculate",
+  skip = "current",
+  text = [[
+C'est fini jeune homme!
+Alors voyons combien de fois
+tu as touché la cible...
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.results_lose",
+  skip = "current",
+  text = [[
+Ah quel dommage! Mais bon c'est
+le jeu ma pauvre Lucette...$0
+Hum...$0
+Bref, n'hésite pas à retenter ta
+chance si le coeur t'en dis!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.results_win",
+  skip = "current",
+  text = [[
+Félicitations! Tu es un bon
+tireur! Tu as bien mérité
+ce prix spécial!
+]],
+}
+
+dialog{
+  id = "cocorico.arrow_minigame.results_win_2",
+  skip = "current",
+  text = [[
+Tu es doué vraiment! Au plaisir
+de te revoir!
+]],
+}
+
+dialog{
   id = "codes.1",
   text = [[
 Le mot demandé est :
@@ -1524,16 +1676,6 @@ graine, l'eau s'en ira.
 }
 
 dialog{
-  id = "maps.dungeons.2.hint.cyclop",
-  text = [[
-Là où il y a quatre cyclopes, tu
-n'en vois que DEUX.
-L'oeil se crèvera et tu verras le
-monde en BLEU.
-]],
-}
-
-dialog{
   id = "maps.dungeons.2.hint.stalfos",
   text = [[
 Le SANS-CHAIR perça celui qui
@@ -1542,6 +1684,16 @@ n'était pas préparé.$0
 Prends garde à toi si tu ne sais
 pas ce que tu verras entre les
 FEES.
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.hint.torch",
+  text = [[
+Là où la lumière est,
+deux torches sont.
+
+Choisis la bonne.
 ]],
 }
 
@@ -1586,8 +1738,8 @@ dialog{
   id = "maps.dungeons.2.welcome",
   skip = "current",
   text = [[
-        Niveau 2       
-    Grotte du génie    
+            Donjon 1      
+    Temple de la Forêt
 ]],
 }
 
@@ -2471,6 +2623,34 @@ Non
 }
 
 dialog{
+  id = "maps.houses.kakarico_village.sport_house.ask",
+  question = "1",
+  text = [[
+Bonjour je suis prof de sport
+au Village Cocorico !
+
+Pour la modique somme de
+seulement 20 rubis, tu peux
+courir sur ces tapis.
+Accepter ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.sport_house.yes",
+  text = [[
+Très bien, je t'ouvres la porte.
+
+Voici les vitesses des tapis :
+Gauche : 100
+Milieu : 64
+Droite : 80
+]],
+}
+
+dialog{
   id = "maps.houses.phone_booth.0",
   text = [[
 DRING DRING !    
@@ -3216,6 +3396,13 @@ Oh là là !! J'me sens
 tout drôle !
 Faut m'reposer avant 
 d'rentrer.
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.strong_current",
+  text = [[
+Attention : Courant très fort
 ]],
 }
 

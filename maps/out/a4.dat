@@ -1,6 +1,6 @@
 properties{
   x = 0,
-  y = 0,
+  y = 4320,
   width = 1280,
   height = 1440,
   min_layer = 0,
@@ -8654,13 +8654,14 @@ teletransporter{
 }
 
 teletransporter{
-  name = "fake_t_40",
+  name = "kokiri_tp",
   layer = 0,
   x = 464,
   y = 1400,
   width = 32,
   height = 16,
-  destination_map = "out/a4",
+  destination_map = "out/a5",
+  destination = "from_lost_woods",
 }
 
 separator{

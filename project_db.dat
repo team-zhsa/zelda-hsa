@@ -58,7 +58,6 @@ map{ id = "houses/out/b1/mineshaft/b1", description = "Mineshaft (B1)" }
 map{ id = "houses/out/cordinia/houses", description = "Cordinia houses" }
 map{ id = "houses/out/f5/farm", description = "Farm (F5)" }
 map{ id = "houses/out/harbour/coast_guard_1f", description = "Coast Guard Building (1F)" }
-map{ id = "houses/out/kakarico/houses", description = "Kakarico Houses" }
 map{ id = "houses/out/sanctuary/1f", description = "Sanctuary (1st Floor)" }
 map{ id = "inside/castle/1f", description = "Castle (1st Floor)" }
 map{ id = "inside/castle/2f", description = "Castle (2nd Floor)" }
@@ -75,18 +74,23 @@ map{ id = "inside/caves/pop_cave", description = "Prince of Persia Cave" }
 map{ id = "inside/caves/ruins_1f", description = "Ruins Cave" }
 map{ id = "inside/caves/to_fire_temple", description = "Cave to Fire Temple" }
 map{ id = "inside/houses/kakariko/bar_1f", description = "Milk Bar (1st Floor)" }
+map{ id = "inside/houses/kakariko/bar_b1", description = "Mink Bar (B1)" }
+map{ id = "inside/houses/kakariko/library", description = "Library" }
 map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
 map{ id = "inside/houses/kakariko/south_shop", description = "South Shop" }
-map{ id = "inside/houses/kakariko/windmill_1f", description = "Windmill (1st Floor)" }
+map{ id = "inside/houses/kakariko/sport_house", description = "Sport House" }
 map{ id = "inside/houses/kakariko/witch", description = "Witch house" }
 map{ id = "inside/houses/main_town/orange_house_e", description = "East Orange House" }
 map{ id = "inside/houses/main_town/sword_shop", description = "Sword Shop" }
 map{ id = "inside/sewers/castle_b2", description = "Hyrule Castle (Basement 2)" }
+map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
+map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/temple_time", description = "Temple of Time" }
 map{ id = "memory/00", description = "00MEMORY" }
 map{ id = "memory/01", description = "01MEMORY" }
 map{ id = "menus/outside_map", description = "Outside map" }
 map{ id = "misc/ending", description = "Ending" }
+map{ id = "misc/minigame_arrow", description = "Arrow Minigame" }
 map{ id = "misc/shop", description = "Shop" }
 map{ id = "misc/test_arena", description = "Testing Arena" }
 map{ id = "misc/test_ground", description = "Testing Ground" }
@@ -102,12 +106,12 @@ map{ id = "out/b1 - e1", description = "B1 - E1 (Mountains)" }
 map{ id = "out/b2", description = "B2 (Sanctuary)" }
 map{ id = "out/b3", description = "B3 (New Kakariko Village)" }
 map{ id = "out/b4", description = "B4 (Warm Portal)" }
+map{ id = "out/b5", description = "B5 (Haunted Wasteland)" }
 map{ id = "out/b6", description = "B6 (Hyrule Field)" }
 map{ id = "out/c1", description = "C1 (Mountains, Camp)" }
 map{ id = "out/c4", description = "C4 (Gerudo Village)" }
 map{ id = "out/c4n", description = "C4 (Desert, Enhanced)" }
 map{ id = "out/c5", description = "C5 (Desert)" }
-map{ id = "out/c6", description = "C6 (Haunted Wasteland)" }
 map{ id = "out/c7", description = "C7 (Desert)" }
 map{ id = "out/d4", description = "D4" }
 map{ id = "out/d6", description = "D6 (Hyrule Field)" }
@@ -199,6 +203,7 @@ sprite{ id = "enemies/boss/moldorm/moldorm_head", description = "enemies/boss/mo
 sprite{ id = "enemies/boss/moldorme", description = "enemies/boss/moldorm" }
 sprite{ id = "enemies/boss/spectral_ganon", description = "Spectral Ganon" }
 sprite{ id = "enemies/boss/tentacle_boss", description = "Tentacle Boss" }
+sprite{ id = "enemies/dungeons/arrow_target", description = "Arrow Target" }
 sprite{ id = "enemies/dungeons/bari_blue", description = "Blue Bari" }
 sprite{ id = "enemies/dungeons/bari_mini", description = "Mini Bari" }
 sprite{ id = "enemies/dungeons/bari_red", description = "Red Bari" }
@@ -760,7 +765,14 @@ sprite{ id = "menus/pause_save_dialog", description = "Pause save dialog" }
 sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
+sprite{ id = "npc/angry_brother", description = "Angry Brother" }
+sprite{ id = "npc/average_middle_aged_man", description = "Average Middle Aged Man" }
+sprite{ id = "npc/bird_green", description = "Green Bird" }
+sprite{ id = "npc/blacksmith", description = "Blacksmith" }
+sprite{ id = "npc/blind_hideout_man", description = "Blind Hideout Man" }
 sprite{ id = "npc/broom_grandma", description = "Broom Grandma" }
+sprite{ id = "npc/bully", description = "Bully" }
+sprite{ id = "npc/bully_cursed", description = "Cursed Bully" }
 sprite{ id = "npc/butterfly_blessed", description = "Butterfly, blessed" }
 sprite{ id = "npc/butterfly_blue", description = "Butterfly, blue" }
 sprite{ id = "npc/butterfly_grey", description = "Butterfly, grey" }
@@ -768,8 +780,16 @@ sprite{ id = "npc/butterfly_orange", description = "Butterfly, orange" }
 sprite{ id = "npc/butterfly_purple", description = "Butterfly, purple" }
 sprite{ id = "npc/butterfly_red", description = "Butterfly, red" }
 sprite{ id = "npc/camper", description = "Camper" }
+sprite{ id = "npc/chocobo_blue", description = "Blue Chocobo" }
+sprite{ id = "npc/chocobo_green", description = "Green Chocobo" }
+sprite{ id = "npc/chocobo_red", description = "Red Chocobo" }
+sprite{ id = "npc/chocobo_yellow", description = "Yellow Chocobo" }
 sprite{ id = "npc/deku", description = "Deku" }
 sprite{ id = "npc/dog", description = "Dog" }
+sprite{ id = "npc/drunk_man", description = "Drunk Man" }
+sprite{ id = "npc/fat_fairy", description = "Fat Fairy" }
+sprite{ id = "npc/flute_boy", description = "Flute Boy" }
+sprite{ id = "npc/frog", description = "Frog" }
 sprite{ id = "npc/gerudo_hesla", description = "Gerudo (Hesla)" }
 sprite{ id = "npc/gerudo_male", description = "Gerudo (Male)" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo (Merchant)" }
@@ -777,12 +797,16 @@ sprite{ id = "npc/gerudo_pirate", description = "Gerudo (Pirate)" }
 sprite{ id = "npc/ghost", description = "Ghost" }
 sprite{ id = "npc/ghost_appearing", description = "Ghost (Appearing)" }
 sprite{ id = "npc/ghost_disapear", description = "Ghost (Disapearing)" }
+sprite{ id = "npc/ghostly_proprietor", description = "Ghostly Proprietor" }
+sprite{ id = "npc/goron", description = "Goron" }
 sprite{ id = "npc/goron_dampeh", description = "Goron (Dampeh)" }
 sprite{ id = "npc/goron_dargor", description = "Goron (Dargor)" }
 sprite{ id = "npc/goron_galen", description = "Goron (Galen)" }
 sprite{ id = "npc/goron_ghost", description = "Goron (Ghost)" }
 sprite{ id = "npc/goron_larin", description = "Goron (Larin)" }
 sprite{ id = "npc/goron_osgor", description = "Goron (Osgor)" }
+sprite{ id = "npc/grandson", description = "Grandson" }
+sprite{ id = "npc/great_fairy", description = "Great Fairy" }
 sprite{ id = "npc/guard", description = "Guard" }
 sprite{ id = "npc/hylian_1", description = "Hylian (1)" }
 sprite{ id = "npc/hylian_10", description = "Hylian (10)" }
@@ -829,10 +853,46 @@ sprite{ id = "npc/hylian_warbos_warun", description = "Hylian (Warbos Warun)" }
 sprite{ id = "npc/hylian_wizard", description = "Hylian (Wizard)" }
 sprite{ id = "npc/hylian_zelda", description = "Hylian (Zelda)" }
 sprite{ id = "npc/hylian_zelda_sleeping", description = "Hylian (Zelda, Sleeping)" }
+sprite{ id = "npc/kokiri_1", description = "Kokiri (1)" }
+sprite{ id = "npc/kokiri_2", description = "Kokiri (2)" }
+sprite{ id = "npc/kokiri_3", description = "Kokiri (3)" }
+sprite{ id = "npc/lady_blue", description = "Blue Lady" }
+sprite{ id = "npc/lady_red", description = "Red Lady" }
 sprite{ id = "npc/little_elephant", description = "Little elephant" }
+sprite{ id = "npc/little_tree", description = "Little Tree" }
+sprite{ id = "npc/lost_old_man", description = "Lost Old Man" }
 sprite{ id = "npc/ordon_goat", description = "Ordon Goat" }
 sprite{ id = "npc/ravio", description = "Ravio" }
+sprite{ id = "npc/snowpeak_anouki", description = "Anouki Snowpeak" }
+sprite{ id = "npc/soldier_blue", description = "Blue Soldier" }
 sprite{ id = "npc/squirrel", description = "Squirrel" }
+sprite{ id = "npc/subrosian_blue", description = "Blue Subrosian" }
+sprite{ id = "npc/subrosian_green", description = "Green Subrosian" }
+sprite{ id = "npc/subrosian_orange", description = "Orange Subrosian" }
+sprite{ id = "npc/thief_green", description = "Green Thief" }
+sprite{ id = "npc/thief_red", description = "Red Thief" }
+sprite{ id = "npc/thief_yellow", description = "Yellow Thief" }
+sprite{ id = "npc/tokay", description = "Tokay" }
+sprite{ id = "npc/tokay_blue", description = "Blue Tokay" }
+sprite{ id = "npc/tokay_gin", description = "Gin Tokay" }
+sprite{ id = "npc/tokay_orange", description = "Orange Tokay" }
+sprite{ id = "npc/tokay_red", description = "Red Tokay" }
+sprite{ id = "npc/uncle", description = "Uncle" }
+sprite{ id = "npc/wise_old_man_green", description = "Green Wise Old Man" }
+sprite{ id = "npc/wise_old_man_yellow", description = "Yrllow Wise Old Man" }
+sprite{ id = "npc/witch", description = "Witch" }
+sprite{ id = "npc/wizard", description = "Wizard" }
+sprite{ id = "npc/woman_blue", description = "Blue Woman" }
+sprite{ id = "npc/woman_green", description = "Green Woman" }
+sprite{ id = "npc/woman_yellow", description = "Yellow Woman" }
+sprite{ id = "npc/young_girl_red", description = "Red Young Girl" }
+sprite{ id = "npc/zelda", description = "Zelda" }
+sprite{ id = "npc/zora", description = "Zora" }
+sprite{ id = "npc/zora_juba", description = "Zora Juba" }
+sprite{ id = "npc/zora_king", description = "Zora King" }
+sprite{ id = "npc/zora_soldier", description = "Zora Soldier" }
+sprite{ id = "npc/zuna", description = "Zuna" }
+sprite{ id = "npc/zuna_woman", description = "Zuma Woman" }
 sprite{ id = "shadows/shadow", description = "Shadow" }
 sprite{ id = "shadows/shadow_big", description = "Big Shadow" }
 sprite{ id = "shadows/shadow_big_dynamic", description = "Dynamic Big Shadow" }
@@ -953,6 +1013,7 @@ sound{ id = "common/secret_discover_minor", description = "Secret Discover" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/sidequest_major_item", description = "Major Item (Sidequest)" }
 sound{ id = "common/sidequest_minor_item", description = "Minor Item (Sidequest)" }
+sound{ id = "common/switch_crystal_hit", description = "Crystal Switch" }
 sound{ id = "cursor", description = "Cursor" }
 sound{ id = "danger", description = "Danger" }
 sound{ id = "door_closed", description = "Closed Door" }
@@ -1108,6 +1169,7 @@ enemy{ id = "boss/spectral_ganon", description = "Spectral Ganon" }
 enemy{ id = "boss/spectral_ganon_old", description = "Spectral Ganon" }
 enemy{ id = "boss/stalfos_yellow", description = "Yellow Stalfos" }
 enemy{ id = "boss/tentacle_boss", description = "Tentacle Boss" }
+enemy{ id = "dungeons/arrow_target", description = "Arrow Target" }
 enemy{ id = "dungeons/bari_blue", description = "Blue Bari" }
 enemy{ id = "dungeons/bari_mini", description = "Mini Bari" }
 enemy{ id = "dungeons/bari_red", description = "Red Bari" }
@@ -1419,13 +1481,13 @@ file{ path = "maps/out/b1.dat", author = "Nintendo, Lucifer", }
 file{ path = "maps/out/b2.dat", author = "Lucifer", }
 file{ path = "maps/out/b3.dat", author = "Lucifer", }
 file{ path = "maps/out/b4.dat", author = "Lucifer", }
+file{ path = "maps/out/b5.dat", author = "Lucifer", }
 file{ path = "maps/out/b6.dat", author = "Lucifer", }
 file{ path = "maps/out/c1.dat", author = "Nintendo, Lucifer", }
 file{ path = "maps/out/c4.dat", author = "Lucifer", }
 file{ path = "maps/out/c4n.dat", author = "Lucifer", }
 file{ path = "maps/out/c4n.lua", author = "Lucifer", }
 file{ path = "maps/out/c5.dat", author = "Lucifer", }
-file{ path = "maps/out/c6.dat", author = "Lucifer", }
 file{ path = "maps/out/c7.dat", author = "Lucifer", }
 file{ path = "maps/out/d4.dat", author = "Lucifer", }
 file{ path = "maps/out/d6.dat", author = "Lucifer", }

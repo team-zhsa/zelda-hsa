@@ -1,6 +1,6 @@
 properties{
   x = 0,
-  y = 0,
+  y = 7200,
   width = 1280,
   height = 1440,
   min_layer = 0,
@@ -2833,6 +2833,35 @@ tile{
   width = 16,
   height = 16,
   pattern = "1079",
+}
+
+destination{
+  name = "from_kokiri",
+  layer = 0,
+  x = 792,
+  y = 69,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 784,
+  y = 32,
+  width = 16,
+  height = 16,
+  destination_map = "out/a5",
+  destination = "from_lost_woods",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/a7",
+  destination = "_side",
 }
 
 tile{
