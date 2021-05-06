@@ -1,0 +1,44 @@
+animation{
+  name = "walking",
+  src_image = "enemies/ganon_3.png",
+  frame_delay = 2000,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 640, y = 0, frame_width = 608, frame_height = 496, origin_x = 280, origin_y = 232, num_frames = 2 },
+    { x = 640, y = 0, frame_width = 608, frame_height = 496, origin_x = 280, origin_y = 232, num_frames = 2 },
+    { x = 640, y = 0, frame_width = 608, frame_height = 496, origin_x = 280, origin_y = 232, num_frames = 2 },
+    { x = 640, y = 0, frame_width = 608, frame_height = 496, origin_x = 280, origin_y = 232, num_frames = 2 },
+  },
+}
+animation{
+  name = "attack",
+  src_image = "enemies/ganon_3.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 496, frame_width = 624, frame_height = 528, origin_x = 312, origin_y = 256, num_frames = 3, num_columns = 1 },
+    { x = 0, y = 496, frame_width = 624, frame_height = 528, origin_x = 312, origin_y = 256, num_frames = 3, num_columns = 1 },
+    { x = 0, y = 496, frame_width = 624, frame_height = 528, origin_x = 312, origin_y = 256, num_frames = 3, num_columns = 1 },
+    { x = 0, y = 496, frame_width = 624, frame_height = 528, origin_x = 312, origin_y = 256, num_frames = 3, num_columns = 1 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/ganon_3.png",
+  directions = {
+    { x = 1952, y = 0, frame_width = 576, frame_height = 496, origin_x = 288, origin_y = 248 },
+    { x = 1952, y = 0, frame_width = 576, frame_height = 496, origin_x = 288, origin_y = 248 },
+    { x = 1952, y = 0, frame_width = 576, frame_height = 496, origin_x = 288, origin_y = 248 },
+    { x = 1952, y = 0, frame_width = 576, frame_height = 496, origin_x = 288, origin_y = 248 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "enemies/ganon_3.png",
+  directions = {
+    { x = 16, y = 0, frame_width = 576, frame_height = 496, origin_x = 296, origin_y = 248 },
+    { x = 16, y = 0, frame_width = 576, frame_height = 496, origin_x = 296, origin_y = 248 },
+    { x = 16, y = 0, frame_width = 576, frame_height = 496, origin_x = 296, origin_y = 248 },
+    { x = 16, y = 0, frame_width = 576, frame_height = 496, origin_x = 296, origin_y = 248 },
+  },
+}

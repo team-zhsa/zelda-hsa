@@ -1,0 +1,44 @@
+animation{
+  name = "stopped",
+  src_image = "npc/hyrule.png",
+  directions = {
+    { x = 352, y = 856, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 352, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 416, y = 856, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 352, y = 936, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+  },
+}
+animation{
+  name = "guitar",
+  src_image = "npc/gerudo.png",
+  directions = {
+    { x = 256, y = 160, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 256, y = 160, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 256, y = 160, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+    { x = 256, y = 160, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32 },
+  },
+}
+animation{
+  name = "strumming",
+  src_image = "npc/hyrule.png",
+  frame_delay = 160,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 480, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2, num_columns = 1 },
+    { x = 480, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2, num_columns = 1 },
+    { x = 480, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2, num_columns = 1 },
+    { x = 480, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2, num_columns = 1 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "npc/hyrule.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 352, y = 856, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2 },
+    { x = 352, y = 896, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 3 },
+    { x = 416, y = 856, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 2 },
+    { x = 352, y = 936, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 32, num_frames = 3 },
+  },
+}

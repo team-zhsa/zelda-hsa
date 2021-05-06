@@ -1,0 +1,369 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Absolute Dungeon 03",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 240,
+  height = 24,
+  pattern = "wall.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 16,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 40,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 192,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 40,
+  width = 224,
+  height = 8,
+  pattern = "wall_border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 48,
+  width = 8,
+  height = 144,
+  pattern = "wall_border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 224,
+  height = 144,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 200,
+  width = 112,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 200,
+  width = 112,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 232,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 200,
+  width = 16,
+  height = 16,
+  pattern = "door.2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 16,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 96,
+  width = 16,
+  height = 24,
+  pattern = "shop_counter.3a",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 96,
+  width = 208,
+  height = 24,
+  pattern = "shop_counter.2a",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 96,
+  width = 16,
+  height = 24,
+  pattern = "shop_counter.1a",
+}
+
+destination{
+  name = "destination_3",
+  layer = 0,
+  x = 160,
+  y = 213,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 16,
+  destination_map = "houses/out/kakarico/houses",
+}
+
+npc{
+  layer = 0,
+  x = 160,
+  y = 77,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/hylian_19",
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 144,
+  y = 216,
+  width = 32,
+  height = 8,
+  pattern = "door_top.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 264,
+  y = 88,
+  width = 16,
+  height = 8,
+  pattern = "shop_counter.3b",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 88,
+  width = 208,
+  height = 8,
+  pattern = "shop_counter.2b",
+}
+
+tile{
+  layer = 1,
+  x = 40,
+  y = 88,
+  width = 16,
+  height = 8,
+  pattern = "shop_counter.1b",
+}
+
+shop_treasure{
+  layer = 1,
+  x = 72,
+  y = 88,
+  treasure_name = "",
+  price = 10,
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 1,
+  x = 216,
+  y = 88,
+  treasure_name = "",
+  price = 10,
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 1,
+  x = 168,
+  y = 88,
+  treasure_name = "",
+  price = 10,
+  dialog = "",
+}
+
+shop_treasure{
+  layer = 1,
+  x = 120,
+  y = 88,
+  treasure_name = "",
+  price = 10,
+  dialog = "",
+}
+

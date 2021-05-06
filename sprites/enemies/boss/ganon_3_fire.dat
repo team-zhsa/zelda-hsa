@@ -1,0 +1,24 @@
+animation{
+  name = "walking",
+  src_image = "enemies/ganon_3.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 1447, y = 1400, frame_width = 124, frame_height = 40, origin_x = 60, origin_y = 20, num_frames = 5, num_columns = 1 },
+    { x = 905, y = 992, frame_width = 40, frame_height = 120, origin_x = 20, origin_y = 76, num_frames = 5 },
+    { x = 1471, y = 880, frame_width = 124, frame_height = 40, origin_x = 60, origin_y = 20, num_frames = 5, num_columns = 1 },
+    { x = 860, y = 656, frame_width = 40, frame_height = 124, origin_x = 20, origin_y = 60, num_frames = 5 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "enemies/ganon_3.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 1447, y = 1400, frame_width = 120, frame_height = 40, origin_x = 60, origin_y = 20, num_frames = 5, num_columns = 1 },
+    { x = 905, y = 992, frame_width = 40, frame_height = 120, origin_x = 20, origin_y = 76, num_frames = 5 },
+    { x = 1471, y = 880, frame_width = 124, frame_height = 40, origin_x = 60, origin_y = 20, num_frames = 5, num_columns = 1 },
+    { x = 860, y = 656, frame_width = 40, frame_height = 124, origin_x = 20, origin_y = 60, num_frames = 5 },
+  },
+}

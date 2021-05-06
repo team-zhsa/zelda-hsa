@@ -1,0 +1,172 @@
+properties{
+  x = 8960,
+  y = 4320,
+  width = 1280,
+  height = 1440,
+  min_layer = 0,
+  max_layer = 2,
+  world = "outside_world",
+  tileset = "Full Hyrule",
+  music = "outside/lonlon",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 416,
+  width = 512,
+  height = 16,
+  pattern = "2_2",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 368,
+  width = 16,
+  height = 64,
+  pattern = "18",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 928,
+  width = 192,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 928,
+  width = 32,
+  height = 16,
+  pattern = "12",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 928,
+  width = 32,
+  height = 16,
+  pattern = "16",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 864,
+  y = 928,
+  width = 192,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 368,
+  width = 8,
+  height = 512,
+  pattern = "17",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 880,
+  width = 16,
+  height = 64,
+  pattern = "18",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 1056,
+  y = 376,
+  width = 8,
+  height = 576,
+  pattern = "17",
+  tileset = "outside_additions",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/g4",
+}
+
+tile{
+  layer = 1,
+  x = 544,
+  y = 368,
+  width = 512,
+  height = 48,
+  pattern = "11_2",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 544,
+  y = 880,
+  width = 192,
+  height = 48,
+  pattern = "11",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 736,
+  y = 896,
+  width = 32,
+  height = 32,
+  pattern = "13",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 832,
+  y = 896,
+  width = 32,
+  height = 32,
+  pattern = "15",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 736,
+  y = 816,
+  width = 128,
+  height = 80,
+  pattern = "14",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 864,
+  y = 880,
+  width = 192,
+  height = 48,
+  pattern = "11",
+  tileset = "outside_additions",
+}
+

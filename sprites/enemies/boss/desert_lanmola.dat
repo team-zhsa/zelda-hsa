@@ -1,0 +1,30 @@
+animation{
+  name = "walking",
+  src_image = "enemies/boss/desert_lanmola.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/desert_lanmola.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+  },
+}

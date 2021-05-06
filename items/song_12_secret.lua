@@ -1,0 +1,13 @@
+local item = ...
+local game = item:get_game()
+local config = require("items/song_manager")
+
+local properties = {
+	savegame_variable = "possession_song_12",
+  music = "items/ocarina/song/12_secret",
+  destination_map = "extensions/southern_hyrule/a1",
+	destination = "from_flute",
+	duration = 3000,
+}
+config:create(item, properties)
+

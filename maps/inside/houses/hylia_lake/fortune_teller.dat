@@ -1,0 +1,289 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  world = "inside_world",
+  tileset = "Absolute Dungeon 06",
+  music = "inside/fortune",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 32,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 56,
+  width = 24,
+  height = 144,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 32,
+  width = 144,
+  height = 24,
+  pattern = "wall.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 32,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 56,
+  width = 24,
+  height = 144,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 192,
+  width = 128,
+  height = 8,
+  pattern = "wall_border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 56,
+  width = 128,
+  height = 8,
+  pattern = "wall_border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 64,
+  width = 8,
+  height = 128,
+  pattern = "wall_border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 64,
+  width = 8,
+  height = 128,
+  pattern = "wall_border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 64,
+  width = 128,
+  height = 128,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 200,
+  width = 64,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 200,
+  width = 64,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 200,
+  width = 16,
+  height = 16,
+  pattern = "door.2",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 216,
+  width = 16,
+  height = 32,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 112,
+  width = 64,
+  height = 32,
+  pattern = "fortune_teller_table",
+}
+
+destination{
+  name = "destination_4",
+  layer = 0,
+  x = 112,
+  y = 213,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 104,
+  y = 224,
+  width = 16,
+  height = 16,
+  destination_map = "houses/out/kakarico/houses",
+}
+
+npc{
+  layer = 0,
+  x = 112,
+  y = 109,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/hylian_wizard",
+}
+
+npc{
+  layer = 0,
+  x = 112,
+  y = 141,
+  direction = 3,
+  subtype = 1,
+}
+
+tile{
+  layer = 1,
+  x = 104,
+  y = 216,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 96,
+  y = 216,
+  width = 32,
+  height = 8,
+  pattern = "door_top.2-1",
+}
+

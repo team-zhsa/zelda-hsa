@@ -1,0 +1,22 @@
+animation{
+  name = "flying",
+  src_image = "enemies/boss/hot_head.png",
+  directions = {
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/hot_head.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 8, origin_y = 13, num_frames = 3 },
+  },
+}

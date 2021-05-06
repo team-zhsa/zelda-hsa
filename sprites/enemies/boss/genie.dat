@@ -1,0 +1,69 @@
+animation{
+  name = "walking",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 4 },
+    { x = 0, y = 72, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 4 },
+    { x = 0, y = 72, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 4 },
+  },
+}
+animation{
+  name = "appearing",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 120,
+  directions = {
+    { x = 0, y = 216, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 216, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 216, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 216, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+  },
+}
+animation{
+  name = "disappearing",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 120,
+  directions = {
+    { x = 0, y = 144, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 144, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 144, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+    { x = 0, y = 144, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 13 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 216, y = 0, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 3 },
+    { x = 216, y = 0, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 3 },
+    { x = 216, y = 72, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 3 },
+    { x = 216, y = 72, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 3 },
+  },
+}
+animation{
+  name = "throwed",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 144, y = 288, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69 },
+    { x = 144, y = 288, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69 },
+    { x = 144, y = 360, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69 },
+    { x = 144, y = 360, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69 },
+  },
+}
+animation{
+  name = "throwing",
+  src_image = "enemies/boss/genie.png",
+  frame_delay = 100,
+  directions = {
+    { x = 72, y = 288, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 2 },
+    { x = 72, y = 288, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 2 },
+    { x = 72, y = 360, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 2 },
+    { x = 72, y = 360, frame_width = 72, frame_height = 72, origin_x = 36, origin_y = 69, num_frames = 2 },
+  },
+}

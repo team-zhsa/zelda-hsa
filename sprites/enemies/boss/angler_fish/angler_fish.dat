@@ -1,0 +1,46 @@
+animation{
+  name = "Walking",
+  src_image = "enemies/boss/angler_fish/angler_fish.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+  },
+}
+animation{
+  name = "charging",
+  src_image = "enemies/boss/angler_fish/angler_fish.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/angler_fish/angler_fish.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 68, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 68, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 68, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+    { x = 0, y = 68, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65, num_frames = 4 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "enemies/boss/angler_fish/angler_fish.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65 },
+    { x = 0, y = 0, frame_width = 76, frame_height = 68, origin_x = 38, origin_y = 65 },
+  },
+}

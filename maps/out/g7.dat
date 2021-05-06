@@ -1,0 +1,161 @@
+properties{
+  x = 7680,
+  y = 8640,
+  width = 1280,
+  height = 1440,
+  min_layer = 0,
+  max_layer = 2,
+  world = "outside_world",
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1192,
+  width = 64,
+  height = 72,
+  pattern = "371",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1264,
+  width = 16,
+  height = 16,
+  pattern = "1422",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1264,
+  width = 16,
+  height = 16,
+  pattern = "1424",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 1280,
+  width = 16,
+  height = 16,
+  pattern = "1425",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1280,
+  width = 16,
+  height = 16,
+  pattern = "1423",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 128,
+  width = 32,
+  height = 16,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 120,
+  width = 32,
+  height = 8,
+  pattern = "959",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 160,
+  width = 32,
+  height = 8,
+  pattern = "1340",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 144,
+  width = 32,
+  height = 16,
+  pattern = "1071",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 160,
+  width = 32,
+  height = 16,
+  pattern = "1651",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1160,
+  width = 64,
+  height = 8,
+  pattern = "1663",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1192,
+  width = 64,
+  height = 8,
+  pattern = "1946",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1168,
+  width = 64,
+  height = 24,
+  pattern = "1643",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/f7",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/g7",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/g6",
+  destination = "_side",
+}
+

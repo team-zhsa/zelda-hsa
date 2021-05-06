@@ -1,0 +1,72 @@
+animation{
+  name = "eye_open",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+  },
+}
+animation{
+  name = "chasing",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "immobilized",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37 },
+  },
+}
+animation{
+  name = "shaking",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 304, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 304, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 304, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 304, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "enemies/boss/gohma.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 80, frame_width = 76, frame_height = 40, origin_x = 38, origin_y = 37, num_frames = 4 },
+  },
+}

@@ -1,0 +1,72 @@
+animation{
+  name = "dark_blue",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "blue",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 64, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "dark_green",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 128, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "green_medium",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 192, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 448, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69, num_frames = 3 },
+  },
+}
+animation{
+  name = "orange",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 320, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "red",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 384, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}
+animation{
+  name = "yellow",
+  src_image = "enemies/boss/evil_orb/evil_orb_head.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 256, y = 0, frame_width = 64, frame_height = 72, origin_x = 32, origin_y = 69 },
+  },
+}

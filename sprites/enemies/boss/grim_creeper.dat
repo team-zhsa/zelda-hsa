@@ -1,0 +1,46 @@
+animation{
+  name = "stopped",
+  src_image = "enemies/boss/grim_creeper.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34 },
+  },
+}
+animation{
+  name = "attacking",
+  src_image = "enemies/boss/grim_creeper.png",
+  frame_delay = 40,
+  frame_to_loop_on = 15,
+  directions = {
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 16 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 16 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 16 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 16 },
+  },
+}
+animation{
+  name = "jumping",
+  src_image = "enemies/boss/grim_creeper.png",
+  frame_delay = 40,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 11 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 11 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 11 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 11 },
+  },
+}
+animation{
+  name = "playing",
+  src_image = "enemies/boss/grim_creeper.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 14 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 14 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 14 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 34, num_frames = 14 },
+  },
+}

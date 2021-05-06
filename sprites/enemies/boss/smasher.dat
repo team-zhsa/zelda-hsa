@@ -1,0 +1,67 @@
+animation{
+  name = "walking",
+  src_image = "enemies/boss/smasher.png",
+  frame_delay = 50,
+  frame_to_loop_on = 5,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 6 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 6 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 6 },
+  },
+}
+animation{
+  name = "carrying",
+  src_image = "enemies/boss/smasher.png",
+  directions = {
+    { x = 48, y = 192, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 48, y = 192, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 48, y = 240, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 48, y = 240, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/smasher.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 288, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 3 },
+    { x = 0, y = 288, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 3 },
+    { x = 0, y = 336, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 3 },
+    { x = 0, y = 336, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 3 },
+  },
+}
+animation{
+  name = "panicking",
+  src_image = "enemies/boss/smasher.png",
+  frame_delay = 40,
+  frame_to_loop_on = 4,
+  directions = {
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 5 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 5 },
+    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 5 },
+    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 5 },
+  },
+}
+animation{
+  name = "throwed",
+  src_image = "enemies/boss/smasher.png",
+  directions = {
+    { x = 144, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 144, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 144, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+    { x = 144, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+  },
+}
+animation{
+  name = "throwing",
+  src_image = "enemies/boss/smasher.png",
+  frame_delay = 40,
+  directions = {
+    { x = 96, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 2 },
+    { x = 96, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 2 },
+    { x = 96, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 2 },
+    { x = 96, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 2 },
+  },
+}
