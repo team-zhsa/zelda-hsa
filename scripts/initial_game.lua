@@ -21,7 +21,7 @@ function initial_game:initialize_new_savegame(game)
   game:set_value("main_quest", 1)
   game:set_value("hour_of_day", 0)
   game:set_starting_location("inside/castle/rooms", "start_game")
-
+	
 end
 
 return initial_game

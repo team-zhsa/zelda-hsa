@@ -51,7 +51,7 @@ pull_handle:register_event("on_created", function()
     sprite = pull_handle:get_sprite():get_animation_set(),
     pushable = false,
     pullable = true,
-    max_moves = 4,
+    max_moves = 1,
     enabled_at_start = true})
   handle_block:set_drawn_in_y_order(true)
 

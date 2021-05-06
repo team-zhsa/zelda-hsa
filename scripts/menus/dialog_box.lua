@@ -53,8 +53,8 @@ local function initialize_dialog_box_features(game)
   local nb_visible_lines = 3     -- Maximum number of lines in the dialog box.
   local char_delays = {          -- Delay before displaying the next character.
     slow = 60,
-    medium = 40,
-    fast = 20  -- Default.
+    medium = 30,
+    fast = 20 -- Default 20.
   }
   local letter_sound_delay = 100
   local box_width = 220
@@ -72,7 +72,7 @@ local function initialize_dialog_box_features(game)
     }
   end
   dialog_box.dialog_surface = sol.surface.create(sol.video.get_quest_size())
-  dialog_box.box_img = sol.surface.create("hud/dialog_box.png")
+  dialog_box.box_img = sol.surface.create("hud/dialog_box_new.png")
   dialog_box.icons_img = sol.surface.create("hud/dialog_icons.png")
   dialog_box.end_lines_sprite = sol.sprite.create("hud/dialog_box_message_end")
 
@@ -105,17 +105,17 @@ local function initialize_dialog_box_features(game)
     dialog_box.info = nil
   end)
 
-  -- Sets the style of the dialog box for subsequent dialogs.
+    -- Sets the style of the dialog box for subsequent dialogs.
   -- style must be one of:
   -- - "box" (default): Usual dialog box.
   -- - "empty": No decoration.
   function dialog_box:set_style(style)
 
     dialog_box.style = style
-    if style == "box" then
-      -- Make the dialog box slightly transparent.
-      dialog_box.dialog_surface:set_opacity(216)
-    end
+    -- if style == "box" then
+    --   -- Make the dialog box slightly transparent.
+    --   dialog_box.dialog_surface:set_opacity(216)
+    -- end
   end
 
   -- Sets the vertical position of the dialog box for subsequent dialogs.
@@ -125,6 +125,14 @@ local function initialize_dialog_box_features(game)
   -- - "bottom": Botton of the screen.
   function dialog_box:set_position(vertical_position)
     dialog_box.vertical_position = vertical_position
+  end
+  
+  function dialog_box:get_position(vertical_position)
+    return dialog_box.vertical_position
+  end
+
+  function dialog_box:get_position()
+    return dialog_box.vertical_position
   end
 
   local function repeat_show_character()
@@ -509,6 +517,8 @@ local function initialize_dialog_box_features(game)
     if self.style == "empty" then
       -- Draw a dark rectangle.
       dst_surface:fill_color({0, 0, 0}, x, y, 220, 60)
+		elseif self.icon_index ~= nil then
+			self.box_img:draw_region(0, 76, 256, box_height, self.dialog_surface, x, y)
     else
       -- Draw the dialog box.
       self.box_img:draw_region(0, 0, box_width, box_height, self.dialog_surface, x, y)
@@ -545,7 +555,7 @@ local function initialize_dialog_box_features(game)
         and not self:has_more_lines() then
       self.question_dst_position.y = self.box_dst_position.y +
           (self.selected_answer == 1 and 27 or 40)
-      self.box_img:draw_region(96, 60, 8, 8, self.dialog_surface,
+      self.box_img:draw_region(96, 60, 7, 11, self.dialog_surface,
           self.question_dst_position.x, self.question_dst_position.y)
     end
 

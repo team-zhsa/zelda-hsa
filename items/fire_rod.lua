@@ -1,7 +1,7 @@
 local item = ...
 local game = item:get_game()
 
-local magic_needed = 0  -- Number of magic points required.
+local magic_needed = 5 -- Number of magic points required.
 
 function item:on_created()
 
@@ -29,7 +29,7 @@ function item:shoot()
 
  -- local fire_sprite = entity:get_sprite("fire")
   --fire_sprite:set_animation("flying")
-
+	sol.audio.play_sound("items/fire_rod/shoot")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)
@@ -54,7 +54,7 @@ function item:on_using()
     width = 16,
     height = 16,
     direction = direction,
-    sprite = "hero/fire_rod",
+    sprite = "hero/item/rods/fire_rod",
   })
 
   -- Shoot fire if there is enough magic.
@@ -88,7 +88,6 @@ local function initialize_meta()
     -- Already done.
     return
   end
-
   enemy_meta.fire_reaction = 3  -- 3 life points by default.
   enemy_meta.fire_reaction_sprite = {}
   function enemy_meta:get_fire_reaction(sprite)
@@ -99,27 +98,33 @@ local function initialize_meta()
     return self.fire_reaction
   end
 
-  function enemy_meta:set_fire_reaction(reaction, sprite)
+  function enemy_meta:set_fire_reaction(reaction)
 
     self.fire_reaction = reaction
+    
   end
 
   function enemy_meta:set_fire_reaction_sprite(sprite, reaction)
 
     self.fire_reaction_sprite[sprite] = reaction
+    
   end
 
   -- Change the default enemy:set_invincible() to also
   -- take into account the fire.
   local previous_set_invincible = enemy_meta.set_invincible
   function enemy_meta:set_invincible()
+    
     previous_set_invincible(self)
     self:set_fire_reaction("ignored")
+    
   end
   local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
   function enemy_meta:set_invincible_sprite(sprite)
+    
     previous_set_invincible_sprite(self, sprite)
     self:set_fire_reaction_sprite(sprite, "ignored")
+    
   end
 
 end

@@ -1,0 +1,130 @@
+animation{
+  name = "walking_1",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 4 },
+  },
+}
+animation{
+  name = "falling",
+  src_image = "enemies/boss/slime_eye.png",
+  directions = {
+    { x = 240, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 240, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 240, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 240, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+  },
+}
+animation{
+  name = "hurt_1",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 320, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 320, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 320, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 320, y = 0, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "hurt_2",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "hurt_3",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "hurt_4",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "hurt_5",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "walking_2",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+  },
+}
+animation{
+  name = "walking_3",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 120, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+  },
+}
+animation{
+  name = "walking_4",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 160, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+  },
+}
+animation{
+  name = "walking_5",
+  src_image = "enemies/boss/slime_eye.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+    { x = 0, y = 200, frame_width = 80, frame_height = 40, origin_x = 40, origin_y = 37 },
+  },
+}

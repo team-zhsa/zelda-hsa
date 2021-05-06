@@ -1,6 +1,7 @@
 -- Initialize sensor behavior specific to this quest.
 
 local sensor_meta = sol.main.get_metatable("sensor")
+require("scripts/maps/light_manager")
 
 function sensor_meta:on_activated()
 
@@ -73,6 +74,20 @@ function sensor_meta:on_activated()
   door_prefix = name:match("^close_loud_([a-zA-X0-9_]+)_sensor")
   if door_prefix ~= nil then
     map:close_doors(door_prefix)
+    return
+  end
+
+  -- Sensors named "start_dark_sensor" put the map in the dark.
+  local dark_prefix = name:match("^start_dark_sensor")
+  if dark_prefix ~= nil and map:get_light() ~= 0 then
+    map:set_light(0)
+    return
+  end
+
+  -- Sensors named "stop_dark_sensor" put back the map in the light.
+  local dark_prefix = name:match("^stop_dark_sensor")
+  if dark_prefix ~= nil and map:get_light() ~= 1 then
+    map:set_light(1)
     return
   end
 

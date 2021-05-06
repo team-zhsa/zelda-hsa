@@ -22,3 +22,8 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+function switch_8_s:on_activated()
+	map:open_doors("door_8_s")
+	map:open_doors("door_13_n")
+end

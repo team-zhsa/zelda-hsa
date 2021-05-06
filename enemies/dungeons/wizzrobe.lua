@@ -4,7 +4,7 @@ local behavior = require("enemies/generic/wizzrobe")
 -- Wizzrobe: Magical enemy which shoots beams at the hero.
 
 local properties = {
-  main_sprite = "enemies/wizzrobe",
+  main_sprite = "enemies/dungeons/wizzrobe",
   life = 4,
   damage = 4,
   normal_speed = 48,

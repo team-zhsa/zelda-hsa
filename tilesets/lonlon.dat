@@ -1,5 +1,16 @@
 background_color{ 255, 255, 255 }
 tile_pattern{
+  id = "1",
+  ground = "wall",
+  default_layer = 0,
+  x = 224,
+  y = 0,
+  width = 8,
+  height = 64,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
   id = "11",
   ground = "wall",
   default_layer = 0,
@@ -7,6 +18,7 @@ tile_pattern{
   y = 120,
   width = 72,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -128,6 +140,50 @@ tile_pattern{
   width = 8,
   height = 72,
   repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "25",
+  ground = "wall",
+  default_layer = 0,
+  x = 176,
+  y = 192,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "26",
+  ground = "traversable",
+  default_layer = 1,
+  x = 176,
+  y = 144,
+  width = 24,
+  height = 48,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "27",
+  ground = "traversable",
+  default_layer = 1,
+  x = 200,
+  y = 144,
+  width = 24,
+  height = 48,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "28",
+  ground = "wall",
+  default_layer = 0,
+  x = 200,
+  y = 192,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{

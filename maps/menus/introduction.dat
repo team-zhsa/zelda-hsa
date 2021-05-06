@@ -1,0 +1,30 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Absolute Dungeon 01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  pattern = "water",
+}
+
+custom_entity{
+  layer = 0,
+  x = 88,
+  y = 45,
+  width = 160,
+  height = 40,
+  direction = 0,
+  sprite = "menus/intro_alttp",
+  tiled = true,
+}
+

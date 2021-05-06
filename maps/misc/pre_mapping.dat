@@ -1,0 +1,909 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 2048,
+  height = 2048,
+  min_layer = -2,
+  max_layer = 2,
+  tileset = "Full Hyrule",
+}
+
+custom_entity{
+  layer = -2,
+  x = 8,
+  y = 13,
+  width = 2048,
+  height = 2048,
+  direction = 0,
+  sprite = "maps/alttp",
+}
+
+dynamic_tile{
+  layer = -1,
+  x = 0,
+  y = 0,
+  width = 2048,
+  height = 2048,
+  pattern = "10439",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 920,
+  width = 24,
+  height = 64,
+  pattern = "wall.3-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "988",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 160,
+  width = 16,
+  height = 48,
+  pattern = "1069",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "1067",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 152,
+  width = 32,
+  height = 48,
+  pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "1026",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "1025",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 136,
+  width = 16,
+  height = 8,
+  pattern = "1053",
+}
+
+tile{
+  layer = 0,
+  x = 888,
+  y = 176,
+  width = 16,
+  height = 128,
+  pattern = "1069",
+}
+
+tile{
+  layer = 0,
+  x = 896,
+  y = 160,
+  width = 8,
+  height = 24,
+  pattern = "944",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 160,
+  width = 16,
+  height = 48,
+  pattern = "1070",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 160,
+  width = 8,
+  height = 24,
+  pattern = "943",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "983",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "927",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "1070",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "973",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "1068",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 176,
+  width = 8,
+  height = 24,
+  pattern = "943",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "938",
+}
+
+tile{
+  layer = 0,
+  x = 824,
+  y = 160,
+  width = 64,
+  height = 16,
+  pattern = "940",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 176,
+  width = 96,
+  height = 16,
+  pattern = "941",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 192,
+  width = 96,
+  height = 16,
+  pattern = "942",
+}
+
+tile{
+  layer = 0,
+  x = 888,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "939",
+}
+
+tile{
+  layer = 0,
+  x = 888,
+  y = 176,
+  width = 8,
+  height = 24,
+  pattern = "944",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 136,
+  width = 32,
+  height = 8,
+  pattern = "1072",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 144,
+  width = 16,
+  height = 8,
+  pattern = "978",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "1079",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "926",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 136,
+  width = 8,
+  height = 8,
+  pattern = "13914",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "13916",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "13918",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 136,
+  width = 8,
+  height = 8,
+  pattern = "13915",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "13917",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "13919",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 128,
+  width = 32,
+  height = 8,
+  pattern = "1340",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 120,
+  width = 32,
+  height = 16,
+  pattern = "919",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "1078",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "928",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "929",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 192,
+  width = 16,
+  height = 8,
+  pattern = "1030",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "1027",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 160,
+  width = 8,
+  height = 32,
+  pattern = "1032",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 160,
+  width = 8,
+  height = 32,
+  pattern = "1031",
+}
+
+tile{
+  layer = 0,
+  x = 720,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "1028",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 152,
+  width = 16,
+  height = 8,
+  pattern = "1029",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 160,
+  width = 8,
+  height = 32,
+  pattern = "977",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "1081",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "1080",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 160,
+  width = 8,
+  height = 32,
+  pattern = "972",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 200,
+  width = 16,
+  height = 8,
+  pattern = "959",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 224,
+  width = 16,
+  height = 32,
+  pattern = "1058",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "961",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 240,
+  width = 16,
+  height = 16,
+  pattern = "961",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "961",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "954",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "954",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "967",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "965",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 160,
+  width = 16,
+  height = 32,
+  pattern = "976",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 56,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 96,
+  width = 144,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 56,
+  width = 144,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 56,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 840,
+  width = 8,
+  height = 24,
+  pattern = "121",
+}
+
+tile{
+  layer = 0,
+  x = 744,
+  y = 832,
+  width = 8,
+  height = 8,
+  pattern = "117",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 984,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 824,
+  width = 24,
+  height = 64,
+  pattern = "wall.3-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 800,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1064,
+  y = 800,
+  width = 80,
+  height = 24,
+  pattern = "wall.1-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1160,
+  y = 800,
+  width = 80,
+  height = 24,
+  pattern = "wall.1-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1240,
+  y = 800,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.2-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1240,
+  y = 824,
+  width = 24,
+  height = 160,
+  pattern = "wall.4-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1240,
+  y = 984,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1064,
+  y = 984,
+  width = 80,
+  height = 24,
+  pattern = "wall.2-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 0,
+  x = 1160,
+  y = 984,
+  width = 80,
+  height = 24,
+  pattern = "wall.2-5",
+  tileset = "Absolute Dungeon 04",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = 408,
+  width = 16,
+  height = 16,
+  pattern = "1638",
+}
+
+tile{
+  layer = 1,
+  x = 384,
+  y = 400,
+  width = 16,
+  height = 24,
+  pattern = "1637",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "1632",
+}
+
+tile{
+  layer = 1,
+  x = 416,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "1628",
+}
+
+tile{
+  layer = 1,
+  x = 416,
+  y = 432,
+  width = 16,
+  height = 16,
+  pattern = "1632",
+}
+
+tile{
+  layer = 1,
+  x = 432,
+  y = 432,
+  width = 16,
+  height = 16,
+  pattern = "1628",
+}
+
+tile{
+  layer = 1,
+  x = 432,
+  y = 448,
+  width = 16,
+  height = 16,
+  pattern = "1632",
+}
+
+tile{
+  layer = 1,
+  x = 448,
+  y = 448,
+  width = 16,
+  height = 16,
+  pattern = "1628",
+}
+
+tile{
+  layer = 1,
+  x = 448,
+  y = 464,
+  width = 16,
+  height = 16,
+  pattern = "1632",
+}
+
+tile{
+  layer = 1,
+  x = 464,
+  y = 464,
+  width = 16,
+  height = 16,
+  pattern = "1628",
+}
+
+tile{
+  layer = 1,
+  x = 464,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "1632",
+}
+
+tile{
+  layer = 1,
+  x = 480,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "1628",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "1629",
+}
+
+tile{
+  layer = 1,
+  x = 16,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "1633",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 192,
+  width = 24,
+  height = 16,
+  pattern = "14147",
+}
+
+tile{
+  layer = 1,
+  x = 208,
+  y = 40,
+  width = 8,
+  height = 40,
+  pattern = "20",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 216,
+  y = 32,
+  width = 144,
+  height = 48,
+  pattern = "23",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 40,
+  width = 8,
+  height = 40,
+  pattern = "21",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 216,
+  y = 24,
+  width = 144,
+  height = 8,
+  pattern = "25",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 216,
+  y = 80,
+  width = 144,
+  height = 8,
+  pattern = "24",
+  tileset = "outside_additions",
+}
+

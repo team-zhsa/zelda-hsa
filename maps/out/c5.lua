@@ -23,16 +23,3 @@ function map:on_opening_transition_finished()
 
 end
 
-function weaks:on_collision_explosion()
-  hero:freeze()
-    sol.timer.start(500, function()
-    sol.audio.play_sound("common/secret_discover_minor")
-      weak_1:set_enabled(false)
-      weak_2:set_enabled(false)
-      weak_3:set_enabled(false)
-      weak_4:set_enabled(false)
-      weak_5:set_enabled(false)
-      weak_6:set_enabled(false)
-      hero:unfreeze()
-    end)
-end

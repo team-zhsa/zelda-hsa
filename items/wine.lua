@@ -1,5 +1,7 @@
 local item = ...
 local game = item:get_game()
+local map = item:get_map()
+
 
 function item:on_created()
 
@@ -8,14 +10,10 @@ function item:on_created()
 end
 
 function item:on_using()
-  game:remove_life(4)
-  game:add_magic(5)
-  if game:get_ability("swim", 1) then
-    game:set_ability("swim", 0, function()
-      sol.timer.start(15000, function()
-        game:set_ability("swim", 1)
-      end)        
-    end)
-  end
+	local hero = game:get_hero()
+	hero:start_poison(1, 1000, game:get_max_life() - 4)
+	hero:unfreeze()
 end
 
+function item:on_finished()	
+end

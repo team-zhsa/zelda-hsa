@@ -20,6 +20,9 @@ end
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started() 
+	--if not game:get_value("obtained_sword", true) then
+--		game:set_world_rain_mode("outside_world", "rain")
+	--end
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
@@ -43,13 +46,4 @@ function npc_4:on_interaction()
       end
     end)
   end
-end
-
-function main_quest_s:on_activated()
-  if game:get_value("main_quest", 1) then
-    game:start_dialog("main_quest.step_2", function()
-      game:set_value("main_quest", 2)
-    end)
-  end
-end
-    
+end 

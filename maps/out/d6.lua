@@ -9,14 +9,11 @@
 
 local map = ...
 local game = map:get_game()
+local audio_manager = require("scripts/audio_manager")
 
--- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
+	audio_manager:play_music_fade("outside/overworld")
 end
-
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
 function map:on_opening_transition_finished()

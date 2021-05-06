@@ -22,3 +22,34 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+-- Handle boulders spawning depending on activated sensor.
+for sensor in map:get_entities("sensor_activate_boulder_") do
+  sensor:register_event("on_activated", function(sensor)
+    spawner_boulder_1:start()
+    spawner_boulder_2:start()
+		spawner_boulder_3:start()
+		spawner_boulder_4:start()
+  end)
+end
+for sensor in map:get_entities("sensor_deactivate_boulder_") do
+  sensor:register_event("on_activated", function(sensor)
+    spawner_boulder_1:stop()
+    spawner_boulder_2:stop()
+		spawner_boulder_3:stop()
+		spawner_boulder_4:stop()
+  end)
+end
+
+
+-- Remove spawned boulders when too far of the mountain.
+for spawner in map:get_entities("spawner_boulder_") do
+  spawner:register_event("on_enemy_spawned", function(spawner, enemy)
+    enemy:register_event("on_position_changed", function(enemy)
+      local _, y, _ = enemy:get_position()
+      if y > 1000 then
+        enemy:remove()
+      end
+    end)
+  end)
+end

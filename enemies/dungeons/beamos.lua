@@ -12,8 +12,8 @@ local stop_time = 1000
 function enemy:on_created()
   self:set_life(1); self:set_damage(2)
   self:create_sprite("enemies/dungeons/beamos")
-  self:set_size(16,32); self:set_origin(8,27)
-  self:set_invincible(); self:set_can_attack(false); self:set_traversable(true)
+  self:set_size(16,32); self:set_origin(8,13)
+  self:set_invincible(); self:set_can_attack(false); self:set_traversable(false)
   self:set_pushed_back_when_hurt(false)
   self:set_attack_consequence("explosion", 1)
 end
@@ -31,7 +31,7 @@ function enemy:on_restarted()
   local function shoot(tx, ty)
     -- Create new particle.
     local e = enemy:create_enemy(properties)
-    sol.audio.play_sound("ennemies/beamos")
+    sol.audio.play_sound("enemies/beamos")
     -- Create movement. Destroy enemy when the movement ends.
     local m = sol.movement.create("target")
     m:set_target(tx, ty); m:set_speed(speed)

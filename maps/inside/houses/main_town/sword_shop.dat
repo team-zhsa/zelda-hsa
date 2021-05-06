@@ -7,6 +7,7 @@ properties{
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 03",
+  music = "inside/house",
 }
 
 tile{
@@ -351,60 +352,6 @@ tile{
   pattern = "wine_rack.1",
 }
 
-tile{
-  layer = 0,
-  x = 40,
-  y = 40,
-  width = 24,
-  height = 24,
-  pattern = "cabinet.2a",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 40,
-  width = 32,
-  height = 24,
-  pattern = "cabinet.5a",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 40,
-  width = 32,
-  height = 24,
-  pattern = "cabinet.6a",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 40,
-  width = 24,
-  height = 24,
-  pattern = "cabinet.3a",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 40,
-  width = 48,
-  height = 24,
-  pattern = "cabinet.7a",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 40,
-  width = 24,
-  height = 24,
-  pattern = "cabinet.4a",
-}
-
 npc{
   name = "npc_sword",
   layer = 0,
@@ -431,60 +378,6 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.2-1",
-}
-
-tile{
-  layer = 1,
-  x = 40,
-  y = 16,
-  width = 24,
-  height = 24,
-  pattern = "cabinet.2b",
-}
-
-tile{
-  layer = 1,
-  x = 64,
-  y = 16,
-  width = 32,
-  height = 24,
-  pattern = "cabinet.5b",
-}
-
-tile{
-  layer = 1,
-  x = 96,
-  y = 16,
-  width = 32,
-  height = 24,
-  pattern = "cabinet.6b",
-}
-
-tile{
-  layer = 1,
-  x = 256,
-  y = 16,
-  width = 24,
-  height = 24,
-  pattern = "cabinet.3b",
-}
-
-tile{
-  layer = 1,
-  x = 208,
-  y = 16,
-  width = 48,
-  height = 24,
-  pattern = "caninet.7b",
-}
-
-tile{
-  layer = 1,
-  x = 184,
-  y = 24,
-  width = 24,
-  height = 16,
-  pattern = "cabinet.4b",
 }
 
 tile{

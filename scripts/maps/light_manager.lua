@@ -1,80 +1,79 @@
+--MERCURIS CHESS VERSION
+-- This script adds to maps some functions that allow you to put the map
+-- into the dark.
+--
+-- Maps will have the following new functions:
+-- map:get_light() and map:set_light().
+--
+-- Usage:
+--
+-- require("scripts/maps/light_manager")
+--
+-- your_map:set_light(0)  -- Put the map into the dark.
+-- your_map:set_light(1)  -- Restore normal light.
+
 local light_manager = {}
-local map_meta = sol.main.get_metatable("map")
-local light_surface
-local black = {0, 0, 0}
+
 require("scripts/multi_events")
 
+-- Dark overlay for each hero direction.
+local dark_surfaces = {
+  [0] = sol.surface.create("fogs/dark0.png"),
+  [1] = sol.surface.create("fogs/dark1.png"),
+  [2] = sol.surface.create("fogs/dark2.png"),
+  [3] = sol.surface.create("fogs/dark3.png")
+}
+local black = {0, 0, 0}
 
-function light_manager:init(map)
+local map_meta = sol.main.get_metatable("map")
 
-  local screen_width = 320
-  local screen_height = 240
-  light_surface = sol.surface.create(screen_width, screen_height)
+local function dark_map_on_draw(map, dst_surface)
+
+  if map:get_light() ~= 0 then
+    -- Normal light: nothing special to do.
+    return
+  end
+
+  -- Map normally dark but maybe there are torches.
+  if map.lit_torches ~= nil then
+    for torch in pairs(map.lit_torches) do
+      if torch:exists() and
+          torch:is_enabled() then
+        return
+      end
+    end
+  end
+
+  -- Dark room.
+  local screen_width, screen_height = dst_surface:get_size()
   local hero = map:get_entity("hero")
   local hero_x, hero_y = hero:get_center_position()
   local camera_x, camera_y = map:get_camera():get_bounding_box()
-  local x = 320-- - hero_x + camera_x
-  local y = 240-- - hero_y + camera_y
-  local dark_surface = sol.surface.create("fogs/dark.png")
+  local x = 320 - hero_x + camera_x
+  local y = 240 - hero_y + camera_y
+  local dark_surface = dark_surfaces[hero:get_direction()]
   dark_surface:draw_region(
-    x, y, screen_width, screen_height, light_surface)
+      x, y, screen_width, screen_height, dst_surface)
+
+  -- dark_surface may be too small if the screen size is greater
+  -- than 320x240. In this case, add black bars.
   if x < 0 then
-    light_surface:fill_color(black, 0, 0, -x, screen_height)
+    dst_surface:fill_color(black, 0, 0, -x, screen_height)
   end
 
   if y < 0 then
-    light_surface:fill_color(black, 0, 0, screen_width, -y)
+    dst_surface:fill_color(black, 0, 0, screen_width, -y)
   end
 
   local dark_surface_width, dark_surface_height = dark_surface:get_size()
   if x > dark_surface_width - screen_width then
-    light_surface:fill_color(black, dark_surface_width - x, 0,
-      x - dark_surface_width + screen_width, screen_height)
+    dst_surface:fill_color(black, dark_surface_width - x, 0,
+        x - dark_surface_width + screen_width, screen_height)
   end
 
   if y > dark_surface_height - screen_height then
-    light_surface:fill_color(black, 0, dark_surface_height - y,
-      screen_width, y - dark_surface_height + screen_height)
-  end
-  light_manager:update_light_level(map)
-  map:register_event("on_draw", function(map, dst_surface)
-      if map:get_light() == 1 then
-        return
-      end
-      light_surface:draw(dst_surface, 0, 0)
-    end)
-  
-end
-
-function light_manager:check_is_light_active(map, torch_prefix)
-
-  for torch in map:get_entities(torch_prefix) do
-    if torch.is_lit and torch:is_lit() then
-      return true
-    end
-  end
-  return false
-
-end
-
-function light_manager:update_light_level(map)
-  local total=0
-  local lit=0
-  for entity in map:get_entities() do
-
-    if entity:get_type()=="custom_entity" and entity:get_model()=="torch" and entity:is_in_same_region(map:get_hero()) then
-      total=total+1
-      if entity.is_lit and entity:is_lit() then
-        lit=lit+1
-      end
-    end
-  end
-  if total~=0 and light_surface~=nil then
---    debug_print ("Torches lit: "..lit.."/"..total, "opacity:"..150*(1-lit/total))
-    map:set_light(lit/total)
-    light_surface:set_opacity(150*(1-lit/total))
-  else 
-    map:set_light(1)
+    dst_surface:fill_color(black, 0, dark_surface_height - y,
+        screen_width, y - dark_surface_height + screen_height)
   end
 end
 
@@ -84,23 +83,28 @@ function map_meta:get_light()
 end
 
 function map_meta:set_light(light)
-
+  
   self.light = light
 
+  if light ~= 0 then
+      -- Normal light: nothing special to do.
+    return
+  end
+
+  self:register_event("on_draw", dark_map_on_draw)
 end
 
 -- Function called by the torch script when a torch state has changed.
 function map_meta:torch_changed(torch)
 
   self.lit_torches = self.lit_torches or {}
+
   local lit = torch:is_lit()
   if lit then
     self.lit_torches[torch] = true
   else
     self.lit_torches[torch] = nil
   end
-  light_manager:update_light_level(self)
-
 end
 
 return light_manager

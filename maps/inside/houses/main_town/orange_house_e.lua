@@ -9,10 +9,11 @@
 
 local map = ...
 local game = map:get_game()
+local house_manager = require("scripts/maps/house_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
+	house_manager:init(map)
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

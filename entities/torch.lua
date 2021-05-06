@@ -25,7 +25,7 @@ function torch:on_created()
   torch:set_lit(lit)
 
   local name = torch:get_name()
-  if name ~= nil and name:match("^timed_torch") then
+  if name ~= nil and name:match("^auto_torch") then
     torch:set_duration(10000)
   end
 end

@@ -13,7 +13,7 @@ local hud = require("scripts/hud/hud")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-	hero:set_visible(false)
+	game:set_hud_enabled(false)
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
@@ -29,4 +29,8 @@ local overlay = sol.surface.create("menus/prince_title.png") -- Fog image
 function map:on_draw(dst_surface)
 	overlay:draw(dst_surface)
 	overlay:set_opacity(255) -- Feel free to change that value, default 255
+end
+
+function map:on_finished()
+	game:set_hud_enabled(true)
 end

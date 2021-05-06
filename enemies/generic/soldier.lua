@@ -82,12 +82,12 @@ function behavior:create(enemy, properties)
     local _, _, layer = enemy:get_position()
     local _, _, hero_layer = hero:get_position()
     local near_hero = layer == hero_layer
-        and enemy:get_distance(hero) < 500
+        and enemy:get_distance(hero) < 128
         and enemy:is_in_same_region(hero)
 
     if near_hero and not going_hero then
-      if properties.play_hero_seen_sound then
-        sol.audio.play_sound("hero_seen")
+      if properties.play_hero_seen_sound == nil then
+       
       end
       enemy:go_hero()
     elseif not near_hero and going_hero then
@@ -146,6 +146,7 @@ function behavior:create(enemy, properties)
     local movement = sol.movement.create("target")
     movement:set_speed(properties.faster_speed)
     movement:start(enemy)
+		sol.audio.play_sound("hero_seen")
     being_pushed = false
     going_hero = true
   end
@@ -153,7 +154,7 @@ function behavior:create(enemy, properties)
   -- Prevent enemies from "piling up" as much, which makes it easy to kill multiple in one hit.
   function enemy:on_collision_enemy(other_enemy, other_sprite, my_sprite)
     if enemy:is_traversable() then
-      enemy:set_traversable(false)
+      enemy:set_traversable(true) --default false
       sol.timer.start(200, function() enemy:set_traversable(true) end)
     end
   end

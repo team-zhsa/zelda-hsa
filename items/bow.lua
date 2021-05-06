@@ -43,6 +43,52 @@ function item:on_obtaining(variant, savegame_variable)
   if not quiver:has_variant() then
     quiver:set_variant(1)
   end
-
 end
 
+local function initialize_meta()
+  -- Add Lua arrow properties to enemies.
+  local enemy_meta = sol.main.get_metatable("enemy")
+  if enemy_meta.set_attack_arrow ~= nil then
+    -- Already done.
+    return
+  end
+
+  enemy_meta.arrow_reaction = "force"
+  enemy_meta.arrow_reaction_sprite = {}
+  function enemy_meta:get_attack_arrow(sprite)
+    if sprite ~= nil and self.arrow_reaction_sprite[sprite] ~= nil then
+      return self.arrow_reaction_sprite[sprite]
+    end
+
+    if self.arrow_reaction == "force" then
+      -- Replace by the current force value.
+      local game = self:get_game()
+      if game:has_item("bow_light") then
+        return game:get_item("bow_light"):get_force()
+      end
+      return game:get_item("bow"):get_force()
+    end
+
+    return self.arrow_reaction
+  end
+
+  function enemy_meta:set_attack_arrow(reaction)
+    self.arrow_reaction = reaction
+  end
+
+  function enemy_meta:set_attack_arrow_sprite(sprite, reaction)
+    self.arrow_reaction_sprite[sprite] = reaction
+  end
+
+  -- Change the default enemy:set_invincible() to also take into account arrows.
+  local previous_set_invincible = enemy_meta.set_invincible
+  function enemy_meta:set_invincible()
+    previous_set_invincible(self)
+    self:set_attack_arrow("ignored")
+  end
+  local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
+  function enemy_meta:set_invincible_sprite(sprite)
+    previous_set_invincible_sprite(self, sprite)
+    self:set_attack_arrow_sprite(sprite, "ignored")
+  end
+end

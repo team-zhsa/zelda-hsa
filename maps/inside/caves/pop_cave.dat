@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   tileset = "Absolute Dungeon 01",
-  music = "inside/pop_cave",
+  music = "inside/pop_estrgg",
 }
 
 destination{
@@ -15,5 +15,14 @@ destination{
   x = 8,
   y = 13,
   direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 16,
+  y = 0,
+  width = 16,
+  height = 16,
+  destination_map = "inside/temple_time",
 }
 

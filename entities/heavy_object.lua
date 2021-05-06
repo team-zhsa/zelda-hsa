@@ -12,7 +12,7 @@ end
 
 function entity:on_interaction()
 
-  local lift = 1
+  local lift = 2
   if entity:get_sprite():get_animation() == "entities/statue_dungeon_6" then
     lift = 2
   end
@@ -35,11 +35,11 @@ function entity:on_interaction()
   hero:set_invincible(true)
   hero:freeze()
   
-  hero:get_sprite():set_animation("lifting")
+  hero:get_sprite():set_animation("lifting_heavy")
   local shieldid = hero:get_shield_sprite_id()
   hero:set_shield_sprite_id("")
 
-  sol.timer.start(hero, 1200, function()
+  sol.timer.start(hero, 10, function()
     local stone = map:create_destructible{
       x = x,
       y = y,

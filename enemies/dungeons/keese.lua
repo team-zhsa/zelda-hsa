@@ -26,6 +26,7 @@ function enemy:on_restarted()
       wait = false
       movement = sol.movement.create("path_finding")
       movement:set_speed(32)
+			movement:set_ignore_obstacles(false)
       movement:set_target(hero)
       movement:start(enemy)
       sol.timer.start(enemy, 1500, function()

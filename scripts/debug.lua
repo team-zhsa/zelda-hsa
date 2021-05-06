@@ -11,7 +11,9 @@ end
 
 local console = require("scripts/console")
 local game_manager = require("scripts/game_manager")
-
+local map_menu = require("scripts/menus/overworld_map")	
+local statistics_manager = require("scripts/menus/statistics")
+local mode_7_manager = require("scripts/mode_7")
 local debug = {}
 
 function debug:on_key_pressed(key, modifiers)
@@ -33,10 +35,13 @@ function debug:on_key_pressed(key, modifiers)
     sol.menu.start(sol.main, console)
   elseif sol.main.game ~= nil and not console.enabled then
     local game = sol.main.game
+		local map = game:get_map()
     local hero = nil
     if game ~= nil and game:get_map() ~= nil then
       hero = game:get_map():get_entity("hero")
     end
+
+
 
     -- In-game cheating keys.
     if key == "p" then
@@ -107,6 +112,10 @@ function debug:on_key_pressed(key, modifiers)
       function statistics:on_finished()
         game:set_suspended(false)
       end
+		elseif key == "7" then
+      local map_id = "out/a3"
+      local destination_name = "from_flute"
+      mode_7_manager:teleport(game, map:get_entity("hero"), map_id, destination_name)
     else
       -- Not a known in-game debug key.
       handled = false

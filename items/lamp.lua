@@ -1,106 +1,126 @@
 local item = ...
--- Script of the Lamp
+local game = item:get_game()
 
-item.temporary_lit_torches = {} -- List of torches that will be unlit by timers soon (FIFO).
-item.was_dark_room = false
+local magic_needed = 2 -- Number of magic points required.
 
 function item:on_created()
-  self:set_savegame_variable("possession_lamp")
-  self:set_assignable(true)
+
+  item:set_savegame_variable("possession_lamp")
+  item:set_assignable(true)
 end
 
--- Called when the hero uses the Lamp.
-function item:on_using()
-  local magic_needed = 1  -- Number of magic points required
-  if self:get_game():get_magic() >= magic_needed then
-    sol.audio.play_sound("lamp")
-    self:get_game():remove_magic(magic_needed)
-    self:create_fire()
-  else
-    sol.audio.play_sound("wrong")
-  end
-  self:set_finished()
-end
+-- Shoots some fire on the map.
+function item:shoot()
 
--- Creates some fire on the map.
-function item:create_fire()
-  local hero = self:get_map():get_entity("hero")
+  local map = item:get_map()
+  local hero = map:get_hero()
   local direction = hero:get_direction()
-  local dx, dy
-  if direction == 0 then
-    dx, dy = 18, -4
-  elseif direction == 1 then
-    dx, dy = 0, -24
-  elseif direction == 2 then
-    dx, dy = -20, -4
-  else
-    dx, dy = 0, 16
-  end
 
+  local x, y, layer = hero:get_center_position()
+  local fire = map:create_custom_entity({
+    model = "fire",
+    x = x,
+    y = y + 3,
+    layer = layer,
+    width = 8,
+    height = 8,
+    direction = direction,
+  })
+
+ -- local fire_sprite = entity:get_sprite("fire")
+  --fire_sprite:set_animation("flying")
+	sol.audio.play_sound("items/lamp/on")
+  local angle = direction * math.pi / 2
+  local movement = sol.movement.create("straight")
+  movement:set_speed(192)
+  movement:set_angle(angle)
+  movement:set_smooth(false)
+  movement:start(fire)
+end
+
+function item:on_using()
+
+  local map = item:get_map()
+  local hero = map:get_hero()
+  local direction = hero:get_direction()
+--[[  hero:set_animation("rod")
+
+  -- Give the hero the animation of using the fire rod.
   local x, y, layer = hero:get_position()
-  self:get_map():create_fire{
-    x = x + dx,
-    y = y + dy,
-    layer = layer
-  }
-end
+  local fire_rod = map:create_custom_entity({
+    x = x,
+    y = y,
+    layer = layer,
+    width = 16,
+    height = 16,
+    direction = direction,
+    sprite = "hero/item/lamp/on",
+  })--]]
 
--- Unlights the oldest torch still lit.
-function item:unlight_oldest_torch()
-  -- Remove the torch from the FIFO.
-  local npc = table.remove(self.temporary_lit_torches, 1)
-  if npc:exists() then
-    -- Change its animation if it still exists on the map.
-    npc:get_sprite():set_animation("unlit")
+  -- Shoot fire if there is enough magic.
+  if game:get_magic() >= magic_needed then
+    sol.audio.play_sound("items/lamp/on")
+    game:remove_magic(magic_needed)
+    item:shoot()
   end
 
-  if #self.temporary_lit_torches == 0 and self.was_dark_room then
-    -- make the room dark again
-    self:get_map():set_light(0)
+  -- Make sure that the fire rod stays on the hero.
+  -- Even if he is using this item, he can move
+  -- because of holes or ice.
+ -- sol.timer.start(fire_rod, 10, function()
+ --   fire_rod:set_position(hero:get_position())
+   -- return true
+ -- end)
+
+  -- Remove the fire rod and restore control after a delay.
+  sol.timer.start(hero, 300, function()
+ --   fire_rod:remove()
+    item:set_finished()
+  end)
+end
+
+-- Initialize the metatable of appropriate entities to work with the fire.
+local function initialize_meta()
+
+  -- Add Lua fire properties to enemies.
+  local enemy_meta = sol.main.get_metatable("enemy")
+  if enemy_meta.get_fire_reaction ~= nil then
+    -- Already done.
+    return
   end
-end
 
--- Called when the player obtains the Lamp.
-function item:on_obtained(variant, savegame_variable)
-  -- Give the magic bar if necessary.
-  local magic_bar = self:get_game():get_item("magic_bar")
-  if not magic_bar:has_variant() then
-    magic_bar:set_variant(1)
-  end
-end
+  enemy_meta.fire_reaction = 2  -- 7 life points by default.
+  enemy_meta.fire_reaction_sprite = {}
+  function enemy_meta:get_fire_reaction(sprite)
 
--- Called when the current map changes.
-function item:on_map_changed()
-  self.temporary_lit_torches = {}
-  self.was_dark_room = false
-end
-
--- Called when the hero presses the action key in front of an NPC
--- linked to the Lamp.
-function item:on_npc_interaction(npc)
-  if npc:get_name():find("^torch^") then
-    npc:get_map():get_game():start_dialog("torch.need_lamp")
-  end
-end
-
--- Called when fire touches an NPC linked to the Lamp.
-function item:on_npc_collision_fire(npc)
-  if npc:get_name():find("^torch") then
-    local torch_sprite = npc:get_sprite()
-    if torch_sprite:get_animation() == "unlit" then
-      -- Temporarily light the torch up.
-      torch_sprite:set_animation("lit")
-      sol.timer.start(30000, function()
-        self:unlight_oldest_torch()
-      end)
-      table.insert(self.temporary_lit_torches, npc)
-
-      local map = self:get_map()
-      if map.get_light ~= nil and map:get_light() == 0 then
-        -- Light the room.
-        self.was_dark_room = true
-        map:set_light(1)
-      end
+    if sprite ~= nil and self.fire_reaction_sprite[sprite] ~= nil then
+      return self.fire_reaction_sprite[sprite]
     end
+    return self.fire_reaction
   end
+
+  function enemy_meta:set_fire_reaction(reaction, sprite)
+
+    self.fire_reaction = reaction
+  end
+
+  function enemy_meta:set_fire_reaction_sprite(sprite, reaction)
+
+    self.fire_reaction_sprite[sprite] = reaction
+  end
+
+  -- Change the default enemy:set_invincible() to also
+  -- take into account the fire.
+  local previous_set_invincible = enemy_meta.set_invincible
+  function enemy_meta:set_invincible()
+    previous_set_invincible(self)
+    self:set_fire_reaction("ignored")
+  end
+  local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
+  function enemy_meta:set_invincible_sprite(sprite)
+    previous_set_invincible_sprite(self, sprite)
+    self:set_fire_reaction_sprite(sprite, "ignored")
+  end
+
 end
+initialize_meta()

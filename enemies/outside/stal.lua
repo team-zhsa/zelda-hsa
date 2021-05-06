@@ -23,4 +23,4 @@ local properties = {
 behavior:create(enemy, properties)
 
 enemy:set_invincible()
-enemy:set_attack_hammer(1)
+enemy:set_attack_consequence("explosion", 1)

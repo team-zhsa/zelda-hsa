@@ -10,22 +10,28 @@
 local map = ...
 local game = map:get_game()
 local hero = map:get_hero()
-local light_manager = require("scripts/maps/light_manager")
+--require("scripts/maps/temperature_manager")
 require("scripts/states/running")
 local credits = require("scripts/menus/credits")
 local house_manager = require("scripts/maps/house_manager")
+local fall_manager = require("scripts/maps/ceiling_drop_manager")
+local treasure_manager = require("scripts/maps/treasure_manager")
+
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-	light_manager:init(map)
+	fall_manager:create("pickable")
+	treasure_manager:disappear_pickable(map, "pendant")
+--	house_manager:init(map)
 --	hero:fall_from_ceiling(320)
-  map:set_light(0)
+  --map:set_light(0)
 --	sol.menu.start(map, credits, true)
 end
 
 
+
 function tp:on_activated()
-		dungeon_tp:set_enabled(false)
+	treasure_manager:appear_pickable(map, "pendant")
 end
 
 local text = sol.text_surface.create{
@@ -38,6 +44,3 @@ function map:on_draw(dst_surface)
 	text:draw(dst_surface, 160, 220)
 end
 
-function sensor_light:on_activating()
-	map:set_light(0)
-end

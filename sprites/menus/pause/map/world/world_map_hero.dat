@@ -1,0 +1,9 @@
+animation{
+  name = "blinking",
+  src_image = "menus/pause/map/world/world_map_hero.png",
+  frame_delay = 400,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 11, frame_height = 11, origin_x = 1, origin_y = 1, num_frames = 2 },
+  },
+}

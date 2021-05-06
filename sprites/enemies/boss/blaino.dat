@@ -1,0 +1,107 @@
+animation{
+  name = "walking",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 4 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 4 },
+  },
+}
+animation{
+  name = "arming_straight",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 80,
+  frame_to_loop_on = 5,
+  directions = {
+    { x = 0, y = 192, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 192, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 240, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 240, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 6 },
+  },
+}
+animation{
+  name = "arming_uppercut",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 288, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 288, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 336, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 6 },
+    { x = 0, y = 336, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 6 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 192, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 3 },
+    { x = 192, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 3 },
+    { x = 192, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 3 },
+    { x = 192, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 3 },
+  },
+}
+animation{
+  name = "jab",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 80,
+  directions = {
+    { x = 0, y = 96, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 3 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 3 },
+    { x = 0, y = 144, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 3 },
+    { x = 0, y = 144, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 3 },
+  },
+}
+animation{
+  name = "jumping",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 80,
+  frame_to_loop_on = 1,
+  directions = {
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 2 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30, num_frames = 2 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 30 },
+  },
+}
+animation{
+  name = "straight",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 20,
+  frame_to_loop_on = 8,
+  directions = {
+    { x = 384, y = 192, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 9 },
+    { x = 384, y = 192, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 9 },
+    { x = 384, y = 240, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 9 },
+    { x = 384, y = 240, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 9 },
+  },
+}
+animation{
+  name = "uppercut",
+  src_image = "enemies/boss/blaino.png",
+  frame_delay = 40,
+  frame_to_loop_on = 8,
+  directions = {
+    { x = 320, y = 288, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 9 },
+    { x = 320, y = 288, frame_width = 64, frame_height = 48, origin_x = 26, origin_y = 30, num_frames = 9 },
+    { x = 320, y = 336, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 9 },
+    { x = 320, y = 336, frame_width = 64, frame_height = 48, origin_x = 38, origin_y = 30, num_frames = 9 },
+  },
+}

@@ -8,6 +8,18 @@ local tmp = sol.surface.create(sol.video.get_quest_size())
 local reflection = sol.surface.create(sol.video.get_quest_size())
 local fsa_texture = sol.surface.create(sol.video.get_quest_size())
 
+local half_screen_scale = 1 / 1
+local half_screen = sol.surface.create(quest_w * half_screen_scale, quest_h * half_screen_scale)
+half_screen:set_scale(1 / half_screen_scale, 1 / half_screen_scale)
+half_screen:set_blend_mode("add")
+local glow_acc = sol.surface.create(quest_w, quest_h)
+glow_acc:set_blend_mode("add")
+
+local blur_shader = sol.shader.create"blur"
+local lava_filter = sol.shader.create"lava_filter"
+
+half_screen:set_shader(blur_shader)
+
 local distort_map = sol.surface.create(sol.video.get_quest_size())
 
 local clouds = sol.surface.create("work/clouds_reflection.png")
@@ -15,7 +27,7 @@ local clouds_shadow = sol.surface.create("work/clouds_shadow.png")
 clouds_shadow:set_blend_mode("multiply")
 
 local effect = sol.surface.create"work/fsaeffect.png"
---effect:set_blend_mode"multiply"
+effect:set_blend_mode("blend")
 local shader = sol.shader.create"water_effect"
 
 shader:set_uniform("reflection", reflection)
@@ -339,6 +351,16 @@ end
 function fsa:on_map_draw(map, dst)
   --dst:set_shader(shader)
   dst:draw(tmp)
+  
+  local old_shad = dst:get_shader()
+  if map.fsa_lava then
+    dst:set_shader(lava_filter)
+    dst:set_scale(half_screen_scale, half_screen_scale)
+    dst:draw(half_screen) -- downsample the screen
+    dst:set_scale(1,1)
+    dst:set_shader(old_shad)
+  end
+  
   fsa:render_reflection(map)
   fsa:render_fsa_texture(map)
 
@@ -359,6 +381,12 @@ function fsa:on_map_draw(map, dst)
     light_mgr:draw(dst,map)
   end
   
+  if map.fsa_lava then
+    glow_acc:fill_color({0,0,0,10})
+    half_screen:draw(glow_acc)
+    glow_acc:draw(dst)
+  end
+  
   if true then
     -- draw heatwave on tmp
     if map.fsa_heat_wave then
@@ -366,7 +394,6 @@ function fsa:on_map_draw(map, dst)
       heat_wave:set_uniform('camera_pos', {dx, dy})
       tmp:draw(distort_map)
     end
-    
     
     for ent in map:get_entities_in_rectangle(dx, dy, cw, ch) do
       local dist_m = ent.on_draw_distort

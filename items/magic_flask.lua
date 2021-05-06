@@ -14,7 +14,7 @@ function item:on_started()
 end
 
 function item:on_obtaining(variant, savegame_variable)
-  local amounts = {6, 42}
+  local amounts = {6, 20}
   local amount = amounts[variant]
   if amount == nil then
     error("Invalid variant '" .. variant .. "' for item 'magic flask'")

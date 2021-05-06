@@ -93,7 +93,7 @@ function ceiling_drop_manager:create(meta)
         layer = map:get_max_layer(),
         width = 16,
         height = 16,
-        sprite = "shadows/shadow",
+        sprite = "entities/Shadows/shadow",
         direction = 0
       })
     shadow:set_modified_ground("traversable")

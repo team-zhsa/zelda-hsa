@@ -5,7 +5,9 @@ properties{
   height = 240,
   min_layer = 0,
   max_layer = 2,
+  world = "inside_world",
   tileset = "Absolute Dungeon 03",
+  music = "outside/kakarico",
 }
 
 tile{
@@ -14,7 +16,7 @@ tile{
   y = 48,
   width = 224,
   height = 144,
-  pattern = "floor.1-1",
+  pattern = "floor_low.1-1",
 }
 
 tile{
@@ -188,6 +190,50 @@ tile{
   pattern = "door.1.support.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 80,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+destination{
+  name = "from_1f",
+  layer = 0,
+  x = 160,
+  y = 37,
+  direction = 1,
+}
+
 chest{
   layer = 0,
   x = 160,
@@ -197,6 +243,24 @@ chest{
   sprite = "entities/Chests/chest_LttP",
 }
 
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 24,
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko/bar_1f",
+  destination = "from_b1",
+}
+
+stairs{
+  layer = 0,
+  x = 152,
+  y = 24,
+  direction = 1,
+  subtype = 0,
+}
+
 tile{
   layer = 1,
   x = 144,
@@ -204,5 +268,41 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.1-1",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 0,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 16,
+  y = 224,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 16,
+  y = 0,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
 }
 

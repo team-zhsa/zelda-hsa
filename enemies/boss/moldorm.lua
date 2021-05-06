@@ -1,169 +1,213 @@
+----------------------------------
+--
+-- Moldorm.
+--
+-- Caterpillar enemy with three body parts and one tail that will follow the head move.
+-- Moves in curved motion, and randomly change the direction of the curve.
+-- Speed up the move if set_angry() or hurt.
+--
+-- Methods : enemy:start_walking()
+--           enemy:set_angry()
+--
+----------------------------------
+
+-- Global variables
 local enemy = ...
+require("enemies/lib/common_actions").learn(enemy)
+
 local game = enemy:get_game()
 local map = enemy:get_map()
 local hero = map:get_hero()
-local movement
-local body_1
-local body_2
-local body_3
-local head
-local movement_body_1
-local movement_body_2
-local movement_body_3
-local movement_tail
-local is_dead = false
+local sprites = {}
+local head_sprite, tail_sprite
+local tied_sprites_frame_lags = {}
+local last_positions, frame_count
+local walking_movement
+local is_angry
 
-enemy:create_sprite("enemies/moldorme")
+-- Configuration variables
+local walking_speed = 88
+local walking_angle = 0.035
+local running_speed = 140
+local tied_sprites_frame_lags = {20, 35, 50, 62}
+local keeping_angle_duration = 1500
+local angry_duration = 3000
+local before_explosion_delay = 2000
+local between_explosion_delay = 500
 
-function enemy:on_created()
+-- Constants
+local highest_frame_lag = tied_sprites_frame_lags[#tied_sprites_frame_lags] + 1
+local sixteenth = math.pi * 0.125
+local eighth = math.pi * 0.25
+local quarter = math.pi * 0.5
+local circle = math.pi * 2.0
 
-  enemy:set_life(2)
-  enemy:set_damage(1)
-  enemy:set_hurt_style("boss")
-  enemy:set_pushed_back_when_hurt(false)
-  local x, y, layer = enemy:get_position()
-  head = map:create_enemy{
-        breed = enemy:get_breed() .. '/moldorm_head',
-        direction = 3,
-        x = x,
-        y = y,
-        width = 32,
-        height = 32,
-        layer = layer
-      }
-  body_1 = map:create_enemy{
-      breed = enemy:get_breed() .. '/moldorm_body_1',
-      direction = 3,
-      x = x,
-      y = y,
-      width = 32,
-      height = 32,
-      layer = layer
-    }
-  body_2 = map:create_enemy{
-        breed = enemy:get_breed() .. '/moldorm_body_2',
-        direction = 3,
-        x = x,
-        y = y,
-        width = 32,
-        height = 32,
-        layer = layer
-      }
-  body_3 = map:create_enemy{
-        breed = enemy:get_breed() .. '/moldorm_body_3',
-        direction = 3,
-        x = x,
-        y = y,
-        width = 32,
-        height = 32,
-        layer = layer
-      }
-end
+-- Update head sprite direction, and tied sprites offset.
+local function update_sprites()
 
-function enemy:on_hurt()
+  -- Save current position
+  local x, y, _ = enemy:get_position()
+  last_positions[frame_count] = {x = x, y = y}
 
-  movement:set_angle_speed(180)
-
-end
-
-function enemy:on_restarted()
-
-  if is_dead then
-    return false
+  -- Set the head sprite direction.
+  local direction8 = math.floor((enemy:get_movement():get_angle() + sixteenth) % circle / eighth)
+  if head_sprite:get_direction() ~= direction8 then
+    head_sprite:set_direction(direction8)
   end
-  local x, y = enemy:get_position()
-  enemy:go(true, 0, x - 32, y)
-  enemy:go_body()
-  sol.timer.start(enemy, 1000, function()
-    enemy:repeat_switch_side()
-  end)
 
-end
-
-function enemy:go_body()
-   movement_body_1 = sol.movement.create("target")
-   movement_body_1:set_target(head)
-   movement_body_1:set_speed(128)
-   movement_body_2 = sol.movement.create("target")
-   movement_body_2:set_target(body_1)
-   movement_body_2:set_speed(128)
-   movement_body_3 = sol.movement.create("target")
-   movement_body_3:set_target(body_2)
-   movement_body_3:set_speed(128)
-   movement_tail = sol.movement.create("target")
-   movement_tail:set_target(body_3)
-   movement_tail:set_speed(128)
-   movement_body_1:start(body_1)
-   movement_body_2:start(body_2)
-   movement_body_3:start(body_3)
-   movement_tail:start(enemy)
-
-end
-
-function enemy:repeat_switch_side()
-
-  if is_dead then
-    return false
+  -- Replace part sprites on a previous position.
+  local function replace_part_sprite(sprite, frame_lag)
+    local previous_position = last_positions[(frame_count - frame_lag) % highest_frame_lag] or last_positions[0]
+    sprite:set_xy(previous_position.x - x, previous_position.y - y)
   end
-  local x, y = enemy:get_position()
-  local clockwise = not movement:is_clockwise()
-  local center_x, center_y = x - (movement.center_x - x), y - (movement.center_y - y)
-  local angle = sol.main.get_angle(center_x, center_y, x, y)
-  enemy:go(clockwise, angle, center_x, center_y)
-  sol.timer.start(enemy, math.random(1000, 3000), function()
-    enemy:repeat_switch_side()
-  end)
-end
-
-function enemy:go(clockwise, angle, center_x, center_y)
-
-  movement = sol.movement.create("circle")
-  movement:set_radius(32)
-  movement:set_angle_speed(140)
-  local angle_degrees = angle * 360 / (2 * math.pi)
-  movement:set_initial_angle(angle_degrees)
-  movement:set_ignore_obstacles(false)
-  movement:set_clockwise(clockwise)
-  movement:set_center(center_x, center_y)
-  movement.center_x, movement.center_y = center_x, center_y
-  function movement:on_obstacle_reached()
-    movement:set_clockwise(not movement:is_clockwise())
+  for i = 1, 4 do
+    replace_part_sprite(sprites[i + 1], tied_sprites_frame_lags[i])
   end
-  movement:start(head)
+
+  frame_count = (frame_count + 1) % highest_frame_lag
 end
 
-function enemy:on_hurt()
-  if enemy:get_life() == 1 then
-    is_dead = true
-   hero:freeze()
-    movement_tail:stop()
-    movement_body_1:stop()
-    movement_body_2:stop()
-    movement_body_3:stop()
-    movement:stop()
-    sol.audio.play_sound("boss_killed")
-    sol.timer.start(head, 1000, function()
-      enemy:remove()
-      sol.audio.play_sound("boss_1_explode_part")
-       sol.timer.start(head, 500, function()
-          body_3:remove()
-          sol.audio.play_sound("boss_1_explode_part")
-          sol.timer.start(head, 500, function()
-            body_2:remove()
-            sol.audio.play_sound("boss_1_explode_part")
-            sol.timer.start(head, 500, function()
-              body_1:remove()
-              sol.audio.play_sound("boss_1_explode_part")
-              sol.timer.start(head, 500, function()
-                head:remove()
-                 sol.audio.play_sound("boss_1_explode_part")
-                 enemy:launch_boss_dead()
-                 hero:unfreeze()
-               end)
-            end)
+-- Hurt or repulse the hero depending on touched sprite.
+local function on_attack_received()
+
+  -- Make sure to only trigger this event once by attack.
+  enemy:set_invincible()
+
+  -- Don't hurt and only repulse if the hero sword sprite doesn't collide with the tail sprite.
+  if not enemy:overlaps(hero, "sprite", tail_sprite, hero:get_sprite("sword")) then
+    enemy:start_pushing_back(hero, 200, 100, sprite, nil, function()
+      enemy:set_hero_weapons_reactions({
+      	arrow = on_attack_received,
+      	boomerang = on_attack_received,
+      	explosion = on_attack_received,
+      	sword = on_attack_received,
+      	thrown_item = on_attack_received,
+      	fire = on_attack_received,
+      	jump_on = "ignored",
+      	hammer = on_attack_received,
+      	hookshot = on_attack_received,
+      	magic_powder = on_attack_received,
+      	shield = "protected",
+      	thrust = on_attack_received
+      })
+    end)
+    return
+  end
+
+  -- Custom die if only one more life point.
+  if enemy:get_life() < 2 then
+
+    -- Wait a few time, make tail then body sprites explode, wait a few time again and finally make the head explode and enemy die.
+    enemy:start_death(function()
+      for _, sprite in enemy:get_sprites() do
+        if sprite:has_animation("hurt") then
+          sprite:set_animation("hurt")
+        end
+      end
+
+      local sorted_tied_sprites = {sprites[5], sprites[4], sprites[3], sprites[2]}
+      sol.timer.start(enemy, 2000, function()
+        enemy:start_sprite_explosions(sorted_tied_sprites, "entities/explosion_boss", 0, 0, function()
+          sol.timer.start(enemy, 1000, function()
+            local x, y = head_sprite:get_xy()
+            enemy:start_brief_effect("entities/explosion_boss", nil, x, y)
+            finish_death()
+          end)
         end)
       end)
     end)
+    return
   end
+
+  -- Else hurt normally.
+  enemy:hurt(1)
 end
 
+-- Start the enemy movement.
+function enemy:start_walking()
+
+  walking_movement = sol.movement.create("straight")
+  walking_movement:set_speed(walking_speed)
+  walking_movement:set_angle(math.random(4) * quarter)
+  walking_movement:set_smooth(false)
+  walking_movement:start(enemy)
+
+  -- Take the obstacle normal as angle on obstacle reached.
+  function walking_movement:on_obstacle_reached()
+    walking_movement:set_angle(enemy:get_obstacles_normal_angle(walking_movement:get_angle()))
+  end
+
+  -- Regularly and randomly change the angle.
+  sol.timer.start(enemy, keeping_angle_duration, function()
+    if math.random(2) == 1 then
+      walking_angle = 0 - walking_angle
+    end
+    return true
+  end)
+
+  -- Update walking angle, head sprite direction and tied sprites positions
+  sol.timer.start(enemy, 10, function()
+    walking_movement:set_angle((walking_movement:get_angle() + walking_angle) % circle)
+    update_sprites()
+    return walking_speed / walking_movement:get_speed() * 10 -- Schedule for each frame while walking and more while running, to keep the same curve and sprites distance.
+  end)
+end
+
+-- Increase the enemy speed for some time.
+function enemy:set_angry()
+
+  is_angry = true
+  walking_movement:set_speed(running_speed)
+  sol.timer.start(enemy, angry_duration, function()
+    is_angry = false
+    walking_movement:set_speed(walking_speed)
+  end)
+end
+
+-- Initialization.
+enemy:register_event("on_created", function(enemy)
+
+  enemy:set_life(4)
+  enemy:set_size(24, 24)
+  enemy:set_origin(12, 12)
+  
+  -- Create sprites in right z-order.
+  sprites[5] = enemy:create_sprite("enemies/" .. enemy:get_breed() .. "/tail")
+  for i = 3, 1, -1 do
+    sprites[i + 1] = enemy:create_sprite("enemies/" .. enemy:get_breed() .. "/body_" .. i)
+  end
+  sprites[1] = enemy:create_sprite("enemies/" .. enemy:get_breed())
+
+  head_sprite = sprites[1]
+  tail_sprite = sprites[5]
+end)
+
+-- Restart settings.
+enemy:register_event("on_restarted", function(enemy)
+
+  enemy:set_hero_weapons_reactions({
+  	arrow = on_attack_received,
+  	boomerang = on_attack_received,
+  	explosion = on_attack_received,
+  	sword = on_attack_received,
+  	thrown_item = on_attack_received,
+  	fire = on_attack_received,
+  	jump_on = "ignored",
+  	hammer = on_attack_received,
+  	hookshot = on_attack_received,
+  	magic_powder = on_attack_received,
+  	shield = "protected",
+  	thrust = on_attack_received
+  })
+
+  -- States.
+  last_positions = {}
+  frame_count = 0
+  is_angry = false
+  enemy:set_can_attack(true)
+  enemy:set_damage(4)
+  enemy:start_walking()
+  if enemy:get_life() < 4 then
+    enemy:set_angry()
+  end
+end)

@@ -74,7 +74,7 @@ function behavior:create(enemy, properties)
   function enemy:fire()
     vulnerable = true
     self:get_sprite():set_animation("shaking")
-    local beam = self:create_enemy({ breed = "projectiles/wizzrobe_beam", direction = self:get_sprite():get_direction(), name = properties.type })
+    local beam = self:create_enemy({ breed = "dungeons/wizzrobe_beam", direction = self:get_sprite():get_direction(), name = properties.type })
     self:restart()
   end
 end

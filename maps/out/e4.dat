@@ -7,5 +7,28 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
+  music = "same",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/f4",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/d4",
+  destination = "_side",
 }
 

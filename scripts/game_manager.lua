@@ -4,21 +4,18 @@
 -- local game_manager = require("scripts/game_manager")
 -- local game = game_manager:create("savegame_file_name")
 -- game:start()
-
 require("scripts/multi_events")
 local initial_game = require("scripts/initial_game")
 local game_manager = {}
 local destructible_meta = sol.main.get_metatable("destructible")
 local boundaries = sol.main.get_metatable("sensor")
-
-
-require("scripts/weather/snow_manager")
-require("scripts/weather/rain_manager")
-require("scripts/weather/hail_manager")
+local tone_manager = require("scripts/maps/daytime_manager")
+local condition_manager = require("scripts/hero_condition")
+time_flow = 300
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
-
+	
   -- Create the game (but do not start it).
   local exists = sol.game.exists(file)
   local game = sol.game.load(file)
@@ -67,9 +64,15 @@ function game_manager:create(file)
   end
 
 	local alpha_warn = sol.surface.create("hud/version.png")
-	function game:on_draw(dst_surface)
-		--alpha_warn:draw(dst_surface, 6, 16)
-	end
+
+	game:register_event("on_started", function()
+		tone = tone_manager:create(game)
+		condition_manager:initialize(game)
+	end)
+
+	game:register_event("on_map_changed", function()
+		tone:on_map_changed()
+	end)
 
   return game
 end

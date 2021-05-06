@@ -2,7 +2,7 @@ local submenu = require("scripts/menus/pause_submenu")
 local map_submenu = submenu:new()
 
 local outside_world_size = { width = 16640, height = 10080 }
-local outside_world_minimap_size = { width = 150, height = 140 }  -- TODO
+local outside_world_minimap_size = { width = 207, height = 133 }  -- TODO
 local max_floors_displayed = 6
 
 function map_submenu:on_started()
@@ -24,9 +24,9 @@ function map_submenu:on_started()
     local hero_minimap_x = math.floor(hero_absolute_x * outside_world_minimap_size.width / outside_world_size.width)
     local hero_minimap_y = math.floor(hero_absolute_y * outside_world_minimap_size.height / outside_world_size.height)
     self.hero_x = hero_minimap_x + 49
-    self.hero_y = hero_minimap_y + 53
+    self.hero_y = hero_minimap_y + 59
 
-    self.world_minimap_img = sol.surface.create("menus/pause_menu_world_map.png")
+    self.world_minimap_img = sol.surface.create("menus/outside_world_map.png")
 
   else
     -- In a dungeon.
@@ -71,7 +71,7 @@ function map_submenu:on_started()
     -- Minimap.
     self.dungeon_map_img = sol.surface.create(123, 119)
     self.dungeon_map_spr = sol.sprite.create(
-      "menus/dungeon_maps/map" .. self.dungeon_index)
+      "menus/dungeon_maps/map_" .. self.dungeon_index)
     self:load_dungeon_map_image()
   end
 
@@ -122,6 +122,37 @@ function map_submenu:on_command_pressed(command)
         elseif self.selected_floor > self.highest_floor_displayed then
           self.highest_floor_displayed = self.highest_floor_displayed + 1
         end
+			if not self.game:is_in_dungeon() then
+				if command == "up" then
+					angle = math.pi / 2
+				else
+					angle = 3 * math.pi / 2
+				end          
+        if self.world_minimap_movement ~= nil then
+          self.world_minimap_movement:stop()
+        end
+        local movement = sol.movement.create("straight")
+        	movement:set_speed(96)
+          movement:set_angle(angle)
+        local submenu = self
+          
+          function movement:on_position_changed()
+            if not submenu.game:is_command_pressed("up")
+                and not submenu.game:is_command_pressed("down") then
+              self:stop()
+              submenu.world_minimap_movement = nil
+            end
+            
+            if (command == "up" and submenu.world_minimap_visible_xy.y <= 0) or
+                (command == "down" and submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 134) then
+              self:stop()
+              submenu.world_minimap_movement = nil
+            end
+          end
+          
+          movement:start(self.world_minimap_visible_xy)
+          self.world_minimap_movement = movement
+        end
       end
     end
     handled = true
@@ -146,7 +177,7 @@ end
 function map_submenu:draw_world_map(dst_surface)
 
   -- Draw the minimap.
-  self.world_minimap_img:draw(dst_surface, 57, 59)
+  self.world_minimap_img:draw(dst_surface, 57, 64)
 
   local map = self.game:get_map()
   if map:get_world() ~= "ending" and map:get_world() ~= "prehistoric" then
@@ -230,7 +261,7 @@ function map_submenu:draw_dungeon_floors(dst_surface)
       and self.hero_floor <= self.highest_floor_displayed then
     dst_x = 61
     dst_y = old_dst_y + (self.highest_floor_displayed - self.hero_floor) * 12
-    self.hero_head_sprite:draw(dst_surface, dst_x, dst_y)
+    sol.sprite.create("menus/hero_head"):draw(dst_surface, dst_x, dst_y)
   end
 
   -- Draw the boss icon if any.

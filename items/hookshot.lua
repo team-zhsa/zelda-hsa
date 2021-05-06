@@ -162,10 +162,10 @@ function item:on_using()
 
     -- Play a repeated sound.
     sound_timer = sol.timer.start(map, 150, function()
-      sol.audio.play_sound("hookshot")
+      sol.audio.play_sound("items/hookshot/firing_loop")
       return true  -- Repeat the timer.
     end)
-    sol.audio.play_sound("hookshot")
+    sol.audio.play_sound("items/hookshot/firing_start")
 
   end
 
@@ -242,7 +242,7 @@ function item:on_using()
     -- with the hookshot (flying), and we stop that jump movement.
     hero:start_jumping(0, 100, true)
     hero:get_movement():stop()
-    hero:set_animation("hookshot")
+    hero:set_animation("hookshot_intro")
     hero:set_direction(direction)
 
     local past_positions = {}
@@ -259,7 +259,7 @@ function item:on_using()
 
     function movement:on_finished()
       stop()
-
+			sol.audio.play_sound("items/hookshot/hit_valid_target")
       if test_hero_obstacle_layers(hero:get_position()) then
         -- The hero ended up in a wall.
         local fixed_position = past_positions[1]  -- Initial position in case none is legal.
@@ -292,7 +292,7 @@ function item:on_using()
   end
 
   hero:freeze()  -- Block the hero.
-  hero:set_animation("hookshot")
+  hero:set_animation("hookshot_shoot")
 
   -- Create the hookshot.
   hookshot = map:create_custom_entity({
@@ -369,7 +369,7 @@ function item:on_using()
       if not hooked and
           not going_back and
           sprite ~= nil and
-          sprite:get_animation_set() == "entities/solid_switch" then
+          sprite:get_animation_set() == "entities/Switches/solid_switch" then
 
         if switch:is_activated() then
           sol.audio.play_sound("sword_tapping")

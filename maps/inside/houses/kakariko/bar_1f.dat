@@ -5,6 +5,7 @@ properties{
   height = 480,
   min_layer = 0,
   max_layer = 2,
+  world = "inside_world",
   tileset = "Absolute Dungeon 03",
   music = "outside/kakarico",
 }
@@ -159,7 +160,7 @@ tile{
   y = 48,
   width = 224,
   height = 384,
-  pattern = "floor.1-1",
+  pattern = "floor_low.1-1",
 }
 
 tile{
@@ -1326,16 +1327,13 @@ tile{
 teletransporter{
   layer = 0,
   x = 152,
-  y = 24,
-  width = 16,
-  height = 16,
-  destination_map = "inside/houses/kakariko/bar_1f",
-}
-
-teletransporter{
-  layer = 0,
-  x = 152,
   y = 464,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
   height = 16,
   destination_map = "out/a3",
@@ -1350,12 +1348,29 @@ destination{
   direction = 1,
 }
 
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 24,
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko/bar_b1",
+}
+
 stairs{
   layer = 0,
   x = 152,
   y = 24,
   direction = 1,
   subtype = 1,
+}
+
+destination{
+  name = "from_b1",
+  layer = 0,
+  x = 160,
+  y = 37,
+  direction = 1,
 }
 
 dynamic_tile{
@@ -1375,7 +1390,6 @@ door{
   y = 24,
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_very_weak_wall",
-  savegame_variable = "kakarico_milk_bar_stairs_door",
   opening_method = "explosion",
 }
 
@@ -1413,5 +1427,41 @@ tile{
   width = 32,
   height = 8,
   pattern = "book_case.2b",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 16,
+  height = 480,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 16,
+  y = 464,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 0,
+  width = 16,
+  height = 480,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 16,
+  y = 0,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
 }
 

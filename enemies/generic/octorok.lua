@@ -61,7 +61,7 @@ function behavior:create(enemy, properties)
     }
     enemy:get_sprite():set_animation("shooting")
     enemy:stop_movement()
-    sol.timer.start(enemy, 300, function()
+    sol.timer.start(enemy, 500, function()
       sol.audio.play_sound("stone")
       local stone = enemy:create_enemy({
         breed = properties.projectile,
@@ -69,7 +69,7 @@ function behavior:create(enemy, properties)
         y = dxy[direction + 1][2],
       })
       stone:go(direction)
-      sol.timer.start(enemy, 50 * math.random(20), function() enemy:go_hero() end)
+      sol.timer.start(enemy, 5 * math.random(1000), function() enemy:go_hero() end)
     end)
   end
   

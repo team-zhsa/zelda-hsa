@@ -1,5 +1,10 @@
 -- ♡ Copying is an act of love. Please copy and share.
 
+
+--Usage :
+--local end_credits = require("scripts/menus/credits")
+
+--sol.menu.start(game, end_credits)
 -- Game credits. Plays at the end of the game.
 
 local end_credits = {}
@@ -17,11 +22,11 @@ end
 
 -- Called when the menu is started
 function end_credits:on_started()
-  local lh = 12 -- line height in pixels
-  local speed = 24 -- scroll speed in px/s
+  local lh = 16 -- line height in pixels
+  local speed = 23 -- scroll speed in px/s (set it to 8)
 
   -- Credits dialog
-  self.dialog = sol.language.get_dialog("scripts.menus.credits")
+  self.dialog = sol.language.get_dialog("scripts.menus.credits_alt")
 
   -- Break dialog text into a table of lines
   local lines = self.dialog.text
@@ -39,11 +44,11 @@ function end_credits:on_started()
 
   -- Loop through all dialog lines and draw them
   for i, line in ipairs(lines) do
-    local line_surface =  sol.text_surface.create({horizontal_alignment="left", font="alttp", font_size=16, text=line})
+    local line_surface =  sol.text_surface.create({horizontal_alignment="center", font="alttp", font_size=16, text=line})
     -- Draw the given line
     line_surface:draw(
       self.credits_surface,
-      8, -- left padding
+      115, -- left padding
       i * lh -- bump it down by line number and line height
         + 8 -- top padding for whole box
     )
@@ -64,7 +69,7 @@ function end_credits:on_started()
 
     if y + h < 0 then
       -- Credits are out of view, end the menu
-      log("Credits animation finished.")
+      print("Credits animation finished.")
       self:stop()
       sol.menu.stop(end_credits)
     end

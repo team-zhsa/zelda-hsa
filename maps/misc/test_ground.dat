@@ -19,15 +19,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
-  y = 40,
-  width = 48,
-  height = 96,
-  pattern = "hole",
-}
-
-tile{
-  layer = 0,
   x = 128,
   y = 88,
   width = 32,
@@ -37,8 +28,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
-  y = 128,
+  x = 544,
+  y = 32,
   width = 16,
   height = 16,
   pattern = "red.switch",
@@ -46,8 +37,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
-  y = 192,
+  x = 544,
+  y = 96,
   width = 16,
   height = 16,
   pattern = "blue.switch",
@@ -64,7 +55,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 416,
   y = 272,
   width = 80,
   height = 112,
@@ -74,7 +65,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 448,
   y = 320,
   width = 16,
   height = 16,
@@ -84,7 +75,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 448,
   y = 320,
   width = 16,
   height = 16,
@@ -94,49 +85,190 @@ tile{
 
 tile{
   layer = 0,
+  x = 96,
+  y = 304,
+  width = 8,
+  height = 88,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
   x = 48,
-  y = 160,
-  width = 64,
+  y = 384,
+  width = 48,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 304,
+  width = 8,
+  height = 80,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "red.switch",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "blue.switch",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 296,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 336,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 312,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 336,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 336,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 312,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "door.4",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "door.3",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 320,
+  width = 48,
+  height = 16,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 296,
+  width = 48,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+dynamic_tile{
+  name = "weak_a_closed",
+  layer = 0,
+  x = 192,
+  y = 296,
+  width = 24,
   height = 64,
-  pattern = "floor.2-1",
+  pattern = "wall.4-2",
+}
+
+custom_entity{
+  name = "rockstack_1_background",
+  layer = 0,
+  x = 40,
+  y = 429,
+  properties = {
+    {
+      key = "lift",
+      value = "1",
+    },
+  },
+  width = 32,
+  height = 32,
+  direction = 0,
+  sprite = "entities/Rockstacks/rockstack_bg1",
+  model = "stone_pile",
 }
 
 chest{
   layer = 0,
-  x = 120,
-  y = 13,
-  treasure_name = "bomb",
-  treasure_variant = 2,
+  x = 216,
+  y = 29,
+  treasure_name = "bottle_1",
   sprite = "entities/chest",
 }
 
 chest{
   layer = 0,
-  x = 136,
-  y = 13,
-  treasure_name = "arrow",
-  treasure_variant = 2,
+  x = 120,
+  y = 29,
+  treasure_name = "fire_rod",
   sprite = "entities/chest",
 }
 
 destination{
   name = "destination",
   layer = 0,
-  x = 8,
-  y = 125,
+  x = 72,
+  y = 29,
   direction = 1,
   sprite = "entities/Warps/destination",
-}
-
-custom_entity{
-  layer = 0,
-  x = 104,
-  y = 61,
-  width = 16,
-  height = 16,
-  direction = 0,
-  sprite = "npc/goron_osgor",
-  model = "runs_away",
 }
 
 teletransporter{
@@ -166,8 +298,8 @@ teletransporter{
 switch{
   name = "tp",
   layer = 0,
-  x = 64,
-  y = 0,
+  x = 0,
+  y = 256,
   subtype = "walkable",
   sprite = "entities/Switches/switch",
   needs_block = false,
@@ -191,42 +323,6 @@ teletransporter{
   sprite = "entities/Warps/teletransporter",
 }
 
-custom_entity{
-  layer = 0,
-  x = 264,
-  y = 53,
-  width = 48,
-  height = 96,
-  direction = 0,
-  sprite = "entities/grounds/weak_floor_light_1",
-  tiled = true,
-  model = "unstable_floor",
-}
-
-custom_entity{
-  name = "balance_1",
-  layer = 0,
-  x = 192,
-  y = 93,
-  width = 16,
-  height = 16,
-  direction = 0,
-  sprite = "entities/moving_platform_dg_5",
-  model = "platform_balance",
-}
-
-custom_entity{
-  name = "balance_2",
-  layer = 0,
-  x = 240,
-  y = 93,
-  width = 16,
-  height = 16,
-  direction = 0,
-  sprite = "entities/moving_platform_dg_5",
-  model = "platform_balance",
-}
-
 switch{
   layer = 0,
   x = 208,
@@ -240,19 +336,9 @@ switch{
 chest{
   layer = 0,
   x = 104,
-  y = 13,
-  treasure_name = "instrument_1",
-  sprite = "entities/chest",
-}
-
-npc{
-  layer = 0,
-  x = 232,
   y = 29,
-  direction = 3,
-  subtype = 1,
-  sprite = "npc/butterfly_purple",
-  behavior = "dialog#maps.caves.goron.ascii",
+  treasure_name = "somaria_cane",
+  sprite = "entities/chest",
 }
 
 teletransporter{
@@ -281,10 +367,9 @@ custom_entity{
 
 chest{
   layer = 0,
-  x = 152,
-  y = 13,
+  x = 136,
+  y = 29,
   treasure_name = "hammer",
-  treasure_variant = 2,
   sprite = "entities/chest",
 }
 
@@ -301,10 +386,9 @@ custom_entity{
 
 chest{
   layer = 0,
-  x = 168,
-  y = 13,
-  treasure_name = "fire_rod",
-  treasure_variant = 2,
+  x = 152,
+  y = 29,
+  treasure_name = "lamp",
   sprite = "entities/chest",
 }
 
@@ -344,21 +428,20 @@ teletransporter{
 teletransporter{
   layer = 0,
   x = 0,
-  y = 32,
+  y = 160,
   width = 16,
   height = 16,
   destination_map = "out/b3",
-  destination = "destination",
+  destination = "destination_maze",
   sprite = "entities/Warps/teletransporter",
   sound = "world_warp",
 }
 
 chest{
   layer = 0,
-  x = 184,
-  y = 13,
+  x = 168,
+  y = 29,
   treasure_name = "pegasus_shoes",
-  treasure_variant = 2,
   sprite = "entities/chest",
 }
 
@@ -504,249 +587,605 @@ stream{
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 285,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 301,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 317,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 285,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 301,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 317,
   direction = 7,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 285,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 285,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 301,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 301,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 317,
   direction = 5,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 317,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 285,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 301,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 317,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 333,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 349,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 200,
+  x = 488,
   y = 365,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 349,
   direction = 7,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 365,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 184,
+  x = 472,
   y = 381,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 333,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 349,
   direction = 7,
 }
 
 stream{
   layer = 0,
-  x = 152,
+  x = 440,
   y = 365,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 333,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 349,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 136,
+  x = 424,
   y = 365,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 349,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 365,
   direction = 6,
 }
 
 stream{
   layer = 0,
-  x = 168,
+  x = 456,
   y = 381,
   direction = 6,
 }
 
 stream{
+  layer = 0,
+  x = 472,
+  y = 333,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 488,
+  y = 381,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 440,
+  y = 381,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 424,
+  y = 381,
+  direction = 6,
+}
+
+custom_entity{
+  name = "rockstack_1",
+  layer = 0,
+  x = 40,
+  y = 429,
+  properties = {
+    {
+      key = "lift",
+      value = "1",
+    },
+  },
+  width = 32,
+  height = 32,
+  direction = 0,
+  sprite = "entities/Rockstacks/rockstack_light01",
+  model = "stone_pile",
+}
+
+chest{
   layer = 0,
   x = 184,
-  y = 333,
-  direction = 6,
+  y = 29,
+  treasure_name = "shovel",
+  sprite = "entities/chest",
 }
 
-stream{
+destination{
+  name = "fall",
+  layer = 0,
+  x = 24,
+  y = 173,
+  direction = 1,
+  sprite = "entities/Warps/destination",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 72,
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/pop_cave",
+  sprite = "entities/Warps/teletransporter",
+  sound = "world_warp",
+}
+
+chest{
   layer = 0,
   x = 200,
-  y = 381,
-  direction = 6,
+  y = 29,
+  treasure_name = "hookshot",
+  sprite = "entities/chest",
 }
 
-stream{
+npc{
   layer = 0,
-  x = 152,
-  y = 381,
-  direction = 6,
+  x = 40,
+  y = 109,
+  direction = 3,
+  subtype = 0,
+  behavior = "dialog#maps.kaepora_gaebora.owl_1",
 }
 
-stream{
+teletransporter{
   layer = 0,
-  x = 136,
-  y = 381,
-  direction = 6,
+  x = 0,
+  y = 176,
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/gerudo_valley/north_east_desert_cave_1f",
+  sprite = "entities/Warps/teletransporter2",
+  sound = "warp",
 }
 
 sensor{
-  name = "sensor_light",
+  name = "start_dark_sensor",
   layer = 0,
-  x = 56,
+  x = 568,
+  y = 109,
+  width = 32,
+  height = 16,
+}
+
+sensor{
+  name = "stop_dark_sensor",
+  layer = 0,
+  x = 568,
+  y = 45,
+  width = 32,
+  height = 16,
+}
+
+wall{
+  layer = 0,
+  x = 192,
+  y = 320,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 256,
+  y = 320,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+door{
+  name = "weak_a",
+  layer = 0,
+  x = 192,
+  y = 320,
+  direction = 0,
+  sprite = "entities/Doors/Inside/door_d1_very_weak_wall",
+  savegame_variable = "door_1",
+  opening_method = "explosion",
+  opening_condition_consumed = true,
+}
+
+door{
+  name = "weak_a_2",
+  layer = 0,
+  x = 256,
+  y = 320,
+  direction = 2,
+  sprite = "entities/Doors/Inside/door_d1_small_key",
+  savegame_variable = "door_1",
+  opening_method = "explosion",
+  opening_condition_consumed = true,
+}
+
+pickable{
+  layer = 0,
+  x = 344,
   y = 173,
-  width = 64,
-  height = 64,
+  treasure_name = "song_10_zelda",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 189,
+  treasure_name = "song_11_time",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 205,
+  treasure_name = "song_12_secret",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 221,
+  treasure_name = "song_13_light",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 237,
+  treasure_name = "song_14_storms",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 253,
+  treasure_name = "song_15_sun",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 269,
+  treasure_name = "song_16_epona",
+}
+
+pickable{
+  layer = 0,
+  x = 344,
+  y = 285,
+  treasure_name = "song_1_forest",
+}
+
+pickable{
+  layer = 0,
+  x = 392,
+  y = 173,
+  treasure_name = "song_2_fire",
+}
+
+pickable{
+  layer = 0,
+  x = 392,
+  y = 189,
+  treasure_name = "song_3_water",
+}
+
+pickable{
+  layer = 0,
+  x = 392,
+  y = 205,
+  treasure_name = "song_4_spirit",
+}
+
+pickable{
+  layer = 0,
+  x = 392,
+  y = 221,
+  treasure_name = "song_8_shadow",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 349,
+  treasure_name = "fairy",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 333,
+  treasure_name = "fairy",
+}
+
+chest{
+  layer = 0,
+  x = 232,
+  y = 29,
+  treasure_name = "bottle_2",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 248,
+  y = 29,
+  treasure_name = "bottle_3",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 264,
+  y = 29,
+  treasure_name = "bottle_4",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 312,
+  y = 29,
+  treasure_name = "green_tunic",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 328,
+  y = 29,
+  treasure_name = "blue_tunic",
+  sprite = "entities/chest",
+}
+
+chest{
+  layer = 0,
+  x = 344,
+  y = 29,
+  treasure_name = "red_tunic",
+  sprite = "entities/chest",
+}
+
+destructible{
+  layer = 0,
+  x = 120,
+  y = 253,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/bomb_flower",
+  can_explode = true,
+  can_regenerate = true,
+}
+
+pickable{
+  layer = 0,
+  x = 440,
+  y = 173,
+  treasure_name = "song_5_lorule",
+}
+
+custom_entity{
+  layer = 0,
+  x = 152,
+  y = 365,
+  width = 32,
+  height = 32,
+  direction = 0,
+  sprite = "entities/bumper",
+  model = "bumper",
+}
+
+pickable{
+  name = "pendant",
+  layer = 0,
+  x = 40,
+  y = 253,
+  treasure_name = "small_key",
+}
+
+enemy{
+  name = "aganhim",
+  layer = 0,
+  x = 552,
+  y = 221,
+  direction = 3,
+  breed = "dungeons/firebar",
+}
+
+tile{
+  layer = 1,
+  x = 208,
+  y = 320,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 248,
+  y = 320,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 208,
+  y = 312,
+  width = 8,
+  height = 32,
+  pattern = "door_top.closed.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 248,
+  y = 312,
+  width = 8,
+  height = 32,
+  pattern = "door_top.closed.3-2",
 }
 
 tile{
@@ -825,6 +1264,150 @@ tile{
   layer = 2,
   x = 248,
   y = 192,
+  width = 8,
+  height = 16,
+  pattern = "5",
+}
+
+tile{
+  layer = 2,
+  x = 96,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "524",
+}
+
+tile{
+  layer = 2,
+  x = 208,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "544",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "509",
+}
+
+tile{
+  layer = 2,
+  x = 128,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "517",
+}
+
+tile{
+  layer = 2,
+  x = 144,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "516",
+}
+
+tile{
+  layer = 2,
+  x = 160,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "522",
+}
+
+tile{
+  layer = 2,
+  x = 176,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "519",
+}
+
+tile{
+  layer = 2,
+  x = 192,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "506",
+}
+
+tile{
+  layer = 2,
+  x = 32,
+  y = 80,
+  width = 8,
+  height = 16,
+  pattern = "12",
+}
+
+tile{
+  layer = 2,
+  x = 224,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "544",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "544",
+}
+
+tile{
+  layer = 2,
+  x = 256,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "544",
+}
+
+tile{
+  layer = 2,
+  x = 208,
+  y = 0,
+  width = 8,
+  height = 16,
+  pattern = "2",
+}
+
+tile{
+  layer = 2,
+  x = 224,
+  y = 0,
+  width = 8,
+  height = 16,
+  pattern = "3",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 0,
+  width = 8,
+  height = 16,
+  pattern = "4",
+}
+
+tile{
+  layer = 2,
+  x = 256,
+  y = 0,
   width = 8,
   height = 16,
   pattern = "5",

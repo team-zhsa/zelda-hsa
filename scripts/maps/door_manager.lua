@@ -15,7 +15,7 @@ function door_manager:open_when_enemies_dead(map, enemy_prefix, door_prefix, sou
     if not map:has_entities(enemy_prefix) then
         map:open_doors(door_prefix)
         if sound then
-          sol.audio.play_sound("secret_1")
+          sol.audio.play_sound("common/secret_discover_minor")
         end
    end
   end
@@ -38,7 +38,7 @@ function door_manager:open_when_flying_tiles_dead(map, enemy_prefix, door_prefix
      end
      if open_door then
         map:open_doors(door_prefix)
-        sol.audio.play_sound("secret_1")
+        sol.audio.play_sound("common/secret_discover_minor")
      end
   end
    for enemy in map:get_entities(enemy_prefix) do
@@ -94,7 +94,7 @@ function door_manager:open_when_blocks_moved(map, block_prefix, door_prefix)
         remaining = remaining - 1
         if remaining == 0 then
             map:open_doors(door_prefix)
-            sol.audio.play_sound("secret_1")
+            sol.audio.play_sound("common/secret_discover_minor")
        end
       end
       for block in map:get_entities(block_prefix) do
@@ -110,7 +110,7 @@ function door_manager:open_when_switch_activated(map, switch_prefix, door_prefix
         if not switch.is_activated then
           switch.is_activated = true
           map:open_doors(door_prefix)
-          sol.audio.play_sound("secret_1")
+          sol.audio.play_sound("common/secret_discover_minor")
         end
        end
       for switch in map:get_entities(switch_prefix) do
@@ -127,7 +127,7 @@ function door_manager:open_when_block_moved(map, block_prefix, door_prefix)
         if not block.is_moved then
           block.is_moved = true
           map:open_doors(door_prefix)
-          sol.audio.play_sound("secret_1")
+          sol.audio.play_sound("common/secret_discover_minor")
         end
        end
       for block in map:get_entities(block_prefix) do
@@ -144,10 +144,71 @@ function door_manager:open_when_pot_break(map, door_prefix)
       detect_entity:add_collision_test("touching", function(entity_source, entity_dest)
         if entity_dest:get_type() == "carried_object" then
             map:open_doors(door_prefix)
-            sol.audio.play_sound("secret_1")
+            sol.audio.play_sound("common/secret_discover_minor")
         end
       end)
 
+end
+
+-- Destroy wall by explosion
+function door_manager:destroy_wall(map, weak_wall_prefix)
+
+  local game = map:get_game()
+  local dungeon = game:get_dungeon_index()
+  map:remove_entities(weak_wall_prefix)
+  audio_manager:play_sound("misc/secret1")
+
+end
+
+function door_manager:open_hidden_staircase(map, entity_group, savegame_variable)
+  local hero=map:get_hero()
+  local game=map:get_game()
+  map:start_coroutine(function()
+      local options = {
+        entities_ignore_suspend = {hero}
+      }
+      map:set_cinematic_mode(true, options)
+      sol.audio.stop_music()
+      wait(2000)
+      local timer_sound = sol.timer.start(hero, 0, function()
+          audio_manager:play_sound("misc/dungeon_shake")
+          return 450
+        end)
+      timer_sound:set_suspended_with_map(false)
+      local camera = map:get_camera()
+      local shake_config = {
+        count = 32,
+        amplitude = 2,
+        speed = 90
+      }
+      wait_for(camera.shake,camera,shake_config)
+      timer_sound:stop()
+      audio_manager:play_sound("items/bomb_explode")
+      local x,y,layer = map:get_entity("placeholder_explosion_"..entity_group):get_position()
+      map:create_explosion({
+          x = x,
+          y = y,
+          layer = layer
+        })
+      map:create_explosion({
+          x = x - 8,
+          y = y - 8,
+          layer = layer
+        })
+      map:create_explosion({
+          x = x + 8,
+          y = y + 8,
+          layer = layer
+        })
+      for entity in map:get_entities(entity_group) do
+        entity:remove()
+      end
+      wait(1000)
+      audio_manager:play_sound("misc/secret1")
+      game:play_dungeon_music()
+      game:set_value(savegame_variable, true)
+      map:set_cinematic_mode(false, options)
+    end)
 end
 
 -- Open doors when all torches in the room are lit
@@ -166,7 +227,7 @@ function door_manager:open_when_torches_lit(map, torch_prefix, door_prefix)
       remaining = remaining - 1
       if remaining == 0 then
         map:open_doors(door_prefix)
-        sol.audio.play_sound("secret_1")
+        sol.audio.play_sound("common/secret_discover_minor")
       end
     end
   end
@@ -180,7 +241,7 @@ function door_manager:open_when_torches_lit(map, torch_prefix, door_prefix)
   end
   if has_torches and remaining == 0 then
     -- All torches of this door are already lit.
-        sol.audio.play_sound("secret_1")
+        sol.audio.play_sound("common/secret_discover_minor")
         map:open_doors(door_prefix)
   end
 end

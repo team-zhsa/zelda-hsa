@@ -46,6 +46,7 @@ local snow_surface, dark_surface, flake_surface
 local flake_list, splash_list, timers, num_flakes, num_splashes
 local current_game, current_map, current_snow_mode, previous_snow_mode
 local previous_world, current_world, is_scrolling
+local tone_manager = require("scripts/maps/daytime_manager")
 
 -- Get/set current snow mode in the current map.
 function game_meta:get_snow_mode() return current_snow_mode end

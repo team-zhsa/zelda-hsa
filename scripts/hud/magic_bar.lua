@@ -1,5 +1,7 @@
 -- The magic bar shown in the game screen.
 
+local audio_manager = require("scripts/audio_manager")
+
 local magic_bar_builder = {}
 
 function magic_bar_builder:new(game, config)
@@ -45,7 +47,7 @@ function magic_bar_builder:new(game, config)
 
         -- Play the magic bar sound.
         if (magic - magic_bar.magic_displayed) % 10 == 1 then
-          sol.audio.play_sound("common/magic_bar/6")
+          audio_manager:play_sound("common/magic_bar/6")
         end
       end
     end
@@ -87,16 +89,16 @@ function magic_bar_builder:new(game, config)
       magic_bar.container_sprite:draw(dst_surface, x, y)
 
       -- Current magic.
-      magic_bar.magic_bar_img:draw_region(46, 24, 2 + magic_bar.magic_displayed, 8, dst_surface, x, y)
+      magic_bar.magic_bar_img:draw_region(134, 24, 2 + magic_bar.magic_displayed, 8, dst_surface, x, y)
 
       -- Fix left and right borders.
       if magic_bar.magic_displayed == 0 then
         -- Fix darker pixels on the right border.
-        dst_surface:fill_color({ 0, 0, 0}, x + 1, y + 1, 1, 6)
+        dst_surface:fill_color({0, 0, 0}, x + 1, y + 1, 1, 6)
       end
       if magic_bar.magic_displayed == magic_bar.max_magic_displayed then
         -- Fix darker pixels on the right border.
-        magic_bar.magic_bar_img:draw_region(132, 25, 1, 6, dst_surface, x + 44, y + 1)
+        magic_bar.magic_bar_img:draw_region(132, 25, 1, 6, dst_surface, x + 46, y + 1)
       end
     end
   end

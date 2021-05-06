@@ -1,6 +1,4 @@
 local effm = {}
-
-
 local current_effect
 
 local function apply_effect(map, effect)
@@ -20,7 +18,7 @@ local function init(game)
   game:register_event('on_map_changed', function(game,map)
     if current_effect then
       apply_effect(map,current_effect)
-    end
+		end
     map:register_event('on_draw', on_map_draw)
   end)
   if game:get_map() then

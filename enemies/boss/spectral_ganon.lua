@@ -42,6 +42,15 @@ function enemy:on_restarted()
 		enemy:set_attack_consequence("boomerang", "immobilized")
 		enemy:set_attack_consequence("arrow", 5)
 		enemy:set_attack_consequence("explosion", 5)
+		sol.timer.start(enemy, 50, function()
+    	local tx, ty, _ = enemy:get_map():get_hero():get_position()
+    	if enemy:get_distance(tx, ty) < max_distance then
+     	 self:get_sprite():set_animation("shaking")
+     	 sol.timer.start(self, 1000, function() shoot(tx-5, ty) end)
+    	  return false -- Stop timer.
+  	  end
+  	  return true
+  	end)
 		if enemy:get_life(40) then
 			phase = 2		
 		end
@@ -70,3 +79,26 @@ function enemy:on_restarted()
 --]]
 	end
 end		
+
+function shoot(tx, ty)
+	local properties = {name = "ganon_fireball_triple", breed = "boss/fireball_triple"}
+    -- Create new particle.
+    local e = enemy:create_enemy(properties)
+    sol.audio.play_sound("ennemies/beamos")
+    -- Create movement. Destroy enemy when the movement ends.
+    local m = sol.movement.create("target")
+    m:set_target(tx, ty); m:set_speed(speed)
+    function m:on_finished() e:explode() end
+    function m:on_obstacle_reached() e:explode() end
+    m:start(e)
+    -- Stop creating particles if necessary.
+    particles = particles - 1
+    if particles <= 0 then
+      enemy:stop_firing()
+      return 
+    else
+      sol.timer.start(enemy, time_between_particles, function()
+        shoot(tx, ty)
+      end)
+    end
+  end

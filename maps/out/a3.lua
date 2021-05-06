@@ -19,7 +19,7 @@ end
 -- Event called at initialization time, as soon as this map becomes is loaded.
 function map:on_started()
 	guard_walk()
-
+		
 end
 
 function npc_camper:on_interaction()
@@ -30,6 +30,22 @@ function npc_camper:on_interaction()
 	end
 end
 
-function map:on_draw()
-  game:set_world_rain_mode("outside_world", "rain")
+function npc_merchant:on_interaction()
+	if not game:get_value("possession_bottle_1", 1) then
+		game:start_dialog("maps.out.kakarico_village.shop_1", function(answer)
+			if answer == 1 then
+				if game:get_money() >= 300 then
+					game:start_dialog("maps.out.kakarico_village.shop_3", function()
+						hero:start_treasure("bottle_1", 1)
+					end)
+				else
+					game:start_dialog("_shop.not_enough_money")
+				end
+			else
+				game:start_dialog("maps.out.kakarico_village.shop_4")
+			end
+		end)
+	else print("fdgdfg")
+	end
+			
 end

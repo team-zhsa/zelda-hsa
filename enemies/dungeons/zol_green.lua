@@ -3,7 +3,7 @@ local enemy = ...
 local behavior = require("enemies/lib/towards_hero")
 
 local properties = {
-  sprite = "enemies/" .. enemy:get_breed(),
+  sprite = "enemies/dungeons/" .. enemy:get_breed(),
   life = 1,
   damage = 1,
   normal_speed = 16,

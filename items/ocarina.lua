@@ -11,7 +11,7 @@ end
 
 function item:on_using()
 
-  item:playing_song("items/ocarina")
+  item:playing_song("items/ocarina/song/0")
   self:set_finished()
 
 end
@@ -33,7 +33,7 @@ function item:playing_song(music)
     sprite = "entities/notes"
   }
   sol.audio.play_sound(music)
-  sol.timer.start(map, 4000, function()
+  sol.timer.start(map, 10000, function()
     hero:unfreeze()
     notes:remove()
   end)

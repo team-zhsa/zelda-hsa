@@ -1,4 +1,4 @@
--- Lua script of map out/b4.
+-- Lua script of map out/c4n.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -21,8 +21,4 @@ end
 -- that is, when the player takes control of the hero.
 function map:on_opening_transition_finished()
 
-end
-
-function border_c4_w:on_activated()
-  game:start_dialog("scripts.misc.world.mapbound")
 end

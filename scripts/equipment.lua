@@ -5,6 +5,8 @@
 
 require("scripts/multi_events")
 
+local num_bottles = 4
+
 local function initialize_equipment_features(game)
 
   if game.are_small_keys_enabled ~= nil then
@@ -82,6 +84,39 @@ local function initialize_equipment_features(game)
 
     local savegame_variable = game:get_small_keys_savegame_variable()
     game:set_value(savegame_variable, game:get_num_small_keys() - 1)
+  end
+
+  -- Returns a bottle with the specified content, or nil.
+  function game:get_first_bottle_with(variant)
+
+    for i = 1, num_bottles do
+      local item = self:get_item("bottle_" .. i)
+      if item:get_variant() == variant then
+        return item
+      end
+    end
+
+    return nil
+  end
+
+  function game:get_first_empty_bottle()
+    return self:get_first_bottle_with(1)
+  end
+
+  function game:has_bottle()
+
+    for i = 1, num_bottles do
+      if self:has_item("bottle_" .. i) then
+        return true
+      end
+    end
+
+    return false
+  end
+
+  function game:has_bottle_with(variant)
+
+    return self:get_first_bottle_with(variant) ~= nil
   end
 
 end

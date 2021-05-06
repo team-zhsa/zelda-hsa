@@ -1,0 +1,90 @@
+animation{
+  name = "body",
+  src_image = "enemies/boss/slime_eel.png",
+  directions = {
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+  },
+}
+animation{
+  name = "base",
+  src_image = "enemies/boss/slime_eel.png",
+  directions = {
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16 },
+  },
+}
+animation{
+  name = "base_hurt",
+  src_image = "enemies/boss/slime_eel.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 208, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+  },
+}
+animation{
+  name = "body_hurt",
+  src_image = "enemies/boss/slime_eel.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+  },
+}
+animation{
+  name = "tail",
+  src_image = "enemies/boss/slime_eel.png",
+  directions = {
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+  },
+}
+animation{
+  name = "tail_hurt",
+  src_image = "enemies/boss/slime_eel.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+  },
+}
+animation{
+  name = "weak",
+  src_image = "enemies/boss/slime_eel.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+  },
+}
+animation{
+  name = "weak_hurt",
+  src_image = "enemies/boss/slime_eel.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 16, num_frames = 3 },
+  },
+}

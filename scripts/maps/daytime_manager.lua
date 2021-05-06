@@ -1,6 +1,6 @@
 -- Tone Manager
 -- Manage time system tones and also light effects.
-
+require("scripts/multi_events")
 local tone_manager = {}
 
 local effects = {
@@ -12,9 +12,9 @@ local effects = {
 function tone_manager:create(game)
   local tone_menu = {}
   
-  local mr, mg, mb, ma = 0
-  local cr, cg, cb = 0  -- Create the current tone
-  local tr, tg, tb = 0  -- Create the target tone
+  local mr, mg, mb, ma = nil
+  local cr, cg, cb = nil  -- Create the current tone
+  local tr, tg, tb = nil  -- Create the target tone
   local minute = 0
   local d = 0
   
@@ -88,17 +88,23 @@ function tone_manager:create(game)
     -- Sleeping during day takes player to 2000 (8pm) and sleeping at night takes us to 0800 (8am).
     if game:get_value("time_of_day") == "day" then
       game:set_value("time_of_day", "night")
-      game:set_time(20)
+      game:set_value("hour_of_day", 20)
       minute = 0
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(true)
       end
+			for entity in game:get_map():get_entities("day_") do
+        entity:set_enabled(false)
+      end
     else
       game:set_value("time_of_day", "day")
-      game:set_time(8)
+      game:set_value("hour_of_day", 8)
       minute = 0
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(false)
+      end
+      for entity in game:get_map():get_entities("day_") do
+        entity:set_enabled(true)
       end
     end
     return true
@@ -199,6 +205,9 @@ function tone_manager:create(game)
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(false)
       end
+      for entity in game:get_map():get_entities("day_") do
+        entity:set_enabled(true)
+      end
   	elseif hour > 7 and hour <= 9 then
   	  self:set_new_tone(255, 255, 255)
   	elseif hour > 9 and hour < 16 then
@@ -222,6 +231,9 @@ function tone_manager:create(game)
   	  self:set_new_tone(110, 105, 190)	 
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(true)
+      end
+      for entity in game:get_map():get_entities("day_") do
+        entity:set_enabled(false)
       end
   	elseif hour == 19 and minute >= 30 then
   	  self:set_new_tone(90, 90, 225)
@@ -343,11 +355,12 @@ function tone_manager:create(game)
   sol.menu.start(game, tone_menu, false)
 
   -- Schedule the next check.
-  sol.timer.start(game, 1000, function()
+  sol.timer.start(game, time_flow, function()
     tone_menu:check()
     return true
   end)
   
+
   return tone_menu
 end
 

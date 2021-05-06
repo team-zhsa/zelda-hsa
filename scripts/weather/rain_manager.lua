@@ -26,7 +26,7 @@ local game_meta = sol.main.get_metatable("game")
 local map_meta = sol.main.get_metatable("map")
 
 -- Assets: sounds and sprites.
-local drop_sprite = sol.sprite.create("weather/rain")
+local drop_sprite = sol.sprite.create("entities/effects/rain")
 local thunder_sounds = {"environment/thunder1", "environment/thunder2", "environment/thunder3", "environment/thunder_far", "environment/thunder_double"}
 
 -- Default settings. Change these for testing.
@@ -48,6 +48,7 @@ local rain_surface, flash_surface, dark_surface, draw_flash_surface
 local drop_list, splash_list, timers, num_drops, num_splashes
 local current_game, current_map, current_rain_mode, previous_rain_mode
 local previous_world, current_world, is_scrolling
+local tone_manager = require("scripts/maps/daytime_manager")
 
 -- Get/set current rain mode in the current map.
 function game_meta:get_rain_mode() return current_rain_mode end

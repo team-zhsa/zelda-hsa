@@ -42,7 +42,7 @@ function enemy:go_random()
   m:start(self)
 
   sprite:set_direction(rand4 - 1)
-
+	sprite:set_animation("walking")
   if timer ~= nil then
     timer:stop()
   end

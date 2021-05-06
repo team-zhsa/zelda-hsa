@@ -97,7 +97,7 @@ function audio_manager:get_directory()
 
   local game = sol.main.get_game()
   local mode = (game ~= nil) and game:get_value("mode") or "snes"
-  local directory = (mode == "gb") and "gb" or ""
+  local directory = ""
 
   return directory
 
@@ -123,10 +123,10 @@ function audio_manager:play_music(id_music)
   local directory = audio_manager:get_directory()
   local game = sol.main.get_game()
   if game ~= nil and game.hero_charm then
-    game.id_music = directory .. '/' ..id_music
+    game.id_music = id_music
     id_music = '17_adrenaline_rush'
   end
-  lenient_play_music(directory .. "/" .. id_music)
+  lenient_play_music(id_music)
 
 end
 
@@ -160,11 +160,7 @@ function audio_manager:refresh_music()
     end
   end
   if id_music then
-    if directory == "gb" then
-      id_music = id_music:gsub("snes/", "gb/")
-    else
-      id_music = id_music:gsub("gb/", "snes/")
-    end
+
     lenient_play_music(id_music)
   end
 

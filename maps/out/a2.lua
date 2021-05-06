@@ -20,9 +20,3 @@ end
 
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
-
-
-function sensor_bound:on_activated()
-  game:start_dialog("maps.out._boundaries")
-  hero:set_direction(0)
-end

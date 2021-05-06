@@ -137,7 +137,7 @@ local function initialize_game_over_features(game)
   end
 
   local black = {0, 0, 0}
-  local red = {224, 32, 32}
+  local red = {255, 64, 61}
 
   function game_over_menu:on_draw(dst_surface)
 

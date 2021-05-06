@@ -6,10 +6,11 @@ local initial_menus_config = require("scripts/initial_menus/menus_config")
 local initial_menus = {}
 local effect_manager = require('scripts/maps/effect_manager')
 local gb = require('scripts/maps/gb_effect')
+local fsa = require('scripts/maps/fsa_effect')
+
 
 -- This function is called when Solarus starts.
 function sol.main:on_started()
-
   sol.main.load_settings()
   math.randomseed(os.time())
 
@@ -37,6 +38,11 @@ function sol.main:on_started()
     end
   end
 
+	local ceiling_drop_manager = require("scripts/maps/ceiling_drop_manager")
+  for _, entity_type in pairs({"hero", "pickable", "block"}) do
+    ceiling_drop_manager:create(entity_type)
+  end
+
 end
 
 -- Event called when the program stops.
@@ -47,7 +53,7 @@ end
 
 -- Event called when the player pressed a keyboard key.
 function sol.main:on_key_pressed(key, modifiers)
-
+  local game = sol.main.get_game()
   local handled = false
   if key == "f11" or
     (key == "return" and (modifiers.alt or modifiers.control)) then
@@ -69,6 +75,19 @@ function sol.main:on_key_pressed(key, modifiers)
     elseif key == 'f9' then
       -- F9: Set GameBoy mode. 
       effect_manager:set_effect(game, gb)
+      game:set_value("mode", "gb")
+      handled = true
+  
+    elseif key == 'f6' then
+      -- F7: Set Four Swords Adventure mode.
+      effect_manager:set_effect(game, fsa)
+      game:set_value("mode", "fsa")
+      handled = true
+  
+    elseif key == 'f8' then
+      -- F8: Set SNES mode (i.e. normal mode)
+      game:set_value("mode", "snes")
+      effect_manager:set_effect(game, nil)
       handled = true
   end
 

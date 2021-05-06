@@ -8,7 +8,7 @@ function enemy:on_created()
   self:set_life(3); self:set_damage(6)
   self:create_sprite("enemies/dungeons/bari_blue")
   self:set_size(16, 16); self:set_origin(8, 13)
-  self:set_attack_hookshot("immobilized")
+  self:set_attack_consequence("hookshot", "immobilized")
 end
 
 function enemy:shock()
@@ -55,4 +55,27 @@ function enemy:on_dying()
   -- It splits into two mini baris when it dies
   enemy:create_enemy({ breed = "bari_mini" })
   enemy:create_enemy({ breed = "bari_mini" })
+end
+
+local function electrocute()
+
+  local camera = map:get_camera()
+  local surface = camera:get_surface()
+  hero:get_sprite():set_ignore_suspend(true)
+  game:set_suspended(true)
+  sprite:set_animation("shocking")
+  audio_manager:play_sound("ennemies/bari/b_state_e")
+  hero:set_animation("electrocuted")
+  effect_model.start_effect(surface, game, 'in', false)
+  local shake_config = {
+    count = 32,
+    amplitude = 4,
+    speed = 180,
+  }
+  camera:shake(shake_config, function()
+    game:set_suspended(false)
+    sprite:set_animation("walking")
+    hero:unfreeze()
+    hero:start_hurt(enemy:get_damage())
+  end)
 end

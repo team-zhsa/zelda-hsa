@@ -21,7 +21,7 @@ function cannonball_manager:create_cannons(map, prefix)
       local x, y, layer = cannon:get_position()
       map:create_enemy{
         name = "cannonball",
-        breed = "cannonball",
+        breed = "dungeons/cannonball",
         x = x,
         y = y,
         layer = layer,

@@ -8,10 +8,10 @@ local timer
 function enemy:on_created()
   self:set_life(2); self:set_damage(2)
   local sprite = self:create_sprite("enemies/outside/armos")
-  self:set_size(24, 40); self:set_origin(12, 35)
+  self:set_size(16, 16); self:set_origin(8, 13)
   self:set_hurt_style("monster")
   self:set_pushed_back_when_hurt(true)
-  self:set_push_hero_on_sword(true)
+  self:set_push_hero_on_sword(false)
   self:set_invincible()
 end
 
@@ -52,7 +52,7 @@ function enemy:check_hero()
 end
 
 function enemy:stop(movement)
-  self:set_attack_arrow("protected")
+  self:set_attack_consequence("sword", "protected")
   self:set_can_attack(false)
   self:set_can_hurt_hero_running(false)
   self:get_sprite():set_animation("immobilized")
@@ -61,7 +61,7 @@ function enemy:stop(movement)
 end
 
 function enemy:go_hero()
-  self:set_attack_arrow(1)
+  self:set_attack_consequence("sword", 1)
   self:set_can_attack(true)
   self:set_can_hurt_hero_running(true)
   self:get_sprite():set_animation("walking")

@@ -23,7 +23,7 @@ local is_spawning = false
 local breed = spawner:get_property("breed")
 local minimum_time = spawner:get_property("minimum_time") or 2000
 local maximum_time = spawner:get_property("maximum_time") or 4000
-local treasure_name = spawner:get_property("treasure_name") or "random_with_charm"
+local treasure_name = spawner:get_property("treasure_name") or "random_central"
 local treasure_variant = spawner:get_property("treasure_variant") or 1
 local autostart = spawner:get_property("autostart") == "true"
 

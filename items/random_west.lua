@@ -3,15 +3,16 @@ local item = ...
 -- When it is created, this item creates another item randomly chosen
 -- and then destroys itself.
 
--- Probability of each item between 0 and 1000.
+-- Probability of each item between 0 and 200.
 local probabilities = {
-  [{ "rupee", 1 }]      = 15,   -- 1 rupee.
-  [{ "rupee", 2 }]      = 10,   -- 5 rupees.
-  [{ "rupee", 3 }]      = 5,   -- 20 rupees.
-  [{ "heart", 1 }]      = 8,   -- Heart.
-  [{ "bomb", 1}]        = 10,   -- Bomb.
-  [{ "bomb", 2}]        = 4,  -- 3 Bombs.
-  [{ "arrow", 1 }]      = 5,   --  Arrow.
+  [{ "rupee", 1 }]      = 18,   -- 1 rupee.
+  [{ "rupee", 2 }]      = 12,   -- 5 rupees.
+  [{ "rupee", 3 }]      = 10,   -- 20 rupees.
+  [{ "heart", 1 }]      = 20,   -- Heart.
+  [{ "bomb", 1}]        = 12,   -- Bomb.
+  [{ "bomb", 2}]        = 15,  -- 3 Bombs.
+  [{ "arrow", 1 }]      = 20,   --  Arrow.
+  [{ "magic_flask", 1 }]      = 15,   --  Magic Flask.
 }
 
 function item:on_pickable_created(pickable)
@@ -34,7 +35,7 @@ end
 -- Returns an item name and variant.
 function item:choose_random_item()
 
-  local random = math.random(1000)
+  local random = math.random(200)
   local sum = 0
 
   for key, probability in pairs(probabilities) do

@@ -23,8 +23,9 @@ local hud_config = {
   {
     menu_script = "scripts/hud/magic_bar",
     x = 6,
-    y = 27,
+    y = 24,
   },
+
 
   -- Rupee counter.
   {
@@ -83,6 +84,14 @@ local hud_config = {
     x = -145,
     y = 20,
   },
+
+  -- Clock icon.
+  {
+    menu_script = "scripts/hud/clock",
+    x = -32,
+    y = -64,
+  },
+
 }
 
 return hud_config

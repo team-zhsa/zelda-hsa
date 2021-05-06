@@ -3,6 +3,7 @@
 require("scripts/multi_events")
 local hero_meta = sol.main.get_metatable("hero")
 local fall_manager = require("scripts/maps/ceiling_drop_manager.lua")
+local audio_manager = require("scripts/audio_manager.lua")
 fall_manager:create("hero")
 
 hero_meta:register_event("on_state_changed", function(hero)
@@ -47,9 +48,9 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
       square_total_x = (4*square_x)+square_min_x
       square_total_y = (4*square_y)+square_min_y
-      game:set_value("map_discovering_" .. square_total_x .. "_" .. square_total_y, true)
-      game:set_value("map_hero_position_x", square_total_x)
-      game:set_value("map_hero_position_y", square_total_y)
+      --game:set_value("map_discovering_" .. square_total_x .. "_" .. square_total_y, true)
+      --game:set_value("map_hero_position_x", square_total_x)
+      --game:set_value("map_hero_position_y", square_total_y)
     end
   else
     local map_width, map_height = map:get_size()
@@ -59,11 +60,11 @@ hero_meta:register_event("on_position_changed", function(hero)
     local row = math.floor(y / room_height)
     local room = row * num_columns + column + 1
     local room_old = game:get_value("room")
-    if game:has_dungeon_compass() and room_old ~= room and game:is_secret_room(nil, nil, room)  and game:is_secret_signal_room(nil, nil, room) then
+   --[[ if game:has_dungeon_compass() and room_old ~= room and game:is_secret_room(nil, nil, room)  and game:is_secret_signal_room(nil, nil, room) then
       local timer = sol.timer.start(map, 500, function()
         sol.audio.play_sound("compass_signal")
       end)
-    end
+    end--]]
     game:set_value("room", room)
     game:set_explored_dungeon_room(nil, nil, room)
     
@@ -78,10 +79,15 @@ hero_meta:register_event("on_state_changed", function(hero , state)
   if state == "back to solid ground" then
     local ground = hero:get_ground_below()
     if ground == "deep_water" then
-      game:add_life(1)
+      game:add_life(0)
     end
   end
 end)
+
+
+function hero_meta.is_running(hero)
+  return hero.running
+end
 
 -- Return true if the hero is walking.
 function hero_meta:is_walking()
@@ -100,6 +106,84 @@ function hero_meta:set_fixed_animations(new_stopped_animation, new_walking_anima
   if state == "free" then
     if self:is_walking() then self:set_animation(fixed_walking_animation or "walking")
     else self:set_animation(fixed_stopped_animation or "stopped") end
+  end
+end
+
+function hero_meta:on_obstacle_reached()
+	local game = self:get_game()
+  local map = game:get_map()
+	if self:get_state() == "running" then
+		  local camera = map:get_camera()
+  		if not camera:is_shaking() then
+    		camera:dynamic_shake({count = 50, amplitude = 2, speed = 90, entity=hero})
+  		end
+	end
+end
+
+function hero_meta.show_ground_effect(hero, id)
+
+  local map = hero:get_map()
+  local x,y, layer = hero:get_position()
+  local ground_effect = map:create_custom_entity({
+      name = "ground_effect",
+      sprite = "entities/ground_effects/"..id,
+      x = x,
+      y = y ,
+      width = 16,
+      height = 16,
+      layer = layer,
+      direction = 0
+    })
+  local sprite = ground_effect:get_sprite()
+  function sprite:on_animation_finished()
+    ground_effect:remove()
+  end
+
+end
+
+local function find_valid_ground(hero)
+
+  local ground
+  local x,y=hero:get_position()
+  local map=hero:get_map()
+
+  for layer=hero:get_layer(), map:get_min_layer(), -1 do
+    ground=map:get_ground(x,y,layer)
+    if ground~="empty" then
+      return ground
+    end
+  end
+
+  return "empty"
+end
+
+function hero_meta.play_ground_effect(hero)
+  --print "About to play a ground effect"
+  local map=hero:get_map()
+  local ground=find_valid_ground(hero)
+  --print ("ground: "..ground)
+  local x,y=hero:get_position()
+
+  if ground=="shallow_water" then
+    --print "landed in water"
+    hero:show_ground_effect("water")
+    audio_manager:play_sound("walk_on_water")
+  elseif ground=="grass" then
+    --print "landed in grass"
+    hero:show_ground_effect("grass")
+    audio_manager:play_sound("walk_on_grass")
+  elseif ground=="deep_water" or ground=="lava" then
+    --print "plundged in some fluid"
+    audio_manager:play_sound("splash")
+  else --Not a standard ground
+    --print "landed in some other ground"
+    for entity in map:get_entities_in_rectangle(x,y,1,1) do
+      if entity:get_property("custom_ground")=="sand" then
+        --print "landed in sand"
+        hero:show_ground_effect("sand") --TODO make proper sprite for sand landing effect
+      end
+      audio_manager:play_sound("hero_lands")
+    end
   end
 end
 

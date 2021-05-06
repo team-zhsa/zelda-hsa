@@ -5,7 +5,7 @@ local type
 
 function enemy:on_created(properties)
   self:set_life(1); self:set_damage(6)
-  self:create_sprite("enemies/wizzrobe_beam")
+  self:create_sprite("enemies/dungeons/wizzrobe_beam")
   self:set_size(16, 16); self:set_origin(8, 8)
   self:set_invincible()
   self:set_minimum_shield_needed(2)

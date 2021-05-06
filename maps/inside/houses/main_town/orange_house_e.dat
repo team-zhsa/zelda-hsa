@@ -1233,12 +1233,14 @@ tile{
 }
 
 npc{
-  name = "sleep_npc",
+  name = "npc",
   layer = 0,
-  x = 128,
-  y = 53,
+  x = 336,
+  y = 117,
   direction = 3,
   subtype = 0,
+  sprite = "npc/hylian_gaira",
+  behavior = "dialog#maps.houses.hyrule_town.building.sleep",
 }
 
 teletransporter{
