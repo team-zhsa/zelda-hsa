@@ -22,13 +22,10 @@ local function initialize_map_features(game)
   function map_menu:on_started()
 
     -- Define the available submenus.
-
-    game.map_submenus = {  -- Array of submenus (inventory, map, etc.).
-      world_map:new(game),
-      scrollable_map:new(game),
-
-    }
-
+    	game.map_submenus = {  -- Array of submenus (inventory, map, etc.).
+      	scrollable_map:new(game),
+      	world_map:new(game),
+    	}
     -- Select the submenu that was saved if any.
     local submenu_index = game:get_value("map_last_submenu") or 1
     if submenu_index <= 0
@@ -39,24 +36,26 @@ local function initialize_map_features(game)
 
     -- Play the sound of pausing the game.
     sol.audio.play_sound("menu/pause_open")
-
+		game:set_suspended(true)
     -- Start the selected submenu.
     sol.menu.start(map_menu, game.map_submenus[submenu_index])
   end
 
   function map_menu:open()
     sol.menu.start(game, map_menu, false)
+
   end
 
   function map_menu:close()
     sol.menu.stop(map_menu)
+
   end
 
   function map_menu:on_finished()
 
     -- Play the sound of unpausing the game.
     sol.audio.play_sound("menu/pause_close")
-
+		game:set_suspended(false)
     game.map_submenus = {}
     -- Restore opacity
     game:get_hud():set_item_icon_opacity(1, 255)

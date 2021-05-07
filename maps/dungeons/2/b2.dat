@@ -3026,6 +3026,7 @@ block{
 }
 
 block{
+  name = "auto_block_2",
   layer = -1,
   x = 872,
   y = 1517,
@@ -8483,33 +8484,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
-  y = 1512,
-  width = 16,
-  height = 16,
-  pattern = "barrier_big.border.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 1528,
-  width = 16,
-  height = 56,
-  pattern = "barrier_big.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 1584,
-  width = 16,
-  height = 24,
-  pattern = "barrier_big.border.2-1",
-}
-
-tile{
-  layer = 0,
   x = 208,
   y = 1528,
   width = 32,
@@ -8866,24 +8840,6 @@ tile{
   width = 8,
   height = 32,
   pattern = "door_top.low.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 1512,
-  width = 16,
-  height = 24,
-  pattern = "barrier_big.border.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 1512,
-  width = 16,
-  height = 24,
-  pattern = "barrier_big.1-1",
 }
 
 tile{
@@ -10581,24 +10537,6 @@ tile{
 tile{
   layer = 0,
   x = 696,
-  y = 1616,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 752,
-  y = 1632,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 696,
   y = 1488,
   width = 8,
   height = 72,
@@ -10607,101 +10545,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 752,
-  y = 1592,
-  width = 8,
-  height = 40,
-  pattern = "barrier.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 728,
-  y = 1616,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 704,
-  y = 1616,
-  width = 24,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
   x = 696,
   y = 1560,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 752,
-  y = 1584,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 696,
-  y = 1568,
-  width = 8,
-  height = 48,
-  pattern = "barrier.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 704,
-  y = 1560,
-  width = 72,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 736,
-  y = 1584,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 744,
-  y = 1584,
-  width = 8,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 776,
-  y = 1560,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 776,
-  y = 1568,
-  width = 8,
-  height = 48,
-  pattern = "barrier.2-1",
 }
 
 tile{
@@ -10729,60 +10577,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 800,
-  y = 1592,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 808,
-  y = 1592,
-  width = 24,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 800,
-  y = 1536,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 720,
-  y = 1536,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 728,
-  y = 1536,
-  width = 72,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 800,
-  y = 1544,
-  width = 8,
-  height = 48,
-  pattern = "barrier.2-1",
 }
 
 tile{
@@ -11541,6 +11335,51 @@ tile{
   pattern = "stairs_inner_up.1.top.border.1-1",
 }
 
+tile{
+  layer = 0,
+  x = 784,
+  y = 760,
+  width = 8,
+  height = 160,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 760,
+  width = 8,
+  height = 160,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 760,
+  width = 16,
+  height = 160,
+  pattern = "floor_small.1",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 816,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 816,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
 teletransporter{
   layer = 0,
   x = 792,
@@ -11974,7 +11813,6 @@ door{
   y = 1224,
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -11984,7 +11822,6 @@ door{
   y = 1160,
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -12088,19 +11925,10 @@ enemy{
   treasure_name = "random_central",
 }
 
-block{
-  layer = 0,
-  x = 728,
-  y = 1597,
-  sprite = "entities/block",
-  pushable = false,
-  pullable = false,
-}
-
 enemy{
   layer = 0,
-  x = 728,
-  y = 1613,
+  x = 776,
+  y = 1621,
   direction = 0,
   breed = "dungeons/firebar",
 }
@@ -12260,6 +12088,146 @@ enemy{
   y = 1157,
   direction = 1,
   breed = "dungeons/pike_auto",
+}
+
+destructible{
+  layer = 0,
+  x = 568,
+  y = 909,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 584,
+  y = 909,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 584,
+  y = 893,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 584,
+  y = 797,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 584,
+  y = 781,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 568,
+  y = 781,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 392,
+  y = 781,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 376,
+  y = 781,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 376,
+  y = 797,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 376,
+  y = 893,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 376,
+  y = 909,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 392,
+  y = 909,
+  treasure_name = "random_central",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  weight = 1,
+  can_be_cut = true,
+}
+
+enemy{
+  layer = 0,
+  x = 1008,
+  y = 1397,
+  direction = 0,
+  breed = "dungeons/fireball",
 }
 
 tile{

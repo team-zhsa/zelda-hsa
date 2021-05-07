@@ -22,6 +22,7 @@ cannonball_manager:create_cannons(map, "cannon_")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 	separator_manager:manage_map(map)
+	door_manager:open_when_switch_activated(map, "switch_33_door", "door_33_e")
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

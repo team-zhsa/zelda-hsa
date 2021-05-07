@@ -1087,7 +1087,7 @@ enemy{
   x = 200,
   y = 109,
   direction = 0,
-  breed = "dungeons/goriya_red",
+  breed = "dungeons/wallmaster",
 }
 
 block{
@@ -1101,19 +1101,11 @@ block{
 
 block{
   layer = 0,
-  x = 200,
-  y = 125,
+  x = 184,
+  y = 189,
   sprite = "entities/block",
   pushable = true,
   pullable = false,
-}
-
-enemy{
-  layer = 0,
-  x = 88,
-  y = 109,
-  direction = 0,
-  breed = "dungeons/goriya_green",
 }
 
 tile{

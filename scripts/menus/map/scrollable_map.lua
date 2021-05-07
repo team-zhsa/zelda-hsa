@@ -26,7 +26,7 @@ function map_submenu:on_started()
     self:set_caption("map.title")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
-    if self.game:is_in_outside_world() or (self.game:get_map():get_id() == "20" or self.game:get_map():get_id() == "21" or self.game:get_map():get_id() == "22") then
+    if self.game:is_in_outside_world() or (self.game:get_map():get_id() == "20" or self.game:get_map():get_id() == "21" or self.game:get_map():get_id() == "22") then -- What maps are outside?
       local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
       hero_absolute_x = hero_absolute_x + hero_map_x
       hero_absolute_y = hero_absolute_y + hero_map_y
@@ -294,13 +294,13 @@ function map_submenu:draw_world_map(dst_surface)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 44, 114)
-      self.left_arrow_sprite:draw(dst_surface, 44, 158)
+      self.left_arrow_sprite:draw(dst_surface, 260, 114)
+      self.left_arrow_sprite:draw(dst_surface, 260, 158)
     end
     
     if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 134 then
-      self.right_arrow_sprite:draw(dst_surface, 260, 114)
-      self.right_arrow_sprite:draw(dst_surface, 260, 158)
+      self.right_arrow_sprite:draw(dst_surface, 44, 114)
+      self.right_arrow_sprite:draw(dst_surface, 44, 158)
     end
   end
 end

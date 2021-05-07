@@ -19,7 +19,7 @@ function enemy:on_created(properties)
   self:set_obstacle_behavior("flying")
   self:set_optimization_distance(10)
   -- If particle isn't already destroyed after 5 seconds, do it manually.
-  sol.timer.start(self, 5000, function() enemy:explode() end)
+  sol.timer.start(self, 1000, function() enemy:explode() end)
 end
 
 function enemy:explode()
@@ -33,8 +33,7 @@ function enemy:on_restarted()
   if dir4 == 1 then angle = math.pi / 2 end
   if dir4 == 2 then angle = math.pi end
   if dir4 == 3 then angle = 3 * math.pi / 2 end
-  m:set_smooth(false)
-  m:set_speed(92)
+  m:set_speed(32)
   m:set_angle(angle)
   m:start(self)
 end

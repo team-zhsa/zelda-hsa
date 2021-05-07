@@ -16,7 +16,7 @@ end
 function submenu:on_started()
 
 	sol.menu.bring_to_front(submenu)
-  self.background_surfaces = sol.surface.create("menus/pause_submenus.png")
+  self.background_surfaces = sol.surface.create("menus/map/map_menu_background.png")
   self.title_arrows = sol.surface.create("menus/pause_submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
 	self.caption_background = sol.surface.create("menus/pause_submenus_caption.png") 
