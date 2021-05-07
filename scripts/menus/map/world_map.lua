@@ -1,4 +1,4 @@
-local submenu = require("scripts/menus/pause/pause_submenu")
+local submenu = require("scripts/menus/map/map_submenu")
 local map_submenu = submenu:new()
 
 local outside_world_size = { width = 16640, height = 12960 }

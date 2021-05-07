@@ -1,12 +1,12 @@
--- Script that creates a pause menu for a game.
+-- Script that creates a map menu for a game.
 
 -- Usage:
--- require("scripts/menus/pause")
+-- require("scripts/menus/map")
 
 require("scripts/multi_events")
 
--- Creates a pause menu for the specified game.
-local function initialize_pause_features(game)
+-- Creates a map menu for the specified game.
+local function initialize_map_features(game)
 
   if game.map_menu ~= nil then
     -- Already done.
@@ -23,7 +23,7 @@ local function initialize_pause_features(game)
 
     -- Define the available submenus.
 
-    game.pause_submenus = {  -- Array of submenus (inventory, map, etc.).
+    game.map_submenus = {  -- Array of submenus (inventory, map, etc.).
       world_map:new(game),
       scrollable_map:new(game),
 
@@ -68,17 +68,21 @@ local function initialize_pause_features(game)
     end
   end
 
-  game:register_event("on_command_pressed", function(game)
-    pause_menu:open()
-  end)
-  game:register_event("on_unpaused", function(game)
-    pause_menu:close()
+  game:register_event("on_key_pressed", function(game, key, modifiers)
+		if key == "w" then
+			print("map menu")
+			if not sol.menu.is_started(map_menu) == true then
+    		map_menu:open()
+			elseif sol.menu.is_started(map_menu) == true then
+				map_menu:close()
+			end
+		end
   end)
 
 end
 
--- Set up the pause menu on any game that starts.
+-- Set up the map menu on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_pause_features)
+game_meta:register_event("on_started", initialize_map_features)
 
 return true

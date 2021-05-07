@@ -146,22 +146,22 @@ function submenu:next_submenu()
 
   sol.audio.play_sound("menu/pause_close")
   sol.menu.stop(self)
-  local submenus = self.game.pause_submenus
-  local submenu_index = self.game:get_value("pause_last_submenu")
+  local submenus = self.game.map_submenus
+  local submenu_index = self.game:get_value("map_last_submenu")
   submenu_index = (submenu_index % #submenus) + 1
-  self.game:set_value("pause_last_submenu", submenu_index)
-  sol.menu.start(self.game.pause_menu, submenus[submenu_index], false)
+  self.game:set_value("map_last_submenu", submenu_index)
+  sol.menu.start(self.game.map_menu, submenus[submenu_index], false)
 end
 
 function submenu:previous_submenu()
 
   sol.audio.play_sound("menu/pause_close")
   sol.menu.stop(self)
-  local submenus = self.game.pause_submenus
-  local submenu_index = self.game:get_value("pause_last_submenu")
+  local submenus = self.game.map_submenus
+  local submenu_index = self.game:get_value("map_last_submenu")
 	submenu_index = (submenu_index + #submenus - 2) % #submenus + 1
-  self.game:set_value("pause_last_submenu", submenu_index)
-  sol.menu.start(self.game.pause_menu, submenus[submenu_index], false)
+  self.game:set_value("map_last_submenu", submenu_index)
+  sol.menu.start(self.game.map_menu, submenus[submenu_index], false)
 end
 
 function submenu:on_command_pressed(command)
