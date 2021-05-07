@@ -17,6 +17,30 @@ local hero = map:get_hero()
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local is_pushed_back = false
 
+local function shoot_fire()
+  local sprite = enemy:get_sprite()
+  local x, y, layer = enemy:get_position()
+  local direction = sprite:get_direction()
+
+  -- Where to start the fire from.
+  local dxy = {
+    {  8, -13 },
+    {  0, -21 },
+    { -8, -13 },
+    {  0,  -8 },
+  }
+
+  sol.timer.start(enemy, 500, function()
+    local flame = enemy:create_enemy({
+      breed = "projectiles/fire_shot",
+      x = dxy[direction + 1][1],
+      y = dxy[direction + 1][2],
+    })
+
+    flame:go(direction)
+  end)
+end
+
 -- Reverse the hero movement if he is moving, not hurt and if the enemy not dying.
 local function reverse_move()
 
@@ -28,6 +52,13 @@ local function reverse_move()
     enemy:stop_movement()
     sprite:set_animation("immobilized")
   end
+	
+  local hero_x, hero_y = hero:get_position()
+  local x, y = enemy:get_center_position()
+	local aligned = (math.abs(hero_x - x) < 16 or math.abs(hero_y - y) < 16)
+	if aligned then
+		shoot_fire()
+	end
 end
 
 -- Copy and reverse hero moves on movement changed.
@@ -67,7 +98,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(4)
+  enemy:set_life(10)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
 end)
@@ -76,10 +107,10 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-    arrow = "protected",
+    arrow = 5,
     boomerang = "immobilized",
     explosion = "ignored",
-    sword = 1,
+    sword = "ignored",
     thrown_item = "protected",
     fire = "protected",
     jump_on = "ignored",

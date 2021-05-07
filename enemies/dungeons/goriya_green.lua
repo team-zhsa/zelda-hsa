@@ -22,8 +22,13 @@ local function reverse_move()
 
   local movement = hero:get_movement()
   if movement and movement:get_speed() > 0 and hero:get_state() ~= "hurt" and enemy:get_life() > 0 then
-    enemy:start_straight_walking(movement:get_angle() + math.pi, movement:get_speed())
-    sprite:set_direction((movement:get_direction4() + 2) % 4) -- Always keep the hero opposite movement direction, not sprite direction.
+		if movement:get_angle() == math.pi / 2 or movement:get_angle() == 3 * math.pi / 2 then
+    	enemy:start_straight_walking(movement:get_angle() + math.pi, movement:get_speed())
+    	sprite:set_direction((movement:get_direction4() + 2) % 4) -- Always keep the hero opposite movement direction, not sprite direction.
+		else
+    	enemy:start_straight_walking(movement:get_angle(), movement:get_speed())
+    	sprite:set_direction((movement:get_direction4()) % 4)
+		end
   else
     enemy:stop_movement()
     sprite:set_animation("immobilized")
@@ -67,7 +72,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(4)
+  enemy:set_life(6)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
 end)
@@ -76,7 +81,7 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-    arrow = "protected",
+    arrow = 6,
     boomerang = "immobilized",
     explosion = "ignored",
     sword = 1,
@@ -94,4 +99,4 @@ enemy:register_event("on_restarted", function(enemy)
   reverse_move() -- Reverse move on restarted in case the hero is already running when the map is loaded or separator crossed.
   enemy:set_can_attack(true)
   enemy:set_damage(4)
-end)
+	end)
