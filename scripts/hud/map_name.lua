@@ -13,6 +13,7 @@ end
 function map_name:initialize(game)
   -- Map Name control
   function game:show_map_name(name, display_extra)
+		sol.menu.stop(map_name)
     sol.menu.start(self, map_name, false)
     map_name:show_name(name, display_extra or nil)
   end
@@ -51,7 +52,7 @@ function map_name:show_name(name, extra)
   if self.timer0 ~= nil then self.timer0:stop() end
   
   if (type(extra) == "string" and extra ~= "boss_name") or type(extra) == "nil" then
-   	self.map_name:set_text_key("map.gameplay.map_name." .. self.name)
+   	self.map_name:set_text_key("map.names.out." .. self.name)
 	self.mx, self.my = self.map_name:get_size()
     self.map_name_surface = sol.surface.create(self.mx * 2, self.my)
 	self.map_name_surface:set_opacity(0)

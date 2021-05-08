@@ -11,6 +11,7 @@ local destructible_meta = sol.main.get_metatable("destructible")
 local boundaries = sol.main.get_metatable("sensor")
 local tone_manager = require("scripts/maps/daytime_manager")
 local condition_manager = require("scripts/hero_condition")
+local map_name = require("scripts/hud/map_name")
 time_flow = 300
 
 -- Creates a game ready to be played.
@@ -23,6 +24,16 @@ function game_manager:create(file)
     -- This is a new savegame file.
     initial_game:initialize_new_savegame(game)
   end
+
+	game:register_event("on_started", function()
+		tone = tone_manager:create(game)
+		condition_manager:initialize(game)
+		map_name:initialize(game)
+	end)
+
+	game:register_event("on_map_changed", function()
+		tone:on_map_changed()
+	end)
 
   function game:get_player_name()
 
@@ -65,14 +76,6 @@ function game_manager:create(file)
 
 	local alpha_warn = sol.surface.create("hud/version.png")
 
-	game:register_event("on_started", function()
-		tone = tone_manager:create(game)
-		condition_manager:initialize(game)
-	end)
-
-	game:register_event("on_map_changed", function()
-		tone:on_map_changed()
-	end)
 
   return game
 end

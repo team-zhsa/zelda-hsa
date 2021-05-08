@@ -52,6 +52,7 @@ function squirrel_walk()
 end
 
 function map:on_started(destination)
+	game:show_map_name("east_lost_woods")
   map:set_overlay()
 	squirrel_walk()
 		for custom_entity in map:get_entities("butterfly") do
@@ -61,6 +62,7 @@ function map:on_started(destination)
 		movement:set_ignore_obstacles(true)
 	end
 end
+
 
 function map:on_draw(destination_surface)
 

@@ -15,6 +15,13 @@ local camera = map:get_camera()
 function map:on_started()
 	game:set_value("playing_maze", false)
 	game:set_value("win_maze", false)
+	game:show_map_name("kakarico_village")
+end
+
+function grandma:on_interaction()
+	--if game:is_step_done("ganon_threat") then
+		game:start_dialog("maps.out.kakarico_village.grand_ma_1")
+	--end
 end
 
 -- Maze Game

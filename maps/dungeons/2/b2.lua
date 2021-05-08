@@ -23,6 +23,8 @@ cannonball_manager:create_cannons(map, "cannon_")
 function map:on_started()
 	separator_manager:manage_map(map)
 	door_manager:open_when_switch_activated(map, "switch_33_door", "door_33_e")
+	door_manager:open_when_switch_activated(map, "switch_27_door", "door_27_n")
+	door_manager:open_when_switch_activated(map, "switch_34_door", "door_29_n")
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

@@ -19,7 +19,7 @@ end
 -- Event called at initialization time, as soon as this map becomes is loaded.
 function map:on_started()
 	guard_walk()
-		
+	game:show_map_name("kakarico_village")
 end
 
 function npc_camper:on_interaction()
