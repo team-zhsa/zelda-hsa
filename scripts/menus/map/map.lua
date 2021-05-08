@@ -13,7 +13,6 @@ local function initialize_map_features(game)
     return
   end
 
-  local world_map = require("scripts/menus/map/world_map")
   local scrollable_map = require("scripts/menus/map/scrollable_map")
 
   local map_menu = {}
@@ -24,7 +23,6 @@ local function initialize_map_features(game)
     -- Define the available submenus.
     	game.map_submenus = {  -- Array of submenus (inventory, map, etc.).
       	scrollable_map:new(game),
-      	world_map:new(game),
     	}
     -- Select the submenu that was saved if any.
     local submenu_index = game:get_value("map_last_submenu") or 1
@@ -43,12 +41,12 @@ local function initialize_map_features(game)
 
   function map_menu:open()
     sol.menu.start(game, map_menu, false)
-
+		game:set_suspended(true)
   end
 
   function map_menu:close()
     sol.menu.stop(map_menu)
-
+		game:set_suspended(false)
   end
 
   function map_menu:on_finished()

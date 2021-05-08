@@ -7,6 +7,7 @@ local max_floors_displayed = 6
 
 function map_submenu:on_finished()
 	self.game:set_hud_enabled(true)
+  sol.menu.stop(self)
 end
 
 function map_submenu:on_started()

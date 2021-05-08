@@ -16,8 +16,7 @@ local function initialize_pause_features(game)
   local inventory_builder = require("scripts/menus/pause/pause_inventory")
   local inventory_builder2 = require("scripts/menus/pause/pause_inventory2")
 	local inventory_ocarina = require("scripts/menus/pause/pause_ocarina")
-  local map_builder = require("scripts/menus/pause/pause_map")
-  local map_builder2 = require("scripts/menus/pause/pause_map_old")
+  local map_builder = require("scripts/menus/pause/pause_map_old")
   local quest_builder = require("scripts/menus/pause/pause_quest")
   local options_builder = require("scripts/menus/pause/pause_options")
 
@@ -33,7 +32,6 @@ local function initialize_pause_features(game)
       inventory_builder2:new(game),
 			inventory_ocarina:new(game),
       map_builder:new(game),
-      map_builder2:new(game),
       quest_builder:new(game),
       options_builder:new(game)
 

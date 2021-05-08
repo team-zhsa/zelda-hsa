@@ -26,7 +26,7 @@ local item_names_static_bottom = {
 }
 
 function quest_submenu:on_started()
-
+  self.quest_items_surface = sol.surface.create(320, 240)
   submenu.on_started(self)
   self.cursor_sprite = sol.sprite.create("menus/pause_cursor")
   self.hearts = sol.surface.create("menus/pieces_of_heart.png")
@@ -34,12 +34,15 @@ function quest_submenu:on_started()
   self.sprites_static_left = {}
   self.sprites_static_right = {}
   self.sprites_static_bottom = {}
+  self.caption_text_keys = {}
 
+ 	local item_sprite = sol.sprite.create("entities/items")
   -- Initialize the cursor.
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 7)
   local column = index % 7
   self:set_cursor_position(row, column)
+
 
   -- Load Items.
   for i,item_name in ipairs(item_names_static_left) do

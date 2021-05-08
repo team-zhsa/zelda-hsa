@@ -16,9 +16,9 @@ function map_submenu:on_started()
   self.down_arrow_sprite = sol.sprite.create("menus/arrow")
   self.down_arrow_sprite:set_direction(3)
   self.left_arrow_sprite = sol.sprite.create("menus/arrow")
-  self.left_arrow_sprite:set_direction(0)
+  self.left_arrow_sprite:set_direction(2)
   self.right_arrow_sprite = sol.sprite.create("menus/arrow")
-  self.right_arrow_sprite:set_direction(2)
+  self.right_arrow_sprite:set_direction(0)
   
   self.dungeon = self.game:get_dungeon()
   if self.dungeon == nil then
@@ -26,7 +26,8 @@ function map_submenu:on_started()
     self:set_caption("map.title")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
-    if self.game:is_in_outside_world() or (self.game:get_map():get_id() == "20" or self.game:get_map():get_id() == "21" or self.game:get_map():get_id() == "22") then -- What maps are outside?
+    local map_width, map_height = self.game:get_map():get_size()
+    if self.game:is_in_outside_world() then -- What maps are outside?
       local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
       hero_absolute_x = hero_absolute_x + hero_map_x
       hero_absolute_y = hero_absolute_y + hero_map_y
@@ -40,10 +41,10 @@ function map_submenu:on_started()
       self.world_minimap_img = sol.surface.create("menus/pause_outside_map.png")
       local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
       local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-      self.hero_x = hero_minimap_x + (hero_absolute_x / 320) + 48
-      self.hero_y = hero_minimap_y + (hero_absolute_y / 240) + 48
-      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 133, math.max(0, hero_minimap_y - 65))
-      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 255, math.max(0, hero_minimap_x - 65))
+      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 48
+      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28
+      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
+      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
     else
       -- if World Map not in inventory, show clouds in map screen
       map_shown = false
@@ -103,6 +104,7 @@ end
 
 function map_submenu:on_finished()
 	self.game:set_hud_enabled(true)
+  sol.menu.stop(self)
 end
 
 function map_submenu:on_command_pressed(command)
@@ -139,8 +141,6 @@ function map_submenu:on_command_pressed(command)
           if submenu.world_minimap_visible_xy.x <= 0 then
 						self:stop()
 	        	submenu.world_minimap_movement = nil
-						submenu:previous_submenu()
-    				handled = true
           end
           end
           movement:start(self.world_minimap_visible_xy)
@@ -156,7 +156,7 @@ function map_submenu:on_command_pressed(command)
 	elseif map_shown == true then	
 		if not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then
 				
-			if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 255 then
+			if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width then
 			
 				local angle
 				angle = 0
@@ -174,11 +174,9 @@ function map_submenu:on_command_pressed(command)
              submenu.world_minimap_movement = nil
            end
             
-          if submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 255 then
+          if submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 200 then
 						self:stop()
 	        	submenu.world_minimap_movement = nil
-						submenu:next_submenu()
-    				handled = true
           end
           end
           movement:start(self.world_minimap_visible_xy)
@@ -192,7 +190,7 @@ function map_submenu:on_command_pressed(command)
       -- Move the outside world minimap.
       if map_shown then
         if (command == "up" and self.world_minimap_visible_xy.y > 0) or
-            (command == "down" and self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134) then
+            (command == "down" and self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height) then
           local angle
           if command == "up" then
             angle = math.pi / 2
@@ -217,7 +215,7 @@ function map_submenu:on_command_pressed(command)
             end
             
             if (command == "up" and submenu.world_minimap_visible_xy.y <= 0) or
-                (command == "down" and submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 134) then
+                (command == "down" and submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 160) then
               self:stop()
               submenu.world_minimap_movement = nil
             end
@@ -272,20 +270,20 @@ end
 
 function map_submenu:draw_world_map(dst_surface)
   -- Draw the minimap.
-  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x, self.world_minimap_visible_xy.y, 200, 133, dst_surface, 60, 70)
+  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x, self.world_minimap_visible_xy.y, 200, 160, dst_surface, 60, 40)
   
   if map_shown then
     -- Draw the hero's position.
     local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
-    if (hero_visible_y >= 51 and hero_visible_y <= 133 + 51) and (hero_visible_x >= 51 and hero_visible_x <= 200 + 51) then
+    if (hero_visible_y >= 51 and hero_visible_y <= 160 + 51) and (hero_visible_x >= 51 and hero_visible_x <= 200 + 51) then
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
     
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, 126, 54)
-      self.up_arrow_sprite:draw(dst_surface, 192, 54)
+      self.up_arrow_sprite:draw(dst_surface, 126, 34)
+      self.up_arrow_sprite:draw(dst_surface, 192, 34)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
@@ -294,13 +292,13 @@ function map_submenu:draw_world_map(dst_surface)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 260, 114)
-      self.left_arrow_sprite:draw(dst_surface, 260, 158)
+      self.left_arrow_sprite:draw(dst_surface, 52, 114)
+      self.left_arrow_sprite:draw(dst_surface, 52, 158)
     end
     
-    if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 134 then
-      self.right_arrow_sprite:draw(dst_surface, 44, 114)
-      self.right_arrow_sprite:draw(dst_surface, 44, 158)
+    if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 199 then
+      self.right_arrow_sprite:draw(dst_surface, 260, 114)
+      self.right_arrow_sprite:draw(dst_surface, 260, 158)
     end
   end
 end
@@ -321,7 +319,7 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 143, 66)
+  self.dungeon_map_img:draw(dst_surface, 179, 94)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
@@ -409,7 +407,7 @@ end
 -- to the dungeon minimap.
 function map_submenu:to_dungeon_minimap_coordinates(x, y)
 
-	local scale_x, scale_y = 80 / 1600, 112 / 1680  -- The minimap is a grid of 10*10 rooms.
+	local scale_x, scale_y = 40 / self.dungeon.floor_width, 56 / self.dungeon.floor_height  -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
   local minimap_x = 0
   local minimap_y = -15
   local minimap_width = 123

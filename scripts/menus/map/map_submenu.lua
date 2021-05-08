@@ -258,8 +258,6 @@ function submenu:draw_background(dst_surface)
     -- Draw arrows on both sides of the menu title
     local center_x = width / 2
     local center_y = height / 2
-    self.title_arrows:draw_region(0, 0, 14, 12, dst_surface, center_x - 71, center_y - 80)
-    self.title_arrows:draw_region(14, 0, 14, 12, dst_surface, center_x + 57, center_y - 80)
   end
 end
 

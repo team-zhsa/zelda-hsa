@@ -16,10 +16,10 @@ end
 function submenu:on_started()
 
 	sol.menu.bring_to_front(submenu)
-  self.background_surfaces = sol.surface.create("menus/pause_submenus.png")
+  self.background_surfaces = sol.surface.create("pause_submenus.png", true)
   self.title_arrows = sol.surface.create("menus/pause_submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
-	self.caption_background = sol.surface.create("menus/pause_submenus_caption.png") 
+--	self.caption_background = sol.surface.create("menus/pause_submenus_caption.png") 
   self.save_dialog_background = sol.surface.create("menus/dialog_background.png")
   self.save_dialog_cursor = sol.sprite.create("menus/dialog_cursor")
   self.save_dialog_cursor_pos = "left"
@@ -130,7 +130,7 @@ function submenu:draw_caption(dst_surface)
     local width, height = dst_surface:get_size()
 
     -- Draw caption frame.
-    self.caption_background:draw(dst_surface, width / 2 - 79, height / 2 + 74)
+--    self.caption_background:draw(dst_surface, width / 2 - 79, height / 2 + 74)
 
     -- Draw caption text.
     if self.caption_text_2:get_text():len() == 0 then
@@ -144,7 +144,7 @@ end
 
 function submenu:next_submenu()
 
-  sol.audio.play_sound("menu/pause_close")
+  sol.audio.play_sound("menu/dir_right")
   sol.menu.stop(self)
   local submenus = self.game.pause_submenus
   local submenu_index = self.game:get_value("pause_last_submenu")
@@ -155,7 +155,7 @@ end
 
 function submenu:previous_submenu()
 
-  sol.audio.play_sound("menu/pause_close")
+  sol.audio.play_sound("menu/dir_left")
   sol.menu.stop(self)
   local submenus = self.game.pause_submenus
   local submenu_index = self.game:get_value("pause_last_submenu")
