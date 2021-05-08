@@ -104,8 +104,6 @@ end)
 -- Restart settings.
 enemy:register_event("on_restarted", function(enemy)
 
-  enemy:set_invincible()
-
   -- States.
   sprite:set_xy(0, 0)
   sprite:set_animation("waiting")
