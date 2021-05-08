@@ -1,10 +1,10 @@
 local enemy = ...
 local particle_sprite = "enemies/beamos_particle"
 local damage = 1
-local speed = 512
+local speed = 128
 local max_distance = 100
-local time_between_particles = 10
-local particles_per_beam = 60
+local time_between_particles = 20
+local particles_per_beam = 30
 local stop_time = 1000
 
 -- Beamos

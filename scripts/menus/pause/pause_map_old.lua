@@ -227,7 +227,7 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 143, 66)
+  self.dungeon_map_img:draw(dst_surface, 171, 102)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
@@ -315,20 +315,11 @@ end
 -- to the dungeon minimap.
 function map_submenu:to_dungeon_minimap_coordinates(x, y)
 
-	local scale_x, scale_y = 80 / self.dungeon.floor_width, 112 / self.dungeon.floor_height  -- The minimap is a grid of 10*10 rooms.
+	local scale_x, scale_y = 40 / self.dungeon.floor_width, 56 / self.dungeon.floor_height  -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
   local minimap_x = 0
   local minimap_y = -15
   local minimap_width = 123
   local minimap_height = 120
-  --[[if (self.dungeon.floor_width * 120) / (self.dungeon.floor_height * 123) > 1 then
-    -- The floor height does not use the entire vertical space.
-    minimap_height = self.dungeon.floor_height * 123 / self.dungeon.floor_width
-    minimap_y = (120 - minimap_height) / 2
-  else
-    -- The floor width does not use the entire horizontal space.
-    minimap_width = self.dungeon.floor_width * 120 / self.dungeon.floor_height
-    minimap_x = (123 - minimap_width) / 2
-  end--]]
 
   x = x * scale_x
   y = y * scale_y

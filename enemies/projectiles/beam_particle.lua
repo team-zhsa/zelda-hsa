@@ -17,9 +17,8 @@ function enemy:on_created(properties)
   self:set_damage(damage)
   self:set_minimum_shield_needed(3) -- Light shield.
   self:set_obstacle_behavior("flying")
-  self:set_optimization_distance(10)
   -- If particle isn't already destroyed after 5 seconds, do it manually.
-  sol.timer.start(self, 1000, function() enemy:explode() end)
+  sol.timer.start(self, 500, function() self:remove() end)
 end
 
 function enemy:explode()
@@ -36,4 +35,5 @@ function enemy:on_restarted()
   m:set_speed(32)
   m:set_angle(angle)
   m:start(self)
+  m:set_ignore_obstacles(true)
 end
