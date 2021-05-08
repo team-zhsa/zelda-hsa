@@ -4802,6 +4802,14 @@ The Legend of Zelda : Hyrule's Adventure
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory._placeholder.1",
+  icon = "42",
+  text = [[
+Cet objet ne sert à rien
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.angler_key.1",
   icon = "41",
   skip = "all",
@@ -5242,6 +5250,16 @@ dialog{
   text = [[
 Un monocle qui te permet de voir
 l'invisible.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.magic_mirror.1",
+  icon = "42",
+  skip = "all",
+  text = [[
+Permet de revenir à l'entrée du
+donjon.
 ]],
 }
 

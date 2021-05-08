@@ -26,7 +26,7 @@ end
 function language_manager:get_menu_font(language)
 
   -- No font differences between languages (for now).
-  return "la", 12
+  return "alttp", 8
 end
 
 return language_manager

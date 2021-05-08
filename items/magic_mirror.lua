@@ -27,6 +27,7 @@ function item:on_using()
   	local map = game:get_map()
    	local hero = map:get_hero()
 	if game:get_dungeon() ~= nil then
+		audio_manager:play_sound("warp")
     local dungeon_infos = game:get_dungeon()
 		local map_id = dungeon_infos["main_entrance"]["map_id"]
     local destination_name = dungeon_infos["main_entrance"]["destination_name"]

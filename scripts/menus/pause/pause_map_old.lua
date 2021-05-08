@@ -227,7 +227,7 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 171, 102)
+  self.dungeon_map_img:draw(dst_surface, 179, 94)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
@@ -394,11 +394,11 @@ function map_submenu:load_dungeon_map_image()
         dst_y = dst_y - 1
         if chest.big then
           dst_x = dst_x - 3
-          self.dungeon_map_icons_img:draw_region(78, 12, 6, 4,
+          self.dungeon_map_icons_img:draw_region(78, 12, 4, 3,
           self.dungeon_map_img, dst_x, dst_y)
         else
           dst_x = dst_x - 2
-          self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
+          self.dungeon_map_icons_img:draw_region(78, 8, 3, 3,
           self.dungeon_map_img, dst_x, dst_y)
         end
       end
