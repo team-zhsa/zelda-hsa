@@ -321,7 +321,7 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 171, 102)
+  self.dungeon_map_img:draw(dst_surface, 179, 94)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
