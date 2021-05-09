@@ -18,7 +18,7 @@ function item:shoot()
 
   local x, y, layer = hero:get_center_position()
   local wind = map:create_custom_entity({
-    model = "wind",
+    model = "rod_wind",
     x = x,
     y = y + 3,
     layer = layer,
@@ -27,8 +27,6 @@ function item:shoot()
     direction = direction,
   })
 
- -- local wind_sprite = entity:get_sprite("wind")
-  --wind_sprite:set_animation("flying")
 	sol.audio.play_sound("wind")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")

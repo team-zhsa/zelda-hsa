@@ -805,6 +805,13 @@ animation{
   },
 }
 animation{
+  name = "sword_beam",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 104, y = 96, frame_width = 24, frame_height = 24, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "tail_key",
   src_image = "entities/items.png",
   directions = {

@@ -18,7 +18,7 @@ function item:shoot()
 
   local x, y, layer = hero:get_center_position()
   local ice = map:create_custom_entity({
-    model = "ice",
+    model = "rod_ice",
     x = x,
     y = y + 3,
     layer = layer,
@@ -29,7 +29,7 @@ function item:shoot()
 
  -- local ice_sprite = entity:get_sprite("ice")
   --ice_sprite:set_animation("flying")
-		sol.audio.play_sound("items/fire_rod/shoot")
+		sol.audio.play_sound("items/ice_rod/shoot")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)
@@ -59,7 +59,6 @@ function item:on_using()
 
   -- Shoot ice if there is enough magic.
   if game:get_magic() >= magic_needed then
-    --sol.audio.play_sound("lamp")
     game:remove_magic(magic_needed)
     item:shoot()
   end
@@ -89,7 +88,7 @@ local function initialize_meta()
     return
   end
 
-  enemy_meta.ice_reaction = 3  -- 3 life points by default.
+  enemy_meta.ice_reaction = "immobilized"  -- 3 life points by default.
   enemy_meta.ice_reaction_sprite = {}
   function enemy_meta:get_ice_reaction(sprite)
 

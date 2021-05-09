@@ -9,7 +9,7 @@ local item_names_assignable = {
 	"fire_rod",
   "_placeholder", -- Row 2 -- Flames Medallion
   "wine", 
-	"_placeholder",
+	"sword_beam",
   "_placeholder", -- Darkness rod
 	"_placeholder", -- Doom rod
 	"ice_rod",

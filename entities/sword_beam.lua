@@ -17,24 +17,24 @@ function sprite:on_animation_finished()
 end
 
 -- Returns whether a destructible is a bush.
-local function is_bush(destructible)
+local function is_solid(switch)
 
-  local sprite = destructible:get_sprite()
+  local sprite = switch:get_sprite()
   if sprite == nil then
     return false
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/bush" or sprite_id:match("^entities/Bushes/bush_")
+  return sprite_id == "entities/Switches/solid_switch"
 end
 
-local function bush_collision_test(beam, other)
+local function switch_collision_test(beam, other)
 
-  if other:get_type() ~= "destructible" then
+  if other:get_type() ~= "switch" then
     return false
   end
 
-  if not is_bush(other) then
+  if not is_solid(other) then
     return
   end
 
@@ -45,7 +45,7 @@ local function bush_collision_test(beam, other)
 end
 
 -- Traversable rules.
-beam:set_can_traverse("crystal", true)
+beam:set_can_traverse("crystal", false)
 beam:set_can_traverse("crystal_block", true)
 beam:set_can_traverse("hero", true)
 beam:set_can_traverse("jumper", true)
@@ -61,6 +61,25 @@ beam:set_can_traverse_ground("prickles", true)
 beam:set_can_traverse_ground("low_wall", true)
 beam:set_can_traverse(true)
 beam.apply_cliffs = true
+
+-- Activate switches.
+beam:add_collision_test(switch_collision_test, function(beam, entity)
+
+  local map = beam:get_map()
+
+  if entity:get_type() == "switch" then
+    if not is_solid(entity) then
+      return
+    end
+    local switch = entity
+
+    local switch_sprite = entity:get_sprite()
+
+    beam:stop_movement()
+    sprite:set_animation("stopped")
+		
+  end
+end)
 
 -- Hurt enemies.
 beam:add_collision_test("sprite", function(beam, entity)

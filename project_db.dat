@@ -1411,13 +1411,14 @@ sound{ id = "internal_stairs_down", description = "internal_stairs_down" }
 sound{ id = "internal_stairs_up", description = "internal_stairs_up" }
 sound{ id = "intro", description = "Intro" }
 sound{ id = "item_in_water", description = "Item in water" }
-sound{ id = "items/fire_rod/shoot", description = "shoot" }
+sound{ id = "items/fire_rod/shoot", description = "Shoot" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
 sound{ id = "items/hammer/hit", description = "Hammer hit" }
 sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
 sound{ id = "items/hookshot/firing_start", description = "Firing start" }
 sound{ id = "items/hookshot/hit_valid_target", description = "Hit valid target" }
 sound{ id = "items/hookshot/link_tracted", description = "Link tracted" }
+sound{ id = "items/ice_rod/shoot", description = "Shoot" }
 sound{ id = "items/item_metal_collision_wall", description = "Item metal collision" }
 sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
@@ -1461,6 +1462,7 @@ sound{ id = "objects/e_rock_1_lift", description = "Rock" }
 sound{ id = "objects/e_skull_shatter", description = "Shattering Skull" }
 sound{ id = "objects/heart/heart", description = "Heart" }
 sound{ id = "objects/on_switch", description = "Switch (On/Off)" }
+sound{ id = "objects/rupee/rupee", description = "Rupee" }
 sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
 sound{ id = "octorok", description = "octorok" }
 sound{ id = "ok", description = "ok" }
@@ -1603,6 +1605,7 @@ item{ id = "song_4_spirit", description = "Song 4 (Requiem of Spirit)" }
 item{ id = "song_5_lorule", description = "Song 5 (César's Mountain)" }
 item{ id = "song_8_shadow", description = "Song 8 (Nocturne of Shadow)" }
 item{ id = "sword", description = "Sword" }
+item{ id = "sword_beam", description = "Sword Beam" }
 item{ id = "tail_key", description = "Tail key" }
 item{ id = "tunic", description = "Tunic (green/blue/red)" }
 item{ id = "wind_rod", description = "Wind Rod" }
@@ -1818,7 +1821,6 @@ entity{ id = "heavy_statue", description = "Heavy statue" }
 entity{ id = "hole", description = "Hole" }
 entity{ id = "hook_bridge", description = "Hook bridge" }
 entity{ id = "hookable", description = "Hookable" }
-entity{ id = "ice", description = "Ice" }
 entity{ id = "insect", description = "Insect" }
 entity{ id = "light", description = "Light" }
 entity{ id = "marine", description = "Marine" }
@@ -1839,6 +1841,8 @@ entity{ id = "platform_moving", description = "Moving platform" }
 entity{ id = "platform_thwomp", description = "Platform (Spiked Thwomp top)" }
 entity{ id = "powder", description = "Powder" }
 entity{ id = "pull_handle", description = "Pull handle" }
+entity{ id = "rod_ice", description = "Ice" }
+entity{ id = "rod_wind", description = "Wind" }
 entity{ id = "runs_away", description = "Entity that runs away" }
 entity{ id = "seagull", description = "Seagull" }
 entity{ id = "spawner", description = "Spawner" }
