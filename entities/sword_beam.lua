@@ -17,24 +17,24 @@ function sprite:on_animation_finished()
 end
 
 -- Returns whether a destructible is a bush.
-local function is_solid(switch)
+local function is_bush(destructible)
 
-  local sprite = switch:get_sprite()
+  local sprite = destructible:get_sprite()
   if sprite == nil then
     return false
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/Switches/solid_switch"
+  return sprite_id == "entities/Destructables/vase" or sprite_id:match("^entities/Bushes/bush_")
 end
 
-local function switch_collision_test(beam, other)
+local function bush_collision_test(beam, other)
 
-  if other:get_type() ~= "switch" then
+  if other:get_type() ~= "destructible" then
     return false
   end
 
-  if not is_solid(other) then
+  if not is_bush(other) then
     return
   end
 
@@ -62,22 +62,48 @@ beam:set_can_traverse_ground("low_wall", true)
 beam:set_can_traverse(true)
 beam.apply_cliffs = true
 
--- Activate switches.
-beam:add_collision_test(switch_collision_test, function(beam, entity)
+-- Burn bushes.
+beam:add_collision_test(bush_collision_test, function(fire, entity)
 
   local map = beam:get_map()
 
-  if entity:get_type() == "switch" then
-    if not is_solid(entity) then
+  if entity:get_type() == "destructible" then
+    if not is_bush(entity) then
       return
     end
-    local switch = entity
+    local bush = entity
 
-    local switch_sprite = entity:get_sprite()
+    local bush_sprite = entity:get_sprite()
+    if bush_sprite:get_animation() ~= "on_ground" then
+      -- Possibly already being destroyed.
+      return
+    end
 
     beam:stop_movement()
     sprite:set_animation("stopped")
-		
+
+    -- TODO remove this when the engine provides a function destructible:destroy()
+    local bush_sprite_id = bush_sprite:get_animation_set()
+    local bush_x, bush_y, bush_layer = bush:get_position()
+    local treasure = { bush:get_treasure() }
+    if treasure ~= nil then
+      local pickable = map:create_pickable({
+        x = bush_x,
+        y = bush_y,
+        layer = bush_layer,
+        treasure_name = treasure[1],
+        treasure_variant = treasure[2],
+        treasure_savegame_variable = treasure[3],
+      })
+    end
+
+    sol.audio.play_sound(bush:get_destruction_sound())
+    bush:remove()
+
+    local bush_destroyed_sprite = beam:create_sprite(bush_sprite_id)
+    local x, y = beam:get_position()
+    bush_destroyed_sprite:set_xy(bush_x - x, bush_y - y)
+    bush_destroyed_sprite:set_animation("destroy")
   end
 end)
 

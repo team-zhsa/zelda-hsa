@@ -34,7 +34,7 @@ end
 -- Returns an item name and variant.
 function item:choose_random_item()
 
-  local random = math.random(100)
+  local random = math.random(200)
   local sum = 0
 
   for key, probability in pairs(probabilities) do
