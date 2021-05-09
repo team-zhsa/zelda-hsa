@@ -33,7 +33,9 @@ function config:create(item, properties)
     	hero:unfreeze()
 			hero:set_direction(3)
     	notes:remove()
-			hero:teleport(properties.destination_map, properties.destination)			
+			if not game:is_in_dungeon() then
+				hero:teleport(properties.destination_map, properties.destination)
+			end			
   	end)
 	end
 

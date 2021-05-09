@@ -16,7 +16,7 @@ end
 function submenu:on_started()
 
 	sol.menu.bring_to_front(submenu)
-  self.background_surfaces = sol.surface.create("menus/map/map_menu_background.png")
+--  self.background_surfaces = sol.surface.create("menus/map/map_menu_background.png")
   self.title_arrows = sol.surface.create("menus/pause_submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
 	self.caption_background = sol.surface.create("menus/pause_submenus_caption.png") 
@@ -144,7 +144,7 @@ end
 
 function submenu:next_submenu()
 
-  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menu/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -155,7 +155,7 @@ end
 
 function submenu:previous_submenu()
 
-  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menu/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -245,12 +245,12 @@ function submenu:draw_background(dst_surface)
 
   -- Draw the menu GUI window &ns the title (in the correct language)
   local submenu_index = self.game:get_value("pause_last_submenu")
-  self.background_surfaces:draw_region(
+--[[  self.background_surfaces:draw_region(
       320 * (submenu_index - 1), 0,           -- region x, y
       320, 240,                               -- region w, h
       dst_surface,                            -- destination surface
       (width - 320) / 2, (height - 240) / 2   -- pos in destination surface
-  )  
+  )  --]]
 
   self.title_surfaces:draw(dst_surface, 88, 66)
   -- Draw only if save dialog is not displayed.

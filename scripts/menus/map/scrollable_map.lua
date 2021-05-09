@@ -24,6 +24,7 @@ function map_submenu:on_started()
   if self.dungeon == nil then
     -- Not in a dungeon: show a world map.
     self:set_caption("map.title")
+    self.world_map_background_img = sol.surface.create("menus/pause_menu_world_background.png")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     local map_width, map_height = self.game:get_map():get_size()
@@ -225,7 +226,7 @@ function map_submenu:on_command_pressed(command)
           self.world_minimap_movement = movement
         end
       end
-    else--if self.game:is_in_dungeon() then
+    elseif self.game:is_in_dungeon() then
       -- We are in a dungeon: select another floor.
       local new_selected_floor
       if command == "up" then
@@ -273,6 +274,9 @@ function map_submenu:draw_world_map(dst_surface)
   self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x, self.world_minimap_visible_xy.y, 200, 160, dst_surface, 60, 40)
   
   if map_shown then
+		-- Draw background image
+  	self.world_map_background_img:draw(dst_surface, 52, 32)
+
     -- Draw the hero's position.
     local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
@@ -282,22 +286,22 @@ function map_submenu:draw_world_map(dst_surface)
     
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, 126, 34)
-      self.up_arrow_sprite:draw(dst_surface, 192, 34)
+      self.up_arrow_sprite:draw(dst_surface, 126, 32)
+      self.up_arrow_sprite:draw(dst_surface, 192, 32)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
-      self.down_arrow_sprite:draw(dst_surface, 126, 208)
-      self.down_arrow_sprite:draw(dst_surface, 192, 208)
+      self.down_arrow_sprite:draw(dst_surface, 126, 200)
+      self.down_arrow_sprite:draw(dst_surface, 192, 200)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 52, 114)
-      self.left_arrow_sprite:draw(dst_surface, 52, 158)
+      self.left_arrow_sprite:draw(dst_surface, 51, 62)
+      self.left_arrow_sprite:draw(dst_surface, 51, 158)
     end
     
     if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 199 then
-      self.right_arrow_sprite:draw(dst_surface, 260, 114)
+      self.right_arrow_sprite:draw(dst_surface, 260, 62)
       self.right_arrow_sprite:draw(dst_surface, 260, 158)
     end
   end

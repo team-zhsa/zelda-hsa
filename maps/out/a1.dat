@@ -20242,6 +20242,28 @@ jumper{
   jump_length = 40,
 }
 
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/b1",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/a6",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 880,

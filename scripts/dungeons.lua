@@ -47,6 +47,8 @@ local function initialize_dungeon_features(game)
         "dungeons/2/2f",
         "dungeons/2/3f",
         "dungeons/2/b1",
+        "dungeons/2/b2",
+        "dungeons/2/b3",
       },
       boss = {
         floor = 3,

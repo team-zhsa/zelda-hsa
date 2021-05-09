@@ -90,7 +90,7 @@ function debug:on_key_pressed(key, modifiers)
       shield:set_variant(variant)
     elseif key == "g" and hero ~= nil then
       local x, y, layer = hero:get_position()
-      if layer ~= 0 then
+      if layer ~= -1 then
         hero:set_position(x, y, layer - 1)
       end
     elseif key == "t" and hero ~= nil then
