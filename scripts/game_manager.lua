@@ -31,6 +31,9 @@ function game_manager:create(file)
 		map_name:initialize(game)
 	end)
 
+	game:register_event("on_finished", function()
+	end)
+
 	game:register_event("on_map_changed", function()
 		tone:on_map_changed()
 	end)

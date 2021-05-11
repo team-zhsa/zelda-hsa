@@ -102,6 +102,7 @@ function item:on_using()
     entity:set_can_traverse_ground("shallow_water", true)
     entity:set_can_traverse_ground("hole", true)
     entity:set_can_traverse_ground("lava", true)
+    entity:set_can_traverse_ground("grass", true)
     entity:set_can_traverse_ground("prickles", true)
     -- TODO traversable types and grounds should be configurable
     entity:set_can_traverse_ground("low_wall", true)  -- Needed for inner stairs.

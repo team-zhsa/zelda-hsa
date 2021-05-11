@@ -142,6 +142,7 @@ map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/temple_time", description = "Temple of Time" }
 map{ id = "memory/00", description = "00MEMORY" }
 map{ id = "memory/01", description = "01MEMORY" }
+map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
 map{ id = "misc/a", description = "a" }
@@ -1863,9 +1864,12 @@ language{ id = "fr", description = "Français" }
 font{ id = "04b03", description = "04b03" }
 font{ id = "alttp", description = "alttp" }
 font{ id = "alttp_floors", description = "Alttp Floors" }
+font{ id = "capital", description = "Capital" }
+font{ id = "default", description = "default" }
 font{ id = "enter_command_mono", description = "Enter Command Mono" }
 font{ id = "green_digits", description = "Green digits" }
 font{ id = "la", description = "Link s Awakening" }
+font{ id = "map_name", description = "map_name" }
 font{ id = "minecraftia", description = "Minecraftia" }
 font{ id = "minecraftia_mono", description = "Minecraftia Mono" }
 font{ id = "small_green_digits", description = "Small green digits" }
@@ -1882,6 +1886,7 @@ shader{ id = "distort", description = "Distort with a aux tex" }
 shader{ id = "edge-detection", description = "edge-detection" }
 shader{ id = "electric", description = "Electric effect" }
 shader{ id = "fire_dist", description = "Fire distortion" }
+shader{ id = "flickering", description = "Flickering" }
 shader{ id = "fr_to_normal_colors", description = "fr_to_normal_colors" }
 shader{ id = "fr_white_filter", description = "fr_white_filter" }
 shader{ id = "gb", description = "GB filter" }
@@ -1896,8 +1901,6 @@ shader{ id = "median_blur", description = "median_blur" }
 shader{ id = "mode_7", description = "Mode 7" }
 shader{ id = "noise_dither", description = "noise_dither" }
 shader{ id = "normal_to_fr_colors", description = "normal_to_fr_colors" }
-shader{ id = "ntsc2pal", description = "ntsc2pal" }
-shader{ id = "pal2ntsc", description = "pal2ntsc" }
 shader{ id = "pixellisation", description = "Pixellisation effect" }
 shader{ id = "power_effect", description = "Power effect" }
 shader{ id = "radial_fade_out", description = "Radial fade out" }
@@ -2120,10 +2123,6 @@ file{ path = "shaders/heavybloom.dat", author = "Christopho", license = "GPL v3"
 file{ path = "shaders/heavybloom.frag.glsl", author = "WhateverMan", license = "GPL v3" }
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/hq2x.frag.glsl", author = "slime73, Vlag", license = "GPL v3" }
-file{ path = "shaders/ntsc2pal.dat", author = "std::gregwar", license = "GPL v3" }
-file{ path = "shaders/ntsc2pal.frag.glsl", author = "std::gregwar", license = "GPL v3" }
-file{ path = "shaders/pal2ntsc.dat", author = "std::gregwar", license = "GPL v3" }
-file{ path = "shaders/pal2ntsc.frag.glsl", author = "std::gregwar", license = "GPL v3" }
 file{ path = "shaders/pixellisation.dat", author = "PhoenixII54", }
 file{ path = "shaders/pixellisation.frag.glsl", author = "PhoenixII54", }
 file{ path = "shaders/power_effect.dat", author = "PhoenixII54", }

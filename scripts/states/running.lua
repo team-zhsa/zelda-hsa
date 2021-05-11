@@ -56,7 +56,7 @@ end
 local function create_running_sword(entity, direction)
 
   local animation_set = entity:get_sprite("sword_override"):get_animation_set()
-  local sprite = entity:create_sprite(animation_set, "running_sword")
+  local sprite=entity:get_sprite("running_sword") or entity:create_sprite(animation_set, "running_sword")
   sprite:set_animation("sword_loading_walking")
   sprite:set_direction(direction)
 
@@ -102,7 +102,7 @@ function state:on_started()
       state:set_can_control_movement(false)
       if game:get_ability("sword") then
         sprite:set_animation("sword_loading_walking")
-        sword_sprite = create_running_sword(hero, sprite:get_direction())
+        --sword_sprite = create_running_sword(hero, sprite:get_direction())
       end
 
       local running_movement=sol.movement.create("straight")

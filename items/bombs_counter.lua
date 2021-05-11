@@ -1,19 +1,13 @@
 local item = ...
+local game = item:get_game()
+
+local sound_timer
 
 function item:on_created()
 
-  self:set_savegame_variable("possession_bombs_counter")
-  self:set_amount_savegame_variable("amount_bombs_counter")
-  self:set_assignable(true)
-
-end
-
-function item:on_obtaining(variant, savegame_variable)
-
-  self:set_amount(20)
-  --local item = game:get_item("mushroom")
-  --item:set_savegame_variable(nil)
-
+  item:set_savegame_variable("possession_bombs_counter")
+  item:set_amount_savegame_variable("amount_bombs_counter")
+  item:set_assignable(true)
 end
 
 -- Called when the player uses the bombs of his inventory by pressing the corresponding item key.
@@ -58,7 +52,6 @@ function item:create_bomb()
 
   map.current_bombs = map.current_bombs or {}
   map.current_bombs[bomb] = true
-
 end
 
 function item:remove_bombs_on_map()
@@ -72,5 +65,3 @@ function item:remove_bombs_on_map()
   end
   map.current_bombs = {}
 end
-
-

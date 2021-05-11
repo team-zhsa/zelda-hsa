@@ -27,7 +27,7 @@ end
 function map_name:show_name(name, extra)
   local horizontal_alignment = "center"
   local vertical_alignment = "middle"
-  local font = "alttp"
+  local font = "capital"
   self.name = name
 
   -- dummy surface, will be resized later depending on the lengh of the text.

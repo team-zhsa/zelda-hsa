@@ -32,8 +32,7 @@ require("scripts/maps/daytime_manager")
 require("scripts/coroutine_helper")
 require("scripts/lib/iter.lua")() --adds iterlua to _G
 require("scripts/tools/debug_utils")
-
---require("scripts/maps/sideview_manager")
+require("scripts/weather/weather_manager")
 require("scripts/meta/teletransporter")
 require("scripts/meta/block")
 

@@ -63,7 +63,7 @@ beam:set_can_traverse(true)
 beam.apply_cliffs = true
 
 -- Burn bushes.
-beam:add_collision_test(bush_collision_test, function(fire, entity)
+beam:add_collision_test(bush_collision_test, function(beam, entity)
 
   local map = beam:get_map()
 
@@ -106,6 +106,34 @@ beam:add_collision_test(bush_collision_test, function(fire, entity)
     bush_destroyed_sprite:set_animation("destroy")
   end
 end)
+
+
+ -- Set up collisions.
+beam:add_collision_test("overlapping", function(beam, entity)
+
+    local entity_type = entity:get_type()
+
+    if entity_type == "crystal" then
+      -- Activate crystals.
+        sol.audio.play_sound("switch")
+        map:change_crystal_state()
+
+    elseif entity_type == "switch" then
+      -- Activate solid switches.
+      local switch = entity
+      local sprite = switch:get_sprite()
+        if sprite ~= nil and
+        sprite:get_animation_set() == "entities/Switches/solid_switch" then
+
+        	if switch:is_activated() then
+          	sol.audio.play_sound("sword_tapping")
+        	else
+          	sol.audio.play_sound("switch")
+          	switch:set_activated(true)
+        	end
+				end	
+      end
+  end)
 
 -- Hurt enemies.
 beam:add_collision_test("sprite", function(beam, entity)

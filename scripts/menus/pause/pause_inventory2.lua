@@ -20,7 +20,7 @@ local item_names_assignable = {
 	"bottle_1",
 	"bottle_2",
 	"_placeholder", -- Row 4 -- Book of Mudora
-	"_placeholder", 
+	"pegasus_shoes", 
 	"_placeholder", 
 	"somaria_cane",
 	"bottle_3", -- Deku stick
@@ -31,7 +31,7 @@ local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"tunic"
 }
 
 function inventory_submenu:on_started()

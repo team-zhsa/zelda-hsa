@@ -8,10 +8,10 @@ local hero_meta=sol.main.get_metatable ("hero")
 
 function hero_meta:bonk()
 
-  if not self:is_custom_state_started("bonking") then
+  --if not self:is_custom_state_started("bonking") then
 
     self:start_state(state)
-  end
+  --end
 end
 
 function state:on_started()
@@ -45,37 +45,24 @@ function state:on_started()
   camera:dynamic_shake({count = 50, amplitude = 2, speed = 90, entity=entity})
 
   --Play funny animation
-  local collapse_sprite=entity:get_sprite("tunic"):set_animation("collapse")
+  local collapse_sprite=entity:get_sprite("tunic"):set_animation("hurt")
   local sword_sprite=entity:get_sprite("running_sword")
   if sword_sprite then
     entity:remove_sprite(sword_sprite)
   end
-  if map:is_sideview() then
     entity.vspeed=-4
     sol.timer.start(entity, 10, function()
         if entity:test_obstacles(0,1) then
           entity.bonking=nil
           audio_manager:play_sound("hero/land")
           entity:unfreeze()
-          entity:get_sprite():set_animation("collapse")
+          entity:get_sprite():set_animation("hurt")
           return
         else
           return true
         end
       end)
-
-  else
-    jump_manager.start_parabola(entity, 2, function()
-        entity.bonking=nil
-        audio_manager:play_sound("hero/land")
-        entity:unfreeze()
-        local ground=entity:get_ground_below()
-        if not (ground=="hole" or ground=="lava" or ground=="deep_water") then
-          entity:get_sprite():set_animation("collapse")
-        end
-      end)
-  end
-  entity:get_sprite():set_animation("collapse_pegasus")
+  entity:get_sprite():set_animation("hurt")
   function movement:on_obstacle_reached()
     --Reverse bonking direction
     --audio_manager:play_sound("hero/land")
