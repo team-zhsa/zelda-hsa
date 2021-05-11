@@ -20,7 +20,7 @@ local item_names_assignable = {
 	"green_tunic",
 	"blue_tunic",
 	"_placeholder", -- Row 4 -- Magic Cape
-	"magic_mirror", -- Magic mirror
+	--"magic_mirror", -- Magic mirror
 	"lens_of_truth",
 	"_placeholder", -- Deku stick
 	"red_tunic",

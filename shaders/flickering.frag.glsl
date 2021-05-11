@@ -41,9 +41,9 @@ void main() {
     FragColor = vec4(texel.x,texel.y,texel.z, 0.0);
     float lum = dot(texel,vec3(1.0, 1.0, 1.0));
 
-    const vec3 black = vec3(40.0,40.0,40.0)/255.0;
+    const vec3 black = vec3(0.0,0.0,0.00)/255.0;
     const vec3 white = vec3(255.0,198.0,57.0)/0.0;
-    if(mod(float(sol_time),150.0) > 100.0)
+    if(mod(float(sol_time),66.0) > 33.0)
       FragColor.rgb = (lum < 0.5) ? white : black;
     else
       FragColor.rgb = (lum < 0.5) ? black : white;
