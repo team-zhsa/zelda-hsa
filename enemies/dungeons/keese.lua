@@ -34,10 +34,6 @@ function enemy:on_restarted()
         movement:stop()
         wait = true
       end)
-    else
-     
-        
-
     end
     return true
   end)

@@ -73,14 +73,14 @@ function item:is_jumpable_ground(ground_type)
       or (ground_type == "wall_top_right") or (ground_type == "wall_top_left")
       or (ground_type == "wall_bottom_left") or (ground_type == "wall_bottom_right")
       or (ground_type == "shallow_water") or (ground_type == "grass")
-      or (ground_type == "ice")  or (ground_type == "ladder") )
+      or (ground_type == "ice")  or (ground_type == "ladder")  or (ground_type == "wall"))
     return is_good_ground
   else
     local is_good_ground = ( (ground_type == "traversable")
       or (ground_type == "wall_top_right") or (ground_type == "wall_top_left")
       or (ground_type == "wall_bottom_left") or (ground_type == "wall_bottom_right")
       or (ground_type == "shallow_water") or (ground_type == "grass")
-      or (ground_type == "ice") )
+      or (ground_type == "ice") or (ground_type == "wall"))
     return is_good_ground
   end
 end
@@ -208,7 +208,7 @@ function item:start_custom_jump()
       local ground_type = map:get_ground(hero:get_position())    
       local is_good_ground = self:is_jumpable_ground(ground_type)
       if is_good_ground then
-        hero:reset_solid_ground()
+        --hero:reset_solid_ground()
         return false
       end
       return true
@@ -250,8 +250,7 @@ function item:disable_nearby_entities()
   disabled_entities = {}
   for entity in map:get_entities_in_rectangle(x, y, w, h) do
     if entity:is_enabled() then
-      if entity:get_type() == "stream" or
-          entity:get_type() == "teletransporter" then
+      if entity:get_type() == "stream" or entity:get_type() == "teletransporter" then
         disabled_entities[#disabled_entities + 1] = entity
         entity:set_enabled(false)
       end

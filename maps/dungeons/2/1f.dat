@@ -4,7 +4,7 @@ properties{
   width = 1600,
   height = 1680,
   min_layer = -1,
-  max_layer = 3,
+  max_layer = 2,
   world = "dungeon_2",
   floor = 0,
   tileset = "Absolute Dungeon 07",
@@ -182,6 +182,33 @@ tile{
   pattern = "wall_hole.3-1",
 }
 
+tile{
+  layer = -1,
+  x = 264,
+  y = 672,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.1-1",
+}
+
+tile{
+  layer = -1,
+  x = 288,
+  y = 672,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 272,
+  y = 672,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_down.2",
+}
+
 teletransporter{
   layer = -1,
   x = 1416,
@@ -200,6 +227,54 @@ teletransporter{
   height = 48,
   destination_map = "dungeons/2/b1",
   destination = "_same",
+}
+
+teletransporter{
+  layer = -1,
+  x = 1600,
+  y = 0,
+  width = 16,
+  height = 1680,
+  transition = "scrolling",
+  destination_map = "dungeons/2/b1",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = -1,
+  x = 0,
+  y = -16,
+  width = 1608,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "dungeons/1/1f",
+  destination = "_side",
+}
+
+destination{
+  name = "from_b1_3",
+  layer = -1,
+  x = 280,
+  y = 685,
+  direction = 1,
+}
+
+teletransporter{
+  layer = -1,
+  x = 272,
+  y = 672,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/2/b1",
+  destination = "from_1f_3",
+}
+
+stairs{
+  layer = -1,
+  x = 272,
+  y = 672,
+  direction = 3,
+  subtype = 1,
 }
 
 tile{
@@ -5492,33 +5567,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 264,
-  y = 672,
-  width = 8,
-  height = 16,
-  pattern = "door.2.support.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 288,
-  y = 672,
-  width = 8,
-  height = 16,
-  pattern = "door.2.support.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 272,
-  y = 672,
-  width = 16,
-  height = 16,
-  pattern = "door_stairs.spiral_down.2",
-}
-
-tile{
-  layer = 0,
   x = 600,
   y = 584,
   width = 16,
@@ -8355,6 +8403,24 @@ tile{
   pattern = "telepathic_stone",
 }
 
+tile{
+  layer = 0,
+  x = 264,
+  y = 688,
+  width = 32,
+  height = 8,
+  pattern = "door_top.stairs.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 688,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_down.2-1",
+}
+
 door{
   name = "door_27_n1",
   layer = 0,
@@ -9851,32 +9917,6 @@ dynamic_tile{
   pattern = "barrier_big.1-2",
 }
 
-destination{
-  name = "from_b1_3",
-  layer = 0,
-  x = 280,
-  y = 685,
-  direction = 1,
-}
-
-teletransporter{
-  layer = 0,
-  x = 272,
-  y = 672,
-  width = 16,
-  height = 16,
-  destination_map = "dungeons/2/b1",
-  destination = "from_1f_3",
-}
-
-stairs{
-  layer = 0,
-  x = 272,
-  y = 672,
-  direction = 3,
-  subtype = 1,
-}
-
 block{
   layer = 0,
   x = 712,
@@ -11256,24 +11296,6 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.closed.2-2",
-}
-
-tile{
-  layer = 1,
-  x = 264,
-  y = 688,
-  width = 32,
-  height = 8,
-  pattern = "door_top.stairs.2-2",
-}
-
-tile{
-  layer = 1,
-  x = 272,
-  y = 688,
-  width = 16,
-  height = 8,
-  pattern = "door_top.stairs_down.2-1",
 }
 
 tile{

@@ -128,6 +128,7 @@ function enemy_manager:launch_boss_if_not_dead(map)
     local x,y,layer = placeholder:get_position()
     placeholder:set_enabled(false)
     local enemy = map:create_enemy{
+			name = "boss",
       breed = dungeon_infos["boss"]["breed"],
       direction = 2,
       x = x,

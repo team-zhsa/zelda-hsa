@@ -110,7 +110,7 @@ function door_manager:open_when_switch_activated(map, switch_prefix, door_prefix
         if not switch.is_activated then
           switch.is_activated = true
           map:open_doors(door_prefix)
-          sol.audio.play_sound("common/secret_discover_minor")
+          --sol.audio.play_sound("common/secret_discover_minor")
         end
        end
       for switch in map:get_entities(switch_prefix) do

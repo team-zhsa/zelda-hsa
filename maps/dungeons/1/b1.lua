@@ -21,7 +21,7 @@ local is_boss_active = false
 map:register_event("on_started", function()
 	map:set_doors_open("door_group_boss", true)
 	separator_manager:manage_map(map)
-	--treasure_manager:appear_heart_container_if_boss_dead(map)
+	treasure_manager:appear_heart_container_if_boss_dead(map)
 	treasure_manager:disappear_pickable(map, "heart_container")
   -- You can initialize the movement and sprites of various
   -- map entities here.
@@ -30,7 +30,11 @@ end)
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
 
-
+function chest_pendant:on_opened()
+	audio_manager:play_music("cutscenes/victory", function()
+		audio_manager:stop_music()
+	end)
+end
 -- BOSS
 function sensor_boss:on_activated()
 	 if is_boss_active == false then
@@ -38,4 +42,3 @@ function sensor_boss:on_activated()
     enemy_manager:launch_boss_if_not_dead(map)
   end
 end
-

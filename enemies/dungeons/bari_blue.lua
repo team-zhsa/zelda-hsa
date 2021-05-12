@@ -53,8 +53,8 @@ end
 
 function enemy:on_dying()
   -- It splits into two mini baris when it dies
-  enemy:create_enemy({ breed = "bari_mini" })
-  enemy:create_enemy({ breed = "bari_mini" })
+  enemy:create_enemy({ breed = "dungeons/bari_mini" })
+  enemy:create_enemy({ breed = "dungeons/bari_mini" })
 end
 
 local function electrocute()

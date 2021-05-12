@@ -19,6 +19,10 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 	separator_manager:manage_map(map)
+
+-- Treasures
+	treasure_manager:disappear_pickable(map, "pickable_35_small_key")
+	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_35", "pickable_35_small_key")
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

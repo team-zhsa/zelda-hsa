@@ -82,7 +82,7 @@ end
 -- Called each frame
 function end_credits:on_draw(dst_surface)
   --dst_surface:clear()
-  self.credits_surface:draw(dst_surface, 42, 144)
+  self.credits_surface:draw(dst_surface, 44, 144)
 end
 
 

@@ -39,11 +39,11 @@ COMPAT_VARYING vec4 sol_vcolor;
 void main() {
     vec3 texel = COMPAT_TEXTURE(sol_texture, sol_vtex_coord).rgb;
     FragColor = vec4(texel.x,texel.y,texel.z, 0.0);
-    float lum = dot(texel,vec3(1.0, 1.0, 1.0));
+    float lum = dot(texel,vec3(0.2125, 0.7154, 0.0921));
 
-    const vec3 black = vec3(0.0,0.0,0.00)/255.0;
-    const vec3 white = vec3(255.0,198.0,57.0)/0.0;
-    if(mod(float(sol_time),66.0) > 33.0)
+    const vec3 black = vec3(0.0,0.0,0.00)/0.0;
+    const vec3 white = vec3(255.0,198.0,57.0)/255.0;
+    if(mod(float(sol_time),70.0) > 35.0)
       FragColor.rgb = (lum < 0.5) ? white : black;
     else
       FragColor.rgb = (lum < 0.5) ? black : white;

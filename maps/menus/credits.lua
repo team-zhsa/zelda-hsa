@@ -20,9 +20,13 @@ function map:on_started()
 	map:get_hero():set_visible(false)
 	sol.menu.start(game, end_credits)
 	if game:get_value("death_count") == 0 or game:get_value("death_count") == nil then
-		audio_manager:play_music("cutscenes/end_credits_alttp")
+		audio_manager:play_music("cutscenes/end_credits_alttp", function()
+			audio_manager:stop_music()
+		end)
 	else
-		audio_manager:play_music("cutscenes/end_credits")
+		audio_manager:play_music("cutscenes/end_credits", function()
+			audio_manager:stop_music()
+		end)
 	end
 end
 
@@ -32,7 +36,6 @@ function map:on_opening_transition_finished()
 end
 
 function end_credits:on_finished()
-	audio_manager:stop_music()
 	game:set_hud_enabled(false)
 	game:set_pause_allowed(false)
 	map:get_hero():unfreeze()
