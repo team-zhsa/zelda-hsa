@@ -8,7 +8,7 @@ local grabbed_hero
 
 function enemy:on_created()
 
-  enemy:set_life(10)
+  enemy:set_life(3)
   enemy:set_damage(0)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
@@ -16,7 +16,7 @@ function enemy:on_created()
   enemy:set_can_hurt_hero_running(true)
   enemy:set_layer_independent_collisions(true)
   enemy:set_optimization_distance(0)
-  enemy:set_invincible()
+  --enemy:set_invincible()
   sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
   sprite:set_animation("sleeping")
 end

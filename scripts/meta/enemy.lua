@@ -44,6 +44,9 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
   if reactions.thrown_item then
     self:set_attack_consequence("thrown_item", reactions.thrown_item)
   end
+  if reactions.hookshot then
+    self:set_hookshot_reaction(reactions.hookshot)
+  end
 --  if reactions.fire then
 --    self:set_attack_consequence("fire", reactions.fire)
 --  end
@@ -52,9 +55,6 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
   end
   if reactions.hammer then
     self:set_hammer_reaction(reactions.hammer)
-  end
-  if reactions.hookshot then
-    self:set_hookshot_reaction(reactions.hookshot)
   end
   if reactions.magic_powder then
     self:set_magic_powder_reaction(reactions.magic_powder)

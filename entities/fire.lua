@@ -81,7 +81,7 @@ fire:add_collision_test(bush_collision_test, function(fire, entity)
 
     fire:stop_movement()
     sprite:set_animation("stopped")
-    sol.audio.play_sound("flame")
+    --sol.audio.play_sound("flame")
 
     -- TODO remove this when the engine provides a function destructible:destroy()
     local bush_sprite_id = bush_sprite:get_animation_set()
