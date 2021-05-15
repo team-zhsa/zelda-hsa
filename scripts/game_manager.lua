@@ -12,7 +12,7 @@ local boundaries = sol.main.get_metatable("sensor")
 local tone_manager = require("scripts/maps/daytime_manager")
 local condition_manager = require("scripts/hero_condition")
 local map_name = require("scripts/hud/map_name")
-time_flow = 300
+time_flow = 1000
 
 -- Creates a game ready to be played.
 function game_manager:create(file)

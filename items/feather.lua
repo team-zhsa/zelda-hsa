@@ -80,7 +80,7 @@ function item:is_jumpable_ground(ground_type)
       or (ground_type == "wall_top_right") or (ground_type == "wall_top_left")
       or (ground_type == "wall_bottom_left") or (ground_type == "wall_bottom_right")
       or (ground_type == "shallow_water") or (ground_type == "grass")
-      or (ground_type == "ice") or (ground_type == "wall"))
+      or (ground_type == "ice")  or (ground_type == "ladder")  or (ground_type == "wall"))
     return is_good_ground
   end
 end
@@ -250,7 +250,7 @@ function item:disable_nearby_entities()
   disabled_entities = {}
   for entity in map:get_entities_in_rectangle(x, y, w, h) do
     if entity:is_enabled() then
-      if entity:get_type() == "stream" or entity:get_type() == "teletransporter" then
+      if entity:get_type() == "stream" then --or entity:get_type() == "teletransporter" then
         disabled_entities[#disabled_entities + 1] = entity
         entity:set_enabled(false)
       end

@@ -7,7 +7,6 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
-  music = "outside/overworld",
 }
 
 tile{
@@ -19920,7 +19919,7 @@ enemy{
   y = 797,
   direction = 0,
   breed = "outside/octorok_red",
-  treasure_name = "random",
+  treasure_name = "random_mountains",
 }
 
 enemy{
@@ -20255,13 +20254,25 @@ teletransporter{
 
 teletransporter{
   layer = 0,
-  x = 0,
-  y = -16,
-  width = 1280,
+  x = 16,
+  y = 0,
+  width = 1264,
   height = 16,
   transition = "scrolling",
-  destination_map = "out/a6",
-  destination = "_side",
+  destination_map = "out/a1",
+  destination = "_same",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/a1",
+  destination = "_same",
+  sound = "world_warp",
 }
 
 tile{

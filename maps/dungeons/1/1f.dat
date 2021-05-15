@@ -2305,6 +2305,17 @@ teletransporter{
   destination = "_side",
 }
 
+teletransporter{
+  layer = -1,
+  x = 1024,
+  y = 64,
+  width = 192,
+  height = 112,
+  transition = "scrolling",
+  destination_map = "dungeons/1/1f",
+  destination = "_same",
+}
+
 tile{
   layer = 0,
   x = 392,
