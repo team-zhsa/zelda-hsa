@@ -20,12 +20,12 @@ function map:on_started()
 	map:get_hero():set_visible(false)
 	sol.menu.start(game, end_credits)
 	if game:get_value("death_count") == 0 or game:get_value("death_count") == nil then
-		audio_manager:play_music("cutscenes/end_credits_alttp", function()
-			audio_manager:stop_music()
+		sol.audio.play_music("cutscenes/end_credits_alttp", function()
+			sol.audio.stop_music()
 		end)
 	else
-		audio_manager:play_music("cutscenes/end_credits", function()
-			audio_manager:stop_music()
+		sol.audio.play_music("cutscenes/end_credits", function()
+			sol.audio.stop_music()
 		end)
 	end
 end

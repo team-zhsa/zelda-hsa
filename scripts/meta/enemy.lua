@@ -301,12 +301,13 @@ function enemy_meta:launch_boss_dead()
   local dungeon = game:get_dungeon_index()
   local savegame = "dungeon_" .. dungeon .. "_boss"
   local door_prefix = "door_group_boss"
-  --audio_manager:play_music("cutscenes/song_learned")
   game:set_value(savegame, true)
   map:open_doors(door_prefix)
   local heart_container = map:get_entity("heart_container")
   heart_container:set_enabled(true)
-
+	sol.audio.play_music("cutscenes/victory", function()
+		sol.audio.stop_music()
+	end)
 end
 
 -- Check if the enemy should fall in hole on switching to normal obstacle behavior mode.

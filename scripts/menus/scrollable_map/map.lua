@@ -38,7 +38,7 @@ local function initialize_map_features(game)
   end
 
   function map_menu:open()
-    sol.menu.start(game, map_menu, false)
+    sol.menu.start(game, map_menu, true)
 		game:set_suspended(true)
   end
 

@@ -53,7 +53,7 @@ local function initialize_pause_features(game)
   end
 
   function pause_menu:open()
-    sol.menu.start(game, pause_menu, false)
+    sol.menu.start(game, pause_menu, true)
   end
 
   function pause_menu:close()

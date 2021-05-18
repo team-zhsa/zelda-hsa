@@ -41,7 +41,7 @@ function end_credits:on_started()
       + 240 -- surface scrolls in from the bottom, so has a padding top equal to the screen size
       + 16 -- room for 8px top and bottom padding
   )
-		self.credits_surface:set_shader(sol.shader.create("flickering"))
+		--self.credits_surface:set_shader(sol.shader.create("flickering"))
   -- Loop through all dialog lines and draw them
   for i, line in ipairs(lines) do
     local line_surface =  sol.text_surface.create({horizontal_alignment="center", font="capital", font_size=11, text=line})

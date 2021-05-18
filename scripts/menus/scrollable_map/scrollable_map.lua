@@ -494,8 +494,8 @@ function map_submenu:load_dungeon_map_image()
           self.dungeon_map_img, dst_x, dst_y)
         else
           dst_x = dst_x - 2
-          self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
-          self.dungeon_map_img, dst_x, dst_y)
+          --self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
+          --self.dungeon_map_img, dst_x, dst_y)
         end
       end
     end

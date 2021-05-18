@@ -30,11 +30,6 @@ end)
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
 
-function chest_pendant:on_opened()
-	audio_manager:play_music("cutscenes/victory", function()
-		audio_manager:stop_music()
-	end)
-end
 -- BOSS
 function sensor_boss:on_activated()
 	 if is_boss_active == false then
