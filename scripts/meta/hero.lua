@@ -38,7 +38,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
     local state_desc=state_object and state_object:get_description() or ""
     -- Sounds
     if current_state == "lifting" then
-      audio_manager:play_sound("hero/pickup") 
+      audio_manager:play_sound("lift") 
     elseif current_state == "sword loading" or state_desc=="sword_loading" then
       timer_sword_loading = sol.timer.start(hero, 1000, function()
           audio_manager:play_sound("sword_spin_attack_load") 
@@ -365,7 +365,7 @@ game_meta:register_event("on_map_changed", function(game, map)
 
   end)
 
--- Ugly workaround to make the fucking hero walking speed changes effective immediately even if he is on a tile that modify its speed, such as grass.
+--[[ Ugly workaround to make the fucking hero walking speed changes effective immediately even if he is on a tile that modify its speed, such as grass.
 hero_meta:register_event("set_walking_speed", function(hero, speed)
 
   local map = hero:get_map()
@@ -398,7 +398,7 @@ hero_meta:register_event("on_created", function(hero)
   end)
 
 
---------------------------------------------------
+--]]------------------------------------------------
 -- Functions to fix tunic animation and direction.
 --------------------------------------------------
 local fixed_direction, fixed_stopped_animation, fixed_walking_animation

@@ -130,25 +130,7 @@ function state:on_started()
         local ox, oy=hero:get_position()
         local map_w, map_h=map:get_size()
         local direction=entity:get_direction()
-        --[[if direction==2 then
-          print "GO LEFT"
-          hero:set_position(ox-1,oy)
-          --game:simulate_command_pressed("left")
-        elseif direction==0 then
-          print "GO RIGHT"
-         hero:set_position(ox+1,oy)
-          --game:simulate_command_pressed("right")
-        elseif direction==1 then
-          print "GO UP"
-          hero:set_position(ox,oy-1)
-          --game:simulate_command_pressed("up")
-        elseif direction==3 then
-          hero:set_position(ox,oy+1)
-          print "GO DOWN"
-          --game:simulate_command_pressed("down")
-        else--]]
           entity:bonk()
-        --end
       end
       --Run !
       running_movement:start(entity)

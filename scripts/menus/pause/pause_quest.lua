@@ -2,9 +2,9 @@ local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
 local quest_submenu = submenu:new()
 local item_names_static_left = {
-  "instrument_1",
-  "instrument_2",
-  "instrument_3",
+  "pendant_1",
+  "pendant_2",
+  "pendant_3",
   "instrument_4",
   "magnifying_lens",
   "instrument_5",

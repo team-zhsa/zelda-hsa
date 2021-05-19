@@ -8,6 +8,7 @@ local properties = {
   destination_map = "extensions/southern_hyrule/a1",
 	destination = "from_flute",
 	duration = 3000,
+	dialogue = "items.ocarina.teleport.song_12_secret",
 }
 config:create(item, properties)
 

@@ -157,7 +157,7 @@ animation{
   directions = {
     { x = 16, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 32, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 32, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 16, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -316,33 +316,6 @@ animation{
   },
 }
 animation{
-  name = "instrument_1",
-  src_image = "entities/items.png",
-  frame_delay = 100,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 128, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "instrument_2",
-  src_image = "entities/items.png",
-  frame_delay = 100,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 128, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "instrument_3",
-  src_image = "entities/items.png",
-  frame_delay = 100,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 112, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "instrument_4",
   src_image = "entities/items.png",
   frame_delay = 100,
@@ -491,6 +464,33 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 112, y = 224, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "pendant_1",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 128, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "pendant_2",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 144, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "pendant_3",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 112, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

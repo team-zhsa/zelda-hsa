@@ -34,7 +34,13 @@ function config:create(item, properties)
 			hero:set_direction(3)
     	notes:remove()
 			if not game:is_in_dungeon() then
-				hero:teleport(properties.destination_map, properties.destination)
+				game:start_dialog(properties.dialogue, function(answer)
+					if answer == 1 then
+						hero:teleport(properties.destination_map, properties.destination)
+					else
+  					item:set_finished()
+					end
+				end)
 			end			
   	end)
 	end

@@ -31,7 +31,7 @@ function state:on_started()
   end
   entity.bonking=true
   --state:set_can_control_movement(false)
-  audio_manager:play_sound("hero/rebound")
+  audio_manager:play_sound("running_obstacle")
 
   local map=entity:get_map()
 
@@ -63,7 +63,7 @@ function state:on_started()
   end
     jump_manager.start_parabola(entity, 2, function()
         entity.bonking=nil
-        audio_manager:play_sound("hero/land")
+        audio_manager:play_sound("hero_lands")
         entity:unfreeze()
         local ground=entity:get_ground_below()
         if not (ground=="hole" or ground=="lava" or ground=="deep_water") then

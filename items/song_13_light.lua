@@ -8,6 +8,7 @@ local properties = {
   destination_map = "out/g4",
 	destination = "from_flute",
 	duration = 16000,
+	dialogue = "items.ocarina.teleport.song_13_light",
 }
 config:create(item, properties)
 
