@@ -15,15 +15,15 @@ local audio_manager = require("scripts/audio_manager")
 map:register_event("on_started", function(map, destination)
 
   -- Music
-  map:init_music()
+  init_music()
 
 end)
 
 -- Initialize the music of the map
-function map:init_music()
-  if game:get_value("time_of_day", "day") then
+function init_music()
+  if game:get_value("time_of_day") == "day" then
     audio_manager:play_music("outside/overworld")
-  elseif game:get_value("time_of_day", "night") then
+  elseif game:get_value("time_of_day") == "night" then
     audio_manager:play_music("outside/field_night")
   end
 

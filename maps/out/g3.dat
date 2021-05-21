@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
-  music = "outside/overworld",
+  music = "same",
 }
 
 tile{
@@ -17,6 +17,42 @@ tile{
   width = 1288,
   height = 1440,
   pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 8,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 24,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "454",
 }
 
 tile{
@@ -18856,6 +18892,24 @@ tile{
   pattern = "971",
 }
 
+tile{
+  layer = 0,
+  x = 272,
+  y = 1232,
+  width = 8,
+  height = 8,
+  pattern = "114",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 1376,
+  width = 8,
+  height = 8,
+  pattern = "115",
+}
+
 teletransporter{
   layer = 0,
   x = 1280,
@@ -19070,6 +19124,17 @@ npc{
   direction = 3,
   subtype = 0,
   behavior = "dialog#maps.out.field.sign_9",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/g2",
+  destination = "_side",
 }
 
 tile{

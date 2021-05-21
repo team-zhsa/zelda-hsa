@@ -186,6 +186,7 @@ map{ id = "out/f4", description = "F4 (Castle Courtyard)" }
 map{ id = "out/f5", description = "F5 (Hyrule Field)" }
 map{ id = "out/f6", description = "F6 (Hyrule Field)" }
 map{ id = "out/f7", description = "F7 (Great Swamp)" }
+map{ id = "out/g2", description = "G2 (Hyrule Field)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
 map{ id = "out/g4", description = "G4 (Hyrule Field)" }
 map{ id = "out/g5", description = "out/g5" }
@@ -392,6 +393,7 @@ sprite{ id = "enemies/flames/flame_red", description = "Red Flame" }
 sprite{ id = "enemies/outside/armos", description = "Armos" }
 sprite{ id = "enemies/outside/baba_floria", description = "Baba Floria" }
 sprite{ id = "enemies/outside/baba_seed", description = "Baba Seed" }
+sprite{ id = "enemies/outside/bomber", description = "Bomber" }
 sprite{ id = "enemies/outside/boulder", description = "Boulder" }
 sprite{ id = "enemies/outside/chicken", description = "Chicken" }
 sprite{ id = "enemies/outside/chicken_mortal", description = "Mortal Chicken" }
@@ -437,6 +439,7 @@ sprite{ id = "enemies/outside/tektite_water", description = "Water Tetkite" }
 sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
+sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
 sprite{ id = "enemies/projectiles/fireball", description = "Fireball" }
 sprite{ id = "enemies/soldiers/soldier_cannon", description = "Cannon Soldier" }
 sprite{ id = "enemies/soldiers/soldier_green", description = "Green Soldier" }
@@ -1010,6 +1013,7 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
+sprite{ id = "hero/tunic4", description = "Hero tunic 4" }
 sprite{ id = "hud/action_icon_flip", description = "Action icon" }
 sprite{ id = "hud/clock", description = "hud/clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
@@ -1611,8 +1615,9 @@ item{ id = "song_4_spirit", description = "Song 4 (Requiem of Spirit)" }
 item{ id = "song_5_lorule", description = "Song 5 (César's Mountain)" }
 item{ id = "song_8_shadow", description = "Song 8 (Nocturne of Shadow)" }
 item{ id = "sword", description = "Sword" }
-item{ id = "sword_beam", description = "Sword Beam" }
+item{ id = "sword_skill_beam", description = "Sword Beam" }
 item{ id = "tail_key", description = "Tail key" }
+item{ id = "time_tunic", description = "Time tunic" }
 item{ id = "tunic", description = "Tunic (green/blue/red)" }
 item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }
@@ -1736,8 +1741,8 @@ enemy{ id = "generic_towards_hero", description = "generic_towards_hero" }
 enemy{ id = "generic_waiting_for_hero", description = "generic_waiting_for_hero" }
 enemy{ id = "outside/armos", description = "Armos" }
 enemy{ id = "outside/baba_floria", description = "Baba Floria" }
+enemy{ id = "outside/bomber", description = "Bomber" }
 enemy{ id = "outside/boulder", description = "Boulder" }
-enemy{ id = "outside/boulder_random", description = "Random Boulder" }
 enemy{ id = "outside/chicken", description = "Chicken" }
 enemy{ id = "outside/chuchu_blue", description = "Blue Chuchu" }
 enemy{ id = "outside/chuchu_dark", description = "Dark Chuchu" }
@@ -1782,6 +1787,7 @@ enemy{ id = "outside/zola", description = "Zola" }
 enemy{ id = "outside/zora", description = "Zora" }
 enemy{ id = "projectiles/baba_seed", description = "Baba Seed" }
 enemy{ id = "projectiles/beam_particle", description = "Beamos Particle" }
+enemy{ id = "projectiles/bomb", description = "Bomb" }
 enemy{ id = "projectiles/fire_shot", description = "Fire Shot" }
 enemy{ id = "projectiles/fireball", description = "Fireball" }
 enemy{ id = "projectiles/rock_small", description = "Small Rock" }
@@ -1882,10 +1888,12 @@ font{ id = "small_green_digits", description = "Small green digits" }
 font{ id = "small_white_digits", description = "Small white digits" }
 font{ id = "white_digits", description = "White digits" }
 
+shader{ id = "1test", description = "1 Test" }
 shader{ id = "6xbrz", description = "6xbrz" }
 shader{ id = "blur", description = "Blur" }
 shader{ id = "cast_shadow1d", description = "cast_shadow1d" }
 shader{ id = "curvature", description = "Curvature" }
+shader{ id = "deep_fried", description = "Deep fried" }
 shader{ id = "default", description = "default" }
 shader{ id = "distorsion", description = "Distorsion effect" }
 shader{ id = "distort", description = "Distort with a aux tex" }

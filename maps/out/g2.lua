@@ -1,4 +1,4 @@
--- Lua script of map out/g3.
+-- Lua script of map out/g2.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -10,9 +10,9 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
-
+-- Event called at initialization time, as soon as this map is loaded.
 -- Map events
-map:register_event("on_draw", function(map)
+map:register_event("on_started", function(map, destination)
 
   -- Music
   init_music()
@@ -28,3 +28,4 @@ function init_music()
   end
 
 end
+

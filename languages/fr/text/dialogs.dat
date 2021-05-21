@@ -626,6 +626,17 @@ beaucoup d'objets !
 }
 
 dialog{
+  id = "_treasure.hookshot.2",
+  icon = "15",
+  text = [[
+CLING ! C'est le grappin !$0
+Il se détend et se contracte et
+CLING ! Il peut agripper
+beaucoup d'objets !
+]],
+}
+
+dialog{
   id = "_treasure.instrument_4.1",
   text = [[
 Tu as la harpe
@@ -1306,6 +1317,16 @@ dessus!
 }
 
 dialog{
+  id = "_treasure.sword_skill_beam.1",
+  icon = "93",
+  text = [[
+Tu as appris à manier le
+Rayon de Vie ! Lance des rayons
+quand ta vie est pleine !
+]],
+}
+
+dialog{
   id = "_treasure.tail_key.1",
   icon = "40",
   text = [[
@@ -1314,6 +1335,16 @@ Clé Flagello!
 Tu peux ouvrir  
 la porte de la  
 Cave Flagello!
+]],
+}
+
+dialog{
+  id = "_treasure.time_tunic.1",
+  icon = "43",
+  text = [[
+Tu as obtenu la Tunique du
+Temps !$0 Elle abrite une puissance
+légendaire !
 ]],
 }
 
@@ -3606,6 +3637,15 @@ Faites gaffe
 }
 
 dialog{
+  id = "maps.out.field.sign_10",
+  text = [[
+Nord-Est : Domaine Zora
+Est : Forge
+Ouest : Temple du Temps
+]],
+}
+
+dialog{
   id = "maps.out.field.sign_2",
   text = [[
 Le Sanctuaire
@@ -5335,10 +5375,19 @@ dialog{
   icon = "7",
   skip = "all",
   text = [[
-Hisse-toi à des
-endroits
-inaccessibles grâce
-au Grappin.
+Hisse-toi à des endroits
+inaccessibles grâce au Grappin.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.hookshot.2",
+  icon = "15",
+  skip = "all",
+  text = [[
+Hisse-toi à des endroits
+inaccessibles grâce au
+Super Grappin.
 ]],
 }
 
@@ -5893,7 +5942,7 @@ la Caverne.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.1",
-  icon = "66",
+  icon = "46",
   skip = "all",
   text = [[
 Une belle épée avec
@@ -5902,7 +5951,7 @@ ton nom écrit dessus.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.sword_beam.1",
+  id = "scripts.menus.pause_inventory.sword_skill_beam.1",
   icon = "103",
   skip = "all",
   text = [[
@@ -5921,6 +5970,15 @@ dialog{
 Permet d'ouvrir
 la porte de
 la cave Flagello
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.time_tunic.1",
+  icon = "43",
+  text = [[
+Une tunique du temps, qui divise
+grandement les dégâts.
 ]],
 }
 

@@ -24,7 +24,7 @@ local item_names_assignable = {
 	"lens_of_truth",
 	"_placeholder", -- Deku stick
 	"red_tunic",
-	"green_tunic", -- Light green tunic
+	"time_tunic",
 
 }
 local item_names_static = {

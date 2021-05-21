@@ -3037,15 +3037,6 @@ tile{
 tile{
   layer = 0,
   x = 816,
-  y = 512,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 816,
   y = 480,
   width = 8,
   height = 8,
@@ -3129,7 +3120,7 @@ tile{
   x = 816,
   y = 488,
   width = 8,
-  height = 24,
+  height = 48,
   pattern = "barrier.2-1",
 }
 
@@ -3208,18 +3199,9 @@ tile{
 tile{
   layer = 0,
   x = 816,
-  y = 584,
+  y = 568,
   width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 816,
-  y = 592,
-  width = 8,
-  height = 16,
+  height = 40,
   pattern = "barrier.2-1",
 }
 
@@ -3518,6 +3500,60 @@ tile{
   width = 16,
   height = 8,
   pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 560,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 536,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 536,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 560,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 520,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 568,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
 }
 
 block{

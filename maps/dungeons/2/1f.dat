@@ -279,6 +279,24 @@ stairs{
 
 tile{
   layer = 0,
+  x = 488,
+  y = 1400,
+  width = 112,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1400,
+  width = 112,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
   x = 1320,
   y = 1000,
   width = 240,
@@ -6711,15 +6729,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 360,
-  y = 1400,
-  width = 240,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
   x = 600,
   y = 1368,
   width = 24,
@@ -6848,7 +6857,7 @@ tile{
   layer = 0,
   x = 680,
   y = 1400,
-  width = 112,
+  width = 240,
   height = 24,
   pattern = "wall.2-2",
 }
@@ -7188,16 +7197,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 808,
-  y = 1400,
-  width = 112,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 808,
+  x = 488,
   y = 1424,
   width = 24,
   height = 16,
@@ -7206,7 +7206,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
+  x = 448,
   y = 1424,
   width = 24,
   height = 16,
@@ -7215,7 +7215,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 808,
+  x = 488,
   y = 1400,
   width = 8,
   height = 16,
@@ -7224,7 +7224,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 792,
+  x = 472,
   y = 1400,
   width = 16,
   height = 16,
@@ -7233,7 +7233,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 784,
+  x = 464,
   y = 1400,
   width = 8,
   height = 16,
@@ -7242,7 +7242,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 784,
+  x = 464,
   y = 1376,
   width = 32,
   height = 24,
@@ -7251,7 +7251,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
+  x = 448,
   y = 1376,
   width = 16,
   height = 24,
@@ -7260,7 +7260,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
+  x = 448,
   y = 1360,
   width = 32,
   height = 16,
@@ -7269,7 +7269,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 800,
+  x = 480,
   y = 1360,
   width = 32,
   height = 16,
@@ -7278,7 +7278,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 816,
+  x = 496,
   y = 1376,
   width = 16,
   height = 24,
@@ -7287,7 +7287,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 760,
+  x = 440,
   y = 1392,
   width = 24,
   height = 32,
@@ -7296,7 +7296,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 816,
+  x = 496,
   y = 1392,
   width = 24,
   height = 32,
@@ -7305,7 +7305,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 832,
+  x = 512,
   y = 1352,
   width = 8,
   height = 40,
@@ -7314,7 +7314,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
+  x = 448,
   y = 1352,
   width = 64,
   height = 8,
@@ -7323,7 +7323,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 760,
+  x = 440,
   y = 1352,
   width = 8,
   height = 40,
@@ -7332,7 +7332,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 792,
+  x = 472,
   y = 1424,
   width = 16,
   height = 16,
@@ -7496,7 +7496,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 736,
+  x = 752,
   y = 1296,
   width = 16,
   height = 16,
@@ -7505,7 +7505,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 848,
+  x = 832,
   y = 1296,
   width = 16,
   height = 16,
@@ -8421,6 +8421,24 @@ tile{
   pattern = "door_top.stairs_down.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 752,
+  y = 1344,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 1344,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
 door{
   name = "door_27_n1",
   layer = 0,
@@ -8433,7 +8451,7 @@ door{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 800,
+  x = 480,
   y = 1413,
   direction = 1,
   default = true,
@@ -10109,7 +10127,7 @@ wall{
 
 teletransporter{
   layer = 0,
-  x = 792,
+  x = 472,
   y = 1424,
   properties = {
     {
@@ -10322,7 +10340,7 @@ stairs{
 sensor{
   name = "dungeon_room_28_1",
   layer = 0,
-  x = 800,
+  x = 480,
   y = 1413,
   width = 16,
   height = 16,
@@ -11471,7 +11489,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 792,
+  x = 472,
   y = 1416,
   width = 16,
   height = 8,
@@ -11480,7 +11498,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 784,
+  x = 464,
   y = 1416,
   width = 32,
   height = 8,
@@ -11489,7 +11507,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 736,
+  x = 752,
   y = 1280,
   width = 16,
   height = 16,
@@ -11498,7 +11516,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 848,
+  x = 832,
   y = 1280,
   width = 16,
   height = 16,
@@ -11629,6 +11647,24 @@ tile{
   width = 8,
   height = 32,
   pattern = "door_top.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 752,
+  y = 1328,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 832,
+  y = 1328,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
 }
 
 dynamic_tile{

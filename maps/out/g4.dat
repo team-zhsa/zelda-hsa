@@ -7,6 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
+  music = "same",
 }
 
 tile{
@@ -16329,7 +16330,7 @@ tile{
 stairs{
   layer = 0,
   x = 744,
-  y = 152,
+  y = 160,
   direction = 1,
   subtype = 3,
 }
@@ -16338,7 +16339,7 @@ destination{
   name = "from_cave_2",
   layer = 0,
   x = 752,
-  y = 165,
+  y = 173,
   direction = 3,
 }
 
@@ -16623,7 +16624,7 @@ destructible{
 teletransporter{
   layer = 0,
   x = 856,
-  y = 392,
+  y = 400,
   properties = {
     {
       key = "effect",
@@ -16640,14 +16641,14 @@ destination{
   name = "from_cave",
   layer = 0,
   x = 864,
-  y = 405,
+  y = 413,
   direction = 3,
 }
 
 stairs{
   layer = 0,
   x = 856,
-  y = 392,
+  y = 400,
   direction = 1,
   subtype = 3,
 }
@@ -16655,7 +16656,7 @@ stairs{
 teletransporter{
   layer = 0,
   x = 744,
-  y = 152,
+  y = 160,
   properties = {
     {
       key = "effect",

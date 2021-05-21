@@ -146,10 +146,10 @@ function item:on_using()
 
     local movement = sol.movement.create("straight")
     local angle = direction * math.pi / 2
-    movement:set_speed(config.speed)
+    movement:set_speed(config.speed * item:get_variant())
     movement:set_angle(angle)
     movement:set_smooth(false)
-    movement:set_max_distance(config.distance)
+    movement:set_max_distance(config.distance* item:get_variant())
     movement:start(hookshot)
 
     function movement:on_obstacle_reached()

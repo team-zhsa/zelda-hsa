@@ -12,7 +12,7 @@ local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
 
 function map:on_started()
-	audio_manager:play_music("outside/overworld")
+  game:start_field_audio()
 end
 
 -- Event called after the opening transition effect of the map,
