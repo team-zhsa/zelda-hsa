@@ -33,19 +33,26 @@ function map_submenu:on_started()
       hero_absolute_x = hero_absolute_x + hero_map_x
       hero_absolute_y = hero_absolute_y + hero_map_y
     end
+    if self.game:is_in_inside_world() then -- What maps are inside?
+      local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
+      hero_absolute_x = hero_absolute_x
+      hero_absolute_y = hero_absolute_y
+    end
     self.world_minimap_movement = nil
     self.world_minimap_visible_xy = {x = 0, y = 0}
-    if self.game:get_item("world_map"):get_variant() > 0 and (self.game:get_map():get_world() == "outside_world") then
-      map_shown = true      -- If in South Hyrule with World Map, then show the map.
-      self.outside_world_size = { width = 16640, height = 12960 }
-      self.outside_world_minimap_size = { width = 1664, height = 1296 }
-      self.world_minimap_img = sol.surface.create("menus/pause_outside_map.png")
-      local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 48
-      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28
-      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
-      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
+    if self.game:get_item("world_map"):get_variant() > 0 then
+			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
+	      map_shown = true      -- If in South Hyrule with World Map, then show the map.
+	      self.outside_world_size = { width = 15360, height = 12960 }
+	      self.outside_world_minimap_size = { width = 960, height = 816 }
+	      self.world_minimap_img = sol.surface.create("menus/pause_outside_map.png")
+	      local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
+	      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
+	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 52
+	      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28
+	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
+	      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
+			end
     else
       -- if World Map not in inventory, show clouds in map screen
       map_shown = false
@@ -280,7 +287,7 @@ function map_submenu:draw_world_map(dst_surface)
     -- Draw the hero's position.
     local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
-    if (hero_visible_y >= 51 and hero_visible_y <= 160 + 51) and (hero_visible_x >= 51 and hero_visible_x <= 200 + 51) then
+    if (hero_visible_y >= 40 and hero_visible_y <= 160 + 40) and (hero_visible_x >= 60 and hero_visible_x <= 200 + 60) then
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
     

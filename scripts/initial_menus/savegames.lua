@@ -17,16 +17,16 @@ function savegame_menu:on_started()
   local dialog_font, dialog_font_size = language_manager:get_dialog_font()
   local menu_font, menu_font_size = language_manager:get_menu_font()
   self.option1_text = sol.text_surface.create{
-    font = dialog_font,
+    font = "capital",
     font_size = dialog_font_size,
   }
   self.option2_text = sol.text_surface.create{
-    font = dialog_font,
+    font = "capital",
     font_size = dialog_font_size,
   }
   self.title_text = sol.text_surface.create{
     horizontal_alignment = "center",
-    font = menu_font,
+    font = "alttp",
     font_size = menu_font_size,
   }
   self.cursor_position = 1
@@ -132,8 +132,8 @@ function savegame_menu:on_draw(dst_surface)
   -- Background title.
   self.background_title_img:draw(self.surface, 0, 0)
   -- Savegames container.
-  self.background_img:draw(self.surface, 37, 5)
-  self.title_text:draw(self.surface, 160, 21)
+  self.background_img:draw(self.surface, 37, 32)
+  self.title_text:draw(self.surface, 160, 48)
 
   -- Phase-specific draw method.
   local method_name = "draw_phase_" .. self.phase
@@ -147,11 +147,11 @@ end
 function savegame_menu:draw_savegame(slot_index)
 
   local slot = self.slots[slot_index]
-  self.save_container_img:draw(self.surface, 57, 10 + slot_index * 27)
-  slot.player_name_text:draw(self.surface, 87, 23 + slot_index * 27)
+  self.save_container_img:draw(self.surface, 57, 53 + slot_index * 27)
+  slot.player_name_text:draw(self.surface, 87, 66 + slot_index * 27)
 
   if slot.hearts_view ~= nil then
-    slot.hearts_view:set_dst_position(168, 13 + slot_index * 27)
+    slot.hearts_view:set_dst_position(168, 56 + slot_index * 27)
     slot.hearts_view:on_draw(self.surface)
   end
 end
@@ -165,9 +165,9 @@ function savegame_menu:draw_savegame_cursor()
     x = 58
   end
   if self.cursor_position < 4 then
-    y = 11 + self.cursor_position * 27
+    y = 54 + self.cursor_position * 27
   else
-    y = 121
+    y = 164
   end
   self.cursor_sprite:draw(self.surface, x, y)
 end
@@ -175,22 +175,22 @@ end
 function savegame_menu:draw_savegame_number(slot_index)
 
   local slot = self.slots[slot_index]
-  slot.number_img:draw(self.surface, 61, 15 + slot_index * 27)
+  slot.number_img:draw(self.surface, 61, 58 + slot_index * 27)
 end
 
 function savegame_menu:draw_bottom_buttons()
 
   local x
-  local y = 120
+  local y = 163
   if self.option1_text:get_text():len() > 0 then
     x = 57
     self.option_container_img:draw(self.surface, x, y)
-    self.option1_text:draw(self.surface, 90, 134)
+    self.option1_text:draw(self.surface, 90, 173)
   end
   if self.option2_text:get_text():len() > 0 then
     x = 165
     self.option_container_img:draw(self.surface, x, y)
-    self.option2_text:draw(self.surface, 198, 134)
+    self.option2_text:draw(self.surface, 198, 173)
   end
 end
 
@@ -561,14 +561,14 @@ function savegame_menu:init_phase_options()
 
     -- Text surface of the label.
     option.label_text = sol.text_surface.create{
-      font = font,
+      font = "capital",
       font_size = font_size,
       text_key = "selection_menu.options." .. option.name
     }
 
     -- Text surface of the value.
     option.value_text = sol.text_surface.create{
-      font = font,
+      font = "capital",
       font_size = font_size,
       horizontal_alignment = "right"
     }
@@ -692,7 +692,7 @@ function savegame_menu:draw_phase_options()
 
   -- All options.
   for i, option in ipairs(self.options) do
-    local y = 32 + i * 16
+    local y = 75 + i * 16
     option.label_text:draw(self.surface, 64, y)
     option.value_text:draw(self.surface, 266, y)
   end
@@ -706,7 +706,7 @@ function savegame_menu:draw_phase_options()
     self:draw_savegame_cursor()
   else
     -- The cursor is on an option line.
-    local y = 26 + self.options_cursor_position * 16
+    local y = 75 + self.options_cursor_position * 16
     if self.modifying_option then
       local option = self.options[self.options_cursor_position]
       local width, _ = option.value_text:get_size()
@@ -812,7 +812,7 @@ function savegame_menu:init_phase_choose_name()
   self.player_name = ""
   local font, font_size = language_manager:get_menu_font()
   self.player_name_text = sol.text_surface.create{
-    font = font,
+    font = "alttp",
     font_size = font_size,
   }
   self.letter_cursor = { x = 0, y = 0 }
@@ -887,12 +887,12 @@ function savegame_menu:draw_phase_choose_name()
   -- Letter cursor.
   self.cursor_sprite:draw(self.surface,
       51 + 16 * self.letter_cursor.x,
-      55 + 18 * self.letter_cursor.y)
+      98 + 18 * self.letter_cursor.y)
 
   -- Name and letters.
-  self.name_arrow_sprite:draw(self.surface, 57, 38)
-  self.player_name_text:draw(self.surface, 67, 47)
-  self.letters_img:draw(self.surface, 57, 60)
+  self.name_arrow_sprite:draw(self.surface, 57, 81)
+  self.player_name_text:draw(self.surface, 67, 90)
+  self.letters_img:draw(self.surface, 57, 103)
 end
 
 function savegame_menu:add_letter_player_name()

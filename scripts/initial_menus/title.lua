@@ -1,6 +1,8 @@
 -- Title screen with an animation before the logo appears.
 
 local title_screen = {}
+local sword = sol.sprite.create("menus/title_sword")
+sword:set_animation("sword")
 
 function title_screen:on_started()
 

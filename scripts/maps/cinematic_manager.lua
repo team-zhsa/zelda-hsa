@@ -25,9 +25,8 @@ function map_meta:set_cinematic_mode(is_cinematic, options)
   local camera = map:get_camera()
 
   local hud_mode = is_cinematic and "dialog" or "normal"
-  game:set_hud_mode(hud_mode)
-  game:set_hud_additionnal_info_enabled(not is_cinematic)
-  game:set_suspended(is_cinematic)
+  game:set_hud_enabled(not is_cinematic)
+  --game:set_suspended(is_cinematic)
 
   -- Prevent or allow the player from pausing the game
   game:set_pause_allowed(not is_cinematic)

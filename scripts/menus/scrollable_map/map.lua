@@ -73,6 +73,17 @@ local function initialize_map_features(game)
 		end
   end)
 
+  game:register_event("on_joypad_button_pressed", function(game, button)
+		if button == 8 then
+			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) then
+			-- Prevents from loading map if paused.
+    		map_menu:open()
+			elseif sol.menu.is_started(map_menu) == true and not game:is_paused(true) then
+				map_menu:close()
+			end
+		end
+  end)
+
 end
 
 -- Set up the map menu on any game that starts.

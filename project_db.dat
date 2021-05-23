@@ -92,6 +92,7 @@ map{ id = "houses/out/sanctuary/1f", description = "Sanctuary (1st Floor)" }
 map{ id = "inside/castle/1f", description = "Castle (1st Floor)" }
 map{ id = "inside/castle/rooms", description = "Castle (Bedrooms)" }
 map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith Cave" }
+map{ id = "inside/caves/east_castle/east_swamp_path_cave", description = "East Swamp path cave" }
 map{ id = "inside/caves/east_castle/temple_of_time_path", description = "Temple of Time Path" }
 map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
@@ -106,8 +107,9 @@ map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle R
 map{ id = "inside/caves/mountains/to_fire_temple_1f", description = "Cave to Fire Temple (1st Floor)" }
 map{ id = "inside/caves/mountains_1f", description = "Mountains Caves (1st Floor)" }
 map{ id = "inside/caves/mountains_2f", description = "Mountains Caves (2nd Floor)" }
-map{ id = "inside/caves/north_west/grave_cave", description = "Grave Cave" }
 map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
+map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
+map{ id = "inside/caves/north_west/ruins_cave", description = "Ruins Cave" }
 map{ id = "inside/caves/pop_cave", description = "Prince of Persia Cave" }
 map{ id = "inside/caves/rick_cave", description = "Rick Roll Cave" }
 map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/rito_village/rito_village" }
@@ -193,7 +195,7 @@ map{ id = "out/g5", description = "out/g5" }
 map{ id = "out/g6", description = "out/g6" }
 map{ id = "out/g7", description = "G7 (Little Swamp)" }
 map{ id = "out/h2", description = "H2 (Hyrule Field)" }
-map{ id = "out/h3", description = "H3 (Hyrule Field)" }
+map{ id = "out/h3", description = "H3 (East Swamp)" }
 map{ id = "out/h4", description = "H4 (Lon Lon Ranch, needs to be redone with better graphics)" }
 map{ id = "out/h5", description = "out/h5" }
 map{ id = "out/h6", description = "out/h6" }
@@ -289,11 +291,11 @@ sprite{ id = "enemies/boss/ganon", description = "Ganon" }
 sprite{ id = "enemies/boss/lanmola", description = "enemies/boss/lanmola" }
 sprite{ id = "enemies/boss/lanmola_body", description = "enemies/boss/lanmola_body" }
 sprite{ id = "enemies/boss/lanmola_tail", description = "enemies/boss/lanmola_tail" }
-sprite{ id = "enemies/boss/moldorm/moldorm_body_1", description = "enemies/boss/moldorm/moldorm_body_1" }
-sprite{ id = "enemies/boss/moldorm/moldorm_body_2", description = "enemies/boss/moldorm/moldorm_body_2" }
-sprite{ id = "enemies/boss/moldorm/moldorm_body_3", description = "enemies/boss/moldorm/moldorm_body_3" }
-sprite{ id = "enemies/boss/moldorm/moldorm_eyes", description = "enemies/boss/moldorm/moldorm_eyes" }
-sprite{ id = "enemies/boss/moldorm/moldorm_head", description = "enemies/boss/moldorm/moldorm_head" }
+sprite{ id = "enemies/boss/moldorm", description = "Moldorm" }
+sprite{ id = "enemies/boss/moldorm_components/body_1", description = "Moldorm body 1" }
+sprite{ id = "enemies/boss/moldorm_components/body_2", description = "Moldorm body 2" }
+sprite{ id = "enemies/boss/moldorm_components/body_3", description = "Moldorm body 3" }
+sprite{ id = "enemies/boss/moldorm_components/tail", description = "Moldorm tail" }
 sprite{ id = "enemies/boss/spectral_ganon", description = "Spectral Ganon" }
 sprite{ id = "enemies/boss/tentacle_boss", description = "Tentacle Boss" }
 sprite{ id = "enemies/dungeons/arm_mimic", description = "Arm Mimic" }
@@ -406,6 +408,7 @@ sprite{ id = "enemies/outside/chuchu_yellow", description = "Yellow Chuchu" }
 sprite{ id = "enemies/outside/crab", description = "Crab" }
 sprite{ id = "enemies/outside/crab_huge", description = "Huge crab" }
 sprite{ id = "enemies/outside/crow", description = "Crow" }
+sprite{ id = "enemies/outside/deadrock", description = "Deadrock" }
 sprite{ id = "enemies/outside/geldman", description = "Geldman" }
 sprite{ id = "enemies/outside/geyser", description = "Geyser" }
 sprite{ id = "enemies/outside/giant_goponga_flower", description = "Giant Goponga Flower" }
@@ -977,6 +980,7 @@ sprite{ id = "fogs/rain", description = "Rain" }
 sprite{ id = "ground_effects/fall_on_hole", description = "ground_effects/fall_on_hole" }
 sprite{ id = "ground_effects/lava_splash", description = "ground_effects/lava_splash" }
 sprite{ id = "ground_effects/leaves", description = "ground_effects/leaves" }
+sprite{ id = "ground_effects/water", description = "Water" }
 sprite{ id = "ground_effects/water_splash", description = "ground_effects/water_splash" }
 sprite{ id = "hero/diving", description = "Diving" }
 sprite{ id = "hero/ground1", description = "Grass under hero" }
@@ -1073,6 +1077,7 @@ sprite{ id = "menus/pause_save_dialog", description = "Pause save dialog" }
 sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
+sprite{ id = "menus/title_sword", description = "Title sword" }
 sprite{ id = "npc/angry_brother", description = "Angry Brother" }
 sprite{ id = "npc/average_middle_aged_man", description = "Average Middle Aged Man" }
 sprite{ id = "npc/bird_green", description = "Green Bird" }
@@ -1243,6 +1248,7 @@ music{ id = "cutscenes/end_credits_alttp", description = "End credits" }
 music{ id = "cutscenes/fanfare", description = "Fanfare" }
 music{ id = "cutscenes/game_over", description = "Game Over" }
 music{ id = "cutscenes/kaepora_gaebora", description = "Kaepora Gaebora" }
+music{ id = "cutscenes/master_sword", description = "Master sword" }
 music{ id = "cutscenes/raining", description = "Beginning" }
 music{ id = "cutscenes/savegames", description = "Savegames" }
 music{ id = "cutscenes/song_learned", description = "Song learned" }
@@ -1269,7 +1275,7 @@ music{ id = "dungeons/13_cavern", description = "Cavern" }
 music{ id = "dungeons/15_lightning", description = "Lightning Temple" }
 music{ id = "dungeons/16_ganon", description = "Ganon Palace" }
 music{ id = "dungeons/18_secret", description = "Secret Dungeon" }
-music{ id = "dungeons/southern_shrine", description = "dungeons/southern_shrine" }
+music{ id = "dungeons/southern_shrine", description = "Southern Shrine" }
 music{ id = "dungeons/temple_sanctum", description = "Sanctum Temple" }
 music{ id = "effects/battle", description = "Battle" }
 music{ id = "effects/rain", description = "Rain" }
@@ -1307,6 +1313,7 @@ music{ id = "inside/shop", description = "Shop" }
 music{ id = "inside/temple_time", description = "Temple of Time" }
 music{ id = "inside/zant", description = "Zant" }
 music{ id = "outside/beach", description = "Beach" }
+music{ id = "outside/black_mist", description = "Black Mist" }
 music{ id = "outside/celesbourg", description = "Celesbourg" }
 music{ id = "outside/clock_town", description = "Clock Town" }
 music{ id = "outside/dark_world", description = "Dark World" }
@@ -1326,7 +1333,7 @@ music{ id = "outside/kakarico", description = "Kakarico Village" }
 music{ id = "outside/kokiri", description = "Kokiri Forest" }
 music{ id = "outside/lonlon", description = "Lonlon Ranch" }
 music{ id = "outside/lost_woods", description = "Lost Woods" }
-music{ id = "outside/mountains", description = "Mountains" }
+music{ id = "outside/mountains", description = "Death Mountains" }
 music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
 music{ id = "outside/overworld", description = "Overworld" }
@@ -1383,7 +1390,7 @@ sound{ id = "common/medalion/medalion_appear", description = "Medalion appears" 
 sound{ id = "common/minimap_off", description = "common/minimap_off" }
 sound{ id = "common/minimap_on", description = "common/minimap_on" }
 sound{ id = "common/minor_item", description = "Minor Item" }
-sound{ id = "common/secret_discover_minor", description = "Secret Discover" }
+sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/sidequest_major_item", description = "Major Item (Sidequest)" }
 sound{ id = "common/sidequest_minor_item", description = "Minor Item (Sidequest)" }
@@ -1404,6 +1411,8 @@ sound{ id = "enemy_killed", description = "enemy_killed" }
 sound{ id = "environment/thunder1", description = "Thunder" }
 sound{ id = "environment/thunder2", description = "Thunder" }
 sound{ id = "environment/thunder3", description = "Thunder" }
+sound{ id = "environment/thunder_double", description = "Thunder double" }
+sound{ id = "environment/thunder_far", description = "Thunder far" }
 sound{ id = "explosion", description = "explosion" }
 sound{ id = "external_stairs_down", description = "external_stairs_down" }
 sound{ id = "external_stairs_up", description = "external_stairs_up" }
@@ -1592,7 +1601,7 @@ item{ id = "random_west", description = "Random (West Hyrule)" }
 item{ id = "red_key", description = "Red Key" }
 item{ id = "red_potion", description = "Red Potion" }
 item{ id = "red_tunic", description = "Red tunic" }
-item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 100 / 200 / 500 / 1000 / 2000" }
+item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 1000)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "seashell", description = "Seashell" }
 item{ id = "seashells_counter", description = "Seashells counter" }
@@ -1642,11 +1651,10 @@ enemy{ id = "boss/lanmola_body", description = "boss/lanmola_body" }
 enemy{ id = "boss/lanmola_tail", description = "boss/lanmola_tail" }
 enemy{ id = "boss/moblin_chief", description = "Moblin chief" }
 enemy{ id = "boss/moldorm", description = "Moldorm" }
-enemy{ id = "boss/moldorm/moldorm_body_1", description = "Moldorm body 1" }
-enemy{ id = "boss/moldorm/moldorm_body_2", description = "Moldorm body 2" }
-enemy{ id = "boss/moldorm/moldorm_body_3", description = "Moldorm body 3" }
-enemy{ id = "boss/moldorm/moldorm_head", description = "Moldorm head" }
-enemy{ id = "boss/moldorm_boss", description = "Moldorm" }
+enemy{ id = "boss/moldorm_components/moldorm_body_1", description = "Moldorm body 1" }
+enemy{ id = "boss/moldorm_components/moldorm_body_2", description = "Moldorm body 2" }
+enemy{ id = "boss/moldorm_components/moldorm_body_3", description = "Moldorm body 3" }
+enemy{ id = "boss/moldorm_components/moldorm_head", description = "Moldorm head" }
 enemy{ id = "boss/rolling_bones", description = "Rolling bones" }
 enemy{ id = "boss/rolling_bones/rolling_bones_spike", description = "Rolling bones spike" }
 enemy{ id = "boss/spectral_ganon", description = "Spectral Ganon" }
@@ -1754,6 +1762,7 @@ enemy{ id = "outside/chuchu_yellow", description = "Yellow Chuchu" }
 enemy{ id = "outside/crab", description = "Crab" }
 enemy{ id = "outside/crab_huge", description = "Huge Crab" }
 enemy{ id = "outside/crow", description = "Crow" }
+enemy{ id = "outside/deadrock", description = "Deadrock" }
 enemy{ id = "outside/geldman", description = "Geldman" }
 enemy{ id = "outside/geyser", description = "Geyser" }
 enemy{ id = "outside/giant_goponga_flower", description = "Giant Goponga Flower" }
@@ -1769,6 +1778,7 @@ enemy{ id = "outside/moblin", description = "Moblin" }
 enemy{ id = "outside/moblin_green", description = "Green Moblin" }
 enemy{ id = "outside/moblin_red", description = "Red Moblin" }
 enemy{ id = "outside/octorok_blue", description = "Blue Octorok" }
+enemy{ id = "outside/octorok_green", description = "Green Octorok" }
 enemy{ id = "outside/octorok_red", description = "Red Octorok" }
 enemy{ id = "outside/octorok_stone", description = "Octorok Stone" }
 enemy{ id = "outside/peahat", description = "Peahat" }

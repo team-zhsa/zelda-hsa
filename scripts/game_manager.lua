@@ -13,6 +13,9 @@ local tone_manager = require("scripts/maps/daytime_manager")
 local condition_manager = require("scripts/hero_condition")
 local map_name = require("scripts/hud/map_name")
 local field_music = require("scripts/maps/hyrule_field")
+local effect_manager = require('scripts/maps/effect_manager')
+local gb = require('scripts/maps/gb_effect')
+local fsa = require('scripts/maps/fsa_effect')
 time_flow = 1000
 
 -- Creates a game ready to be played.
@@ -31,6 +34,10 @@ function game_manager:create(file)
 		condition_manager:initialize(game)
 		map_name:initialize(game)
 		field_music(game)
+    effect_manager:set_effect(game, fsa)
+    game:set_value("mode", "fsa")
+		game:set_time_flow(1000)
+    game:set_life(7 * 4)
 	end)
 
 	game:register_event("on_finished", function()

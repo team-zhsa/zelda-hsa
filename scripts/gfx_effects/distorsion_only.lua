@@ -24,7 +24,7 @@ function lib.start_effect(surface, game, mode, sfx, callback)
     return a+p*(b-a)
   end
   if sfx then
-    audio_manager:play_sound(sfx)
+    audio_manager:play_sound("world_warp")
   end
   surface:set_shader(shader_ocarina)
   local mask=sol.surface.create(surface:get_size())
@@ -60,30 +60,6 @@ function lib.start_effect(surface, game, mode, sfx, callback)
       end
       return false
     end
-    return true
-  end)
-  sol.timer.start(game, 10, function()
-    local dt=sol.main.get_elapsed_time()-start_time      
-    if mode == "in" then
-      alpha = math.floor(lerp(0, 255, dt/duration))
-      if alpha > 255 then
-        alpha = 255
-        if callback then
-          callback()
-        end
-        return false
-      end
-    else
-      alpha = math.floor(lerp (255, 0, dt/duration))
-      if alpha < 0 then
-        alpha = 0
-        if callback then
-          callback()
-        end
-        return false
-      end
-    end
-    mask:set_opacity(alpha)
     return true
   end)
 end

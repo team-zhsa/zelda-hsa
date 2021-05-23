@@ -14,7 +14,7 @@ function map_name:initialize(game)
   -- Map Name control
   function game:show_map_name(name, display_extra)
 		sol.menu.stop(map_name)
-    sol.menu.start(self, map_name, false)
+    sol.menu.start(self, map_name, true)
     map_name:show_name(name, display_extra or nil)
   end
 
