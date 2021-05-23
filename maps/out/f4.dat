@@ -373,24 +373,6 @@ tile{
 tile{
   layer = 0,
   x = 672,
-  y = 1200,
-  width = 32,
-  height = 48,
-  pattern = "279",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 1200,
-  width = 32,
-  height = 48,
-  pattern = "280",
-}
-
-tile{
-  layer = 0,
-  x = 672,
   y = 1176,
   width = 464,
   height = 24,
@@ -411,7 +393,7 @@ tile{
   x = 608,
   y = 448,
   width = 64,
-  height = 816,
+  height = 736,
   pattern = "6160",
 }
 
@@ -10616,7 +10598,7 @@ tile{
   layer = 0,
   x = 128,
   y = 1200,
-  width = 480,
+  width = 432,
   height = 40,
   pattern = "189",
 }
@@ -10632,9 +10614,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 672,
+  x = 720,
   y = 1200,
-  width = 480,
+  width = 432,
   height = 40,
   pattern = "189",
 }
@@ -12002,24 +11984,6 @@ teletransporter{
   destination = "_side",
 }
 
-sensor{
-  name = "layer_up_sensor",
-  layer = 0,
-  x = 600,
-  y = 1213,
-  width = 16,
-  height = 48,
-}
-
-sensor{
-  name = "layer_up_sensor_2",
-  layer = 0,
-  x = 680,
-  y = 1213,
-  width = 16,
-  height = 48,
-}
-
 dynamic_tile{
   layer = 0,
   x = 608,
@@ -12145,6 +12109,50 @@ teletransporter{
   height = 16,
   destination_map = "inside/castle/1f",
   destination = "from_outside_2",
+}
+
+wall{
+  layer = 0,
+  x = 672,
+  y = 1200,
+  width = 16,
+  height = 40,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 592,
+  y = 1200,
+  width = 16,
+  height = 40,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+sensor{
+  name = "layer_up_sensor",
+  layer = 0,
+  x = 552,
+  y = 1213,
+  width = 16,
+  height = 48,
+}
+
+sensor{
+  name = "layer_up_sensor_2",
+  layer = 0,
+  x = 728,
+  y = 1213,
+  width = 16,
+  height = 48,
 }
 
 tile{
@@ -15092,47 +15100,29 @@ tile{
 
 tile{
   layer = 1,
-  x = 608,
-  y = 1192,
-  width = 64,
-  height = 8,
-  pattern = "12572",
-}
-
-tile{
-  layer = 1,
-  x = 608,
-  y = 1240,
-  width = 64,
-  height = 8,
-  pattern = "12573",
-}
-
-tile{
-  layer = 1,
-  x = 608,
+  x = 560,
   y = 1200,
-  width = 64,
+  width = 160,
   height = 40,
   pattern = "189",
 }
 
 tile{
   layer = 1,
-  x = 576,
-  y = 1200,
-  width = 32,
-  height = 40,
-  pattern = "12344",
+  x = 536,
+  y = 1240,
+  width = 216,
+  height = 8,
+  pattern = "12573",
 }
 
 tile{
   layer = 1,
-  x = 672,
-  y = 1200,
-  width = 32,
-  height = 40,
-  pattern = "12344",
+  x = 528,
+  y = 1192,
+  width = 224,
+  height = 8,
+  pattern = "12572",
 }
 
 door{
@@ -15225,50 +15215,6 @@ door{
   sprite = "entities/doors/Outside/door_light01",
 }
 
-sensor{
-  name = "layer_down_sensor",
-  layer = 1,
-  x = 696,
-  y = 1213,
-  width = 16,
-  height = 48,
-}
-
-sensor{
-  name = "layer_down_sensor_2",
-  layer = 1,
-  x = 584,
-  y = 1213,
-  width = 16,
-  height = 48,
-}
-
-wall{
-  layer = 1,
-  x = 560,
-  y = 1184,
-  width = 160,
-  height = 16,
-  stops_hero = true,
-  stops_npcs = true,
-  stops_enemies = true,
-  stops_blocks = true,
-  stops_projectiles = true,
-}
-
-wall{
-  layer = 1,
-  x = 560,
-  y = 1240,
-  width = 160,
-  height = 16,
-  stops_hero = true,
-  stops_npcs = true,
-  stops_enemies = true,
-  stops_blocks = true,
-  stops_projectiles = true,
-}
-
 teletransporter{
   layer = 1,
   x = 1280,
@@ -15278,5 +15224,43 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/g4",
   destination = "_side",
+}
+
+dynamic_tile{
+  name = "invisible_tile",
+  layer = 1,
+  x = 528,
+  y = 1200,
+  width = 32,
+  height = 40,
+  pattern = "424",
+}
+
+dynamic_tile{
+  name = "invisible_tile_2",
+  layer = 1,
+  x = 720,
+  y = 1200,
+  width = 32,
+  height = 40,
+  pattern = "424",
+}
+
+sensor{
+  name = "layer_down_sensor",
+  layer = 1,
+  x = 536,
+  y = 1213,
+  width = 16,
+  height = 48,
+}
+
+sensor{
+  name = "layer_down_sensor_2",
+  layer = 1,
+  x = 744,
+  y = 1213,
+  width = 16,
+  height = 48,
 }
 

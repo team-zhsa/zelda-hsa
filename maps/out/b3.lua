@@ -10,12 +10,20 @@
 local map = ...
 local game = map:get_game()
 local camera = map:get_camera()
+local playing_maze
+local win_maze
+
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-	game:set_value("playing_maze", false)
-	game:set_value("win_maze", false)
 	game:show_map_name("kakarico_village")
+	playing_maze = false
+	win_maze = false
+end
+
+function map:on_finished()
+	playing_maze = false
+	win_maze = false
 end
 
 function grandma:on_interaction()
@@ -25,9 +33,6 @@ function grandma:on_interaction()
 end
 
 -- Maze Game
-
-local playing_maze = false
-local win_maze = false
 function npc_maze_game:on_interaction()
 	if playing_maze == false and win_maze == false then --not playing
 		game:start_dialog("maps.out.kakarico_village.maze_2", function(answer)
@@ -39,17 +44,18 @@ function npc_maze_game:on_interaction()
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze_3_yes")
 					playing_maze = true
-					sol.timer.start(game, 30000, function() --Timer for 30 seconds
-						playing_maze = false
+					sol.timer.start(game, 15000, function() --Timer for 15 seconds
+						--playing_maze = false
 						if not switch_maze_game:is_activated() then
 							game:start_dialog("maps.out.kakarico_village.maze_loose")
+							sol.audio.play_music("outside/kakarico")
 						end
 					end)
 					local num_calls = 0 --Timer for timer sound
 					sol.timer.start(game, 1000, function()
 			  		sol.audio.play_sound("danger")
 			  		num_calls = num_calls + 1
-			  		return num_calls < 30	
+			  		return num_calls < 15	
 					end)
 				elseif game:get_money() < 20 then
 					game:start_dialog("_shop.not_enough_money")

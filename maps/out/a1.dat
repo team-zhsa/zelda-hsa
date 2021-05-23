@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "Full Hyrule",
-  music = "outside/overworld",
+  music = "same",
 }
 
 tile{
@@ -12524,15 +12524,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 896,
-  y = 56,
-  width = 16,
-  height = 8,
-  pattern = "8453",
-}
-
-tile{
-  layer = 0,
   x = 1024,
   y = 56,
   width = 32,
@@ -19971,7 +19962,7 @@ enemy{
 teletransporter{
   layer = 0,
   x = 896,
-  y = 64,
+  y = 56,
   properties = {
     {
       key = "effect",
@@ -19988,7 +19979,7 @@ destination{
   name = "from_dungeon",
   layer = 0,
   x = 904,
-  y = 93,
+  y = 85,
   direction = 3,
 }
 
@@ -20202,7 +20193,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/north_west/grave_cave",
+  destination_map = "inside/caves/north_west/ruins_cave",
   destination = "from_outside",
 }
 
@@ -20255,25 +20246,48 @@ teletransporter{
 
 teletransporter{
   layer = 0,
-  x = 16,
-  y = 0,
-  width = 1264,
+  x = 0,
+  y = -16,
+  width = 1280,
   height = 16,
   transition = "scrolling",
-  destination_map = "out/a1",
-  destination = "_same",
+  destination_map = "out/a7",
+  destination = "_side",
+}
+
+destination{
+  name = "from_building",
+  layer = 0,
+  x = 584,
+  y = 1053,
+  direction = 3,
 }
 
 teletransporter{
   layer = 0,
-  x = 0,
-  y = 0,
+  x = 576,
+  y = 1024,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
-  height = 1440,
-  transition = "scrolling",
-  destination_map = "out/a1",
-  destination = "_same",
-  sound = "world_warp",
+  height = 16,
+  destination_map = "inside/caves/north_west/ruins_building",
+  destination = "from_outside",
+}
+
+custom_entity{
+  layer = 0,
+  x = 432,
+  y = 381,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/hook",
+  model = "hookable",
 }
 
 tile{
@@ -22749,5 +22763,14 @@ tile{
   width = 32,
   height = 8,
   pattern = "991",
+}
+
+tile{
+  layer = 1,
+  x = 896,
+  y = 56,
+  width = 16,
+  height = 8,
+  pattern = "8453",
 }
 

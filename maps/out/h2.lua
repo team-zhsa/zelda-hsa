@@ -10,24 +10,15 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
+local field_music_manager = require("scripts/maps/field_music_manager")
 
--- Map events
-map:register_event("on_started", function(map, destination)
+map:register_event("on_draw", function(map)
 
   -- Music
-  init_music()
+  field_music_manager:init(map)
 
 end)
 
--- Initialize the music of the map
-function init_music()
-  if game:get_value("time_of_day") == "day" then
-    audio_manager:play_music("outside/overworld")
-  elseif game:get_value("time_of_day") == "night" then
-    audio_manager:play_music("outside/field_night")
-  end
-
-end
 
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.

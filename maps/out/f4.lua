@@ -18,14 +18,9 @@ local function random_walk(npc)
   npc:get_sprite():set_animation("walking")
 end
 
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_started() 
-	--if not game:get_value("obtained_sword", true) then
---		game:set_world_rain_mode("outside_world", "rain")
-	--end
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
+map:register_event("on_started", function()
+	game:show_map_name("hyrule_town")
+end)
 
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
