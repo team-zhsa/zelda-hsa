@@ -866,16 +866,6 @@ sensor{
   height = 128,
 }
 
-custom_entity{
-  name = "placeholder_boss",
-  layer = 0,
-  x = 160,
-  y = 349,
-  width = 16,
-  height = 16,
-  direction = 0,
-}
-
 pickable{
   name = "heart_container",
   layer = 0,
@@ -992,11 +982,22 @@ destination{
 }
 
 pickable{
+  name = "pendant",
   layer = 0,
   x = 160,
   y = 93,
   treasure_name = "pendant_1",
   treasure_savegame_variable = "dungeon_1_pendant",
+}
+
+enemy{
+  name = "boss",
+  layer = 0,
+  x = 160,
+  y = 349,
+  direction = 0,
+  breed = "boss/tentacle_boss",
+  savegame_variable = "dungeon_1_boss",
 }
 
 tile{

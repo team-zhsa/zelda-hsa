@@ -1622,6 +1622,15 @@ tile{
   pattern = "wall_low.1-1",
 }
 
+tile{
+  layer = -1,
+  x = 616,
+  y = 936,
+  width = 24,
+  height = 48,
+  pattern = "wall_low.3-1",
+}
+
 crystal_block{
   layer = -1,
   x = 672,
@@ -1982,6 +1991,16 @@ teletransporter{
   transition = "scrolling",
   destination_map = "dungeons/2/1f",
   destination = "_side",
+}
+
+jumper{
+  layer = -1,
+  x = 584,
+  y = 1008,
+  width = 8,
+  height = 88,
+  direction = 0,
+  jump_length = 56,
 }
 
 tile{

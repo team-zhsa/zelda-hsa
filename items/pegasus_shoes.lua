@@ -31,7 +31,7 @@ end
 
 local game_meta = sol.main.get_metatable("game")
 game_meta:register_event("on_started", function(game)
-  game:register_event("on_command_pressed", function(game, command)
+  game:register_event("on_command_pressed", function(game, command) -- Trigger runnig with action
     -- Note : there is no "item_X" command check here, since this item has been integrated into the new global command override system.
     if not game:is_suspended() then
       if command == "action" then
@@ -52,6 +52,29 @@ game_meta:register_event("on_started", function(game)
           game:get_hero():run()
           return true
         end
+      end
+    end
+  end)
+
+  game:register_event("on_joypad_button_pressed", function(game, button)
+    -- Note : there is no "item_X" command check here, since this item has been integrated into the new global command override system.
+    if not game:is_suspended() then
+      if button == 5 or button == 7 then
+          local hero=game:get_hero()
+          local entity=hero:get_facing_entity()
+
+          if entity and entity:get_type()=="custom_entity" and entity:get_model() == "npc" then -- Special case for the custom NPC entity, because it could not interact with
+            return
+          end
+
+          local offsets = { {1, 0}, {0, -1}, {-1, 0}, {0, 1} }
+          local state = hero:get_state()
+          if hero:test_obstacles(unpack(offsets[hero:get_direction() + 1])) or state == "frozen" or state == "swimming" or state == "custom" and not hero:get_state_object():get_can_use_item("pegasus_shoes") then
+            return
+          end
+          -- Call custom run script.
+          game:get_hero():run()
+          return true
       end
     end
   end)
