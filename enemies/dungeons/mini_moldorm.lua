@@ -117,7 +117,7 @@ enemy:register_event("on_restarted", function(enemy)
   	sword = 1,
   	thrown_item = 2,
   	fire = 2,
-  	jump_on = "ignored",
+  	jump_on = 2,
   	hammer = 2,
   	hookshot = 2,
   	magic_powder = 2,

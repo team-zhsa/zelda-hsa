@@ -13,7 +13,7 @@ function entity:on_created()
   self:set_traversable_by(false)
   
   self:add_collision_test("touching", function(self, other)
-    if (other:get_type() == "hero" and game:get_hero():get_state() == "running") then
+    if (other:get_type() == "hero" and ( game:get_hero():get_state() == "custom" or hero:get_state_object():get_description()== "running" )) then
       sprite:set_animation("destroy")
       self:clear_collision_tests()
     end

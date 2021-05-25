@@ -1,92 +1,10 @@
 properties{
   x = 0,
   y = 0,
-  width = 2048,
-  height = 2048,
+  width = 640,
+  height = 640,
   min_layer = -2,
   max_layer = 2,
-  tileset = "Absolute Dungeon 08",
-}
-
-custom_entity{
-  layer = -2,
-  x = 8,
-  y = 13,
-  width = 2048,
-  height = 2048,
-  direction = 0,
-  sprite = "maps/alttp",
-}
-
-tile{
-  layer = 0,
-  x = 856,
-  y = 800,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.1-5",
-}
-
-tile{
-  layer = 0,
-  x = 856,
-  y = 824,
-  width = 24,
-  height = 32,
-  pattern = "wall.3-5",
-}
-
-tile{
-  layer = 0,
-  x = 856,
-  y = 856,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner_reverse.1-5b",
-}
-
-tile{
-  layer = 0,
-  x = 808,
-  y = 856,
-  width = 48,
-  height = 24,
-  pattern = "wall.1-5",
-}
-
-tile{
-  layer = 0,
-  x = 784,
-  y = 856,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.1-5",
-}
-
-tile{
-  layer = 0,
-  x = 784,
-  y = 880,
-  width = 24,
-  height = 16,
-  pattern = "wall.3-5",
-}
-
-tile{
-  layer = 0,
-  x = 784,
-  y = 912,
-  width = 24,
-  height = 48,
-  pattern = "wall.3-5",
-}
-
-tile{
-  layer = 0,
-  x = 832,
-  y = 984,
-  width = 64,
-  height = 24,
-  pattern = "wall.2-5",
+  tileset = "outside_additions",
 }
 

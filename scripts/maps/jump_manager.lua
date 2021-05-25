@@ -75,11 +75,6 @@ local function on_bounce_possible(entity)
   local hero = map:get_hero()
   for enemy in map:get_entities_by_type("enemy") do
     if hero:overlaps(enemy, "overlapping") and enemy:get_life() > 0 and not enemy:is_immobilized() then
-      local reaction = enemy:get_jump_on_reaction()
-      if reaction ~= "ignored" and reaction ~= "protected" then
-        enemy:receive_attack_consequence("jump_on", reaction)
-        entity.y_vel = 0 - math.abs(entity.y_vel)
-      end
     end
   end
 end

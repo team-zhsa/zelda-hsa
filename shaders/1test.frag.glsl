@@ -16,6 +16,6 @@ COMPAT_VARYING vec4 sol_vcolor;
 
 void main() {
     FragColor = COMPAT_TEXTURE(sol_texture, sol_vtex_coord.xy);
-    FragColor.rgb = (FragColor.rgb-0.38) * 400 / 100;
+    FragColor.rgb = (FragColor.rgb-0.38) * 250 / 100;
 }
 //

@@ -9,7 +9,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 
 -- Map events
 map:register_event("on_started", function(map, destination)
-	game:set_rain_mode("rain")
+	game:set_world_rain_mode("outside_world", "storm")
 	game:show_map_name("swamp")
   -- Music
   map:init_music()
@@ -18,4 +18,8 @@ end)
 -- Initialize the music of the map
 function map:init_music()
 	audio_manager:play_music("outside/black_mist")
+end
+
+function map:on_finished()
+	game:set_world_rain_mode("outside_world", nil)
 end

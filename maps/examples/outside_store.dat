@@ -4688,6 +4688,114 @@ tile{
   pattern = "3",
 }
 
+tile{
+  layer = 0,
+  x = 304,
+  y = 912,
+  width = 16,
+  height = 8,
+  pattern = "12851",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 1064,
+  width = 16,
+  height = 8,
+  pattern = "12853",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 912,
+  width = 32,
+  height = 8,
+  pattern = "12854",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 1064,
+  width = 32,
+  height = 8,
+  pattern = "12856",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 912,
+  width = 16,
+  height = 8,
+  pattern = "12857",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 1064,
+  width = 16,
+  height = 8,
+  pattern = "12859",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 1032,
+  width = 32,
+  height = 32,
+  pattern = "12855",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 920,
+  width = 16,
+  height = 32,
+  pattern = "12852",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 920,
+  width = 16,
+  height = 32,
+  pattern = "12858",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 1032,
+  width = 16,
+  height = 32,
+  pattern = "12852",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 1032,
+  width = 16,
+  height = 32,
+  pattern = "12858",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 920,
+  width = 32,
+  height = 32,
+  pattern = "12855",
+}
+
 custom_entity{
   layer = 0,
   x = 216,
@@ -4992,6 +5100,24 @@ destructible{
   destruction_sound = "objects/e_pot_shatter",
   weight = 1,
   can_be_cut = true,
+}
+
+sensor{
+  name = "layer_up_sensor",
+  layer = 0,
+  x = 320,
+  y = 949,
+  width = 48,
+  height = 16,
+}
+
+sensor{
+  name = "layer_up_sensor_2",
+  layer = 0,
+  x = 320,
+  y = 1045,
+  width = 48,
+  height = 16,
 }
 
 tile{
@@ -5660,6 +5786,33 @@ tile{
   pattern = "1470",
 }
 
+tile{
+  layer = 1,
+  x = 320,
+  y = 952,
+  width = 32,
+  height = 80,
+  pattern = "12855",
+}
+
+tile{
+  layer = 1,
+  x = 352,
+  y = 920,
+  width = 16,
+  height = 144,
+  pattern = "12858",
+}
+
+tile{
+  layer = 1,
+  x = 304,
+  y = 920,
+  width = 16,
+  height = 144,
+  pattern = "12852",
+}
+
 custom_entity{
   layer = 1,
   x = 208,
@@ -5798,5 +5951,43 @@ custom_entity{
   height = 40,
   direction = 3,
   sprite = "entities/palm",
+}
+
+dynamic_tile{
+  name = "invisible_tile",
+  layer = 1,
+  x = 320,
+  y = 1032,
+  width = 32,
+  height = 32,
+  pattern = "423",
+}
+
+dynamic_tile{
+  name = "invisible_tile_2",
+  layer = 1,
+  x = 320,
+  y = 920,
+  width = 32,
+  height = 32,
+  pattern = "423",
+}
+
+sensor{
+  name = "layer_down_sensor",
+  layer = 1,
+  x = 320,
+  y = 1061,
+  width = 48,
+  height = 16,
+}
+
+sensor{
+  name = "layer_down_sensor_2",
+  layer = 1,
+  x = 320,
+  y = 933,
+  width = 48,
+  height = 16,
 }
 

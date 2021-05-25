@@ -14,6 +14,7 @@ local map_tools=require("scripts/maps/map_tools")
 state:set_can_use_item(false)
 state:set_can_use_item("feather", true)
 state:set_can_traverse("crystal_block", false)
+state:set_can_traverse("jumper", true)
 local directions = {
   {
     key="right",

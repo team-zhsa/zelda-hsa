@@ -87,7 +87,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       -- Frozen
       local entity = hero:get_facing_entity()
       if entity ~= nil and entity:get_type() == "chest" and game:is_command_pressed("action") then
-        audio_manager:play_sound("misc/chest_open")
+        audio_manager:play_sound("chest_open")
       end
 
     end
@@ -149,7 +149,7 @@ function hero_meta.show_ground_effect(hero, id)
   local x,y, layer = hero:get_position()
   local ground_effect = map:create_custom_entity({
       name = "ground_effect",
-      sprite = "entities/ground_effects/"..id,
+      sprite = "ground_effects/"..id,
       x = x,
       y = y ,
       width = 16,
@@ -197,7 +197,7 @@ function hero_meta.play_ground_effect(hero)
     audio_manager:play_sound("walk_on_grass")
   elseif ground=="deep_water" or ground=="lava" then
     --print "plundged in some fluid"
-    audio_manager:play_sound("hero/diving")
+    audio_manager:play_sound("swim")
   else --Not a standard ground
     --print "landed in some other ground"
     for entity in map:get_entities_in_rectangle(x,y,1,1) do
@@ -288,28 +288,21 @@ function hero_meta:is_walking()
 
 end
 
-function hero_meta:on_taking_damage(damage)
+--[[function hero_meta:on_taking_damage(damage)
 
   local hero = self
   local game = hero:get_game()
   -- Calculate defense. Check tunic and powerups.
-  local defense_tunic = game:get_value("defense_tunic") or 1
-  local defense_powerup = hero.get_defense_powerup and hero:get_defense_powerup() or 1
-  local defense = defense_tunic * defense_powerup
+  local defense_tunic = game:get_value("tunic_equipped") or 1
+  local defense = defense_tunic
   -- Calculate final damage.
   local final_damage = math.ceil(damage/defense)
   -- Remove life.
-  game:remove_life(damage)
-  -- Charm
-  game.acorn_count = 0
-  if game.hero_charm then
-    game.hero_charm_hurt_counter = game.hero_charm_hurt_counter + 1
-    if game.hero_charm_hurt_counter == 3 then
-      hero:remove_charm()
-    end
-  end
+  game:remove_life(final_damage)
+	print(final_damage)
 
-end
+
+end--]]
 
 -- Returns true when the hero is jumping, even if running, jumping or loading the sword at the same time.
 function hero_meta.is_jumping(hero)
@@ -365,24 +358,6 @@ game_meta:register_event("on_map_changed", function(game, map)
 
   end)
 
---[[ Ugly workaround to make the fucking hero walking speed changes effective immediately even if he is on a tile that modify its speed, such as grass.
-hero_meta:register_event("set_walking_speed", function(hero, speed)
-
-  local map = hero:get_map()
-  local x, y, layer = hero:get_position()
-  local ground = map:create_destructible({
-    x = x,
-    y = y,
-    layer = layer,
-    sprite = "entities/destructibles/grass",
-    ground = "traversable"
-  })
-  ground:set_visible(false)
-  sol.timer.start(map, 100, function()
-    ground:remove()
-  end)
-end)
-
 -- Initialize hero behavior specific to this quest.
 hero_meta:register_event("on_created", function(hero)
     hero:set_previous_state("NONE", "")
@@ -398,7 +373,7 @@ hero_meta:register_event("on_created", function(hero)
   end)
 
 
---]]------------------------------------------------
+--------------------------------------------------
 -- Functions to fix tunic animation and direction.
 --------------------------------------------------
 local fixed_direction, fixed_stopped_animation, fixed_walking_animation

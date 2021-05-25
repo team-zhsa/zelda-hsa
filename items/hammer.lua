@@ -23,7 +23,7 @@ function item:on_using()
   item:set_pushed_stake(false)
   sol.timer.start(map, 200, function()
     if item:has_pushed_stake() then
-      sol.audio.play_sound("items/hammer/heavy_block_hit")  -- Successfully pushed a stake.
+      sol.audio.play_sound("items/hammer/hammer_stake")  -- Successfully pushed a stake.
     else
       sol.audio.play_sound("items/hammer/hit")  -- No stake was pushed.
     end

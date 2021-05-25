@@ -18507,15 +18507,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
-  y = 816,
-  width = 16,
-  height = 16,
-  pattern = "6144",
-}
-
-tile{
-  layer = 0,
   x = 944,
   y = 1152,
   width = 48,
@@ -19697,8 +19688,15 @@ npc{
   layer = 0,
   x = 216,
   y = 829,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
   direction = 3,
   subtype = 0,
+  sprite = "entities/sign",
   behavior = "dialog#maps.out.kakarico_village.sign_4",
 }
 

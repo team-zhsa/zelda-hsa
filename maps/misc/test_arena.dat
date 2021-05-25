@@ -1,8 +1,8 @@
 properties{
   x = 0,
   y = 0,
-  width = 320,
-  height = 240,
+  width = 720,
+  height = 720,
   min_layer = 0,
   max_layer = 2,
   tileset = "Absolute Dungeon 01",
@@ -1062,6 +1062,33 @@ tile{
   pattern = "wall.2-2",
 }
 
+tile{
+  layer = 0,
+  x = 368,
+  y = 240,
+  width = 288,
+  height = 400,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 192,
+  width = 16,
+  height = 272,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 432,
+  width = 144,
+  height = 32,
+  pattern = "floor.12-1",
+}
+
 destination{
   name = "destination",
   layer = 0,
@@ -1084,28 +1111,11 @@ teletransporter{
 
 enemy{
   layer = 0,
-  x = 200,
+  x = 168,
   y = 109,
   direction = 0,
-  breed = "dungeons/redead",
-}
-
-block{
-  layer = 0,
-  x = 88,
-  y = 125,
-  sprite = "entities/block",
-  pushable = true,
-  pullable = false,
-}
-
-block{
-  layer = 0,
-  x = 184,
-  y = 189,
-  sprite = "entities/block",
-  pushable = true,
-  pullable = false,
+  breed = "dungeons/beamos",
+  treasure_name = "heart_container",
 }
 
 tile{

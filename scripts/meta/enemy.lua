@@ -15,7 +15,7 @@ function enemy_meta:get_hero_weapons_reactions()
   reactions.explosion = self:get_attack_consequence("explosion")
   reactions.sword = self:get_attack_consequence("sword")
   reactions.thrown_item = self:get_attack_consequence("thrown_item")
---  reactions.fire = self:get_fire_reaction()
+  reactions.fire = self:get_fire_reaction()
   reactions.jump_on = self:get_jump_on_reaction()
   reactions.hammer = self:get_hammer_reaction()
   reactions.hookshot = self:get_hookshot_reaction()
@@ -47,24 +47,18 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
   if reactions.hookshot then
     self:set_hookshot_reaction(reactions.hookshot)
   end
---  if reactions.fire then
---    self:set_attack_consequence("fire", reactions.fire)
---  end
---[[  if reactions.jump_on then
-    self:set_jump_on_reaction(reactions.jump_on)
+  if reactions.fire then
+    self:set_attack_consequence("fire", reactions.fire)
   end
   if reactions.hammer then
     self:set_hammer_reaction(reactions.hammer)
-  end
-  if reactions.magic_powder then
-    self:set_magic_powder_reaction(reactions.magic_powder)
   end
   if reactions.shield then
     self:set_shield_reaction(reactions.shield)
   end
   if reactions.thrust then
     self:set_thrust_reaction(reactions.thrust)
-  end--]]
+  end
 end
 
 function enemy_meta:on_created()
@@ -80,7 +74,7 @@ function enemy_meta:on_created()
   -- Prevent the hero to be hurt if he is protected by the shield, or let the enemy decide if its on_attacking_hero() event is defined.
   if not self.on_attacking_hero then
     function self:on_attacking_hero(hero, enemy_sprite)
-      if --[[not hero:is_shield_protecting(self) and--]] not hero:is_blinking() then
+      if not hero:is_shield_protecting(self) and not hero:is_blinking() then
         hero:start_hurt(self, self:get_damage())
       end
     end
@@ -229,7 +223,7 @@ local function on_protected(enemy, attack)
   local hero = enemy:get_map():get_hero()
 
   -- Push the hero if attacked by close range hand weapon.
-  if attack == "sword" or attack == "shield" or attack == "thrust" or attack == "hammer" then
+  if attack == "sword" or attack == "shield" or attack == "thrust" or attack == "hammer" or attack == "jump_on" then
     push(hero, enemy, 150, 100)
 	elseif attack == "wind" then
 		push(custom_entity, enemy, 500, 200)

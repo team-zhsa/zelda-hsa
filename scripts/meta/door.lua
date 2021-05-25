@@ -16,7 +16,7 @@ door_meta:register_event("on_created", function(door)
     -- Opening animation  
     if sprite:get_animation() == "opening" and sound_is_playing == false then
       sound_is_playing = true
-      audio_manager:play_sound("misc/dungeon_door_open")
+      audio_manager:play_sound("common/door/mecanical_open")
       sol.timer.start(game, 50, function()
         sound_is_playing = false
       end)
@@ -24,7 +24,7 @@ door_meta:register_event("on_created", function(door)
     -- Closing animation  
     if sprite:get_animation() == "closing" and sound_is_playing == false then
       sound_is_playing = true
-      audio_manager:play_sound("misc/dungeon_door_slam")
+      audio_manager:play_sound("common/door/stone_slam")
       sol.timer.start(game, 50, function()
         sound_is_playing = false
       end)

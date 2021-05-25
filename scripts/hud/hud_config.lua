@@ -34,11 +34,18 @@ local hud_config = {
     y = -20,
   },
 
+  -- Clock icon.
+  {
+    menu_script = "scripts/hud/clock",
+    x = -26,
+    y = -26,
+  },
+
   -- Small key counter.
   {
     menu_script = "scripts/hud/small_keys",
     x = -36,
-    y = -18,
+    y = -32,
   },
 
   -- Floor view.
@@ -85,12 +92,6 @@ local hud_config = {
     y = 20,
   },
 
-  -- Clock icon.
-  {
-    menu_script = "scripts/hud/clock",
-    x = -32,
-    y = -64,
-  },
 
 }
 

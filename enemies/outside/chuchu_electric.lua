@@ -16,7 +16,7 @@ local audio_manager = require("scripts/audio_manager")
 local game = enemy:get_game()
 local map = enemy:get_map()
 local hero = map:get_hero()
-local sprite = enemy:create_sprite("enemies/outside/chuchu_yellow")
+local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local eighth = math.pi * 0.25
 
 -- Configuration variables
@@ -43,7 +43,7 @@ local function electrocute()
   hero:get_sprite():set_ignore_suspend(true)
   game:set_suspended(true)
   sprite:set_animation("shocking")
-  audio_manager:play_sound("ennemies/bari/b_state_e")
+  audio_manager:play_sound("enemies/bari/b_state_e")
   hero:set_animation("electrocuted")
   effect_model.start_effect(surface, game, 'in', false)
   local shake_config = {

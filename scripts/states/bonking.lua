@@ -61,7 +61,7 @@ function state:on_started()
   if shield:is_being_used() then
     shield:stop_using()
   end
-    jump_manager.start_parabola(entity, 2, function()
+    jump_manager.start_parabola(entity, 3, function()
         entity.bonking=nil
         audio_manager:play_sound("hero_lands")
         entity:unfreeze()

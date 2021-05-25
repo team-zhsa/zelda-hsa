@@ -37,10 +37,6 @@ map_meta:register_event("on_opening_transition_finished", function(map, destinat
       transition_finished_callback = nil
     end
 
-   --[[ if game.needs_running_restoration==true and game.prevent_running_restoration==nil then --Restore running state
-      hero:run(true)
-    end
-    game.prevent_running_restoration=nil --]]
 end)
 
 map_meta:register_event("on_started", function(map)
@@ -53,6 +49,8 @@ map_meta:register_event("on_started", function(map)
   else
     hero:set_visible()
   end
+
+
 end)
 
 map_meta:register_event("on_finished", function(map)

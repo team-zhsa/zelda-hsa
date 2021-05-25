@@ -37,7 +37,6 @@ function game_manager:create(file)
     effect_manager:set_effect(game, fsa)
     game:set_value("mode", "fsa")
 		game:set_time_flow(1000)
-    game:set_life(7 * 4)
 	end)
 
 	game:register_event("on_finished", function()

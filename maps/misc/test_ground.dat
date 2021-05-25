@@ -884,17 +884,6 @@ destination{
   sprite = "entities/Warps/destination",
 }
 
-teletransporter{
-  layer = 0,
-  x = 0,
-  y = 72,
-  width = 16,
-  height = 16,
-  destination_map = "inside/caves/pop_cave",
-  sprite = "entities/Warps/teletransporter",
-  sound = "world_warp",
-}
-
 chest{
   layer = 0,
   x = 200,
@@ -1187,6 +1176,17 @@ custom_entity{
   direction = 0,
   sprite = "entities/Blocks/block-dungeon1",
   model = "block",
+}
+
+custom_entity{
+  layer = 0,
+  x = 72,
+  y = 125,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "npc/hylian_isan",
+  model = "bowwow_follow",
 }
 
 tile{

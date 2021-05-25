@@ -39,10 +39,10 @@ function enemy:appear()
     sol.timer.start(enemy, throwing_duration, function()
       local fireball = enemy:create_enemy({
         name = (enemy:get_name() or enemy:get_breed()) .. "_fireball",
-        breed = "projectiles/beam_particle"
+        breed = "projectiles/fireball"
       })
       sprite:set_animation("firing")
-      sol.audio.play_sound("boss_fireball")
+      sol.audio.play_sound("zora")
       sol.timer.start(enemy, before_desappearing_delay, function()
         sprite:set_animation("disappearing", function()
           enemy:restart()

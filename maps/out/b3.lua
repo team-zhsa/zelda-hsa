@@ -40,7 +40,7 @@ function npc_maze_game:on_interaction()
 				if game:get_money() >= 20 then
 					game:remove_money(20)
 					switch_maze_game:set_activated(false)
-					hero:teleport("out/b3", "destination_maze")
+					npc_maze_game:set_traversable(true)
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze_3_yes")
 					playing_maze = true
@@ -83,6 +83,8 @@ function npc_maze_game:on_interaction()
 		win_maze = false
 		sol.audio.play_music("outside/kakarico")
 		hero:teleport("out/b3", "end_maze")
+	else
+		game:start_dialog("maps.out.kakarico_village.maze_loose")
 	end
 end
 

@@ -612,7 +612,8 @@ animation{
 animation{
   name = "victory",
   src_image = "hero/spin_attack.tunic1.png",
-  frame_delay = 30,
+  frame_delay = 50,
+  frame_to_loop_on = 17,
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 18 },
     { x = 0, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 18 },

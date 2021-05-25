@@ -17,5 +17,6 @@ end
 
 function item:on_using()
 	self:get_game():set_ability("tunic", 4)
+	self:get_game():set_value("tunic_equipped", 4)
 	self:get_map():get_hero():unfreeze()
 end

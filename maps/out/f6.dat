@@ -6927,17 +6927,9 @@ destructible{
   can_be_cut = true,
 }
 
-destination{
-  name = "from_swamp",
-  layer = 0,
-  x = 472,
-  y = 1381,
-  direction = 1,
-}
-
 teletransporter{
   layer = 0,
-  x = 464,
+  x = 456,
   y = 1424,
   properties = {
     {
@@ -6945,7 +6937,7 @@ teletransporter{
       value = "pixellisation",
     },
   },
-  width = 16,
+  width = 32,
   height = 16,
   destination_map = "out/f7",
   destination = "from_outside",
@@ -9808,6 +9800,14 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/g6",
   destination = "_side",
+}
+
+destination{
+  name = "from_swamp",
+  layer = 0,
+  x = 472,
+  y = 1397,
+  direction = 1,
 }
 
 tile{
