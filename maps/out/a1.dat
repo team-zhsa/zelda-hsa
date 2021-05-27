@@ -17452,8 +17452,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
-  y = 352,
+  x = 424,
+  y = 384,
   width = 8,
   height = 8,
   pattern = "101",
@@ -17461,8 +17461,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 424,
-  y = 352,
+  x = 416,
+  y = 384,
   width = 8,
   height = 8,
   pattern = "100",
@@ -19894,6 +19894,15 @@ tile{
   pattern = "1108",
 }
 
+tile{
+  layer = 0,
+  x = 424,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "1040",
+}
+
 teletransporter{
   layer = 0,
   x = 0,
@@ -20277,6 +20286,84 @@ teletransporter{
   height = 16,
   destination_map = "inside/caves/north_west/ruins_building",
   destination = "from_outside",
+}
+
+custom_entity{
+  layer = 0,
+  x = 432,
+  y = 261,
+  width = 16,
+  height = 8,
+  direction = 3,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
+}
+
+custom_entity{
+  layer = 0,
+  x = 432,
+  y = 333,
+  width = 16,
+  height = 8,
+  direction = 1,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1048,
+  y = 421,
+  width = 8,
+  height = 32,
+  direction = 2,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
+}
+
+custom_entity{
+  layer = 0,
+  x = 896,
+  y = 421,
+  width = 8,
+  height = 16,
+  direction = 0,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
+}
+
+custom_entity{
+  layer = 0,
+  x = 432,
+  y = 365,
+  width = 16,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 472,
+  y = 301,
+  width = 16,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 584,
+  y = 469,
+  width = 16,
+  height = 16,
+  direction = 0,
+  model = "hookable",
 }
 
 tile{

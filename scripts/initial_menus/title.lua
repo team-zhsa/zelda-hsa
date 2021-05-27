@@ -61,7 +61,7 @@ function title_screen:on_started()
 	sol.audio.play_music("cutscenes/title_screen_new", function()
 		sol.audio.stop_music()
 	end)
-	surface:fade_in(500)
+	surface:fade_in(100)
   -- Initialize or reinitialize the animation.
   animation_step = 0
   timer = nil

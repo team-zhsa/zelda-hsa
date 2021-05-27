@@ -42,7 +42,7 @@ function map:on_started(destination)
     sol.audio.play_music("cutscenes/cutscene_introduction_loop")
     sol.timer.start(3000, function()
       game:set_value("game_started", true)
-      map:wake_up()
+      map:jump_from_bed()
     end)
   end
 	if not game:get_value("obtained_sword", true) then

@@ -71,6 +71,7 @@ map{ id = "examples/entrance_to_death_mountain", description = "Entrance to Deat
 map{ id = "examples/entrance_to_zoras_river", description = "examples/entrance_to_zoras_river" }
 map{ id = "examples/fortune_teller", description = "examples/fortune_teller" }
 map{ id = "examples/hyrule_castle", description = "ALTTP Hyrule Castle outside" }
+map{ id = "examples/inside_store", description = "Inside Store" }
 map{ id = "examples/island", description = "island" }
 map{ id = "examples/kakariko_village", description = "ALTTP Kakariko Village" }
 map{ id = "examples/links_yard", description = "examples/links_yard" }
@@ -281,6 +282,7 @@ sprite{ id = "enemies/boss/moldorm_components/body_1", description = "Moldorm bo
 sprite{ id = "enemies/boss/moldorm_components/body_2", description = "Moldorm body 2" }
 sprite{ id = "enemies/boss/moldorm_components/body_3", description = "Moldorm body 3" }
 sprite{ id = "enemies/boss/moldorm_components/tail", description = "Moldorm tail" }
+sprite{ id = "enemies/boss/poe_big", description = "Big Poe" }
 sprite{ id = "enemies/boss/spectral_ganon", description = "Spectral Ganon" }
 sprite{ id = "enemies/boss/tentacle_boss", description = "Tentacle Boss" }
 sprite{ id = "enemies/dungeons/arm_mimic", description = "Arm Mimic" }
@@ -347,7 +349,6 @@ sprite{ id = "enemies/dungeons/pike_auto", description = "Pike (Auto)" }
 sprite{ id = "enemies/dungeons/pike_detect", description = "Pike (Detect)" }
 sprite{ id = "enemies/dungeons/pike_fixed", description = "Pike (Fixed)" }
 sprite{ id = "enemies/dungeons/poe", description = "Poe" }
-sprite{ id = "enemies/dungeons/poe_big", description = "Big Poe" }
 sprite{ id = "enemies/dungeons/pols_voice", description = "Pols Voice" }
 sprite{ id = "enemies/dungeons/rat", description = "Rat" }
 sprite{ id = "enemies/dungeons/red_duck_soldier_sword", description = "enemies/dungeons/red_duck_soldier_sword" }
@@ -802,6 +803,8 @@ sprite{ id = "entities/Symbols/notes", description = "Notes" }
 sprite{ id = "entities/Symbols/oh", description = "Oh" }
 sprite{ id = "entities/Symbols/prices", description = "Prices" }
 sprite{ id = "entities/Symbols/snores", description = "Snores" }
+sprite{ id = "entities/Utils/cliff", description = "Cliff marker" }
+sprite{ id = "entities/Utils/non_diggable", description = "Non diggable" }
 sprite{ id = "entities/Warps/destination", description = "Destination" }
 sprite{ id = "entities/Warps/teletransporter", description = "Teletransporter (Yellow)" }
 sprite{ id = "entities/Warps/teletransporter2", description = "Teletransporter (Blue)" }
@@ -1336,9 +1339,9 @@ music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
 music{ id = "outside/zora", description = "Zora Domain" }
 
 sound{ id = "arrow_hit", description = "Arrow hit" }
-sound{ id = "attack3", description = "attack3" }
-sound{ id = "attack4", description = "attack4" }
-sound{ id = "bomb", description = "bomb" }
+sound{ id = "attack3", description = "Attack 3" }
+sound{ id = "attack4", description = "Attack 4" }
+sound{ id = "bomb", description = "Bomb" }
 sound{ id = "boomerang", description = "Boomerang" }
 sound{ id = "boss_charge", description = "Boss Charge" }
 sound{ id = "boss_fireball", description = "Boss Fireball" }
@@ -1350,34 +1353,34 @@ sound{ id = "bow", description = "Bow" }
 sound{ id = "cane", description = "Cane" }
 sound{ id = "cannonball", description = "Cannonball" }
 sound{ id = "chest_open", description = "Chest Open" }
-sound{ id = "common/b_notebook_notification", description = "common/b_notebook_notification" }
+sound{ id = "common/b_notebook_notification", description = "Bombers notebook notification" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
 sound{ id = "common/bars_npc_dialog", description = "NPC Dialog Bars" }
 sound{ id = "common/big_item", description = "Big Item" }
-sound{ id = "common/chest_appear", description = "common/chest_appear" }
-sound{ id = "common/chest_creak", description = "common/chest_creak" }
-sound{ id = "common/chest_minor_item", description = "common/chest_minor_item" }
-sound{ id = "common/chest_opening", description = "common/chest_opening" }
+sound{ id = "common/chest_appear", description = "Chest appearing" }
+sound{ id = "common/chest_creak", description = "Chest creaking" }
+sound{ id = "common/chest_minor_item", description = "Chest minor item" }
+sound{ id = "common/chest_opening", description = "Chest opening" }
 sound{ id = "common/dialog/message_end", description = "Message end" }
 sound{ id = "common/dialog/message_letter", description = "Message letter" }
 sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
 sound{ id = "common/door/stone_slam", description = "Stone door slam" }
 sound{ id = "common/get_piece_of_heart", description = "Get piece of heart" }
-sound{ id = "common/get_small_item0", description = "common/get_small_item0" }
-sound{ id = "common/get_small_item1", description = "common/get_small_item1" }
-sound{ id = "common/gong", description = "common/gong" }
-sound{ id = "common/heart_container", description = "common/heart_container" }
-sound{ id = "common/hint_notification", description = "common/hint_notification" }
-sound{ id = "common/item_away", description = "common/item_away" }
-sound{ id = "common/item_in_deep_water", description = "common/item_in_deep_water" }
-sound{ id = "common/item_in_hole", description = "common/item_in_hole" }
-sound{ id = "common/item_in_lava", description = "common/item_in_lava" }
-sound{ id = "common/item_letter", description = "common/item_letter" }
-sound{ id = "common/item_show", description = "common/item_show" }
+sound{ id = "common/get_small_item0", description = "Get small item 0" }
+sound{ id = "common/get_small_item1", description = "Get small item 1" }
+sound{ id = "common/gong", description = "Gong" }
+sound{ id = "common/heart_container", description = "Get heart container" }
+sound{ id = "common/hint_notification", description = "Hint notification" }
+sound{ id = "common/item_away", description = "Item away" }
+sound{ id = "common/item_in_deep_water", description = "Item in deep water" }
+sound{ id = "common/item_in_hole", description = "Item in hole" }
+sound{ id = "common/item_in_lava", description = "Item in lava" }
+sound{ id = "common/item_letter", description = "Get letter" }
+sound{ id = "common/item_show", description = "Showing item" }
 sound{ id = "common/magic_bar/6", description = "6" }
 sound{ id = "common/medalion/medalion_appear", description = "Medalion appears" }
-sound{ id = "common/minimap_off", description = "common/minimap_off" }
-sound{ id = "common/minimap_on", description = "common/minimap_on" }
+sound{ id = "common/minimap_off", description = "Minimap off" }
+sound{ id = "common/minimap_on", description = "Minimap on" }
 sound{ id = "common/minor_item", description = "Minor Item" }
 sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
@@ -1395,19 +1398,19 @@ sound{ id = "enemies/bari/b_state_e", description = "Bari state E" }
 sound{ id = "enemies/beamos", description = "Beamos" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
-sound{ id = "enemy_awake", description = "enemy_awake" }
-sound{ id = "enemy_hurt", description = "enemy_hurt" }
-sound{ id = "enemy_killed", description = "enemy_killed" }
+sound{ id = "enemy_awake", description = "Enemy awoken" }
+sound{ id = "enemy_hurt", description = "Enemy hurt" }
+sound{ id = "enemy_killed", description = "Enemy killed" }
 sound{ id = "environment/thunder1", description = "Thunder" }
 sound{ id = "environment/thunder2", description = "Thunder" }
 sound{ id = "environment/thunder3", description = "Thunder" }
 sound{ id = "environment/thunder_double", description = "Thunder double" }
 sound{ id = "environment/thunder_far", description = "Thunder far" }
-sound{ id = "explosion", description = "explosion" }
-sound{ id = "external_stairs_down", description = "external_stairs_down" }
-sound{ id = "external_stairs_up", description = "external_stairs_up" }
+sound{ id = "explosion", description = "Explosion" }
+sound{ id = "external_stairs_down", description = "External stairs down" }
+sound{ id = "external_stairs_up", description = "External stairs up" }
 sound{ id = "freeze", description = "Freeze" }
-sound{ id = "heart_container", description = "heart_container" }
+sound{ id = "heart_container", description = "Get heart container" }
 sound{ id = "hero_dying", description = "hero_dying" }
 sound{ id = "hero_falls", description = "hero_falls" }
 sound{ id = "hero_hurt", description = "hero_hurt" }
@@ -1450,16 +1453,16 @@ sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" 
 sound{ id = "jump", description = "Jump" }
 sound{ id = "lift", description = "lift" }
 sound{ id = "menu/cursor", description = "Cursor" }
-sound{ id = "menu/dir_left", description = "menu/dir_left" }
-sound{ id = "menu/dir_right", description = "menu/dir_right" }
+sound{ id = "menu/dir_left", description = "Left" }
+sound{ id = "menu/dir_right", description = "Right" }
 sound{ id = "menu/fileselect_created", description = "Fileselect created" }
 sound{ id = "menu/fileselect_erase0", description = "Fileselect erase" }
 sound{ id = "menu/fileselect_start", description = "Fileselect start" }
 sound{ id = "menu/letter_add", description = "Letter add" }
 sound{ id = "menu/letter_back", description = "Letter back" }
 sound{ id = "menu/option_modifyvalue", description = "Option" }
-sound{ id = "menu/pause_close", description = "menu/pause_close" }
-sound{ id = "menu/pause_open", description = "menu/pause_open" }
+sound{ id = "menu/pause_close", description = "Pause close" }
+sound{ id = "menu/pause_open", description = "Pause open" }
 sound{ id = "menu/select", description = "Select" }
 sound{ id = "message_end", description = "message_end" }
 sound{ id = "message_letter", description = "message_letter" }
@@ -1646,6 +1649,7 @@ enemy{ id = "boss/moldorm_components/moldorm_body_1", description = "Moldorm bod
 enemy{ id = "boss/moldorm_components/moldorm_body_2", description = "Moldorm body 2" }
 enemy{ id = "boss/moldorm_components/moldorm_body_3", description = "Moldorm body 3" }
 enemy{ id = "boss/moldorm_components/moldorm_head", description = "Moldorm head" }
+enemy{ id = "boss/poe_big", description = "Big Poe" }
 enemy{ id = "boss/rolling_bones", description = "Rolling bones" }
 enemy{ id = "boss/rolling_bones/rolling_bones_spike", description = "Rolling bones spike" }
 enemy{ id = "boss/spectral_ganon", description = "Spectral Ganon" }
@@ -1705,7 +1709,6 @@ enemy{ id = "dungeons/pike_auto", description = "Pike (Auto)" }
 enemy{ id = "dungeons/pike_detect", description = "Pike (Detect)" }
 enemy{ id = "dungeons/pike_fixed", description = "Pike (Fixed)" }
 enemy{ id = "dungeons/poe", description = "Poe" }
-enemy{ id = "dungeons/poe_big", description = "Big Poe" }
 enemy{ id = "dungeons/pols_voice", description = "Pols Voice" }
 enemy{ id = "dungeons/rat", description = "Rat" }
 enemy{ id = "dungeons/redead", description = "ReDead" }
@@ -2149,6 +2152,8 @@ file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/ganon.dat", author = "Linkff", }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, Lucifer", }
+file{ path = "sprites/entities/Utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/Utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/boomerang.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }

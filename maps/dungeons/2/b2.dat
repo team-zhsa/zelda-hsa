@@ -2774,6 +2774,15 @@ tile{
   pattern = "stairs_down.2.border.1-1",
 }
 
+tile{
+  layer = -1,
+  x = 1504,
+  y = 1344,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner.4-1",
+}
+
 wall{
   layer = -1,
   x = 896,
@@ -3275,6 +3284,32 @@ sensor{
   y = 1597,
   width = 16,
   height = 16,
+}
+
+destination{
+  name = "from_b3",
+  layer = -1,
+  x = 1464,
+  y = 1317,
+  direction = 1,
+}
+
+teletransporter{
+  layer = -1,
+  x = 1456,
+  y = 1304,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/2/b3",
+  destination = "from_b2",
+}
+
+stairs{
+  layer = -1,
+  x = 1456,
+  y = 1304,
+  direction = 1,
+  subtype = 3,
 }
 
 tile{
@@ -9547,15 +9582,6 @@ tile{
   width = 32,
   height = 288,
   pattern = "floor.12-1",
-}
-
-tile{
-  layer = 0,
-  x = 1504,
-  y = 1344,
-  width = 24,
-  height = 24,
-  pattern = "wall_low.corner.4-1",
 }
 
 tile{
