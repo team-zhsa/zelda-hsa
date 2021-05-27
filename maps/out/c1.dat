@@ -40,6 +40,168 @@ tile{
 
 tile{
   layer = 0,
+  x = 720,
+  y = 96,
+  width = 432,
+  height = 400,
+  pattern = "349",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 184,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 152,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 1024,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1024,
+  y = 136,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 136,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "4024",
+}
+
+tile{
+  layer = 0,
+  x = 1128,
+  y = 136,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1056,
+  y = 128,
+  width = 64,
+  height = 16,
+  pattern = "67",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 136,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 112,
+  width = 64,
+  height = 384,
+  pattern = "349",
+}
+
+tile{
+  layer = 0,
+  x = 1168,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 152,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 1160,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1176,
+  y = 184,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
   x = 144,
   y = 160,
   width = 16,
@@ -126,24 +288,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "1014",
-}
-
-tile{
-  layer = 0,
-  x = 720,
-  y = 96,
-  width = 432,
-  height = 400,
-  pattern = "349",
-}
-
-tile{
-  layer = 0,
-  x = 1152,
-  y = 112,
-  width = 64,
-  height = 384,
-  pattern = "349",
 }
 
 tile{
@@ -27695,6 +27839,43 @@ tile{
   pattern = "12456",
 }
 
+tile{
+  layer = 0,
+  x = 1128,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "4023",
+}
+
+tile{
+  layer = 0,
+  x = 1120,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 1048,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+jumper{
+  layer = 0,
+  x = 1016,
+  y = 152,
+  width = 40,
+  height = 40,
+  direction = 3,
+  jump_length = 40,
+}
+
 destructible{
   layer = 0,
   x = 1088,
@@ -27860,16 +28041,6 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 1016,
-  y = 152,
-  width = 40,
-  height = 40,
-  direction = 3,
-  jump_length = 40,
-}
-
-jumper{
-  layer = 0,
   x = 1056,
   y = 144,
   width = 64,
@@ -28030,6 +28201,78 @@ jumper{
   height = 32,
   direction = 5,
   jump_length = 80,
+}
+
+enemy{
+  layer = 0,
+  x = 472,
+  y = 77,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 248,
+  y = 221,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 760,
+  y = 141,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 664,
+  y = 125,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 984,
+  y = 125,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 1208,
+  y = 157,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 1208,
+  y = 397,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 1112,
+  y = 397,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
 }
 
 tile{

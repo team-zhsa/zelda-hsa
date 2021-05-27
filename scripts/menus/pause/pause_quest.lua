@@ -14,7 +14,7 @@ local item_names_static_left = {
 }
 local item_names_static_right = {
   "world_map",
-  "slim_key",
+  "seas_map",
   "angler_key",
   "face_key",
   "bird_key",

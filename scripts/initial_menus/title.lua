@@ -1,43 +1,158 @@
--- Title screen with an animation before the logo appears.
+-- Animated Solarus logo by Maxs.
 
+-- You may include this logo in your quest to show that you use Solarus,
+-- but this is not mandatory.
+
+-- Example of use:
+-- local solarus_logo = require("menus/solarus_logo")
+-- sol.menu.start(solarus_logo)
+-- function solarus_logo:on_finished()
+--   -- Do whatever you want next (show a title screen, start a game...)
+-- end
 local title_screen = {}
+
+-- Main surface of the menu.
+local surface = sol.surface.create(320, 256)
+
+-- Solarus title sprite.
+local title = sol.surface.create("menus/title_text.png")
+
+-- Solarus background sprite.
+local background = sol.surface.create("menus/title.png")
+
+-- Sword sprite.
 local sword = sol.sprite.create("menus/title_sword")
 sword:set_animation("sword")
 
+-- Black square below the sun.
+local white = sol.surface.create(320, 256)
+white:fill_color{255, 255, 255}
+
+-- Step of the animation.
+local animation_step = 0
+
+-- Time handling.
+local timer = nil
+
+-------------------------------------------------------------------------------
+
+-- Rebuilds the whole surface of the menu.
+local function rebuild_surface()
+
+  surface:clear()
+
+  -- Draw the black square to partially hide the sun.
+  white:draw(surface, 0, 0)
+	background:draw(surface)
+
+  -- Draw the sword.
+  sword:draw(surface, 52, 128)
+  
+  -- Draw the title (after step 1).
+  if animation_step >= 1 then
+    title:draw(surface, 84, 55)
+  end
+end
+
+-------------------------------------------------------------------------------
+
+-- Starting the menu.
 function title_screen:on_started()
+	sol.audio.play_music("cutscenes/title_screen_new", function()
+		sol.audio.stop_music()
+	end)
+	surface:fade_in(500)
+  -- Initialize or reinitialize the animation.
+  animation_step = 0
+  timer = nil
+  surface:set_opacity(255)
+  sword:set_xy(55, -130)
+  -- Start the animation.
+	sol.timer.start(title_screen, 9000, function()
+  	title_screen:start_animation()
+	end)
+  -- Update the surface.
+  rebuild_surface()
+end
 
-  self.phase = "black"
-  self.surface = sol.surface.create(320, 256)
-  -- Black screen during 0.3 seconds
-  self.timer = sol.timer.start(self, 300, function()
-    self:phase_title()
+-- Animation step 1.
+function title_screen:step1()
+  white:draw(surface, 0, 0)
+	surface:set_shader(sol.shader.create("flickering_opaque"))
+	sol.timer.start(title_screen, 1000, function()
+		surface:set_shader(sol.shader.create("default"))
+	end)
+  title:draw(surface, 52, 0)
+  animation_step = 1
+  sword:stop_movement()
+  sword:set_xy(55, 42)
+  -- Play a sound.
+  sol.audio.play_sound("scene/title/solarus_logo")
+  -- Update the surface.
+  rebuild_surface()
+end
+
+-- Animation step 2.
+function title_screen:step2()
+  animation_step = 2
+  -- Update the surface.
+  rebuild_surface()
+  -- Start the final timer.
+  sol.timer.start(title_screen, 22000, function()
+    surface:fade_out()
+    sol.timer.start(title_screen, 700, function()
+      sol.menu.stop(title_screen)
+    end)
   end)
-
-  -- Preload sounds
-  sol.audio.preload_sounds()
-
 end
 
-function title_screen:phase_title()
+-- Run the logo animation.
+function title_screen:start_animation()
 
-  -- actual title screen
-  self.phase = "title"
-  self.surface:fade_in(30)
-  -- start music
-  sol.audio.play_music("cutscenes/title_screen_new")
-  local background_img = sol.surface.create("menus/title.png")
-  local width, height = background_img:get_size()
-  local x, y = 160 - width / 2, 120 - height / 2
-  background_img:draw(self.surface, x, y)
 
+  -- Move the sword.
+  local sword_movement = sol.movement.create("target")
+  sword_movement:set_speed(320)
+  sword_movement:set_target(55, 42)
+  -- Update the surface whenever the sword moves.
+  function sword_movement:on_position_changed()
+    rebuild_surface()
+  end
+
+  -- Start the movements.
+    sword_movement:start(sword, function()
+
+      if not sol.menu.is_started(title_screen) then
+        -- The menu may have been stopped, but the movement continued.
+        return
+      end
+
+      -- If the animation step is not greater than 0
+      -- (if no key was pressed).
+      if animation_step <= 0 then
+        -- Start step 1.
+        title_screen:step1()
+        -- Create the timer for step 2.
+        timer = sol.timer.start(title_screen, 3000, function()
+          -- If the animation step is not greater than 1
+          -- (if no key was pressed).
+          if animation_step <= 1 then
+            -- Start step 2.
+            title_screen:step2()
+          end
+        end)
+      end
+    end)
 end
 
+-- Draws this menu on the quest screen.
 function title_screen:on_draw(dst_surface)
 
   local width, height = dst_surface:get_size()
-  self.surface:draw(dst_surface, width / 2 - 160, height / 2 - 120)
+  surface:draw(dst_surface, width / 2 - 160, height / 2 - 120)
 
 end
+
 
 function title_screen:on_key_pressed(key)
 
@@ -48,7 +163,7 @@ function title_screen:on_key_pressed(key)
     sol.main.exit()
 
   elseif key == "space" or key == "return" then
-     self.timer:stop()
+     timer:stop()
      handled = true
      sol.menu.stop(self)
 

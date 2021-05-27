@@ -31439,16 +31439,6 @@ sensor{
   height = 16,
 }
 
-teletransporter{
-  layer = 0,
-  x = 648,
-  y = 656,
-  width = 16,
-  height = 16,
-  destination_map = "inside/caves/goron_1f",
-  destination = "from_outside",
-}
-
 destination{
   name = "from_goron",
   layer = 0,
@@ -32641,7 +32631,7 @@ jumper{
   width = 48,
   height = 8,
   direction = 6,
-  jump_length = 144,
+  jump_length = 128,
 }
 
 jumper{
@@ -32814,18 +32804,18 @@ sensor{
 sensor{
   name = "sensor_activate_boulder_8",
   layer = 0,
-  x = 808,
+  x = 792,
   y = 621,
-  width = 16,
+  width = 48,
   height = 16,
 }
 
 sensor{
   name = "sensor_deactivate_boulder",
   layer = 0,
-  x = 464,
-  y = 437,
-  width = 16,
+  x = 440,
+  y = 445,
+  width = 64,
   height = 16,
 }
 

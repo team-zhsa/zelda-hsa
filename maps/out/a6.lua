@@ -10,6 +10,11 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
+local field_music_manager = require("scripts/maps/field_music_manager")
 
-function map:on_started()
-end
+map:register_event("on_draw", function(map)
+
+  -- Music
+  field_music_manager:init(map)
+
+end)

@@ -7,7 +7,7 @@ local steps={
   "dungeons_1_discovered",
   "dungeon_1_completed",
   "bowwow_dognapped",
-  "bowwow_joined",
+  "dungeon_2_discovered",
   "dungeon_2_completed",
   "bowwow_returned",
   "castle_bridge_built",
@@ -20,7 +20,7 @@ local steps={
   "marin_joined",
   "walrus_awakened",
   "sandworm_killed",
-  "dungeon_4_key_obtained",
+  "dungeon_4_discovered",
   "dungeon_4_opened",
   "dungeon_4_completed",
 }

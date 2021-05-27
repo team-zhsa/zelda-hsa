@@ -143,27 +143,6 @@ function hero_meta.get_previous_state(hero)
   return hero.prev_state, hero.prev_cstate_name
 end
 
-function hero_meta.show_ground_effect(hero, id)
-
-  local map = hero:get_map()
-  local x,y, layer = hero:get_position()
-  local ground_effect = map:create_custom_entity({
-      name = "ground_effect",
-      sprite = "ground_effects/"..id,
-      x = x,
-      y = y ,
-      width = 16,
-      height = 16,
-      layer = layer,
-      direction = 0
-    })
-  local sprite = ground_effect:get_sprite()
-  function sprite:on_animation_finished()
-    ground_effect:remove()
-  end
-
-end
-
 local function find_valid_ground(hero)
 
   local ground
@@ -288,21 +267,17 @@ function hero_meta:is_walking()
 
 end
 
---[[function hero_meta:on_taking_damage(damage)
+-- Redefine how to calculate the damage received by the hero.
+function hero_meta:on_taking_damage(damage)
 
-  local hero = self
-  local game = hero:get_game()
-  -- Calculate defense. Check tunic and powerups.
-  local defense_tunic = game:get_value("tunic_equipped") or 1
-  local defense = defense_tunic
-  -- Calculate final damage.
-  local final_damage = math.ceil(damage/defense)
-  -- Remove life.
-  game:remove_life(final_damage)
+  -- In the parameter, the damage unit is 1/2 of a heart.
+  local game = self:get_game()
+  local defense = self:get_ability("tunic")
+	local final_damage = damage / defense
 	print(final_damage)
 
+end
 
-end--]]
 
 -- Returns true when the hero is jumping, even if running, jumping or loading the sword at the same time.
 function hero_meta.is_jumping(hero)

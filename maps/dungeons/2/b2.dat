@@ -11844,6 +11844,15 @@ tile{
   pattern = "torch_big.bottom",
 }
 
+tile{
+  layer = 0,
+  x = 1128,
+  y = 984,
+  width = 16,
+  height = 16,
+  pattern = "telepathic_stone",
+}
+
 dynamic_tile{
   name = "dynamic_water_1",
   layer = 0,
@@ -13544,6 +13553,15 @@ sensor{
   y = 1197,
   width = 32,
   height = 16,
+}
+
+npc{
+  name = "ocarina_test",
+  layer = 0,
+  x = 1136,
+  y = 997,
+  direction = 3,
+  subtype = 0,
 }
 
 tile{

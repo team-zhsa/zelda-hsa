@@ -19,7 +19,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 local cannonball_manager = require("scripts/maps/cannonball_manager")
 cannonball_manager:create_cannons(map, "cannon_")
 local water_delay = 500
-
+local pool_full = false
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 	separator_manager:manage_map(map)
@@ -59,6 +59,7 @@ function switch_24_pool_fill:on_activated()
   for tile in map:get_entities("static_water_") do
     tile:set_enabled(true)
   end
+	pool_full = true
 end
 
 -- Pool empty switch mechanism
@@ -88,4 +89,5 @@ function switch_24_pool_empty:on_activated()
   for tile in map:get_entities("static_water_") do
     tile:set_enabled(false)
   end
+	pool_full = false
 end

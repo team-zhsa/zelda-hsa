@@ -1194,6 +1194,16 @@ Quelle extase !
 }
 
 dialog{
+  id = "_treasure.seas_map.1",
+  icon = "150",
+  text = [[
+Tu as obtenu la Carte des Mers !$0
+Tu peux désormais explorer les
+terres situées au-delà d'Hyrule !
+]],
+}
+
+dialog{
   id = "_treasure.seashell.1",
   icon = "94",
   text = [[
@@ -1314,6 +1324,64 @@ Clé Flagello!
 Tu peux ouvrir  
 la porte de la  
 Cave Flagello!
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.1",
+  icon = "160",
+  text = [[
+Tu as obtenu de la paille !$0
+Peut-être qu'elle te servira à
+obtenir des graines ?
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.2",
+  icon = "161",
+  text = [[
+Tu as échangé la paille contre
+des graines !$0
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.3",
+  icon = "162",
+  text = [[
+Tu as obtenu le livre rouge ! $0
+Il contient des légendes
+anciennes !
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.4",
+  icon = "163",
+  text = [[
+Tu as obtenu le livre bleu ! $0
+Il contient les secrets de la
+navigation !
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.5",
+  icon = "164",
+  text = [[
+Tu as obtenu l'Atlas d'Hyrule !$0
+Mais il est tout moisi et tu ne
+peux rien déchiffer...
+]],
+}
+
+dialog{
+  id = "_treasure.trading_1.6",
+  icon = "165",
+  text = [[
+Tu as échangé l'atlas contre une
+lettre.
 ]],
 }
 
@@ -3568,6 +3636,67 @@ Vill. des Animaux
 }
 
 dialog{
+  id = "maps.out.cordinia.witch.give_mushroom",
+  question = "1",
+  text = [[
+Voilà un beau champignon que
+tu as là ! $0 Je peux t'en faire
+de la poudre magique !
+Donner le champignon ?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia.witch.needs_mushroom",
+  text = [[
+Je cherche des champignons de
+Paris pour faire de la poudre
+magique...$0
+Tu sais où en trouver ?
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia.witch.powder_not_ready",
+  text = [[
+Merci beaucoup !$0
+Reviens plus tard à la boutique
+magique pour récupérer ta
+poudre magique !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia.witch.powder_ready",
+  text = [[
+Tiens, voilà ta poudre magique !$0
+Saupoudre-la sur ce que tu veux !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia.witch.trading_ask_straw",
+  question = "1",
+  text = [[
+Ah ! $0 Voilà une belle paille que
+tu as là ! Je pourrais en faire
+des graines !
+Donner la paille ?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia.witch.trading_no_straw",
+  text = [[
+Garde-là pour toi, alors !
+]],
+}
+
+dialog{
   id = "maps.out.east_prairie.sign_1",
   text = [[
 Château Canulet 
@@ -5736,6 +5865,16 @@ chaleur.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.seas_map.1",
+  icon = "150",
+  skip = "all",
+  text = [[
+Cette carte te permet de voyager
+en mer.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.seashells_counter.1",
   icon = "94",
   skip = "all",
@@ -5956,6 +6095,64 @@ dialog{
 Permet d'ouvrir
 la porte de
 la cave Flagello
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.1",
+  icon = "160",
+  skip = "all",
+  text = [[
+De la paille !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.2",
+  icon = "161",
+  skip = "all",
+  text = [[
+Des graines de tournesol !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.3",
+  icon = "162",
+  skip = "all",
+  text = [[
+Un récit contenant des légendes
+anciennes...
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.4",
+  icon = "163",
+  skip = "all",
+  text = [[
+Le guide de référence pour la
+navigation !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.5",
+  icon = "164",
+  skip = "all",
+  text = [[
+L'atlas d'Hyrule !
+C'est un vieux livre tout moisi.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.trading_1.6",
+  icon = "165",
+  skip = "all",
+  text = [[
+La lettre que t'a donnée le
+vieux monsieur.
 ]],
 }
 

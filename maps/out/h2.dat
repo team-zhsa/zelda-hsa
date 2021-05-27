@@ -12666,7 +12666,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 864,
+  x = 856,
   y = 976,
   width = 80,
   height = 16,
@@ -12675,7 +12675,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 856,
+  x = 848,
   y = 976,
   width = 8,
   height = 16,
@@ -12684,20 +12684,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 944,
+  x = 936,
   y = 976,
   width = 8,
   height = 16,
   pattern = "6108",
-}
-
-tile{
-  layer = 0,
-  x = 880,
-  y = 976,
-  width = 8,
-  height = 16,
-  pattern = "6107",
 }
 
 tile{
@@ -12721,6 +12712,15 @@ tile{
 tile{
   layer = 0,
   x = 856,
+  y = 976,
+  width = 8,
+  height = 16,
+  pattern = "6107",
+}
+
+tile{
+  layer = 0,
+  x = 848,
   y = 920,
   width = 8,
   height = 48,
@@ -12729,7 +12729,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 944,
+  x = 936,
   y = 968,
   width = 8,
   height = 8,
@@ -12738,7 +12738,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 864,
+  x = 856,
   y = 920,
   width = 80,
   height = 48,
@@ -12747,7 +12747,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 864,
+  x = 856,
   y = 912,
   width = 80,
   height = 8,
@@ -12756,7 +12756,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 944,
+  x = 936,
   y = 920,
   width = 8,
   height = 48,
@@ -12765,7 +12765,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 856,
+  x = 848,
   y = 968,
   width = 8,
   height = 8,
@@ -12774,7 +12774,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 944,
+  x = 936,
   y = 912,
   width = 8,
   height = 8,
@@ -12783,7 +12783,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 856,
+  x = 848,
   y = 912,
   width = 8,
   height = 8,
@@ -12792,7 +12792,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 864,
+  x = 856,
   y = 968,
   width = 80,
   height = 8,
@@ -12801,7 +12801,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 904,
+  x = 896,
   y = 976,
   width = 16,
   height = 16,
@@ -12810,7 +12810,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 920,
+  x = 912,
   y = 992,
   width = 8,
   height = 8,
@@ -12819,7 +12819,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 896,
+  x = 888,
   y = 976,
   width = 8,
   height = 16,
@@ -12828,7 +12828,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 896,
+  x = 888,
   y = 992,
   width = 8,
   height = 8,
@@ -12837,7 +12837,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 920,
+  x = 912,
   y = 976,
   width = 8,
   height = 16,
@@ -13557,7 +13557,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 904,
+  x = 896,
   y = 992,
   width = 16,
   height = 8,
@@ -13566,7 +13566,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 896,
+  x = 888,
   y = 1000,
   width = 16,
   height = 8,
@@ -13575,7 +13575,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 912,
+  x = 904,
   y = 1000,
   width = 16,
   height = 8,
@@ -23608,6 +23608,33 @@ tile{
   pattern = "914",
 }
 
+tile{
+  layer = 0,
+  x = 944,
+  y = 928,
+  width = 8,
+  height = 56,
+  pattern = "6006",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 984,
+  width = 8,
+  height = 8,
+  pattern = "6007",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 920,
+  width = 8,
+  height = 8,
+  pattern = "6005",
+}
+
 custom_entity{
   name = "rockstack_3_background",
   layer = 0,
@@ -23634,7 +23661,7 @@ custom_entity{
 
 teletransporter{
   layer = 0,
-  x = 904,
+  x = 896,
   y = 976,
   properties = {
     {
@@ -23789,7 +23816,7 @@ jumper{
   y = 864,
   width = 24,
   height = 8,
-  direction = 6,
+  direction = 2,
   jump_length = 32,
 }
 
@@ -23920,7 +23947,7 @@ custom_entity{
 sensor{
   name = "open_house_house_1_A_sensor",
   layer = 0,
-  x = 904,
+  x = 896,
   y = 1005,
   width = 32,
   height = 16,
@@ -23929,7 +23956,7 @@ sensor{
 dynamic_tile{
   name = "house_1_A",
   layer = 0,
-  x = 904,
+  x = 896,
   y = 976,
   width = 16,
   height = 16,
@@ -23939,7 +23966,7 @@ dynamic_tile{
 destination{
   name = "from_blacksmith",
   layer = 0,
-  x = 912,
+  x = 904,
   y = 1005,
   direction = 3,
 }
@@ -23988,7 +24015,7 @@ destructible{
   layer = 0,
   x = 1064,
   y = 1181,
-  treasure_name = "random_central",
+  treasure_name = "random_mountains",
   sprite = "entities/Bushes/bush_l_01",
   destruction_sound = "objects/e_bush",
   can_be_cut = true,
@@ -24267,6 +24294,15 @@ sensor{
   height = 16,
 }
 
+chest{
+  layer = 0,
+  x = 1112,
+  y = 637,
+  treasure_name = "trading_1",
+  treasure_savegame_variable = "outside_east_castle_blacksmith_trading_1",
+  sprite = "entities/Chests/chest_LttP",
+}
+
 tile{
   layer = 1,
   x = 1064,
@@ -24485,7 +24521,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 872,
+  x = 864,
   y = 920,
   width = 32,
   height = 24,
@@ -27095,7 +27131,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 896,
+  x = 888,
   y = 960,
   width = 32,
   height = 16,
@@ -27104,7 +27140,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 872,
+  x = 864,
   y = 920,
   width = 32,
   height = 24,
@@ -27113,7 +27149,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 872,
+  x = 864,
   y = 920,
   width = 32,
   height = 24,

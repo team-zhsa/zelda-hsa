@@ -631,6 +631,13 @@ animation{
   },
 }
 animation{
+  name = "seas_map",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 96, y = 208, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "seashell",
   src_image = "entities/items.png",
   directions = {
@@ -830,6 +837,18 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 80, y = 208, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "trading_1",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 16, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 32, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 64, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 80, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

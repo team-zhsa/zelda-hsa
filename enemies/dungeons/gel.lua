@@ -1,15 +1,25 @@
--- Lua script of enemy gel.
--- This script is executed every time an enemy with this model is created.
+----------------------------------
+--
+-- Gel.
+--
+-- Slowly move to hero, and pounce on him when close enough.
+-- Slow down the hero on touched and forbid him to use his items.
+--
+-- Methods : enemy:is_leashed_by(entity)
+--
+----------------------------------
 
 -- Global variables
 local enemy = ...
 require("enemies/lib/common_actions").learn(enemy)
 
-local sprite = enemy:create_sprite("enemies/dungeons/gel")
+local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local game = enemy:get_game()
 local map = enemy:get_map()
 local hero = map:get_hero()
-local is_attacking, is_exhausted, is_adhesive
+local is_leashed = false
+local is_jumping_away = false
+local is_attacking, is_exhausted
 local hero_speed = hero:get_walking_speed()
 
 -- Configuration variables
@@ -28,16 +38,29 @@ local stuck_maximum_duration = 2500
 -- Return true if no enemy is currenly leashed by hero on the map.
 local function is_hero_free()
 
-  for enemy in map:get_entities_by_type("enemy") do
-    if enemy.is_leashed_by and enemy:is_leashed_by(hero) then
+  for gel in map:get_entities_by_type("enemy") do
+    if gel:get_breed() == enemy:get_breed() and gel:is_leashed_by_hero() then
       return false
     end
   end
   return true
 end
 
+-- Start pouncing to or away to the hero.
+local function start_pouncing(offensive)
+
+  is_jumping_away = not offensive
+  local hero_x, hero_y, _ = hero:get_position()
+  local enemy_x, enemy_y, _ = enemy:get_position()
+  local angle = math.atan2(hero_y - enemy_y, enemy_x - hero_x) + (offensive and math.pi or 0)
+  enemy:start_jumping(jumping_duration, jumping_height, angle, jumping_speed, function()
+    enemy:restart()
+  end)
+  sprite:set_animation("jumping")
+end
+
 -- Start moving to the hero, and jump when he is close enough.
-function enemy:start_walking()
+local function start_walking()
   
   local movement = enemy:start_target_walking(hero, walking_speed)
   function movement:on_position_changed()
@@ -48,27 +71,16 @@ function enemy:start_walking()
       -- Shake for a short duration then start attacking.
       sprite:set_animation("shaking")
       sol.timer.start(enemy, shaking_duration, function()
-         enemy:start_jump_attack(true)
+        start_pouncing(true)
       end)
     end
   end
 end
 
--- Start jumping to or away to the hero.
-function enemy:start_jump_attack(offensive)
-
-  local hero_x, hero_y, _ = hero:get_position()
-  local enemy_x, enemy_y, _ = enemy:get_position()
-  local angle = math.atan2(hero_y - enemy_y, enemy_x - hero_x) + (offensive and math.pi or 0)
-  enemy:start_jumping(jumping_duration, jumping_height, angle, jumping_speed, function()
-    enemy:restart()
-  end)
-  sprite:set_animation("jumping")
-end
-
 -- Let go the hero.
-function enemy:free_hero()
+local function free_hero()
 
+  is_leashed = false
   enemy:stop_leashed_by(hero)
 
   -- Restore the hero speed and weapons only if there are no more leashed gel.
@@ -78,7 +90,9 @@ function enemy:free_hero()
 end
 
 -- Make the hero slow down and unable to use weapons. 
-function enemy:slow_hero_down()
+local function attach_hero()
+
+  is_leashed = true
 
   -- Stop potential current jump and slow the hero down.
   enemy:stop_movement()
@@ -92,14 +106,18 @@ function enemy:slow_hero_down()
 
   -- TODO Make the hero unable to use weapon while slowed down.
   --game:set_ability("sword", 0)
-  --game:set_item_assigned(1, nil)
-  --game:set_item_assigned(2, nil)
 
   -- Jump away after some time.
   sol.timer.start(enemy, math.random(stuck_minimum_duration, stuck_maximum_duration), function()
-    enemy:free_hero()
-    enemy:start_jump_attack(false)
+    free_hero()
+    start_pouncing(false)
   end)
+end
+
+-- Return true if the enemy is currently leashed by the hero.
+function enemy:is_leashed_by_hero()
+
+  return is_leashed
 end
 
 -- Passive behaviors needing constant checking.
@@ -109,16 +127,20 @@ enemy:register_event("on_update", function(enemy)
     return
   end
 
-  -- If the hero touches the center of the enemy, slow him down.
-  if is_adhesive and enemy:get_life() > 0 and enemy:overlaps(hero, "origin") then
-    is_adhesive = false
-    enemy:slow_hero_down()
+  -- If the hero touches the center of the enemy and is not currently respawning, slow him down.
+  if not is_leashed and not is_jumping_away and enemy:get_life() > 0 and hero:overlaps(enemy, "origin") and hero:get_state() ~= "back to solid ground" then
+    attach_hero()
+  end
+
+  -- Free the hero if leashed and he or the enemy is over a bad ground.
+  if is_leashed and (map:is_bad_ground(enemy:get_position()) or map:is_bad_ground(hero:get_position())) then
+    free_hero()
   end
 end)
 
 -- Free the hero on dying
 enemy:register_event("on_dying", function(enemy)
-  enemy:free_hero()
+  free_hero()
 end)
 
 -- Initialization.
@@ -133,7 +155,6 @@ end)
 -- Restart settings.
 enemy:register_event("on_restarted", function(enemy)
 
-  -- Behavior for each items.
   enemy:set_hero_weapons_reactions({
   	arrow = 1,
   	boomerang = 1,
@@ -152,7 +173,7 @@ enemy:register_event("on_restarted", function(enemy)
   -- States.
   is_attacking = false
   is_exhausted = true
-  is_adhesive = true
+  is_jumping_away = false
   sprite:set_xy(0, 0)
   sol.timer.start(enemy, math.random(exhausted_minimum_duration, exhausted_maximum_duration), function()
     is_exhausted = false
@@ -160,5 +181,5 @@ enemy:register_event("on_restarted", function(enemy)
   enemy:set_obstacle_behavior("normal")
   enemy:set_can_attack(false)
   enemy:set_damage(0)
-  enemy:start_walking()
+  start_walking()
 end)

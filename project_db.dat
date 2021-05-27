@@ -108,6 +108,7 @@ map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/houses/cordinia/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
+map{ id = "inside/houses/faron_woods/map_house", description = "Map House" }
 map{ id = "inside/houses/hylia_lake/fortune_teller", description = "Fortune Teller" }
 map{ id = "inside/houses/kakariko/bar_1f", description = "Milk Bar (1st Floor)" }
 map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (B1)" }
@@ -327,7 +328,7 @@ sprite{ id = "enemies/dungeons/keese", description = "Keese" }
 sprite{ id = "enemies/dungeons/keese_dark", description = "Dark Keese" }
 sprite{ id = "enemies/dungeons/keese_elec", description = "Electric Keese" }
 sprite{ id = "enemies/dungeons/keese_fire", description = "Fire Keese" }
-sprite{ id = "enemies/dungeons/keese_ice", description = "Ice KEese" }
+sprite{ id = "enemies/dungeons/keese_ice", description = "Ice Keese" }
 sprite{ id = "enemies/dungeons/laser", description = "Laser" }
 sprite{ id = "enemies/dungeons/leever_green", description = "Green Leever" }
 sprite{ id = "enemies/dungeons/leever_purple", description = "Purple Leever" }
@@ -355,7 +356,6 @@ sprite{ id = "enemies/dungeons/rope", description = "Rope" }
 sprite{ id = "enemies/dungeons/spiked_beetle", description = "Spiked Beetle" }
 sprite{ id = "enemies/dungeons/stalfos_blue", description = "Blue Stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_grey", description = "Grey Stalfos" }
-sprite{ id = "enemies/dungeons/stalfos_head", description = "Stalfos head" }
 sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_green", description = "Green Tentacle" }
@@ -371,6 +371,7 @@ sprite{ id = "enemies/dungeons/wizzrobe_elec", description = "Electric Wizzrobe"
 sprite{ id = "enemies/dungeons/wizzrobe_fire", description = "Fire Wizzrobe" }
 sprite{ id = "enemies/dungeons/wizzrobe_ice", description = "Ice Wizzrobe" }
 sprite{ id = "enemies/dungeons/wizzrobe_white", description = "White Wizzrobe" }
+sprite{ id = "enemies/dungeons/zazak_blue", description = "Blue Zazak" }
 sprite{ id = "enemies/dungeons/zol_green", description = "Green Zol" }
 sprite{ id = "enemies/dungeons/zol_red", description = "enemies/dungeons/zol_red" }
 sprite{ id = "enemies/enemy_killed", description = "Enemy Killed" }
@@ -1564,6 +1565,7 @@ item{ id = "lamp", description = "Lamp" }
 item{ id = "lens_of_truth", description = "Lens of Truth" }
 item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
+item{ id = "magic_mirror", description = "Magic Mirror" }
 item{ id = "magic_powder", description = "Magic Powder" }
 item{ id = "magic_powders_counter", description = "Magic powders counter" }
 item{ id = "magnifying_lens", description = "Magnifying lens" }
@@ -1590,6 +1592,7 @@ item{ id = "red_potion", description = "Red Potion" }
 item{ id = "red_tunic", description = "Red tunic" }
 item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 1000)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
+item{ id = "seas_map", description = "Seas map" }
 item{ id = "seashell", description = "Seashell" }
 item{ id = "seashells_counter", description = "Seashells counter" }
 item{ id = "shield", description = "Shield" }
@@ -1614,6 +1617,7 @@ item{ id = "sword", description = "Sword" }
 item{ id = "sword_skill_beam", description = "Sword Beam" }
 item{ id = "tail_key", description = "Tail key" }
 item{ id = "time_tunic", description = "Time tunic" }
+item{ id = "trading_1", description = "Trading (Seas Map)" }
 item{ id = "tunic", description = "Tunic (green/blue/red)" }
 item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }
@@ -1664,7 +1668,6 @@ enemy{ id = "dungeons/bubble_yellow", description = "Yellow Bubble" }
 enemy{ id = "dungeons/cannonball", description = "Cannonball" }
 enemy{ id = "dungeons/chain_and_ball", description = "Chain and Ball" }
 enemy{ id = "dungeons/dodongo", description = "Dodongo" }
-enemy{ id = "dungeons/evil_tile", description = "Evil Tile" }
 enemy{ id = "dungeons/eyegore_statue", description = "Eyegore statue" }
 enemy{ id = "dungeons/face_lamp", description = "Face lamp" }
 enemy{ id = "dungeons/fireball", description = "Circular moving fireball" }
@@ -1899,7 +1902,8 @@ shader{ id = "distort", description = "Distort with a aux tex" }
 shader{ id = "edge-detection", description = "edge-detection" }
 shader{ id = "electric", description = "Electric effect" }
 shader{ id = "fire_dist", description = "Fire distortion" }
-shader{ id = "flickering", description = "Flickering" }
+shader{ id = "flickering_opaque", description = "Flickering" }
+shader{ id = "flickering_transparent", description = "Flickering transparent" }
 shader{ id = "fr_to_normal_colors", description = "fr_to_normal_colors" }
 shader{ id = "fr_white_filter", description = "fr_white_filter" }
 shader{ id = "gb", description = "GB filter" }
