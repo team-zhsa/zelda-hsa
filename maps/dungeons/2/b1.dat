@@ -2006,6 +2006,24 @@ jumper{
 tile{
   layer = 0,
   x = 168,
+  y = 1416,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 1232,
+  width = 24,
+  height = 80,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
   y = 1456,
   width = 80,
   height = 24,
@@ -2728,15 +2746,6 @@ tile{
   width = 24,
   height = 48,
   pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 1416,
-  width = 24,
-  height = 48,
-  pattern = "wall.4-2",
 }
 
 tile{
@@ -12015,7 +12024,7 @@ tile{
   layer = 0,
   x = 360,
   y = 1400,
-  width = 112,
+  width = 240,
   height = 24,
   pattern = "wall.2-2",
 }
@@ -12031,38 +12040,20 @@ tile{
 
 tile{
   layer = 0,
-  x = 488,
-  y = 1400,
-  width = 112,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
   x = 920,
-  y = 1232,
+  y = 1240,
   width = 24,
-  height = 80,
+  height = 160,
   pattern = "wall.4-2",
 }
 
 tile{
   layer = 0,
   x = 656,
-  y = 1240,
-  width = 24,
-  height = 160,
-  pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 920,
   y = 1328,
   width = 24,
   height = 80,
-  pattern = "wall.4-2",
+  pattern = "wall.3-2",
 }
 
 tile{
@@ -12235,6 +12226,87 @@ tile{
   width = 16,
   height = 16,
   pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1304,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1328,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1328,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1304,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 1312,
+  width = 16,
+  height = 16,
+  pattern = "door.4",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1312,
+  width = 16,
+  height = 16,
+  pattern = "door.3",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 1288,
+  width = 32,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 1328,
+  width = 32,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 1312,
+  width = 32,
+  height = 16,
+  pattern = "floor.12-1",
 }
 
 sensor{
@@ -12887,14 +12959,6 @@ enemy{
   layer = 0,
   x = 872,
   y = 1517,
-  direction = 0,
-  breed = "dungeons/bubble_green",
-}
-
-enemy{
-  layer = 0,
-  x = 744,
-  y = 1565,
   direction = 0,
   breed = "dungeons/bubble_green",
 }
@@ -15498,6 +15562,126 @@ sensor{
   height = 16,
 }
 
+wall{
+  layer = 0,
+  x = 600,
+  y = 1312,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 664,
+  y = 1312,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+sensor{
+  name = "dungeon_room_26_4",
+  layer = 0,
+  x = 632,
+  y = 1325,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_27_2",
+  layer = 0,
+  x = 648,
+  y = 1325,
+  width = 16,
+  height = 16,
+}
+
+enemy{
+  name = "auto_enemy_5",
+  layer = 0,
+  x = 440,
+  y = 1277,
+  direction = 0,
+  breed = "dungeons/helmasaur_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_6",
+  layer = 0,
+  x = 536,
+  y = 1341,
+  direction = 0,
+  breed = "dungeons/helmasaur_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_40",
+  layer = 0,
+  x = 408,
+  y = 1325,
+  direction = 0,
+  breed = "dungeons/helmasaur_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_41",
+  layer = 0,
+  x = 792,
+  y = 1277,
+  direction = 0,
+  breed = "dungeons/tentacle",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_42",
+  layer = 0,
+  x = 840,
+  y = 1357,
+  direction = 0,
+  breed = "dungeons/tentacle",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_43",
+  layer = 0,
+  x = 760,
+  y = 1357,
+  direction = 0,
+  breed = "dungeons/tentacle",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_44",
+  layer = 0,
+  x = 728,
+  y = 1309,
+  direction = 0,
+  breed = "dungeons/tentacle",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_45",
+  layer = 0,
+  x = 872,
+  y = 1293,
+  direction = 0,
+  breed = "dungeons/tentacle",
+  treasure_name = "random_west",
+}
+
 tile{
   layer = 1,
   x = 984,
@@ -16362,6 +16546,42 @@ tile{
   pattern = "door_top.stairs_up.1-1",
 }
 
+tile{
+  layer = 1,
+  x = 616,
+  y = 1312,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 656,
+  y = 1312,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 656,
+  y = 1304,
+  width = 8,
+  height = 32,
+  pattern = "door_top.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 616,
+  y = 1304,
+  width = 8,
+  height = 32,
+  pattern = "door_top.4-2",
+}
+
 dynamic_tile{
   name = "dynamic_4_wall_s_top",
   layer = 1,
@@ -16457,18 +16677,18 @@ tile{
 
 tile{
   layer = 2,
-  x = 304,
+  x = 264,
   y = 1440,
-  width = 16,
+  width = 56,
   height = 240,
   pattern = "ceiling.1",
 }
 
 tile{
   layer = 2,
-  x = 0,
+  x = 56,
   y = 1664,
-  width = 304,
+  width = 208,
   height = 16,
   pattern = "ceiling.1",
 }
@@ -16477,16 +16697,16 @@ tile{
   layer = 2,
   x = 0,
   y = 1440,
-  width = 16,
-  height = 224,
+  width = 56,
+  height = 240,
   pattern = "ceiling.1",
 }
 
 tile{
   layer = 2,
-  x = 16,
+  x = 56,
   y = 1440,
-  width = 288,
+  width = 208,
   height = 16,
   pattern = "ceiling.1",
 }
@@ -17037,6 +17257,78 @@ tile{
   y = 224,
   width = 288,
   height = 16,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 336,
+  y = 1200,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 336,
+  y = 1424,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 320,
+  y = 1200,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 624,
+  y = 1200,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 656,
+  y = 1200,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 656,
+  y = 1424,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 640,
+  y = 1200,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 944,
+  y = 1200,
+  width = 16,
+  height = 240,
   pattern = "ceiling.1",
 }
 

@@ -97,6 +97,7 @@ map{ id = "inside/caves/mountains/goron_town_1f", description = "Goron Town (1st
 map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Basement 1)" }
 map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/to_fire_temple_1f", description = "Cave to Fire Temple (1st Floor)" }
+map{ id = "inside/caves/mountains/treasure_cave_1", description = "Tresaure Cave 1" }
 map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
 map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
 map{ id = "inside/caves/north_west/ruins_cave", description = "Ruins Cave" }
@@ -120,7 +121,7 @@ map{ id = "inside/houses/kakariko/library_2f", description = "Library (2nd Floor
 map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
 map{ id = "inside/houses/kakariko/south_shop", description = "South Shop" }
 map{ id = "inside/houses/kakariko/sport_house", description = "Sport House" }
-map{ id = "inside/houses/kakariko/witch", description = "Witch house" }
+map{ id = "inside/houses/kakariko/windmill", description = "Windmill" }
 map{ id = "inside/houses/main_town/orange_house_e", description = "East Orange House" }
 map{ id = "inside/houses/main_town/orange_house_w", description = "West Orange House" }
 map{ id = "inside/houses/main_town/sword_shop", description = "Sword Shop" }
@@ -306,7 +307,6 @@ sprite{ id = "enemies/dungeons/cannonball_big", description = "Big Cannonball" }
 sprite{ id = "enemies/dungeons/chain_and_ball", description = "Chain and Ball" }
 sprite{ id = "enemies/dungeons/death_ball", description = "Death Ball" }
 sprite{ id = "enemies/dungeons/dodongo", description = "Dodongo" }
-sprite{ id = "enemies/dungeons/evil_tile1", description = "Evil Tile 1" }
 sprite{ id = "enemies/dungeons/evil_tile2", description = "Evil Tile 2" }
 sprite{ id = "enemies/dungeons/evil_tile3", description = "Evil Tile 3" }
 sprite{ id = "enemies/dungeons/evil_tile4", description = "Evil Tile 4" }
@@ -314,6 +314,7 @@ sprite{ id = "enemies/dungeons/eyegore_statue", description = "Eyegore Statue" }
 sprite{ id = "enemies/dungeons/face_lamp", description = "Face lamp" }
 sprite{ id = "enemies/dungeons/fireball", description = "Circular moving fireball" }
 sprite{ id = "enemies/dungeons/fireball_animated", description = "Animated fireball" }
+sprite{ id = "enemies/dungeons/flying_tile", description = "Evil Tile 1" }
 sprite{ id = "enemies/dungeons/gel", description = "Gel" }
 sprite{ id = "enemies/dungeons/gibdo", description = "Gibdo" }
 sprite{ id = "enemies/dungeons/gohma", description = "Gohma" }
@@ -374,7 +375,7 @@ sprite{ id = "enemies/dungeons/wizzrobe_ice", description = "Ice Wizzrobe" }
 sprite{ id = "enemies/dungeons/wizzrobe_white", description = "White Wizzrobe" }
 sprite{ id = "enemies/dungeons/zazak_blue", description = "Blue Zazak" }
 sprite{ id = "enemies/dungeons/zol_green", description = "Green Zol" }
-sprite{ id = "enemies/dungeons/zol_red", description = "enemies/dungeons/zol_red" }
+sprite{ id = "enemies/dungeons/zol_red", description = "Red Zol" }
 sprite{ id = "enemies/enemy_killed", description = "Enemy Killed" }
 sprite{ id = "enemies/flames/flame_blue", description = "Blue Flame" }
 sprite{ id = "enemies/flames/flame_red", description = "Red Flame" }
@@ -435,6 +436,10 @@ sprite{ id = "enemies/projectiles/laser", description = "Laser" }
 sprite{ id = "enemies/projectiles/spear", description = "Spear" }
 sprite{ id = "enemies/soldiers/soldier_cannon", description = "Cannon Soldier" }
 sprite{ id = "enemies/soldiers/soldier_green", description = "Green Soldier" }
+sprite{ id = "enemies/soldiers/spear_knight_blue", description = "Blue Spear Knight" }
+sprite{ id = "enemies/soldiers/spear_knight_blue_weapon", description = "Blue Spear Knight Weapon" }
+sprite{ id = "enemies/soldiers/spear_soldier_black", description = "Black Spear Soldier" }
+sprite{ id = "enemies/soldiers/spear_soldier_black_weapon", description = "Black Spear Soldier Weapon" }
 sprite{ id = "enemies/soldiers/spear_soldier_red", description = "Red Spear Soldier" }
 sprite{ id = "enemies/soldiers/spear_soldier_red_weapon", description = "Red Spear Soldier Wp." }
 sprite{ id = "enemies/soldiers/sword_soldier_black", description = "Black Sword Soldier" }
@@ -896,6 +901,7 @@ sprite{ id = "entities/pillar", description = "Pillar" }
 sprite{ id = "entities/pillar_base", description = "Pillar base" }
 sprite{ id = "entities/platform", description = "Platform" }
 sprite{ id = "entities/pot", description = "Pot" }
+sprite{ id = "entities/raft", description = "Raft" }
 sprite{ id = "entities/rain", description = "Rain" }
 sprite{ id = "entities/rupee_icon", description = "Rupee icon" }
 sprite{ id = "entities/shadow", description = "Shadow" }
@@ -1023,6 +1029,7 @@ sprite{ id = "maps/a2", description = "Zora" }
 sprite{ id = "maps/a4", description = "Map ALTTP" }
 sprite{ id = "maps/alttp", description = "ALTTP map" }
 sprite{ id = "maps/c4", description = "Lake Hylia" }
+sprite{ id = "maps/desert_palace", description = "Desert Palace" }
 sprite{ id = "maps/fire_temple", description = "Fire temple" }
 sprite{ id = "maps/minimap" }
 sprite{ id = "maps/mountain", description = "Mountains map" }
@@ -1068,6 +1075,7 @@ sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
 sprite{ id = "menus/title_sword", description = "Title sword" }
+sprite{ id = "menus/title_triforce" }
 sprite{ id = "npc/angry_brother", description = "Angry Brother" }
 sprite{ id = "npc/average_middle_aged_man", description = "Average Middle Aged Man" }
 sprite{ id = "npc/bird_green", description = "Green Bird" }
@@ -1328,7 +1336,8 @@ music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
 music{ id = "outside/overworld", description = "Overworld" }
 music{ id = "outside/owl_theme", description = "Owl Theme" }
-music{ id = "outside/parapa_town", description = "Parapa Town (Dragon Roost)" }
+music{ id = "outside/parapa_town", description = "Parapa Town (Lynna Village)" }
+music{ id = "outside/rito_village", description = "Rito Village (Dragon Roost Island)" }
 music{ id = "outside/sea", description = "Great Sea" }
 music{ id = "outside/snowpeaks", description = "Snowpeaks" }
 music{ id = "outside/southern_hyrule", description = "Southern Hyrule" }
@@ -1336,6 +1345,7 @@ music{ id = "outside/subrosia", description = "Underworld" }
 music{ id = "outside/swamp", description = "Swamp" }
 music{ id = "outside/tamaranch", description = "Tamaranch Mountains" }
 music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
+music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/zora", description = "Zora Domain" }
 
 sound{ id = "arrow_hit", description = "Arrow hit" }
@@ -1352,6 +1362,7 @@ sound{ id = "bounce", description = "Bounce" }
 sound{ id = "bow", description = "Bow" }
 sound{ id = "cane", description = "Cane" }
 sound{ id = "cannonball", description = "Cannonball" }
+sound{ id = "characters/link/effect/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "chest_open", description = "Chest Open" }
 sound{ id = "common/b_notebook_notification", description = "Bombers notebook notification" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
@@ -1525,6 +1536,7 @@ item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "angler_key", description = "Angler key" }
 item{ id = "arrow", description = "Arrow" }
 item{ id = "beak_of_stone", description = "Beak of stone" }
+item{ id = "big_key", description = "Dungeon big key" }
 item{ id = "bird_key", description = "Bird key" }
 item{ id = "blue_key", description = "Blue Key" }
 item{ id = "blue_potion", description = "Blue Potion" }
@@ -1859,6 +1871,7 @@ entity{ id = "platform_moving", description = "Moving platform" }
 entity{ id = "platform_thwomp", description = "Platform (Spiked Thwomp top)" }
 entity{ id = "powder", description = "Powder" }
 entity{ id = "pull_handle", description = "Pull handle" }
+entity{ id = "raft", description = "Raft" }
 entity{ id = "rod_ice", description = "Ice" }
 entity{ id = "rod_wind", description = "Wind" }
 entity{ id = "runs_away", description = "Entity that runs away" }
@@ -1905,7 +1918,8 @@ shader{ id = "distort", description = "Distort with a aux tex" }
 shader{ id = "edge-detection", description = "edge-detection" }
 shader{ id = "electric", description = "Electric effect" }
 shader{ id = "fire_dist", description = "Fire distortion" }
-shader{ id = "flickering_opaque", description = "Flickering" }
+shader{ id = "flashing_rgb", description = "RGB Flashing" }
+shader{ id = "flickering_opaque", description = "Flickering opaque" }
 shader{ id = "flickering_transparent", description = "Flickering transparent" }
 shader{ id = "fr_to_normal_colors", description = "fr_to_normal_colors" }
 shader{ id = "fr_white_filter", description = "fr_white_filter" }

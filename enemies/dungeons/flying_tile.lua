@@ -3,6 +3,8 @@
 
 -- Variables
 local enemy = ...
+require("enemies/lib/common_actions").learn(enemy)
+
 local shadow_sprite = nil
 local initial_y = nil
 local state = nil  -- "raising", "attacking" or "destroying".
@@ -19,10 +21,10 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_obstacle_behavior("flying")
   enemy.state = state
 
-  local sprite = enemy:create_sprite("enemies/dungeons/evil_tile1")
+  local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
   function sprite:on_animation_finished(animation)
     if enemy.state == "destroying" then
-      enemy:remove()
+      enemy:start_death()
     end
   end
 

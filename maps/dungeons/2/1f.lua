@@ -57,18 +57,18 @@ end
 
 function switch_20_chest:on_activated()
 	chest_20_blue_key:set_enabled(true)
-	game:set_value("dungeon_1_blue_key", 1)
+	audio_manager:play_sound("common/chest_appear")
 end
 
-function auto_block_2:on_moved()
+function block_2:on_moved()
 	map:open_doors("door_19_w")
 end
 
-function auto_block_5:on_moved()
+function block_5:on_moved()
 	map:open_doors("door_19_e")
 end
 
-function auto_block_8:on_moved()
+function block_8:on_moved()
 	map:open_doors("door_19_s")
 end
 

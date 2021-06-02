@@ -24,6 +24,11 @@ local background = sol.surface.create("menus/title.png")
 local sword = sol.sprite.create("menus/title_sword")
 sword:set_animation("sword")
 
+local t = sol.sprite.create("menus/title_triforce")
+t:set_animation("triforce")
+
+
+
 -- Black square below the sun.
 local white = sol.surface.create(320, 256)
 white:fill_color{255, 255, 255}
@@ -40,7 +45,7 @@ local timer = nil
 local function rebuild_surface()
 
   surface:clear()
-
+	t:draw(surface, 128, 128)
   -- Draw the black square to partially hide the sun.
   white:draw(surface, 0, 0)
 	background:draw(surface)
@@ -67,6 +72,7 @@ function title_screen:on_started()
   timer = nil
   surface:set_opacity(255)
   sword:set_xy(55, -130)
+	t:set_xy(60, 60)
   -- Start the animation.
 	sol.timer.start(title_screen, 9000, function()
   	title_screen:start_animation()
@@ -78,7 +84,7 @@ end
 -- Animation step 1.
 function title_screen:step1()
   white:draw(surface, 0, 0)
-	surface:set_shader(sol.shader.create("flickering_opaque"))
+	surface:set_shader(sol.shader.create("flashing_rgb"))
 	sol.timer.start(title_screen, 1000, function()
 		surface:set_shader(sol.shader.create("default"))
 	end)
@@ -87,7 +93,7 @@ function title_screen:step1()
   sword:stop_movement()
   sword:set_xy(55, 42)
   -- Play a sound.
-  sol.audio.play_sound("scene/title/solarus_logo")
+  sol.audio.play_sound("ok")
   -- Update the surface.
   rebuild_surface()
 end

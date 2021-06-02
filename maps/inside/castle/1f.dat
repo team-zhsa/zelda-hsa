@@ -3542,27 +3542,27 @@ tile{
 tile{
   layer = -1,
   x = 144,
-  y = 544,
+  y = 552,
   width = 8,
-  height = 176,
+  height = 168,
   pattern = "floor_border.4",
 }
 
 tile{
   layer = -1,
   x = 168,
-  y = 536,
+  y = 552,
   width = 8,
-  height = 184,
+  height = 168,
   pattern = "floor_border.4",
 }
 
 tile{
   layer = -1,
   x = 152,
-  y = 512,
+  y = 552,
   width = 16,
-  height = 208,
+  height = 168,
   pattern = "floor_small.1",
 }
 
@@ -3964,6 +3964,7 @@ block{
 }
 
 separator{
+  name = "auto_separator_2",
   layer = -1,
   x = 0,
   y = 472,
@@ -4529,6 +4530,223 @@ destructible{
   can_be_cut = true,
 }
 
+enemy{
+  name = "auto_enemy",
+  layer = -1,
+  x = 632,
+  y = 653,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_2",
+  layer = -1,
+  x = 568,
+  y = 749,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_3",
+  layer = -1,
+  x = 776,
+  y = 685,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_4",
+  layer = -1,
+  x = 1088,
+  y = 685,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_5",
+  layer = -1,
+  x = 1088,
+  y = 293,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_6",
+  layer = -1,
+  x = 752,
+  y = 133,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_7",
+  layer = -1,
+  x = 112,
+  y = 133,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_8",
+  layer = -1,
+  x = 144,
+  y = 253,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_9",
+  layer = -1,
+  x = 136,
+  y = 573,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_10",
+  layer = -1,
+  x = 184,
+  y = 749,
+  direction = 0,
+  breed = "soldiers/sword_soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_11",
+  layer = -1,
+  x = 128,
+  y = 733,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_12",
+  layer = -1,
+  x = 648,
+  y = 693,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_13",
+  layer = -1,
+  x = 1088,
+  y = 773,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_14",
+  layer = -1,
+  x = 1192,
+  y = 709,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_15",
+  layer = -1,
+  x = 1080,
+  y = 349,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_16",
+  layer = -1,
+  x = 1096,
+  y = 173,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_17",
+  layer = -1,
+  x = 784,
+  y = 117,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_18",
+  layer = -1,
+  x = 496,
+  y = 125,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_19",
+  layer = -1,
+  x = 224,
+  y = 125,
+  direction = 0,
+  breed = "soldiers/sword_soldier_blue",
+  treasure_name = "random_central",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 920,
+  width = 80,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 920,
+  width = 80,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 920,
+  width = 80,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
 tile{
   layer = 0,
   x = 800,
@@ -5017,9 +5235,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
+  x = 136,
   y = 920,
-  width = 208,
+  width = 112,
   height = 24,
   pattern = "wall.2-2",
 }
@@ -7285,15 +7503,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1000,
-  y = 920,
-  width = 176,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
   x = 1176,
   y = 920,
   width = 24,
@@ -8166,6 +8375,24 @@ tile{
   pattern = "wall.3-2",
 }
 
+tile{
+  layer = 0,
+  x = 1080,
+  y = 936,
+  width = 16,
+  height = 32,
+  pattern = "floor.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 936,
+  width = 16,
+  height = 32,
+  pattern = "floor.2-1",
+}
+
 teletransporter{
   layer = 0,
   x = 632,
@@ -8786,6 +9013,7 @@ tile{
 }
 
 separator{
+  name = "auto_separator",
   layer = 2,
   x = 312,
   y = 0,
@@ -8794,6 +9022,7 @@ separator{
 }
 
 separator{
+  name = "auto_separator_3",
   layer = 2,
   x = 952,
   y = 0,

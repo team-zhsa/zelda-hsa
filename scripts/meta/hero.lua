@@ -29,8 +29,7 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
     end
 
-  end)
-
+end)
 hero_meta:register_event("on_state_changed", function(hero, current_state)
 
     local game = hero:get_game()

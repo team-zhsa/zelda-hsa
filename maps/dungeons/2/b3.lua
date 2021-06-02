@@ -9,16 +9,36 @@
 
 local map = ...
 local game = map:get_game()
+require("scripts/multi_events")
+local audio_manager = require("scripts/audio_manager")
+local door_manager = require("scripts/maps/door_manager")
+local enemy_manager = require("scripts/maps/enemy_manager")
+local separator_manager = require("scripts/maps/separator_manager")
+local switch_manager = require("scripts/maps/switch_manager")
+local treasure_manager = require("scripts/maps/treasure_manager")
+local cannonball_manager = require("scripts/maps/cannonball_manager")
+cannonball_manager:create_cannons(map, "cannon_")
 
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+map:register_event("on_started", function()
+	separator_manager:manage_map(map)
+	map:set_doors_open("door_13_s", true)
+	map:set_doors_open("door_9_s", false)
+	treasure_manager:disappear_pickable(map, "pickable_29_small_key")
+	treasure_manager:disappear_pickable(map, "pickable_18_yellow_key")
+	door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_s")
+	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29_", "pickable_29_small_key")
+	if miniboss ~= nil then
+		treasure_manager:appear_pickable_when_enemies_dead(map, "miniboss", "pickable_18_yellow_key")
+		miniboss:set_enabled(false)
+		door_manager:open_when_enemies_dead(map, "miniboss", "door_13_s", sound)
+	end
+end)
 
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
+if miniboss ~= nil then
+	miniboss_sensor:register_event("on_activated", function()
+		audio_manager:play_music("boss/miniboss")
+		miniboss:set_enabled(true)
+		door_manager:close_if_enemies_not_dead(map, "miniboss", "door_13_s")
+		miniboss_sensor:remove()
+	end)
 end

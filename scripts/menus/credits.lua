@@ -23,7 +23,7 @@ end
 -- Called when the menu is started
 function end_credits:on_started()
   local lh = 16 -- line height in pixels
-  local speed = 12 -- scroll speed in px/s (set it to 8)
+  local speed = 15 -- scroll speed in px/s (set it to 8)
 
   -- Credits dialog
   self.dialog = sol.language.get_dialog("scripts.menus.credits")
@@ -41,7 +41,6 @@ function end_credits:on_started()
       + 240 -- surface scrolls in from the bottom, so has a padding top equal to the screen size
       + 16 -- room for 8px top and bottom padding
   )
-		self.credits_surface:set_shader(sol.shader.create("flickering"))
   -- Loop through all dialog lines and draw them
   for i, line in ipairs(lines) do
     local line_surface =  sol.text_surface.create({horizontal_alignment="center", font="capital", font_size=11, text=line})

@@ -17,7 +17,22 @@ function map:on_started()
 	game:set_hud_enabled(false)
 	game:set_pause_allowed(false)	
 	map:get_hero():freeze()
-	map:get_hero():set_visible(false)
+	--map:get_hero():set_visible(false)
+	sol.timer.start(map, 5000, function()
+		local movement = sol.movement.create("straight")
+		movement:set_speed(32)
+		movement:set_angle(math.pi / 2)
+		movement:start(map:get_camera())
+		sol.timer.start(map, 500, function()
+			map:start_credits()
+		end)
+	end)
+
+end
+
+-- Event called after the opening transition effect of the map,
+-- that is, when the player takes control of the hero.
+function map:start_credits()
 	sol.menu.start(game, end_credits)
 	if game:get_value("death_count") == 0 or game:get_value("death_count") == nil then
 		sol.audio.play_music("cutscenes/end_credits_alttp", function()
@@ -28,11 +43,6 @@ function map:on_started()
 			sol.audio.stop_music()
 		end)
 	end
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
 end
 
 function end_credits:on_finished()

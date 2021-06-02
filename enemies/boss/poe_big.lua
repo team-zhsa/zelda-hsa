@@ -6,7 +6,7 @@ local timer
 -- disappears occasionally and throws fire from its lantern.
 
 function enemy:on_created()
-  self:set_life(10); self:set_damage(4)
+  self:set_life(20); self:set_damage(4)
   self:create_sprite("enemies/" .. enemy:get_breed())
   self:set_size(32, 40); self:set_origin(16, 37)
   self:set_hurt_style("boss")
@@ -30,7 +30,7 @@ function enemy:on_obstacle_reached(movement)
 end
 
 function enemy:on_restarted()
-  self:create_enemy({ breed = "flame_red" })
+  self:create_enemy({ breed = "flames/flame_red" })
 
   self:go_random()
   self:check_hero()
@@ -81,11 +81,11 @@ end
 
 function enemy:on_dying()
   sol.timer.start(self:get_map(), 1000, function()
-    self:create_enemy({ breed = "dungeons/poe" })
-    self:create_enemy({ breed = "dungeons/poe" })
-    self:create_enemy({ breed = "dungeons/poe" })
-    self:create_enemy({ breed = "dungeons/poe" })
-    self:create_enemy({ breed = "dungeons/poe" })
-    self:create_enemy({ breed = "dungeons/poe" })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
+    self:create_enemy({ breed = "dungeons/poe", name = enemy:get_name() })
   end)
 end

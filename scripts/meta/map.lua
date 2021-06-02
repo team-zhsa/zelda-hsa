@@ -51,6 +51,7 @@ map_meta:register_event("on_started", function(map)
   end
 
 
+
 end)
 
 map_meta:register_event("on_finished", function(map)

@@ -6,8 +6,8 @@ local enemy = ...
   local sword_sprite = nil
   
   function enemy:on_created()
-    enemy:set_life(3)
-    enemy:set_damage(2)
+    enemy:set_life(2)
+    enemy:set_damage(1)
     enemy:set_hurt_style("normal")
     sword_sprite = enemy:create_sprite("enemies/soldiers/sword_soldier_green_weapon")
     main_sprite = enemy:create_sprite("enemies/soldiers/sword_soldier_green")
@@ -35,7 +35,7 @@ local enemy = ...
     local _, _, layer = enemy:get_position()
     local _, _, hero_layer = hero:get_position()
     local near_hero = layer == hero_layer
-        and enemy:get_distance(hero) < 128
+        and enemy:get_distance(hero) < 64
         and enemy:is_in_same_region(hero)
 
     if near_hero and not going_hero then
@@ -44,7 +44,7 @@ local enemy = ...
       enemy:go_random()
     end
     sol.timer.stop_all(self)
-    sol.timer.start(self, 1000, function() enemy:check_hero() end)
+    sol.timer.start(self, 500, function() enemy:check_hero() end)
   end
   
   function enemy:on_movement_changed(movement)
@@ -86,7 +86,7 @@ local enemy = ...
   
   function enemy:go_random()
     local movement = sol.movement.create("random_path")
-    movement:set_speed(48)
+    movement:set_speed(32)
     movement:start(enemy)
     being_pushed = false
     going_hero = false
@@ -94,7 +94,7 @@ local enemy = ...
   
   function enemy:go_hero()
     local movement = sol.movement.create("target")
-    movement:set_speed(64)
+    movement:set_speed(52)
     movement:start(enemy)
 		audio_manager:play_sound("hero_seen")
     being_pushed = false

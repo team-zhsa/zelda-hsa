@@ -39,8 +39,11 @@ local text = sol.text_surface.create{
 	horizontal_alignment = "center",
 	font = "alttp",
 }
+local t = sol.sprite.create("menus/title_triforce")
+t:set_animation("triforce")
 
 function map:on_draw(dst_surface)
 	text:draw(dst_surface, 160, 220)
+	t:draw(dst_surface, 88, 88)
 end
 

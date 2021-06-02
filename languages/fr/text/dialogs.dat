@@ -1332,8 +1332,8 @@ dialog{
   icon = "160",
   text = [[
 Tu as obtenu de la paille !$0
-Peut-être qu'elle te servira à
-obtenir des graines ?
+Peut-être que la sorcière en a
+besoin ?
 ]],
 }
 
@@ -1343,6 +1343,7 @@ dialog{
   text = [[
 Tu as échangé la paille contre
 des graines !$0
+Va au Sanctuaire !
 ]],
 }
 
@@ -1353,6 +1354,8 @@ dialog{
 Tu as obtenu le livre rouge ! $0
 Il contient des légendes
 anciennes !
+C'est le livre que le libraire
+de Cocorico cherchait !
 ]],
 }
 
@@ -1363,6 +1366,7 @@ dialog{
 Tu as obtenu le livre bleu ! $0
 Il contient les secrets de la
 navigation !
+Il appartient au Château !
 ]],
 }
 
@@ -1373,6 +1377,8 @@ dialog{
 Tu as obtenu l'Atlas d'Hyrule !$0
 Mais il est tout moisi et tu ne
 peux rien déchiffer...
+Peut-être que le libraire de
+Cocorico peut t'aider ?
 ]],
 }
 
@@ -1442,26 +1448,6 @@ dialog{
 Tu as obtenu une clé jaune.
 Je me demande bien à quoi elle
 pourrait bien servir...$1  Une idée ?
-]],
-}
-
-dialog{
-  id = "city.sword_seller.start",
-  text = [[
-Tiens ! Voici un client !
-Tu veux essayer ? Bats cet Hinox
-et tu auras l'épée !
-]],
-}
-
-dialog{
-  id = "city.sword_seller.stop",
-  text = [[
-Tu y es arrivé !
-Sache que beaucoup 
-de personnes n'ont pas
-réussi ! Non, je rigole !
-Tu peux la garder !
 ]],
 }
 

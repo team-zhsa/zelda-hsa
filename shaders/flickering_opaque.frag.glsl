@@ -50,4 +50,3 @@ void main() {
     FragColor.rgb = FragColor.rgb;
     FragColor.rgb *= pow(lum,0.5);
 }
-
