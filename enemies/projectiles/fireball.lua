@@ -10,7 +10,7 @@ local audio_manager = require("scripts/audio_manager")
 enemy:register_event("on_created", function(enemy)
 
   enemy:set_life(1)
-  enemy:set_damage(2)
+  enemy:set_damage(4)
   enemy:set_size(8, 8)
   enemy:set_origin(4, 4)
   enemy:set_obstacle_behavior("flying")

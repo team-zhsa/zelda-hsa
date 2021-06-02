@@ -92,6 +92,6 @@ enemy:register_event("on_created", function(enemy)
 
   enemy:set_size(32, 16)
   enemy:set_origin(8, 13)
-  enemy:set_damage(2)
+  enemy:set_damage(0)
   enemy.is_exhausted = false -- True after a shoot and before a delay.
 end)

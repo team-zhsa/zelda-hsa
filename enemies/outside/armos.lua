@@ -6,7 +6,7 @@ local timer
 -- Armos Status: Stationary until hero gets close, then comes to life.
 
 function enemy:on_created()
-  self:set_life(3); self:set_damage(2)
+  self:set_life(3); self:set_damage(4)
   local sprite = self:create_sprite("enemies/outside/armos")
   self:set_size(16, 16); self:set_origin(8, 13)
   self:set_hurt_style("monster")
