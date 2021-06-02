@@ -4,7 +4,7 @@ local game = enemy:get_game()
 -- A whirlwind created by another enemy.
 
 function enemy:on_created()
-  self:set_life(1); self:set_damage(8)
+  self:set_life(2); self:set_damage(2)
   self:create_sprite("enemies/outside/whirlwind")
   self:set_size(48, 64); self:set_origin(24, 31)
   self:set_invincible()
@@ -30,6 +30,22 @@ function enemy:on_restarted()
   m:set_ignore_obstacles(false)
   m:start(self)
   sol.timer.start(self, 2000, function() self:on_movement_finished() end)
+
+  enemy:set_hero_weapons_reactions({
+  	arrow = "ignored",
+  	boomerang = "ignored",
+  	explosion = "ignored",
+  	sword = "ignored",
+  	thrown_item = "ignored",
+  	fire = "ignored",
+  	jump_on = "ignored",
+  	hammer = "ignored",
+  	hookshot = "ignored",
+  	magic_powder = "ignored",
+  	shield = "protected",
+  	thrust = "ignored",
+		wind = 2
+  })
 end
 
 function enemy:on_movement_finished(movement)

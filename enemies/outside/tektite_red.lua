@@ -50,7 +50,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(2)
+  enemy:set_life(6)
   enemy:set_size(24, 16)
   enemy:set_origin(12, 13)
   enemy:start_shadow()
@@ -71,13 +71,14 @@ enemy:register_event("on_restarted", function(enemy)
   	hookshot = 2,
   	magic_powder = 2,
   	shield = "protected",
-  	thrust = 2
+  	thrust = 2,
+		wind = 2
   })
 
   -- States.
   sprite:set_xy(0, 0)
   enemy:set_obstacle_behavior("normal")
   enemy:set_can_attack(true)
-  enemy:set_damage(2)
+  enemy:set_damage(8)
   enemy:wait()
 end)

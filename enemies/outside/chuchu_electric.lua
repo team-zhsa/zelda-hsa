@@ -63,19 +63,19 @@ end
 -- The enemy appears: set its properties.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(4)
+  enemy:set_life(1)
 end)
 
 -- The enemy appears: set its properties.
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 4,
-  	boomerang = 4,
-  	explosion = 4,
+  	arrow = 1,
+  	boomerang = 1,
+  	explosion = 1,
   	sword = electrocute,
   	thrown_item = "protected",
-  	fire = 4,
+  	fire = 1,
   	jump_on = "ignored",
   	hammer = "protected",
   	hookshot = "immobilized",
@@ -84,6 +84,6 @@ enemy:register_event("on_restarted", function(enemy)
   })
 
   -- States.
-  enemy:set_damage(4)
+  enemy:set_damage(2)
   start_walking()
 end)

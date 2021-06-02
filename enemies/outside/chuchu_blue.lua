@@ -6,8 +6,8 @@ local behavior = require("enemies/generic/chuchu")
 
 local properties = {
   sprite = "enemies/outside/chuchu_blue",
-  life = 3,
-  damage = 6,
+  life = 2,
+  damage = 4,
   normal_speed = 32,
   faster_speed = 40
 }

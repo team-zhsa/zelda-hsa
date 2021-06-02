@@ -50,7 +50,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(2)
+  enemy:set_life(6)
   enemy:set_size(24, 16)
   enemy:set_origin(12, 13)
   enemy:start_shadow()
@@ -60,10 +60,10 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 1,
+  	arrow = 2,
   	boomerang = 1,
   	explosion = 1,
-  	sword = 1,
+  	sword = 2,
   	thrown_item = 1,
   	fire = 1,
   	jump_on = "ignored",
@@ -78,6 +78,6 @@ enemy:register_event("on_restarted", function(enemy)
   sprite:set_xy(0, 0)
   enemy:set_obstacle_behavior("swimming")
   enemy:set_can_attack(true)
-  enemy:set_damage(2)
+  enemy:set_damage(8)
   enemy:wait()
 end)
