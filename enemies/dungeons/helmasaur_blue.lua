@@ -85,7 +85,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(2)
+  enemy:set_life(5)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
 end)
@@ -101,7 +101,7 @@ enemy:register_event("on_restarted", function(enemy)
   	thrown_item = 2,
   	fire = 2,
   	jump_on = "ignored",
-  	hammer = 2,
+  	hammer = 5,
   	hookshot = on_hookshot_attack_received,
   	magic_powder = 2,
   	shield = "protected",
@@ -110,6 +110,6 @@ enemy:register_event("on_restarted", function(enemy)
 
   -- States.
   enemy:set_can_attack(true)
-  enemy:set_damage(2)
+  enemy:set_damage(4)
   start_walking()
 end)

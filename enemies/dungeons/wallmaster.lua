@@ -8,7 +8,7 @@ local grabbed_hero
 
 function enemy:on_created()
 
-  enemy:set_life(3)
+  enemy:set_life(7)
   enemy:set_damage(0)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
