@@ -114,7 +114,7 @@ enemy:register_event("on_restarted", function(enemy)
   	arrow = 2,
   	boomerang = 2,
   	explosion = 2,
-  	sword = 1,
+  	sword = 2,
   	thrown_item = 2,
   	fire = 2,
   	jump_on = 2,

@@ -31,6 +31,13 @@ function enemy:on_restarted()
   end
 end
 
+function enemy:on_dying()
+  -- It splits into two mini baris when it dies
+  enemy:create_enemy({ breed = "dungeons/bari_mini" })
+  enemy:create_enemy({ breed = "dungeons/bari_mini" })
+end
+
+
 function enemy:on_immobilized()
   shocking = false
 end

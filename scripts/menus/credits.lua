@@ -23,7 +23,7 @@ end
 -- Called when the menu is started
 function end_credits:on_started()
   local lh = 16 -- line height in pixels
-  local speed = 15 -- scroll speed in px/s (set it to 8)
+  local speed = 12 -- scroll speed in px/s (set it to 8)
 
   -- Credits dialog
   self.dialog = sol.language.get_dialog("scripts.menus.credits")

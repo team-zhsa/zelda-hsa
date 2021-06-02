@@ -118,7 +118,7 @@ function title_screen:start_animation()
 
   -- Move the sword.
   local sword_movement = sol.movement.create("target")
-  sword_movement:set_speed(320)
+  sword_movement:set_speed(512)
   sword_movement:set_target(55, 42)
   -- Update the surface whenever the sword moves.
   function sword_movement:on_position_changed()

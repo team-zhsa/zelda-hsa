@@ -39,7 +39,7 @@ function enemy:on_created()
 	enemy:set_size(32, 32)
 	enemy:set_origin(16, 29)
   enemy:set_life(35)
-  enemy:set_damage(2)
+  enemy:set_damage(3)
 	enemy:create_sprite("enemies/boss/tentacle_boss")
 	enemy:set_hurt_style("boss")
 	phase = 1
