@@ -10464,7 +10464,7 @@ tile{
 tile{
   layer = 0,
   x = 1304,
-  y = 176,
+  y = 160,
   width = 8,
   height = 40,
   pattern = "2205",
@@ -10473,7 +10473,7 @@ tile{
 tile{
   layer = 0,
   x = 1104,
-  y = 176,
+  y = 160,
   width = 8,
   height = 40,
   pattern = "2204",
@@ -10482,7 +10482,7 @@ tile{
 tile{
   layer = 0,
   x = 1112,
-  y = 176,
+  y = 160,
   width = 192,
   height = 40,
   pattern = "2202",
@@ -10491,7 +10491,7 @@ tile{
 tile{
   layer = 0,
   x = 1112,
-  y = 216,
+  y = 200,
   width = 192,
   height = 8,
   pattern = "2203",
@@ -19699,6 +19699,17 @@ destructible{
   weight = 1,
 }
 
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/g5",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = -24,
@@ -22357,7 +22368,7 @@ tile{
 tile{
   layer = 1,
   x = 1304,
-  y = 144,
+  y = 128,
   width = 8,
   height = 48,
   pattern = "1489",
@@ -22366,7 +22377,7 @@ tile{
 tile{
   layer = 1,
   x = 1104,
-  y = 144,
+  y = 128,
   width = 8,
   height = 48,
   pattern = "1488",
@@ -22375,7 +22386,7 @@ tile{
 tile{
   layer = 1,
   x = 1112,
-  y = 144,
+  y = 128,
   width = 192,
   height = 48,
   pattern = "7155",
@@ -22384,7 +22395,7 @@ tile{
 tile{
   layer = 1,
   x = 1112,
-  y = 136,
+  y = 120,
   width = 192,
   height = 8,
   pattern = "1487",
@@ -22393,7 +22404,7 @@ tile{
 tile{
   layer = 1,
   x = 1112,
-  y = 192,
+  y = 176,
   width = 192,
   height = 8,
   pattern = "1490",

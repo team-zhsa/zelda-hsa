@@ -5120,6 +5120,19 @@ sensor{
   height = 16,
 }
 
+destructible{
+  layer = 0,
+  x = 8,
+  y = 1149,
+  treasure_name = "random_west",
+  sprite = "entities/Grass/grass01",
+  destruction_sound = "objects/e_bush",
+  weight = -1,
+  can_be_cut = true,
+  damage_on_enemies = 0,
+  ground = "grass",
+}
+
 tile{
   layer = 1,
   x = 0,
