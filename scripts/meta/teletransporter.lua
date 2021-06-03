@@ -40,4 +40,5 @@ tele_meta:register_event("on_activated", function(teletransporter)
 			end
 		end
 
+
   end)

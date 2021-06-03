@@ -22,6 +22,7 @@ function separator_manager:manage_map(map)
   local function separator_on_activated(separator)
 
     local hero = map:get_hero()
+	hero:walk(hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2)
 
     -- Enemies.
     for _, enemy_place in ipairs(enemy_places) do

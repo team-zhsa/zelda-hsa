@@ -50,8 +50,6 @@ map_meta:register_event("on_started", function(map)
     hero:set_visible()
   end
 
-
-
 end)
 
 map_meta:register_event("on_finished", function(map)
