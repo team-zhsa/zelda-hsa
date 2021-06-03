@@ -9,16 +9,11 @@
 
 local map = ...
 local game = map:get_game()
+local field_music_manager = require("scripts/maps/field_music_manager")
 
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+map:register_event("on_draw", function(map)
 
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
+  -- Music
+  field_music_manager:init(map)
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
+end)
