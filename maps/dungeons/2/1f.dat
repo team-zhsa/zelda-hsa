@@ -11420,7 +11420,7 @@ door{
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_1f_door_24_29",
-  opening_method = "interaction",
+  opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
   opening_condition_consumed = true,
 }

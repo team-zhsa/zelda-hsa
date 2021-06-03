@@ -21,7 +21,7 @@ cannonball_manager:create_cannons(map, "cannon_")
 local water_delay = 500
 local pool_full = false
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+map:register_event("on_started", function()
 	separator_manager:manage_map(map)
 	map:set_doors_open("door_33_e", false)
 	map:set_doors_open("door_34_w", false)
@@ -32,7 +32,7 @@ function map:on_started()
 	door_manager:open_when_switch_activated(map, "switch_34_door", "door_29_n")
   -- You can initialize the movement and sprites of various
   -- map entities here.
-end
+end)
 
 -- Pool fill switch mechanism
 -- The switch fills up the champagne swimming pool

@@ -128,7 +128,7 @@ function tone_manager:create(game)
       game:on_tone_system_saving()
       
       local previous_time_system = time_system
-      time_system = game:is_in_outside_world() or (map:get_id() == "20" or map:get_id() == "21" or map:get_id() == "22")
+      time_system = game:is_in_outside_world()
       if time_system ~= previous_time_system then mr = nil end
       
       cr, cg, cb = game:get_value("cr"), game:get_value("cg"), game:get_value("cb")
@@ -280,6 +280,9 @@ function tone_manager:create(game)
         shadow:fill_color{cr, cg, cb, 255}
       elseif not time_system and mr == nil then
         -- The map has undefined tone.
+
+  shadow = sol.surface.create(320, 240)
+  shadow:set_blend_mode("multiply")
         shadow:fill_color{255, 255, 255, 255}
       end
       

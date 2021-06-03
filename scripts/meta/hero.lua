@@ -271,9 +271,9 @@ function hero_meta:on_taking_damage(damage)
 
   -- In the parameter, the damage unit is 1/2 of a heart.
   local game = self:get_game()
-  local defense = self:get_ability("tunic")
+  local defense = game:get_ability("tunic")
 	local final_damage = damage / defense
-	print(final_damage)
+	game:remove_life(final_damage)
 
 end
 

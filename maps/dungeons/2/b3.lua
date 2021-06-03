@@ -16,6 +16,7 @@ local enemy_manager = require("scripts/maps/enemy_manager")
 local separator_manager = require("scripts/maps/separator_manager")
 local switch_manager = require("scripts/maps/switch_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
+local flying_tile_manager = require("scripts/maps/flying_tile_manager")
 local cannonball_manager = require("scripts/maps/cannonball_manager")
 cannonball_manager:create_cannons(map, "cannon_")
 
@@ -25,6 +26,8 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_9_s", false)
 	treasure_manager:disappear_pickable(map, "pickable_29_small_key")
 	treasure_manager:disappear_pickable(map, "pickable_18_yellow_key")
+	door_manager:open_when_flying_tiles_dead(map, "enemy_10", "door_10_w")
+	door_manager:open_when_flying_tiles_dead(map, "enemy_10", "door_10_s")
 	door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_s")
 	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29_", "pickable_29_small_key")
 	if miniboss ~= nil then
@@ -41,4 +44,30 @@ if miniboss ~= nil then
 		door_manager:close_if_enemies_not_dead(map, "miniboss", "door_13_s")
 		miniboss_sensor:remove()
 	end)
+end
+
+function sensor_10_flying_tile:on_activated()
+
+  flying_tile_manager:reset(map, "enemy_10")
+  map:set_doors_open("door_10_w", true)
+  map:set_doors_open("door_10_s", true)
+  local direction4 = hero:get_direction()
+  if direction4 == 1 then
+      map:close_doors("door_10_w")
+      map:close_doors("door_10_s")
+  end
+
+end
+
+function sensor_10_flying_tile_2:on_activated()
+
+  flying_tile_manager:reset(map, "enemy_10")
+  map:set_doors_open("door_10_w", true)
+  map:set_doors_open("door_10_s", true)
+  local direction4 = hero:get_direction()
+  if direction4 == 0 then
+      map:close_doors("door_10_w")
+      map:close_doors("door_10_s")
+  end
+
 end
