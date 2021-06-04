@@ -8,20 +8,20 @@ local item_names_assignable = {
   "wind_rod",
 	"fire_rod",
   "_placeholder", -- Row 2 -- Flames Medallion
-  "wine", 
-	"sword_skill_beam",
+  "_placeholder", 
+	"hero_shield",
   "_placeholder", -- Darkness rod
 	"_placeholder", -- Doom rod
 	"ice_rod",
 	"_placeholder", -- Row 3 -- Quake Medallion
 	"trading_1", 
-	"_placeholder",
+	"hylia_shield",
 	"healing_wand",
 	"bottle_1",
 	"bottle_2",
 	"_placeholder", -- Row 4 -- Book of Mudora
 	"mushroom", 
-	"_placeholder", 
+	"mirror_shield", 
 	"somaria_cane",
 	"bottle_3", -- Deku stick
 	"bottle_4",

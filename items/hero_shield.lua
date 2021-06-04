@@ -40,7 +40,7 @@ local function set_grabing_abilities_level(level)
 end
 
 -- Initialize the item.
-item:set_savegame_variable("possession_shield")
+item:set_savegame_variable("possession_hero_shield")
 function item:on_created()
 
   item:on_variant_changed(item:get_variant())
@@ -78,7 +78,7 @@ function item:on_using()
   item.is_used = true
 
   -- Initialize the state.
-  game:set_ability("shield", variant)
+  game:set_ability("shield", 1)
   local shield_sprite = hero:get_sprite("shield")
 
   hero:unfreeze() -- Allow the hero to walk.
@@ -140,7 +140,7 @@ local function initialize_hero_meta()
 
   -- True if there is a pixel collision between the shield and the given enemy, and if the shield is strong enough and not ignored by the enemy.
   function hero_meta:is_shield_protecting(enemy, enemy_sprite)
-    local item = self:get_game():get_item("shield")
+    local item = self:get_game():get_item("hero_shield")
     local is_strong_enough = item:get_variant() >= enemy:get_shield_minimum_level()
     local is_not_ignored = enemy:get_shield_reaction() ~= "ignored"
     local is_collision = enemy:overlaps(self, enemy:get_attacking_collision_mode(), enemy_sprite, self:get_sprite("shield"))

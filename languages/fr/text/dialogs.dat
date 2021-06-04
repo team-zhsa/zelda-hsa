@@ -646,6 +646,18 @@ augmenté d'un coeur !"
 }
 
 dialog{
+  id = "_treasure.hero_shield.1",
+  icon = "140",
+  text = [[
+Tu as obtenu le Bouclier du 
+Héros !$0
+
+Utilise-le pour te protéger des
+attaques !
+]],
+}
+
+dialog{
   id = "_treasure.hookshot.1",
   icon = "7",
   text = [[
@@ -653,6 +665,19 @@ CLING ! C'est le grappin !$0
 Il se détend et se contracte et
 CLING ! Il peut agripper
 beaucoup d'objets !
+]],
+}
+
+dialog{
+  id = "_treasure.hylia_shield.1",
+  icon = "141",
+  text = [[
+Tu as obtenu le Bouclier 
+d'Hylia !$0
+
+Il est plus puissant que l'ancien
+et permet de repousser les
+attaques de feu !
 ]],
 }
 
@@ -942,6 +967,19 @@ Tu as le Plan ! $0
 Sers-t'en pour voir ta position
 et le reste du donjon. Appuie
 sur le bouton W.
+]],
+}
+
+dialog{
+  id = "_treasure.mirror_shield.1",
+  icon = "142",
+  text = [[
+Tu as obtenu le Bouclier 
+Miroir !$0
+
+Il te protège de quasiment toutes
+les attaques et repousse les
+lasers.
 ]],
 }
 
@@ -1243,37 +1281,6 @@ coquillage !
 Collectes-en    
 beaucoup pour faire
 du troc...
-]],
-}
-
-dialog{
-  id = "_treasure.shield.1",
-  icon = "140",
-  text = [[
-Tu as obtenu un bouclier !$0
-Utilise X pour te protéger des
-ennemis.
-]],
-}
-
-dialog{
-  id = "_treasure.shield.2",
-  icon = "141",
-  text = [[
-Ton bouclier s'est amélioré !$0
-Tu peux désormais te protéger
-des boules de feu !
-]],
-}
-
-dialog{
-  id = "_treasure.shield.3",
-  icon = "142",
-  text = [[
-Tu as trouvé le Bouclier Miroir !$0
-Tu peux désormais réfléchir les
-rayons que ton bouclier ne
-pouvait arrêter.
 ]],
 }
 
@@ -5370,6 +5377,16 @@ de Soin !
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.hero_shield.1",
+  icon = "140",
+  skip = "all",
+  text = [[
+Permet de repousser
+tes ennemis.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.hookshot.1",
   icon = "7",
   skip = "all",
@@ -5378,6 +5395,16 @@ Hisse-toi à des
 endroits
 inaccessibles grâce
 au Grappin.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.hylia_shield.1",
+  icon = "141",
+  skip = "all",
+  text = [[
+Permet de repousser
+les attaques de feu.
 ]],
 }
 
@@ -5625,6 +5652,16 @@ Une petite lettre
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.mirror_shield.1",
+  icon = "142",
+  skip = "all",
+  text = [[
+Permet de repousser
+les rayons lasers.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.mushroom.1",
   icon = "18",
   skip = "all",
@@ -5757,36 +5794,6 @@ dialog{
 Collectes-en    
 beaucoup pour   
 faire du troc !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.shield.1",
-  icon = "140",
-  skip = "all",
-  text = [[
-Permet de repousser
-tes ennemis.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.shield.2",
-  icon = "141",
-  skip = "all",
-  text = [[
-Permet de repousser
-les boules de feu.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.shield.3",
-  icon = "142",
-  skip = "all",
-  text = [[
-Permet de repousser
-les lasers.
 ]],
 }
 

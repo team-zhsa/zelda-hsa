@@ -1,7 +1,7 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "shield", -- Row 1
+  "wine", -- Row 1
 	"lamp",
   "boomerang",
   "bow",
