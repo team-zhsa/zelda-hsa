@@ -15,7 +15,7 @@ local audio_manager = require("scripts/audio_manager")
 enemy:register_event("on_created", function(enemy)
 
   enemy:set_life(10)
-  enemy:set_damage(5)
+  enemy:set_damage(4)
   enemy:create_sprite("enemies/" .. enemy:get_breed())
   
 end)
