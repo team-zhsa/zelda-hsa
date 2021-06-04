@@ -5,7 +5,7 @@ local enemy = ...
 function enemy:on_created()
   enemy:set_life(1)
 	enemy:set_damage(2)
-  enemy:create_sprite("enemies/flames/flame_red")
+  enemy:create_sprite("enemies/" .. enemy:get_breed())
   enemy:set_size(16, 16); enemy:set_origin(8, 8)
   enemy:set_invincible()
   enemy:set_obstacle_behavior("flying")

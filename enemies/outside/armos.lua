@@ -38,7 +38,7 @@ function enemy:check_hero()
   local hero = self:get_map():get_entity("hero")
   local _, _, layer = self:get_position()
   local _, _, hero_layer = hero:get_position()
-  near_hero = layer == hero_layer and self:get_distance(hero) < 100
+  near_hero = layer == hero_layer and self:get_distance(hero) < 32
 
   if near_hero and not going_hero then
     self:go_hero()

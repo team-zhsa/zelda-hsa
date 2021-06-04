@@ -6,13 +6,13 @@ local main_sprite = nil
 local sword_sprite = nil
 
 -- Configuration variables
-local detect_distance = 32
-local normal_speed = 48
-local fast_speed = 64
+local detect_distance = 64
+local normal_speed = 32
+local fast_speed = 48
 
 function enemy:on_created()
-	enemy:set_life(8)
-	enemy:set_damage(6)
+	enemy:set_life(4)
+	enemy:set_damage(2)
 	enemy:set_hurt_style("normal")
 	sword_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed() .."_weapon")
 	main_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

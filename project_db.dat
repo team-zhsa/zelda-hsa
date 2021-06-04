@@ -363,6 +363,7 @@ sprite{ id = "enemies/dungeons/rope", description = "Rope" }
 sprite{ id = "enemies/dungeons/spiked_beetle", description = "Spiked Beetle" }
 sprite{ id = "enemies/dungeons/stalfos_blue", description = "Blue Stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_grey", description = "Grey Stalfos" }
+sprite{ id = "enemies/dungeons/stalfos_knight", description = "Stalfos Knight" }
 sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_green", description = "Green Tentacle" }
@@ -385,8 +386,6 @@ sprite{ id = "enemies/enemy_killed", description = "Enemy Killed" }
 sprite{ id = "enemies/flames/flame_blue", description = "Blue Flame" }
 sprite{ id = "enemies/flames/flame_red", description = "Red Flame" }
 sprite{ id = "enemies/outside/armos", description = "Armos" }
-sprite{ id = "enemies/outside/baba_floria", description = "Baba Floria" }
-sprite{ id = "enemies/outside/baba_seed", description = "Baba Seed" }
 sprite{ id = "enemies/outside/bomber", description = "Bomber" }
 sprite{ id = "enemies/outside/boulder", description = "Boulder" }
 sprite{ id = "enemies/outside/chicken", description = "Chicken" }
@@ -431,6 +430,7 @@ sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
 sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
+sprite{ id = "enemies/projectiles/fire_shot", description = "Fire Shot" }
 sprite{ id = "enemies/projectiles/fireball", description = "Fireball" }
 sprite{ id = "enemies/projectiles/laser", description = "Laser" }
 sprite{ id = "enemies/projectiles/spear", description = "Spear" }
@@ -459,6 +459,10 @@ sprite{ id = "enemies/soldiers/sword_soldier_orange", description = "Orange Swor
 sprite{ id = "enemies/soldiers/sword_soldier_orange_weapon", description = "Orange Sword Soldier Wp." }
 sprite{ id = "enemies/soldiers/sword_soldier_yellow", description = "Yellow Sword Soldier" }
 sprite{ id = "enemies/soldiers/sword_soldier_yellow_weapon", description = "Yellow Sword SoldierWp." }
+sprite{ id = "enemies/soldiers/tarosu_blue", description = "Blue Tarosu" }
+sprite{ id = "enemies/soldiers/tarosu_blue_weapon", description = "Blue Tarosu Weapon" }
+sprite{ id = "enemies/soldiers/tarosu_red", description = "Red Tarosu" }
+sprite{ id = "enemies/soldiers/tarosu_red_weapon", description = "Red Tarosu Weapon" }
 sprite{ id = "entities/Blocks/block-dungeon1", description = "Block (Dungeon)" }
 sprite{ id = "entities/Blocks/block-dungeon2", description = "Block (Jabu-Jabu)" }
 sprite{ id = "entities/Blocks/block-ext01", description = "Block (Outside 1)" }
@@ -1758,7 +1762,6 @@ enemy{ id = "flying_tile", description = "Flying Tile" }
 enemy{ id = "generic_towards_hero", description = "generic_towards_hero" }
 enemy{ id = "generic_waiting_for_hero", description = "generic_waiting_for_hero" }
 enemy{ id = "outside/armos", description = "Armos" }
-enemy{ id = "outside/baba_floria", description = "Baba Floria" }
 enemy{ id = "outside/bomber", description = "Bomber" }
 enemy{ id = "outside/boulder", description = "Boulder" }
 enemy{ id = "outside/chicken", description = "Chicken" }
@@ -1816,6 +1819,8 @@ enemy{ id = "soldiers/sword_soldier_brown", description = "Brown Sword Soldier" 
 enemy{ id = "soldiers/sword_soldier_green", description = "Green Sword Soldier" }
 enemy{ id = "soldiers/sword_soldier_orange", description = "Orange Sword Soldier" }
 enemy{ id = "soldiers/sword_soldier_yellow", description = "Yellow Sword Soldier" }
+enemy{ id = "soldiers/tarosu_blue", description = "Blue Tarosu" }
+enemy{ id = "soldiers/tarosu_red", description = "Red Tarosu" }
 
 entity{ id = "arrow", description = "Arrow" }
 entity{ id = "ball", description = "Ball" }
