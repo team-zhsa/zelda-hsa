@@ -84,7 +84,7 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-
+  enemy:set_obstacle_behavior("swimming")
   enemy:set_life(5)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)

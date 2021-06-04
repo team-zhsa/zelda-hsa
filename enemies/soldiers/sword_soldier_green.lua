@@ -12,7 +12,7 @@ local fast_speed = 48
 
 function enemy:on_created()
 	enemy:set_life(2)
-	enemy:set_damage(1)
+	enemy:set_damage(2)
 	enemy:set_hurt_style("normal")
 	sword_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed() .."_weapon")
 	main_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

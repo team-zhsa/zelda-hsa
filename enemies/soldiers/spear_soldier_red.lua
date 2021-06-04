@@ -57,7 +57,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-	enemy:set_life(2)
+	enemy:set_life(4)
 	enemy:set_size(16, 16)
 	enemy:set_origin(8, 13)
 end)
@@ -82,6 +82,6 @@ enemy:register_event("on_restarted", function(enemy)
 
 	-- States.
 	enemy:set_can_attack(true)
-	enemy:set_damage(1)
+	enemy:set_damage(8)
 	enemy:start_walking()
 end)

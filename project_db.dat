@@ -297,9 +297,6 @@ sprite{ id = "enemies/dungeons/bari_blue", description = "Blue Bari" }
 sprite{ id = "enemies/dungeons/bari_mini", description = "Mini Bari" }
 sprite{ id = "enemies/dungeons/bari_red", description = "Red Bari" }
 sprite{ id = "enemies/dungeons/beamos", description = "Beamos" }
-sprite{ id = "enemies/dungeons/beamos_laser", description = "Beamos Laser" }
-sprite{ id = "enemies/dungeons/beamos_particle", description = "Beamos Particle" }
-sprite{ id = "enemies/dungeons/billy", description = "Billy" }
 sprite{ id = "enemies/dungeons/blue_dogman", description = "Blue Dogman" }
 sprite{ id = "enemies/dungeons/bubble_blue", description = "Blue Bubble" }
 sprite{ id = "enemies/dungeons/bubble_green", description = "Green Bubble" }
@@ -332,6 +329,7 @@ sprite{ id = "enemies/dungeons/helmasaur_green", description = "Green Helmasaur"
 sprite{ id = "enemies/dungeons/helmasaur_purple", description = "Purple Helmasaur" }
 sprite{ id = "enemies/dungeons/helmasaur_red", description = "Red Helmasaur" }
 sprite{ id = "enemies/dungeons/hooded_stalfos", description = "Hooded Stalfos" }
+sprite{ id = "enemies/dungeons/hover", description = "Hover" }
 sprite{ id = "enemies/dungeons/keese", description = "Keese" }
 sprite{ id = "enemies/dungeons/keese_dark", description = "Dark Keese" }
 sprite{ id = "enemies/dungeons/keese_elec", description = "Electric Keese" }
@@ -352,6 +350,7 @@ sprite{ id = "enemies/dungeons/mini_moldorm/body", description = "Mini moldorm b
 sprite{ id = "enemies/dungeons/mini_moldorm/tail", description = "Mini moldorm tail" }
 sprite{ id = "enemies/dungeons/pengator", description = "Pengator" }
 sprite{ id = "enemies/dungeons/pike_auto", description = "Pike (Auto)" }
+sprite{ id = "enemies/dungeons/pike_big", description = "Big Pike" }
 sprite{ id = "enemies/dungeons/pike_detect", description = "Pike (Detect)" }
 sprite{ id = "enemies/dungeons/pike_fixed", description = "Pike (Fixed)" }
 sprite{ id = "enemies/dungeons/poe", description = "Poe" }
@@ -375,9 +374,8 @@ sprite{ id = "enemies/dungeons/wallmaster", description = "Wallmaster" }
 sprite{ id = "enemies/dungeons/wizzrobe", description = "Wizzrobe" }
 sprite{ id = "enemies/dungeons/wizzrobe_beam", description = "Wizzrobe Beam" }
 sprite{ id = "enemies/dungeons/wizzrobe_blue", description = "Blue Wizzrobe" }
-sprite{ id = "enemies/dungeons/wizzrobe_elec", description = "Electric Wizzrobe" }
-sprite{ id = "enemies/dungeons/wizzrobe_fire", description = "Fire Wizzrobe" }
-sprite{ id = "enemies/dungeons/wizzrobe_ice", description = "Ice Wizzrobe" }
+sprite{ id = "enemies/dungeons/wizzrobe_purple", description = "Purple Wizzrobe" }
+sprite{ id = "enemies/dungeons/wizzrobe_red", description = "Red Wizzrobe" }
 sprite{ id = "enemies/dungeons/wizzrobe_white", description = "White Wizzrobe" }
 sprite{ id = "enemies/dungeons/zazak_blue", description = "Blue Zazak" }
 sprite{ id = "enemies/dungeons/zol_green", description = "Green Zol" }
@@ -429,6 +427,7 @@ sprite{ id = "enemies/outside/tektite_water", description = "Water Tetkite" }
 sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
+sprite{ id = "enemies/projectiles/beam", description = "Wizzrobe Beam" }
 sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
 sprite{ id = "enemies/projectiles/fire_shot", description = "Fire Shot" }
 sprite{ id = "enemies/projectiles/fireball", description = "Fireball" }
@@ -1712,6 +1711,7 @@ enemy{ id = "dungeons/helmasaur_green", description = "Green Helmasaur" }
 enemy{ id = "dungeons/helmasaur_purple", description = "Purple Helmasaur" }
 enemy{ id = "dungeons/helmasaur_red", description = "Red Helmasaur" }
 enemy{ id = "dungeons/hooded_stalfos", description = "Hooded Stalfos" }
+enemy{ id = "dungeons/hover", description = "Hover" }
 enemy{ id = "dungeons/keese", description = "Keese" }
 enemy{ id = "dungeons/keese_dark", description = "Dark Keese" }
 enemy{ id = "dungeons/keese_elec", description = "Electric Keese" }
@@ -1727,6 +1727,7 @@ enemy{ id = "dungeons/maskass", description = "Maskass" }
 enemy{ id = "dungeons/mini_moldorm", description = "Mini moldorm" }
 enemy{ id = "dungeons/pengator", description = "Pengator" }
 enemy{ id = "dungeons/pike_auto", description = "Pike (Auto)" }
+enemy{ id = "dungeons/pike_big", description = "Big Pike" }
 enemy{ id = "dungeons/pike_detect", description = "Pike (Detect)" }
 enemy{ id = "dungeons/pike_fixed", description = "Pike (Fixed)" }
 enemy{ id = "dungeons/poe", description = "Poe" }
@@ -1747,12 +1748,9 @@ enemy{ id = "dungeons/tentacle_yellow", description = "Yellow Tentacle" }
 enemy{ id = "dungeons/vegas", description = "Vegas" }
 enemy{ id = "dungeons/vire", description = "Vire" }
 enemy{ id = "dungeons/wallmaster", description = "Wallmaster" }
-enemy{ id = "dungeons/wizzrobe", description = "Wizzrobe" }
-enemy{ id = "dungeons/wizzrobe_beam", description = "Wizzrobe Beam" }
 enemy{ id = "dungeons/wizzrobe_blue", description = "Blue Wizzrobe" }
-enemy{ id = "dungeons/wizzrobe_elec", description = "Electric Wizzrobe" }
-enemy{ id = "dungeons/wizzrobe_fire", description = "Fire Wizzrobe" }
-enemy{ id = "dungeons/wizzrobe_ice", description = "Ice Wizzrobe" }
+enemy{ id = "dungeons/wizzrobe_purple", description = "Fire Wizzrobe" }
+enemy{ id = "dungeons/wizzrobe_red", description = "Red Wizzrobe" }
 enemy{ id = "dungeons/wizzrobe_white", description = "White Wizzrobe" }
 enemy{ id = "dungeons/zol_green", description = "Green Zol" }
 enemy{ id = "dungeons/zol_red", description = "Red Zol" }
@@ -1804,6 +1802,7 @@ enemy{ id = "outside/whirlwind", description = "Whirlwind" }
 enemy{ id = "outside/zola", description = "Zola" }
 enemy{ id = "outside/zora", description = "Zora" }
 enemy{ id = "projectiles/baba_seed", description = "Baba Seed" }
+enemy{ id = "projectiles/beam", description = "Wizzrobe Beam" }
 enemy{ id = "projectiles/beam_particle", description = "Beamos Particle" }
 enemy{ id = "projectiles/bomb", description = "Bomb" }
 enemy{ id = "projectiles/fire_shot", description = "Fire Shot" }

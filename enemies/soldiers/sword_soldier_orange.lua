@@ -11,8 +11,8 @@ local normal_speed = 48
 local fast_speed = 64
 
 function enemy:on_created()
-	enemy:set_life(12)
-	enemy:set_damage(4)
+	enemy:set_life(8)
+	enemy:set_damage(8)
 	enemy:set_hurt_style("normal")
 	sword_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed() .."_weapon")
 	main_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

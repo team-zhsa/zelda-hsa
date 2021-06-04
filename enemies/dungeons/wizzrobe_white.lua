@@ -1,26 +1,24 @@
--- A wizard who shoots magic beams.
+-- Lua script of enemy wizzrobe.
+-- This script is executed every time an enemy with this model is created.
 
+-- Variables
 local enemy = ...
 local map = enemy:get_map()
 local children = {}
 local is_appear = false
+local previous_on_removed = enemy.on_removed
 
-function enemy:update_attack()
+-- Include scripts
+local audio_manager = require("scripts/audio_manager")
 
-  if is_appear then
-      enemy:set_attack_consequence("sword", 1)
-  else
-      enemy:set_invincible()
-  end
-
-end
-
-function enemy:on_created()
+-- The enemy appears: set its properties.
+enemy:register_event("on_created", function(enemy)
 
   enemy:set_life(3)
-  enemy:set_damage(5)
+  enemy:set_damage(0)
   enemy:create_sprite("enemies/" .. enemy:get_breed())
-end
+  
+end)
 
 -- Wizzrobe appear
 function enemy:appear()
@@ -28,6 +26,7 @@ function enemy:appear()
   local sprite = enemy:get_sprite()
   enemy:set_visible(true)
   sprite:fade_in(20, function()
+      enemy:set_damage(5)
       is_appear = true
       enemy:update_attack()
       enemy:shoot()
@@ -35,12 +34,12 @@ function enemy:appear()
 
 end
 
-
 -- Wizzrobe disappear
 function enemy:disappear()
 
   local sprite = enemy:get_sprite()
   sprite:fade_out(20, function()
+      enemy:set_damage(0)
       is_appear = false
       enemy:update_attack()
       local hero = enemy:get_map():get_hero()
@@ -76,14 +75,15 @@ function enemy:shoot()
   }
 
   local beam = enemy:create_enemy({
-    breed = "wizzrobe_beam",
+    name = (enemy:get_name() or enemy:get_breed()) .. "_beam",
+    breed = "projectiles/beam",
     x = dxy[direction + 1][1],
     y = dxy[direction + 1][2],
   })
   children[#children + 1] = beam
 
   if not map.wizzrobe_recent_sound then
-    sol.audio.play_sound("zora")
+    audio_manager:play_entity_sound(enemy, "enemies/wizzrobe")
     -- Avoid loudy simultaneous sounds if there are several wizzrobes.
     map.wizzrobe_recent_sound = true
     sol.timer.start(map, 200, function()
@@ -93,12 +93,24 @@ function enemy:shoot()
   beam:go(direction)
   sol.timer.start(enemy, 2000, function()
     enemy:disappear()
-  end)  
+  end)
 end
 
-function enemy:on_restarted()
+function enemy:update_attack()
+
+  if is_appear then
+      enemy:set_attack_consequence("sword", 1)
+  else
+      enemy:set_invincible()
+  end
+  enemy:set_can_attack(is_appear)
+end
+
+-- The enemy was stopped for some reason and should restart.
+enemy:register_event("on_restarted", function(enemy)
 
   if is_appear == false then
+    enemy:set_can_attack(false)
     local sprite = enemy:get_sprite()
     enemy:set_visible(false)
     sol.timer.start(enemy, 2000, function()
@@ -106,22 +118,20 @@ function enemy:on_restarted()
     end)  
   end
 
-end
+end)
 
-local previous_on_removed = enemy.on_removed
-function enemy:on_removed()
+enemy:register_event("on_removed", function(enemy)
 
   if previous_on_removed then
     previous_on_removed(enemy)
   end
 
   for _, child in ipairs(children) do
-    child:remove()
+    child:start_death()
   end
-end
+end)
 
-
-function enemy:on_custom_attack_received(attack)
+enemy:register_event("on_custom_attack_received", function(enemy, attack)
 
   -- Custom reaction: don't get hurt but step back.
   sol.timer.stop_all(enemy)  -- Stop the towards_hero behavior.
@@ -135,4 +145,5 @@ function enemy:on_custom_attack_received(attack)
   sol.timer.start(enemy, 400, function()
     enemy:restart()
   end)
-end
+
+end)

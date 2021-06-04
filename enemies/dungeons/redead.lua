@@ -9,7 +9,7 @@ local enemy = ...
     enemy:set_life(16)
     enemy:set_damage(4)
     enemy:set_hurt_style("monster")
-    main_sprite = enemy:create_sprite("enemies/dungeons/redead")
+    main_sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
     enemy:set_size(16, 16)
     enemy:set_origin(8, 13)
   end

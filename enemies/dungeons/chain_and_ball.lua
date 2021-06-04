@@ -24,12 +24,12 @@ local center_xy = {x = 0, y = 0}  -- Center point of the circles, relative to th
 
 function enemy:on_created()
   self:set_life(1); self:set_damage(3)
-  self:create_sprite("enemies/dungeons/chain_and_ball")
+  self:create_sprite("enemies/" .. enemy:get_breed())
   self:set_size(16, 16); self:set_origin(8, 8)
   self:set_invincible()
 
   -- Create a second sprite that stays independent of the enemy.
-  link_sprite = sol.sprite.create("enemies/dungeons/chain_and_ball")
+  link_sprite = sol.sprite.create("enemies/" .. enemy:get_breed())
   link_sprite:set_animation("chain")
 
   -- Initialize the links of the chain.
