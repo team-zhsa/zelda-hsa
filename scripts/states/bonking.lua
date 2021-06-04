@@ -57,7 +57,7 @@ function state:on_started()
   if sword_sprite then
     entity:remove_sprite(sword_sprite)
   end
-  local shield = state:get_game():get_item("shield")
+  local shield = state:get_game():get_item("hero_shield") or state:get_game():get_item("hylia_shield") or state:get_game():get_item("mirror_shield")
   if shield:is_being_used() then
     shield:stop_using()
   end

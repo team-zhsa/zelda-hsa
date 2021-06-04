@@ -19347,16 +19347,6 @@ jumper{
   jump_length = 40,
 }
 
-dynamic_tile{
-  name = "lavios_shop",
-  layer = 0,
-  x = 728,
-  y = 1072,
-  width = 16,
-  height = 16,
-  pattern = "6020",
-}
-
 sensor{
   name = "open_house_lavios_shop_sensor",
   layer = 0,
@@ -19708,6 +19698,40 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/g5",
   destination = "_side",
+}
+
+destination{
+  name = "from_ravio",
+  layer = 0,
+  x = 736,
+  y = 1101,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 728,
+  y = 1072,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/south_castle/ravios_house",
+  destination = "from_outside",
+}
+
+dynamic_tile{
+  name = "lavios_shop",
+  layer = 0,
+  x = 728,
+  y = 1072,
+  width = 16,
+  height = 16,
+  pattern = "6020",
 }
 
 tile{
