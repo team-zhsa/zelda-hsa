@@ -16,7 +16,7 @@ local item_names_assignable = {
 	"_placeholder", -- Row 3 -- Quake Medallion
 	"trading_1", 
 	"_placeholder",
-	"_placeholder", -- Healing rod
+	"healing_wand",
 	"bottle_1",
 	"bottle_2",
 	"_placeholder", -- Row 4 -- Book of Mudora

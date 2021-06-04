@@ -27,7 +27,7 @@ function item:shoot()
     direction = direction,
   })
 
-	sol.audio.play_sound("boss_fireball")
+	sol.audio.play_sound("items/sword_beam")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)

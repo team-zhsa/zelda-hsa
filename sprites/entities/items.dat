@@ -285,6 +285,17 @@ animation{
   },
 }
 animation{
+  name = "healing_wand",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "heart",
   src_image = "entities/items.png",
   frame_delay = 100,

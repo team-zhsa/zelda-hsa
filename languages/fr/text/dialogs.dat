@@ -596,6 +596,37 @@ d'autres objets.
 }
 
 dialog{
+  id = "_treasure.healing_wand.1",
+  icon = "101",
+  text = [[
+Tu as obtenu le Sceptre de Soin. $0
+Utilise-le pour te régénérer !
+]],
+}
+
+dialog{
+  id = "_treasure.healing_wand.2",
+  icon = "101",
+  text = [[
+Tu as amélioré ton sceptre de
+Soin !$0
+Il te permet de récupérer plus
+d'énergie !
+]],
+}
+
+dialog{
+  id = "_treasure.healing_wand.3",
+  icon = "101",
+  text = [[
+Tu as amélioré ton sceptre de
+Soin !$0
+Il te permet de récupérer encore
+plus d'énergie !
+]],
+}
+
+dialog{
   id = "_treasure.heart.1",
   icon = "150",
   text = [[
@@ -5305,6 +5336,36 @@ dialog{
   text = [[
 Retournez et écrasez
 vos ennemis !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.healing_wand.1",
+  icon = "101",
+  skip = "all",
+  text = [[
+Soignez-vous avec le sceptre
+de Soin !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.healing_wand.2",
+  icon = "101",
+  skip = "all",
+  text = [[
+Soignez-vous avec le sceptre
+de Soin !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.healing_wand.3",
+  icon = "101",
+  skip = "all",
+  text = [[
+Soignez-vous avec le sceptre
+de Soin !
 ]],
 }
 
