@@ -45,7 +45,8 @@ function npc_merchant:on_interaction()
 				game:start_dialog("maps.out.kakarico_village.shop_4")
 			end
 		end)
-	else print("fdgdfg")
+	else
+		game:start_dialog("maps.out.kakarico_village.shop_5")
 	end
 			
 end
