@@ -16,7 +16,7 @@ end
 function item:on_obtaining(variant, savegame_variable)
 
   -- Obtaining bombs increases the bombs counter.
-  local amounts = {1, 3, 8}
+  local amounts = {1, 3, 8, 10}
   local amount = amounts[variant]
   if amount == nil then
     error("Invalid variant '" .. variant .. "' for item 'bomb'")

@@ -39,14 +39,15 @@ function map:on_started(destination)
     bed:get_sprite():set_animation("hero_sleeping")
     hero:freeze()
     hero:set_enabled(false)
-    sol.audio.play_music("cutscenes/cutscene_introduction_loop")
+    sol.audio.play_music("cutscenes/raining")
     sol.timer.start(3000, function()
       game:set_value("game_started", true)
       map:jump_from_bed()
     end)
   end
 	if not game:get_value("obtained_sword", true) then
-		sol.audio.play_music("cutscenes/cutscene_introduction_loop")
+		sol.audio.play_music("cutscenes/raining")
+		npc_zelda:set_enabled(true)
 	else
 		npc_zelda:set_enabled(false)
 	end

@@ -16,7 +16,7 @@ function item:on_obtained(variant, savegame_variable)
   local x_hero,y_hero, layer_hero = hero:get_position()
   hero:freeze()
   hero:set_animation("brandish")
-  sol.audio.play_sound("heart_container")
+  sol.audio.play_sound("common/get_heart_container")
   local heart_container_entity = map:create_custom_entity({
       name = "brandish_sword",
       sprite = "entities/items",

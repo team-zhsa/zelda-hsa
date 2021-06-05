@@ -88,6 +88,7 @@ map{ id = "inside/castle/rooms", description = "Castle (Bedrooms)" }
 map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith Cave" }
 map{ id = "inside/caves/east_castle/east_swamp_path_cave", description = "East Swamp path cave" }
 map{ id = "inside/caves/east_castle/temple_of_time_path", description = "Temple of Time Path" }
+map{ id = "inside/caves/east_castle/to_blacksmith", description = "Cave to blacksmith" }
 map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
@@ -1196,7 +1197,7 @@ sprite{ id = "npc/priest", description = "Priest" }
 sprite{ id = "npc/ravio", description = "Ravio" }
 sprite{ id = "npc/rito", description = "Rito" }
 sprite{ id = "npc/rito_koshi", description = "Rito" }
-sprite{ id = "npc/running_man", description = "Runnig man" }
+sprite{ id = "npc/running_man", description = "Running man" }
 sprite{ id = "npc/scarecrow", description = "Scarecrow" }
 sprite{ id = "npc/seagull", description = "Seagull" }
 sprite{ id = "npc/snowpeak_anouki", description = "Anouki Snowpeak" }
@@ -1373,23 +1374,29 @@ sound{ id = "cane", description = "Cane" }
 sound{ id = "cannonball", description = "Cannonball" }
 sound{ id = "characters/link/effect/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "chest_open", description = "Chest Open" }
-sound{ id = "common/b_notebook_notification", description = "Bombers notebook notification" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
 sound{ id = "common/bars_npc_dialog", description = "NPC Dialog Bars" }
 sound{ id = "common/big_item", description = "Big Item" }
+sound{ id = "common/bombers_notification", description = "Bombers notebook notification" }
 sound{ id = "common/chest_appear", description = "Chest appearing" }
 sound{ id = "common/chest_creak", description = "Chest creaking" }
 sound{ id = "common/chest_minor_item", description = "Chest minor item" }
 sound{ id = "common/chest_opening", description = "Chest opening" }
+sound{ id = "common/dialog/done", description = "Done" }
 sound{ id = "common/dialog/message_end", description = "Message end" }
 sound{ id = "common/dialog/message_letter", description = "Message letter" }
+sound{ id = "common/dialog/no", description = "No" }
+sound{ id = "common/door/boss_door_unlock", description = "Boss door unlock" }
 sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
+sound{ id = "common/door/stone_close", description = "Stone close" }
+sound{ id = "common/door/stone_open", description = "Stone open" }
 sound{ id = "common/door/stone_slam", description = "Stone door slam" }
+sound{ id = "common/door/unlock_small_key", description = "Unlock small key" }
+sound{ id = "common/get_heart_container", description = "Get heart container" }
 sound{ id = "common/get_piece_of_heart", description = "Get piece of heart" }
 sound{ id = "common/get_small_item0", description = "Get small item 0" }
 sound{ id = "common/get_small_item1", description = "Get small item 1" }
 sound{ id = "common/gong", description = "Gong" }
-sound{ id = "common/heart_container", description = "Get heart container" }
 sound{ id = "common/hint_notification", description = "Hint notification" }
 sound{ id = "common/item_away", description = "Item away" }
 sound{ id = "common/item_in_deep_water", description = "Item in deep water" }
@@ -1398,15 +1405,13 @@ sound{ id = "common/item_in_lava", description = "Item in lava" }
 sound{ id = "common/item_letter", description = "Get letter" }
 sound{ id = "common/item_show", description = "Showing item" }
 sound{ id = "common/magic_bar/6", description = "6" }
-sound{ id = "common/medalion/medalion_appear", description = "Medalion appears" }
-sound{ id = "common/minimap_off", description = "Minimap off" }
-sound{ id = "common/minimap_on", description = "Minimap on" }
+sound{ id = "common/medallion/medallion_appear", description = "Medallion appears" }
+sound{ id = "common/medallion/medallion_falling", description = "Medallion falls" }
 sound{ id = "common/minor_item", description = "Minor Item" }
 sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/sidequest_major_item", description = "Major Item (Sidequest)" }
 sound{ id = "common/sidequest_minor_item", description = "Minor Item (Sidequest)" }
-sound{ id = "common/switch_crystal_hit", description = "Crystal Switch" }
 sound{ id = "crystal", description = "Crystal" }
 sound{ id = "cucco", description = "cucco" }
 sound{ id = "cursor", description = "Cursor" }
@@ -1414,10 +1419,13 @@ sound{ id = "danger", description = "Danger" }
 sound{ id = "door_closed", description = "Closed Door" }
 sound{ id = "door_open", description = "Open Door" }
 sound{ id = "door_unlocked", description = "Unlocked Door" }
-sound{ id = "enemies/bari/b_state_e", description = "Bari state E" }
+sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
+sound{ id = "enemies/gold_skulltula_token_spawn", description = "Gold Skulltula Token sapwn" }
+sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
+sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
 sound{ id = "enemy_awake", description = "Enemy awoken" }
 sound{ id = "enemy_hurt", description = "Enemy hurt" }
 sound{ id = "enemy_killed", description = "Enemy killed" }
@@ -1481,6 +1489,8 @@ sound{ id = "menu/fileselect_erase0", description = "Fileselect erase" }
 sound{ id = "menu/fileselect_start", description = "Fileselect start" }
 sound{ id = "menu/letter_add", description = "Letter add" }
 sound{ id = "menu/letter_back", description = "Letter back" }
+sound{ id = "menu/minimap_off", description = "Minimap off" }
+sound{ id = "menu/minimap_on", description = "Minimap on" }
 sound{ id = "menu/option_modifyvalue", description = "Option" }
 sound{ id = "menu/pause_close", description = "Pause close" }
 sound{ id = "menu/pause_open", description = "Pause open" }
@@ -1497,6 +1507,7 @@ sound{ id = "objects/heart/heart", description = "Heart" }
 sound{ id = "objects/on_switch", description = "Switch (On/Off)" }
 sound{ id = "objects/rupee/rupee", description = "Rupee" }
 sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
+sound{ id = "objects/switch_crystal_hit", description = "Switch crystal hit" }
 sound{ id = "octorok", description = "octorok" }
 sound{ id = "ok", description = "ok" }
 sound{ id = "peahat_awake", description = "peahat_awake" }
@@ -1816,7 +1827,6 @@ enemy{ id = "projectiles/fireball", description = "Fireball" }
 enemy{ id = "projectiles/laser", description = "Laser" }
 enemy{ id = "projectiles/rock_small", description = "Small Rock" }
 enemy{ id = "projectiles/spear", description = "Spear" }
-enemy{ id = "projectiles/wizzrobe_beam", description = "Wizzrobe Beam" }
 enemy{ id = "soldiers/spear_soldier_red", description = "Red Spear Soldier" }
 enemy{ id = "soldiers/sword_soldier_black", description = "Black Sword Soldier" }
 enemy{ id = "soldiers/sword_soldier_blue", description = "Blue Sword Soldier" }

@@ -19,6 +19,7 @@ end
 
 function sensor_welcome:on_activated()
 	game:start_dialog("maps.houses.south_castle.ravios_shop.merchant_welcome", game:get_player_name())
+	sensor_welcome:remove()
 end
 
 function npc_ravio:on_interaction()

@@ -17,6 +17,8 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_invincible()
   enemy:set_attack_consequence("sword", "custom")
   enemy:create_sprite("enemies/" .. enemy:get_breed())
+	enemy:set_minimum_shield_needed(2)
+
 end)
 
 enemy:register_event("on_obstacle_reached", function(enemy)

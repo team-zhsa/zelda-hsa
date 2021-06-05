@@ -10,8 +10,7 @@ if not sol.file.exists("debug") and not sol.file.exists("debug.lua") then
 end
 
 local console = require("scripts/console")
-local game_manager = require("scripts/game_manager")
-local map_menu = require("scripts/menus/overworld_map")	
+local game_manager = require("scripts/game_manager")	
 local statistics_manager = require("scripts/menus/statistics")
 local mode_7_manager = require("scripts/mode_7")
 local debug = {}

@@ -58,7 +58,7 @@ local function electrocute()
   hero:get_sprite():set_ignore_suspend(true)
   game:set_suspended(true)
   sprite:set_animation("shocking")
-  audio_manager:play_sound("ennemies/bari/b_state_e")
+  audio_manager:play_sound("ennemies/bari")
   hero:set_animation("electrocuted")
   effect_model.start_effect(surface, game, 'in', false)
   local shake_config = {

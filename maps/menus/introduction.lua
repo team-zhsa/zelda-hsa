@@ -67,7 +67,7 @@ local function next_fresco()
     hero:unfreeze()
 
     -- Go to the first map.
-    hero:teleport("misc/test_ground", "destination")
+    hero:teleport("inside/castle/rooms", "start_game")
   end
 end
 
@@ -107,4 +107,6 @@ function map:on_draw(dst_surface)
   dialog_background_img:draw(dst_surface)
 end
 
-
+function map:on_finished()
+	game:set_hud_enabled(true)
+end

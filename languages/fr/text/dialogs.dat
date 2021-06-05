@@ -295,6 +295,15 @@ Tu as obtenu huit Bombes !
 }
 
 dialog{
+  id = "_treasure.bomb.4",
+  icon = "3",
+  next = "_treasure.bomb.1.1",
+  text = [[
+Tu as obtenu dix Bombes !
+]],
+}
+
+dialog{
   id = "_treasure.bomb_bag.1",
   icon = "53",
   text = [[
@@ -1798,6 +1807,30 @@ dialog{
 Vas chercher une
 épée ! Hyrule peut
 être très dangereux!
+]],
+}
+
+dialog{
+  id = "maps.caves.east_castle.to_blacksmith_shop.merchant_welcome",
+  text = [[
+Bonjour, jeune héros !
+Choisis ce que tu aimes.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_castle.to_blacksmith_shop.product_heart",
+  text = [[
+Un coeur pour te régénérer si
+tu es mal en point.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_castle.to_blacksmith_shop.product_red_potion",
+  text = [[
+L'élixir de vie pour te restaurer
+six coeurs, très utile.
 ]],
 }
 
@@ -4577,13 +4610,11 @@ Convoitée par beaucoup de
 personnes, on disait qu'elle se
 situait dans le Saint Royaume.$0
 Un jour, un groupe de voleurs
-menés par leur chef Ganodorf
+menés par leur chef Ganondorf
 mit la main sur la Triforce et
 Ganondorf fit le souhait de
 posséder une armée puissante
 pour conquérir Hyrule.$0
-
-
 Les années passèrent et son
 nom disparut, mais sa légende
 est restée.
