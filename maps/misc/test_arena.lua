@@ -9,10 +9,11 @@
 
 local map = ...
 local game = map:get_game()
-
+local flying_tile_manager = require("scripts/maps/flying_tile_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
+flying_tile_manager:init(map, "enemy_10")
+flying_tile_manager:launch(map, "enemy_10")
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

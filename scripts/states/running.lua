@@ -105,7 +105,7 @@ function state:on_started()
       end
 
       local running_movement=sol.movement.create("straight")
-      running_movement:set_speed(196)
+      running_movement:set_speed(192)
       running_movement:set_angle(sprite:get_direction()*math.pi/2)
 
       -- Check if there is a collision with any sprite of the hero and an enemy, then hurt it.

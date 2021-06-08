@@ -18256,13 +18256,15 @@ teletransporter{
   destination_map = "inside/houses/zora_village/north_hut",
 }
 
-block{
+teletransporter{
   layer = 0,
-  x = 1288,
-  y = 357,
-  sprite = "entities/block",
-  pushable = true,
-  pullable = false,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/l1",
+  destination = "_side",
 }
 
 tile{

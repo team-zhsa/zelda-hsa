@@ -26,10 +26,10 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_9_s", false)
 	treasure_manager:disappear_pickable(map, "pickable_29_small_key")
 	treasure_manager:disappear_pickable(map, "pickable_18_yellow_key")
-	door_manager:open_when_flying_tiles_dead(map, "enemy_10", "door_10_w")
-	door_manager:open_when_flying_tiles_dead(map, "enemy_10", "door_10_s")
+	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_w")
+	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_s")
 	door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_s")
-	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29_", "pickable_29_small_key")
+	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29", "pickable_29_small_key")
 	if miniboss ~= nil then
 		treasure_manager:appear_pickable_when_enemies_dead(map, "miniboss", "pickable_18_yellow_key")
 		miniboss:set_enabled(false)
@@ -46,28 +46,49 @@ if miniboss ~= nil then
 	end)
 end
 
-function sensor_10_flying_tile:on_activated()
-
-  flying_tile_manager:reset(map, "enemy_10")
+-- Sensors events
+function sensor_10_flying_tile_reset_1:on_activated()
+	flying_tile_manager:reset(map, "enemy_10")
   map:set_doors_open("door_10_w", true)
   map:set_doors_open("door_10_s", true)
-  local direction4 = hero:get_direction()
-  if direction4 == 1 then
-      map:close_doors("door_10_w")
-      map:close_doors("door_10_s")
-  end
 
 end
 
-function sensor_10_flying_tile_2:on_activated()
-
-  flying_tile_manager:reset(map, "enemy_10")
+function sensor_10_flying_tile_reset_2:on_activated()
+	flying_tile_manager:reset(map, "enemy_10")
   map:set_doors_open("door_10_w", true)
   map:set_doors_open("door_10_s", true)
-  local direction4 = hero:get_direction()
-  if direction4 == 0 then
+
+end
+
+function sensor_10_flying_tile_init_1:on_activated()
+
+	flying_tile_manager:init(map, "enemy_10")
+
+end
+
+function sensor_10_flying_tile_init_2:on_activated()
+
+	flying_tile_manager:init(map, "enemy_10")
+
+end
+
+function sensor_10_flying_tile_launch_1:on_activated()
+
+  if flying_tile_manager.is_launch == false then
       map:close_doors("door_10_w")
       map:close_doors("door_10_s")
-  end
+    flying_tile_manager:launch(map, "enemy_10")
+ end
+
+end
+
+function sensor_10_flying_tile_launch_2:on_activated()
+
+  if flying_tile_manager.is_launch == false then
+      map:close_doors("door_10_w")
+      map:close_doors("door_10_s")
+    flying_tile_manager:launch(map, "enemy_10")
+ end
 
 end

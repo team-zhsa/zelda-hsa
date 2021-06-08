@@ -141,6 +141,26 @@ end
 function hero_meta.get_previous_state(hero)
   return hero.prev_state, hero.prev_cstate_name
 end
+function hero_meta.show_ground_effect(hero, id)
+
+  local map = hero:get_map()
+  local x,y, layer = hero:get_position()
+  local ground_effect = map:create_custom_entity({
+      name = "ground_effect",
+      sprite = "entities/ground_effects/"..id,
+      x = x,
+      y = y ,
+      width = 16,
+      height = 16,
+      layer = layer,
+      direction = 0
+    })
+  local sprite = ground_effect:get_sprite()
+  function sprite:on_animation_finished()
+    ground_effect:remove()
+  end
+
+end
 
 local function find_valid_ground(hero)
 

@@ -1,10 +1,8 @@
 local steps={
   "game_started",
-  "hero_awakened",
-  "shield_obtained",
   "sword_obtained",
-  "story_learned",
-  "dungeons_1_discovered",
+  "sahasrahla_met",
+  "dungeon_1_discovered",
   "dungeon_1_completed",
   "bowwow_dognapped",
   "dungeon_2_discovered",

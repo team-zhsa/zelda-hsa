@@ -108,6 +108,7 @@ map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/
 map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_castle/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
+map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
 map{ id = "inside/houses/cordinia/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
@@ -158,7 +159,7 @@ map{ id = "out/a7", description = "A7 (Parapa Town)" }
 map{ id = "out/b1", description = "B1 (Mountains, West)" }
 map{ id = "out/b2", description = "B2 (Sanctuary)" }
 map{ id = "out/b3", description = "B3 (New Kakariko Village)" }
-map{ id = "out/b4", description = "B4 (East Lost Woods, Forest Temple)" }
+map{ id = "out/b4", description = "B4 (Sacred Grove, Forest Temple)" }
 map{ id = "out/b5", description = "B5 (Desert, Desert Palace)" }
 map{ id = "out/b6", description = "B6 (Hyrule Field)" }
 map{ id = "out/b7", description = "B7 (Hyrule Field)" }
@@ -2108,6 +2109,7 @@ file{ path = "scripts/maps/block_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/ceiling_drop_manager.lua", author = "MetalZelda, adapted by PhoenixII54", }
 file{ path = "scripts/maps/cinematic_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/effect_manager.lua", license = "GPL v3" }
+file{ path = "scripts/maps/flying_tile_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/fsa_effect.lua", license = "GPL v3" }
 file{ path = "scripts/maps/gb_effect.lua", license = "GPL v3" }
 file{ path = "scripts/maps/house_manager.lua", license = "GPL v3" }
