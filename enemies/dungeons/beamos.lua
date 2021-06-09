@@ -44,7 +44,7 @@ function enemy:start_firing()
       layer = layer,
       direction = enemy:get_direction4_to(hero)
     })
-		sol.audio.play_sound("cane")
+		sol.audio.play_sound("enemies/beamos")
     -- Unpause animation after some time.
     sol.timer.start(enemy, pause_duration, function()
       sprite:set_paused(false)

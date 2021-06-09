@@ -29,6 +29,7 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_21_s", false)
 	door_manager:open_when_switch_activated(map, "switch_33_door", "door_33_e")
 	door_manager:open_when_switch_activated(map, "switch_27_door", "door_27_n")
+	door_manager:open_when_switch_activated(map, "switch_24_door", "door_29_n")
 	door_manager:open_when_switch_activated(map, "switch_34_door", "door_29_n")
   -- You can initialize the movement and sprites of various
   -- map entities here.

@@ -64,6 +64,23 @@ function separator_manager:manage_map(map)
   local function separator_on_activating(separator)
 
     local hero = map:get_hero()
+    hero.respawn_point_saved=nil
+    local directions={
+      {16,0},
+      {0,-16},
+      {-16,0},
+      {0,16}
+    }
+    local x,y,layer=hero:get_position()
+    local offset_x, offset_y=unpack(directions[hero:get_direction()+1])
+
+    hero:save_solid_ground(x+offset_x, y+offset_y, layer)
+    hero.last_solid_ground={
+      x=x+offset_x,
+      y=y+offset_y,
+      layer=layer,
+      direction=hero:get_direction()*2
+    }
 
     -- Enemies.
     if not map.used_separator then
@@ -118,7 +135,7 @@ function separator_manager:manage_map(map)
       y = y,
       layer = layer,
       breed = enemy:get_breed(),
-      direction = enemy:get_sprite():get_direction(),
+      direction = 0, --enemy:get_sprite():get_direction(),
       name = enemy:get_name(),
       treasure = { enemy:get_treasure() },
       enemy = enemy,

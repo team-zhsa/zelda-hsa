@@ -18,6 +18,8 @@ local function initialize_dungeon_features(game)
     [1] = {
       floor_width = 1600,
       floor_height = 1680,
+			minimap_width = 40,
+			minimap_height = 56,
       lowest_floor = -1,
       highest_floor = 0,
       maps = {
@@ -40,6 +42,8 @@ local function initialize_dungeon_features(game)
     [2] = {
       floor_width = 1600,
       floor_height = 1680,
+			minimap_width = 40,
+			minimap_height = 56,
       lowest_floor = -3,
       highest_floor = 3,
       maps = {
@@ -58,6 +62,29 @@ local function initialize_dungeon_features(game)
       },
       main_entrance = {
         map_id = "dungeons/2/1f",
+        destination_name = "from_outside"
+      },
+    },
+
+[8] = {
+      floor_width = 1920,
+      floor_height = 1440,
+			minimap_width = 48,
+			minimap_height = 48,
+      lowest_floor = -1,
+      highest_floor = 0,
+      maps = {
+        "dungeons/8/1f",
+        "dungeons/8/b1",
+      },
+      boss = {
+        floor = 1,
+        savegame_variable = "dungeon_8_boss",
+        x = 1120,
+        y = 824,
+      },
+      main_entrance = {
+        map_id = "dungeons/8/1f",
         destination_name = "from_outside"
       },
     },

@@ -1,4 +1,4 @@
--- Lua script of map dungeons/8/q.
+-- Lua script of map dungeons/8/b1n.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

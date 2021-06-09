@@ -15,13 +15,14 @@ local audio_manager = require("scripts/audio_manager.lua")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
+	separator_manager:manage_map(map)
 	map:set_doors_open("door_19_s")
 	chest_20_blue_key:set_enabled(false)
 	if not game:get_value("dungeon_2_compass", true) then
 		chest_30_compass:set_enabled(false)
 	else chest_30_compass:set_enabled(true)
 	end
-	separator_manager:manage_map(map)
+
 end
 
 -- Event called after the opening transition effect of the map,

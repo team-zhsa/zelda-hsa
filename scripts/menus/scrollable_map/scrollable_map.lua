@@ -418,7 +418,9 @@ end
 -- to the dungeon minimap.
 function map_submenu:to_dungeon_minimap_coordinates(x, y)
 
-	local scale_x, scale_y = 40 / self.dungeon.floor_width, 56 / self.dungeon.floor_height  -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
+	local scale_x, scale_y = self.dungeon.minimap_width / self.dungeon.floor_width,
+	 self.dungeon.minimap_height / self.dungeon.floor_height
+	 -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
   local minimap_x = 0
   local minimap_y = -15
   local minimap_width = 123
@@ -501,8 +503,8 @@ function map_submenu:load_dungeon_map_image()
           self.dungeon_map_img, dst_x, dst_y)
         else
           dst_x = dst_x - 2
-          --self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
-          --self.dungeon_map_img, dst_x, dst_y)
+          self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
+          self.dungeon_map_img, dst_x, dst_y)
         end
       end
     end

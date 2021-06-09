@@ -8,7 +8,7 @@ local previous = sol.surface.create(qw*fac,qh*fac)
 
 gbshader:set_uniform('previous',previous)
 
-local persistence = 0.8
+local persistence = 0.5
 
 
 
