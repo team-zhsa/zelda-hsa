@@ -18,7 +18,7 @@ function item:on_using()
   local map = item:get_map()
   local hero = map:get_hero()
   local direction = hero:get_direction()
-  hero:set_animation("wand")
+  hero:set_animation("reverse_rod")
   -- Give the hero the animation of using the fire rod.
   local x, y, layer = hero:get_position()
   local healing_wand = map:create_custom_entity({

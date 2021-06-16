@@ -3676,46 +3676,6 @@ block{
   maximum_moves = 0,
 }
 
-door{
-  name = "boss_exit",
-  layer = 0,
-  x = 792,
-  y = 264,
-  direction = 1,
-  sprite = "entities/doors/Inside/door_d1_normal",
-  savegame_variable = "d11_boss_exit",
-}
-
-door{
-  name = "boss_entrance_out",
-  layer = 0,
-  x = 792,
-  y = 504,
-  direction = 1,
-  sprite = "entities/doors/Inside/door_d1_boss_key1",
-  savegame_variable = "d11_boss_entrance_out",
-  opening_method = "interaction_if_item",
-  opening_condition = "boss_key",
-}
-
-door{
-  name = "boss_entrance_in",
-  layer = 0,
-  x = 792,
-  y = 440,
-  direction = 3,
-  sprite = "entities/doors/Inside/door_d1_normal",
-  savegame_variable = "d11_boss_exit",
-}
-
-enemy{
-  layer = 0,
-  x = 800,
-  y = 333,
-  direction = 0,
-  breed = "",
-}
-
 tile{
   layer = 1,
   x = 792,

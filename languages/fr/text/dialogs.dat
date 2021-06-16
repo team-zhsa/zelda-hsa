@@ -1339,7 +1339,7 @@ s'en servir !
 
 dialog{
   id = "_treasure.sword.1",
-  icon = "66",
+  icon = "160",
   text = [[
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
@@ -1352,13 +1352,47 @@ transmise par notre peuple.
 
 dialog{
   id = "_treasure.sword.2",
-  icon = "67",
+  icon = "161",
   text = [[
 Tu as une       
 nouvelle Epée!$0 
 N'oublie pas de 
 graver ton nom  
 dessus!
+]],
+}
+
+dialog{
+  id = "_treasure.sword.3",
+  icon = "162",
+  text = [[
+Génial ! Ton épée est plus
+puissante ! Sens la fabuleuse
+force qui coule dans tes
+veines !
+]],
+}
+
+dialog{
+  id = "_treasure.sword.4",
+  icon = "163",
+  text = [[
+Tu as obtenu l'épée dorée !
+Elle est bien plus puissante
+que la vieille !
+]],
+}
+
+dialog{
+  id = "_treasure.sword.5",
+  icon = "164",
+  text = [[
+Formidable !$0
+Tu as obtenu l'épée de Lumière !
+
+Elle abrite un pouvoir légendaire
+que seuls les vrais héros peuvent
+utiliser !
 ]],
 }
 
@@ -2244,6 +2278,90 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
+  text = [[
+Bonjour, jeune héros !
+Choisis ce que tu aimes.
+
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.product_arrows",
+  text = [[
+Des flèches !
+Elles sont d'excellentes armes
+pour tirer de loin !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.product_bombs",
+  text = [[
+Des bombes !
+Savais-tu que tu pouvais soulever
+la bombe que tu as placée ?
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.product_heart",
+  text = [[
+Un coeur pour te régénérer si
+tu es mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_no",
+  text = [[
+Nous sommes toujours ici.
+Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_offer",
+  question = "1",
+  text = [[
+Nous pouvons faire améliorer
+ton épée ici si tu le veux !
+Tu ne pourras pas t'en servir en
+attendant, mais cette offre en
+vaut vraiment la peine !
+Améliorer l'épée ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_ready",
+  text = [[
+Ton épée est trempée  !
+Tiens !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_yes",
+  text = [[
+Très bien !
+Reviens dans un moment !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.welcome",
+  text = [[
+Bienvenue à la forge, jeune
+héros ! 
+La boutique se situe juste à
+côté.
 ]],
 }
 
@@ -3477,77 +3595,6 @@ dialog{
   text = [[
 Voici un Coeur pour régénérer
 de la vie.
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_1",
-  text = [[
-Bienvenue chez  
-AlligoBanane !   
-lci j'entrepose.
-Mon hobby, c'est
-collectionner des 
-boîtes de conserve.    
-Mon frère cadet est
-un artiste. 
-Moi...          
-Je suis plus terre à 
-terre.  
-J'adore manger !
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_2",
-  question = "1",
-  text = [[
-Mais qu'est-ce  
-que tu as là ?   
-Je t'en prie, 
-donne-moi cette
-patée ...     
-Je t'en SUPPLIE !
-Alors, que décides-tu ?     
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_3",
-  text = [[
-Tant pis !       
-Mais si tu changes 
-d'avis, reviens vite 
-me voir !
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_4",
-  text = [[
-Merci ! Vite !    
-A table !
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_5",
-  text = [[
-MIAM MIAM!      
-... ... ... ... 
-Quel délice !    
-En récompense, je t'offre
-des Bananes. Hmm !   
-Quel régal !
-]],
-}
-
-dialog{
-  id = "maps.houses.south_mabe_village.sales_house_o_bananas.alligator_6",
-  text = [[
-Encore merci !
 ]],
 }
 
