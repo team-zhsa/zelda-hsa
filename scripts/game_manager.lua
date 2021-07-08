@@ -36,6 +36,8 @@ function game_manager:create(file)
 		field_music(game)
     effect_manager:set_effect(game, fsa)
     game:set_value("mode", "fsa")
+		game:set_world_rain_mode("outside_world", nil)
+		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(1000)
 	end)
 

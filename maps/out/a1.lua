@@ -9,11 +9,6 @@
 
 local map = ...
 local game = map:get_game()
-
--- Event called at initialization time, as soon as this map is loaded.
-map:register_event("on_started", function()
-	game:show_map_name("ruins")
-end)
 local field_music_manager = require("scripts/maps/field_music_manager")
 
 map:register_event("on_draw", function(map)
@@ -21,4 +16,10 @@ map:register_event("on_draw", function(map)
   -- Music
   field_music_manager:init(map)
 
+end)
+
+-- Event called at initialization time, as soon as this map is loaded.
+map:register_event("on_started", function()
+	game:show_map_name("ruins")
+	map:set_digging_allowed(true)
 end)

@@ -19,6 +19,7 @@ function map:on_started()
 	game:show_map_name("kakarico_village")
 	playing_maze = false
 	win_maze = false
+	map:set_digging_allowed(true)
 end
 
 function map:on_finished()

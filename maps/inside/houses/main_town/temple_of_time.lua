@@ -32,6 +32,7 @@ function cutscene_trigger:on_interaction()
 			sol.audio.stop_music()
 			map:set_cinematic_mode(false)
 			sword:remove()
+			hero:start_treasure("sword", 2)
 		end)
 	end
 end

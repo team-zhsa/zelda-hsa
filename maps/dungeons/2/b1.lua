@@ -22,7 +22,7 @@ function map:on_started()
 	map:set_doors_open("door_12_s", false)
 	map:set_doors_open("door_18_n", false)
 	map:set_doors_open("door_13_s", false)
-	map:set_doors_open("door_15_s", false)
+	map:set_doors_open("door_15_s", true)
 	map:set_doors_open("door_9_w", false)
 	map:set_doors_open("door_8_e", false)
 	switch_18_door:set_activated(false)
@@ -46,6 +46,10 @@ end
 function switch_23_door:on_activated()
 	map:open_doors("door_23_n")
 	map:open_doors("door_18_s")
+end
+
+function sensor_14_door_15:on_activated()
+	map:set_doors_open("door_15_s", false)
 end
 
 function door_6_s:on_opened()

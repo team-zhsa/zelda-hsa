@@ -120,7 +120,9 @@ Cette plate-forme est gelée !
 dialog{
   id = "_shop.amount_full",
   text = [[
-Tu es déjà au maximum !
+Tu as fait le plein de cet
+objet ! Tu n'as besoin de rien
+d'autre ?
 ]],
 }
 
@@ -637,7 +639,7 @@ plus d'énergie !
 
 dialog{
   id = "_treasure.heart.1",
-  icon = "150",
+  icon = "176",
   text = [[
 Tu as trouvé un
 Coeur !
@@ -651,6 +653,15 @@ dialog{
 Tu as trouvé un réceptacle de
 coeur !$0 Ton énergie vitale a
 augmenté d'un coeur !"
+]],
+}
+
+dialog{
+  id = "_treasure.heart_triple.1",
+  icon = "175",
+  text = [[
+Tu as trouvé trois
+Coeur !
 ]],
 }
 
@@ -1749,7 +1760,7 @@ dialog{
   id = "items.ocarina.teleport.song_12_secret",
   question = "1",
   text = [[
-Se téléporter à Hyrule du Sud ?
+Se téléporter à (lieu) ?
 Oui
 Non
 ]],
@@ -2243,6 +2254,52 @@ dialog{
 Coucou ! Tu voudrais
 bien m'apporter du
 beurre, s'il te plaît ?
+]],
+}
+
+dialog{
+  id = "maps.houses.cordinia_town.chest_game.minigame_already_playing",
+  text = [[
+Très bien ! Ouvre le coffre que
+tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.cordinia_town.chest_game.minigame_finish",
+  text = [[
+Tu n'as plus le droit d'ouvrir
+de coffres. Le jeu est fini.
+]],
+}
+
+dialog{
+  id = "maps.houses.cordinia_town.chest_game.minigame_no",
+  text = [[
+Bien, reviens jouer un jour.
+Je t'attendrai. D'ici là,
+au revoir !
+]],
+}
+
+dialog{
+  id = "maps.houses.cordinia_town.chest_game.minigame_welcome",
+  question = "1",
+  text = [[
+Bonjour ! Tu peux ouvrir un
+coffre pour 30 rubis.
+Allez viens jouer !
+Bon, tu te décides ?
+Je joue !
+Une autre fois peut-être !
+]],
+}
+
+dialog{
+  id = "maps.houses.cordinia_town.chest_game.minigame_yes",
+  text = [[
+Allez !
+Choisis bien ! Bonne chance !
 ]],
 }
 
@@ -3542,6 +3599,41 @@ Droite : 80
 }
 
 dialog{
+  id = "maps.houses.snowpeaks.shop.merchant_welcome",
+  text = [[
+Dans un monde aussi dangereux
+tu pourrais avoir besoin de
+beaucoup de choses. Choisis ce
+que tu aimes.
+]],
+}
+
+dialog{
+  id = "maps.houses.snowpeaks.shop.product_bombs",
+  text = [[
+Des bombes !
+Savais-tu que tu pouvais soulever
+la bombe que tu as placée ?
+]],
+}
+
+dialog{
+  id = "maps.houses.snowpeaks.shop.product_heart",
+  text = [[
+Un coeur pour te régénérer si
+tu es mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.snowpeaks.shop.product_red_potion",
+  text = [[
+Voici l'élixir de Vie. Il permet
+de retrouver ton énergie vitale.
+]],
+}
+
+dialog{
   id = "maps.houses.south_castle.ravios_shop.merchant_first_welcome",
   text = [[
 A FAIRE
@@ -4478,57 +4570,6 @@ Ci-gît le Coq Volant.
 }
 
 dialog{
-  id = "maps.out.kanalet_castle.monkey_1",
-  text = [[
-Kiiiki ! Quoi ?   
-OK sale chien,  
-on va se battre !
-]],
-}
-
-dialog{
-  id = "maps.out.kanalet_castle.monkey_2",
-  text = [[
-Kkkkk !          
-Kiki le singe !  
-Kiki a faim !    
-Kkkkkk !
-]],
-}
-
-dialog{
-  id = "maps.out.kanalet_castle.monkey_3",
-  question = "1",
-  text = [[
-Bananes, bananes ...    
-Miam Miam !      
-
-Pour Kiki ?      
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.out.kanalet_castle.monkey_4",
-  text = [[
-Bananes, bananes ! 
-Kik i!     
-Les copains, venez !
-On va le remercier !
-]],
-}
-
-dialog{
-  id = "maps.out.kanalet_castle.monkey_5",
-  text = [[
-Le pont des singes      
-est prêt !       
-Salut ! Kiki !
-]],
-}
-
-dialog{
   id = "maps.out.lonlon.sign_2",
   text = [[
 > Cimetière     
@@ -4566,6 +4607,56 @@ dialog{
   text = [[
 Nord : Plaine
 Est : Baie de Parapa
+]],
+}
+
+dialog{
+  id = "maps.out.snowpeaks.monkey_2",
+  text = [[
+Kkkkk !          
+Kiki le singe !  
+Kiki a faim !    
+Kkkkkk !
+]],
+}
+
+dialog{
+  id = "maps.out.snowpeaks.monkey_3",
+  question = "1",
+  text = [[
+Bananes, bananes ...    
+Miam Miam !      
+
+Pour Kiki ?      
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.out.snowpeaks.monkey_4",
+  text = [[
+Bananes, bananes ! 
+Kik i!     
+Les copains, venez !
+On va le remercier !
+]],
+}
+
+dialog{
+  id = "maps.out.snowpeaks.monkey_5",
+  text = [[
+Le pont des singes      
+est prêt !       
+Salut ! Kiki !
+]],
+}
+
+dialog{
+  id = "maps.out.snowpeaks.sign_1",
+  text = [[
+Nord : Boutique des neiges
+Ouest : Montagne de la Mort
 ]],
 }
 

@@ -22,6 +22,11 @@ local water_delay = 500
 local pool_full = false
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
+	if pool_full == false then
+		for tile in map:get_entities("static_water_") do
+   		tile:set_enabled(false)
+		end  
+	end
 	separator_manager:manage_map(map)
 	map:set_doors_open("door_33_e", false)
 	map:set_doors_open("door_34_w", false)

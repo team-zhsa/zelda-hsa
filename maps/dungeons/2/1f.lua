@@ -22,7 +22,7 @@ function map:on_started(destination)
 		chest_30_compass:set_enabled(false)
 	else chest_30_compass:set_enabled(true)
 	end
-
+	map:set_light(1)
 end
 
 -- Event called after the opening transition effect of the map,

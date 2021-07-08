@@ -87356,7 +87356,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3777",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 88,
   y = 2264,
@@ -88599,7 +88599,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3878",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 48,
   y = 2280,
@@ -88610,7 +88610,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3879",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 56,
   y = 2280,
@@ -88631,7 +88631,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3880",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 64,
   y = 2280,
@@ -88642,7 +88642,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3881",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 64,
   y = 2288,
@@ -88653,7 +88653,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3882",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 64,
   y = 2296,
@@ -88664,7 +88664,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3883",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 56,
   y = 2296,
@@ -88675,7 +88675,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3884",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 48,
   y = 2296,
@@ -88686,7 +88686,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3885",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 48,
   y = 2288,
@@ -88697,7 +88697,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3886",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 72,
   y = 2280,
@@ -88707,7 +88707,7 @@ tile_pattern{
 
 tile_pattern{
   id = "3887",
-  ground = "empty",
+  ground = "traversable",
   default_layer = 0,
   x = 72,
   y = 2288,
@@ -128072,7 +128072,6 @@ tile_pattern{
   y = 2792,
   width = 8,
   height = 8,
-  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -162697,6 +162696,18 @@ border_set{
   pattern_9 = "124",
   pattern_10 = "118",
   pattern_11 = "120",
+}
+
+border_set{
+  id = "any_to_dirt_snow",
+  pattern_0 = "3885",
+  pattern_1 = "3883",
+  pattern_2 = "3881",
+  pattern_3 = "3879",
+  pattern_8 = "3884",
+  pattern_9 = "3882",
+  pattern_10 = "3880",
+  pattern_11 = "3878",
 }
 
 border_set{

@@ -243,7 +243,7 @@ function item:on_using()
     -- with the hookshot (flying), and we stop that jump movement.
     hero:start_jumping(0, 100, true)
     hero:get_movement():stop()
-    hero:set_animation("hookshot_intro")
+    hero:set_animation("hookshot_tracting")
     hero:set_direction(direction)
 
     local past_positions = {}

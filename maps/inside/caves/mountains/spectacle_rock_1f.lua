@@ -1,4 +1,4 @@
--- Lua script of map inside/caves/mountains/spectacle_rock_1f.
+-- Lua script of map inside/caves/mountains/to_fire_temple_1f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

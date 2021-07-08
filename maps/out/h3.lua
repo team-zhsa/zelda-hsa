@@ -1,4 +1,3 @@
--- Lua script of map out/h3.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -9,10 +8,18 @@
 
 local map = ...
 local game = map:get_game()
-local audio_manager = require("scripts/audio_manager")
 
--- Event called at initialization time, as soon as this map becomes is loaded.
-map:register_event("on_started", function()
-	game:show_map_name("east_swamp")
+-- Event called at initialization time, as soon as this map is loaded.
+local audio_manager = require("scripts/audio_manager")
+local field_music_manager = require("scripts/maps/field_music_manager")
+
+map:register_event("on_draw", function(map)
+
+  -- Music
+  field_music_manager:init(map)
+
 end)
 
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+end)

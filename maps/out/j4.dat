@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "same",
 }
 
@@ -20706,6 +20706,7 @@ dynamic_tile{
   width = 32,
   height = 32,
   pattern = "423",
+  tileset = "outside_special",
 }
 
 dynamic_tile{
@@ -20716,6 +20717,7 @@ dynamic_tile{
   width = 32,
   height = 32,
   pattern = "423",
+  tileset = "outside_special",
 }
 
 sensor{

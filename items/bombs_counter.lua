@@ -30,8 +30,7 @@ end
 
 function item:create_bomb()
 
-  local map = item:get_map()
-  local hero = map:get_entity("hero")
+  local hero = self:get_map():get_entity("hero")
   local x, y, layer = hero:get_position()
   local direction = hero:get_direction()
   if direction == 0 then
@@ -44,14 +43,11 @@ function item:create_bomb()
     y = y + 16
   end
 
-  local bomb = map:create_bomb{
+  self:get_map():create_bomb{
     x = x,
     y = y,
     layer = layer
   }
-
-  map.current_bombs = map.current_bombs or {}
-  map.current_bombs[bomb] = true
 end
 
 function item:remove_bombs_on_map()

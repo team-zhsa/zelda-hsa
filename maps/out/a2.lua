@@ -15,5 +15,6 @@ local x, y, layer = hero:get_position()
 function map:on_started()
 	game:show_map_name("lake_hylia")
   -- You can initialize the movement and sprites of various
-  -- map entities here.
+  
+	map:set_digging_allowed(true)
 end

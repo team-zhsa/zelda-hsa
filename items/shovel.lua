@@ -30,7 +30,7 @@ function item:on_using()
 
   else
     -- Digging here is allowed.
-    sol.audio.play_sound("dig")
+    sol.audio.play_sound("items/shovel")
     hero:set_animation("shovel", function()
       hero:unfreeze()
     end)

@@ -190,7 +190,7 @@ function item:start_custom_jump()
     local ground = map:get_ground(hero:get_position())
     local min_layer = map:get_min_layer()
     while ground == "empty" and layer > min_layer do
-      layer = layer-1
+      layer = layer ---1
       hero:set_position(x,y,layer)
       ground = map:get_ground(hero:get_position())    
     end
@@ -250,7 +250,7 @@ function item:disable_nearby_entities()
   disabled_entities = {}
   for entity in map:get_entities_in_rectangle(x, y, w, h) do
     if entity:is_enabled() then
-      if entity:get_type() == "stream" then --or entity:get_type() == "teletransporter" then
+      if entity:get_type() == "stream" or entity:get_type() == "teletransporter" then
         disabled_entities[#disabled_entities + 1] = entity
         entity:set_enabled(false)
       end

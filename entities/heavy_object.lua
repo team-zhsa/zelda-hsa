@@ -12,10 +12,7 @@ end
 
 function entity:on_interaction()
 
-  local lift = 2
-  if entity:get_sprite():get_animation() == "entities/statue_dungeon_6" then
-    lift = 2
-  end
+  local lift = tonumber(entity:get_property("lift")) or 2
   if game:get_ability("lift") < lift then
     return
   end

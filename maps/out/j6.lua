@@ -42,6 +42,7 @@ end
 
 function map:on_started(destination)
   map:set_overlay()
+  map:set_digging_allowed(true)
 end
 
 function map:on_draw(destination_surface)

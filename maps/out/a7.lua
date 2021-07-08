@@ -12,4 +12,5 @@ local game = map:get_game()
 
 map:register_event("on_started", function()
 	game:show_map_name("parapa_town")
+	map:set_digging_allowed(true)
 end)

@@ -16,13 +16,13 @@ local item_names_assignable = {
 	"hammer", -- Row 3
 	"feather",
 	"magic_powders_counter",
-	"_placeholder", -- Deku nut
+	"_placeholder",
 	"green_tunic",
 	"blue_tunic",
 	"_placeholder", -- Row 4 -- Magic Cape
 	"magic_mirror", -- Magic mirror
 	"lens_of_truth",
-	"_placeholder", -- Deku stick
+	"_placeholder",
 	"red_tunic",
 	"time_tunic",
 

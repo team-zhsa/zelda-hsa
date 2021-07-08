@@ -14,7 +14,8 @@ local game = map:get_game()
 function map:on_started()
 	game:show_map_name("cordinia_town")
   -- You can initialize the movement and sprites of various
-  -- map entities here.
+  
+	map:set_digging_allowed(true)
 end
 
 if day_npc_witch ~= nil then

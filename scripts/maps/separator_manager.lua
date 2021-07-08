@@ -22,7 +22,7 @@ function separator_manager:manage_map(map)
   local function separator_on_activated(separator)
 
     local hero = map:get_hero()
-	hero:walk(hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2)
+	--hero:walk(hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2)
 
     -- Enemies.
     for _, enemy_place in ipairs(enemy_places) do
@@ -135,11 +135,16 @@ function separator_manager:manage_map(map)
       y = y,
       layer = layer,
       breed = enemy:get_breed(),
-      direction = 0, --enemy:get_sprite():get_direction(),
+      direction = math.random(0, 3) or 0,
       name = enemy:get_name(),
       treasure = { enemy:get_treasure() },
       enemy = enemy,
     }
+
+    local hero = map:get_hero()
+    if not enemy:is_in_same_region(hero) then
+      enemy:remove()
+    end
   end
 
   local function get_destructible_sprite_name(destructible)

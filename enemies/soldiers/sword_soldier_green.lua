@@ -6,7 +6,7 @@ local main_sprite = nil
 local sword_sprite = nil
 
 -- Configuration variables
-local detect_distance = 64
+local detect_distance = 96
 local normal_speed = 32
 local fast_speed = 48
 

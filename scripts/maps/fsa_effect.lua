@@ -269,7 +269,7 @@ local function create_light(map, x, y, layer, radius, color, dir, cut, aperture,
 end
 
 local function setup_inside_lights(map)
-  local house = map:get_id():find("houses") ~= nil
+  local house = map:get_id():find("house") ~= nil
   light_mgr:init(map,
                  (function()
                    if house then

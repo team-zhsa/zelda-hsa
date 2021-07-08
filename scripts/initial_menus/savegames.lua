@@ -151,7 +151,7 @@ function savegame_menu:draw_savegame(slot_index)
   slot.player_name_text:draw(self.surface, 87, 66 + slot_index * 27)
 
   if slot.hearts_view ~= nil then
-    slot.hearts_view:set_dst_position(168, 56 + slot_index * 27)
+    slot.hearts_view:set_dst_position(136, 56 + slot_index * 27)
     slot.hearts_view:on_draw(self.surface)
   end
 end
@@ -706,7 +706,7 @@ function savegame_menu:draw_phase_options()
     self:draw_savegame_cursor()
   else
     -- The cursor is on an option line.
-    local y = 75 + self.options_cursor_position * 16
+    local y = 67 + self.options_cursor_position * 16
     if self.modifying_option then
       local option = self.options[self.options_cursor_position]
       local width, _ = option.value_text:get_size()

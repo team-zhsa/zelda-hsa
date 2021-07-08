@@ -35,7 +35,7 @@ end)
 if boss ~= nil then
 	function sensor_boss:on_activated()
 		map:close_doors("door_group_boss")
-		sol.audio.play_music("boss/boss_alttp")
+		sol.audio.play_music("boss/boss_albw")
 		sensor_boss:remove()
 	end
 

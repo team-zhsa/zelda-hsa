@@ -18,3 +18,7 @@ map:register_event("on_draw", function(map)
   field_music_manager:init(map)
 
 end)
+
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+end)

@@ -1,4 +1,3 @@
--- Lua script of map out/h2.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -9,6 +8,8 @@
 
 local map = ...
 local game = map:get_game()
+
+-- Event called at initialization time, as soon as this map is loaded.
 local audio_manager = require("scripts/audio_manager")
 local field_music_manager = require("scripts/maps/field_music_manager")
 
@@ -19,9 +20,6 @@ map:register_event("on_draw", function(map)
 
 end)
 
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+end)

@@ -10,6 +10,7 @@
 --   -- Do whatever you want next (show a title screen, start a game...)
 -- end
 local title_screen = {}
+local mode = sol.shader.create("flickering_opaque") -- or sol.shader.create("flashing_rgb")
 
 -- Main surface of the menu.
 local surface = sol.surface.create(320, 256)
@@ -74,7 +75,7 @@ function title_screen:on_started()
   sword:set_xy(55, -130)
 	t:set_xy(60, 60)
   -- Start the animation.
-	sol.timer.start(title_screen, 9000, function()
+	sol.timer.start(title_screen, 7000, function()
   	title_screen:start_animation()
 	end)
   -- Update the surface.
@@ -84,7 +85,7 @@ end
 -- Animation step 1.
 function title_screen:step1()
   white:draw(surface, 0, 0)
-	surface:set_shader(sol.shader.create("flashing_rgb"))
+	surface:set_shader(mode)
 	sol.timer.start(title_screen, 1000, function()
 		surface:set_shader(sol.shader.create("default"))
 	end)
@@ -92,8 +93,6 @@ function title_screen:step1()
   animation_step = 1
   sword:stop_movement()
   sword:set_xy(55, 42)
-  -- Play a sound.
-  sol.audio.play_sound("ok")
   -- Update the surface.
   rebuild_surface()
 end
@@ -103,13 +102,13 @@ function title_screen:step2()
   animation_step = 2
   -- Update the surface.
   rebuild_surface()
-  -- Start the final timer.
+  --[[ Start the final timer.
   sol.timer.start(title_screen, 22000, function()
     surface:fade_out()
     sol.timer.start(title_screen, 700, function()
       sol.menu.stop(title_screen)
     end)
-  end)
+  end)--]]
 end
 
 -- Run the logo animation.

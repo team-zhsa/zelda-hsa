@@ -10,7 +10,18 @@ animation{
 }
 animation{
   name = "boomerang1",
-  src_image = "hero/item/boomerang/boomerang_tunic.png",
+  src_image = "hero/item/boomerang/boomerang1_tunic.png",
+  frame_delay = 60,
+  directions = {
+    { x = 252, y = 0, frame_width = 19, frame_height = 24, origin_x = 11, origin_y = 20, num_frames = 3 },
+    { x = 238, y = 30, frame_width = 23, frame_height = 25, origin_x = 12, origin_y = 22, num_frames = 3 },
+    { x = 102, y = 28, frame_width = 20, frame_height = 24, origin_x = 11, origin_y = 20, num_frames = 3 },
+    { x = 76, y = 0, frame_width = 20, frame_height = 28, origin_x = 11, origin_y = 19, num_frames = 3 },
+  },
+}
+animation{
+  name = "boomerang2",
+  src_image = "hero/item/boomerang/boomerang2_tunic.png",
   frame_delay = 60,
   directions = {
     { x = 252, y = 0, frame_width = 19, frame_height = 24, origin_x = 11, origin_y = 20, num_frames = 3 },
@@ -240,7 +251,7 @@ animation{
 }
 animation{
   name = "hammer",
-  src_image = "hero/hammer.tunic.png",
+  src_image = "hero/item/hammer/hammer.tunic.png",
   frame_delay = 100,
   directions = {
     { x = 0, y = 0, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 7 },
@@ -357,17 +368,6 @@ animation{
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 8 },
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 8 },
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 8 },
-  },
-}
-animation{
-  name = "plunging",
-  src_image = "hero/plunging.png",
-  frame_delay = 50,
-  directions = {
-    { x = 0, y = 0, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 24, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 48, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 72, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
   },
 }
 animation{

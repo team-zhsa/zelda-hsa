@@ -2,6 +2,8 @@ local condition_manager = {}
 local in_command_pressed = false
 local in_command_release = false
 local sword_level = 0
+local effect_model = require("scripts/gfx_effects/electric")
+local audio_manager = require("scripts/audio_manager")
 
 condition_manager.timers = {
   slow = nil,
@@ -88,20 +90,29 @@ function condition_manager:initialize(game)
     end)
   end
 
-  function hero:start_electrocution(delay)
+  function hero:start_electrocution(damage)
     if hero:is_condition_active('electrocution') then
       return
     end
+	local map = hero:get_map()
+  local camera = map:get_camera()
+  local surface = camera:get_surface()
+  hero:get_sprite():set_ignore_suspend(true)
+  game:set_suspended(true)
+  audio_manager:play_sound("enemies/bari/b_state_e")
+  hero:set_animation("electrocuted")
+  effect_model.start_effect(surface, game, 'in', false)
+  local shake_config = {
+    count = 32,
+    amplitude = 4,
+    speed = 180,
+  }
+  camera:shake(shake_config, function()
+    game:set_suspended(false)
+    hero:unfreeze()
+    hero:start_hurt(damage)
+  end)
 
-    hero:freeze()
-    hero:set_animation("electrocuted")
-    sol.audio.play_sound("spark")
-    game:remove_life(2)
-
-    hero:set_condition('electrocution', true)
-    condition_manager.timers['electrocution'] = sol.timer.start(hero, delay, function()
-      hero:stop_electrocution()
-    end)
   end
 
   function hero:start_poison(damage, delay, max_iteration)

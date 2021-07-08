@@ -2065,7 +2065,7 @@ tile{
 tile{
   layer = 0,
   x = 232,
-  y = 672,
+  y = 688,
   width = 16,
   height = 8,
   pattern = "stairs_inner_up.2.top-2",
@@ -2074,7 +2074,7 @@ tile{
 tile{
   layer = 0,
   x = 224,
-  y = 672,
+  y = 688,
   width = 8,
   height = 8,
   pattern = "stairs_inner_up.2.top.border.1-2",
@@ -2083,7 +2083,7 @@ tile{
 tile{
   layer = 0,
   x = 232,
-  y = 648,
+  y = 664,
   width = 16,
   height = 24,
   pattern = "stairs_inner_up.2-2",
@@ -2092,7 +2092,7 @@ tile{
 tile{
   layer = 0,
   x = 224,
-  y = 648,
+  y = 664,
   width = 8,
   height = 24,
   pattern = "stairs_inner_up.2.border.1-2",
@@ -2101,7 +2101,7 @@ tile{
 tile{
   layer = 0,
   x = 248,
-  y = 672,
+  y = 688,
   width = 8,
   height = 8,
   pattern = "stairs_inner_up.2.top.border.2-2",
@@ -2110,7 +2110,7 @@ tile{
 tile{
   layer = 0,
   x = 248,
-  y = 648,
+  y = 664,
   width = 8,
   height = 24,
   pattern = "stairs_inner_up.2.border.2-2",
@@ -2932,7 +2932,7 @@ separator{
 stairs{
   layer = 0,
   x = 232,
-  y = 656,
+  y = 672,
   direction = 3,
   subtype = 2,
 }
@@ -2941,14 +2941,14 @@ destination{
   name = "from_outside",
   layer = 0,
   x = 240,
-  y = 669,
+  y = 685,
   direction = 1,
 }
 
 teletransporter{
   layer = 0,
   x = 232,
-  y = 656,
+  y = 672,
   properties = {
     {
       key = "effect",
@@ -3017,6 +3017,22 @@ door{
   sprite = "entities/Doors/Inside/door_d2_weak_wall",
   savegame_variable = "inside_temple_of_time_path_cave_door",
   opening_method = "explosion",
+}
+
+teletransporter{
+  layer = 0,
+  x = 176,
+  y = 704,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
+  width = 128,
+  height = 16,
+  destination_map = "menus/credits",
+  destination = "destination",
 }
 
 tile{

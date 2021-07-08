@@ -61,6 +61,7 @@ function map:on_started(destination)
 		movement:start(custom_entity)
 		movement:set_ignore_obstacles(true)
 	end
+	map:set_digging_allowed(true)
 end
 
 

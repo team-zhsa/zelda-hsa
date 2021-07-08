@@ -53,7 +53,6 @@ map{ id = "dungeons/3/1fo", description = "Fire Temple (1st Floor)" }
 map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
 map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/4/1f", description = "Deku Tree (1st Floor)" }
-map{ id = "dungeons/5/1f", description = "Dodongo's Cavern (1st Floor)" }
 map{ id = "dungeons/5/1o", description = "Dodongo's Cavern (1st Floor)" }
 map{ id = "dungeons/6/1f", description = "Water Temple (1st Floor)" }
 map{ id = "dungeons/6/b1", description = "Water Temple (Basement 1)" }
@@ -86,9 +85,21 @@ map{ id = "examples/lumberjacks_house", description = "examples/lumberjacks_hous
 map{ id = "examples/others", description = "Others" }
 map{ id = "examples/outside_store", description = "Outside Store" }
 map{ id = "examples/sw_entry_to_lost_woods", description = "examples/sw_entry_to_lost_woods" }
-map{ id = "extensions/southern_hyrule/a1", description = "A1 (Southern Hyrule)" }
-map{ id = "extensions/underwater/a1", description = "A1 (Underwater)" }
-map{ id = "extensions/underwater/out", description = "Outside" }
+map{ id = "extensions/east_continent/a1", description = "A1 (West Coast)" }
+map{ id = "extensions/east_continent/out", description = "Outside" }
+map{ id = "extensions/southern_hyrule/out/map_00", description = "Map 00" }
+map{ id = "extensions/southern_hyrule/out/map_01", description = "Map 01" }
+map{ id = "extensions/southern_hyrule/out/map_02", description = "Map 02" }
+map{ id = "extensions/southern_hyrule/out/map_03", description = "Map 03" }
+map{ id = "extensions/southern_hyrule/out/map_06", description = "Map 06" }
+map{ id = "extensions/southern_hyrule/out/map_09", description = "Map 09" }
+map{ id = "extensions/southern_hyrule/out/map_10", description = "Map 10" }
+map{ id = "extensions/southern_hyrule/out/map_15", description = "Map 15" }
+map{ id = "extensions/southern_hyrule/out/map_16", description = "Map 16" }
+map{ id = "extensions/southern_hyrule/out/map_20", description = "Map 20" }
+map{ id = "extensions/southern_hyrule/out/map_22", description = "Map 22" }
+map{ id = "extensions/southern_hyrule/out/map_23", description = "Map 23" }
+map{ id = "extensions/southern_hyrule/out/map_26", description = "Map 26" }
 map{ id = "inside/castle/1f", description = "Castle (1st Floor)" }
 map{ id = "inside/castle/rooms", description = "Castle (Bedrooms)" }
 map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith Cave" }
@@ -99,11 +110,11 @@ map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
-map{ id = "inside/caves/mountains/fairy_cave", description = "Fairy Cave" }
 map{ id = "inside/caves/mountains/goron_town_1f", description = "Goron Town (1st Floor)" }
 map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Basement 1)" }
 map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
-map{ id = "inside/caves/mountains/to_fire_temple_1f", description = "Cave to Fire Temple (1st Floor)" }
+map{ id = "inside/caves/mountains/spectacle_rock_b1", description = "Spectacle Rock (Basement 1)" }
+map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to fire temple" }
 map{ id = "inside/caves/mountains/treasure_cave_1", description = "Tresaure Cave 1" }
 map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
 map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
@@ -115,6 +126,7 @@ map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_castle/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
+map{ id = "inside/houses/cordinia/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
@@ -136,23 +148,25 @@ map{ id = "inside/houses/main_town/sword_shop", description = "Sword Shop" }
 map{ id = "inside/houses/main_town/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/north_west/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
+map{ id = "inside/houses/snowpeaks/shop", description = "Shop" }
 map{ id = "inside/houses/south_castle/ravios_house", description = "Ravio's House" }
 map{ id = "inside/houses/zora_village/north_hut", description = "North Hut" }
 map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
 map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/temple_time", description = "Temple of Time" }
-map{ id = "inside/under_bridges/hylia_lake", description = "Hyrule Castle (Basement 2)" }
+map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
 map{ id = "memory/00", description = "00MEMORY" }
 map{ id = "memory/01", description = "01MEMORY" }
 map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
 map{ id = "misc/a", description = "a" }
-map{ id = "misc/clipboard", description = "Trash can" }
+map{ id = "misc/e", description = "e" }
 map{ id = "misc/ending", description = "Ending" }
 map{ id = "misc/lost_woods", description = "Lost Woods test" }
 map{ id = "misc/minigame_arrow", description = "Arrow Minigame" }
 map{ id = "misc/pre_mapping", description = "Pre mapping" }
+map{ id = "misc/r", description = "r" }
 map{ id = "misc/test_arena", description = "Testing Arena" }
 map{ id = "misc/test_ground", description = "Testing Ground" }
 map{ id = "out/a1", description = "A1 (Ruins)" }
@@ -170,6 +184,7 @@ map{ id = "out/b5", description = "B5 (Desert, Desert Palace)" }
 map{ id = "out/b6", description = "B6 (Hyrule Field)" }
 map{ id = "out/b7", description = "B7 (Hyrule Field)" }
 map{ id = "out/c1", description = "C1 (Mountains, Camp)" }
+map{ id = "out/c2", description = "C2 (Hyrule Field)" }
 map{ id = "out/c3", description = "C3 (Hyrule Field)" }
 map{ id = "out/c4", description = "C4 (Gerudo Village)" }
 map{ id = "out/c5", description = "C5 (Desert)" }
@@ -180,6 +195,7 @@ map{ id = "out/d3", description = "D3 (Hyrule Field)" }
 map{ id = "out/d4", description = "D4 (Hyrule Field)" }
 map{ id = "out/d5", description = "D5 (Hyrule Field)" }
 map{ id = "out/d6", description = "D6 (Hyrule Field)" }
+map{ id = "out/e1", description = "E1 (Mountains)" }
 map{ id = "out/e4", description = "E4 (Hyrule Field)" }
 map{ id = "out/e6", description = "E6 (Hyrule Field, Thunder Temple)" }
 map{ id = "out/f3", description = "F3 (Castle Courtyard)" }
@@ -196,7 +212,7 @@ map{ id = "out/g7", description = "G7 (Little Swamp)" }
 map{ id = "out/h2", description = "H2 (Zora River)" }
 map{ id = "out/h3", description = "H3 (East Swamp)" }
 map{ id = "out/h4", description = "H4 (Lon Lon Ranch, needs to be redone with better graphics)" }
-map{ id = "out/h5", description = "out/h5" }
+map{ id = "out/h5", description = "H5 (Hyrule Field)" }
 map{ id = "out/h6", description = "out/h6" }
 map{ id = "out/h7", description = "H7 (Beach)" }
 map{ id = "out/i2", description = "I2 (Zora River)" }
@@ -252,7 +268,7 @@ tileset{ id = "Absolute Dungeon 21", description = "Blue Purple" }
 tileset{ id = "Absolute Dungeon 22", description = "Turquoise" }
 tileset{ id = "Absolute Dungeon 23", description = "Light Yellow" }
 tileset{ id = "Full Hyrule", description = "Full Hyrule" }
-tileset{ id = "Outside_minimap", description = "Outside_minimap" }
+tileset{ id = "Outside_minimap", description = "Outside" }
 tileset{ id = "desert", description = "Gerudo Desert" }
 tileset{ id = "dungeon-minimap", description = "Dungeon minimap" }
 tileset{ id = "forest", description = "Forest" }
@@ -267,7 +283,7 @@ tileset{ id = "out/outside_main", description = "out/outside_main" }
 tileset{ id = "out/outside_special", description = "out/outside_special" }
 tileset{ id = "outside_additions", description = "Outside Additions" }
 tileset{ id = "outside_buildings", description = "Outside Buildings" }
-tileset{ id = "outside_main", description = "outside_main" }
+tileset{ id = "outside_main", description = "Outside main" }
 tileset{ id = "outside_special", description = "outside_special" }
 tileset{ id = "us", description = "US City" }
 
@@ -393,6 +409,11 @@ sprite{ id = "enemies/enemy_killed", description = "Enemy Killed" }
 sprite{ id = "enemies/flames/flame_blue", description = "Blue Flame" }
 sprite{ id = "enemies/flames/flame_red", description = "Red Flame" }
 sprite{ id = "enemies/outside/armos", description = "Armos" }
+sprite{ id = "enemies/outside/blob_blue", description = "Blue Blob" }
+sprite{ id = "enemies/outside/blob_cyan", description = "Cyan Blob" }
+sprite{ id = "enemies/outside/blob_green", description = "Green Blob" }
+sprite{ id = "enemies/outside/blob_red", description = "Red Blob" }
+sprite{ id = "enemies/outside/blob_yellow", description = "Yellow Blob" }
 sprite{ id = "enemies/outside/bomber", description = "Bomber" }
 sprite{ id = "enemies/outside/boulder", description = "Boulder" }
 sprite{ id = "enemies/outside/chicken", description = "Chicken" }
@@ -408,6 +429,7 @@ sprite{ id = "enemies/outside/crow", description = "Crow" }
 sprite{ id = "enemies/outside/deadrock", description = "Deadrock" }
 sprite{ id = "enemies/outside/geldman", description = "Geldman" }
 sprite{ id = "enemies/outside/hinox", description = "Hinox" }
+sprite{ id = "enemies/outside/hinox_blue", description = "Blue Hinox" }
 sprite{ id = "enemies/outside/lynel", description = "Lynel" }
 sprite{ id = "enemies/outside/lynel_baby_red", description = "Red Baby Lynel" }
 sprite{ id = "enemies/outside/lynel_black", description = "Black Lynel" }
@@ -1050,6 +1072,7 @@ sprite{ id = "maps/fire_temple", description = "Fire temple" }
 sprite{ id = "maps/gt", description = "Ganon's Tower" }
 sprite{ id = "maps/minimap" }
 sprite{ id = "maps/mountain", description = "Mountains map" }
+sprite{ id = "maps/overworld", description = "Overworld" }
 sprite{ id = "maps/room_layout", description = "Room layout for dungeons" }
 sprite{ id = "maps/underwater", description = "Underwater" }
 sprite{ id = "menus/arrow", description = "Arrow" }
@@ -1235,9 +1258,9 @@ sprite{ id = "weather/leaf", description = "Leaf" }
 sprite{ id = "weather/rain", description = "Rain" }
 sprite{ id = "weather/snow", description = "Snow" }
 
-music{ id = "boss/aganhim", description = "Aganhim" }
+music{ id = "boss/agahnim", description = "Agahnim" }
 music{ id = "boss/boss", description = "Boss" }
-music{ id = "boss/boss_alttp", description = "Boss" }
+music{ id = "boss/boss_albw", description = "Boss" }
 music{ id = "boss/cryobraz", description = "Cryobraz" }
 music{ id = "boss/ganon_1", description = "Ganon (1)" }
 music{ id = "boss/ganon_2", description = "Ganon (2)" }
@@ -1290,7 +1313,7 @@ music{ id = "inside/cave", description = "Cave" }
 music{ id = "inside/cave_ordeals", description = "Ordeals Cave" }
 music{ id = "inside/fairy", description = "Fairy" }
 music{ id = "inside/fishing", description = "Fishing Hole" }
-music{ id = "inside/fortune", description = "Fortune Teller" }
+music{ id = "inside/fortune", description = "Fortune" }
 music{ id = "inside/gerudo_airship", description = "Gerudo Airship" }
 music{ id = "inside/gerutones", description = "Gerutones" }
 music{ id = "inside/goron", description = "Goron Town" }
@@ -1302,9 +1325,9 @@ music{ id = "inside/house_sword", description = "Sword House" }
 music{ id = "inside/house_zuna", description = "Zuna House" }
 music{ id = "inside/mask_salesman", description = "Masks Shop" }
 music{ id = "inside/minigame_1", description = "Minigames" }
-music{ id = "inside/minigame_2", description = "Minigames" }
 music{ id = "inside/minigame_alttp", description = "Minigames (ALTTP)" }
 music{ id = "inside/minigame_estrgg", description = "Minigames (SMB)" }
+music{ id = "inside/minigame_mm", description = "Minigames (MM)" }
 music{ id = "inside/minigame_oot", description = "Minigames (OOT)" }
 music{ id = "inside/observatory", description = "Observatory" }
 music{ id = "inside/pop_estrgg", description = "Prince of Persia Cave" }
@@ -1343,8 +1366,8 @@ music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
 music{ id = "outside/overworld", description = "Overworld" }
 music{ id = "outside/owl_theme", description = "Owl Theme" }
-music{ id = "outside/parapa_town", description = "Parapa Town (Lynna Village)" }
-music{ id = "outside/rito_village", description = "Rito Village (Dragon Roost Island)" }
+music{ id = "outside/parapa_town", description = "Parapa Town" }
+music{ id = "outside/rito_village", description = "Rito Village" }
 music{ id = "outside/sea", description = "Great Sea" }
 music{ id = "outside/snowpeaks", description = "Snowpeaks" }
 music{ id = "outside/southern_hyrule", description = "Southern Hyrule" }
@@ -1552,14 +1575,14 @@ sound{ id = "zora", description = "zora" }
 
 item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "angler_key", description = "Angler key" }
-item{ id = "arrow", description = "Arrow" }
+item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
 item{ id = "beak_of_stone", description = "Beak of stone" }
 item{ id = "big_key", description = "Dungeon big key" }
 item{ id = "bird_key", description = "Bird key" }
 item{ id = "blue_key", description = "Blue Key" }
 item{ id = "blue_potion", description = "Blue Potion" }
 item{ id = "blue_tunic", description = "Blue tunic" }
-item{ id = "bomb", description = "Bomb" }
+item{ id = "bomb", description = "Bomb (1 / 3 / 8 / 10)" }
 item{ id = "bomb_bag", description = "Bombs bag" }
 item{ id = "bombs_counter", description = "Bombs counter" }
 item{ id = "boomerang", description = "Boomerang" }
@@ -1588,6 +1611,7 @@ item{ id = "healing_wand", description = "Healing Wand" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
 item{ id = "heart_fly", description = "Heart fly" }
+item{ id = "heart_triple", description = "Triple heart" }
 item{ id = "hero_shield", description = "Shield" }
 item{ id = "hookshot", description = "Hookshot" }
 item{ id = "hylia_shield", description = "Hylia Shield" }
@@ -1774,15 +1798,14 @@ enemy{ id = "flying_tile", description = "Flying Tile" }
 enemy{ id = "generic_towards_hero", description = "generic_towards_hero" }
 enemy{ id = "generic_waiting_for_hero", description = "generic_waiting_for_hero" }
 enemy{ id = "outside/armos", description = "Armos" }
+enemy{ id = "outside/blob_blue", description = "Blue Chuchu" }
+enemy{ id = "outside/blob_cyan", description = "White Chuchu" }
+enemy{ id = "outside/blob_green", description = "Green Chuchu" }
+enemy{ id = "outside/blob_red", description = "Red Chuchu" }
+enemy{ id = "outside/blob_yellow", description = "Electric Chuchu" }
 enemy{ id = "outside/bomber", description = "Bomber" }
 enemy{ id = "outside/boulder", description = "Boulder" }
 enemy{ id = "outside/chicken", description = "Chicken" }
-enemy{ id = "outside/chuchu_blue", description = "Blue Chuchu" }
-enemy{ id = "outside/chuchu_dark", description = "Dark Chuchu" }
-enemy{ id = "outside/chuchu_electric", description = "Electric Chuchu" }
-enemy{ id = "outside/chuchu_green", description = "Green Chuchu" }
-enemy{ id = "outside/chuchu_red", description = "Red Chuchu" }
-enemy{ id = "outside/chuchu_white", description = "White Chuchu" }
 enemy{ id = "outside/crab", description = "Crab" }
 enemy{ id = "outside/crow", description = "Crow" }
 enemy{ id = "outside/deadrock", description = "Deadrock" }
@@ -1957,6 +1980,7 @@ shader{ id = "power_effect", description = "Power effect" }
 shader{ id = "radial_fade_out", description = "Radial fade out" }
 shader{ id = "sepia", description = "sepia" }
 shader{ id = "starman", description = "Starman-like effect" }
+shader{ id = "tft", description = "TFT" }
 shader{ id = "toon", description = "toon" }
 shader{ id = "water_effect", description = "water_effect" }
 
@@ -2021,8 +2045,8 @@ file{ path = "maps/dungeons/2/1f.dat", author = "Lucifer", }
 file{ path = "maps/dungeons/9/1f.dat", author = "Lucifer", }
 file{ path = "maps/dungeons/secret/1f.dat", author = "Lucifer", }
 file{ path = "maps/dungeons/secret/1f.lua", author = "Lucifer", }
-file{ path = "maps/extensions/underwater/a1.dat", author = "Lucifer", }
-file{ path = "maps/extensions/underwater/a1.lua", author = "Lucifer", }
+file{ path = "maps/extensions/east_continent/a1.dat", author = "Lucifer", }
+file{ path = "maps/extensions/east_continent/a1.lua", author = "Lucifer", }
 file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "Lucifer", }
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "Lucifer", }

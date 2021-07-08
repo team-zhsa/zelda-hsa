@@ -21,6 +21,10 @@ map:register_event("on_draw", function(map)
 
 end)
 
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+end)
+
 --[[function woman_bush:on_lifting()
   sol.audio.play_sound("common/secret_discover_minor")
   woman_npc:set_enabled(true)

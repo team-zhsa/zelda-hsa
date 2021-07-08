@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "same",
 }
 
@@ -2834,6 +2834,7 @@ tile{
   width = 16,
   height = 16,
   pattern = "6145",
+  tileset = "outside_buildings",
 }
 
 tile{
@@ -6141,7 +6142,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1248,
+  x = 1296,
   y = 304,
   width = 8,
   height = 40,
@@ -6161,7 +6162,7 @@ tile{
   layer = 0,
   x = 1056,
   y = 304,
-  width = 192,
+  width = 240,
   height = 40,
   pattern = "2202",
 }
@@ -6170,7 +6171,7 @@ tile{
   layer = 0,
   x = 1056,
   y = 344,
-  width = 192,
+  width = 240,
   height = 8,
   pattern = "2203",
 }
@@ -6979,7 +6980,7 @@ tile{
 tile{
   layer = 0,
   x = 1256,
-  y = 344,
+  y = 376,
   width = 8,
   height = 8,
   pattern = "84",
@@ -11195,7 +11196,7 @@ enemy{
   x = 1008,
   y = 813,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -11213,7 +11214,7 @@ enemy{
   x = 800,
   y = 1125,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -11985,7 +11986,7 @@ enemy{
   x = 1024,
   y = 869,
   direction = 0,
-  breed = "outside/chuchu_white",
+  breed = "outside/blob_cyan",
   treasure_name = "random_south",
 }
 
@@ -11994,7 +11995,7 @@ enemy{
   x = 832,
   y = 1149,
   direction = 0,
-  breed = "outside/chuchu_white",
+  breed = "outside/blob_cyan",
   treasure_name = "random_south",
 }
 
@@ -12132,6 +12133,24 @@ enemy{
   direction = 0,
   breed = "outside/octorok_green",
   treasure_name = "random_south",
+}
+
+tile{
+  layer = 1,
+  x = 1080,
+  y = 272,
+  width = 96,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 1056,
+  y = 272,
+  width = 240,
+  height = 48,
+  pattern = "7155",
 }
 
 tile{
@@ -15628,16 +15647,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 1080,
-  y = 272,
-  width = 96,
-  height = 8,
-  pattern = "1490",
-}
-
-tile{
-  layer = 1,
-  x = 1248,
+  x = 1296,
   y = 272,
   width = 8,
   height = 48,
@@ -15656,17 +15666,8 @@ tile{
 tile{
   layer = 1,
   x = 1056,
-  y = 272,
-  width = 192,
-  height = 48,
-  pattern = "7155",
-}
-
-tile{
-  layer = 1,
-  x = 1056,
   y = 264,
-  width = 192,
+  width = 240,
   height = 8,
   pattern = "1487",
 }
@@ -15675,7 +15676,7 @@ tile{
   layer = 1,
   x = 1056,
   y = 320,
-  width = 192,
+  width = 240,
   height = 8,
   pattern = "1490",
 }

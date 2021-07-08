@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "outside/overworld",
 }
 
@@ -24580,6 +24580,60 @@ tile{
   pattern = "84",
 }
 
+tile{
+  layer = 0,
+  x = 624,
+  y = 808,
+  width = 16,
+  height = 40,
+  pattern = "262",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 808,
+  width = 8,
+  height = 40,
+  pattern = "261",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 808,
+  width = 8,
+  height = 40,
+  pattern = "260",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 848,
+  width = 8,
+  height = 24,
+  pattern = "4049",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 848,
+  width = 16,
+  height = 24,
+  pattern = "4051",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 848,
+  width = 8,
+  height = 24,
+  pattern = "4050",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -24723,7 +24777,7 @@ jumper{
   layer = 0,
   x = 544,
   y = 808,
-  width = 176,
+  width = 72,
   height = 8,
   direction = 6,
   jump_length = 56,
@@ -25170,6 +25224,16 @@ jumper{
   height = 40,
   direction = 7,
   jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 648,
+  y = 808,
+  width = 72,
+  height = 8,
+  direction = 6,
+  jump_length = 56,
 }
 
 tile{

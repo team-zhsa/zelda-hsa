@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "outside/faron_woods",
 }
 
@@ -17,6 +17,7 @@ tile{
   width = 16,
   height = 112,
   pattern = "145",
+  tileset = "outside_special",
 }
 
 tile{
@@ -3815,6 +3816,7 @@ tile{
   width = 32,
   height = 32,
   pattern = "8306",
+  tileset = "outside_buildings",
 }
 
 tile{
@@ -3833,6 +3835,7 @@ tile{
   width = 128,
   height = 8,
   pattern = "145",
+  tileset = "outside_special",
 }
 
 tile{
@@ -4049,6 +4052,7 @@ tile{
   width = 16,
   height = 272,
   pattern = "145",
+  tileset = "outside_special",
 }
 
 tile{
@@ -8698,5 +8702,6 @@ tile{
   width = 32,
   height = 16,
   pattern = "8305",
+  tileset = "outside_buildings",
 }
 

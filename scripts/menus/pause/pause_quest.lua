@@ -108,7 +108,7 @@ function quest_submenu:on_draw(dst_surface)
           if item_names_static_left[k] == "magnifying_lens" then
             self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
           else
-            self.sprites_static_left[k]:set_direction(item:get_variant())
+            self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
           end
           self.sprites_static_left[k]:draw(dst_surface, x, y)
         end

@@ -13,6 +13,7 @@ local game = map:get_game()
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	game:show_map_name("west_mountains")
+	map:set_digging_allowed(true)
 end)
 
 -- Event called after the opening transition effect of the map,

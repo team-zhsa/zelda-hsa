@@ -13,6 +13,7 @@ map:register_event("on_started", function(map, destination)
 	game:show_map_name("swamp")
   -- Music
   map:init_music()
+  map:set_digging_allowed(true)
 end)
 
 -- Initialize the music of the map

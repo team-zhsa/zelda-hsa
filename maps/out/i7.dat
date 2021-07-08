@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "outside/beach",
 }
 
@@ -143,6 +143,7 @@ tile{
   width = 232,
   height = 16,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -152,6 +153,7 @@ tile{
   width = 48,
   height = 8,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -161,6 +163,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -170,6 +173,7 @@ tile{
   width = 32,
   height = 56,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -179,6 +183,7 @@ tile{
   width = 120,
   height = 88,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -188,6 +193,7 @@ tile{
   width = 64,
   height = 16,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -197,6 +203,7 @@ tile{
   width = 280,
   height = 40,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -206,6 +213,7 @@ tile{
   width = 352,
   height = 48,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -5723,6 +5731,7 @@ tile{
   width = 128,
   height = 16,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -5732,6 +5741,7 @@ tile{
   width = 32,
   height = 16,
   pattern = "371",
+  tileset = "outside_special",
 }
 
 tile{
@@ -7691,7 +7701,7 @@ enemy{
   x = 216,
   y = 349,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7700,7 +7710,7 @@ enemy{
   x = 440,
   y = 333,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7709,7 +7719,7 @@ enemy{
   x = 360,
   y = 205,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7718,7 +7728,7 @@ enemy{
   x = 120,
   y = 205,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7727,7 +7737,7 @@ enemy{
   x = 776,
   y = 133,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7736,7 +7746,7 @@ enemy{
   x = 1000,
   y = 301,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7745,7 +7755,7 @@ enemy{
   x = 1192,
   y = 493,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -7754,7 +7764,7 @@ enemy{
   x = 1064,
   y = 717,
   direction = 0,
-  breed = "outside/chuchu_green",
+  breed = "outside/blob_green",
   treasure_name = "random_south",
 }
 
@@ -9953,5 +9963,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "13602",
+  tileset = "outside_special",
 }
 

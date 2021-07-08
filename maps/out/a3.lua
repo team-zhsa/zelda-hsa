@@ -20,6 +20,7 @@ end
 function map:on_started()
 	guard_walk()
 	game:show_map_name("kakarico_village")
+	map:set_digging_allowed(true)
 end
 
 function npc_camper:on_interaction()

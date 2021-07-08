@@ -5,10 +5,9 @@ local shader_manager = require("scripts/shader_manager")
 local initial_menus_config = require("scripts/initial_menus/menus_config")
 local initial_menus = {}
 local effect_manager = require('scripts/maps/effect_manager')
-local gb = require('scripts/maps/gb_effect')
+--local gb = require('scripts/maps/gb_effect')
+local tft = require('scripts/maps/tft_effect')
 local fsa = require('scripts/maps/fsa_effect')
-
-
 -- This function is called when Solarus starts.
 function sol.main:on_started()
   sol.main.load_settings()
@@ -69,26 +68,27 @@ function sol.main:on_key_pressed(key, modifiers)
     sol.main.exit()
     handled = true
 	elseif key == "f5" then
-      -- F5: Change the video mode.
+      -- F5: Change the shader.
       shader_manager:switch_shader()
       handled = true
-    elseif key == 'f9' then
-      -- F9: Set GameBoy mode. 
-      effect_manager:set_effect(game, gb)
-      game:set_value("mode", "gb")
-      handled = true
-  
-    elseif key == 'f6' then
+    elseif key == 'f7' then
       -- F7: Set Four Swords Adventure mode.
       effect_manager:set_effect(game, fsa)
       game:set_value("mode", "fsa")
       handled = true
-  
+  		print("Mode FSA")  
     elseif key == 'f8' then
       -- F8: Set SNES mode (i.e. normal mode)
       game:set_value("mode", "snes")
       effect_manager:set_effect(game, nil)
       handled = true
+  		print("Mode SNES")
+    elseif key == 'f9' then
+      -- F9: Set TFT mode.
+      game:set_value("mode", "tft")
+      effect_manager:set_effect(game, tft)
+      handled = true
+  		print("Mode TFT")
   end
 
   return handled

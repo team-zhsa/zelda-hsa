@@ -8,7 +8,7 @@ local previous = sol.surface.create(qw*fac,qh*fac)
 
 gbshader:set_uniform('previous',previous)
 
-local persistence = 0.5
+local persistence = 0.8
 
 
 
@@ -56,7 +56,7 @@ function gbeff:on_map_changed(map)
     enabled = false
   else
     sol.video.set_shader(nil)
-    gbshader:set_uniform('persistence',0.9)
+    gbshader:set_uniform('persistence',0.8)
     enabled = true
   end
   init()
@@ -67,7 +67,7 @@ end
 
 function gbeff:clean(map)
   enabled = false
-  --sol.video.set_shader(previous_shader)
+  sol.video.set_shader(previous_shader)
 end
 
 return gbeff
