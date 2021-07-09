@@ -37,6 +37,7 @@ local function initialize_dungeon_features(game)
         map_id = "dungeons/1/1f",
         destination_name = "from_outside"
       },
+      completing_sequence = "simple",
     },
 
     [2] = {

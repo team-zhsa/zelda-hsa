@@ -1,6 +1,7 @@
 local config = {}
 
 function config:create(item, properties)
+  local bird = nil
 
 	function item:on_created()
   	self:set_savegame_variable(properties.savegame_variable)
@@ -36,7 +37,7 @@ function config:create(item, properties)
 			if not game:is_in_dungeon() then
 				game:start_dialog(properties.dialogue, function(answer)
 					if answer == 1 then
-						hero:teleport(properties.destination_map, properties.destination)
+            item:summon_bird()
 					else
   					item:set_finished()
 					end
@@ -45,6 +46,30 @@ function config:create(item, properties)
   	end)
 	end
 
+  function item:summon_bird()
+    local game = self:get_game()
+    local map = self:get_map()
+  	local map = game:get_map()
+   	local hero = map:get_hero()
+  	local x,y,layer = hero:get_position()
+    local bird = map:create_custom_entity{
+      name = "ocarina_bird",
+      direction = 0,
+      x = x - 160,
+      y = y,
+      layer = layer,
+      width = 16,
+      height = 16,
+      sprite = "npc/zelda",
+    }
+    local bird_movement = sol.movement.create("target")
+    bird_movement:set_target(hero)
+    bird_movement:set_ignore_obstacles(true)
+    bird_movement:set_speed(128)
+    bird_movement:start(bird, function()
+      hero:teleport(properties.destination_map, properties.destination)
+    end)
+  end
 
 	function item:on_using()
   	item:playing_song(music)

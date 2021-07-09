@@ -48,13 +48,7 @@ end
 if pendant ~= nil then
 	function map:on_obtained_treasure(item, variant, savegame_variable)
   	if item:get_name() == "pendant_1" then
-			sol.audio.play_music("cutscenes/victory", function()
-				sol.audio.stop_music()
-				hero:start_victory(function()
-					game:set_magic(game:get_max_magic())
-					hero:teleport("out/a1", "from_dungeon")
-				end)
-			end)
-  	end
+      enemy_manager:start_completing_sequence(map)
+    end
 	end
 end

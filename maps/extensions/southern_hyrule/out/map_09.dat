@@ -3,22 +3,11 @@ properties{
   y = 352,
   width = 512,
   height = 352,
-  min_layer = -1,
+  min_layer = 0,
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
   music = "outside/southern_hyrule",
-}
-
-teletransporter{
-  layer = -1,
-  x = 0,
-  y = -16,
-  width = 520,
-  height = 16,
-  transition = "scrolling",
-  destination_map = "extensions/southern_hyrule/out/map_03",
-  destination = "_side",
 }
 
 tile{

@@ -143,4 +143,21 @@ function enemy_manager:launch_boss_if_not_dead(map)
         
 end
 
+function enemy_manager:start_completing_sequence(map)
+  local game = map:get_game()
+  local hero = map:get_hero()
+  local dungeon_infos = game:get_dungeon()
+  if dungeon_infos["completing_sequence"] == "simple" then
+    hero:freeze()
+    sol.audio.play_music("cutscenes/victory", function()
+      sol.audio.stop_music()
+      hero:start_victory(function()
+				game:set_magic(game:get_max_magic())
+        game:set_life(game:get_max_life())
+        hero:teleport("out/a1", "from_dungeon")
+      end)
+    end)
+  end
+end
+
 return enemy_manager
