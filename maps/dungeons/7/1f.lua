@@ -17,8 +17,7 @@ map:register_event("on_started", function()
   -- Chests
 
   -- Doors
-	map:set_doors_open("", false)
-	door_manager:open_if_block_moved(map, "block_21_door", door_prefix)
+  
   -- Enemies
 
   -- Music

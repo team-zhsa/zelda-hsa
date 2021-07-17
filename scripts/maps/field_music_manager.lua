@@ -22,9 +22,9 @@ function field_music_manager:init(map)
 	local game = map:get_game()
 	function field_music_manager:start_field_music()
 	  if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
-	    audio_manager:play_music("outside/overworld")
+	    sol.audio.play_music("outside/hyrule_field_day")
 	  elseif game:get_value("time_of_day") == "night" then
-	    audio_manager:play_music("outside/field_night")
+      sol.audio.play_music("outside/hyrule_field_night")
 	  end
 	end
 	field_music_manager:start_field_music()

@@ -10,7 +10,7 @@
 --   -- Do whatever you want next (show a title screen, start a game...)
 -- end
 local title_screen = {}
-local mode = sol.shader.create("flickering_opaque") -- or sol.shader.create("flashing_rgb")
+local mode = sol.shader.create("flashing_rgb") -- or sol.shader.create("flashing_rgb")
 
 -- Main surface of the menu.
 local surface = sol.surface.create(320, 256)
@@ -191,4 +191,3 @@ function title_screen:on_joypad_button_pressed(button)
 end
 
 return title_screen
-

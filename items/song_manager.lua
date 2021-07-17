@@ -37,7 +37,7 @@ function config:create(item, properties)
 			if not game:is_in_dungeon() then
 				game:start_dialog(properties.dialogue, function(answer)
 					if answer == 1 then
-            item:summon_bird()
+            hero:teleport(properties.destination_map, properties.destination)
 					else
   					item:set_finished()
 					end
@@ -67,7 +67,7 @@ function config:create(item, properties)
     bird_movement:set_ignore_obstacles(true)
     bird_movement:set_speed(128)
     bird_movement:start(bird, function()
-      hero:teleport(properties.destination_map, properties.destination)
+      
     end)
   end
 

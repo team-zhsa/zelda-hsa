@@ -19,9 +19,9 @@ local angle_per_frame = 2 * math.pi / sprite:get_num_frames()
 
 -- Configuration variables.
 local triggering_angle = angle_per_frame * 1.5
-local start_shooting_delay = 200
+local start_shooting_delay = 400
 local pause_duration = 1000
-local is_exhausted_duration = 100
+local is_exhausted_duration = 200
 
 -- Function to start firing.
 function enemy:start_firing()
@@ -40,7 +40,7 @@ function enemy:start_firing()
       name = (enemy:get_name() or enemy:get_breed()) .. "_laser",
       breed =  "projectiles/laser",
       x = x,
-      y = y - 5,
+      y = y - 13,
       layer = layer,
       direction = enemy:get_direction4_to(hero)
     })

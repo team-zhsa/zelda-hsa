@@ -10779,17 +10779,7 @@ enemy{
   x = 1544,
   y = 1581,
   direction = 2,
-  breed = "outside/baba_floria",
-  treasure_name = "random_west",
-}
-
-enemy{
-  name = "auto_enemy_2",
-  layer = 0,
-  x = 1336,
-  y = 1581,
-  direction = 0,
-  breed = "outside/baba_floria",
+  breed = "dungeons/stalfos_blue",
   treasure_name = "random_west",
 }
 
@@ -12606,6 +12596,16 @@ sensor{
   y = 125,
   width = 16,
   height = 16,
+}
+
+enemy{
+  name = "auto_enemy_2",
+  layer = 0,
+  x = 1336,
+  y = 1581,
+  direction = 2,
+  breed = "dungeons/stalfos_blue",
+  treasure_name = "random_west",
 }
 
 tile{

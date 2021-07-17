@@ -25899,6 +25899,7 @@ tile_pattern{
   y = 752,
   width = 16,
   height = 8,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -25909,6 +25910,7 @@ tile_pattern{
   y = 752,
   width = 16,
   height = 8,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -72595,6 +72597,17 @@ tile_pattern{
   width = 8,
   height = 8,
   repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "99999",
+  ground = "traversable",
+  default_layer = 0,
+  x = 2000,
+  y = 56,
+  width = 48,
+  height = 8,
+  repeat_mode = "horizontal",
 }
 
 border_set{

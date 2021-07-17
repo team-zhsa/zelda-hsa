@@ -135,7 +135,7 @@ function separator_manager:manage_map(map)
       y = y,
       layer = layer,
       breed = enemy:get_breed(),
-      direction = math.random(0, 3) or 0,
+      direction = 0,
       name = enemy:get_name(),
       treasure = { enemy:get_treasure() },
       enemy = enemy,

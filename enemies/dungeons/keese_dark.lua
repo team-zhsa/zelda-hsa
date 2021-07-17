@@ -10,7 +10,7 @@ function enemy:on_created()
 
   self:create_sprite("enemies/" .. enemy:get_breed())
   self:set_life(6)
-  self:set_damage(2)
+  self:set_damage(5)
   self:set_obstacle_behavior("flying")
 
 end
@@ -26,7 +26,7 @@ function enemy:on_restarted()
       wait = false
       movement = sol.movement.create("path_finding")
       movement:set_speed(32)
-			movement:set_ignore_obstacles(false)
+			movement:set_ignore_obstacles(true)
       movement:set_target(hero)
       movement:start(enemy)
       sol.timer.start(enemy, 1500, function()
@@ -38,6 +38,21 @@ function enemy:on_restarted()
     return true
   end)
 
+  enemy:set_hero_weapons_reactions({
+    arrow = 2,
+    boomerang = 2,
+    explosion = 2,
+    sword = 1,
+    thrown_item = 2,
+    fire = 2,
+    jump_on = "ignored",
+    hammer = 2,
+    hookshot = 2,
+    magic_powder = 2,
+    shield = 2,
+    thrust = 2
+  })
+  
 end
 
 

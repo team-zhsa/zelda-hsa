@@ -1,4 +1,4 @@
--- Lua script of map out/f1 - f2 - g1 - g2 - h1 - h2 - i1 - i2.
+-- Lua script of map out/b1.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -11,8 +11,15 @@ local map = ...
 local game = map:get_game()
 
 map:register_event("on_started", function()
+	game:show_map_name("death_mountains")
 	map:set_digging_allowed(true)
 end)
+
+-- Event called after the opening transition effect of the map,
+-- that is, when the player takes control of the hero.
+function map:on_opening_transition_finished()
+
+end
 
 -- Handle boulders spawning depending on activated sensor.
 for sensor in map:get_entities("sensor_activate_boulder_") do
@@ -29,5 +36,18 @@ for sensor in map:get_entities("sensor_deactivate_boulder_") do
     spawner_boulder_2:stop()
 		spawner_boulder_3:stop()
 		spawner_boulder_4:stop()
+  end)
+end
+
+
+-- Remove spawned boulders when too far of the mountain.
+for spawner in map:get_entities("spawner_boulder_") do
+  spawner:register_event("on_enemy_spawned", function(spawner, enemy)
+    enemy:register_event("on_position_changed", function(enemy)
+      local _, y, _ = enemy:get_position()
+      if y > 2000 then
+        enemy:remove()
+      end
+    end)
   end)
 end

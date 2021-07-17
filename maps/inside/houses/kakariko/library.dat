@@ -2,20 +2,129 @@ properties{
   x = 0,
   y = 0,
   width = 320,
-  height = 480,
+  height = 240,
   min_layer = 0,
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 03",
+  music = "inside/house",
 }
 
 tile{
   layer = 0,
-  x = 152,
-  y = 448,
+  x = 48,
+  y = 48,
+  width = 224,
+  height = 144,
+  pattern = "floor_low.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 80,
   width = 16,
-  height = 32,
-  pattern = "floor.1-1",
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 120,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 120,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 120,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 120,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
 }
 
 tile{
@@ -30,7 +139,7 @@ tile{
 tile{
   layer = 0,
   x = 16,
-  y = 440,
+  y = 200,
   width = 24,
   height = 24,
   pattern = "wall.corner.3-1",
@@ -39,7 +148,7 @@ tile{
 tile{
   layer = 0,
   x = 280,
-  y = 440,
+  y = 200,
   width = 24,
   height = 24,
   pattern = "wall.corner.4-1",
@@ -68,14 +177,14 @@ tile{
   x = 16,
   y = 40,
   width = 24,
-  height = 400,
+  height = 160,
   pattern = "wall.3-1",
 }
 
 tile{
   layer = 0,
   x = 40,
-  y = 440,
+  y = 200,
   width = 112,
   height = 24,
   pattern = "wall.2-1",
@@ -86,17 +195,8 @@ tile{
   x = 280,
   y = 40,
   width = 24,
-  height = 400,
+  height = 160,
   pattern = "wall.4-1",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 48,
-  width = 224,
-  height = 384,
-  pattern = "floor.1-1",
 }
 
 tile{
@@ -113,7 +213,7 @@ tile{
   x = 40,
   y = 48,
   width = 8,
-  height = 384,
+  height = 144,
   pattern = "wall_border.3-1",
 }
 
@@ -122,14 +222,14 @@ tile{
   x = 272,
   y = 48,
   width = 8,
-  height = 384,
+  height = 144,
   pattern = "wall_border.4-1",
 }
 
 tile{
   layer = 0,
   x = 48,
-  y = 432,
+  y = 192,
   width = 224,
   height = 8,
   pattern = "wall_border.2-1",
@@ -156,7 +256,7 @@ tile{
 tile{
   layer = 0,
   x = 40,
-  y = 432,
+  y = 192,
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-1",
@@ -165,7 +265,7 @@ tile{
 tile{
   layer = 0,
   x = 272,
-  y = 432,
+  y = 192,
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-1",
@@ -174,7 +274,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 440,
+  y = 200,
   width = 112,
   height = 24,
   pattern = "wall.2-1",
@@ -182,8 +282,44 @@ tile{
 
 tile{
   layer = 0,
+  x = 64,
+  y = 32,
+  width = 32,
+  height = 32,
+  pattern = "bookshelf.2",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 32,
+  width = 16,
+  height = 32,
+  pattern = "bookshelf.3",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 32,
+  width = 16,
+  height = 32,
+  pattern = "bookshelf.1",
+}
+
+tile{
+  layer = 0,
   x = 152,
-  y = 440,
+  y = 208,
+  width = 16,
+  height = 32,
+  pattern = "floor.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 200,
   width = 16,
   height = 16,
   pattern = "door.2",
@@ -192,7 +328,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 440,
+  y = 200,
   width = 8,
   height = 16,
   pattern = "door.2.support.2-1",
@@ -201,7 +337,7 @@ tile{
 tile{
   layer = 0,
   x = 144,
-  y = 440,
+  y = 200,
   width = 8,
   height = 16,
   pattern = "door.2.support.1-1",
@@ -210,7 +346,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 464,
+  y = 224,
   width = 24,
   height = 16,
   pattern = "wall.4-1",
@@ -219,7 +355,7 @@ tile{
 tile{
   layer = 0,
   x = 128,
-  y = 464,
+  y = 224,
   width = 24,
   height = 16,
   pattern = "wall.3-1",
@@ -227,17 +363,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 56,
-  y = 80,
-  width = 64,
+  x = 224,
+  y = 32,
+  width = 32,
   height = 32,
   pattern = "bookshelf.2",
 }
 
 tile{
   layer = 0,
-  x = 120,
-  y = 80,
+  x = 256,
+  y = 32,
   width = 16,
   height = 32,
   pattern = "bookshelf.3",
@@ -245,8 +381,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 80,
+  x = 208,
+  y = 32,
   width = 16,
   height = 32,
   pattern = "bookshelf.1",
@@ -254,17 +390,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 56,
-  y = 160,
-  width = 64,
+  x = 64,
+  y = 88,
+  width = 32,
   height = 32,
   pattern = "bookshelf.2",
 }
 
 tile{
   layer = 0,
-  x = 120,
-  y = 160,
+  x = 96,
+  y = 88,
   width = 16,
   height = 32,
   pattern = "bookshelf.3",
@@ -272,8 +408,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 160,
+  x = 48,
+  y = 88,
   width = 16,
   height = 32,
   pattern = "bookshelf.1",
@@ -281,17 +417,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 56,
-  y = 240,
-  width = 64,
+  x = 224,
+  y = 88,
+  width = 32,
   height = 32,
   pattern = "bookshelf.2",
 }
 
 tile{
   layer = 0,
-  x = 120,
-  y = 240,
+  x = 256,
+  y = 88,
   width = 16,
   height = 32,
   pattern = "bookshelf.3",
@@ -299,8 +435,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 240,
+  x = 208,
+  y = 88,
   width = 16,
   height = 32,
   pattern = "bookshelf.1",
@@ -308,17 +444,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 56,
-  y = 320,
-  width = 64,
+  x = 224,
+  y = 144,
+  width = 32,
   height = 32,
   pattern = "bookshelf.2",
 }
 
 tile{
   layer = 0,
-  x = 120,
-  y = 320,
+  x = 256,
+  y = 144,
   width = 16,
   height = 32,
   pattern = "bookshelf.3",
@@ -326,116 +462,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 320,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.1",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 320,
-  width = 64,
-  height = 32,
-  pattern = "bookshelf.2",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 320,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.3",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 320,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.1",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 240,
-  width = 64,
-  height = 32,
-  pattern = "bookshelf.2",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 240,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.3",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 240,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.1",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 160,
-  width = 64,
-  height = 32,
-  pattern = "bookshelf.2",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 160,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.3",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 160,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.1",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 80,
-  width = 64,
-  height = 32,
-  pattern = "bookshelf.2",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 80,
-  width = 16,
-  height = 32,
-  pattern = "bookshelf.3",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 80,
+  x = 208,
+  y = 144,
   width = 16,
   height = 32,
   pattern = "bookshelf.1",
@@ -444,124 +472,43 @@ tile{
 tile{
   layer = 0,
   x = 16,
-  y = 40,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 120,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 200,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 280,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 368,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 360,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 280,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 200,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 120,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 40,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 24,
-  width = 8,
+  y = 72,
+  width = 32,
   height = 16,
-  pattern = "door.1.support.1-1",
+  pattern = "wall_pillar.3-9",
 }
 
 tile{
   layer = 0,
-  x = 168,
-  y = 24,
-  width = 8,
+  x = 16,
+  y = 152,
+  width = 32,
   height = 16,
-  pattern = "door.1.support.2-1",
+  pattern = "wall_pillar.3-9",
 }
 
 tile{
   layer = 0,
-  x = 152,
-  y = 24,
-  width = 16,
+  x = 272,
+  y = 72,
+  width = 32,
   height = 16,
-  pattern = "door_stairs.spiral_up.1",
+  pattern = "wall_pillar.4-9",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 152,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-9",
 }
 
 tile{
   layer = 1,
   x = 152,
-  y = 456,
+  y = 216,
   width = 16,
   height = 8,
   pattern = "door_cache.2-1",
@@ -570,27 +517,45 @@ tile{
 tile{
   layer = 1,
   x = 144,
-  y = 456,
+  y = 216,
   width = 32,
   height = 8,
   pattern = "door_top.2-1",
 }
 
 tile{
-  layer = 1,
-  x = 144,
-  y = 16,
-  width = 32,
-  height = 8,
-  pattern = "door_top.stairs.1-2",
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 16,
+  height = 240,
+  pattern = "ceiling.2",
 }
 
 tile{
-  layer = 1,
-  x = 152,
-  y = 16,
+  layer = 2,
+  x = 16,
+  y = 224,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 0,
   width = 16,
-  height = 8,
-  pattern = "door_top.stairs_up.1-1",
+  height = 240,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 16,
+  y = 0,
+  width = 288,
+  height = 16,
+  pattern = "ceiling.2",
 }
 

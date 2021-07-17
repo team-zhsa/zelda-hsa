@@ -1000,6 +1000,24 @@ enemy{
   savegame_variable = "dungeon_1_boss",
 }
 
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 56,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/1/1f",
+  destination = "from_outside",
+  sprite = "entities/teletransporter",
+  sound = "warp",
+}
+
 tile{
   layer = 1,
   x = 152,

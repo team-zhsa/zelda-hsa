@@ -26,16 +26,20 @@ local shaking_duration = 1000
 local jumping_duration = 700
 local jumping_height = 16
 local jumping_speed = 128
+local triggering_distance = 128
 
 -- Pounce to the hero.
 function enemy:start_pouncing()
 
   sprite:set_animation("jumping")
-  enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+  if enemy:get_distance(hero) < triggering_distance then
+    enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+      enemy:restart()
+    end)
+  else
     enemy:restart()
-  end)
+  end
 end
-
 -- Wait a few time then shake and pounce.
 function enemy:wait()
 

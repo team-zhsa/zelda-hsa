@@ -38537,6 +38537,17 @@ teletransporter{
   destination = "_side",
 }
 
+teletransporter{
+  layer = -1,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/e1",
+  destination = "_side",
+}
+
 tile{
   layer = 0,
   x = 1200,
@@ -68543,5 +68554,13 @@ sensor{
   y = 629,
   width = 32,
   height = 16,
+}
+
+pickable{
+  layer = 0,
+  x = 296,
+  y = 349,
+  treasure_name = "piece_of_heart",
+  treasure_savegame_variable = "outside_mountains_piece_of_heart_2",
 }
 

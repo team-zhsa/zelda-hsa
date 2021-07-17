@@ -140,7 +140,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(8)
+  enemy:set_life(10)
   enemy:set_size(32, 32) -- Workaround : Adapt the size to never have a part of enemy sprite under ceiling nor holded hero over a wall.
   enemy:set_origin(16, 27)
 
@@ -168,7 +168,7 @@ enemy:register_event("on_restarted", function(enemy)
 
   -- States.
   is_hero_catchable = false
-  enemy:set_damage(4)
+  enemy:set_damage(8)
   enemy:set_can_attack(true)
   enemy:set_obstacle_behavior("flying") -- Don't fall in holes.
   enemy:set_drawn_in_y_order() -- Reset y drawn order possibly changed by the throw.

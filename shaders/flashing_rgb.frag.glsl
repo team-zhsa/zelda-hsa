@@ -46,11 +46,11 @@ void main() {
     const vec3 green = vec3(0.0,255.0,0.00)/255.0;
     const vec3 blue = vec3(0.0,0.0,255.00)/255.0;
     const vec3 white = vec3(255.0,255.0,255.0)/255.0;
-    if(mod(float(sol_time),120.0) > 80.0)
+    if(mod(float(sol_time),90.0) > 60.0)
       FragColor.rgb = (lum < 0.5) ? red : red;
-    if(mod(float(sol_time),120.0) < 80.0)
+    if(mod(float(sol_time),90.0) < 60.0)
       FragColor.rgb = (lum < 0.5) ? blue : blue;
-    if(mod(float(sol_time),120.0) < 40.0)
+    if(mod(float(sol_time),90.0) < 30.0)
       FragColor.rgb = (lum < 0.5) ? green : green;
     FragColor.rgb = FragColor.rgb;
     FragColor.rgb *= pow(lum,1);

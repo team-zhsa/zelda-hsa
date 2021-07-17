@@ -135,7 +135,7 @@ map{ id = "inside/houses/kakariko/bar_1f", description = "Milk Bar (1st Floor)" 
 map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (B1)" }
 map{ id = "inside/houses/kakariko/grandma_house", description = "Grandma House" }
 map{ id = "inside/houses/kakariko/graveyard", description = "Graveyard" }
-map{ id = "inside/houses/kakariko/library_1f", description = "Library (1st Floor)" }
+map{ id = "inside/houses/kakariko/library", description = "Library" }
 map{ id = "inside/houses/kakariko/library_2f", description = "Library (2nd Floor)" }
 map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
 map{ id = "inside/houses/kakariko/south_shop", description = "South Shop" }
@@ -861,10 +861,14 @@ sprite{ id = "entities/big_chest", description = "Chest (big)" }
 sprite{ id = "entities/block", description = "Block" }
 sprite{ id = "entities/blue_cristal", description = "Blue cristal" }
 sprite{ id = "entities/bomb", description = "Bomb" }
-sprite{ id = "entities/book_blue", description = "Book blue" }
-sprite{ id = "entities/book_green", description = "Book green" }
-sprite{ id = "entities/book_orange", description = "Book orange" }
-sprite{ id = "entities/book_red", description = "Book red" }
+sprite{ id = "entities/book_blue", description = "Blue book" }
+sprite{ id = "entities/book_cyan", description = "Cyan book" }
+sprite{ id = "entities/book_green", description = "Green book" }
+sprite{ id = "entities/book_orange", description = "Orange book" }
+sprite{ id = "entities/book_pink", description = "Pink book" }
+sprite{ id = "entities/book_purple", description = "Purple book" }
+sprite{ id = "entities/book_red", description = "Red book" }
+sprite{ id = "entities/book_yellow", description = "Yellow book" }
 sprite{ id = "entities/boomerang1", description = "Boomerang 1" }
 sprite{ id = "entities/boomerang2", description = "Boomerang 2" }
 sprite{ id = "entities/bow", description = "Bow" }
@@ -1073,6 +1077,7 @@ sprite{ id = "maps/minimap" }
 sprite{ id = "maps/mountain", description = "Mountains map" }
 sprite{ id = "maps/overworld", description = "Overworld" }
 sprite{ id = "maps/room_layout", description = "Room layout for dungeons" }
+sprite{ id = "maps/screen_size", description = "Screen size" }
 sprite{ id = "maps/underwater", description = "Underwater" }
 sprite{ id = "menus/arrow", description = "Arrow" }
 sprite{ id = "menus/dialog_cursor", description = "Dialog cursor" }
@@ -1103,6 +1108,9 @@ sprite{ id = "menus/pause_save_dialog", description = "Pause save dialog" }
 sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
+sprite{ id = "menus/title_screen/press_start", description = "Press start" }
+sprite{ id = "menus/title_screen/small_shine", description = "Small shine" }
+sprite{ id = "menus/title_screen/triforce", description = "Triforce" }
 sprite{ id = "menus/title_sword", description = "Title sword" }
 sprite{ id = "menus/title_triforce" }
 sprite{ id = "npc/angry_brother", description = "Angry Brother" }
@@ -1349,12 +1357,13 @@ music{ id = "outside/faron_woods", description = "Faron Woods" }
 music{ id = "outside/field_2", description = "Hyrule Field (2)" }
 music{ id = "outside/field_4", description = "Hyrule Field (Rock)" }
 music{ id = "outside/field_albw", description = "Hyrule Field (ALBW)" }
-music{ id = "outside/field_day", description = "Hyrule Field (Day)" }
-music{ id = "outside/field_night", description = "Hyrule Field (Night)" }
+music{ id = "outside/field_oot", description = "Hyrule Field (Day)" }
 music{ id = "outside/field_tp", description = "Hyrule Field (TP)" }
 music{ id = "outside/gerudo", description = "Gerudo Desert" }
 music{ id = "outside/graveyard", description = "Graveyard" }
 music{ id = "outside/hylia_lake", description = "Hylia Lake" }
+music{ id = "outside/hyrule_field_day", description = "Hyrule Field (Day)" }
+music{ id = "outside/hyrule_field_night", description = "Hyrule Field (Night)" }
 music{ id = "outside/hyrule_town", description = "Hyrule Town" }
 music{ id = "outside/kakarico", description = "Kakarico Village" }
 music{ id = "outside/kokiri", description = "Kokiri Forest" }
@@ -1363,7 +1372,6 @@ music{ id = "outside/lost_woods", description = "Lost Woods" }
 music{ id = "outside/mountains", description = "Death Mountains" }
 music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
-music{ id = "outside/overworld", description = "Overworld" }
 music{ id = "outside/owl_theme", description = "Owl Theme" }
 music{ id = "outside/parapa_town", description = "Parapa Town" }
 music{ id = "outside/rito_village", description = "Rito Village" }
@@ -1810,6 +1818,7 @@ enemy{ id = "outside/crow", description = "Crow" }
 enemy{ id = "outside/deadrock", description = "Deadrock" }
 enemy{ id = "outside/geldman", description = "Geldman" }
 enemy{ id = "outside/hinox", description = "Hinox" }
+enemy{ id = "outside/hinox_blue", description = "Blue Hinox" }
 enemy{ id = "outside/lynel", description = "Lynel" }
 enemy{ id = "outside/lynel_baby_red", description = "Red Baby Lynel" }
 enemy{ id = "outside/lynel_black", description = "Black Lynel" }
@@ -2220,6 +2229,20 @@ file{ path = "sprites/maps/room_layout.dat", author = "Lucifer", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_default.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_shadow.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
+file{ path = "sprites/menus/title_screen", license = "Mixed" }
+file{ path = "sprites/menus/title_screen/background.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/copyright.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/logo_subtitle.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/logo_sword.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/logo_tlo.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/logo_zelda.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/logo_zelda_z.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/press_start.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/title_screen/press_start.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/small_shine.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/title_screen/small_shine.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/menus/title_screen/triforce.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/title_screen/triforce.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "tilesets/oh_cave.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
 file{ path = "tilesets/oh_cave.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
 file{ path = "tilesets/oh_indoors_cabin.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }

@@ -9,9 +9,10 @@ local movement
 function enemy:on_created()
 
   self:create_sprite("enemies/" .. enemy:get_breed())
-  self:set_life(4)
-  self:set_damage(4)
+  self:set_life(6)
+  self:set_damage(5)
   self:set_obstacle_behavior("flying")
+
 end
 
 
@@ -25,7 +26,7 @@ function enemy:on_restarted()
       wait = false
       movement = sol.movement.create("path_finding")
       movement:set_speed(32)
-			movement:set_ignore_obstacles(false)
+			movement:set_ignore_obstacles(true)
       movement:set_target(hero)
       movement:start(enemy)
       sol.timer.start(enemy, 1500, function()
@@ -37,15 +38,22 @@ function enemy:on_restarted()
     return true
   end)
 
+  enemy:set_hero_weapons_reactions({
+    arrow = 2,
+    boomerang = 2,
+    explosion = 2,
+    sword = hero:start_electrocution(5),
+    thrown_item = 2,
+    fire = 2,
+    jump_on = "ignored",
+    hammer = hero:start_electrocution(5),
+    hookshot = 2,
+    magic_powder = 2,
+    shield = 2,
+    thrust = hero:start_electrocution(5)
+  })
+  
 end
 
 
 enemy:set_layer_independent_collisions(true)
-
-function enemy:on_attacking_hero(hero)
-  if not hero:is_invincible() then
-    hero:start_hurt(4)
-    hero:start_electrocution(2000)
-    hero:set_invincible(true, 3000)
-  end
-end

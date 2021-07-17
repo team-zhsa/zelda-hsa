@@ -12,8 +12,8 @@ end
 
 function enemy:go_random()
   self:get_sprite():set_animation("walking")
-  local m = sol.movement.create("path_finding")
-  m:set_speed(40)
+  local m = sol.movement.create("random_path")
+  m:set_speed(52)
   m:start(self)
 end
 

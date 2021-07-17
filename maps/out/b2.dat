@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
-  music = "outside/overworld",
+  music = "same",
 }
 
 tile{
@@ -9509,6 +9509,15 @@ tile{
   width = 8,
   height = 40,
   pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "100",
 }
 
 npc{
