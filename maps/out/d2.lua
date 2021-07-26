@@ -1,4 +1,4 @@
--- Lua script of map dungeons/16/2f.
+-- Lua script of map out/d2.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

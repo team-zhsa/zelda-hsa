@@ -23,7 +23,7 @@ local function initialize_dungeon_features(game)
       lowest_floor = -1,
       highest_floor = 0,
       maps = {
-        "dungeons/1/1f",
+        "dungeons/1/0f",
 				"dungeons/1/b1",
       },
       boss = {
@@ -34,7 +34,7 @@ local function initialize_dungeon_features(game)
         y = 104,
       },
       main_entrance = {
-        map_id = "dungeons/1/1f",
+        map_id = "dungeons/1/0f",
         destination_name = "from_outside"
       },
       completing_sequence = "simple",
@@ -46,11 +46,11 @@ local function initialize_dungeon_features(game)
 			minimap_width = 40,
 			minimap_height = 56,
       lowest_floor = -3,
-      highest_floor = 3,
+      highest_floor = 2,
       maps = {
+        "dungeons/2/0f",
         "dungeons/2/1f",
         "dungeons/2/2f",
-        "dungeons/2/3f",
         "dungeons/2/b1",
         "dungeons/2/b2",
         "dungeons/2/b3",
@@ -62,7 +62,7 @@ local function initialize_dungeon_features(game)
         y = 240,
       },
       main_entrance = {
-        map_id = "dungeons/2/1f",
+        map_id = "dungeons/2/0f",
         destination_name = "from_outside"
       },
     },
@@ -75,7 +75,7 @@ local function initialize_dungeon_features(game)
       lowest_floor = -1,
       highest_floor = 0,
       maps = {
-        "dungeons/8/1f",
+        "dungeons/8/0f",
         "dungeons/8/b1",
       },
       boss = {
@@ -85,7 +85,7 @@ local function initialize_dungeon_features(game)
         y = 824,
       },
       main_entrance = {
-        map_id = "dungeons/8/1f",
+        map_id = "dungeons/8/0f",
         destination_name = "from_outside"
       },
     },

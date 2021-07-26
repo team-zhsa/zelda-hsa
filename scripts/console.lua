@@ -1,10 +1,10 @@
 -- A Lua console that can be enabled with F12 at any time during the program.
 
 local console = {
-  font = "minecraftia_mono",            -- Font of the console (monospaced).
-  font_size = 10,                        -- Font size in pixels.
+  font = "enter_command_mono",            -- Font of the console (monospaced).
+  font_size = 16,                        -- Font size in pixels.
   char_width = 6,                       -- Character width in pixels.
-  line_spacing = 0,                     -- Space between two lines in pixels.
+  line_spacing = 2,                     -- Space between two lines in pixels.
 
   margin = 4,                           -- Margin of the console in pixels.
   padding = 6,                          -- Padding of the console in pixels.

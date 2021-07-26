@@ -1,4 +1,4 @@
--- Lua script of map dongeon_15.
+-- Lua script of map dungeon_15_2f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

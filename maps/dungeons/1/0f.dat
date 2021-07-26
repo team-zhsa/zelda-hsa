@@ -2189,7 +2189,7 @@ teletransporter{
   width = 16,
   height = 16,
   transition = "immediate",
-  destination_map = "dungeons/1/1f",
+  destination_map = "dungeons/1/0f",
   destination = "from_below",
 }
 
@@ -2312,7 +2312,7 @@ teletransporter{
   width = 192,
   height = 112,
   transition = "scrolling",
-  destination_map = "dungeons/1/1f",
+  destination_map = "dungeons/1/0f",
   destination = "_same",
 }
 
@@ -6620,7 +6620,7 @@ chest{
   y = 1325,
   treasure_name = "rupee",
   treasure_variant = 3,
-  treasure_savegame_variable = "dungeon_1_1f_29_rupees",
+  treasure_savegame_variable = "dungeon_1_0f_29_rupees",
   sprite = "entities/Chests/chest_yellow",
 }
 
@@ -6629,7 +6629,7 @@ chest{
   x = 1128,
   y = 1325,
   treasure_name = "piece_of_heart",
-  treasure_savegame_variable = "dungeon_1_1f_29_piece_of_heart",
+  treasure_savegame_variable = "dungeon_1_0f_29_piece_of_heart",
   sprite = "entities/Chests/chest_yellow",
 }
 

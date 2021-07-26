@@ -1,4 +1,4 @@
--- Lua script of map dungeons/2/2f.
+-- Lua script of map dungeons/2/3f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -21,9 +21,4 @@ end
 -- that is, when the player takes control of the hero.
 function map:on_opening_transition_finished()
 
-end
-
-function switch_8_s:on_activated()
-	map:open_doors("door_8_s")
-	map:open_doors("door_13_n")
 end
