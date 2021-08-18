@@ -62,6 +62,14 @@ ouvrir la serrure !
 }
 
 dialog{
+  id = "_cannot_open_without_green_key",
+  text = [[
+Il te faut une clé verte pour
+ouvrir la serrure !
+]],
+}
+
+dialog{
   id = "_cannot_open_without_red_key",
   text = [[
 Il te faut une clé rouge pour
@@ -77,6 +85,14 @@ bloquée...
 
 Essaie de trouver une clé qui
 pourrait l'ouvrir.
+]],
+}
+
+dialog{
+  id = "_cannot_open_without_yellow_key",
+  text = [[
+Il te faut une clé jaune pour
+ouvrir la serrure !
 ]],
 }
 
@@ -3953,6 +3969,13 @@ dialog{
   id = "maps.out.field.sign_12",
   text = [[
 Est : Forêt de Firone
+]],
+}
+
+dialog{
+  id = "maps.out.field.sign_13",
+  text = [[
+Est : Domaine Zora
 ]],
 }
 

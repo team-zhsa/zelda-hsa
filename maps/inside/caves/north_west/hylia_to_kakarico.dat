@@ -1106,10 +1106,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 512,
-  y = 248,
-  width = 160,
-  height = 392,
+  x = 504,
+  y = 240,
+  width = 168,
+  height = 400,
   pattern = "ceiling.2",
 }
 
@@ -1143,9 +1143,9 @@ tile{
 tile{
   layer = 0,
   x = 320,
-  y = 72,
-  width = 120,
-  height = 192,
+  y = 64,
+  width = 320,
+  height = 200,
   pattern = "ceiling.2",
 }
 
@@ -7917,6 +7917,33 @@ tile{
   pattern = "water_shallow.4",
 }
 
+tile{
+  layer = 0,
+  x = 1088,
+  y = 1280,
+  width = 16,
+  height = 40,
+  pattern = "barrier_big.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 1320,
+  width = 16,
+  height = 24,
+  pattern = "barrier_big.border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 1264,
+  width = 16,
+  height = 16,
+  pattern = "barrier_big.border.1-1",
+}
+
 wall{
   layer = 0,
   x = 152,
@@ -8939,8 +8966,8 @@ custom_entity{
 custom_entity{
   name = "auto_torch_21",
   layer = 0,
-  x = 264,
-  y = 429,
+  x = 136,
+  y = 325,
   width = 16,
   height = 16,
   direction = 0,
@@ -8951,8 +8978,8 @@ custom_entity{
 custom_entity{
   name = "auto_torch_22",
   layer = 0,
-  x = 56,
-  y = 429,
+  x = 136,
+  y = 421,
   width = 16,
   height = 16,
   direction = 0,
@@ -8963,8 +8990,8 @@ custom_entity{
 custom_entity{
   name = "auto_torch_23",
   layer = 0,
-  x = 56,
-  y = 301,
+  x = 184,
+  y = 421,
   width = 16,
   height = 16,
   direction = 0,
@@ -8975,13 +9002,21 @@ custom_entity{
 custom_entity{
   name = "auto_torch_24",
   layer = 0,
-  x = 264,
-  y = 301,
+  x = 184,
+  y = 325,
   width = 16,
   height = 16,
   direction = 0,
   sprite = "entities/torch",
   model = "torch",
+}
+
+enemy{
+  layer = 0,
+  x = 1064,
+  y = 1293,
+  direction = 0,
+  breed = "dungeons/beamos",
 }
 
 tile{

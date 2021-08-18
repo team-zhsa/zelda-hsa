@@ -25,16 +25,18 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_13_s", true)
 	map:set_doors_open("door_9_s", false)
 	treasure_manager:disappear_pickable(map, "pickable_29_small_key")
-	treasure_manager:disappear_pickable(map, "pickable_18_yellow_key")
+	treasure_manager:disappear_pickable(map, "pickable_18_big_key")
 	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_w")
-	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_s")
 	door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_s")
 	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29", "pickable_29_small_key")
 	if miniboss ~= nil then
-		treasure_manager:appear_pickable_when_enemies_dead(map, "miniboss", "pickable_18_yellow_key")
+		treasure_manager:appear_pickable_when_enemies_dead(map, "miniboss", "pickable_18_big_key")
 		miniboss:set_enabled(false)
 		door_manager:open_when_enemies_dead(map, "miniboss", "door_13_s", sound)
 	end
+  flying_tile_manager:reset(map, "enemy_10")
+  map:set_doors_open("door_10_w", true)
+  map:set_doors_open("door_10_s", true)
 end)
 
 if miniboss ~= nil then
@@ -46,21 +48,7 @@ if miniboss ~= nil then
 	end)
 end
 
--- Sensors events
-function sensor_10_flying_tile_reset_1:on_activated()
-	flying_tile_manager:reset(map, "enemy_10")
-  map:set_doors_open("door_10_w", true)
-  map:set_doors_open("door_10_s", true)
-
-end
-
-function sensor_10_flying_tile_reset_2:on_activated()
-	flying_tile_manager:reset(map, "enemy_10")
-  map:set_doors_open("door_10_w", true)
-  map:set_doors_open("door_10_s", true)
-
-end
-
+-- Sensors events:
 function sensor_10_flying_tile_init_1:on_activated()
 
 	flying_tile_manager:init(map, "enemy_10")

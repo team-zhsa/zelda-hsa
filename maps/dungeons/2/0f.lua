@@ -19,6 +19,8 @@ cannonball_manager:create_cannons(map, "cannon_")
 function map:on_started(destination)
 	separator_manager:manage_map(map)
 	map:set_doors_open("door_19_s")
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
 	chest_20_blue_key:set_enabled(false)
 	if not game:get_value("dungeon_2_compass", true) then
 		chest_30_compass:set_enabled(false)
@@ -126,4 +128,23 @@ end
 function switch_13_chest:on_activated()
   audio_manager:play_sound("common/chest_appear")
   chest_11_small_key:set_enabled(true)
+end
+
+function sensor_7_door:on_activated()
+  map:set_doors_open("door_3_s", false)
+  map:set_doors_open("door_8_n", false)
+end
+
+function sensor_7_door_2:on_activated()
+  map:set_doors_open("door_3_s", false)
+  map:set_doors_open("door_8_n", false)
+end
+
+function sensor_3_door:on_activated()
+  map:close_doors("door_3_s")
+  sensor_3_door:remove()
+end
+
+function switch_3_door:on_activated()
+  map:open_doors("door_3_s")
 end

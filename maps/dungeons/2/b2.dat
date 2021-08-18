@@ -3106,7 +3106,7 @@ dynamic_tile{
   layer = -1,
   x = 1016,
   y = 1096,
-  width = 272,
+  width = 496,
   height = 48,
   pattern = "water.transparent",
 }
@@ -3116,7 +3116,7 @@ dynamic_tile{
   layer = -1,
   x = 1024,
   y = 1104,
-  width = 256,
+  width = 480,
   height = 32,
   pattern = "water.transparent",
 }
@@ -11691,33 +11691,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1008,
-  y = 1024,
-  width = 16,
-  height = 32,
-  pattern = "grass.under_bush",
-}
-
-tile{
-  layer = 0,
-  x = 1024,
-  y = 1008,
-  width = 96,
-  height = 16,
-  pattern = "grass.under_bush",
-}
-
-tile{
-  layer = 0,
-  x = 1216,
-  y = 1040,
-  width = 16,
-  height = 16,
-  pattern = "grass.under_bush",
-}
-
-tile{
-  layer = 0,
   x = 464,
   y = 264,
   width = 8,
@@ -13026,7 +12999,7 @@ dynamic_tile{
   layer = 0,
   x = 1008,
   y = 1088,
-  width = 272,
+  width = 512,
   height = 64,
   pattern = "water.transparent",
 }
@@ -13854,8 +13827,8 @@ destructible{
 
 enemy{
   layer = 0,
-  x = 1016,
-  y = 1389,
+  x = 1168,
+  y = 1397,
   direction = 0,
   breed = "dungeons/fireball",
 }
@@ -14148,105 +14121,6 @@ chest{
   sprite = "entities/Chests/chest_LttP",
 }
 
-destructible{
-  layer = 0,
-  x = 1080,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1096,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1112,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1064,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1224,
-  y = 1053,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1048,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1032,
-  y = 1021,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1016,
-  y = 1037,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1016,
-  y = 1053,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  weight = 1,
-  can_be_cut = true,
-}
-
 enemy{
   name = "auto_enemy_23",
   layer = 0,
@@ -14297,30 +14171,6 @@ wall{
   stops_npcs = true,
   stops_enemies = true,
   stops_blocks = true,
-}
-
-door{
-  layer = 0,
-  x = 472,
-  y = 264,
-  direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
-  savegame_variable = "dungeon_2_b2_door_2_7",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_big_key",
-  cannot_open_dialog = "_cannot_open_without_big_key",
-}
-
-door{
-  layer = 0,
-  x = 472,
-  y = 200,
-  direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
-  savegame_variable = "dungeon_2_b2_door_2_7",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_big_key",
-  cannot_open_dialog = "_cannot_open_without_big_key",
 }
 
 enemy{
@@ -14779,25 +14629,13 @@ wall{
 door{
   layer = 0,
   x = 152,
-  y = 264,
-  direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
-  savegame_variable = "dungeon_2_b2_door_1_6",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_big_key",
-  cannot_open_dialog = "_cannot_open_without_big_key",
-}
-
-door{
-  layer = 0,
-  x = 152,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/Doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_big_key",
-  cannot_open_dialog = "_cannot_open_without_big_key",
+  opening_method = "interaction_if_item",
+  opening_condition = "yellow_key",
+  cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 
 enemy{
@@ -14973,6 +14811,42 @@ sensor{
   y = 37,
   width = 16,
   height = 16,
+}
+
+door{
+  layer = 0,
+  x = 152,
+  y = 264,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  savegame_variable = "dungeon_2_b2_door_1_6",
+  opening_method = "interaction_if_item",
+  opening_condition = "yellow_key",
+  cannot_open_dialog = "_cannot_open_without_yellow_key",
+}
+
+door{
+  layer = 0,
+  x = 472,
+  y = 200,
+  direction = 3,
+  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  savegame_variable = "dungeon_2_b2_door_2_7",
+  opening_method = "interaction_if_item",
+  opening_condition = "yellow_key",
+  cannot_open_dialog = "_cannot_open_without_yellow_key",
+}
+
+door{
+  layer = 0,
+  x = 472,
+  y = 264,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  savegame_variable = "dungeon_2_b2_door_2_7",
+  opening_method = "interaction_if_item",
+  opening_condition = "yellow_key",
+  cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 
 tile{

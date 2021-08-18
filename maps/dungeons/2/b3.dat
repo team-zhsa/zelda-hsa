@@ -9256,12 +9256,12 @@ door{
 }
 
 pickable{
-  name = "pickable_18_yellow_key",
+  name = "pickable_18_big_key",
   layer = 0,
   x = 856,
   y = 829,
-  treasure_name = "yellow_key",
-  treasure_savegame_variable = "dungeon_2_yellow_key",
+  treasure_name = "big_key",
+  treasure_savegame_variable = "dungeon_2_big_key",
 }
 
 stream{
@@ -10235,15 +10235,6 @@ enemy{
   breed = "dungeons/face_lamp",
 }
 
-sensor{
-  name = "sensor_10_flying_tile_reset_1",
-  layer = 0,
-  x = 1440,
-  y = 493,
-  width = 16,
-  height = 16,
-}
-
 destructible{
   layer = 0,
   x = 776,
@@ -10548,8 +10539,8 @@ chest{
   layer = 0,
   x = 480,
   y = 637,
-  treasure_name = "big_key",
-  treasure_savegame_variable = "dungeon_2_big_key",
+  treasure_name = "yellow_key",
+  treasure_savegame_variable = "dungeon_2_yellow_key",
   sprite = "entities/Chests/chest_LttP",
 }
 
@@ -11524,15 +11515,6 @@ sensor{
   height = 16,
 }
 
-sensor{
-  name = "sensor_10_flying_tile_reset_2",
-  layer = 0,
-  x = 1272,
-  y = 365,
-  width = 16,
-  height = 16,
-}
-
 door{
   name = "door_10_w",
   layer = 0,
@@ -11540,6 +11522,7 @@ door{
   y = 352,
   direction = 2,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_2_b3_door_10",
 }
 
 door{
@@ -11549,6 +11532,7 @@ door{
   y = 440,
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_2_b3_door_10",
 }
 
 enemy{
@@ -11613,6 +11597,7 @@ enemy{
   y = 397,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11633,6 +11618,7 @@ enemy{
   y = 381,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11653,6 +11639,7 @@ enemy{
   y = 365,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11673,6 +11660,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11693,6 +11681,7 @@ enemy{
   y = 333,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11713,6 +11702,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11733,6 +11723,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11753,6 +11744,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11773,6 +11765,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11793,6 +11786,7 @@ enemy{
   y = 333,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11813,6 +11807,7 @@ enemy{
   y = 349,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11833,6 +11828,7 @@ enemy{
   y = 365,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11853,6 +11849,7 @@ enemy{
   y = 381,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11873,6 +11870,7 @@ enemy{
   y = 397,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11893,6 +11891,7 @@ enemy{
   y = 381,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11913,6 +11912,7 @@ enemy{
   y = 381,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -11933,6 +11933,7 @@ enemy{
   y = 381,
   direction = 0,
   breed = "dungeons/flying_tile",
+  savegame_variable = "dungeon_2_b3_enemy_tile",
   treasure_name = "random_central",
 }
 
@@ -12197,6 +12198,15 @@ sensor{
   y = 37,
   width = 16,
   height = 16,
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 1416,
+  y = 429,
+  direction = 1,
+  default = true,
 }
 
 tile{

@@ -25,7 +25,7 @@ local random_balls = {
 function enemy:on_created()
 
   enemy:set_life(1)
-  enemy:set_damage(1)
+  enemy:set_damage(4)
   enemy:set_invincible()
   enemy:set_can_hurt_hero_running(true)
 
@@ -55,7 +55,7 @@ function enemy:on_restarted()
   movement:set_angle(angle)
 
   -- Distance for a standard room.
-  local max_distance = direction4 % 2 == 0 and 272 or 192
+  local max_distance = direction4 % 2 == 0 and 500 or 500
   movement:set_max_distance(max_distance)
 
   movement:start(self, function()

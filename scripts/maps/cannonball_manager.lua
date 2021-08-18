@@ -12,7 +12,7 @@ function cannonball_manager:create_cannons(map, prefix)
   if #cannons == 0 then
     return
   end
-  sol.timer.start(map, 500, function()
+  sol.timer.start(map, 2600, function()
 
     local hero = map:get_entity("hero")
     if hero:is_in_same_region(cannons[1]) then
