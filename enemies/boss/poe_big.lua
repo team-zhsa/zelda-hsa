@@ -30,7 +30,11 @@ function enemy:on_obstacle_reached(movement)
 end
 
 function enemy:on_restarted()
-  self:create_enemy({ breed = "flames/flame_red" })
+  if math.random(1, 4) == 1 then
+    sol.timer.start(self, math.random(250, 4000), function()
+        self:create_enemy({ breed = "flames/flame_red" })
+    end)
+  end
 
   self:go_random()
   self:check_hero()

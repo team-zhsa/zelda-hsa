@@ -4,6 +4,7 @@ require("scripts/multi_events")
 local game_meta = sol.main.get_metatable("game")
 
 game_meta:register_event("on_map_changed", function(game, map)
+    print("Changed map to '" .. map:get_id() .. "'")
     local camera = map:get_camera()
     local surface = camera:get_surface()
     local hero = map:get_hero()

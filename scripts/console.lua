@@ -74,11 +74,13 @@ local function environment_index(environment, key)
         game:get_hero():teleport(...)
       end
     elseif key == "nohurt" then
-			if game:get_hero():is_invincible(false) then
-        game:get_hero():set_invincible()
-			elseif game:get_hero():is_invincible() then
-        game:get_hero():set_invincible(false)
-			end
+      return function(...)
+        if game:get_hero():is_invincible(false) then
+          game:get_hero():set_invincible()
+        elseif game:get_hero():is_invincible() then
+          game:get_hero():set_invincible(false)
+        end
+      end
     end
 
     local entity = game:get_map():get_entity(key)

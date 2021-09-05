@@ -68,7 +68,7 @@ function enemy:go(direction4)
     local x, y = self:get_position()
     local angle = direction4 * math.pi / 2
     local m = sol.movement.create("straight")
-    m:set_speed(192)
+    m:set_speed(128)
     m:set_angle(angle)
     m:set_max_distance(104)
     m:set_smooth(false)

@@ -89,9 +89,9 @@ function treasure_manager:appear_pickable(map, pickable, sound)
           entities_ignore_suspend={pickable,},
         }
         pickable_entity:set_enabled(true)
-        pickable_entity:fall_from_ceiling(192, "hero/cliff_jump", function()
+        pickable_entity:fall_from_ceiling(192, "jump", function()
           if sound ~= nil and sound ~= false then
-            sol.audio.play_sound("misc/secret1")
+            sol.audio.play_sound("common/secret_discover_minor")
           end
         end)
       end)

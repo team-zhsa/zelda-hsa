@@ -52,14 +52,14 @@ enemy:register_event("on_restarted", function(enemy)
   	arrow = 1,
   	boomerang = 1,
   	explosion = 1,
-  	sword = electrocute,
+  	sword = 1,
   	thrown_item = "protected",
   	fire = 1,
   	jump_on = "ignored",
   	hammer = "protected",
   	hookshot = "immobilized",
   	shield = "protected",
-  	thrust = electrocute
+  	thrust = 1
   })
 
   -- States.

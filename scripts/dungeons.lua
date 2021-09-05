@@ -46,25 +46,25 @@ local function initialize_dungeon_features(game)
 			minimap_width = 40,
 			minimap_height = 56,
       lowest_floor = -3,
-      highest_floor = 2,
+      highest_floor = 1,
       maps = {
         "dungeons/2/0f",
         "dungeons/2/1f",
-        "dungeons/2/2f",
         "dungeons/2/b1",
         "dungeons/2/b2",
         "dungeons/2/b3",
       },
       boss = {
-        floor = 3,
+        floor = 1,
         savegame_variable = "dungeon_2_boss",
-        x = 320,
-        y = 240,
+        x = 800,
+        y = 1080,
       },
       main_entrance = {
         map_id = "dungeons/2/0f",
         destination_name = "from_outside"
       },
+      completing_sequence = "simple",
     },
 
 [8] = {

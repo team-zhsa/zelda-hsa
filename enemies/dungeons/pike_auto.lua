@@ -27,7 +27,7 @@ function enemy:on_restarted()
   local direction4 = sprite:get_direction()
   local m = sol.movement.create("path")
   m:set_path{direction4 * 2}
-  m:set_speed(192)
+  m:set_speed(128)
   m:set_loop(true)
   m:start(self)
 end

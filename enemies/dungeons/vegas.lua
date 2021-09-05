@@ -38,7 +38,7 @@ function enemy:on_restarted()
   sprite:set_direction(math.random(4) - 1)
 
   -- Switch symbol repeatedly.
-  sol.timer.start(enemy, 500, function()
+  sol.timer.start(enemy, 800, function()
     if sprite:get_animation() ~= "walking" then
       return false
     end
