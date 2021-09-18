@@ -42,14 +42,14 @@ function map_submenu:on_started()
     self.world_minimap_visible_xy = {x = 0, y = 0}
     if self.game:get_item("world_map"):get_variant() > 0 then
 			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
-	      map_shown = true      -- If in South Hyrule with World Map, then show the map.
+	      map_shown = true      -- If in North Hyrule with World Map, then show the map.
 	      self.outside_world_size = { width = 15360, height = 12960 }
 	      self.outside_world_minimap_size = { width = 960, height = 810 }
 	      self.world_minimap_img = sol.surface.create("menus/pause_outside_map.png")
 	      local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 	      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 45 + 32
-	      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28 + 32
+	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 45 + 64 -- 64 is the real map's offset with the sprite image
+	      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28 + 64
 	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
 	      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
 			end

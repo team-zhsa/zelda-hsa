@@ -96,6 +96,7 @@ function state:on_started()
       entity.running_timer=nil --TODO check if this isn't useless 
       entity.running=true
       local sword_sprite
+
       state:set_can_be_hurt(false)
       state:set_can_control_direction(false)
       state:set_can_control_movement(false)

@@ -3194,7 +3194,7 @@ tile{
   layer = 0,
   x = 368,
   y = 616,
-  width = 64,
+  width = 16,
   height = 8,
   pattern = "1007",
 }
@@ -3203,7 +3203,7 @@ tile{
   layer = 0,
   x = 368,
   y = 624,
-  width = 64,
+  width = 16,
   height = 8,
   pattern = "1008",
 }
@@ -3228,7 +3228,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 384,
   y = 624,
   width = 8,
   height = 8,
@@ -3246,65 +3246,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 440,
+  x = 392,
   y = 624,
-  width = 16,
+  width = 64,
   height = 8,
   pattern = "1030",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 632,
-  width = 8,
-  height = 40,
-  pattern = "261",
-}
-
-tile{
-  layer = 0,
-  x = 440,
-  y = 632,
-  width = 16,
-  height = 40,
-  pattern = "262",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 632,
-  width = 8,
-  height = 40,
-  pattern = "260",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 672,
-  width = 8,
-  height = 24,
-  pattern = "2136",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 672,
-  width = 8,
-  height = 24,
-  pattern = "2135",
-}
-
-tile{
-  layer = 0,
-  x = 440,
-  y = 672,
-  width = 16,
-  height = 24,
-  pattern = "2139",
 }
 
 tile{
@@ -5997,7 +5943,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 384,
   y = 616,
   width = 8,
   height = 8,
@@ -19900,6 +19846,28 @@ destructible{
   sprite = "entities/Stones/stone_white",
   destruction_sound = "objects/e_rock_1_lift",
   weight = 1,
+}
+
+jumper{
+  layer = 0,
+  x = 392,
+  y = 632,
+  width = 64,
+  height = 8,
+  direction = 6,
+  jump_length = 72,
+}
+
+custom_entity{
+  layer = 0,
+  x = 400,
+  y = 645,
+  width = 64,
+  height = 8,
+  direction = 3,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
 }
 
 tile{

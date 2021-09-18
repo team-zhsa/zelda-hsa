@@ -5,86 +5,586 @@ properties{
   height = 240,
   min_layer = 0,
   max_layer = 2,
-  tileset = "Absolute Dungeon 01",
+  tileset = "Absolute Dungeon 10",
 }
 
 tile{
   layer = 0,
-  x = 72,
-  y = 64,
+  x = 56,
+  y = 112,
+  width = 112,
+  height = 48,
+  pattern = "7910",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 160,
+  width = 112,
+  height = 8,
+  pattern = "7916",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 120,
+  width = 96,
+  height = 8,
+  pattern = "7916",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 120,
   width = 8,
-  height = 16,
-  pattern = "door.1.support.1-2",
+  height = 8,
+  pattern = "7914",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "7915",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 128,
+  width = 8,
+  height = 32,
+  pattern = "7912",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 176,
+  width = 8,
+  height = 24,
+  pattern = "7931",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 176,
+  width = 8,
+  height = 24,
+  pattern = "7932",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "7923",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 176,
+  width = 112,
+  height = 24,
+  pattern = "7930",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "7921",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 168,
+  width = 128,
+  height = 8,
+  pattern = "7922",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 48,
+  width = 8,
+  height = 120,
+  pattern = "7920",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "7919",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 120,
+  pattern = "7924",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "7917",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 136,
+  width = 8,
+  height = 24,
+  pattern = "7931",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 136,
+  width = 8,
+  height = 24,
+  pattern = "7932",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 136,
+  width = 96,
+  height = 24,
+  pattern = "7930",
+  tileset = "outside_buildings",
 }
 
 tile{
   layer = 0,
   x = 96,
-  y = 64,
+  y = 136,
   width = 8,
-  height = 16,
-  pattern = "door.1.support.2-2",
+  height = 24,
+  pattern = "7926",
+  tileset = "outside_buildings",
 }
 
 tile{
   layer = 0,
-  x = 80,
-  y = 64,
+  x = 104,
+  y = 144,
   width = 16,
   height = 16,
-  pattern = "door_stairs.spiral_up.1",
+  pattern = "7929",
+  tileset = "outside_buildings",
 }
 
-teletransporter{
+tile{
   layer = 0,
-  x = 80,
-  y = 64,
+  x = 120,
+  y = 136,
+  width = 8,
+  height = 24,
+  pattern = "7927",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "7936",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 176,
+  width = 8,
+  height = 32,
+  pattern = "9598",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 208,
+  width = 8,
+  height = 8,
+  pattern = "9599",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "9595",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 208,
+  width = 8,
+  height = 8,
+  pattern = "9600",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 176,
+  width = 8,
+  height = 32,
+  pattern = "9597",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "9596",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "7937",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 160,
   width = 16,
-  height = 16,
-  destination_map = "inside/caves/mountains/spectacle_rock_b1",
-  destination = "from_1f_3",
+  height = 56,
+  pattern = "7911",
+  tileset = "outside_buildings",
 }
 
-destination{
-  name = "from_b1_6",
+tile{
   layer = 0,
-  x = 88,
-  y = 77,
-  direction = 3,
+  x = 48,
+  y = 40,
+  width = 128,
+  height = 8,
+  pattern = "7918",
+  tileset = "outside_buildings",
 }
 
-stairs{
+tile{
   layer = 0,
-  x = 80,
-  y = 64,
-  direction = 1,
-  subtype = 0,
+  x = 48,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "7915",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "7914",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 128,
+  width = 8,
+  height = 32,
+  pattern = "7913",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = 88,
+  width = 8,
+  height = 32,
+  pattern = "7913",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 104,
+  y = 136,
+  width = 16,
+  height = 8,
+  pattern = "7928",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 88,
+  width = 8,
+  height = 32,
+  pattern = "7912",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 48,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "7923",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 48,
+  y = 32,
+  width = 8,
+  height = 96,
+  pattern = "7924",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 48,
+  y = 24,
+  width = 8,
+  height = 8,
+  pattern = "7917",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 24,
+  width = 112,
+  height = 8,
+  pattern = "7918",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 24,
+  width = 8,
+  height = 8,
+  pattern = "7919",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 128,
+  width = 112,
+  height = 8,
+  pattern = "7922",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "7921",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 32,
+  width = 8,
+  height = 96,
+  pattern = "7920",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 96,
+  width = 8,
+  height = 24,
+  pattern = "7931",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 96,
+  width = 8,
+  height = 24,
+  pattern = "7932",
+  tileset = "outside_buildings",
 }
 
 tile{
   layer = 1,
   x = 72,
-  y = 56,
-  width = 32,
-  height = 8,
-  pattern = "door_cache.1-3",
+  y = 96,
+  width = 80,
+  height = 24,
+  pattern = "7930",
+  tileset = "outside_buildings",
 }
 
 tile{
   layer = 1,
-  x = 72,
-  y = 56,
-  width = 32,
+  x = 56,
+  y = 88,
+  width = 8,
   height = 8,
-  pattern = "door_top.1-3",
+  pattern = "7923",
+  tileset = "outside_buildings",
 }
 
 tile{
   layer = 1,
-  x = 80,
-  y = 56,
-  width = 16,
+  x = 64,
+  y = 8,
+  width = 96,
   height = 8,
-  pattern = "door_top.stairs_up.1-1",
+  pattern = "7918",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 8,
+  width = 8,
+  height = 8,
+  pattern = "7917",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 16,
+  width = 8,
+  height = 72,
+  pattern = "7924",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = 88,
+  width = 8,
+  height = 8,
+  pattern = "7921",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = 16,
+  width = 8,
+  height = 72,
+  pattern = "7920",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = 8,
+  width = 8,
+  height = 8,
+  pattern = "7919",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 88,
+  width = 96,
+  height = 8,
+  pattern = "7922",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = 16,
+  width = 96,
+  height = 72,
+  pattern = "7925",
+  tileset = "outside_buildings",
 }
 

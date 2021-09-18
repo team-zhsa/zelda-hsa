@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
-  music = "same",
+  music = "outside/beach",
 }
 
 tile{
@@ -20098,6 +20098,15 @@ tile{
   pattern = "84",
 }
 
+tile{
+  layer = 0,
+  x = 1136,
+  y = 784,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 custom_entity{
   layer = 0,
   x = 304,
@@ -21701,7 +21710,7 @@ npc{
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.south_coast.sign_1",
+  behavior = "dialog#maps.out.south_coast.path_sign_1",
 }
 
 jumper{
@@ -21798,6 +21807,17 @@ custom_entity{
   sprite = "entities/Utils/cliff",
   tiled = true,
   model = "cliff",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/d7",
+  destination = "_side",
 }
 
 tile{

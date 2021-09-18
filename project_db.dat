@@ -175,13 +175,14 @@ map{ id = "out/c3", description = "C3 (Hyrule Field)" }
 map{ id = "out/c4", description = "C4 (Gerudo Village)" }
 map{ id = "out/c5", description = "C5 (Desert)" }
 map{ id = "out/c6", description = "C6 (Gerudo River)" }
-map{ id = "out/c7", description = "C7 (Gerudo River)" }
+map{ id = "out/c7", description = "C7 (Miracles Coast)" }
 map{ id = "out/d1", description = "D1 (Mountains)" }
 map{ id = "out/d2", description = "D2 (Hyrule Field)" }
 map{ id = "out/d3", description = "D3 (Hyrule Field)" }
 map{ id = "out/d4", description = "D4 (Hyrule Field)" }
 map{ id = "out/d5", description = "D5 (Hyrule Field)" }
 map{ id = "out/d6", description = "D6 (Hyrule Field)" }
+map{ id = "out/d7", description = "D7 (Miracles Coast)" }
 map{ id = "out/e1", description = "E1 (Mountains)" }
 map{ id = "out/e2", description = "E2 (Hyrule Field)" }
 map{ id = "out/e4", description = "E4 (Hyrule Field)" }
@@ -890,6 +891,10 @@ sprite{ id = "entities/frozen_door", description = "Frozen Door" }
 sprite{ id = "entities/grass", description = "Grass" }
 sprite{ id = "entities/gray_block", description = "Grey Block" }
 sprite{ id = "entities/green_cristal", description = "Green cristal" }
+sprite{ id = "entities/ground_effects/grass", description = "ground_effects/leaves" }
+sprite{ id = "entities/ground_effects/sand", description = "Sand" }
+sprite{ id = "entities/ground_effects/walrus_diving_effect", description = "Walrus diving effect" }
+sprite{ id = "entities/ground_effects/water", description = "ground_effects/water_splash" }
 sprite{ id = "entities/hammer_stake_brown", description = "Hammer stake brown" }
 sprite{ id = "entities/hammer_stake_dark", description = "Hammer stake (dark)" }
 sprite{ id = "entities/hammer_stake_green", description = "Hammer stake green" }
@@ -2209,6 +2214,7 @@ file{ path = "sprites/enemies/boss/ganon.dat", author = "Linkff", }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, Lucifer", }
 file{ path = "sprites/entities/Utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/Utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
 file{ path = "sprites/hero/boomerang.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
