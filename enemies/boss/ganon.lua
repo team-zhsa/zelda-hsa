@@ -141,7 +141,7 @@ local function start_invoking()
   sol.timer.start(enemy, between_bats_duration, function()
     bat_count = bat_count + 1
     local angle = angle_gap * -bat_count
-    create_sub_enemy("bat", "boss/projectiles/bat", math.cos(angle) * bats_distance * mirror_ratio, -math.sin(angle) * bats_distance - 32, 2)
+    create_sub_enemy("bat", "boss/shadow_nightmares/projectiles/bat", math.cos(angle) * bats_distance * mirror_ratio, -math.sin(angle) * bats_distance - 32, 2)
 
     -- Start throwing the axe after the last invoke.
     if bat_count >= bats_count then
@@ -175,7 +175,7 @@ local function start_taking_axe()
     sprite:set_paused()
 
     -- Create the axe.
-    axe = create_sub_enemy("axe", "boss/projectiles/axe", 0, 0, sprite:get_direction())
+    axe = create_sub_enemy("axe", "boss/shadow_nightmares/projectiles/axe", 0, 0, sprite:get_direction())
     local axe_sprite = axe:get_sprite()
 
     -- Start invoking bats when the axe is holded or catched.

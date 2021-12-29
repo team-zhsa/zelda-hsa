@@ -37,6 +37,8 @@ map{ id = "dungeons/2/b3", description = "Forest Temple (Basement 3)" }
 map{ id = "dungeons/2/copy_protect", description = "Copy protection map" }
 map{ id = "dungeons/3/0f", description = "Fire Temple (Ground Floor)" }
 map{ id = "dungeons/3/1fo", description = "Fire Temple (1st Floor)" }
+map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
+map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
 map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
 map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/4/0f", description = "Deku Tree (Ground Floor)" }
@@ -187,17 +189,22 @@ map{ id = "out/e1", description = "E1 (Mountains)" }
 map{ id = "out/e2", description = "E2 (Hyrule Field)" }
 map{ id = "out/e4", description = "E4 (Hyrule Field)" }
 map{ id = "out/e6", description = "E6 (Hyrule Field, Thunder Temple)" }
+map{ id = "out/e7", description = "E7 (Miracles Coast)" }
+map{ id = "out/e8", description = "E8 (Miracles Coast)" }
+map{ id = "out/f1", description = "F1 (Death Mountain)" }
 map{ id = "out/f2", description = "F2 (Hyrule Field)" }
 map{ id = "out/f4", description = "F4 (Castle Courtyard)" }
 map{ id = "out/f5", description = "F5 (Hyrule Field)" }
 map{ id = "out/f6", description = "F6 (Hyrule Field)" }
 map{ id = "out/f7", description = "F7 (Great Swamp)" }
+map{ id = "out/f8", description = "F8 (Miracles Coast)" }
 map{ id = "out/g2", description = "G2 (Zora River)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
 map{ id = "out/g4", description = "G4 (Hyrule Field)" }
 map{ id = "out/g5", description = "G5 (Hyrule Field)" }
 map{ id = "out/g6", description = "G6 (Hyrule Field)" }
-map{ id = "out/g7", description = "G7 (Little Swamp)" }
+map{ id = "out/g7", description = "G7 (Garnet Coast)" }
+map{ id = "out/g8", description = "G8 (Garnet Coast)" }
 map{ id = "out/h2", description = "H2 (Zora River)" }
 map{ id = "out/h3", description = "H3 (East Swamp)" }
 map{ id = "out/h4", description = "H4 (Lon Lon Ranch, needs to be redone with better graphics)" }
@@ -1430,6 +1437,7 @@ sound{ id = "common/magic_bar/6", description = "6" }
 sound{ id = "common/medallion/medallion_appear", description = "Medallion appears" }
 sound{ id = "common/medallion/medallion_falling", description = "Medallion falls" }
 sound{ id = "common/minor_item", description = "Minor Item" }
+sound{ id = "common/prayer", description = "Prayer" }
 sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/sidequest_major_item", description = "Major Item (Sidequest)" }
@@ -1711,6 +1719,8 @@ enemy{ id = "boss/moldorm_components/moldorm_body_2", description = "Moldorm bod
 enemy{ id = "boss/moldorm_components/moldorm_body_3", description = "Moldorm body 3" }
 enemy{ id = "boss/moldorm_components/moldorm_head", description = "Moldorm head" }
 enemy{ id = "boss/poe_big", description = "Big Poe" }
+enemy{ id = "boss/projectiles/axe", description = "Axe" }
+enemy{ id = "boss/projectiles/bat", description = "Bat" }
 enemy{ id = "boss/rolling_bones", description = "Rolling bones" }
 enemy{ id = "boss/rolling_bones/rolling_bones_spike", description = "Rolling bones spike" }
 enemy{ id = "boss/spectral_ganon", description = "Spectral Ganon" }
@@ -1888,6 +1898,7 @@ entity{ id = "follower", description = "Follower" }
 entity{ id = "frog", description = "Frog" }
 entity{ id = "green_crystal", description = "Green crystal" }
 entity{ id = "ground_ice" }
+entity{ id = "ground_traversable", description = "Ground solid" }
 entity{ id = "hammer_stake", description = "Hammer stake" }
 entity{ id = "heart_fly", description = "Heart fly" }
 entity{ id = "heavy_object", description = "Heavy object" }

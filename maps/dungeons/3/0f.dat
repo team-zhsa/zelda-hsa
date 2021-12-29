@@ -8,7 +8,7 @@ properties{
   world = "dungeon_3",
   floor = 0,
   tileset = "Absolute Dungeon 06",
-  music = "dungeons/03_fire",
+  music = "dungeons/10_forgotten",
 }
 
 tile{
@@ -394,6 +394,26 @@ stairs{
   y = 864,
   direction = 1,
   subtype = 4,
+}
+
+enemy{
+  name = "auto_enemy_32",
+  layer = -1,
+  x = 856,
+  y = 1021,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_33",
+  layer = -1,
+  x = 752,
+  y = 965,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
 }
 
 tile{
@@ -1148,7 +1168,7 @@ tile{
   x = 760,
   y = 1120,
   width = 8,
-  height = 32,
+  height = 24,
   pattern = "barrier.2-1",
 }
 
@@ -1157,7 +1177,7 @@ tile{
   x = 832,
   y = 1120,
   width = 8,
-  height = 32,
+  height = 24,
   pattern = "barrier.2-1",
 }
 
@@ -5454,6 +5474,51 @@ tile{
   pattern = "floor.13-1",
 }
 
+tile{
+  layer = 0,
+  x = 784,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 24,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_down.1",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1144,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 1144,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
 wall{
   layer = 0,
   x = 664,
@@ -6158,6 +6223,132 @@ teletransporter{
   destination = "from_dungeon",
 }
 
+destination{
+  name = "from_b1",
+  layer = 0,
+  x = 800,
+  y = 37,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 792,
+  y = 24,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/3/b1",
+  destination = "from_0f",
+}
+
+stairs{
+  layer = 0,
+  x = 792,
+  y = 24,
+  direction = 1,
+  subtype = 1,
+}
+
+enemy{
+  name = "auto_enemy_22",
+  layer = 0,
+  x = 1008,
+  y = 789,
+  direction = 0,
+  breed = "dungeons/bubble_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_23",
+  layer = 0,
+  x = 1464,
+  y = 813,
+  direction = 0,
+  breed = "dungeons/bubble_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_24",
+  layer = 0,
+  x = 1456,
+  y = 565,
+  direction = 0,
+  breed = "dungeons/bubble_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_25",
+  layer = 0,
+  x = 1408,
+  y = 1069,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_26",
+  layer = 0,
+  x = 1480,
+  y = 1053,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_27",
+  layer = 0,
+  x = 1456,
+  y = 853,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_28",
+  layer = 0,
+  x = 1168,
+  y = 1093,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_29",
+  layer = 0,
+  x = 1072,
+  y = 549,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_30",
+  layer = 0,
+  x = 680,
+  y = 549,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_31",
+  layer = 0,
+  x = 576,
+  y = 869,
+  direction = 0,
+  breed = "dungeons/lizalfos_red",
+  treasure_name = "random_mountains",
+}
+
 tile{
   layer = 1,
   x = 656,
@@ -6597,6 +6788,24 @@ tile{
   width = 16,
   height = 8,
   pattern = "door_cache.2-5",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 16,
+  width = 32,
+  height = 8,
+  pattern = "door_top.stairs.1-1",
+}
+
+tile{
+  layer = 1,
+  x = 792,
+  y = 16,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_down.1-1",
 }
 
 tile{

@@ -74,7 +74,7 @@ function treasure_manager:appear_chest(map, chest, sound)
   local game = map:get_game()
   chest:set_enabled(true)
   if sound ~= nil and sound ~= false then
-    sol.audio.play_sound("secret_1")
+    sol.audio.play_sound("common/chest_appear")
   end
       
 end

@@ -22,6 +22,16 @@ tile_pattern{
 }
 
 tile_pattern{
+  id = "1000000",
+  ground = "empty",
+  default_layer = 0,
+  x = 1856,
+  y = 80,
+  width = 16,
+  height = 16,
+}
+
+tile_pattern{
   id = "1001",
   ground = "traversable",
   default_layer = 0,
@@ -13964,17 +13974,6 @@ tile_pattern{
   height = 8,
   scrolling = "parallax",
   repeat_mode = "none",
-}
-
-tile_pattern{
-  id = "1342",
-  ground = "traversable",
-  default_layer = 0,
-  x = 1856,
-  y = 88,
-  width = 8,
-  height = 8,
-  scrolling = "parallax",
 }
 
 tile_pattern{

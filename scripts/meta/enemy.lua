@@ -126,16 +126,19 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
   local game = self:get_game()
   local hero = game:get_hero()
   -- Calculate force. Check tunic, sword, spin attack and powerups.
-  local base_life_points = self:get_attack_consequence("sword")
+  --[[
   local force_sword = hero:get_game():get_value("force_sword") or 1 
   local force_tunic = game:get_value("force_tunic") or 1
   local force_powerup = hero.get_force_powerup and hero:get_force_powerup() or 1
   local force = base_life_points * force_sword * force_tunic * force_powerup
   if hero:get_state() == "sword spin attack" then
     force = 2 * force -- Double force for spin attack.
-  end
-  -- Remove life.
-  self:remove_life(force)
+  end--]]
+  local base_life_points = self:get_attack_consequence("sword")
+  local final_damage = (base_life_points + 1)^(game:get_ability("sword") - 1)
+  -- Remove life
+  self:remove_life(final_damage)
+  print("Dégâts : " .. final_damage)
 
 end
 
