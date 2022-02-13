@@ -14,8 +14,17 @@ tile{
   layer = -1,
   x = 0,
   y = 0,
-  width = 1280,
-  height = 1440,
+  width = 656,
+  height = 720,
+  pattern = "1255",
+}
+
+tile{
+  layer = -1,
+  x = 624,
+  y = 0,
+  width = 656,
+  height = 720,
   pattern = "1255",
 }
 
@@ -65911,5 +65920,16 @@ jumper{
   height = 16,
   direction = 7,
   jump_length = 56,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/f1",
+  destination = "_side",
 }
 
