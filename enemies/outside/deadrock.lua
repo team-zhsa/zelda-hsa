@@ -37,9 +37,37 @@ end
 
 function enemy:on_update()
   if self.rock then
-    self:set_invincible(true)
+     self:set_damage(0)
+     enemy:set_hero_weapons_reactions({
+      arrow = "protected",
+      boomerang = "protected",
+      explosion = 6,
+      sword = "protected",
+      thrown_item = "protected",
+      fire = "protected",
+      jump_on = "ignored",
+      hammer = "protected",
+      hookshot = "protected",
+      magic_powder = "ignored",
+      shield = "protected",
+      thrust = 6
+    })
     if self:get_sprite():get_animation() ~= "immobilized" then self:get_sprite():set_animation("immobilized") end
   else
-    self:set_attack_consequence("sword", 1)
+     enemy:set_hero_weapons_reactions({
+      arrow = "protected",
+      boomerang = "protected",
+      explosion = 1,
+      sword = 1,
+      thrown_item = "protected",
+      fire = "protected",
+      jump_on = "ignored",
+      hammer = "protected",
+      hookshot = "protected",
+      magic_powder = "ignored",
+      shield = "protected",
+      thrust = "protected"
+    })
+    self:set_damage(2)
   end
 end

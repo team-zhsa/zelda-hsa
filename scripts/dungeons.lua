@@ -37,7 +37,7 @@ local function initialize_dungeon_features(game)
         map_id = "dungeons/1/0f",
         destination_name = "from_outside"
       },
-      completing_sequence = "simple",
+      completing_sequence = "simple", -- See Enemy manager script for more infos.
     },
 
     [2] = {
