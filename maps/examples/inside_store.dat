@@ -4624,6 +4624,212 @@ tile{
   pattern = "door_top.low.1-3",
 }
 
+tile{
+  layer = 0,
+  x = 344,
+  y = 848,
+  width = 48,
+  height = 16,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 840,
+  width = 16,
+  height = 8,
+  pattern = "door_blast.4.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 864,
+  width = 16,
+  height = 8,
+  pattern = "door_blast.4.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 840,
+  width = 16,
+  height = 8,
+  pattern = "door_blast.3.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 864,
+  width = 16,
+  height = 8,
+  pattern = "door_blast.3.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "door_blast.3",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "door_blast.4",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 824,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 864,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 920,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-5",
+}
+
+tile{
+  layer = 0,
+  x = 376,
+  y = 920,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 920,
+  width = 16,
+  height = 48,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 376,
+  y = 968,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 968,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 376,
+  y = 904,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 904,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 904,
+  width = 16,
+  height = 16,
+  pattern = "door_blast.2",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 968,
+  width = 16,
+  height = 16,
+  pattern = "door_blast.1",
+}
+
+wall{
+  layer = 0,
+  x = 360,
+  y = 968,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 360,
+  y = 904,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 328,
+  y = 848,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 392,
+  y = 848,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
 wall{
   layer = 0,
   x = 328,
@@ -5384,6 +5590,112 @@ wall{
   stops_npcs = true,
   stops_enemies = true,
   stops_blocks = true,
+}
+
+dynamic_tile{
+  name = "door_28_e_closed",
+  layer = 0,
+  x = 328,
+  y = 832,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-5",
+}
+
+dynamic_tile{
+  name = "door_29_w_closed",
+  layer = 0,
+  x = 384,
+  y = 832,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-5",
+}
+
+door{
+  name = "door_28_e",
+  layer = 0,
+  x = 328,
+  y = 848,
+  direction = 0,
+  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  savegame_variable = "dungeon_3_b1_door_28_29",
+  opening_method = "explosion",
+}
+
+door{
+  name = "door_29_w",
+  layer = 0,
+  x = 392,
+  y = 848,
+  direction = 2,
+  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  savegame_variable = "dungeon_3_b1_door_28_29",
+  opening_method = "explosion",
+}
+
+wall{
+  layer = 0,
+  x = 360,
+  y = 904,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 360,
+  y = 968,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+dynamic_tile{
+  name = "door_28_s_closed",
+  layer = 0,
+  x = 344,
+  y = 904,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-5",
+}
+
+dynamic_tile{
+  name = "door_34_n_closed",
+  layer = 0,
+  x = 344,
+  y = 960,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+door{
+  name = "door_34_n",
+  layer = 0,
+  x = 360,
+  y = 968,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  savegame_variable = "dungeon_3_b1_door_28_34",
+  opening_method = "explosion",
+}
+
+door{
+  name = "door_28_s",
+  layer = 0,
+  x = 360,
+  y = 904,
+  direction = 3,
+  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  savegame_variable = "dungeon_3_b1_door_28_34",
+  opening_method = "explosion",
 }
 
 tile{
@@ -6284,5 +6596,81 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.1-5",
+}
+
+tile{
+  layer = 1,
+  x = 344,
+  y = 848,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.4-5",
+}
+
+tile{
+  layer = 1,
+  x = 384,
+  y = 848,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.3-5",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 960,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.1-5",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 920,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-5",
+}
+
+dynamic_tile{
+  name = "door_28_e_open",
+  layer = 1,
+  x = 344,
+  y = 840,
+  width = 8,
+  height = 32,
+  pattern = "door_top.blast.4-5",
+}
+
+dynamic_tile{
+  name = "door_29_w_open",
+  layer = 1,
+  x = 384,
+  y = 840,
+  width = 8,
+  height = 32,
+  pattern = "door_top.blast.3-5",
+}
+
+dynamic_tile{
+  name = "door_28_s_open",
+  layer = 1,
+  x = 352,
+  y = 920,
+  width = 32,
+  height = 8,
+  pattern = "door_top.blast.2-5",
+}
+
+dynamic_tile{
+  name = "door_34_n_open",
+  layer = 1,
+  x = 352,
+  y = 960,
+  width = 32,
+  height = 8,
+  pattern = "door_top.blast.1-5",
 }
 
