@@ -838,7 +838,6 @@ door{
   y = 680,
   direction = 0,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -848,7 +847,6 @@ door{
   y = 680,
   direction = 2,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -858,7 +856,6 @@ door{
   y = 624,
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -868,7 +865,6 @@ door{
   y = 512,
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -5346,7 +5342,6 @@ door{
   y = 768,
   direction = 0,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -5356,7 +5351,6 @@ door{
   y = 768,
   direction = 2,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -5366,7 +5360,6 @@ door{
   y = 720,
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -5376,47 +5369,6 @@ door{
   y = 656,
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 432,
-  y = 768,
-  direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 496,
-  y = 768,
-  direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 464,
-  y = 720,
-  direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 464,
-  y = 656,
-  direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
 }
 
@@ -5462,46 +5414,6 @@ door{
   opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
-}
-
-door{
-  layer = 0,
-  x = 536,
-  y = 768,
-  direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 600,
-  y = 768,
-  direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 568,
-  y = 720,
-  direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-}
-
-door{
-  layer = 0,
-  x = 568,
-  y = 656,
-  direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
 }
 
 wall{
@@ -5696,6 +5608,78 @@ door{
   sprite = "entities/Doors/Inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+}
+
+door{
+  layer = 0,
+  x = 432,
+  y = 768,
+  direction = 0,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 496,
+  y = 768,
+  direction = 2,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 464,
+  y = 720,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 464,
+  y = 656,
+  direction = 3,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 536,
+  y = 768,
+  direction = 0,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 600,
+  y = 768,
+  direction = 2,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 568,
+  y = 720,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
+}
+
+door{
+  layer = 0,
+  x = 568,
+  y = 656,
+  direction = 3,
+  sprite = "entities/Doors/Inside/door_d1_normal",
+  opening_condition_consumed = true,
 }
 
 tile{

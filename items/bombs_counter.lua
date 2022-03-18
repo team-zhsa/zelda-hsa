@@ -21,7 +21,7 @@ function item:on_using()
       end)
     end
   else
-    item:remove_amount(0)
+    item:remove_amount(1)
     sound_timer = sol.timer.start(game, 500, function()
     sol.audio.play_sound("common/prayer")
     

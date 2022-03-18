@@ -35,6 +35,7 @@ map:register_event("on_started", function()
   map:set_doors_open("door_7_s", false)
 	door_manager:open_when_enemies_dead(map, "enemy_5_", "door_5_w", sound)
 	door_manager:open_when_switch_activated(map, "switch_20_door", "door_20_n")
+  door_manager:open_when_switch_activated(map, "switch_26_door", "door_20_n")
   
   -- You can initialize the movement and sprites of various
   -- map entities here.

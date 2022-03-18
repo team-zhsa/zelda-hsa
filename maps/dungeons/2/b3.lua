@@ -24,6 +24,8 @@ map:register_event("on_started", function()
 	separator_manager:manage_map(map)
 	map:set_doors_open("door_13_s", true)
 	map:set_doors_open("door_9_s", false)
+  map:set_doors_open("door_10_w", true)
+  map:set_doors_open("door_10_s", true)
 	treasure_manager:disappear_pickable(map, "pickable_29_small_key")
 	treasure_manager:disappear_pickable(map, "pickable_18_big_key")
 	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_w")
@@ -35,8 +37,6 @@ map:register_event("on_started", function()
 		door_manager:open_when_enemies_dead(map, "miniboss", "door_13_s", sound)
 	end
   flying_tile_manager:reset(map, "enemy_10")
-  map:set_doors_open("door_10_w", true)
-  map:set_doors_open("door_10_s", true)
 end)
 
 if miniboss ~= nil then
