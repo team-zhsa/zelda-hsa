@@ -27,7 +27,7 @@ map_meta:register_event("on_opening_transition_finished", function(map, destinat
 		print("Ceiling drop")
       hero:fall_from_ceiling(120, "jump", function()
           hero:play_ground_effect()
-					 print("End of cd")
+					 print("End of ceiling drop")
         end)
     end
 

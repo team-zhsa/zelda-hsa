@@ -15,7 +15,7 @@ local function initialize_dungeon_features(game)
   -- Define the existing dungeons and their floors for the minimap menu.
   local dungeons_info = {
 
-    [1] = {
+    [1] = { -- North Ruins
       floor_width = 1600,
       floor_height = 1680,
 			minimap_width = 40,
@@ -40,7 +40,7 @@ local function initialize_dungeon_features(game)
       completing_sequence = "simple", -- See Enemy manager script for more infos.
     },
 
-    [2] = {
+    [2] = { -- Forest Temple
       floor_width = 1600,
       floor_height = 1680,
 			minimap_width = 40,
@@ -67,25 +67,28 @@ local function initialize_dungeon_features(game)
       completing_sequence = "simple",
     },
 
-[8] = {
+    [3] = { -- Fire Temple
       floor_width = 1920,
       floor_height = 1440,
 			minimap_width = 48,
 			minimap_height = 48,
-      lowest_floor = -1,
+      lowest_floor = -4,
       highest_floor = 0,
       maps = {
-        "dungeons/8/0f",
-        "dungeons/8/b1",
+        "dungeons/3/0f",
+        "dungeons/3/b1",
+        "dungeons/3/b2",
+        "dungeons/3/b3",
+        "dungeons/3/b4",
       },
       boss = {
-        floor = 1,
-        savegame_variable = "dungeon_8_boss",
-        x = 1120,
-        y = 824,
+        floor = -4,
+        savegame_variable = "dungeon_4_boss",
+        x = 0,
+        y = 0,
       },
       main_entrance = {
-        map_id = "dungeons/8/0f",
+        map_id = "dungeons/3/0f",
         destination_name = "from_outside"
       },
     },
