@@ -6,7 +6,7 @@ end
 
 function item:on_variant_changed(variant)
   -- Obtaining a magic bar changes the max magic.
-  local max_magics = {42, 84, 126}
+  local max_magics = {49, 99, 149} -- Must be 5 units less than sprite dimensions
   local max_magic = max_magics[variant]
   if max_magic == nil then
     error("Invalid variant '" .. variant .. "' for item 'magic_bar'")
