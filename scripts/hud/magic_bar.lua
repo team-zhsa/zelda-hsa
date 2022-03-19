@@ -10,7 +10,7 @@ function magic_bar_builder:new(game, config)
 
   magic_bar.dst_x, magic_bar.dst_y = config.x, config.y
 
-  magic_bar.surface = sol.surface.create(88, 8)
+  magic_bar.surface = sol.surface.create(50, 10)
   magic_bar.magic_bar_img = sol.surface.create("hud/magic_bar.png")
   magic_bar.container_sprite = sol.sprite.create("hud/magic_bar")
   magic_bar.magic_displayed = game:get_magic()
@@ -30,7 +30,7 @@ function magic_bar_builder:new(game, config)
       end
       magic_bar.max_magic_displayed = max_magic
       if max_magic > 0 then
-        magic_bar.container_sprite:set_direction(max_magic / 42 - 1)
+        magic_bar.container_sprite:set_direction(max_magic / 48 - 1)
       end
     end
 
@@ -89,16 +89,16 @@ function magic_bar_builder:new(game, config)
       magic_bar.container_sprite:draw(dst_surface, x, y)
 
       -- Current magic.
-      magic_bar.magic_bar_img:draw_region(134, 24, 2 + magic_bar.magic_displayed, 8, dst_surface, x, y)
+      magic_bar.magic_bar_img:draw_region(0, 40, magic_bar.magic_displayed, 4, dst_surface, x + 3, y + 3)
 
       -- Fix left and right borders.
       if magic_bar.magic_displayed == 0 then
         -- Fix darker pixels on the right border.
-        dst_surface:fill_color({0, 0, 0}, x + 1, y + 1, 1, 6)
+        dst_surface:fill_color({40, 40, 40}, x + 1, y + 1, 1, 4)
       end
       if magic_bar.magic_displayed == magic_bar.max_magic_displayed then
         -- Fix darker pixels on the right border.
-        magic_bar.magic_bar_img:draw_region(132, 25, 1, 6, dst_surface, x + 46, y + 1)
+        magic_bar.magic_bar_img:draw_region(150, 25, 1, 0, dst_surface, x + 51, y + 0)
       end
     end
   end
