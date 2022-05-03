@@ -168,7 +168,7 @@ function title_screen:on_key_pressed(key)
     sol.main.exit()
 
   elseif key == "space" or key == "return" then
-     timer:stop()
+    -- timer:stop()
      handled = true
      sol.menu.stop(self)
 

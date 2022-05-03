@@ -91,6 +91,15 @@ animation{
   },
 }
 animation{
+  name = "book_of_mudora",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 112, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "boomerang",
   src_image = "entities/items.png",
   directions = {

@@ -39,7 +39,7 @@ map{ id = "dungeons/3/0f", description = "Fire Temple (Ground Floor)" }
 map{ id = "dungeons/3/1fo", description = "Fire Temple (1st Floor)" }
 map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
-map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3) only to go to -4" }
+map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3)" }
 map{ id = "dungeons/3/b4", description = "Fire Temple (Basement 4)" }
 map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
 map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
@@ -122,12 +122,13 @@ map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/faron_woods/map_house", description = "Map House" }
 map{ id = "inside/houses/hylia_lake/fortune_teller", description = "Fortune Teller" }
-map{ id = "inside/houses/kakariko/bar_1f", description = "Milk Bar (1st Floor)" }
-map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (B1)" }
+map{ id = "inside/houses/kakariko/bar_0f", description = "Milk Bar (Ground Floor)" }
+map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (Basement 1)" }
 map{ id = "inside/houses/kakariko/grandma_house", description = "Grandma House" }
 map{ id = "inside/houses/kakariko/graveyard", description = "Graveyard" }
 map{ id = "inside/houses/kakariko/library", description = "Library" }
 map{ id = "inside/houses/kakariko/library_2f", description = "Library (2nd Floor)" }
+map{ id = "inside/houses/kakariko/mapper_shop", description = "Mapper's Shop" }
 map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
 map{ id = "inside/houses/kakariko/south_shop", description = "South Shop" }
 map{ id = "inside/houses/kakariko/sport_house", description = "Sport House" }
@@ -228,8 +229,9 @@ map{ id = "out/j5", description = "J5 (Faron Woods)" }
 map{ id = "out/j6", description = "J6 (Faron Woods)" }
 map{ id = "out/j7", description = "J7 (Faron Woods)" }
 map{ id = "out/k1", description = "K1 (Zora Village)" }
-map{ id = "out/k2", description = "Zora River" }
+map{ id = "out/k2", description = "K2 (Zora River)" }
 map{ id = "out/k3", description = "K3 (Rito Village)" }
+map{ id = "out/k4", description = "K4 (Hyrule Field)" }
 map{ id = "out/k5", description = "K5 (Faron Woods)" }
 map{ id = "out/k6", description = "K6 (Faron Woods)" }
 map{ id = "out/k7", description = "K7 (Faron Woods)" }
@@ -303,8 +305,9 @@ sprite{ id = "enemies/boss/fireball_red_big", description = "Big red fireball" }
 sprite{ id = "enemies/boss/fireball_simple", description = "Simple Fireball" }
 sprite{ id = "enemies/boss/fireball_small", description = "Small Fireball" }
 sprite{ id = "enemies/boss/fireball_triple", description = "Triple Fireball" }
-sprite{ id = "enemies/boss/ganon", description = "Ganon" }
 sprite{ id = "enemies/boss/ganonnn", description = "ganonnn" }
+sprite{ id = "enemies/boss/helmasaur_king", description = "Helmasaur King" }
+sprite{ id = "enemies/boss/helmasaur_king_mask", description = "Helmasaur King Mask" }
 sprite{ id = "enemies/boss/lanmola", description = "enemies/boss/lanmola" }
 sprite{ id = "enemies/boss/lanmola_body", description = "enemies/boss/lanmola_body" }
 sprite{ id = "enemies/boss/lanmola_tail", description = "enemies/boss/lanmola_tail" }
@@ -390,7 +393,9 @@ sprite{ id = "enemies/dungeons/stalfos_grey", description = "Grey Stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_knight", description = "Stalfos Knight" }
 sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
+sprite{ id = "enemies/dungeons/tentacle_blue", description = "Blue Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_green", description = "Green Tentacle" }
+sprite{ id = "enemies/dungeons/tentacle_orange", description = "Orange Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_purple", description = "Purple Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_yellow", description = "Yellow Tentacle" }
 sprite{ id = "enemies/dungeons/vegas", description = "Vegas" }
@@ -458,11 +463,14 @@ sprite{ id = "enemies/outside/tektite_water", description = "Water Tetkite" }
 sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
+sprite{ id = "enemies/projectiles/axe", description = "Axe" }
+sprite{ id = "enemies/projectiles/bat", description = "Bat" }
 sprite{ id = "enemies/projectiles/beam", description = "Wizzrobe Beam" }
 sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
 sprite{ id = "enemies/projectiles/fire_shot", description = "Fire Shot" }
 sprite{ id = "enemies/projectiles/fireball", description = "Fireball" }
 sprite{ id = "enemies/projectiles/laser", description = "Laser" }
+sprite{ id = "enemies/projectiles/shadowball", description = "Shadowball" }
 sprite{ id = "enemies/projectiles/spear", description = "Spear" }
 sprite{ id = "enemies/soldiers/soldier_cannon", description = "Cannon Soldier" }
 sprite{ id = "enemies/soldiers/spear_knight_blue", description = "Blue Spear Knight" }
@@ -1348,6 +1356,7 @@ music{ id = "inside/ravio", description = "Ravio's House" }
 music{ id = "inside/rick_estrgg", description = "Rick Roll Cave" }
 music{ id = "inside/sanctuary_1", description = "Sanctuary" }
 music{ id = "inside/sanctuary_2", description = "Sanctuary" }
+music{ id = "inside/sanctuary_3", description = "Sanctuary" }
 music{ id = "inside/sewers", description = "Sewers" }
 music{ id = "inside/shop", description = "Shop" }
 music{ id = "inside/temple_time", description = "Temple of Time" }
@@ -1598,6 +1607,7 @@ item{ id = "blue_tunic", description = "Blue tunic" }
 item{ id = "bomb", description = "Bomb (1 / 3 / 8 / 10)" }
 item{ id = "bomb_bag", description = "Bombs bag" }
 item{ id = "bombs_counter", description = "Bombs counter" }
+item{ id = "book_of_mudora", description = "Book of Mudora" }
 item{ id = "boomerang", description = "Boomerang" }
 item{ id = "boss_key", description = "Boss key" }
 item{ id = "bottle_1", description = "Bottle 1" }
@@ -1648,7 +1658,7 @@ item{ id = "mushroom", description = "Mushroom" }
 item{ id = "pegasus_shoes", description = "Pegasus shoes" }
 item{ id = "pendant_1", description = "Courage Pendant" }
 item{ id = "pendant_2", description = "Power Pendant" }
-item{ id = "pendant_3", description = "Wisdow Pendant" }
+item{ id = "pendant_3", description = "Wisdom Pendant" }
 item{ id = "photo", description = "Photo" }
 item{ id = "photos_counter", description = "Photos counter" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
@@ -1698,8 +1708,8 @@ item{ id = "wings", description = "Wings" }
 item{ id = "world_map", description = "World Map" }
 item{ id = "yellow_key", description = "Yellow Key" }
 
-enemy{ id = "boss/agahnim", description = "Aganhim" }
-enemy{ id = "boss/agahnim_lightning", description = "Aganhim Lightning" }
+enemy{ id = "boss/agahnim", description = "Agahnim" }
+enemy{ id = "boss/agahnim_lightning", description = "Agahnim Lightning" }
 enemy{ id = "boss/armos_big", description = "Big Armos" }
 enemy{ id = "boss/desert_lanmola", description = "boss/desert_lanmola" }
 enemy{ id = "boss/fireball_red_big", description = "Big red Fireball" }
@@ -1711,6 +1721,7 @@ enemy{ id = "boss/ganondorf", description = "Ganondorf" }
 enemy{ id = "boss/ganonnn", description = "Ganonnn" }
 enemy{ id = "boss/genie", description = "Genie" }
 enemy{ id = "boss/genie/genie_bottle", description = "Genie bottle" }
+enemy{ id = "boss/helmasaur_king", description = "Helmasaur King" }
 enemy{ id = "boss/hinox_master", description = "Hinox master" }
 enemy{ id = "boss/lanmola", description = "boss/lanmola" }
 enemy{ id = "boss/lanmola_body", description = "boss/lanmola_body" }
@@ -1796,7 +1807,9 @@ enemy{ id = "dungeons/stalfos_head", description = "Stalfos Head" }
 enemy{ id = "dungeons/stalfos_knight", description = "Stalfos Knight" }
 enemy{ id = "dungeons/stalfos_red", description = "Red Stalfos" }
 enemy{ id = "dungeons/tentacle", description = "Tentacle" }
+enemy{ id = "dungeons/tentacle_blue", description = "Blue Tentacle" }
 enemy{ id = "dungeons/tentacle_green", description = "Green Tentacle" }
+enemy{ id = "dungeons/tentacle_orange", description = "Orange Tentacle" }
 enemy{ id = "dungeons/tentacle_purple", description = "Purple Tentacle" }
 enemy{ id = "dungeons/tentacle_yellow", description = "Yellow Tentacle" }
 enemy{ id = "dungeons/vegas", description = "Vegas" }
@@ -1855,7 +1868,9 @@ enemy{ id = "outside/tektite_water", description = "Water Tetkite" }
 enemy{ id = "outside/whirlwind", description = "Whirlwind" }
 enemy{ id = "outside/zola", description = "Zola" }
 enemy{ id = "outside/zora", description = "Zora" }
+enemy{ id = "projectiles/axe", description = "Axe" }
 enemy{ id = "projectiles/baba_seed", description = "Baba Seed" }
+enemy{ id = "projectiles/bat", description = "Bat" }
 enemy{ id = "projectiles/beam", description = "Wizzrobe Beam" }
 enemy{ id = "projectiles/beam_particle", description = "Beamos Particle" }
 enemy{ id = "projectiles/bomb", description = "Bomb" }
@@ -1863,6 +1878,7 @@ enemy{ id = "projectiles/fire_shot", description = "Fire Shot" }
 enemy{ id = "projectiles/fireball", description = "Fireball" }
 enemy{ id = "projectiles/laser", description = "Laser" }
 enemy{ id = "projectiles/rock_small", description = "Small Rock" }
+enemy{ id = "projectiles/shadowball", description = "Shadowball" }
 enemy{ id = "projectiles/spear", description = "Spear" }
 enemy{ id = "soldiers/spear_soldier_red", description = "Red Spear Soldier" }
 enemy{ id = "soldiers/sword_soldier_black", description = "Black Sword Soldier" }
@@ -2223,7 +2239,6 @@ file{ path = "shaders/radial_fade_out.frag.glsl", author = "PhoenixII54", }
 file{ path = "shaders/starman.dat", author = "PhoenixII54", }
 file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
-file{ path = "sprites/enemies/boss/ganon.dat", author = "Linkff", }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, Lucifer", }
 file{ path = "sprites/entities/Utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/Utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }

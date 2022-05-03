@@ -15,7 +15,7 @@ function config:create(item, properties)
    	local hero = map:get_hero()
   	local x,y,layer = hero:get_position()
 
-
+    local music_volume = sol.audio.get_music_volume()
 		sol.audio.set_music_volume(10)
  	  hero:freeze()
   	hero:set_animation("playing_ocarina")
@@ -30,7 +30,7 @@ function config:create(item, properties)
 	  }
 		sol.audio.play_sound(properties.music)
 		sol.timer.start(map, properties.duration, function()
-			sol.audio.set_music_volume(75)
+			sol.audio.set_music_volume(music_volume)
     	hero:unfreeze()
 			hero:set_direction(3)
     	notes:remove()

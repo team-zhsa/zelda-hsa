@@ -36,7 +36,9 @@ map:register_event("on_started", function()
 	door_manager:open_when_enemies_dead(map, "enemy_5_", "door_5_w", sound)
 	door_manager:open_when_switch_activated(map, "switch_20_door", "door_20_n")
   door_manager:open_when_switch_activated(map, "switch_26_door", "door_20_n")
-  
+  if game:get_value("dungeon_2_b1_29_ground_collapse", false) then
+    tile_29_ground:set_enabled(false)
+  end
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end)
@@ -57,4 +59,12 @@ end)
 
 switch_19_chest:register_event("on_activated", function()
   treasure_manager:appear_chest(map, "chest_19_map", sound)
+end)
+
+sensor_29_ground:register_event("on_collision_explosion", function()
+  if game:get_value("dungeon_2_b1_29_ground_collapse", false) then
+    game:set_value("dungeon_2_b1_29_ground_collapse", true)
+    tile_29_ground:set_enabled(false)
+    audio_manager:play_sound("common/secret_discover_minor")
+  end
 end)

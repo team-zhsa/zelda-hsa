@@ -21,6 +21,33 @@ tile{
 
 tile{
   layer = 0,
+  x = 256,
+  y = 960,
+  width = 528,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 1000,
+  width = 528,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 960,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
   x = 768,
   y = 1288,
   width = 16,
@@ -22862,34 +22889,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 264,
-  y = 960,
-  width = 528,
-  height = 40,
-  pattern = "2202",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 1000,
-  width = 528,
-  height = 8,
-  pattern = "2203",
-}
-
-tile{
-  layer = 0,
-  x = 792,
-  y = 960,
-  width = 8,
-  height = 40,
-  pattern = "2205",
-}
-
-tile{
-  layer = 0,
-  x = 256,
+  x = 248,
   y = 960,
   width = 8,
   height = 40,
@@ -24980,6 +24980,31 @@ tile{
 }
 
 sensor{
+  name = "open_house_door_sahasrahla_2_sensor",
+  layer = 0,
+  x = 680,
+  y = 173,
+  width = 32,
+  height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 200,
+  y = 920,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko/mapper_shop",
+  destination = "from_outside",
+}
+
+sensor{
   name = "open_house_windmill_sensor",
   layer = 0,
   x = 368,
@@ -24992,6 +25017,12 @@ teletransporter{
   layer = 0,
   x = 680,
   y = 144,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
   height = 16,
   destination_map = "inside/houses/kakariko/sahasrahla",
@@ -25002,6 +25033,12 @@ teletransporter{
   layer = 0,
   x = 616,
   y = 144,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
   height = 16,
   destination_map = "inside/houses/kakariko/sahasrahla",
@@ -26624,12 +26661,12 @@ door{
 }
 
 door{
+  name = "door_mapper",
   layer = 0,
   x = 200,
   y = 920,
   direction = 3,
   sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
 }
 
 door{
@@ -26651,21 +26688,12 @@ door{
 }
 
 door{
+  name = "door_sahasrahla_1",
   layer = 0,
   x = 616,
   y = 144,
   direction = 3,
   sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 680,
-  y = 144,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
 }
 
 destination{
@@ -26797,7 +26825,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/bar_1f",
+  destination_map = "inside/houses/kakariko/bar_0f",
   destination = "from_outside",
 }
 
@@ -27007,6 +27035,86 @@ dynamic_tile{
   height = 16,
   pattern = "6020",
   tileset = "out/outside_buildings",
+}
+
+sensor{
+  name = "open_house_door_sahasrahla_1_sensor",
+  layer = 0,
+  x = 616,
+  y = 173,
+  width = 32,
+  height = 16,
+}
+
+door{
+  name = "door_sahasrahla_2",
+  layer = 0,
+  x = 680,
+  y = 144,
+  direction = 3,
+  sprite = "entities/Doors/Outside/door_light01",
+}
+
+destination{
+  name = "from_mapper",
+  layer = 0,
+  x = 208,
+  y = 949,
+  direction = 3,
+}
+
+sensor{
+  name = "open_house_door_mapper_sensor",
+  layer = 0,
+  x = 208,
+  y = 949,
+  width = 16,
+  height = 16,
+}
+
+tile{
+  layer = 1,
+  x = 256,
+  y = 920,
+  width = 528,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 928,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 248,
+  y = 928,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 256,
+  y = 976,
+  width = 528,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 256,
+  y = 928,
+  width = 528,
+  height = 48,
+  pattern = "7155",
 }
 
 tile{
@@ -30878,51 +30986,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 264,
-  y = 920,
-  width = 528,
-  height = 8,
-  pattern = "1487",
-}
-
-tile{
-  layer = 1,
-  x = 792,
-  y = 928,
-  width = 8,
-  height = 48,
-  pattern = "1489",
-}
-
-tile{
-  layer = 1,
-  x = 256,
-  y = 928,
-  width = 8,
-  height = 48,
-  pattern = "1488",
-}
-
-tile{
-  layer = 1,
-  x = 264,
-  y = 976,
-  width = 528,
-  height = 8,
-  pattern = "1490",
-}
-
-tile{
-  layer = 1,
-  x = 264,
-  y = 928,
-  width = 528,
-  height = 48,
-  pattern = "7155",
-}
-
-tile{
-  layer = 1,
   x = 232,
   y = 968,
   width = 480,
@@ -31297,6 +31360,16 @@ tile{
   width = 64,
   height = 64,
   pattern = "82",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 896,
+  width = 32,
+  height = 16,
+  pattern = "44_3",
   tileset = "outside_additions",
 }
 

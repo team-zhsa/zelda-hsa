@@ -7,6 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
+  music = "same",
 }
 
 tile{
@@ -21171,15 +21172,6 @@ tile{
 tile{
   layer = 1,
   x = 152,
-  y = 80,
-  width = 240,
-  height = 48,
-  pattern = "7155",
-}
-
-tile{
-  layer = 1,
-  x = 152,
   y = 128,
   width = 240,
   height = 8,
@@ -21229,15 +21221,6 @@ tile{
   width = 144,
   height = 8,
   pattern = "1490",
-}
-
-tile{
-  layer = 1,
-  x = 272,
-  y = 120,
-  width = 144,
-  height = 8,
-  pattern = "1487",
 }
 
 tile{
@@ -24446,15 +24429,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 152,
-  y = 72,
-  width = 240,
-  height = 8,
-  pattern = "1487",
-}
-
-tile{
-  layer = 1,
   x = -40,
   y = 80,
   width = 144,
@@ -25259,6 +25233,33 @@ tile{
   x = -40,
   y = 744,
   width = 240,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 80,
+  width = 240,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 72,
+  width = 240,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 272,
+  y = 120,
+  width = 144,
   height = 8,
   pattern = "1487",
 }

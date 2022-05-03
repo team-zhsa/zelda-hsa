@@ -97,6 +97,15 @@ ouvrir la serrure !
 }
 
 dialog{
+  id = "_cannot_read_without_book_mudora",
+  text = [[
+{|}{{{||}{}||}}|{{|}{}
+|}{||}{{{||}{}}{{}||}}
+|{{}}{}{}}}}|}}}{}|}}}
+]],
+}
+
+dialog{
   id = "_crystal",
   text = [[
 Essaie d'activer ce cristal
@@ -254,6 +263,16 @@ Clé Vautour!
 }
 
 dialog{
+  id = "_treasure.blue_key.1",
+  icon = "127",
+  text = [[
+Tu as obtenu une clé bleue.
+Je me demande bien à quoi elle
+pourrait bien servir...$1  Une idée ?
+]],
+}
+
+dialog{
   id = "_treasure.blue_potion.1",
   icon = "24",
   text = [[
@@ -357,6 +376,17 @@ de Bombes Géant !$0
 Il peut contenir
 jusqu'à 99 Bombes
 au lieu de 30 !
+]],
+}
+
+dialog{
+  id = "_treasure.book_of_mudora.1",
+  icon = "106",
+  text = [[
+Tu as trouvé le livre de
+Mudora ! Il te permet de
+déchiffrer l'ancienne langue
+des Hyliens.
 ]],
 }
 
@@ -584,6 +614,16 @@ Feuille d'Or !
 Amène-les chez  
 Richard. Parle- 
 lui de la Clé...
+]],
+}
+
+dialog{
+  id = "_treasure.green_key.1",
+  icon = "127",
+  text = [[
+Tu as obtenu une clé verte.
+Je me demande bien à quoi elle
+pourrait bien servir...$1  Une idée ?
 ]],
 }
 
@@ -1102,7 +1142,7 @@ dialog{
   text = [[
 Tu as trouvé un réceptacle de
 coeur !$0 Ton énergie vitale a
-augmenté d'un coeur !"
+augmenté d'un coeur !
 ]],
 }
 
@@ -1176,6 +1216,16 @@ Carquois Géant !$0
 Il peut contenir
 jusqu'à 99 Flèches
 au lieu de 30 !
+]],
+}
+
+dialog{
+  id = "_treasure.red_key.1",
+  icon = "127",
+  text = [[
+Tu as obtenu une clé rouge.
+Je me demande bien à quoi elle
+pourrait bien servir...$1  Une idée ?
 ]],
 }
 
@@ -2314,8 +2364,8 @@ Une autre fois peut-être !
 dialog{
   id = "maps.houses.cordinia_town.chest_game.minigame_yes",
   text = [[
-Allez !
-Choisis bien ! Bonne chance !
+Allez ! Choisis bien !
+Bonne chance !
 ]],
 }
 
@@ -2351,6 +2401,24 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.merchant_sahasrahla",
+  text = [[
+Des rumeurs racontent que des
+monstres sont apparus un peu
+partout dans le pays. $0 Ils
+seraient très dangereux donc
+il faut que tu fasses attention.
+
+Le vieux sage du village
+Cocorico saura t'en dire plus à
+ce sujet, car cela est vraiment
+étrange$0.$0.$0.$0
+Bref, c'est dangereux de se
+balader tout seul, prends ceci !
 ]],
 }
 
@@ -3210,6 +3278,71 @@ Non
 }
 
 dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.merchant_welcome",
+  text = [[
+Bienvenue jeune héros !
+Je vends toutes sortes de cartes
+et les clients viennent de tout
+le pays pour se les acheter à
+prix d'or ! Choisis ce que tu
+aimes.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.merchant_welcome_sale",
+  text = [[
+Bienvenue jeune héros !
+En ce moment je fais une
+promotion sur toutes mes cartes !
+Elles coûtent 10 rubis de moins
+rien que pour cette occasion !
+Choisis ce que tu aimes.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.product_bomb",
+  text = [[
+Voici des bombes artisanales
+pas cher !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.product_heart",
+  text = [[
+Un coeur pour te régénérer si
+tu es mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.product_shield",
+  text = [[
+Un bouclier pour te protéger des
+attaques des ennemis.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.product_west_map",
+  text = [[
+Une carte de l'arrière-pays
+hylien, s'étendant à l'ouest
+d'Hyrule.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.mapper_shop.product_world_map",
+  text = [[
+Une carte d'Hyrule, très
+complète et détaillée.
+]],
+}
+
+dialog{
   id = "maps.houses.kakarico_village.marine_house.marine_1",
   skip = "all",
   text = [[
@@ -3418,78 +3551,26 @@ voici ma patée ...
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.father_1",
-  text = [[
-Je suis Papounet le papa 
-des quadruplés.     
-Plus tard, je me perdrai 
-dans les montagnes.      
-Tu viendras m'aider,
-hein?
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.mother_1",
-  text = [[
-J'ai trop de bébés ! 
-Ils se ressemblent tous
-en plus !
-Au fait sais-tu où      
-trouver un Yoshi ? 
-J'en ai vu un au jeu du 
-hasard mais je n'ai pas
-pu l'avoir.
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.mother_2",
-  question = "1",
-  text = [[
-Tu offres ce Yoshi        
-à mon bébé ? 
-
- 
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.mother_3",
-  text = [[
-Tant pis...     
-C'est dommage !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.mother_4",
-  text = [[
-Oh ! Merci !      
-Tu es un gentil
-garçon.
-En échange, je  
-te donne ceci.
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.quadruplets_house.mother_5",
-  text = [[
-Ces quatre là se
-ressemblent tant
-que moi-même,   
-je m'y perds...
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_1",
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper",
   skip = "all",
   text = [[
+Ah ! Te voilà $v !
+Je t'attendais depuis un moment.
+Cela va être difficile pour toi
+de t'orienter dans ce vaste
+monde. Le cartographe du village
+fait une promotion spéciale en
+ce moment sur les cartes.
+Cours donc le voir, sa boutique
+au sud est immanquable !
+]],
+}
 
+dialog{
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_sleep",
+  skip = "all",
+  text = [[
+Zzzz... Zzzz...
 ]],
 }
 
@@ -3611,6 +3692,96 @@ Voici les vitesses des tapis :
 Gauche : 100
 Milieu : 64
 Droite : 80
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.altar_paper_left",
+  text = [[
+Pentagone de gauche
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.altar_paper_right",
+  text = [[
+Pentagone de droite
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_1",
+  text = [[
+Au nom de la Triforce de la
+Force, de la Sagesse et
+du Courage, Ainsi soit-il.$0
+J'irai vers la Triforce, de la
+Triforce qui m'exaucera, moi et
+toute ma jeunesse.$0
+Mettez une garde à ma bouche
+et une porte à mes lèvres.$0
+Et que la Triforce rayonne sans
+fin sur mon salut, maintenant et
+pour ce qu'il viendra. Que mon
+cri parvienne à la Triforce.$.
+Et que celle-ci soit avec vous,
+maintenant et toujours.
+Ainsi soit-il.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_2",
+  text = [[
+Après que Ganon, ayant pris le
+contrôle des étages supérieurs
+du château, ait commencé à
+s'emparer petit à petit d'Hyrule,
+de mystérieux maux apparurent
+à travers le pays.
+De mystérieux monstres ont
+alors commencé à rôder dans
+la plaine, comme cela était déjà
+le cas lorsque Ganon avait réussi
+à s'emparer de la Triforce il y
+a quelques générations.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_3",
+  text = [[
+La légende stipule que seule une
+arme est capable de vaincre ce
+monstre des ténèbres.$0
+On raconte qu'elle est cachée
+au coeur du temple du Temps,
+non loin du château, et que seul
+celui qui possède les trois
+Pendentifs de Vertu pourra la
+sortir de son socle.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_4",
+  question = "1",
+  text = [[
+Ces trois pendentifs seraient
+cachés en trois donjons
+distincts, recélant de monstres
+coriaces et dangereux.
+Il faut vaincre à tout prix
+Ganon, sinon quoi notre survie
+est menacée ! Le premier donjon
+serait situé à l'extrême nord-
+ouest du pays, au-delà du lac,
+perché sur les hauteurs des
+Ruines. $v, nous
+comptons sur toi !
+As-tu tout compris ?
+Non, pas du tout !
+Oui.
 ]],
 }
 
@@ -4875,7 +5046,7 @@ dialog{
   id = "movies.introduction.intro_2",
   text = [[
 $1La Triforce, seule relique des
-divinités qui ont créé ce monde
+divinités qui ont créé ce monde,
 permettait à toute personne qui
 formulait un voeu d'avoir son
 voeu exaucé.$0
@@ -4921,11 +5092,11 @@ par la perte de sa Triforce.$0
 dialog{
   id = "movies.introduction.intro_4",
   text = [[
-$1Heureusement , $v le vainquit
-aussi et le voeu qu'il fit avec
-la princesse Zelda redonna à
-Lorule sa beauté d'antan.$0
-
+$1Heureusement , $v le
+vainquit aussi et le voeu
+qu'il fit avec la princesse
+Zelda redonna à Lorule
+sa beauté d'antan.$0
 
 Alors les habitants d'Hyrule
 vécurent en paix...$0
@@ -5059,7 +5230,7 @@ Crédits :
 
 
 Directeurs : The Unknown, LinkFF
-Directeur assistant : Prince DeDeDe
+Dir. assistant : Prince DeDeDe
 
 
 
@@ -5123,7 +5294,6 @@ Concepteurs graphiques décors :
 Masanao Arimoto,
 Tsuyoshi Watanabe,
 FFOmega,
-Froggy77,
 LinkFF,
 The Unknown
 
@@ -5245,9 +5415,10 @@ Nintendo
 
 The Legend of Zelda :
 Hyrule's Adventure
-(C) Team ZeldaHSA 2017-2021
+(C) Team ZeldaHSA 2017 - 2022
+(C) Nintendo 1985 - 2022
 
--THE END-
+- THE END -
 ]],
 }
 

@@ -1,0 +1,48 @@
+animation{
+  name = "walking_phase_1",
+  src_image = "enemies/boss/helmasaur_king.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 0, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/boss/helmasaur_king.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+  },
+}
+animation{
+  name = "walking_phase_2",
+  src_image = "enemies/boss/helmasaur_king.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 80, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+  },
+}
+animation{
+  name = "walking_phase_3",
+  src_image = "enemies/boss/helmasaur_king.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 160, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 160, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 160, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+    { x = 160, y = 80, frame_width = 80, frame_height = 80, origin_x = 40, origin_y = 69 },
+  },
+}

@@ -154,7 +154,10 @@ function enemy_manager:start_completing_sequence(map)
       hero:start_victory(function()
 				game:set_magic(game:get_max_magic())
         game:set_life(game:get_max_life())
-        hero:teleport("out/a1", "from_dungeon")
+        local map_id = dungeon_infos["main_exit"]["map_id"]
+        local destination_name = dungeon_infos["main_exit"]["destination_name"]
+        hero:teleport(map_id, destination_name, "fade")
+        hero:set_visible(true)
       end)
     end)
   end

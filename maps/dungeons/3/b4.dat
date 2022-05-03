@@ -11,3 +11,1192 @@ properties{
   music = "dungeons/03_fire",
 }
 
+tile{
+  layer = 0,
+  x = 912,
+  y = 80,
+  width = 992,
+  height = 992,
+  pattern = "lava",
+}
+
+tile{
+  layer = 0,
+  x = 1360,
+  y = 288,
+  width = 160,
+  height = 160,
+  pattern = "floor.13-1",
+}
+
+tile{
+  layer = 0,
+  x = 1360,
+  y = 280,
+  width = 160,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
+  x = 1352,
+  y = 288,
+  width = 8,
+  height = 160,
+  pattern = "hole.4",
+}
+
+tile{
+  layer = 0,
+  x = 1520,
+  y = 288,
+  width = 8,
+  height = 160,
+  pattern = "hole.3",
+}
+
+tile{
+  layer = 0,
+  x = 1360,
+  y = 448,
+  width = 160,
+  height = 8,
+  pattern = "hole.1",
+}
+
+tile{
+  layer = 0,
+  x = 1352,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.4",
+}
+
+tile{
+  layer = 0,
+  x = 1520,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.3",
+}
+
+tile{
+  layer = 0,
+  x = 1352,
+  y = 448,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.2",
+}
+
+tile{
+  layer = 0,
+  x = 1520,
+  y = 448,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.1",
+}
+
+sensor{
+  name = "dungeon_room_11",
+  layer = 0,
+  x = 1440,
+  y = 429,
+  width = 16,
+  height = 16,
+}
+
+stream{
+  name = "stream_down_87",
+  layer = 0,
+  x = 1416,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_88",
+  layer = 0,
+  x = 1464,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_89",
+  layer = 0,
+  x = 1512,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_90",
+  layer = 0,
+  x = 1496,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_91",
+  layer = 0,
+  x = 1480,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_92",
+  layer = 0,
+  x = 1448,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_93",
+  layer = 0,
+  x = 1432,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_94",
+  layer = 0,
+  x = 1400,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_95",
+  layer = 0,
+  x = 1384,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_96",
+  layer = 0,
+  x = 1368,
+  y = 301,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_77",
+  layer = 0,
+  x = 1416,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_78",
+  layer = 0,
+  x = 1464,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_79",
+  layer = 0,
+  x = 1512,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_80",
+  layer = 0,
+  x = 1496,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_81",
+  layer = 0,
+  x = 1480,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_82",
+  layer = 0,
+  x = 1448,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_83",
+  layer = 0,
+  x = 1432,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_84",
+  layer = 0,
+  x = 1400,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_85",
+  layer = 0,
+  x = 1384,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_86",
+  layer = 0,
+  x = 1368,
+  y = 317,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_67",
+  layer = 0,
+  x = 1416,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_68",
+  layer = 0,
+  x = 1464,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_69",
+  layer = 0,
+  x = 1512,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_70",
+  layer = 0,
+  x = 1496,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_71",
+  layer = 0,
+  x = 1480,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_72",
+  layer = 0,
+  x = 1448,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_73",
+  layer = 0,
+  x = 1432,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_74",
+  layer = 0,
+  x = 1400,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_75",
+  layer = 0,
+  x = 1384,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_76",
+  layer = 0,
+  x = 1368,
+  y = 333,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_57",
+  layer = 0,
+  x = 1416,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_58",
+  layer = 0,
+  x = 1464,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_59",
+  layer = 0,
+  x = 1512,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_60",
+  layer = 0,
+  x = 1496,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_61",
+  layer = 0,
+  x = 1480,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_62",
+  layer = 0,
+  x = 1448,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_63",
+  layer = 0,
+  x = 1432,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_64",
+  layer = 0,
+  x = 1400,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_65",
+  layer = 0,
+  x = 1384,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_66",
+  layer = 0,
+  x = 1368,
+  y = 349,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_47",
+  layer = 0,
+  x = 1416,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_48",
+  layer = 0,
+  x = 1464,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_49",
+  layer = 0,
+  x = 1512,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_50",
+  layer = 0,
+  x = 1496,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_51",
+  layer = 0,
+  x = 1480,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_52",
+  layer = 0,
+  x = 1448,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_53",
+  layer = 0,
+  x = 1432,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_54",
+  layer = 0,
+  x = 1400,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_55",
+  layer = 0,
+  x = 1384,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_56",
+  layer = 0,
+  x = 1368,
+  y = 365,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_43",
+  layer = 0,
+  x = 1416,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_40",
+  layer = 0,
+  x = 1464,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+sensor{
+  name = "sensor_boss",
+  layer = 0,
+  x = 1440,
+  y = 429,
+  width = 16,
+  height = 16,
+}
+
+enemy{
+  name = "boss",
+  layer = 0,
+  x = 1440,
+  y = 365,
+  direction = 0,
+  breed = "boss/helmasaur_king",
+  savegame_variable = "dungeon_3_boss",
+}
+
+destination{
+  name = "from_b3",
+  layer = 0,
+  x = 1440,
+  y = 429,
+  direction = 1,
+}
+
+pickable{
+  name = "heart_container",
+  layer = 0,
+  x = 1432,
+  y = 413,
+  treasure_name = "heart_container",
+  treasure_savegame_variable = "dungeon_3_heart_container",
+}
+
+pickable{
+  name = "pendant",
+  layer = 0,
+  x = 1448,
+  y = 413,
+  treasure_name = "pendant_3",
+  treasure_savegame_variable = "dungeon_3_pendant",
+}
+
+wall{
+  layer = 0,
+  x = 1360,
+  y = 272,
+  width = 160,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 1520,
+  y = 288,
+  width = 16,
+  height = 160,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 1344,
+  y = 288,
+  width = 16,
+  height = 160,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 1360,
+  y = 448,
+  width = 160,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+stream{
+  name = "stream_down_1",
+  layer = 0,
+  x = 1512,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_2",
+  layer = 0,
+  x = 1496,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_3",
+  layer = 0,
+  x = 1480,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_4",
+  layer = 0,
+  x = 1464,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_5",
+  layer = 0,
+  x = 1448,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_6",
+  layer = 0,
+  x = 1432,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_7",
+  layer = 0,
+  x = 1416,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_8",
+  layer = 0,
+  x = 1400,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_9",
+  layer = 0,
+  x = 1384,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_10",
+  layer = 0,
+  x = 1368,
+  y = 445,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_11",
+  layer = 0,
+  x = 1512,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_12",
+  layer = 0,
+  x = 1496,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_13",
+  layer = 0,
+  x = 1480,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_14",
+  layer = 0,
+  x = 1464,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_15",
+  layer = 0,
+  x = 1416,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_16",
+  layer = 0,
+  x = 1400,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_17",
+  layer = 0,
+  x = 1384,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_18",
+  layer = 0,
+  x = 1368,
+  y = 429,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_19",
+  layer = 0,
+  x = 1512,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_20",
+  layer = 0,
+  x = 1496,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_21",
+  layer = 0,
+  x = 1480,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_22",
+  layer = 0,
+  x = 1464,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_23",
+  layer = 0,
+  x = 1416,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_24",
+  layer = 0,
+  x = 1400,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_25",
+  layer = 0,
+  x = 1384,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_26",
+  layer = 0,
+  x = 1368,
+  y = 413,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_27",
+  layer = 0,
+  x = 1512,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_28",
+  layer = 0,
+  x = 1496,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_29",
+  layer = 0,
+  x = 1480,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_30",
+  layer = 0,
+  x = 1464,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_31",
+  layer = 0,
+  x = 1448,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_32",
+  layer = 0,
+  x = 1432,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_33",
+  layer = 0,
+  x = 1416,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_34",
+  layer = 0,
+  x = 1400,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_35",
+  layer = 0,
+  x = 1384,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_36",
+  layer = 0,
+  x = 1368,
+  y = 397,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_37",
+  layer = 0,
+  x = 1512,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_38",
+  layer = 0,
+  x = 1496,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_39",
+  layer = 0,
+  x = 1480,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_41",
+  layer = 0,
+  x = 1448,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_42",
+  layer = 0,
+  x = 1432,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_44",
+  layer = 0,
+  x = 1400,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_45",
+  layer = 0,
+  x = 1384,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+stream{
+  name = "stream_down_46",
+  layer = 0,
+  x = 1368,
+  y = 381,
+  direction = 6,
+  sprite = "entities/Streams/conveyor_belt1",
+  speed = 48,
+}
+
+enemy{
+  layer = 0,
+  x = 1368,
+  y = 301,
+  direction = 0,
+  breed = "dungeons/pike_detect",
+}
+
+enemy{
+  layer = 0,
+  x = 1368,
+  y = 445,
+  direction = 0,
+  breed = "dungeons/pike_auto",
+}
+
+enemy{
+  layer = 0,
+  x = 1512,
+  y = 445,
+  direction = 0,
+  breed = "dungeons/pike_auto",
+}
+
+enemy{
+  layer = 0,
+  x = 1512,
+  y = 301,
+  direction = 0,
+  breed = "dungeons/pike_detect",
+}
+
+enemy{
+  name = "boss_child_1",
+  layer = 0,
+  x = 1496,
+  y = 429,
+  direction = 0,
+  breed = "dungeons/medusa",
+}
+

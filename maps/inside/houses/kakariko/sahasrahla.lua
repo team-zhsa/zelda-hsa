@@ -22,3 +22,13 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+sahasrahla:register_event("on_interaction", function()
+  if game:is_step_last("sword_obtained") then
+    game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper", game:get_player_name())
+  else
+    game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_sleep")
+  end
+
+
+end)

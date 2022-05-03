@@ -2,7 +2,6 @@
 local map = ...
 local game = map:get_game()
 local is_small_boss_active = false
-local is_boss_active = false
 
 -- Include scripts
 require("scripts/multi_events")
@@ -20,10 +19,10 @@ map:register_event("on_started", function()
 	separator_manager:manage_map(map)
   door_manager:close_when_torches_unlit(map, "torch_12_door", "door_12_s")
   door_manager:open_when_torches_lit(map, "torch_12_door", "door_12_s")
+  door_manager:open_when_torches_lit(map, "torch_28_door", "door_group_boss")
   enemy_manager:execute_when_vegas_dead(map, "enemy_22_small_key")
   treasure_manager:disappear_pickable(map, "small_key_22")
   treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_22_small_key", "small_key_22")
-	map:set_doors_open("door_group_boss", true)
 	separator_manager:manage_map(map)
 	if heart_container ~= nil then
 		treasure_manager:disappear_pickable(map, "heart_container")
@@ -48,6 +47,7 @@ if pendant ~= nil then
 	function map:on_obtained_treasure(item, variant, savegame_variable)
   	if item:get_name() == "pendant_2" then
       enemy_manager:start_completing_sequence(map)
+      game:set_step_done("dungeon_2_completed")
     end
 	end
 end

@@ -5,10 +5,10 @@ local behavior = require("enemies/generic/lizalfos")
 
 local properties = {
   main_sprite = "enemies/dungeons/lizalfos_red",
-  life = 8,
-  damage = 8,
-  normal_speed = 48,
-  faster_speed = 72,
+  life = 4,
+  damage = 6,
+  normal_speed = 32,
+  faster_speed = 64,
 }
 
 behavior:create(enemy, properties)

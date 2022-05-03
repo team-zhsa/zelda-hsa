@@ -5,6 +5,9 @@ local npc_meta = sol.main.get_metatable("npc")
 -- Include scripts
 local audio_manager = require("scripts/audio_manager")
 
+  
+
+
 npc_meta:register_event("on_created", function(npc)
   
   local model = npc:get_property("model")

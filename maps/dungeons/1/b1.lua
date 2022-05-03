@@ -49,6 +49,7 @@ if pendant ~= nil then
 	function map:on_obtained_treasure(item, variant, savegame_variable)
   	if item:get_name() == "pendant_1" then
       enemy_manager:start_completing_sequence(map)
+      game:set_step_done("dungeon_1_completed")
     end
 	end
 end

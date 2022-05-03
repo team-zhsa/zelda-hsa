@@ -1407,8 +1407,8 @@ tile{
 destination{
   name = "destination",
   layer = 0,
-  x = 152,
-  y = 109,
+  x = 112,
+  y = 173,
   direction = 1,
 }
 
@@ -1441,11 +1441,12 @@ enemy{
 }
 
 enemy{
+  name = "a",
   layer = 0,
-  x = 520,
-  y = 381,
+  x = 192,
+  y = 157,
   direction = 0,
-  breed = "dungeons/medusa",
+  breed = "boss/spectral_ganon",
 }
 
 tile{

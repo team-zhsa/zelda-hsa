@@ -37,6 +37,10 @@ local function initialize_dungeon_features(game)
         map_id = "dungeons/1/0f",
         destination_name = "from_outside"
       },
+      main_exit = {
+        map_id = "out/a1",
+        destination_name = "from_dungeon"
+      },
       completing_sequence = "simple", -- See Enemy manager script for more infos.
     },
 
@@ -64,6 +68,10 @@ local function initialize_dungeon_features(game)
         map_id = "dungeons/2/0f",
         destination_name = "from_outside"
       },
+      main_exit = {
+        map_id = "out/b4",
+        destination_name = "from_dungeon"
+      },
       completing_sequence = "simple",
     },
 
@@ -83,14 +91,19 @@ local function initialize_dungeon_features(game)
       },
       boss = {
         floor = -4,
-        savegame_variable = "dungeon_4_boss",
-        x = 0,
-        y = 0,
+        savegame_variable = "dungeon_3_boss",
+        x = 1448,
+        y = 320,
       },
       main_entrance = {
         map_id = "dungeons/3/0f",
         destination_name = "from_outside"
       },
+      main_exit = {
+        map_id = "out/b1",
+        destination_name = "from_crater_3"
+      },
+      completing_sequence = "simple",
     },
   }
 

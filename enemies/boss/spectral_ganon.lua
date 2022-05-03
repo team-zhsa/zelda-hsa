@@ -26,9 +26,9 @@ local is_pushing_back = false
 -- Configuration variables.
 local before_arming_duration = 800
 local after_arming_duration = 800
-local bats_count = 8
+local bats_count = 1--8
 local bats_distance = 40
-local between_bats_duration = 500
+local between_bats_duration = 5000 --500
 local aiming_duration = 1000
 local moving_speed = 120
 local moving_distance_from_center = 52
@@ -44,24 +44,13 @@ local function hurt(damage)
   is_hurt = true
   enemy:set_hero_weapons_reactions({sword = "protected", thrust = "protected"})
 
-  -- Die if no more life.
-  if enemy:get_life() - damage < 1 then
-
-    enemy:start_death(function()
-      sprite:set_shader(hurt_shader)
-      sol.timer.start(enemy, dying_duration, function()
-        finish_death()
-      end)
-    end)
-    return
-  end
-
-  -- Make the enemy manually hurt to not restart it automatically.
+  --Make the enemy manually hurt to not restart it automatically.
   enemy:set_life(enemy:get_life() - damage)
-  sprite:set_shader(hurt_shader)
+  local animation = sprite:get_animation()
+  sprite:set_animation("hurt")
   sol.timer.start(enemy, hurt_duration, function()
     is_hurt = false
-    sprite:set_shader(nil)
+    sprite:set_animation(animation)
     enemy:set_vulnerable()
   end)
 
@@ -73,7 +62,7 @@ end
 -- Only hurt a sword attack received if the attack is a spin one.
 local function on_sword_attack_received()
 
-  if hero:get_sprite():get_animation() == "spin_attack" then
+  if hero:get_sprite():get_animation() == "spin_attack" or hero:get_sprite():get_animation() == "super_spin_attack" then
     hurt(1)
   end
   if not is_pushing_back then
@@ -141,7 +130,7 @@ local function start_invoking()
   sol.timer.start(enemy, between_bats_duration, function()
     bat_count = bat_count + 1
     local angle = angle_gap * -bat_count
-    create_sub_enemy("bat", "boss/projectiles/bat", math.cos(angle) * bats_distance * mirror_ratio, -math.sin(angle) * bats_distance - 32, 2)
+    create_sub_enemy("bat", "projectiles/bat", math.cos(angle) * bats_distance * mirror_ratio, -math.sin(angle) * bats_distance - 32, 2)
 
     -- Start throwing the axe after the last invoke.
     if bat_count >= bats_count then
@@ -175,7 +164,7 @@ local function start_taking_axe()
     sprite:set_paused()
 
     -- Create the axe.
-    axe = create_sub_enemy("axe", "boss/projectiles/axe", 0, 0, sprite:get_direction())
+    axe = create_sub_enemy("axe", "projectiles/axe", 0, 0, sprite:get_direction())
     local axe_sprite = axe:get_sprite()
 
     -- Start invoking bats when the axe is holded or catched.
@@ -227,6 +216,7 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_life(12)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
+  enemy:set_hurt_style("boss")
 
   local camera_x, camera_y, camera_width, camera_height = camera:get_bounding_box()
   center_x, center_y = camera_x + camera_width * 0.5, camera_y + camera_height * 0.5

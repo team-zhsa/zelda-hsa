@@ -434,7 +434,7 @@ tile{
 }
 
 npc{
-  name = "a",
+  name = "blacksmith_2",
   layer = 0,
   x = 72,
   y = 117,
@@ -444,7 +444,7 @@ npc{
 }
 
 npc{
-  name = "a_2",
+  name = "blacksmith_1",
   layer = 0,
   x = 120,
   y = 117,
@@ -475,6 +475,15 @@ teletransporter{
   height = 16,
   destination_map = "out/h2",
   destination = "from_blacksmith",
+}
+
+npc{
+  name = "blacksmith_dialog",
+  layer = 0,
+  x = 96,
+  y = 125,
+  direction = 3,
+  subtype = 1,
 }
 
 tile{

@@ -29003,7 +29003,7 @@ teletransporter{
   width = 16,
   height = 1440,
   transition = "scrolling",
-  destination_map = "out/d2",
+  destination_map = "out/e2",
   destination = "_side",
 }
 
@@ -29021,6 +29021,17 @@ npc{
   subtype = 1,
   sprite = "entities/sign",
   behavior = "dialog#maps.out.field.sign_13",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/d1",
+  destination = "_side",
 }
 
 tile{

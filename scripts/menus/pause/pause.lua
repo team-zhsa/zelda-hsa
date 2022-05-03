@@ -13,8 +13,8 @@ local function initialize_pause_features(game)
     return
   end
 
-  local inventory_builder = require("scripts/menus/pause/pause_inventory")
-  local inventory_builder2 = require("scripts/menus/pause/pause_inventory2")
+  local inventory_builder_1 = require("scripts/menus/pause/pause_inventory_1")
+  local inventory_builder_2 = require("scripts/menus/pause/pause_inventory_2")
 	local inventory_ocarina = require("scripts/menus/pause/pause_ocarina")
   local map_builder = require("scripts/menus/pause/pause_map_old")
   local quest_builder = require("scripts/menus/pause/pause_quest")
@@ -28,8 +28,8 @@ local function initialize_pause_features(game)
     -- Define the available submenus.
 
     game.pause_submenus = {  -- Array of submenus (inventory, map, etc.).
-      inventory_builder:new(game),
-      inventory_builder2:new(game),
+      inventory_builder_1:new(game),
+      inventory_builder_2:new(game),
 			inventory_ocarina:new(game),
       map_builder:new(game),
       quest_builder:new(game),

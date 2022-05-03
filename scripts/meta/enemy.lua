@@ -138,7 +138,7 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
   local final_damage = (base_life_points + 1)^(game:get_ability("sword") - 1)
   -- Remove life
   self:remove_life(final_damage)
-  print("Dégâts : " .. final_damage)
+  print("Damages on enemy: " .. final_damage)
 
 end
 
