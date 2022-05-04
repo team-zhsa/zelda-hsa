@@ -12,11 +12,6 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-	if game:get_value("kakarico_milk_bar_stairs_door", true) then
-		  dynamic_stairs_door:set_enabled(false)
-	else
-		  dynamic_stairs_door:set_enabled(true)
-	end
 end
 
 -- Event called after the opening transition effect of the map,
@@ -25,9 +20,15 @@ function map:on_opening_transition_finished()
 
 end
 
+npc_drunk_man:register_event("on_interaction", function()
+  if game:get_value("possession_flippers") == 0 then
+    game:start_dialog("maps.houses.kakarico_village.milk_bar.drunk_man_1")
+  else
+    game:start_dialog("maps.houses.kakarico_village.milk_bar.drunk_man_2")
+  end
+end)
+
 
 function door_stairs:on_opened()
-  dynamic_stairs_door:set_enabled(false)
-	game:set_value("kakarico_milk_bar_stairs_door", true)
 	sol.audio.play_sound("common/secret_discover_minor")
 end

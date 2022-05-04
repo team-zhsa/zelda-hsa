@@ -25865,13 +25865,22 @@ tile{
   tileset = "outside_additions",
 }
 
-npc{
-  name = "kaepora_gaebora",
+sensor{
+  name = "owl_8_position",
   layer = 1,
-  x = 1168,
-  y = 413,
+  x = 1176,
+  y = 405,
+  width = 16,
+  height = 16,
+}
+
+npc{
+  name = "owl_8",
+  layer = 1,
+  x = 1328,
+  y = 333,
   direction = 3,
   subtype = 1,
-  sprite = "entities/owl_out",
+  sprite = "npc/owl",
 }
 

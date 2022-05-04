@@ -3034,6 +3034,14 @@ enemy{
   treasure_name = "random_mountains",
 }
 
+stairs{
+  layer = -1,
+  x = 1176,
+  y = 1280,
+  direction = 0,
+  subtype = 4,
+}
+
 tile{
   layer = 0,
   x = 448,
@@ -17830,6 +17838,33 @@ tile{
   pattern = "wall_torch.4",
 }
 
+tile{
+  layer = 0,
+  x = 1200,
+  y = 1336,
+  width = 8,
+  height = 8,
+  pattern = "stairs_inner_up.2.top.border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1208,
+  y = 1336,
+  width = 16,
+  height = 8,
+  pattern = "stairs_inner_up.2.top-1",
+}
+
+tile{
+  layer = 0,
+  x = 1224,
+  y = 1336,
+  width = 8,
+  height = 8,
+  pattern = "stairs_inner_up.2.top.border.2-1",
+}
+
 sensor{
   name = "dungeon_room_26_2",
   layer = 0,
@@ -19411,7 +19446,7 @@ stairs{
   x = 1208,
   y = 1320,
   direction = 3,
-  subtype = 2,
+  subtype = 4,
 }
 
 destination{
@@ -20044,14 +20079,6 @@ destructible{
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
-}
-
-stairs{
-  layer = 0,
-  x = 1176,
-  y = 1280,
-  direction = 0,
-  subtype = 4,
 }
 
 stairs{
@@ -21799,33 +21826,6 @@ tile{
   width = 8,
   height = 48,
   pattern = "door_cache.3-5",
-}
-
-tile{
-  layer = 1,
-  x = 1200,
-  y = 1336,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.1-1",
-}
-
-tile{
-  layer = 1,
-  x = 1208,
-  y = 1336,
-  width = 16,
-  height = 8,
-  pattern = "stairs_inner_up.2.top-1",
-}
-
-tile{
-  layer = 1,
-  x = 1224,
-  y = 1336,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.2-1",
 }
 
 tile{

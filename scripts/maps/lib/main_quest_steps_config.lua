@@ -1,5 +1,6 @@
 local steps={
   "game_started",
+  "town_left",
   "sword_obtained",
   "world_map_obtained",
   "priest_met",

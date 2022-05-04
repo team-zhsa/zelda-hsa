@@ -21,7 +21,7 @@ end
 map:register_event("on_started", function()
 	game:show_map_name("hyrule_town")
 	map:set_digging_allowed(true)
-  if game:is_step_last("priest_met") then
+  if game:is_step_done("priest_met") then
     town_gate:set_enabled(false)
   end
 end)

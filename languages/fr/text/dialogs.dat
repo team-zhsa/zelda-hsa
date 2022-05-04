@@ -2146,7 +2146,7 @@ dialog{
 $v, c'est moi Sahasrahla.
 Fais attention avec les torches.
 Ton sort est décidé au hasard,
-alors reprends bien de le vie !
+alors reprends bien de la vie !
 ]],
 }
 
@@ -3032,11 +3032,11 @@ Plaine,
 les Gorons, qui résident dans les
 montagnes et qui mangent des
 pierres,
-les Zoras, qui résident au nord-est
-d'Hyrule et qui vivent de l'eau,
-et les Piafs, qui sont mi-hommes,
-mi-oiseaux et qui occupent
-l'est d'Hyrule.
+les Zoras, qui résident au nord-
+est d'Hyrule et qui vivent de
+l'eau, et les Piafs, qui sont
+mi-hommes, mi-oiseaux et qui
+occupent l'est d'Hyrule.
 ]],
 }
 
@@ -3109,7 +3109,7 @@ vont chaque année pour admirer
 ces eaux.
 A l'ouest, il y a le cimetière, où
 reposent nombre de personnes.
-Il y a les Ruines.
+Au nord se trouvent les Ruines.
 ]],
 }
 
@@ -3146,7 +3146,7 @@ Encore au sud, il y a la ville
 Parapa.
 A l'est, on retrouve le Désert
 Gerudo, où coule le fleuve
-Gerudo.
+du même nom.
 Les chaleurs y sont cependant
 écrasantes et il faut beaucoup
 boire.
@@ -3551,6 +3551,29 @@ voici ma patée ...
 }
 
 dialog{
+  id = "maps.houses.kakarico_village.milk_bar.drunk_man_1",
+  text = [[
+Des rumeurs m'ont dit...$0 Hic !
+Que dans le...$0 Hic ! Domaine
+Zora, il y a...$0 Hic ! Un gros
+poisson qui vend...$0 Hic ! De
+quoi devenir...$0 Hic ! Un
+poisson...
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.milk_bar.drunk_man_2",
+  text = [[
+Moi...$0 Hic ! Je connais...$0 Hic !
+Quelqu'un qui est...$0 Hic ! Parti
+vers le soleil levant...$0 Hic !
+Sur un bateau...$0 Hic ! Et qui
+n'est jamais revenu...$0 Hic !
+]],
+}
+
+dialog{
   id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper",
   skip = "all",
   text = [[
@@ -3664,34 +3687,6 @@ C'est pas donné !
 
 Oui
 Non
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.sport_house.ask",
-  question = "1",
-  text = [[
-Bonjour je suis prof de sport
-au Village Cocorico !
-
-Pour la modique somme de
-seulement 20 rubis, tu peux
-courir sur ces tapis.
-Accepter ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.sport_house.yes",
-  text = [[
-Très bien, je t'ouvres la porte.
-
-Voici les vitesses des tapis :
-Gauche : 100
-Milieu : 64
-Droite : 80
 ]],
 }
 
@@ -3961,6 +3956,34 @@ Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi trist
 }
 
 dialog{
+  id = "maps.kaepora_gaebora.owl_8",
+  question = "1",
+  text = [[
+Hou ! C'est moi Kaepora Gaebora !$0
+Tu es devant le Temple de la
+Forêt !
+Comme aux Ruines, tu trouveras
+une carte et une boussole qui te
+permettront de te repérer dans le
+donjon.$0 Fais attention, les
+monstres sont plus coriaces qu'
+avant et il y a beaucoup de
+trous dans lesquels tomber.$0
+C'est l'avant dernière étape
+avant l'épée de Légende.$0
+Trouve le pendentif de la
+Sagesse.$0 Ce temple est habité
+par Ganon Spectral et est très
+tortueux et rempli de pièges !$0
+Tu y trouveras l'Arc du Héros,
+nécessaire pour le vaincre.$0
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
   id = "maps.out._boundaries",
   text = [[
 Vous ne pouvez pas aller plus
@@ -4221,49 +4244,21 @@ Sud : Temple du Temps
 }
 
 dialog{
-  id = "maps.out.forest.owl_1",
-  question = "1",
-  text = [[
-Ouh ! C'est moi Kaepora Gaebora !
-Tu es devant le Temple de la
-Forêt !
-Comme aux Ruines, tu trouveras
-une carte et une boussole qui te
-permettront de te repérer dans le
-donjon. Fais attention, les
-monstres sont plus coriaces qu'
-avant et il y a beaucoup de
-trous dans lesquels tomber.
-C'est l'avant dernière étape
-avant l'épée de Légende.
-Trouve le pendentif de la
-Sagesse. Ce temple est habité
-par Ganon Spectral et est très
-tortueux et rempli de pièges !
-Tu y trouveras l'Arc du Héros,
-nécessaire pour le vaincre.
-As-tu tout compris ?
-Non, pas du tout !
-Oui
-]],
-}
-
-dialog{
-  id = "maps.out.forest.owl_2",
-  text = [[
-Je vais t'apprendre le menuet
-de la Forêt, qui te servira à te
-téléporter ici.
-]],
-}
-
-dialog{
   id = "maps.out.forest.sign_1",
   text = [[
 Attention au plancher        
 fissuré.        
 Rondouillards : 
 abstenez-vous !
+]],
+}
+
+dialog{
+  id = "maps.out.forest.song_learnt",
+  text = [[
+Je vais t'apprendre le menuet
+de la Forêt, qui te servira à te
+téléporter ici.
 ]],
 }
 
@@ -4411,7 +4406,7 @@ Sois un peu plus motivé !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.grand_ma_1",
+  id = "maps.out.kakarico_village.grandma_1",
   skip = "all",
   text = [[
 Les rumeurs disent qu'il s'est

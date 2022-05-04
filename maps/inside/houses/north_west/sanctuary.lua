@@ -47,16 +47,21 @@ dialog:register_event("on_interaction", function()
 end)
 
 function tell_legend()
+  priest:get_sprite():set_animation("reading")
+  priest:get_sprite():set_direction(3)
   game:start_dialog("maps.houses.north_west.sanctuary.priest_2", function()
     sol.timer.start(map, 500, function()
       game:start_dialog("maps.houses.north_west.sanctuary.priest_3", function()
         sol.timer.start(map, 500, function()
+          priest:get_sprite():set_animation("stopped")
           game:start_dialog("maps.houses.north_west.sanctuary.priest_4", game:get_player_name(), function(answer)
-              if answer == 1 then
-                tell_legend()
-              else
-                hero:unfreeze()
-              end
+            if answer == 1 then
+              tell_legend()
+            else
+              hero:unfreeze()
+              priest:get_sprite():set_direction(1)
+            end
+
           end)
         end)
       end)
