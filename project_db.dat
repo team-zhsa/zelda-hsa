@@ -102,10 +102,11 @@ map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = 
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
 map{ id = "inside/caves/mountains/goron_town_1f", description = "Goron Town (1st Floor)" }
 map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Basement 1)" }
+map{ id = "inside/caves/mountains/lost_old_man", description = "Lost old man cave" }
 map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/spectacle_rock_b1", description = "Spectacle Rock (Basement 1)" }
 map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to fire temple" }
-map{ id = "inside/caves/mountains/treasure_cave_1", description = "Tresaure Cave 1" }
+map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to the Spectacle Rock (Ground Floor)" }
 map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
 map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
 map{ id = "inside/caves/north_west/ruins_cave", description = "Ruins Cave" }
@@ -124,14 +125,14 @@ map{ id = "inside/houses/faron_woods/map_house", description = "Map House" }
 map{ id = "inside/houses/hylia_lake/fortune_teller", description = "Fortune Teller" }
 map{ id = "inside/houses/kakariko/bar_0f", description = "Milk Bar (Ground Floor)" }
 map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (Basement 1)" }
+map{ id = "inside/houses/kakariko/chest_house", description = "Chest House" }
 map{ id = "inside/houses/kakariko/grandma_house", description = "Grandma House" }
 map{ id = "inside/houses/kakariko/graveyard", description = "Graveyard" }
 map{ id = "inside/houses/kakariko/library", description = "Library" }
 map{ id = "inside/houses/kakariko/library_2f", description = "Library (2nd Floor)" }
 map{ id = "inside/houses/kakariko/mapper_shop", description = "Mapper's Shop" }
 map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
-map{ id = "inside/houses/kakariko/shop", description = "South Shop" }
-map{ id = "inside/houses/kakariko/sport_house", description = "Sport House" }
+map{ id = "inside/houses/kakariko/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko/windmill", description = "Windmill" }
 map{ id = "inside/houses/main_town/orange_house_e", description = "East Orange House" }
 map{ id = "inside/houses/main_town/orange_house_w", description = "West Orange House" }
@@ -139,9 +140,11 @@ map{ id = "inside/houses/main_town/sword_shop", description = "Sword Shop" }
 map{ id = "inside/houses/main_town/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/north_west/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
-map{ id = "inside/houses/snowpeaks/shop", description = "Shop" }
+map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
+map{ id = "inside/houses/south_castle/flower_house", description = "Flower House" }
 map{ id = "inside/houses/south_castle/ravios_house", description = "Ravio's House" }
-map{ id = "inside/houses/zora_village/north_hut", description = "North Hut" }
+map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
+map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
 map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
 map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/temple_time", description = "Temple of Time" }
@@ -204,7 +207,7 @@ map{ id = "out/f8", description = "F8 (Miracles Coast)" }
 map{ id = "out/g1", description = "G1 (Death Mountain)" }
 map{ id = "out/g2", description = "G2 (Zora River)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
-map{ id = "out/g4", description = "G4 (Hyrule Field)" }
+map{ id = "out/g4", description = "G4 (Hyrule Field, Temple of Time)" }
 map{ id = "out/g5", description = "G5 (Hyrule Field)" }
 map{ id = "out/g6", description = "G6 (Hyrule Field)" }
 map{ id = "out/g7", description = "G7 (Garnet Coast)" }
@@ -1702,6 +1705,7 @@ item{ id = "sword_skill_beam", description = "Sword Beam" }
 item{ id = "tail_key", description = "Tail key" }
 item{ id = "time_tunic", description = "Time tunic" }
 item{ id = "trading_1", description = "Trading (Seas Map)" }
+item{ id = "trading_2", description = "Trading 2 (Better Magic Bar)" }
 item{ id = "tunic", description = "Tunic (green/blue/red)" }
 item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }

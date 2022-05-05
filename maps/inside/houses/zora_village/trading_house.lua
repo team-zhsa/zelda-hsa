@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/zora_village/north_hut.
+-- Lua script of map inside/houses/zora_village/empty_house.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

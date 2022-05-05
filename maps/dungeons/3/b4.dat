@@ -639,16 +639,6 @@ sensor{
   height = 16,
 }
 
-enemy{
-  name = "boss",
-  layer = 0,
-  x = 1440,
-  y = 365,
-  direction = 0,
-  breed = "boss/helmasaur_king",
-  savegame_variable = "dungeon_3_boss",
-}
-
 destination{
   name = "from_b3",
   layer = 0,
@@ -1198,5 +1188,15 @@ enemy{
   y = 429,
   direction = 0,
   breed = "dungeons/medusa",
+}
+
+enemy{
+  name = "boss",
+  layer = 0,
+  x = 1440,
+  y = 389,
+  direction = 0,
+  breed = "boss/helmasaur_king",
+  savegame_variable = "dungeon_3_boss",
 }
 

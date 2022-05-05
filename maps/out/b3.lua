@@ -10,32 +10,32 @@
 local map = ...
 local game = map:get_game()
 local camera = map:get_camera()
-local playing_maze
-local win_maze
+local outside_kakarico_playing_maze
+local outside_kakarico_won_maze
 
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 	game:show_map_name("kakarico_village")
-	playing_maze = false
-	win_maze = false
+	outside_kakarico_playing_maze = false
+	outside_kakarico_won_maze = false
 	map:set_digging_allowed(true)
 end
 
 function map:on_finished()
-	playing_maze = false
-	win_maze = false
+	outside_kakarico_playing_maze = false
+	outside_kakarico_won_maze = false
 end
 
 function grandma:on_interaction()
 	--if game:is_step_done("ganon_threat") then
-		game:start_dialog("maps.out.kakarico_village.grand_ma_1")
+		game:start_dialog("maps.out.kakarico_village.grandma_1")
 	--end
 end
 
 -- Maze Game
 function npc_maze_game:on_interaction()
-	if playing_maze == false and win_maze == false then --not playing
+	if outside_kakarico_playing_maze == false and outside_kakarico_won_maze == false then --not playing
 		game:start_dialog("maps.out.kakarico_village.maze_2", function(answer)
 			if answer == 1 then
 				if game:get_money() >= 20 then
@@ -44,9 +44,9 @@ function npc_maze_game:on_interaction()
 					npc_maze_game:set_traversable(true)
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze_3_yes")
-					playing_maze = true
+					outside_kakarico_playing_maze = true
 					sol.timer.start(game, 15000, function() --Timer for 15 seconds
-						--playing_maze = false
+						--outside_kakarico_playing_maze = false
 						if not switch_maze_game:is_activated() then
 							game:start_dialog("maps.out.kakarico_village.maze_loose")
 							sol.audio.play_music("outside/kakarico")
@@ -65,23 +65,23 @@ function npc_maze_game:on_interaction()
 				game:start_dialog("maps.out.kakarico_village.maze_3_no")
 			end
 		end)
-	elseif playing_maze == true and win_maze == false then -- playing
+	elseif outside_kakarico_playing_maze == true and outside_kakarico_won_maze == false then -- playing
 		game:start_dialog("maps.out.kakarico_village.maze_activate_switch")
-	elseif playing_maze == true and win_maze == true and not game:get_value("outside_kakarico_maze_piece_of_heart", true) then -- piece of heart
+	elseif outside_kakarico_playing_maze == true and outside_kakarico_won_maze == true and not game:get_value("outside_kakarico_maze_piece_of_heart", true) then -- piece of heart
 		game:start_dialog("maps.out.kakarico_village.maze_piece_of_heart", function()
 			hero:start_treasure("piece_of_heart")
 		end)
 		game:set_value("outside_kakarico_maze_piece_of_heart", true)
 		sol.audio.play_music("outside/kakarico")
-		playing_maze = false
-		win_maze = false
+		outside_kakarico_playing_maze = false
+		outside_kakarico_won_maze = false
 		hero:teleport("out/b3", "end_maze")
-	elseif playing_maze == true and win_maze == true and game:get_value("outside_kakarico_maze_piece_of_heart", true) then
+	elseif outside_kakarico_playing_maze == true and outside_kakarico_won_maze == true and game:get_value("outside_kakarico_maze_piece_of_heart", true) then
 		game:start_dialog("maps.out.kakarico_village.maze_rupee", function()
 			hero:start_treasure("rupee", 4)
 		end)
-		playing_maze = false
-		win_maze = false
+		outside_kakarico_playing_maze = false
+		outside_kakarico_won_maze = false
 		sol.audio.play_music("outside/kakarico")
 		hero:teleport("out/b3", "end_maze")
 	else
@@ -90,13 +90,13 @@ function npc_maze_game:on_interaction()
 end
 
 function switch_maze_game:on_activated()
-	if playing_maze == true and win_maze == false then
+	if outside_kakarico_playing_maze == true and outside_kakarico_won_maze == false then
 		sol.timer.stop_all(game)
 		game:start_dialog("maps.out.kakarico_village.maze_win", function()
-			win_maze = true
-			playing_maze = true
+			outside_kakarico_won_maze = true
+			outside_kakarico_playing_maze = true
 		end)
-	elseif playing_maze == false then
+	elseif outside_kakarico_playing_maze == false then
 		sol.audio.play_sound("wrong")
 		switch_maze_game:set_activated(false)
 	end

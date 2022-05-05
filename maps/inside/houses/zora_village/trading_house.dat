@@ -1,9 +1,9 @@
 properties{
-  x = 0,
-  y = 0,
+  x = 13488,
+  y = 656,
   width = 320,
   height = 240,
-  min_layer = -1,
+  min_layer = 0,
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 19",
@@ -570,8 +570,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
-  y = 144,
+  x = 192,
+  y = 128,
   width = 16,
   height = 16,
   pattern = "torch",
@@ -579,168 +579,182 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 104,
-  width = 8,
-  height = 32,
-  pattern = "floor_border.4",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 104,
-  width = 8,
-  height = 32,
-  pattern = "floor_border.4",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 96,
-  width = 112,
-  height = 8,
-  pattern = "floor_border.4",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 136,
-  width = 112,
-  height = 8,
-  pattern = "floor_border.4",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 104,
-  width = 96,
-  height = 32,
-  pattern = "floor_small.1",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 64,
-  width = 160,
-  height = 8,
-  pattern = "counter.2",
-}
-
-tile{
-  layer = 0,
-  x = 240,
+  x = 216,
   y = 72,
-  width = 8,
-  height = 8,
-  pattern = "counter.6",
+  width = 32,
+  height = 40,
+  pattern = "bed.default",
 }
 
 tile{
   layer = 0,
-  x = 72,
-  y = 72,
-  width = 8,
-  height = 8,
-  pattern = "counter.4",
-}
-
-tile{
-  layer = 0,
-  x = 72,
+  x = 184,
   y = 80,
   width = 8,
-  height = 16,
-  pattern = "counter.7",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 72,
-  width = 160,
   height = 8,
-  pattern = "counter.5",
+  pattern = "table.3",
 }
 
 tile{
   layer = 0,
-  x = 240,
-  y = 80,
-  width = 8,
-  height = 16,
-  pattern = "counter.9",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 64,
-  width = 8,
-  height = 8,
-  pattern = "counter.3",
-}
-
-tile{
-  layer = 0,
-  x = 72,
-  y = 64,
-  width = 8,
-  height = 8,
-  pattern = "counter.1",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 80,
-  width = 160,
-  height = 16,
-  pattern = "counter.8",
-}
-
-shop_treasure{
-  layer = 0,
-  x = 112,
+  x = 184,
   y = 104,
-  treasure_name = "heart",
-  price = 10,
-  font = "white_digits",
-  dialog = "maps.houses.zora_village.shop.heart",
+  width = 8,
+  height = 8,
+  pattern = "table.9",
 }
 
-shop_treasure{
+tile{
   layer = 0,
   x = 144,
   y = 104,
-  treasure_name = "green_potion",
-  price = 50,
-  font = "white_digits",
-  dialog = "maps.houses.zora_village.shop.green_potion",
+  width = 8,
+  height = 8,
+  pattern = "table.7",
 }
 
-shop_treasure{
+tile{
   layer = 0,
-  x = 176,
+  x = 152,
+  y = 80,
+  width = 32,
+  height = 8,
+  pattern = "table.2",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "table.4",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 88,
+  width = 8,
+  height = 16,
+  pattern = "table.6",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 88,
+  width = 32,
+  height = 16,
+  pattern = "table.5",
+}
+
+tile{
+  layer = 0,
+  x = 152,
   y = 104,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  price = 80,
-  font = "white_digits",
-  dialog = "maps.houses.zora_village.shop.bomb",
+  width = 32,
+  height = 8,
+  pattern = "table.8",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "table.1",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "seat.1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "bug_cage",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "bug_cage",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 40,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "table_piece.1",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 40,
+  width = 32,
+  height = 32,
+  pattern = "chimney.1",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 40,
+  width = 32,
+  height = 24,
+  pattern = "cabinet.6a",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 96,
+  width = 48,
+  height = 24,
+  pattern = "stove",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 112,
+  width = 32,
+  height = 32,
+  pattern = "floor_pot",
 }
 
 destination{
@@ -764,16 +778,66 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "out/k1",
-  destination = "from_north_hut",
+  destination = "from_rare_pearl",
 }
 
 npc{
+  name = "zora",
   layer = 0,
-  x = 160,
-  y = 61,
+  x = 88,
+  y = 141,
   direction = 3,
   subtype = 1,
   sprite = "npc/zora",
+}
+
+sensor{
+  name = "sensor_shop_welcome",
+  layer = 0,
+  x = 152,
+  y = 197,
+  width = 32,
+  height = 16,
+}
+
+destructible{
+  layer = 0,
+  x = 240,
+  y = 125,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 224,
+  y = 125,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 240,
+  y = 141,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 224,
+  y = 141,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
 }
 
 tile{
@@ -792,6 +856,24 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 192,
+  y = 16,
+  width = 32,
+  height = 24,
+  pattern = "chimney.2",
+}
+
+tile{
+  layer = 1,
+  x = 112,
+  y = 16,
+  width = 32,
+  height = 24,
+  pattern = "cabinet.6b",
 }
 
 tile{

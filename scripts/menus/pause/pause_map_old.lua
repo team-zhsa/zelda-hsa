@@ -1,9 +1,9 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local map_submenu = submenu:new()
-
+local max_floors_displayed = 6
 local outside_world_size = { width = 16640, height = 12960 }
 local outside_world_minimap_size = { width = 308, height = 240 }  -- original 308/240
-local max_floors_displayed = 6
+
 
 function map_submenu:on_finished()
 	self.game:set_hud_enabled(true)

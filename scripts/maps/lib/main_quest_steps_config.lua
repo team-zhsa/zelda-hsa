@@ -1,6 +1,5 @@
 local steps={
   "game_started",
-  "town_left",
   "sword_obtained",
   "world_map_obtained",
   "priest_met",
@@ -9,7 +8,6 @@ local steps={
   "dungeon_2_started",
   "dungeon_2_completed",
   "priest_kidnapped",
-  "golden_leaved_returned",
   "dungeon_3_started",
   "dungeon_3_completed",
   "master_sword_obtained",

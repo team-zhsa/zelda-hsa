@@ -10,7 +10,11 @@
 local map = ...
 local game = map:get_game()
 
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_opening_transition_finished()
-	game:start_dialog("maps.houses.cordinia_town.potion_shop.merchant_welcome")
+function sensor_shop_welcome:on_activated()
+  game:start_dialog("maps.houses.cordinia_town.potion_shop.merchant_welcome")
+  sensor_shop_welcome:remove()
+end
+
+function merchant:on_interaction()
+  game:start_dialog("maps.houses.cordinia_town.potion_shop.merchant_welcome")
 end

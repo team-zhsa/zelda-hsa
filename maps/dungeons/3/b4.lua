@@ -17,7 +17,7 @@ local is_boss_active = false
 
 map:register_event("on_started", function()
 	separator_manager:manage_map(map)
-	if heart_container ~= nil then
+	if heart_container ~= nil and boss ~= nil then
 		treasure_manager:disappear_pickable(map, "heart_container")
     treasure_manager:disappear_pickable(map, "pendant")
 	end

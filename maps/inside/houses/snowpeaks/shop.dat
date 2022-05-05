@@ -700,22 +700,22 @@ teletransporter{
 }
 
 npc{
+  name = "merchant",
   layer = 0,
   x = 160,
   y = 85,
   direction = 3,
   subtype = 1,
   sprite = "npc/merchant_green",
-  behavior = "dialog#maps.houses.snowpeaks.shop.merchant_welcome",
 }
 
 sensor{
   name = "sensor_shop_welcome",
   layer = 0,
-  x = 136,
-  y = 181,
-  width = 64,
-  height = 32,
+  x = 152,
+  y = 197,
+  width = 32,
+  height = 16,
 }
 
 tile{

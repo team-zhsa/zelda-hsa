@@ -25109,15 +25109,6 @@ teletransporter{
   destination = "from_outside",
 }
 
-sensor{
-  name = "open_house_windmill_sensor",
-  layer = 0,
-  x = 368,
-  y = 173,
-  width = 32,
-  height = 16,
-}
-
 teletransporter{
   layer = 0,
   x = 680,
@@ -26750,65 +26741,12 @@ destination{
 }
 
 door{
-  layer = 0,
-  x = 632,
-  y = 624,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 824,
-  y = 608,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 392,
-  y = 640,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 440,
-  y = 816,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
   name = "door_mapper",
   layer = 0,
   x = 200,
   y = 920,
   direction = 3,
   sprite = "entities/Doors/Outside/door_light01",
-}
-
-door{
-  name = "door_sahasrahla_1",
-  layer = 0,
-  x = 616,
-  y = 144,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-}
-
-destination{
-  name = "from_sporthouse",
-  layer = 0,
-  x = 376,
-  y = 173,
-  direction = 3,
 }
 
 npc{
@@ -26881,16 +26819,6 @@ jumper{
 
 teletransporter{
   layer = 0,
-  x = 368,
-  y = 144,
-  width = 16,
-  height = 16,
-  destination_map = "inside/houses/kakariko/sport_house",
-  destination = "from_outside",
-}
-
-teletransporter{
-  layer = 0,
   x = 672,
   y = 1424,
   properties = {
@@ -26944,15 +26872,6 @@ teletransporter{
   height = 16,
   destination_map = "inside/houses/kakariko/bar_0f",
   destination = "from_outside",
-}
-
-door{
-  name = "door_milk_bar",
-  layer = 0,
-  x = 648,
-  y = 864,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
 }
 
 custom_entity{
@@ -27143,26 +27062,6 @@ destructible{
   sprite = "entities/Stones/stone_white",
 }
 
-dynamic_tile{
-  name = "windmill",
-  layer = 0,
-  x = 368,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "6020",
-  tileset = "out/outside_buildings",
-}
-
-door{
-  name = "door_sahasrahla_2",
-  layer = 0,
-  x = 680,
-  y = 144,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
-}
-
 destination{
   name = "from_mapper",
   layer = 0,
@@ -27178,15 +27077,6 @@ sensor{
   y = 949,
   width = 16,
   height = 16,
-}
-
-door{
-  name = "door_library",
-  layer = 0,
-  x = 200,
-  y = 336,
-  direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
 }
 
 destination{
@@ -27213,13 +27103,97 @@ teletransporter{
   destination = "from_outside",
 }
 
-door{
+dynamic_tile{
+  name = "door_sahasrahla_1",
+  layer = 0,
+  x = 616,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+dynamic_tile{
+  name = "door_sahasrahla_2",
+  layer = 0,
+  x = 680,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+dynamic_tile{
   name = "door_shop",
   layer = 0,
   x = 840,
   y = 400,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+dynamic_tile{
+  name = "door_library",
+  layer = 0,
+  x = 200,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+dynamic_tile{
+  name = "door_milk_bar",
+  layer = 0,
+  x = 648,
+  y = 864,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+sensor{
+  name = "open_house_door_chest_sensor",
+  layer = 0,
+  x = 632,
+  y = 653,
+  width = 32,
+  height = 16,
+}
+
+destination{
+  name = "from_chest_house",
+  layer = 0,
+  x = 640,
+  y = 653,
   direction = 3,
-  sprite = "entities/Doors/Outside/door_light01",
+}
+
+teletransporter{
+  layer = 0,
+  x = 632,
+  y = 624,
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko/chest_house",
+  destination = "from_outside",
+}
+
+dynamic_tile{
+  name = "door_chest",
+  layer = 0,
+  x = 632,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
 }
 
 tile{
@@ -31497,7 +31471,7 @@ tile{
 tile{
   layer = 1,
   x = 344,
-  y = 104,
+  y = 80,
   width = 64,
   height = 64,
   pattern = "82",
@@ -31526,11 +31500,11 @@ tile{
 
 tile{
   layer = 1,
-  x = 816,
-  y = 584,
+  x = 624,
+  y = 592,
   width = 32,
   height = 16,
-  pattern = "6067",
-  tileset = "out/outside_buildings",
+  pattern = "43",
+  tileset = "outside_additions",
 }
 

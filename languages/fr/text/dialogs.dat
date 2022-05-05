@@ -1550,6 +1550,57 @@ lettre.
 }
 
 dialog{
+  id = "_treasure.trading_2.1",
+  icon = "180",
+  text = [[
+Tu as obtenu un fragment
+d'épine !$0 Attention, ça
+pique !
+
+]],
+}
+
+dialog{
+  id = "_treasure.trading_2.2",
+  icon = "181",
+  text = [[
+Tu as échangé le fragment
+d'épine contre un bâton de
+canelle.
+]],
+}
+
+dialog{
+  id = "_treasure.trading_2.3",
+  icon = "182",
+  text = [[
+Tu as échangé le bâton de
+cannelle contre un fragment de
+rocher.
+]],
+}
+
+dialog{
+  id = "_treasure.trading_2.4",
+  icon = "183",
+  text = [[
+Tu as échangé le rocher contre
+une bulle Zora ! $0 Mais tu ne
+peux pas t'en servir...
+]],
+}
+
+dialog{
+  id = "_treasure.trading_2.5",
+  icon = "184",
+  text = [[
+Tu as obtenu une perle rare !$0
+Maintenant tu peux aller voir le
+collectionneur de Firone !
+]],
+}
+
+dialog{
   id = "_treasure.tunic.2",
   icon = "61",
   text = [[
@@ -1596,6 +1647,19 @@ dialog{
 Tu as acheté du vin !
 Attention, tu peux
 devenir ivre !
+]],
+}
+
+dialog{
+  id = "_treasure.world_map.1",
+  icon = "150",
+  text = [[
+Tu as obtenu la carte d'Hyrule !
+Désormais tu pourras arpenter
+plus facilement tous ces chemins
+et partir à la conquête des
+recoins les plus reculés !
+Appuie sur SELECT.
 ]],
 }
 
@@ -1946,35 +2010,6 @@ six coeurs, très utile.
 }
 
 dialog{
-  id = "maps.caves.egg_of_the_dream_fish.moblins_cave.bowwow_1",
-  text = [[
-Tu as trouvé Toutou !
-Il a l'air féroce...
-]],
-}
-
-dialog{
-  id = "maps.caves.egg_of_the_dream_fish.moblins_cave.moblins_1",
-  text = [[
-C'est qui ce freluquet?   
-Les gars, débarrassez-moi 
-vite de lui !
-]],
-}
-
-dialog{
-  id = "maps.caves.egg_of_the_dream_fish.moblins_cave.moblins_2",
-  text = [[
-Tu es venu chercher 
-Toutou ?
-Tu dois être le 
-mercenaire envoyé par      
-Mme Miaou Miaou.
-Je vais te corriger !!
-]],
-}
-
-dialog{
   id = "maps.caves.goron.ascii",
   text = [[
 ]],
@@ -2043,6 +2078,35 @@ notre grotte et vas
 voir Dungor, à côté
 de la grotte du chef.
 Il te dira quoi faire
+]],
+}
+
+dialog{
+  id = "maps.caves.mountains.lost_old_man_cave.bowwow_1",
+  text = [[
+Tu as trouvé Toutou !
+Il a l'air féroce...
+]],
+}
+
+dialog{
+  id = "maps.caves.mountains.lost_old_man_cave.moblins_1",
+  text = [[
+C'est qui ce freluquet?   
+Les gars, débarrassez-moi 
+vite de lui !
+]],
+}
+
+dialog{
+  id = "maps.caves.mountains.lost_old_man_cave.moblins_2",
+  text = [[
+Tu es venu chercher 
+Toutou ?
+Tu dois être le 
+mercenaire envoyé par      
+Mme Miaou Miaou.
+Je vais te corriger !!
 ]],
 }
 
@@ -2324,7 +2388,7 @@ beurre, s'il te plaît ?
 }
 
 dialog{
-  id = "maps.houses.cordinia_town.chest_game.minigame_already_playing",
+  id = "maps.houses.cordinia_town.chest_house.minigame_already_playing",
   text = [[
 Très bien ! Ouvre le coffre que
 tu veux !
@@ -2332,7 +2396,7 @@ tu veux !
 }
 
 dialog{
-  id = "maps.houses.cordinia_town.chest_game.minigame_finish",
+  id = "maps.houses.cordinia_town.chest_house.minigame_finish",
   text = [[
 Tu n'as plus le droit d'ouvrir
 de coffres. Le jeu est fini.
@@ -2340,7 +2404,7 @@ de coffres. Le jeu est fini.
 }
 
 dialog{
-  id = "maps.houses.cordinia_town.chest_game.minigame_no",
+  id = "maps.houses.cordinia_town.chest_house.minigame_no",
   text = [[
 Bien, reviens jouer un jour.
 Je t'attendrai. D'ici là,
@@ -2349,7 +2413,7 @@ au revoir !
 }
 
 dialog{
-  id = "maps.houses.cordinia_town.chest_game.minigame_welcome",
+  id = "maps.houses.cordinia_town.chest_house.minigame_welcome",
   question = "1",
   text = [[
 Bonjour ! Tu peux ouvrir un
@@ -2362,7 +2426,7 @@ Une autre fois peut-être !
 }
 
 dialog{
-  id = "maps.houses.cordinia_town.chest_game.minigame_yes",
+  id = "maps.houses.cordinia_town.chest_house.minigame_yes",
   text = [[
 Allez ! Choisis bien !
 Bonne chance !
@@ -2503,6 +2567,55 @@ Bienvenue à la forge, jeune
 héros ! 
 La boutique se situe juste à
 côté.
+]],
+}
+
+dialog{
+  id = "maps.houses.faron_woods.collector_house.give_rare_pearl",
+  text = [[
+Serait-ce une perle rare que je
+vois ici ?$0 Si tu me la donnes,
+ma collection sera enfin
+complète et je te donnerai un
+merveilleux cadeau en retour...
+
+Donner la perle rare ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.faron_woods.collector_house.has_rare_pearl",
+  text = [[
+Tu savais qu'en allant
+]],
+}
+
+dialog{
+  id = "maps.houses.faron_woods.collector_house.needs_rare_pearl",
+  text = [[
+Je recherche une perle rare...$0
+On dit qu'on peut en trouver au
+domaine Zora, mais c'est trop
+dangereux pour que j'y aille...
+]],
+}
+
+dialog{
+  id = "maps.houses.faron_woods.collector_house.rare_pearl_no",
+  text = [[
+Alors ne me dérange pas !
+]],
+}
+
+dialog{
+  id = "maps.houses.faron_woods.collector_house.rare_pearl_yes",
+  text = [[
+Merci beaucoup !$0
+Grâce à toi, ma collection est
+enfin complète !
+Prends ceci, tu peux le garder.
 ]],
 }
 
@@ -3021,6 +3134,52 @@ Tu peux la garder !
 }
 
 dialog{
+  id = "maps.houses.kakarico_village.chest_house.minigame_already_playing",
+  text = [[
+Très bien ! Ouvre le coffre que
+tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.chest_house.minigame_finish",
+  text = [[
+Tu n'as plus le droit d'ouvrir
+de coffres. Le jeu est fini.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.chest_house.minigame_no",
+  text = [[
+Bien, reviens jouer un jour.
+Je t'attendrai. D'ici là,
+au revoir !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.chest_house.minigame_welcome",
+  question = "1",
+  text = [[
+Bonjour ! Tu peux ouvrir un
+coffre pour 40 rubis.
+Allez viens jouer !
+Bon, tu te décides ?
+Je joue !
+Une autre fois peut-être !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.chest_house.minigame_yes",
+  text = [[
+Allez ! Choisis bien !
+Bonne chance !
+]],
+}
+
+dialog{
   id = "maps.houses.kakarico_village.library.book_1.content",
   text = [[
 Le monde d'Hyrule est très vaste.
@@ -3343,106 +3502,6 @@ complète et détaillée.
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.marine_house.marine_1",
-  skip = "all",
-  text = [[
-Suis la route du Sud,
-vers la plage là où  je 
-t'ai trouvé. Depuis que
-tu as échoué ici, des
-monstres terribles
-rôdent dans le coin.
-Sois prudent...
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.marine_2",
-  text = [[
-Ah! Enfin...    
-J'ai cru que tu n'allais
-jamais te réveiller.   
-Tu devais cauchemarder.   
-Quoi? Zelda ??   
-Tu dois être encore 
-patraque !
-Je suis Marine ! 
-Tu es sur l'île
-Cocolint !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.tarin_1",
-  text = [[
-Salut $v ! T'es 
-réveillé...
-J'suis Tarkin...
-Tu t'sens mieux ?
-Quoi? Comment j'sais
-ton nom ? 
-Ben, c'est gravé
-sur le Bouclier !
-Ben, d'ailleurs 
-il est à toi !
-J'te l'donne !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.tarin_2",
-  skip = "all",
-  text = [[
-Salut $v !    
-Au fait! Y'a un autre 
-bidule qui est resté
-sur la plage.   
-Si tu y vas, fais
-attention aux 
-monstres !
-Car, depuis que t'es 
-ici $v, des monstres,   
-y'en a partout !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.tarin_3",
-  skip = "all",
-  text = [[
-Hé mon gars,    
-attends un peu ! 
-J'ai quêqu' chose à te 
-dire !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.tarin_4",
-  skip = "all",
-  text = [[
-Je suis éreinté !
-J'vais faire un p'tit 
-somme. 
-ZZZ...ZZZ...
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.marine_house.tarin_5",
-  skip = "all",
-  text = [[
-J'avais la dalle alors 
-j'suis allé chercher 
-des bananes sur la 
-plage !   
-MIAM MIAM !     
-Link si t'en veux,   
-fais comm'moi.
-]],
-}
-
-dialog{
   id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_1",
   text = [[
 Hmmm...         
@@ -3652,13 +3711,13 @@ Force, de la Sagesse et
 du Courage, Ainsi soit-il.$0
 J'irai vers la Triforce, de la
 Triforce qui m'exaucera, moi et
-toute ma jeunesse.$0
+toute ma jeunesse.
 Mettez une garde à ma bouche
 et une porte à mes lèvres.$0
 Et que la Triforce rayonne sans
 fin sur mon salut, maintenant et
 pour ce qu'il viendra. Que mon
-cri parvienne à la Triforce.$.
+cri parvienne à la Triforce.$0
 Et que celle-ci soit avec vous,
 maintenant et toujours.
 Ainsi soit-il.
@@ -3672,7 +3731,7 @@ Après que Ganon, ayant pris le
 contrôle des étages supérieurs
 du château, ait commencé à
 s'emparer petit à petit d'Hyrule,
-de mystérieux maux apparurent
+d'étranges maux apparurent
 à travers le pays.
 De mystérieux monstres ont
 alors commencé à rôder dans
@@ -3857,16 +3916,64 @@ photo !
 }
 
 dialog{
-  id = "maps.houses.zora_village.shop.bomb",
+  id = "maps.houses.zora_village.rare_pearl.give_zora_bubble",
+  question = "1",
   text = [[
-Des bombes artisanales qui
-viennent du village Goron !
-Attention, c'est dangereux !
+Ah ! Je vois que tu as avec
+toi une bulle Zora ! Si tu me
+la donnes, je pourrai t'offrir
+une perle rare, recherchée par
+beaucoup de collectinoneurs !
+
+Qu'en dis-tu ?
+Donner
+Garder
 ]],
 }
 
 dialog{
-  id = "maps.houses.zora_village.shop.green_potion",
+  id = "maps.houses.zora_village.rare_pearl.has_zora_bubble",
+  text = [[
+Si tu vas aux cascades Zora,
+tu pourras trouver quelques
+fragments de coeur...
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.rare_pearl.needs_zora_bubble",
+  text = [[
+J'ai perdu ma bulle Zora...$0
+Tu sais où on peut en trouver,
+par hasard ?
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.rare_pearl.zora_bubble_no",
+  text = [[
+Garde-la pour toi, alors !
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.rare_pearl.zora_bubble_yes",
+  text = [[
+Merci beaucoup ! Voici une perle
+rare pour toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.shop.merchant_welcome",
+  text = [[
+Bienvenue dans la Boutique Zora.
+Choisis ce que tu aimes.
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.shop.product_green_potion",
   text = [[
 Une potion verte pour regagner
 de la magie !
@@ -3874,9 +3981,18 @@ de la magie !
 }
 
 dialog{
-  id = "maps.houses.zora_village.shop.heart",
+  id = "maps.houses.zora_village.shop.product_heart",
   text = [[
 Voici un coeur si tu es blessé !
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.shop.product_red_potion",
+  text = [[
+Une potion rouge qui redonne de
+la vie... $0 Un peu comme les
+coeurs, mais en mieux.
 ]],
 }
 
@@ -3892,6 +4008,28 @@ Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integ
 Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat.
 Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique.
 Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+]],
+}
+
+dialog{
+  id = "maps.kaepora_gaebora.owl_4",
+  question = "1",
+  text = [[
+Hou ! C'est moi Kaepora
+Gaebora ! Tu es devant les
+Ruines !
+Des monstres tentacules y errent
+et ils sont très dangereux. Tu y
+trouveras une carte et une
+boussole pour t'y orienter.$0
+Le Boomerang y est aussi
+caché et te sera très utile. Ton
+but est de récupérer le pendentif
+du Courage qui y est caché.
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
 ]],
 }
 
@@ -4035,31 +4173,6 @@ dialog{
   text = [[
 Maison aux      
 Coquillages
-]],
-}
-
-dialog{
-  id = "maps.out.egg_of_the_dream_fish.sign_1",
-  text = [[
-Tu es près du Plateau 
-Tartare.
-Le photographe n'est
-pas loin.
-]],
-}
-
-dialog{
-  id = "maps.out.egg_of_the_dream_fish.sign_2",
-  text = [[
-Est : Mt Tamaranch  
-Ouest : Mrs Anémones
-]],
-}
-
-dialog{
-  id = "maps.out.egg_of_the_dream_fish.sign_3",
-  text = [[
-Mt Tamaranch
 ]],
 }
 
@@ -4347,7 +4460,6 @@ Sois un peu plus motivé !
 
 dialog{
   id = "maps.out.kakarico_village.grandma_1",
-  skip = "all",
   text = [[
 Les rumeurs disent qu'il s'est
 passé quelque chose au Château,
@@ -4724,7 +4836,6 @@ n'avons rien préparé.
 
 dialog{
   id = "maps.out.parapa.sign_1",
-  skip = "all",
   text = [[
 Nord : Village Kokiri
 Nord-Est : Désert
@@ -4734,7 +4845,6 @@ Sud : Ville de Parapa
 
 dialog{
   id = "maps.out.parapa.sign_2",
-  skip = "all",
   text = [[
 Nord : Plaine
 Est : Baie de Parapa
@@ -4937,7 +5047,7 @@ dialog{
   text = [[
 Nord : Plaine d'Hyrule
 Est : Sentier côtier
-Sud : Phare de la Pointe de Loup
+Sud : Phare de la Pointe du Loup
 Ouest : Plages de la Jument
 ]],
 }
@@ -4962,6 +5072,25 @@ dialog{
   text = [[
 Mont Tortue
 Altitude : 1000 m
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.sign_1",
+  text = [[
+Est : Cascades Zora
+Sud : Village Zora
+Ouest : Le roi Zora
+Nord : Espace en travaux
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_1",
+  text = [[
+Qui ? Le roi Zora ?
+Non, il est parti en vacances...$0
+Reviens plus tard, petit !
 ]],
 }
 

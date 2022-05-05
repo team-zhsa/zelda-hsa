@@ -6,7 +6,7 @@ local item_names_static_left = {
   "pendant_2",
   "pendant_3",
   "instrument_4",
-  "magnifying_lens",
+  "trading_2",
   "instrument_5",
   "instrument_6",
   "instrument_7",

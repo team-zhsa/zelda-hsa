@@ -3,35 +3,35 @@ properties{
   y = 0,
   width = 320,
   height = 240,
-  min_layer = 0,
+  min_layer = -1,
   max_layer = 2,
   world = "inside_world",
-  tileset = "Absolute Dungeon 03",
-  music = "inside/potion",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 176,
-  width = 48,
-  height = 48,
-  pattern = "ceiling.2",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 16,
-  width = 48,
-  height = 48,
-  pattern = "ceiling.2",
+  tileset = "Absolute Dungeon 19",
+  music = "inside/house",
 }
 
 tile{
   layer = 0,
   x = 40,
   y = 16,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 16,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 176,
   width = 48,
   height = 48,
   pattern = "ceiling.2",
@@ -408,6 +408,87 @@ tile{
 
 tile{
   layer = 0,
+  x = 136,
+  y = 184,
+  width = 8,
+  height = 8,
+  pattern = "carpet.7",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 160,
+  width = 8,
+  height = 24,
+  pattern = "carpet.6",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 160,
+  width = 32,
+  height = 24,
+  pattern = "carpet.5",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 152,
+  width = 32,
+  height = 8,
+  pattern = "carpet.2",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 160,
+  width = 8,
+  height = 24,
+  pattern = "carpet.4",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "carpet.1",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "carpet.3",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 184,
+  width = 8,
+  height = 8,
+  pattern = "carpet.9",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 184,
+  width = 32,
+  height = 8,
+  pattern = "carpet.8",
+}
+
+tile{
+  layer = 0,
   x = 168,
   y = 200,
   width = 64,
@@ -480,250 +561,271 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 104,
-  width = 24,
-  height = 32,
-  pattern = "window.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 104,
-  width = 24,
-  height = 32,
-  pattern = "window.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 248,
-  y = 72,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.4-9",
-}
-
-tile{
-  layer = 0,
-  x = 248,
-  y = 152,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.4-9",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 152,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.3-9",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 72,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.3-9",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 16,
-  width = 16,
-  height = 32,
-  pattern = "wall_pillar.1-9",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 16,
-  width = 16,
-  height = 32,
-  pattern = "wall_pillar.1-9",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 192,
-  width = 16,
-  height = 32,
-  pattern = "wall_pillar.2-9",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 192,
-  width = 16,
-  height = 32,
-  pattern = "wall_pillar.2-9",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 24,
-  width = 16,
-  height = 32,
-  pattern = "wine_rack.1",
-}
-
-tile{
-  layer = 0,
   x = 144,
   y = 24,
   width = 32,
-  height = 32,
-  pattern = "wine_rack.2",
+  height = 16,
+  pattern = "painting",
 }
 
 tile{
   layer = 0,
-  x = 176,
-  y = 24,
-  width = 16,
-  height = 32,
-  pattern = "wine_rack.3",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "carpet.7",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 120,
-  width = 144,
-  height = 8,
-  pattern = "carpet.8",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 88,
-  width = 8,
-  height = 32,
-  pattern = "carpet.4",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 88,
-  width = 144,
-  height = 32,
-  pattern = "carpet.5",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "carpet.9",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 88,
-  width = 8,
-  height = 32,
-  pattern = "carpet.6",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 80,
-  width = 8,
-  height = 8,
-  pattern = "carpet.3",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 80,
-  width = 8,
-  height = 8,
-  pattern = "carpet.1",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 80,
-  width = 144,
-  height = 8,
-  pattern = "carpet.2",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 96,
+  x = 96,
+  y = 144,
   width = 16,
   height = 16,
-  pattern = "torch_big.bottom",
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 104,
+  width = 8,
+  height = 32,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 104,
+  width = 8,
+  height = 32,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 96,
+  width = 112,
+  height = 8,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 136,
+  width = 112,
+  height = 8,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 104,
+  width = 96,
+  height = 32,
+  pattern = "floor_small.1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 64,
+  width = 160,
+  height = 8,
+  pattern = "counter.2",
 }
 
 tile{
   layer = 0,
   x = 240,
-  y = 96,
-  width = 16,
+  y = 72,
+  width = 8,
+  height = 8,
+  pattern = "counter.6",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 72,
+  width = 8,
+  height = 8,
+  pattern = "counter.4",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 80,
+  width = 8,
   height = 16,
-  pattern = "torch_big.bottom",
+  pattern = "counter.7",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 72,
+  width = 160,
+  height = 8,
+  pattern = "counter.5",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 80,
+  width = 8,
+  height = 16,
+  pattern = "counter.9",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 64,
+  width = 8,
+  height = 8,
+  pattern = "counter.3",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 64,
+  width = 8,
+  height = 8,
+  pattern = "counter.1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 80,
+  width = 160,
+  height = 16,
+  pattern = "counter.8",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 136,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 88,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 88,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-9",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 136,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-9",
 }
 
 tile{
   layer = 0,
   x = 120,
-  y = 88,
+  y = 192,
   width = 16,
-  height = 16,
-  pattern = "torch",
+  height = 32,
+  pattern = "wall_pillar.2-9",
 }
 
 tile{
   layer = 0,
   x = 184,
-  y = 88,
+  y = 192,
   width = 16,
-  height = 16,
-  pattern = "torch",
+  height = 32,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 16,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 16,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.1-9",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 112,
+  y = 104,
+  treasure_name = "heart",
+  price = 10,
+  font = "white_digits",
+  dialog = "maps.houses.zora_village.shop.product_heart",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 144,
+  y = 104,
+  treasure_name = "green_potion",
+  price = 70,
+  font = "white_digits",
+  dialog = "maps.houses.zora_village.shop.product_green_potion",
+}
+
+shop_treasure{
+  layer = 0,
+  x = 176,
+  y = 104,
+  treasure_name = "potion",
+  price = 80,
+  font = "white_digits",
+  dialog = "maps.houses.zora_village.shop.product_red_potion",
 }
 
 destination{
   name = "from_outside",
   layer = 0,
   x = 160,
-  y = 213,
+  y = 221,
   direction = 1,
 }
 
 teletransporter{
   layer = 0,
   x = 152,
-  y = 216,
+  y = 224,
   properties = {
     {
       key = "effect",
@@ -732,48 +834,17 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "out/i3",
-  destination = "from_white_hut",
-}
-
-shop_treasure{
-  layer = 0,
-  x = 200,
-  y = 88,
-  treasure_name = "blue_potion",
-  price = 300,
-  font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_blue_potion",
-}
-
-shop_treasure{
-  layer = 0,
-  x = 88,
-  y = 88,
-  treasure_name = "potion",
-  price = 160,
-  font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_red_potion",
-}
-
-shop_treasure{
-  layer = 0,
-  x = 144,
-  y = 88,
-  treasure_name = "green_potion",
-  price = 80,
-  font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_green_potion",
+  destination_map = "out/k1",
+  destination = "from_north_hut",
 }
 
 npc{
-  name = "merchant",
   layer = 0,
-  x = 200,
-  y = 157,
+  x = 160,
+  y = 61,
   direction = 3,
   subtype = 1,
-  sprite = "npc/merchant_yellow",
+  sprite = "npc/zora",
 }
 
 sensor{
@@ -804,35 +875,17 @@ tile{
 }
 
 tile{
-  layer = 1,
-  x = 64,
-  y = 80,
-  width = 16,
-  height = 16,
-  pattern = "torch_big.top",
-}
-
-tile{
-  layer = 1,
-  x = 240,
-  y = 80,
-  width = 16,
-  height = 16,
-  pattern = "torch_big.top",
-}
-
-tile{
   layer = 2,
-  x = 40,
+  x = 0,
   y = 0,
-  width = 240,
-  height = 16,
+  width = 40,
+  height = 240,
   pattern = "ceiling.2",
 }
 
 tile{
   layer = 2,
-  x = 0,
+  x = 280,
   y = 0,
   width = 40,
   height = 240,
@@ -850,10 +903,10 @@ tile{
 
 tile{
   layer = 2,
-  x = 280,
+  x = 40,
   y = 0,
-  width = 40,
-  height = 240,
+  width = 240,
+  height = 16,
   pattern = "ceiling.2",
 }
 

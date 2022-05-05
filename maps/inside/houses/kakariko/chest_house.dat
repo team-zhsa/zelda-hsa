@@ -1,10 +1,11 @@
 properties{
-  x = 0,
-  y = 0,
+  x = 632,
+  y = 6512,
   width = 320,
   height = 240,
   min_layer = 0,
   max_layer = 2,
+  world = "inside_world",
   tileset = "Absolute Dungeon 03",
   music = "inside/house",
 }
@@ -227,74 +228,218 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
-  y = 64,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 160,
+  x = 96,
   y = 72,
   width = 8,
-  height = 56,
-  pattern = "barrier.2-1",
+  height = 96,
+  pattern = "floor_border.4",
 }
 
 tile{
   layer = 0,
-  x = 160,
-  y = 128,
+  x = 216,
+  y = 72,
   width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
+  height = 96,
+  pattern = "floor_border.4",
 }
 
 tile{
   layer = 0,
-  x = 112,
-  y = 128,
-  width = 8,
+  x = 104,
+  y = 160,
+  width = 112,
   height = 8,
-  pattern = "barrier.border-1",
+  pattern = "floor_border.4",
 }
 
 tile{
   layer = 0,
-  x = 120,
-  y = 128,
-  width = 40,
+  x = 104,
+  y = 72,
+  width = 112,
   height = 8,
-  pattern = "barrier.1-1",
+  pattern = "floor_border.4",
 }
 
 tile{
   layer = 0,
-  x = 112,
-  y = 184,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
+  x = 104,
+  y = 80,
+  width = 112,
+  height = 80,
+  pattern = "floor_small.1",
 }
 
 tile{
   layer = 0,
-  x = 112,
-  y = 136,
-  width = 8,
-  height = 48,
-  pattern = "barrier.2-1",
+  x = 72,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch",
 }
 
 tile{
   layer = 0,
-  x = 160,
-  y = 40,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
+  x = 72,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 56,
+  width = 24,
+  height = 32,
+  pattern = "window.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 152,
+  width = 24,
+  height = 32,
+  pattern = "window.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 152,
+  width = 24,
+  height = 32,
+  pattern = "window.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 56,
+  width = 24,
+  height = 32,
+  pattern = "window.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 16,
+  width = 32,
+  height = 24,
+  pattern = "window.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 16,
+  width = 32,
+  height = 24,
+  pattern = "window.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 16,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 16,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 192,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 192,
+  width = 16,
+  height = 32,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 112,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 112,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-9",
 }
 
 teletransporter{
@@ -304,139 +449,121 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "out/a3",
-  destination = "from_sporthouse",
+  destination = "from_chest_house",
 }
 
 destination{
   name = "from_outside",
   layer = 0,
   x = 160,
-  y = 221,
+  y = 213,
   direction = 1,
 }
 
-stream{
-  layer = 0,
-  x = 72,
-  y = 61,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 100,
-}
-
-stream{
-  layer = 0,
-  x = 72,
-  y = 77,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 100,
-}
-
-stream{
-  layer = 0,
-  x = 72,
-  y = 93,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 100,
-}
-
-stream{
-  layer = 0,
-  x = 72,
-  y = 109,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 100,
-}
-
-stream{
-  layer = 0,
-  x = 104,
-  y = 61,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-}
-
-stream{
-  layer = 0,
-  x = 104,
-  y = 77,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-}
-
-stream{
-  layer = 0,
-  x = 104,
-  y = 93,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-}
-
-stream{
-  layer = 0,
-  x = 104,
-  y = 109,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-}
-
-stream{
-  layer = 0,
-  x = 136,
-  y = 61,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 80,
-}
-
-stream{
-  layer = 0,
-  x = 136,
-  y = 77,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 80,
-}
-
-stream{
-  layer = 0,
-  x = 136,
-  y = 93,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 80,
-}
-
-stream{
-  layer = 0,
-  x = 136,
-  y = 109,
-  direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
-  speed = 80,
-}
-
-dynamic_tile{
-  name = "gate",
-  layer = 0,
-  x = 160,
-  y = 48,
-  width = 8,
-  height = 16,
-  pattern = "barrier.2-1",
-}
-
 npc{
-  name = "npc_sport",
+  name = "npc_minigame",
   layer = 0,
-  x = 232,
-  y = 77,
+  x = 240,
+  y = 125,
   direction = 3,
   subtype = 1,
   sprite = "npc/mini_game_man_blue",
+}
+
+chest{
+  name = "chest_1",
+  layer = 0,
+  x = 112,
+  y = 93,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_2",
+  layer = 0,
+  x = 144,
+  y = 93,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_3",
+  layer = 0,
+  x = 176,
+  y = 93,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_4",
+  layer = 0,
+  x = 208,
+  y = 93,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_5",
+  layer = 0,
+  x = 112,
+  y = 125,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_6",
+  layer = 0,
+  x = 144,
+  y = 125,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_7",
+  layer = 0,
+  x = 176,
+  y = 125,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_8",
+  layer = 0,
+  x = 208,
+  y = 125,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_9",
+  layer = 0,
+  x = 112,
+  y = 157,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_10",
+  layer = 0,
+  x = 144,
+  y = 157,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_11",
+  layer = 0,
+  x = 176,
+  y = 157,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  name = "chest_12",
+  layer = 0,
+  x = 208,
+  y = 157,
+  sprite = "entities/Chests/chest_LttP",
 }
 
 tile{

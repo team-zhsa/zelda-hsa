@@ -5,12 +5,24 @@ local outside_world_size = {}
 local outside_world_minimap_size = {}
 local map_shown = false
 
-local cross_positions = { -- Indicates the coordinates in the entire world of the next step goal (when negative, the cross isn't displayed).
-  {x = 192, y = 288},-- Step 2 : Go to Blacksmith
-  {x = 192, y = 288},-- Main quest step 2
-  {x = 192, y = 288},-- Main quest step 2
-  {x = 0, y = 9880}, -- Main quest step 2
-  {x = 192, y = 288},-- Main quest step 2
+cross_positions = { -- Indicates the coordinates in the entire world of the next step goal (when negative, the cross isn't displayed).
+  {x = 09856, y = 02416}, -- Blacksmith
+  {x = 00656, y = 03048}, -- Sahasrahla's house in Kakarico
+  {x = 01824, y = 01736}, -- Priest in sanctuary
+  {x = 00904, y = 00080}, -- Ruins (starting)
+  {x = 00904, y = 00080}, -- Ruins (completing)
+  {x = 02336, y = 04520}, -- Forest Temple (starting)
+  {x = 02336, y = 04520}, -- Forest Temple (complet.)
+  {x = 01824, y = 01736}, -- Forest Temple completed, go to Sanctuary
+  {x = 01736, y = 00408}, -- Fire Temple (starting)
+  {x = 01736, y = 00408}, -- Fire Temple (complet.)
+  {x = 07824, y = 04660}, -- Temple of Time
+  {x = 07040, y = 04424}, -- Hyrule Castle
+  {x = 07040, y = 04424}, -- Hyrule Castle
+  {x = 07040, y = 04424}, -- Hyrule Castle
+  {x = 00000, y = 05760} -- Deku Tree
+  
+  
 }
 
 
@@ -77,6 +89,7 @@ function map_submenu:on_started()
     else
       -- if World Map not in inventory, show clouds in map screen
       map_shown = false
+      self.world_map_background_img = sol.surface.create("menus/pause_menu_world_background.png")
       self.world_minimap_img = sol.surface.create("menus/outside_world_clouds.png")
       self.world_minimap_visible_xy.y = 0
 			self.world_minimap_visible_xy.x = 0
@@ -316,7 +329,7 @@ function map_submenu:draw_world_map(dst_surface)
     if (hero_visible_y >= 30 and hero_visible_y <= 160 + 40) and (hero_visible_x >= 60 and hero_visible_x <= 200 + 60) then -- Makes the hero icon invisible when it is out of bounds.
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
-    if (cross_position_visible_x >= 30 and cross_position_visible_y >= 40) and (cross_position_visible_x >= 60 and cross_position_visible_y <= 200) then -- Offset
+    if (cross_position_visible_x >= 60 and cross_position_visible_y >= 40) and (cross_position_visible_x <= 260 and cross_position_visible_y <= 200) then -- Offset
       self.cross_sprite:draw(dst_surface, cross_position_visible_x, cross_position_visible_y)
     end
 
@@ -340,6 +353,8 @@ function map_submenu:draw_world_map(dst_surface)
       self.right_arrow_sprite:draw(dst_surface, 260, 62)
       self.right_arrow_sprite:draw(dst_surface, 260, 158)
     end
+  else
+    self.world_map_background_img:draw(dst_surface, 52, 32)
   end
 end
 
