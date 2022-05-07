@@ -3816,7 +3816,7 @@ dialog{
   id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper",
   skip = "all",
   text = [[
-Ah ! Te voilà $v !
+$1Ah ! Te voilà $v !
 Je t'attendais depuis un moment.
 Cela va être difficile pour toi
 de t'orienter dans ce vaste
@@ -3870,6 +3870,47 @@ distance.
 }
 
 dialog{
+  id = "maps.houses.north_west.sanctuary.agahnim_1",
+  text = [[
+$2Mouah ! Ah ! Ah ! $0
+Te voilà enfin, $v...$0
+
+Depuis le temps que je
+t'attendais...$0 Tu as cru
+pouvoir jouer le malin et
+arriver à temps, mais tu n'y es
+pas parvenu$0.$0.$0.$0
+Lorsque j'aurai avec moi les
+descendants des Sept Sages,
+je pourrai régner à tout jamais
+sur le monde ! $0Rien ne pourra
+alors m'arrêter...$0
+A bientôt , $v !
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.agahnim_1_copy",
+  text = [[
+...
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.agahnim_1_copy_copy",
+  text = [[
+...
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.agahnim_1_copy_copy_copy",
+  text = [[
+...
+]],
+}
+
+dialog{
   id = "maps.houses.north_west.sanctuary.altar_paper_left",
   text = [[
 Pentagone de gauche
@@ -3907,7 +3948,7 @@ Ainsi soit-il.
 dialog{
   id = "maps.houses.north_west.sanctuary.priest_2",
   text = [[
-Après que Ganon, ayant pris le
+$2Après que Ganon, ayant pris le
 contrôle des étages supérieurs
 du château, a commencé à
 s'emparer petit à petit d'Hyrule,
@@ -3925,7 +3966,7 @@ a quelques générations.
 dialog{
   id = "maps.houses.north_west.sanctuary.priest_3",
   text = [[
-La légende stipule que seule une
+$2La légende stipule que seule une
 arme est capable de vaincre ce
 monstre des ténèbres.$0
 On raconte qu'elle est cachée
@@ -3941,7 +3982,7 @@ dialog{
   id = "maps.houses.north_west.sanctuary.priest_4",
   question = "1",
   text = [[
-Ces trois pendentifs seraient
+$2Ces trois pendentifs seraient
 cachés en trois donjons
 distincts, recélant de monstres
 coriaces et dangereux.
@@ -3965,7 +4006,7 @@ Oui.
 dialog{
   id = "maps.houses.north_west.sanctuary.priest_5",
   text = [[
-Les ruines du nord t'attendent !
+$2Les ruines du nord t'attendent !
 Tu y trouveras le pendentif du
 Courage !
 ]],
@@ -4214,9 +4255,9 @@ dialog{
   id = "maps.kaepora_gaebora.owl_4",
   question = "1",
   text = [[
-Hou ! C'est moi Kaepora
-Gaebora ! Tu es devant les
-Ruines !
+$2Hou ! C'est moi Kaepora Gaebora !$0
+Tu es devant les Ruines !
+
 Des monstres tentacules y errent
 et ils sont très dangereux. Tu y
 trouveras une carte et une
@@ -4236,7 +4277,7 @@ dialog{
   id = "maps.kaepora_gaebora.owl_8",
   question = "1",
   text = [[
-Hou ! C'est moi Kaepora Gaebora !$0
+$2Hou ! C'est moi Kaepora Gaebora !$0
 Tu es devant le Temple de la
 Forêt !
 Comme aux Ruines, tu trouveras
@@ -4498,7 +4539,7 @@ Sud : Temple du Temps
 dialog{
   id = "maps.out.forest.priest_kidnapped",
   text = [[
-A l'aide !$0 $v !
+$2A l'aide !$0 $v !
 Le prêtre du sanctuaire s'est
 fait kidnapper ! $0Viens vite !
 ]],
