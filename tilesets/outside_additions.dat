@@ -675,6 +675,94 @@ tile_pattern{
 }
 
 tile_pattern{
+  id = "141",
+  ground = "wall",
+  default_layer = 0,
+  x = 648,
+  y = 432,
+  width = 8,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "142",
+  ground = "wall",
+  default_layer = 1,
+  x = 632,
+  y = 416,
+  width = 24,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "143",
+  ground = "traversable",
+  default_layer = 1,
+  x = 632,
+  y = 384,
+  width = 24,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "144",
+  ground = "traversable",
+  default_layer = 1,
+  x = 632,
+  y = 400,
+  width = 24,
+  height = 16,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "145",
+  ground = "traversable",
+  default_layer = 1,
+  x = 608,
+  y = 384,
+  width = 24,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "146",
+  ground = "traversable",
+  default_layer = 1,
+  x = 608,
+  y = 400,
+  width = 24,
+  height = 16,
+  repeat_mode = "vertical",
+}
+
+tile_pattern{
+  id = "147",
+  ground = "wall",
+  default_layer = 1,
+  x = 608,
+  y = 416,
+  width = 24,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "148",
+  ground = "wall",
+  default_layer = 0,
+  x = 608,
+  y = 432,
+  width = 8,
+  height = 16,
+  repeat_mode = "none",
+}
+
+tile_pattern{
   id = "15",
   ground = "wall",
   default_layer = 1,
@@ -1870,5 +1958,89 @@ tile_pattern{
   width = 16,
   height = 8,
   repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "flower_pot",
+  ground = "wall",
+  default_layer = 0,
+  x = 688,
+  y = 160,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "flower_pot_rect_blue",
+  ground = "empty",
+  default_layer = 0,
+  x = 752,
+  y = 120,
+  width = 32,
+  height = 16,
+}
+
+tile_pattern{
+  id = "flower_pot_rect_red",
+  ground = "empty",
+  default_layer = 0,
+  x = 688,
+  y = 120,
+  width = 32,
+  height = 16,
+}
+
+tile_pattern{
+  id = "flower_pot_rect_yellow",
+  ground = "empty",
+  default_layer = 0,
+  x = 720,
+  y = 120,
+  width = 32,
+  height = 16,
+}
+
+tile_pattern{
+  id = "flower_top_blue",
+  ground = "traversable",
+  default_layer = 1,
+  x = 736,
+  y = 144,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "flower_top_red",
+  ground = "traversable",
+  default_layer = 1,
+  x = 688,
+  y = 144,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "flower_top_yellow",
+  ground = "traversable",
+  default_layer = 1,
+  x = 712,
+  y = 144,
+  width = 24,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "market_fish",
+  ground = "empty",
+  default_layer = 0,
+  x = 688,
+  y = 176,
+  width = 32,
+  height = 32,
 }
 

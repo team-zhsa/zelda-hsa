@@ -47,7 +47,30 @@ end
 
 sensor_cutscene:register_event("on_activated", function()
   if game:is_step_last("priest_kidnapped") then
-    
+    map:set_cinematic_mode(true, options)
+    local agahnim_movement_to_position = sol.movement.create("straight")
+    agahnim_movement_to_position:set_ignore_obstacles(true)
+    agahnim_movement_to_position:set_ignore_suspend(true)
+    agahnim_movement_to_position:set_angle(3 * math.pi / 2)
+    agahnim_movement_to_position:set_speed(104)
+    agahnim_movement_to_position:set_max_distance(104)
+    agahnim_movement_to_position:start(npc_agahnim, function()
+      game:start_dialog("maps.houses.north_west.sanctuary.agahnim_1", game:get_player_name(), function()
+        local agahnim_movement_to_leave = sol.movement.create("straight")
+        agahnim_movement_to_position:set_ignore_obstacles(true)
+        agahnim_movement_to_position:set_ignore_suspend(true)
+        agahnim_movement_to_position:set_angle(math.pi / 2)
+        agahnim_movement_to_position:set_speed(104)
+        agahnim_movement_to_position:set_max_distance(104)
+        agahnim_movement_to_position:start(npc_agahnim, function()
+          npc_agahnim:set_enabled(false)
+          game:set_step_done("agahnim_met")
+          map:set_cinematic_mode(false, options)
+        end)
+      end)
+    end)
+  end
+end)
 
 dialog:register_event("on_interaction", function()
   map:set_cinematic_mode(true, options)
