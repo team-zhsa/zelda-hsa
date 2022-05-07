@@ -214,8 +214,8 @@ end)
 enemy:register_event("on_created", function(enemy)
 
   enemy:set_life(12)
-  enemy:set_size(16, 16)
-  enemy:set_origin(8, 13)
+  enemy:set_size(88, 88)
+  enemy:set_origin(45, 85)
   enemy:set_hurt_style("boss")
 
   local camera_x, camera_y, camera_width, camera_height = camera:get_bounding_box()

@@ -23,7 +23,9 @@ local dark_surfaces = {
   [2] = sol.surface.create("fogs/dark2.png"),
   [3] = sol.surface.create("fogs/dark3.png")
 }
-local black = {0, 0, 0}
+local all_dark_surface = sol.surface.create("fogs/dark.png")
+
+local black = {40, 40, 40}
 
 local map_meta = sol.main.get_metatable("map")
 
@@ -52,8 +54,11 @@ local function dark_map_on_draw(map, dst_surface)
   local x = 320 - hero_x + camera_x
   local y = 240 - hero_y + camera_y
   local dark_surface = dark_surfaces[hero:get_direction()]
-  dark_surface:draw_region(
-      x, y, screen_width, screen_height, dst_surface)
+  if map:get_game():has_item("lamp") then
+    dark_surface:draw_region(x, y, screen_width, screen_height, dst_surface)
+  else
+    dst_surface:fill_color(black, 0, 0, screen_width, screen_height)
+  end
 
   -- dark_surface may be too small if the screen size is greater
   -- than 320x240. In this case, add black bars.

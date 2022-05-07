@@ -20809,16 +20809,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 944,
-  y = 752,
-  width = 16,
-  height = 16,
-  pattern = "6140",
-  tileset = "out/outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 1120,
   y = 0,
   width = 8,
@@ -21803,16 +21793,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "93",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 784,
-  width = 16,
-  height = 16,
-  pattern = "6144",
-  tileset = "out/outside_buildings",
 }
 
 tile{
@@ -25032,6 +25012,81 @@ tile{
   pattern = "1110",
 }
 
+tile{
+  layer = 0,
+  x = 440,
+  y = 832,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "out/outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 840,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "out/outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 448,
+  y = 840,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "out/outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 832,
+  width = 8,
+  height = 8,
+  pattern = "5919",
+  tileset = "out/outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 456,
+  y = 832,
+  width = 8,
+  height = 8,
+  pattern = "5920",
+  tileset = "out/outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 792,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
+teletransporter{
+  layer = 0,
+  x = 440,
+  y = 816,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko_village/chicken_house",
+  destination = "from_outside",
+}
+
 sensor{
   name = "open_house_door_shop_sensor",
   layer = 0,
@@ -25080,7 +25135,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/library",
+  destination_map = "inside/houses/kakariko_village/library",
   destination = "from_outside",
 }
 
@@ -25105,7 +25160,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/mapper_shop",
+  destination_map = "inside/houses/kakariko_village/mapper_shop",
   destination = "from_outside",
 }
 
@@ -25121,7 +25176,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/sahasrahla",
+  destination_map = "inside/houses/kakariko_village/sahasrahla",
   destination = "from_outside_2",
 }
 
@@ -25137,7 +25192,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/sahasrahla",
+  destination_map = "inside/houses/kakariko_village/sahasrahla",
   destination = "from_outside",
 }
 
@@ -26752,7 +26807,7 @@ door{
 npc{
   layer = 0,
   x = 56,
-  y = 797,
+  y = 805,
   properties = {
     {
       key = "dialog_id",
@@ -26870,7 +26925,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/bar_0f",
+  destination_map = "inside/houses/kakariko_village/bar_0f",
   destination = "from_outside",
 }
 
@@ -26992,7 +27047,7 @@ teletransporter{
   },
   width = 16,
   height = 480,
-  destination_map = "inside/houses/kakariko/graveyard",
+  destination_map = "inside/houses/kakariko_village/graveyard",
   destination = "_side",
 }
 
@@ -27099,7 +27154,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/shop",
+  destination_map = "inside/houses/kakariko_village/shop",
   destination = "from_outside",
 }
 
@@ -27179,9 +27234,15 @@ teletransporter{
   layer = 0,
   x = 632,
   y = 624,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko/chest_house",
+  destination_map = "inside/houses/kakariko_village/chest_house",
   destination = "from_outside",
 }
 
@@ -27190,6 +27251,34 @@ dynamic_tile{
   layer = 0,
   x = 632,
   y = 624,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "out/outside_buildings",
+}
+
+sensor{
+  name = "open_house_door_chicken_sensor",
+  layer = 0,
+  x = 440,
+  y = 845,
+  width = 32,
+  height = 16,
+}
+
+destination{
+  name = "from_chicken",
+  layer = 0,
+  x = 448,
+  y = 845,
+  direction = 3,
+}
+
+dynamic_tile{
+  name = "door_chicken",
+  layer = 0,
+  x = 440,
+  y = 816,
   width = 16,
   height = 16,
   pattern = "6020",

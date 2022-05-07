@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/main_town/orange_house_w.
+-- Lua script of map inside/houses/hyrule_town/vase_house.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

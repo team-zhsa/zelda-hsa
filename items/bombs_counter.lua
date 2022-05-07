@@ -23,7 +23,6 @@ function item:on_using()
   else
     item:remove_amount(1)
     sound_timer = sol.timer.start(game, 500, function()
-    sol.audio.play_sound("common/prayer")
     
   end)
   local x, y, layer = item:create_bomb()

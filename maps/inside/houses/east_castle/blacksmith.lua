@@ -22,6 +22,19 @@ blacksmith_dialog:register_event("on_interaction", function()
   blacksmith_interaction()
 end)
 
+blacksmith_dialog_2:register_event("on_interaction", function()
+  blacksmith_interaction()
+end)
+
+blacksmith_dialog_3:register_event("on_interaction", function()
+  blacksmith_interaction()
+end)
+
+blacksmith_dialog_4:register_event("on_interaction", function()
+  blacksmith_interaction()
+end)
+
+
 function blacksmith_interaction()
   if game:is_step_last("game_started") then
     game:start_dialog("maps.houses.east_castle.blacksmith.merchant_sahasrahla", function()

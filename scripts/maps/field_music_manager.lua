@@ -21,11 +21,15 @@ require("scripts/multi_events")
 function field_music_manager:init(map)
 	local game = map:get_game()
 	function field_music_manager:start_field_music()
-	  if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
-	    sol.audio.play_music("outside/hyrule_field_day")
-	  elseif game:get_value("time_of_day") == "night" then
-      sol.audio.play_music("outside/hyrule_field_night")
-	  end
+    if game:is_step_last("priest_kidnapped") then
+      sol.audio.play_music("cutscenes/cutscene_danger")
+    else
+      if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
+        sol.audio.play_music("outside/hyrule_field_day")
+      elseif game:get_value("time_of_day") == "night" then
+        sol.audio.play_music("outside/hyrule_field_night")
+      end
+    end
 	end
 	field_music_manager:start_field_music()
 end

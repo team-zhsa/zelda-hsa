@@ -15,13 +15,13 @@ function initial_game:initialize_new_savegame(game)
   -- Initially give 3 hearts, the first tunic and the first wallet.
   game:set_max_life(12)
   game:set_life(game:get_max_life())
-  game:get_item("tunic"):set_variant(1)
+  game:get_item("green_tunic"):set_variant(1)
   game:get_item("rupee_bag"):set_variant(1)
   game:set_ability("sword", 0)
-  game:set_value("hour_of_day", 0)
-  game:set_value("time_of_day", "night")
-  game:set_starting_location("menus/introduction")
-	
+  game:set_value("hour_of_day", 7)
+  game:set_value("time_of_day", "day")
+  game:set_starting_location("menus/introduction", "destination")
+  
 end
 
 return initial_game

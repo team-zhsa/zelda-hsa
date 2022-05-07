@@ -145,9 +145,8 @@ Cette plate-forme est gelée !
 dialog{
   id = "_shop.amount_full",
   text = [[
-Tu as fait le plein de cet
-objet ! Tu n'as besoin de rien
-d'autre ?
+Tu as fait le plein de cet objet !
+Tu n'as besoin de rien d'autre ?
 ]],
 }
 
@@ -155,8 +154,8 @@ dialog{
   id = "_shop.not_enough_money",
   skip = "all",
   text = [[
-Désolé, mais tu n'as
-pas assez d'argent !
+Désolé, mais tu n'as pas assez
+d'argent !
 ]],
 }
 
@@ -2082,6 +2081,29 @@ Il te dira quoi faire
 }
 
 dialog{
+  id = "maps.caves.hyrule_town.lamp_cave.wizard_magic_bar",
+  question = "1",
+  text = [[
+Bonjour...$0
+Je vois que tu m'as trouvé...$0
+Pour seulement 50 rubis, je
+peux te laisser passer et
+t'apprendre les secrets de
+ma magie...
+Qu'en dis-tu ?
+Oui !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.caves.hyrule_town.lamp_cave.wizard_magic_bar_no",
+  text = [[
+Alors va-t-en !
+]],
+}
+
+dialog{
   id = "maps.caves.mountains.lost_old_man_cave.bowwow_1",
   text = [[
 Tu as trouvé Toutou !
@@ -3085,6 +3107,142 @@ L'AVENTURE D'HYRULE
 }
 
 dialog{
+  id = "maps.houses.hyrule_town.archery_house.already_playing",
+  skip = "current",
+  text = [[
+Tu dois tirer sur la cible qui
+bouge !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.not_bow",
+  skip = "current",
+  text = [[
+Bienvenue dans le stand de tir !
+Mais tu n'as pas d'arc$0.$0.$0.$0
+Reviens plus tard !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.not_enough_money",
+  skip = "current",
+  text = [[
+Désolé, mais tu n'as pas assez
+d'argent !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.play_question",
+  question = "1",
+  skip = "current",
+  text = [[
+Bienvenue dans le stand de tir
+de la citadelle ! Pour gagner,
+tu disposes de 10 flèches et tu
+dois tirer au moins 6 fois sur
+la cible.$0 Un prix te sera 
+donné si tu réussis à gagner.
+Une partie coûte 40 rubis.
+
+
+Alors, intéressé?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.playing_end",
+  skip = "current",
+  text = [[
+C'est terminé !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.playing_finished",
+  skip = "current",
+  text = [[
+Ah on dirait que ce générateur
+d'obstacles déconne encore...
+Maudit programme...
+Je m'en charge pour qu'à ton
+retour tout soit à nouveau
+opérationnel ne t'en fais pas !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.playing_no",
+  skip = "current",
+  text = [[
+Oh comme tu veux... 
+Après tout rien ne t'oblige
+à jouer n'est-ce pas ?
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.playing_start",
+  skip = "current",
+  text = [[
+C'est à toi de jouer !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.playing_yes",
+  skip = "current",
+  text = [[
+Super ! Je te prépare tout ça !
+Laisse moi un petit moment...
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.results_calculate",
+  skip = "current",
+  text = [[
+C'est fini jeune homme!
+Alors voyons combien de fois
+tu as touché la cible...
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.results_lose",
+  skip = "current",
+  text = [[
+Ah quel dommage ! Mais bon c'est
+le jeu...$0
+Hum...$0
+Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.results_win",
+  skip = "current",
+  text = [[
+Félicitations ! Tu es un bon
+tireur ! Voici un cadeau pour
+toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.archery_house.results_win_2",
+  skip = "current",
+  text = [[
+Tu es doué vraiment ! Au plaisir
+de te revoir !
+]],
+}
+
+dialog{
   id = "maps.houses.hyrule_town.building.sleep",
   question = "1",
   text = [[
@@ -3103,8 +3261,7 @@ Potion rouge
 }
 
 dialog{
-  id = "maps.houses.hyrule_town.sword.0",
-  question = "1",
+  id = "maps.houses.hyrule_town.vase_house.0",
   text = [[
 Bonjour !
 Bienvenue chez moi !
@@ -3112,7 +3269,7 @@ Bienvenue chez moi !
 }
 
 dialog{
-  id = "maps.houses.hyrule_town.sword.1",
+  id = "maps.houses.hyrule_town.vase_house.1",
   text = [[
 Apparemment, Hyrule
 est très dangereux en
@@ -3124,12 +3281,12 @@ te défendre. Tiens !
 }
 
 dialog{
-  id = "maps.houses.hyrule_town.sword.2",
+  id = "maps.houses.hyrule_town.vase_house.soldier_gate_closed",
   text = [[
-Bravo, tu as vaincu le
-garde ! Rare sont ceux
-qui y parviennent !
-Tu peux la garder !
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
 ]],
 }
 
@@ -3729,7 +3886,7 @@ dialog{
   text = [[
 Après que Ganon, ayant pris le
 contrôle des étages supérieurs
-du château, ait commencé à
+du château, a commencé à
 s'emparer petit à petit d'Hyrule,
 d'étranges maux apparurent
 à travers le pays.
@@ -3767,15 +3924,34 @@ distincts, recélant de monstres
 coriaces et dangereux.
 Il faut vaincre à tout prix
 Ganon, sinon quoi notre survie
-est menacée ! Le premier donjon
+est menacée ! Un des pendentifs
 serait situé à l'extrême nord-
 ouest du pays, au-delà du lac,
 perché sur les hauteurs des
-Ruines. $v, nous
+Ruines. Je t'ai indiqué l'endroit
+sur ta carte.
+$v, nous
 comptons sur toi !
+
 As-tu tout compris ?
 Non, pas du tout !
 Oui.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_5",
+  text = [[
+Les ruines du nord t'attendent !
+Tu y trouveras le pendentif du
+Courage !
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west.sanctuary.priest_praying",
+  text = [[
+...
 ]],
 }
 
@@ -4297,6 +4473,15 @@ Sud : Temple du Temps
 }
 
 dialog{
+  id = "maps.out.forest.priest_kidnapped",
+  text = [[
+A l'aide !$0 $v !
+Le prêtre du sanctuaire s'est
+fait kidnapper ! $0Viens vite !
+]],
+}
+
+dialog{
   id = "maps.out.forest.sign_1",
   text = [[
 Attention au plancher        
@@ -4312,16 +4497,6 @@ dialog{
 Je vais t'apprendre le menuet
 de la Forêt, qui te servira à te
 téléporter ici.
-]],
-}
-
-dialog{
-  id = "maps.out.forest.tarin",
-  text = [[
-Oh là là !! J'me sens 
-tout drôle !
-Faut m'reposer avant 
-d'rentrer.
 ]],
 }
 

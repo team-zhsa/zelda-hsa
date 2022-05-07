@@ -10226,15 +10226,6 @@ enemy{
   treasure_name = "random_central",
 }
 
-enemy{
-  name = "auto_enemy_8",
-  layer = 0,
-  x = 896,
-  y = 773,
-  direction = 0,
-  breed = "dungeons/medusa",
-}
-
 destructible{
   layer = 0,
   x = 776,
@@ -11533,15 +11524,6 @@ door{
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_10",
-}
-
-enemy{
-  name = "auto_enemy_16",
-  layer = 0,
-  x = 704,
-  y = 773,
-  direction = 0,
-  breed = "dungeons/medusa",
 }
 
 sensor{

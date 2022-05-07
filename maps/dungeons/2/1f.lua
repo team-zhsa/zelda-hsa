@@ -1,7 +1,6 @@
 -- Variables
 local map = ...
 local game = map:get_game()
-local is_small_boss_active = false
 
 -- Include scripts
 require("scripts/multi_events")
@@ -17,6 +16,11 @@ local is_boss_active = false
 
 map:register_event("on_started", function()
 	separator_manager:manage_map(map)
+	if heart_container ~= nil and boss ~= nil then
+		treasure_manager:disappear_pickable(map, "heart_container")
+    treasure_manager:disappear_pickable(map, "pendant")
+	end
+	separator_manager:manage_map(map)
   door_manager:close_when_torches_unlit(map, "torch_12_door", "door_12_s")
   door_manager:open_when_torches_lit(map, "torch_12_door", "door_12_s")
   door_manager:open_when_torches_lit(map, "torch_28_door", "door_group_boss")
@@ -24,22 +28,21 @@ map:register_event("on_started", function()
   treasure_manager:disappear_pickable(map, "small_key_22")
   treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_22_small_key", "small_key_22")
 	separator_manager:manage_map(map)
-	if heart_container ~= nil then
-		treasure_manager:disappear_pickable(map, "heart_container")
-	end
 end)
 
 -- Boss events
 if boss ~= nil then
 	function sensor_boss:on_activated()
-		map:close_doors("door_group_boss")
 		sol.audio.play_music("boss/boss_albw")
 		sensor_boss:remove()
+    map:close_doors("door_group_boss")
+    hero:save_solid_ground()
 	end
 
 	function boss:on_dead()
 		treasure_manager:appear_pickable(map, "heart_container")
-		map:open_doors("door_group_boss")
+    treasure_manager:appear_pickable(map, "pendant")
+    map:open_doors("door_group_boss")
 	end
 end
 

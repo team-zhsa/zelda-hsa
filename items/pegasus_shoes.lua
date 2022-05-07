@@ -59,7 +59,7 @@ game_meta:register_event("on_started", function(game)
   game:register_event("on_joypad_button_pressed", function(game, button)
     -- Note : there is no "item_X" command check here, since this item has been integrated into the new global command override system.
     if not game:is_suspended() then
-      if button == 5 or button == 7 then
+      if button == 5 or button == 7 and game:has_item("pegasus_shoes") then
           local hero=game:get_hero()
           local entity=hero:get_facing_entity()
 

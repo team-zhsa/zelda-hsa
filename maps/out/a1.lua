@@ -13,8 +13,6 @@ local field_music_manager = require("scripts/maps/field_music_manager")
 
 map:register_event("on_draw", function(map)
 
-  -- Music
-  field_music_manager:init(map)
 
 end)
 
@@ -22,6 +20,9 @@ end)
 map:register_event("on_started", function()
 	game:show_map_name("ruins")
 	map:set_digging_allowed(true)
+    -- Music
+  field_music_manager:init(map)
+
 end)
 
 sensor_cutscene:register_event("on_activated", function()
@@ -29,7 +30,7 @@ sensor_cutscene:register_event("on_activated", function()
     map:set_cinematic_mode(true, options)
     hero:freeze()
     hero:set_direction(1)
-    audio_manager:play_music("cutscenes/kaepora_gaebora")
+    sol.audio.play_music("cutscenes/kaepora_gaebora")
     local owl_movement_to_position = sol.movement.create("target")
     owl_movement_to_position:set_target(owl_4_position)
     owl_movement_to_position:set_ignore_obstacles(true)
@@ -54,7 +55,7 @@ function owl_dialog()
       owl_movement_leave:set_speed(60)
       owl_movement_leave:start(owl_4, function()
         map:set_cinematic_mode(false, options)
-        field_music_manager:init(map)
+        --field_music_manager:init(map)
         hero:unfreeze()
       end) 
     end

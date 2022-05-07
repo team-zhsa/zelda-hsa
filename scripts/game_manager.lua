@@ -39,6 +39,7 @@ function game_manager:create(file)
 		game:set_world_rain_mode("outside_world", nil)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(1000)
+    
 	end)
 
 	game:register_event("on_finished", function()

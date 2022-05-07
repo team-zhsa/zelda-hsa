@@ -694,6 +694,82 @@ tile{
   pattern = "carpet.3",
 }
 
+tile{
+  layer = 0,
+  x = 144,
+  y = 24,
+  width = 32,
+  height = 16,
+  pattern = "painting",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 112,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 112,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.4-9",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 200,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 200,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 16,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 16,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.1-9",
+}
+
+wall{
+  layer = 0,
+  x = 88,
+  y = 96,
+  width = 144,
+  height = 32,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
 shop_treasure{
   name = "product_shield",
   layer = 0,
@@ -708,7 +784,7 @@ shop_treasure{
 shop_treasure{
   name = "product_heart",
   layer = 0,
-  x = 192,
+  x = 160,
   y = 96,
   treasure_name = "heart",
   price = 10,
@@ -719,7 +795,7 @@ shop_treasure{
 shop_treasure{
   name = "product_world_map",
   layer = 0,
-  x = 160,
+  x = 192,
   y = 96,
   treasure_name = "world_map",
   treasure_savegame_variable = "inside_kakarico_mapper_world_map",

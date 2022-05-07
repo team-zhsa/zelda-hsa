@@ -49800,7 +49800,7 @@ tile_pattern{
   x = 776,
   y = 432,
   width = 16,
-  height = 32,
+  height = 24,
   repeat_mode = "none",
 }
 
@@ -49811,7 +49811,7 @@ tile_pattern{
   x = 776,
   y = 496,
   width = 16,
-  height = 32,
+  height = 24,
   repeat_mode = "none",
 }
 
@@ -49897,9 +49897,9 @@ tile_pattern{
   ground = "wall",
   default_layer = 0,
   x = 792,
-  y = 432,
+  y = 440,
   width = 16,
-  height = 32,
+  height = 24,
   repeat_mode = "none",
 }
 
@@ -49908,9 +49908,9 @@ tile_pattern{
   ground = "wall",
   default_layer = 0,
   x = 792,
-  y = 496,
+  y = 504,
   width = 16,
-  height = 32,
+  height = 24,
   repeat_mode = "none",
 }
 
@@ -49997,7 +49997,7 @@ tile_pattern{
   default_layer = 0,
   x = 776,
   y = 480,
-  width = 32,
+  width = 24,
   height = 16,
   repeat_mode = "none",
 }
@@ -50008,7 +50008,7 @@ tile_pattern{
   default_layer = 0,
   x = 776,
   y = 544,
-  width = 32,
+  width = 24,
   height = 16,
   repeat_mode = "none",
 }
@@ -50094,9 +50094,9 @@ tile_pattern{
   id = "wall_pillar.4-8",
   ground = "wall",
   default_layer = 0,
-  x = 776,
+  x = 784,
   y = 464,
-  width = 32,
+  width = 24,
   height = 16,
   repeat_mode = "none",
 }
@@ -50105,9 +50105,9 @@ tile_pattern{
   id = "wall_pillar.4-9",
   ground = "wall",
   default_layer = 0,
-  x = 776,
+  x = 784,
   y = 528,
-  width = 32,
+  width = 24,
   height = 16,
   repeat_mode = "none",
 }
@@ -50172,7 +50172,7 @@ tile_pattern{
   y = 240,
   width = 8,
   height = 8,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50183,7 +50183,7 @@ tile_pattern{
   y = 240,
   width = 8,
   height = 8,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50216,7 +50216,7 @@ tile_pattern{
   y = 248,
   width = 8,
   height = 16,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50227,7 +50227,7 @@ tile_pattern{
   y = 248,
   width = 8,
   height = 16,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50238,7 +50238,7 @@ tile_pattern{
   y = 288,
   width = 8,
   height = 8,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50249,7 +50249,7 @@ tile_pattern{
   y = 288,
   width = 8,
   height = 8,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50282,7 +50282,7 @@ tile_pattern{
   y = 272,
   width = 8,
   height = 16,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50293,7 +50293,7 @@ tile_pattern{
   y = 272,
   width = 8,
   height = 16,
-  repeat_mode = "horizontal",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50304,7 +50304,7 @@ tile_pattern{
   y = 272,
   width = 8,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50315,7 +50315,7 @@ tile_pattern{
   y = 280,
   width = 8,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50348,7 +50348,7 @@ tile_pattern{
   y = 272,
   width = 16,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50359,7 +50359,7 @@ tile_pattern{
   y = 280,
   width = 16,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50370,7 +50370,7 @@ tile_pattern{
   y = 248,
   width = 8,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50381,7 +50381,7 @@ tile_pattern{
   y = 256,
   width = 8,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50414,7 +50414,7 @@ tile_pattern{
   y = 248,
   width = 16,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -50425,7 +50425,7 @@ tile_pattern{
   y = 256,
   width = 16,
   height = 8,
-  repeat_mode = "vertical",
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -51159,7 +51159,6 @@ border_set{
 
 border_set{
   id = "floor-3",
-  inner = true,
   pattern_0 = "wall_border.4-3",
   pattern_1 = "wall_border.1-3",
   pattern_2 = "wall_border.3-3",
@@ -51167,8 +51166,8 @@ border_set{
   pattern_4 = "wall_border.corner.2-3",
   pattern_5 = "wall_border.corner.1-3",
   pattern_6 = "wall_border.corner.3-3",
-  pattern_7 = "wall_border.corner.4-3",
-  pattern_8 = "wall_border.corner_reverse.2-3",
+  pattern_7 = "wall_border.corner_reverse.2-3",
+  pattern_8 = "wall_border.corner_reverse.1-3",
   pattern_9 = "wall_border.corner_reverse.1-3",
   pattern_10 = "wall_border.corner_reverse.3-3",
   pattern_11 = "wall_border.corner_reverse.4-3",
@@ -51176,7 +51175,6 @@ border_set{
 
 border_set{
   id = "floor-3-sub",
-  inner = true,
   pattern_0 = "wall_low_border.4-3",
   pattern_1 = "wall_low_border.1-3",
   pattern_2 = "wall_low_border.3-3",

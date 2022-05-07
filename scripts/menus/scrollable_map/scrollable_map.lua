@@ -8,12 +8,13 @@ local map_shown = false
 cross_positions = { -- Indicates the coordinates in the entire world of the next step goal (when negative, the cross isn't displayed).
   {x = 09856, y = 02416}, -- Blacksmith
   {x = 00656, y = 03048}, -- Sahasrahla's house in Kakarico
-  {x = 01824, y = 01736}, -- Priest in sanctuary
+  {x = 01808, y = 01736}, -- Priest in sanctuary
   {x = 00904, y = 00080}, -- Ruins (starting)
   {x = 00904, y = 00080}, -- Ruins (completing)
-  {x = 02336, y = 04520}, -- Forest Temple (starting)
+  {x = 00656, y = 03048}, -- Sahasrahla's house in Kakarico
   {x = 02336, y = 04520}, -- Forest Temple (complet.)
-  {x = 01824, y = 01736}, -- Forest Temple completed, go to Sanctuary
+  {x = 02336, y = 04520}, -- Forest Temple (complet.)
+  {x = 01808, y = 01736}, -- Forest Temple completed, go to Sanctuary
   {x = 01736, y = 00408}, -- Fire Temple (starting)
   {x = 01736, y = 00408}, -- Fire Temple (complet.)
   {x = 07824, y = 04660}, -- Temple of Time

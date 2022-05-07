@@ -121,7 +121,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
         sol.timer.start(hero, 10, function()
             local s,c=hero:get_state()
             --print ("prepare to drown when in state"..s..(c and "("..c:get_description()..")" or ""))
-            hero:drown()
+            --hero:drown()
           end)
       end
     end

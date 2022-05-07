@@ -7956,6 +7956,16 @@ custom_entity{
   model = "torch",
 }
 
+enemy{
+  name = "boss",
+  layer = 0,
+  x = 800,
+  y = 1085,
+  direction = 0,
+  breed = "boss/spectral_ganon",
+  savegame_variable = "dungeon_2_boss",
+}
+
 tile{
   layer = 1,
   x = 792,

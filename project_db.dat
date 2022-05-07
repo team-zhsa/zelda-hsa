@@ -99,6 +99,7 @@ map{ id = "inside/caves/east_castle/to_blacksmith", description = "Cave to black
 map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
+map{ id = "inside/caves/hyrule_town/lamp_cave", description = "Lamp Cave" }
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
 map{ id = "inside/caves/mountains/goron_town_1f", description = "Goron Town (1st Floor)" }
 map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Basement 1)" }
@@ -106,7 +107,8 @@ map{ id = "inside/caves/mountains/lost_old_man", description = "Lost old man cav
 map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/spectacle_rock_b1", description = "Spectacle Rock (Basement 1)" }
 map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to fire temple" }
-map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to the Spectacle Rock (Ground Floor)" }
+map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to Spectacle Rock (Ground Floor)" }
+map{ id = "inside/caves/mountains/to_west_upper_mountains_b1", description = "Cave to Spectacle Rock (Basement 1)" }
 map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
 map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
 map{ id = "inside/caves/north_west/ruins_cave", description = "Ruins Cave" }
@@ -121,23 +123,24 @@ map{ id = "inside/houses/cordinia/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
-map{ id = "inside/houses/faron_woods/map_house", description = "Map House" }
+map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/hylia_lake/fortune_teller", description = "Fortune Teller" }
-map{ id = "inside/houses/kakariko/bar_0f", description = "Milk Bar (Ground Floor)" }
-map{ id = "inside/houses/kakariko/bar_b1", description = "Milk Bar (Basement 1)" }
-map{ id = "inside/houses/kakariko/chest_house", description = "Chest House" }
-map{ id = "inside/houses/kakariko/grandma_house", description = "Grandma House" }
-map{ id = "inside/houses/kakariko/graveyard", description = "Graveyard" }
-map{ id = "inside/houses/kakariko/library", description = "Library" }
-map{ id = "inside/houses/kakariko/library_2f", description = "Library (2nd Floor)" }
-map{ id = "inside/houses/kakariko/mapper_shop", description = "Mapper's Shop" }
-map{ id = "inside/houses/kakariko/sahasrahla", description = "Sahasrahla House" }
-map{ id = "inside/houses/kakariko/shop", description = "Kakarico Shop" }
-map{ id = "inside/houses/kakariko/windmill", description = "Windmill" }
-map{ id = "inside/houses/main_town/orange_house_e", description = "East Orange House" }
-map{ id = "inside/houses/main_town/orange_house_w", description = "West Orange House" }
-map{ id = "inside/houses/main_town/sword_shop", description = "Sword Shop" }
-map{ id = "inside/houses/main_town/temple_of_time", description = "Temple of Time" }
+map{ id = "inside/houses/hyrule_town/archery_house", description = "West Orange House" }
+map{ id = "inside/houses/hyrule_town/inn", description = "Hyrule Town Inn" }
+map{ id = "inside/houses/hyrule_town/lost_woods_map_house", description = "Lost Woods Map House" }
+map{ id = "inside/houses/hyrule_town/temple_of_time", description = "Temple of Time" }
+map{ id = "inside/houses/hyrule_town/vase_house", description = "Vase House" }
+map{ id = "inside/houses/kakariko_village/bar_0f", description = "Milk Bar (Ground Floor)" }
+map{ id = "inside/houses/kakariko_village/bar_b1", description = "Milk Bar (Basement 1)" }
+map{ id = "inside/houses/kakariko_village/chest_house", description = "Chest House" }
+map{ id = "inside/houses/kakariko_village/chicken_house", description = "Chicken House" }
+map{ id = "inside/houses/kakariko_village/grandma_house", description = "Grandma House" }
+map{ id = "inside/houses/kakariko_village/graveyard", description = "Graveyard" }
+map{ id = "inside/houses/kakariko_village/library", description = "Library" }
+map{ id = "inside/houses/kakariko_village/mapper_shop", description = "Mapper's Shop" }
+map{ id = "inside/houses/kakariko_village/sahasrahla", description = "Sahasrahla House" }
+map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
+map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/north_west/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
@@ -1154,7 +1157,7 @@ sprite{ id = "npc/dog", description = "Dog" }
 sprite{ id = "npc/drunk_man", description = "Drunk Man" }
 sprite{ id = "npc/fat_fairy", description = "Fat Fairy" }
 sprite{ id = "npc/flute_boy", description = "Flute Boy" }
-sprite{ id = "npc/fortune_teller", description = "Wizard" }
+sprite{ id = "npc/fortune_teller", description = "Fortune Teller" }
 sprite{ id = "npc/frog", description = "Frog" }
 sprite{ id = "npc/gerudo_hesla", description = "Gerudo (Hesla)" }
 sprite{ id = "npc/gerudo_male", description = "Gerudo (Male)" }
@@ -1293,6 +1296,7 @@ music{ id = "boss/mallard", description = "Mallard" }
 music{ id = "boss/miniboss", description = "Miniboss" }
 music{ id = "cutscenes/credits", description = "Credits & Alternate Savegame Music" }
 music{ id = "cutscenes/crystal_get", description = "Get crystal" }
+music{ id = "cutscenes/cutscene_danger", description = "Danger Cutscence (Bridge on Fire TP)" }
 music{ id = "cutscenes/cutscene_introduction", description = "Introduction" }
 music{ id = "cutscenes/cutscene_introduction_loop", description = "Introduction (looped)" }
 music{ id = "cutscenes/end_credits", description = "End credits" }
@@ -2090,8 +2094,8 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "Lucifer"
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "Lucifer", }
-file{ path = "maps/inside/houses/kakariko/shop.dat", author = "Lucifer", }
-file{ path = "maps/inside/houses/kakariko/shop.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "Lucifer", }
+file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "Lucifer", }
 file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "Lucifer", }
 file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "Lucifer", }
 file{ path = "maps/out/a1.dat", author = "Lucifer", }

@@ -147,6 +147,26 @@ local function get_lights_from_map(map)
     ["window.2-1"] = true,
     ["window.3-1"] = true,
     ["window.4-1"] = true,
+    ["window.1-2"] = true,
+    ["window.2-2"] = true,
+    ["window.3-2"] = true,
+    ["window.4-2"] = true,
+    ["stain_glass.wide.1.top"] = true,
+    ["stain_glass.wide.2.top"] = true,
+    ["stain_glass.wide.3.top"] = true,
+    ["stain_glass.wide.4.top"] = true,
+    ["stain_glass.wide.1.bottom"] = true,
+    ["stain_glass.wide.2.bottom"] = true,
+    ["stain_glass.wide.3.bottom"] = true,
+    ["stain_glass.wide.4.bottom"] = true,
+    ["stain_glass.1.top"] = true,
+    ["stain_glass.2.top"] = true,
+    ["stain_glass.3.top"] = true,
+    ["stain_glass.4.top"] = true,
+    ["stain_glass.1.bottom"] = true,
+    ["stain_glass.2.bottom"] = true,
+    ["stain_glass.3.bottom"] = true,
+    ["stain_glass.4.bottom"] = true,
   }
 
   local big = "110"
@@ -165,6 +185,26 @@ local function get_lights_from_map(map)
     ["window.2-1"] = "0,-1",
     ["window.3-1"] = "1,0",
     ["window.4-1"] = "-1,0",
+    ["window.1-2"] = "0,1",
+    ["window.2-2"] = "0,-1",
+    ["window.3-2"] = "1,0",
+    ["window.4-2"] = "-1,0",
+    ["stain_glass.wide.1.top"] = "0,1",
+    ["stain_glass.wide.2.top"] = "0,-1",
+    ["stain_glass.wide.3.top"] = "1,0",
+    ["stain_glass.wide.4.top"] = "-1,0",
+    ["stain_glass.wide.1.bottom"] = "0,1",
+    ["stain_glass.wide.2.bottom"] = "0,-1",
+    ["stain_glass.wide.3.bottom"] = "1,0",
+    ["stain_glass.wide.4.bottom"] = "-1,0",
+    ["stain_glass.1.top"] = "0,1",
+    ["stain_glass.2.top"] = "0,-1",
+    ["stain_glass.3.top"] = "1,0",
+    ["stain_glass.4.top"] = "-1,0",
+    ["stain_glass.1.bottom"] = "0,1",
+    ["stain_glass.2.bottom"] = "0,-1",
+    ["stain_glass.3.bottom"] = "1,0",
+    ["stain_glass.4.bottom"] = "-1,0",
   }
 
   local win_col = "128,128,255"
@@ -173,6 +213,27 @@ local function get_lights_from_map(map)
     ["window.2-1"] = win_col,
     ["window.3-1"] = win_col,
     ["window.4-1"] = win_col,
+    ["window.1-2"] = win_col,
+    ["window.2-2"] = win_col,
+    ["window.3-2"] = win_col,
+    ["window.4-2"] = win_col,
+    ["stain_glass.wide.1.top"] = win_col,
+    ["stain_glass.wide.2.top"] = win_col,
+    ["stain_glass.wide.3.top"] = win_col,
+    ["stain_glass.wide.4.top"] = win_col,
+    ["stain_glass.wide.1.bottom"] = win_col,
+    ["stain_glass.wide.2.bottom"] = win_col,
+    ["stain_glass.wide.3.bottom"] = win_col,
+    ["stain_glass.wide.4.bottom"] = win_col,
+    ["stain_glass.1.top"] = win_col,
+    ["stain_glass.2.top"] = win_col,
+    ["stain_glass.3.top"] = win_col,
+    ["stain_glass.4.top"] = win_col,
+    ["stain_glass.1.bottom"] = win_col,
+    ["stain_glass.2.bottom"] = win_col,
+    ["stain_glass.3.bottom"] = win_col,
+    ["stain_glass.4.bottom"] = win_col,
+    
   }
   
   local distort_angle = {
@@ -286,7 +347,9 @@ local function setup_inside_lights(map)
     --create hero light
     local hl = create_light(map,0,0,0,"80","196,128,200")
     function hl:on_update()
-      hl:set_position(hero:get_position())
+      if map:get_game():has_item("lamp") then
+        hl:set_position(hero:get_position())
+      end
     end
     hl.excluded_occs = {[hero]=true}
   end
@@ -294,7 +357,7 @@ local function setup_inside_lights(map)
   --add a static light for each torch pattern in the map
   local map_lights = get_lights_from_map(map)
   local default_radius = "160"
-  local default_color = "193,185,100"
+  local default_color = "193,185,80"
 
   for _,l in ipairs(map_lights) do
     create_light(map,l.x,l.y,l.layer,l.radius or default_radius,l.color or default_color,

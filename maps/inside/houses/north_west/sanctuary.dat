@@ -1,6 +1,6 @@
 properties{
-  x = 0,
-  y = 0,
+  x = 1808,
+  y = 1376,
   width = 320,
   height = 720,
   min_layer = -1,
@@ -1103,6 +1103,24 @@ tile{
   pattern = "prison_wall.7",
 }
 
+tile{
+  layer = -1,
+  x = 64,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = -1,
+  x = 240,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
 stairs{
   layer = -1,
   x = 152,
@@ -2149,6 +2167,24 @@ tile{
   width = 24,
   height = 32,
   pattern = "stain_glass.wide.4.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
 }
 
 teletransporter{

@@ -14,7 +14,7 @@ function map:jump_from_bed()
   hero:start_jumping(7, 24, true)
   game:set_pause_allowed(true)
   bed:get_sprite():set_animation("empty_open")
-  game:set_starting_location("houses/castle/1f", "start_game")
+  game:set_starting_location("inside/castle/rooms", "start_game")
   sol.audio.play_sound("hero_lands")
 end
 
@@ -41,11 +41,11 @@ function map:on_started(destination)
     hero:set_enabled(false)
     sol.audio.play_music("cutscenes/raining")
     sol.timer.start(3000, function()
-      game:set_value("game_started", true)
+      game:set_step_done("game_started")
       map:jump_from_bed()
     end)
   end
-	if not game:get_value("obtained_sword", true) then
+	if not game:is_step_done("sword_obtained") then
 		sol.audio.play_music("cutscenes/raining")
 		npc_zelda:set_enabled(true)
 	else
