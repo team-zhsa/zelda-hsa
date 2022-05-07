@@ -1196,6 +1196,25 @@ npc{
   subtype = 0,
 }
 
+npc{
+  name = "npc_agahnim",
+  layer = -1,
+  x = 160,
+  y = 149,
+  direction = 3,
+  subtype = 1,
+  sprite = "enemies/boss/agahnim",
+}
+
+sensor{
+  name = "sesor_cutscene",
+  layer = -1,
+  x = 152,
+  y = 317,
+  width = 32,
+  height = 16,
+}
+
 tile{
   layer = 0,
   x = 40,

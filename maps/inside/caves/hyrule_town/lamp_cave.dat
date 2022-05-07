@@ -3367,6 +3367,33 @@ tile{
   pattern = "stairs_inner_up.2.border.1-1",
 }
 
+tile{
+  layer = 0,
+  x = 72,
+  y = 888,
+  width = 16,
+  height = 8,
+  pattern = "stairs_inner_up.2.top-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "stairs_inner_up.2.top.border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "stairs_inner_up.2.top.border.1-1",
+}
+
 wall{
   layer = 0,
   x = 56,
@@ -3560,7 +3587,7 @@ npc{
   y = 429,
   direction = 3,
   subtype = 1,
-  sprite = "npc/ordon_goat",
+  sprite = "npc/thief_yellow",
 }
 
 sensor{
@@ -3963,33 +3990,6 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.2-2",
-}
-
-tile{
-  layer = 1,
-  x = 72,
-  y = 888,
-  width = 16,
-  height = 8,
-  pattern = "stairs_inner_up.2.top-1",
-}
-
-tile{
-  layer = 1,
-  x = 88,
-  y = 888,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.2-1",
-}
-
-tile{
-  layer = 1,
-  x = 64,
-  y = 888,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.1-1",
 }
 
 tile{

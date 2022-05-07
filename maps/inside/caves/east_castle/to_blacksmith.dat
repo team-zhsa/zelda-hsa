@@ -3823,17 +3823,6 @@ wall{
   stops_blocks = true,
 }
 
-destructible{
-  layer = 0,
-  x = 904,
-  y = 429,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
 shop_treasure{
   layer = 0,
   x = 488,
@@ -3932,122 +3921,11 @@ teletransporter{
 
 destructible{
   layer = 0,
-  x = 904,
-  y = 381,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 888,
-  y = 381,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 872,
-  y = 381,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 728,
-  y = 381,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 712,
-  y = 381,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 696,
-  y = 381,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 696,
-  y = 429,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 904,
-  y = 173,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 904,
-  y = 189,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 168,
-  y = 85,
-  treasure_name = "rupee",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
   x = 152,
   y = 85,
   treasure_name = "heart",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
   can_be_cut = true,
 }
 
@@ -4058,18 +3936,6 @@ destructible{
   treasure_name = "heart",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 56,
-  y = 541,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
   can_be_cut = true,
 }
 
@@ -4080,7 +3946,96 @@ destructible{
   treasure_name = "heart",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 904,
+  y = 381,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 888,
+  y = 381,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 904,
+  y = 189,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 904,
+  y = 173,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 904,
+  y = 429,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 872,
+  y = 381,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 728,
+  y = 381,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 712,
+  y = 381,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 56,
+  y = 541,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
 
@@ -4088,10 +4043,39 @@ destructible{
   layer = 0,
   x = 56,
   y = 669,
-  treasure_name = "heart",
+  treasure_name = "magic_flask",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 85,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 696,
+  y = 381,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 696,
+  y = 429,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
 

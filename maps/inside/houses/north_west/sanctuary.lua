@@ -21,20 +21,33 @@ function map:on_started()
       priest:set_enabled(true)
       door:set_enabled(true)
       dialog:set_enabled(true)
+      npc_agahnim:set_enabled(false)
+    elseif game:is_step_last("priest_kidnapped") then -- Meet Agahnim
+      sol.audio.play_music("inside/sanctuary_3")
+      priest:set_enabled(false)
+      door:set_enabled(false)
+      dialog:set_enabled(false)
+      npc_agahnim:set_enabled(true)
     elseif game:get_time() >= 7 and game:get_time() < 15 then
       sol.audio.play_music("inside/sanctuary_3")
       priest:set_enabled(true)
       door:set_enabled(true)
       dialog:set_enabled(true)
+      npc_agahnim:set_enabled(false)
     else -- The priest isn't present.
       priest:set_enabled(false)
       door:set_enabled(false)
       dialog:set_enabled(false)
+      npc_agahnim:set_enabled(false)
     end
   --end
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end
+
+sensor_cutscene:register_event("on_activated", function()
+  if game:is_step_last("priest_kidnapped") then
+    
 
 dialog:register_event("on_interaction", function()
   map:set_cinematic_mode(true, options)
