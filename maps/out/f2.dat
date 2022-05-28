@@ -34702,6 +34702,17 @@ custom_entity{
   model = "cliff",
 }
 
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/g2",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 240,
