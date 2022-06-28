@@ -15,10 +15,45 @@ map:register_event("on_started", function()
 	map:set_digging_allowed(true)
 end)
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
+sensor_cutscene:register_event("on_activated", function()
+	if game:is_step_last("agahnim_met") then
+    map:set_cinematic_mode(true, options)
+    hero:freeze()
+    hero:set_direction(0)
+    audio_manager:play_music("cutscenes/kaepora_gaebora")
+    local owl_movement_to_position = sol.movement.create("target")
+    owl_movement_to_position:set_target(owl_position)
+    owl_movement_to_position:set_ignore_obstacles(true)
+    owl_movement_to_position:set_ignore_suspend(true)
+    owl_movement_to_position:set_speed(60)
+    owl_movement_to_position:start(owl, function()
+      owl_dialog()
+    end)
+  end
+end)
 
+function owl_dialog()
+  game:start_dialog("maps.kaepora_gaebora.owl_13", function(answer)
+    if answer == 1 then
+      owl_dialog()
+    elseif answer == 2 then
+      game:start_dialog("maps.out.west_mountains.song_learnt", function()
+        hero:start_treasure("song_2_fire")
+        game:set_step_done("dungeon_3_started")
+        local owl_movement_leave = sol.movement.create("target")
+        owl_movement_leave:set_target(1328, 328)
+        owl_movement_leave:set_ignore_obstacles(true)
+        owl_movement_leave:set_ignore_suspend(true)
+        owl_movement_leave:set_ignore_suspend(true)
+        owl_movement_leave:set_speed(60)
+        owl_movement_leave:start(owl, function()
+          map:set_cinematic_mode(false, options)
+          audio_manager:play_music_fade(map, "outside/mountains")
+          hero:unfreeze()
+        end)
+      end) 
+    end
+  end)
 end
 
 -- Handle boulders spawning depending on activated sensor.
