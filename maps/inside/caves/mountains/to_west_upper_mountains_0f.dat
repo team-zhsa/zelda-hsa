@@ -13,6 +13,15 @@ properties{
 
 tile{
   layer = -1,
+  x = 0,
+  y = 0,
+  width = 640,
+  height = 720,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = -1,
   x = 416,
   y = 544,
   width = 48,
@@ -529,6 +538,26 @@ stairs{
   y = 624,
   direction = 3,
   subtype = 4,
+}
+
+enemy{
+  name = "auto_enemy_8",
+  layer = -1,
+  x = 448,
+  y = 493,
+  direction = 0,
+  breed = "dungeons/keese",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_9",
+  layer = -1,
+  x = 528,
+  y = 549,
+  direction = 0,
+  breed = "dungeons/keese",
+  treasure_name = "random_mountains",
 }
 
 tile{
@@ -3272,6 +3301,120 @@ stairs{
   subtype = 0,
 }
 
+custom_entity{
+  layer = 0,
+  x = 264,
+  y = 125,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/torch",
+  model = "torch",
+}
+
+custom_entity{
+  layer = 0,
+  x = 200,
+  y = 637,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/torch",
+  model = "torch",
+}
+
+custom_entity{
+  layer = 0,
+  x = 520,
+  y = 669,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/torch",
+  model = "torch",
+}
+
+custom_entity{
+  layer = 0,
+  x = 552,
+  y = 445,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/torch",
+  model = "torch",
+}
+
+enemy{
+  name = "auto_enemy_1",
+  layer = 0,
+  x = 232,
+  y = 93,
+  direction = 0,
+  breed = "dungeons/rat",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_2",
+  layer = 0,
+  x = 248,
+  y = 373,
+  direction = 0,
+  breed = "dungeons/rat",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_3",
+  layer = 0,
+  x = 536,
+  y = 381,
+  direction = 0,
+  breed = "dungeons/rat",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_4",
+  layer = 0,
+  x = 208,
+  y = 485,
+  direction = 0,
+  breed = "dungeons/rat",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_5",
+  layer = 0,
+  x = 240,
+  y = 453,
+  direction = 0,
+  breed = "dungeons/keese",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_6",
+  layer = 0,
+  x = 160,
+  y = 309,
+  direction = 0,
+  breed = "dungeons/keese",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_7",
+  layer = 0,
+  x = 496,
+  y = 381,
+  direction = 0,
+  breed = "dungeons/keese",
+  treasure_name = "random_mountains",
+}
+
 tile{
   layer = 1,
   x = 144,
@@ -3396,6 +3539,177 @@ tile{
   width = 16,
   height = 8,
   pattern = "door_top.stairs_up.1-1",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 112,
+  height = 224,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 224,
+  width = 32,
+  height = 496,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 32,
+  y = 576,
+  width = 16,
+  height = 144,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 32,
+  y = 400,
+  width = 80,
+  height = 176,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 400,
+  width = 80,
+  height = 40,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 32,
+  y = 224,
+  width = 192,
+  height = 32,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 224,
+  y = 160,
+  width = 80,
+  height = 96,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 0,
+  width = 336,
+  height = 272,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 624,
+  y = 272,
+  width = 16,
+  height = 432,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 480,
+  y = 704,
+  width = 160,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 656,
+  width = 240,
+  height = 64,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 288,
+  y = 256,
+  width = 16,
+  height = 400,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 240,
+  y = 552,
+  width = 48,
+  height = 104,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 592,
+  width = 112,
+  height = 64,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 384,
+  width = 48,
+  height = 208,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 272,
+  width = 128,
+  height = 112,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 432,
+  y = 272,
+  width = 96,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 0,
+  width = 192,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 112,
+  y = 704,
+  width = 64,
+  height = 16,
+  pattern = "ceiling.2",
 }
 
 separator{
