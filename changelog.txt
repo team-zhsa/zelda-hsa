@@ -1,0 +1,275 @@
+Changelog:
+The versions are indicated as following:
+Status of the version (Pre-Alpha/Beta/Gamma(Prerelease)/Final) + version index + date when the version developement has finished (DD/MM/YY) + codename
+
+Pre-Alpha 0.3 (14/02/18):
+	ADD: The inventory is from A Link to the Dream.
+	ADD: Functionnal game-over menu.
+
+Pre-Alpha 0.4 (07/03/18):
+	ADD: Added maps.
+
+Pre-Alpha 0.5 (12/03/18):
+	ADD: Created a savegame and title menu.
+
+Pre-Alpha 0.6 (03/08/18):
+	ADD: Added maps.
+
+Pre-Alpha 1.0 (05/08/18):
+	ADD: Added new dialogues and maps.
+
+Pre-Alpha 1.0.1 (21/10/19):
+	ADD: Added new items and textures.
+	CHG: Rupees max value changed to 2000 instead of 300.
+	CHG: Changed screen lenght to 248 instead of 320.
+	CHG: Changed inventory texture.
+	FIX: Fixed hero freezing on using bow.
+	
+Alpha 1.1 (01/01/20):
+	CHG: Changed save menu.
+	CHG: Changed screen lenght to 320 instead of 248.
+	CHG: Changed dungeon savegames syntax.
+
+Alpha 1.2 (10/02/20):
+	CHG: Made the first boss easier by setting his life's points to 40 instead of 120.
+	FIX: Fixed some missing sounds errors.
+	FIX: Fixed inventory problems.
+
+Alpha 1.3 (25/03/20):
+	ADD: Added some dialogues.
+	CHG: Updated tilesets.
+	FIX: Fixed hero freezing on using boomerang.
+	
+Alpha 1.3.1 (02/04/20):
+	FIX: Fixed boomerang sound missing.
+	FIX: Fixed inventory wrong items movement.
+
+Alpha 1.3.2 (11/04/20):
+	ADD: Added weather script from Diarandor.
+	ADD: Added a few shaders.
+	
+Alpha 1.4 (19/01/21) "Angler Update":
+	ADD: Added ceiling dropping function.
+	ADD: Added anticopy (password) script from Max.
+	ADD: Added credits script.
+	CHG: Cleaned up musics.
+	CHG: Cleaned up sprites.
+	FIX: Fixed wrong sprite for shield 1 when going right.
+
+Alpha 1.5 (23/02/21) "Barracuda Update":
+	ADD: Added maps.
+	ADD: Added outside maps coordinates.
+	ADD: Added a new inventory page.
+	ADD: Added fire and ice rods sprites.
+	ADD: Linked outside maps with teletransporters.
+
+Alpha 1.6 (23/03/21) "Carp Update":
+	ADD: Finished the maze game in Kakarico Village.
+	ADD: Added maps.
+	CHG: Tweaked random pickables probabilities.
+	CHG: Changed dark rooms system.
+	FIX: Fixed hero freezing on using hookshot.
+	FIX: Fixed 15 hearts not displaying properly in the HUD.
+
+Alpha 1.7 (11/04/21) "Dorado Update":
+	ADD: Added maps.
+	ADD: Added world minimap.
+	ADD: Added wind rod.
+	ADD: Added feather.
+	CHG: Changed hero sprite for climbing ladders.
+	CHG: Updated dungeons tilesets for autotiles.
+	CHG: Changed wind rod sprite when using it.
+	CHG: Changed chest sprite color.
+	CHG: Started switching enemies' behaviours to ALTTD's.
+	CHG: Started switching to audio_manager.lua.
+	FIX: Fixed soldiers slowing down hero.
+	FIX: Fixed moldorm not working.
+	FIX: Fixed dark room sensor not working.
+	FIX: Fixed dungeon minimap system.
+	FIX: Fixed shield item not working for ALTTD's ennemies.
+	
+Alpha 1.7.1 (16/04/21) "Dorado Update":
+	ADD: Added entities sprites.
+	ADD: Added dialogues.
+	ADD: Added ocarina teletransportation system.
+	ADD: Added maps.
+	ADD: Added bottles.
+	ADD: Added statistics menu.
+	ADD: Added assignable tunics.
+	ADD: Added bomb flowers.
+	ADD: Added three columns to ocarina inventory page.
+	CHG: Moved some rocks.
+	CHG: Started switching to audio_manager.lua.
+	CHG: Improved credits menu.
+	CHG: Tweaked (again) random pickables probabilities.
+	CHG: Increased ocarina sounds volume.
+	CHG: Changed items inventory sprite.
+	CHG: Changed items inventory position.
+	CHG: Cleaned up entities sprites.
+	FIX: Fixed hero sprite going blank on some frames when lifting heavy objects.
+	FIX: Fixed hero sprite position being wrong in minimap.
+	FIX: Fixed whirlwind stuck in bushes.
+	FIX: Fixed items inventory captions.
+	REM: Removed hero sprite for climbing ladders because not working as intended.
+	
+Alpha 1.8 (11/05/21) "Eel Update":
+	ADD: Added new ocarina songs.
+	ADD: Added ocarina song durations instead of using 20 seconds for everything.
+	ADD: Added bumpers.
+	ADD: Added day/night cycle (finally!).
+	ADD: Added mode 7 teletransportation system from ALTTD.
+	ADD: Added additions tileset.
+	ADD: Added FSA and GB effects.
+	ADD: Added camera shaking when reaching an obstacle while running.
+	ADD: Added scrollable map menu.
+	ADD: Added big magic bar in the HUD.
+	ADD: Added hero conditions (electrocution, freezing, confusion, slow, poisoned) from BOM.
+	ADD: Added ennemies.
+	ADD: Added map name system.
+	ADD: Added maps.
+	CHG: Changed NPCs palette by swtiching to the NTSC palette.
+	CHG: Changed musics.
+	CHG: Changed treasure dialogues to ALTTP's.
+	CHG: Changed dialogue box sprites.
+	CHG: Changed soldiers noticing hero distance to 64 instead of 500.
+	CHG: Changed entity shadow having the wrong sprite.
+	CHG: Changed song system to use a generic config file.
+	CHG: Updated dungeons tilesets.
+	CHG: Changed outside ground colors to ALTTP's.
+	CHG: Changed title screen background.
+	CHG: Reduced dungeons minimaps sprites to 40x56 instead of 80x112.
+	CHG: Changed random pickables probabilities.
+	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	FIX: Fixed game over red screen having the wrong color.
+	FIX: Fixed game crashing when picking pickables with the hookshot.
+	FIX: Fixed game crashing when killing the first boss.
+	FIX: Fixed compass showing a wrong position for chests and hero in map menu.
+	REM: Removed the ability to catch pickables with the hookshot because causing a crash.
+	REM: Removed weather script from Diarandor because not working with the day/night cycle.
+	
+Alpha 1.9 (15/06/21) "Flatfish Update":
+	ADD: Added a secret credits music.
+	ADD: Added custom running script.
+	ADD: Added support for inside maps in the minimap.
+	ADD: Readded weather script from Diarandor.
+	ADD: Started adding support for joypad in menus and items.
+	ADD: Added methods game:is_quest_active() and game:set_quest_active().
+	ADD: Added methods game:is_quest_finished() and game:set_quest_finished().
+	ADD: Added a custom title screen.
+	ADD: Added bosses.
+	ADD: Added healing wand.
+	ADD: Added maps.
+	CHG: Changed to a global field music manager instead of defining the music from the maps themselves.
+	CHG: Cleaned up items sprites.
+	CHG: Cleaned up items dialog icons sprites.
+	CHG: Cleaned up soldiers sprites.
+	CHG: Cleaned up enemies.
+	CHG: Changed shields sprites.
+	CHG: Changed savegames menu.
+	CHG: Changed some graphics.
+	CHG: Changed cacti sprite by making it opaque instead of transparent.
+	CHG: Changed dungeons minimap scale to support multiple dungeon sizes.
+	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	FIX: Fixed bombs not being liftable.
+	FIX: Fixed tunics only changing the sprite and not dividing the damage.
+	REM: Removed "maps/houses" folder.
+	
+Alpha 1.10 (27/07/21) "Goldfish Update":
+	ADD: Added TFT effect.
+	ADD: Added musics.
+	ADD: Added maps.
+	CHG: Changed outside musics.
+	CHG: Changed electrocution system.
+	CHG: Changed outside tilesets to smaller versions.
+	CHG: Looped musics.
+	CHG: Reduced some sprites sizes.
+	CHG: Changed entities sprites images to tileset instead of using "entities/Full Hyrule.tiles.png".
+	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	FIX: Fixed tunic 2 stopped animation being 1 pixel off by changing the sprite's origin.
+	
+Alpha 1.11 (18/01/22) "Haddock Update":
+	ADD: Added maps.
+	CHG: Update the map scripts to ALTTD's.
+	CHG: Renumbered dungeon floors.
+	CHG: Changed the electrocution system.
+	CHG: Switched signs to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Changed item sprites on hero.
+	FIX: Fixed flying tiles not working properly when coming back into the room.
+
+Alpha 1.12 (18/03/22) "Ide Update":
+	ADD: Added maps.
+
+Alpha 1.13 (28/05/22) "Jawfish Update":
+	ADD: Finished the two first bosses.
+	ADD: Added a goal waypoint indicator in the minimap.
+	ADD: Added maps.
+	CHG: Changed magic bar values in the HUD.
+	CHG: Changed max magic values to 50, 100 and 150.
+	CHG: Changed magic bar values according to the max magic values.
+	CHG: Improved dark rooms lightning.
+	CHG: Changed magic bar and hearts colours in the HUD.
+	FIX: Fixed Beamos firing at hero even when in another region.
+	FIX: Fixed nil timer error on first part of title screen.
+	FIX: Fixed ocarina setting music volume to 75 after using it.
+	FIX: Fixed upper-right corner of the scrollable minimap.
+	FIX: Fixed Helmasaur King being stuck by moving it a few tiles down.
+	FIX: Fixed player being able to run with the gamepad without having the Pegasus Boots.
+	FIX: Fixed some inventory icons.
+	
+Alpha 1.14 (started 28/05/22) "Koi Update":
+	ADD: Finished the first three dungeons' layout.
+	CHG: Changed outside buildings to the tileset located in the "tilesets" folder instead of the "tilesets/out" one.
+	TDO: Rename owl entities according to main quest steps.
+	TDO: Replace corrupted files.
+	TDO: Slightly changed HUD icons.
+	TDO: Loop musics.
+	TDO: Fix starting game.
+	TDO: Readapt fixed map to scrollable minimap.
+	TDO: Change pull handle sprite.
+	TDO: Rename NPCs' sprites.
+	TDO: Fix victory animation.
+	TDO: Fix wrong dialog icons.
+	TDO: Fix wrong item HUD icons
+	TDO: Fix inventory icons.
+	TDO: Finish the outside maps.
+	TDO: Add items treasure and inventory dialogues.
+	TDO: Fix the Book of Mudora.
+	TDO: Add decoration to temples.
+	TDO: Find throwing and holding bomb animations in Hinox sprite.
+	TDO: Move shovel animation into "/hero/item/shovel/".
+	TDO: Make the status menu at least usable.
+	TDO: Change the Master Sword sprite on title screen.
+	TDO: Progressively switch enemies behaviour to ALTTD'S.
+	TDO: Fix Link being invisible after fighting boss.
+	TDO: Change sword colour on hero.
+	TDO: Improve shield function.
+	TDO: Fix bombs not being liftable when starting the game inside unless going outside.
+	TDO: Fix remaining wrong sprite palettes.
+	TDO: Fix signs being readable after being cut.
+	TDO: Change Helmasaur reaction to hookshot.
+	TDO: Clean up unused sprite files.
+	TDO: Clean up unused musics.
+	TDO: Clean up dialogues.
+	TDO: Draw the introduction cinematic slides.
+	TDO: Add musics (Temple of Fire, Hidden village)
+
+Alpha 1.19 (//) "Koi Update":
+	TDO: Add a boat.
+	TDO: Rescript somaria cane.
+	TDO: Make it possible to switch between shaders with the option menu.
+	TDO: Add new items.
+	TDO: Finish all the items.
+	TDO: Add an extension loader.
+
+Alpha 1.15 (//) /"Quest Update":
+	TDO: Add quests.
+	TDO: Add quests in quest pause menu.
+
+Alpha 1.16 (//) "Ladyfish Update":
+
+Beta 1.0 (//)"The Great Update":
+Beta 1.1 (//)"Weapon Update":
+Beta 1.2 (//)"Quest Update":
+Beta 1.3 (//)"The Great Expansion":
+
