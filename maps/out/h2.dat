@@ -24651,6 +24651,26 @@ tile{
   pattern = "114",
 }
 
+tile{
+  layer = 0,
+  x = 632,
+  y = 152,
+  width = 8,
+  height = 16,
+  pattern = "14099",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 152,
+  width = 8,
+  height = 16,
+  pattern = "14080",
+  tileset = "outside_special",
+}
+
 custom_entity{
   name = "rockstack_3_background",
   layer = 0,
@@ -24690,18 +24710,6 @@ teletransporter{
   transition = "immediate",
   destination_map = "inside/houses/east_castle/blacksmith",
   destination = "from_outside",
-}
-
-custom_entity{
-  name = "rockstack_1_background",
-  layer = 0,
-  x = 632,
-  y = 157,
-  width = 32,
-  height = 32,
-  direction = 0,
-  sprite = "entities/Rockstacks/rockstack_bg3",
-  model = "stone_pile",
 }
 
 teletransporter{
@@ -24946,18 +24954,6 @@ destructible{
   sprite = "entities/Bushes/bush_l_01",
   destruction_sound = "objects/e_bush",
   can_be_cut = true,
-}
-
-custom_entity{
-  name = "rockstack_1_1",
-  layer = 0,
-  x = 632,
-  y = 157,
-  width = 32,
-  height = 32,
-  direction = 0,
-  sprite = "entities/Rockstacks/rockstack_light01",
-  model = "stone_pile",
 }
 
 sensor{
