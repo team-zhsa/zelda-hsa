@@ -14464,6 +14464,15 @@ tile{
   pattern = "2205",
 }
 
+tile{
+  layer = 0,
+  x = 1088,
+  y = 688,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -14647,6 +14656,17 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 728,
+  transition = "scrolling",
+  destination_map = "out/k4",
+  destination = "_side",
 }
 
 tile{
