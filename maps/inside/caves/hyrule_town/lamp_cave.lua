@@ -17,7 +17,6 @@ function map:on_started()
   if game:has_item("magic_bar") then
     npc_wizard:set_enabled(false)
   end
-  map:set_light(0)
 end
 
 sensor_cutscene:register_event("on_activated", function()

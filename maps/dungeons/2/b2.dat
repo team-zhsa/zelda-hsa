@@ -2783,6 +2783,24 @@ tile{
   pattern = "wall_low.corner.4-1",
 }
 
+tile{
+  layer = -1,
+  x = 544,
+  y = 560,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = -1,
+  x = 736,
+  y = 560,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
 wall{
   layer = -1,
   x = 896,
@@ -12872,24 +12890,6 @@ tile{
   layer = 0,
   x = 544,
   y = 464,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = 0,
-  x = 544,
-  y = 560,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = 0,
-  x = 736,
-  y = 560,
   width = 16,
   height = 16,
   pattern = "torch",
