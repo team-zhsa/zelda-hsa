@@ -3054,6 +3054,123 @@ destructible{
   can_be_cut = true,
 }
 
+destructible{
+  name = "auto_destructible_48",
+  layer = -1,
+  x = 1704,
+  y = 637,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_49",
+  layer = -1,
+  x = 1768,
+  y = 653,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_50",
+  layer = -1,
+  x = 1752,
+  y = 701,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_51",
+  layer = -1,
+  x = 1768,
+  y = 749,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_52",
+  layer = -1,
+  x = 1704,
+  y = 733,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_53",
+  layer = -1,
+  x = 1720,
+  y = 781,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_54",
+  layer = -1,
+  x = 1752,
+  y = 797,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_55",
+  layer = -1,
+  x = 1704,
+  y = 829,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_56",
+  layer = -1,
+  x = 1768,
+  y = 845,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+tile{
+  layer = 0,
+  x = 1352,
+  y = 1216,
+  width = 16,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
 tile{
   layer = 0,
   x = 448,
@@ -19458,7 +19575,7 @@ stairs{
   x = 1208,
   y = 1320,
   direction = 3,
-  subtype = 4,
+  subtype = 2,
 }
 
 destination{
@@ -21802,114 +21919,6 @@ stairs{
   y = 296,
   direction = 1,
   subtype = 1,
-}
-
-destructible{
-  name = "auto_destructible_48",
-  layer = 0,
-  x = 1704,
-  y = 637,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_49",
-  layer = 0,
-  x = 1768,
-  y = 653,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_50",
-  layer = 0,
-  x = 1752,
-  y = 701,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_51",
-  layer = 0,
-  x = 1768,
-  y = 749,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_52",
-  layer = 0,
-  x = 1704,
-  y = 733,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_53",
-  layer = 0,
-  x = 1720,
-  y = 781,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_54",
-  layer = 0,
-  x = 1752,
-  y = 797,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_55",
-  layer = 0,
-  x = 1704,
-  y = 829,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_56",
-  layer = 0,
-  x = 1768,
-  y = 845,
-  treasure_name = "bomb",
-  treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
 }
 
 tile{

@@ -9,6 +9,7 @@
 
 local map = ...
 local game = map:get_game()
+local audio_manager = require("scripts/audio_manager.lua")
 
 map:register_event("on_started", function()
 	game:show_map_name("west_mountains")
