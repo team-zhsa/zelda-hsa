@@ -36,7 +36,7 @@ end)
 
 
 function blacksmith_interaction()
-  if game:is_step_last("game_started") then
+  if game:is_step_last("lamp_obtained") then
     game:start_dialog("maps.houses.east_castle.blacksmith.merchant_sahasrahla", function()
       hero:start_treasure("sword", 1)
       game:set_step_done("sword_obtained")
