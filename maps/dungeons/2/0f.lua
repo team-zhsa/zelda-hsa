@@ -18,9 +18,9 @@ cannonball_manager:create_cannons(map, "cannon_")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
 	separator_manager:manage_map(map)
-	map:set_doors_open("door_19_s")
-  map:set_doors_open("door_3_s", true)
-  map:set_doors_open("door_8_n", true)
+	map:open_doors("door_19_s")
+  map:open_doors("door_3_s")
+  map:open_doors("door_8_n")
 	chest_20_blue_key:set_enabled(false)
 	if not game:get_value("dungeon_2_compass", true) then
 		chest_30_compass:set_enabled(false)
