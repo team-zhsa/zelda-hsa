@@ -7926,6 +7926,55 @@ tile{
   tileset = "outside_additions",
 }
 
+tile{
+  layer = 0,
+  x = 1024,
+  y = 272,
+  width = 16,
+  height = 160,
+  pattern = "6162",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "6162",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 864,
+  y = 432,
+  width = 192,
+  height = 16,
+  pattern = "6162",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1056,
+  y = 432,
+  width = 48,
+  height = 64,
+  pattern = "6162",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 dynamic_tile{
   name = "door_castle_2",
   layer = 0,
@@ -7957,7 +8006,7 @@ npc{
 }
 
 npc{
-  name = "npc_2",
+  name = "npc_drunk_man",
   layer = 0,
   x = 760,
   y = 781,
@@ -9017,6 +9066,32 @@ destructible{
   sprite = "entities/Bushes/bush_l_01",
   destruction_sound = "objects/e_bush",
   can_be_cut = true,
+}
+
+npc{
+  layer = 0,
+  x = 312,
+  y = 301,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
+  behavior = "dialog#maps.out.hyrule_town.sign_1",
+}
+
+npc{
+  name = "npc_fisher",
+  layer = 0,
+  x = 360,
+  y = 301,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/mustache_man",
 }
 
 tile{

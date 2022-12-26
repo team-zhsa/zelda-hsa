@@ -4618,14 +4618,45 @@ Là : --> *
 }
 
 dialog{
-  id = "maps.out.hyrule_town.generic_2",
+  id = "maps.out.hyrule_town.drunk_man.no_lamp",
   text = [[
+Il paraît...$0 Hic ! Qu'il y a...$0
+Hic ! Derrière la poissonerie...$0
+Hic ! Un égout avec une lampe !
 ]],
 }
 
 dialog{
-  id = "maps.out.hyrule_town.generic_3",
+  id = "maps.out.hyrule_town.drunk_man.no_sword",
   text = [[
+La forge ? Elle est au nord-est
+de la ville... $0 Hic ! Il y ...$0
+Hic ! Un passage derrière...$0
+Le Temple du Temps...$0 Hic !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.fisher.welcome",
+  text = [[
+Bienvenue à la meilleure
+poissonnerie d'Hyrule ! $0
+Il est pas frais mon poisson ?
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.fisher.welcome_no_lamp",
+  text = [[
+Bienvenue à la meilleure
+poissonnerie d'Hyrule !
+Malheureusement je n'ai pas
+encore reçu de poisson donc
+il n'y en a pas.$0 Par contre, si
+tu vas dans l'égout derrière le
+mur, il y a un magicien qui
+pourra t'aider ! Mais ne le dis
+à personne !
 ]],
 }
 
@@ -4680,6 +4711,13 @@ Voici du bon vin rouge !
 Tu veux goûter?
 C'est 15 rubis!
 Sensations garanties!
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_1",
+  text = [[
+Poissonnerie
 ]],
 }
 
