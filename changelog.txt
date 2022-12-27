@@ -181,7 +181,7 @@ Alpha 1.10 (27/07/21) "Goldfish Update":
 	ADD: Added musics.
 	ADD: Added maps.
 	CHG: Changed outside musics.
-	CHG: Changed electrocution system.
+	CHG: Changed the electrocution system.
 	CHG: Changed outside tilesets to smaller versions.
 	CHG: Looped musics.
 	CHG: Reduced some sprites sizes.
@@ -234,6 +234,7 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	FIX: Fixed pot layers in rooms 18 and 27 in the Fire Temple (B2).
 	FIX: Fixed missing wall tile in room 35 (door 35N) in the Fire Temple (B2).
 	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
+	FIX: Fixed destructibles weights being too high around the Blacksmith.
 	TDO: Add dialogues for Sahasrahla.
 	TDO: Add dialogues for Ravio.
 	TDO: Replace corrupted files.
@@ -244,33 +245,35 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	TDO: Add 8px on the left of the room 14 of the Forest Temple (B1) making it possible to go back to 0F from B2.
 	TDO: Add a sign if the door 8N of the Forest Temple (0F) is closed (bug).
 	TDO: Copy changelog.txt issues to GitHub in order to improve issue tracking.
+	TDO: Progressively switch enemies behaviour to ALTTD'S.
 
 Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
-	TDO: Fix game introduction and destructibles weights.
-	TDO: Add items treasure and inventory dialogues.
-	TDO: Fix victory animation.
-	TDO: Fix inventory icons.
-	TDO: Fix wrong dialog icons.
-	TDO: Fix wrong item HUD icons.
+	TDO: Fix game intro dialogues.
+	TDO: Add items treasure and inventory missing dialogues.
+	TDO: Fix victory animation not being synchronised with Link movement.
+	TDO: Fix wrong dialogue icons.
 	TDO: Clean up unused sprite files.
 	TDO: Fix Link being invisible after fighting boss.
 
 Alpha 1.16 (//23) "Mackerel Update": Improvement
 	TDO: Add maps.
+	TDO: Rename all the soldiers in order to make them appear during the game and not at the beginning.
 	TDO: Fix Link being able to run on water right after jumping from a cliff.
 	TDO: Add soldiers along the way from the Blacksmith's to Kakarico Village at the beginning to prevent the player from going where he shouldn't.
 	TDO: Rename owl entities according to main quest steps.
-	TDO: Change the Master Sword sprite on title screen.
-	TDO: Change sword colour on hero.
+	TDO: Change the Master Sword sprite on the title screen.
+	TDO: Change sword colour on hero.	
+	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Draw the introduction cinematic slides.
 	TDO: Clean up dialogues.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
 
 Alpha 1.16.1 (//23) "Mackerel Update": Sprite improvement
-	TDO: Improve the caves' darkness system.
+	TDO: Unify all the caves' darkness system.
+	TDO: Unify all the electrocution systems.
 	TDO: Rename the sprites of some NPCs.
-	TDO: Change pull handle sprite.
+	TDO: Change the pull handle's sprite.
 	TDO: Readapt fixed map to scrollable minimap.
 
 Alpha 1.16.2 (//23) "Mackerel Update": Musics and sounds
@@ -286,6 +289,7 @@ Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Add decoration to temples.
 	TDO: Find throwing and holding bomb animations for Hinox sprite.
 	TDO: Make the status menu at least usable.
+	TDO: Make a new sprite for Spectral Ganon.
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Improve the shield usability.
 	TDO: Fix bombs not being liftable when starting the game inside unless going outside.
