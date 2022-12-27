@@ -45,7 +45,7 @@ function npc_maze_game:on_interaction()
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze_3_yes")
 					outside_kakarico_playing_maze = true
-					sol.timer.start(game, 15000, function() --Timer for 15 seconds
+					sol.timer.start(map, 15000, function() --Timer for 15 seconds
 						--outside_kakarico_playing_maze = false
 						if not switch_maze_game:is_activated() then
 							game:start_dialog("maps.out.kakarico_village.maze_loose")
@@ -53,7 +53,7 @@ function npc_maze_game:on_interaction()
 						end
 					end)
 					local num_calls = 0 --Timer for timer sound
-					sol.timer.start(game, 1000, function()
+					sol.timer.start(map, 1000, function()
 			  		sol.audio.play_sound("danger")
 			  		num_calls = num_calls + 1
 			  		return num_calls < 15	
