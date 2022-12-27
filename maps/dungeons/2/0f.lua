@@ -16,11 +16,11 @@ local cannonball_manager = require("scripts/maps/cannonball_manager")
 cannonball_manager:create_cannons(map, "cannon_")
 
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started(destination)
+map:register_event("on_started", function()
 	separator_manager:manage_map(map)
 	map:open_doors("door_19_s")
-  map:open_doors("door_3_s")
-  map:open_doors("door_8_n")
+	map:open_doors("door_3_s")
+	map:open_doors("door_8_n")
 	chest_20_blue_key:set_enabled(false)
 	if not game:get_value("dungeon_2_compass", true) then
 		chest_30_compass:set_enabled(false)
@@ -35,7 +35,7 @@ function map:on_started(destination)
 	end
   
 	map:set_light(1)
-end
+end)
 
 
 function switch_28_1:on_activated()
