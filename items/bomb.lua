@@ -10,6 +10,10 @@ end
 
 function item:on_started()
 
+  -- Disable pickable bombs if the player has no bomb counter.
+  -- We cannot do this from on_created() because we don't know if the bomb counter
+  -- is already created there.
+  self:set_obtainable(self:get_game():has_item("bombs_counter"))
 
 end
 

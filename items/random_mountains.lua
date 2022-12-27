@@ -6,12 +6,13 @@ local item = ...
 -- Probability of each item between 0 and 200.
 local probabilities = {
   [{ "rupee", 1 }]      = 12,   -- 1 rupee.
-  [{ "rupee", 2 }]      = 7,   -- 5 rupees.
-  [{ "rupee", 3 }]      = 1,   -- 20 rupees.
-  [{ "heart", 1 }]      = 25,   -- Heart.
-  [{ "bomb", 1}]        = 15,   -- Bomb.
-  [{ "bomb", 2}]        = 9,  -- 3 Bombs.
-  [{ "arrow", 1 }]      = 4,   --  Arrow.
+  [{ "rupee", 2 }]      = 10,   -- 5 rupees.
+  [{ "rupee", 3 }]      = 7,   -- 20 rupees.
+  [{ "heart", 1 }]      = 12,   -- Heart.
+  [{ "bomb", 1}]        = 8,   -- Bomb.
+  [{ "bomb", 2}]        = 6,  -- 3 Bombs.
+  [{ "arrow", 1 }]      = 6,   --  Arrow.
+  [{ "arrow", 2 }]      = 4,   --  5 Arrows.
   [{ "magic_flask", 1 }]      = 10,   --  Magic Flask.
 }
 

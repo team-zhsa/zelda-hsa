@@ -9,9 +9,10 @@ local probabilities = {
   [{ "rupee", 2 }]      = 10,   -- 5 rupees.
   [{ "rupee", 3 }]      = 8,   -- 20 rupees.
   [{ "heart", 1 }]      = 14,   -- Heart.
-  [{ "bomb", 1}]        = 4,   -- Bomb.
-  [{ "bomb", 2}]        = 2,  -- 3 Bombs.
-  [{ "arrow", 1 }]      = 4,   --  Arrow.
+  [{ "bomb", 1}]        = 6,   -- Bomb.
+  [{ "bomb", 2}]        = 4,  -- 3 Bombs.
+  [{ "arrow", 1 }]      = 8,   --  Arrow.
+  [{ "arrow", 2 }]      = 4,   -- s5 Arrowq.
   [{ "magic_flask", 1 }]      = 16,   --  Magic Flask.
 }
 
