@@ -2312,11 +2312,18 @@ sous la cascade.
 }
 
 dialog{
-  id = "maps.dungeons.3.welcome",
+  id = "maps.dungeons.3.welcome_description",
   skip = "current",
   text = [[
-        Niveau 3       
-     Cave aux clés
+Temple du Feu
+]],
+}
+
+dialog{
+  id = "maps.dungeons.3.welcome_name",
+  skip = "current",
+  text = [[
+Donjon 3
 ]],
 }
 
@@ -2419,15 +2426,6 @@ Cette statue veut me
 dire quelque chose mais 
 je ne comprends rien ! 
 Elle n'a pas de bec...
-]],
-}
-
-dialog{
-  id = "maps.field.f6.woman",
-  text = [[
-Coucou ! Tu voudrais
-bien m'apporter du
-beurre, s'il te plaît ?
 ]],
 }
 
