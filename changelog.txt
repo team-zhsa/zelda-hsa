@@ -231,10 +231,11 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	FIX: Fixed missing "tunic0" sprite in the hero head's sprite in the minimap.
 	FIX: Fixed map inconsistencies.
 	FIX: Fixed some wrong bushes weights.
-	FIX: Fixed pot layers in rooms 18 and 27 in the Fire Temple (B2).
-	FIX: Fixed missing wall tile in room 35 (door 35N) in the Fire Temple (B2).
+	FIX: Fixed pot layers in rooms 18 and 27 of the Fire Temple (B2).
+	FIX: Fixed missing wall tile in room 35 (door 35N) of the Fire Temple (B2).
 	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
 	FIX: Fixed destructibles weights being too high around the Blacksmith.
+	FIX: Replaced the timer dialog in the room 23 of the Ruins by a real timer sound (#37).
 	TDO: Add dialogues for Sahasrahla.
 	TDO: Add dialogues for Ravio.
 	TDO: Replace corrupted files.
@@ -246,6 +247,8 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	TDO: Add a sign if the door 8N of the Forest Temple (0F) is closed (bug).
 	TDO: Copy changelog.txt issues to GitHub in order to improve issue tracking.
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
+	TDO: Fix diagonal jumpers jump lenghts being too high in the mountains (#38).
+	TDO: Fix not enough memory issues on MacOS (#39).
 
 Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
 	TDO: Fix game intro dialogues.
@@ -268,6 +271,7 @@ Alpha 1.16 (//23) "Mackerel Update": Improvement
 	TDO: Clean up dialogues.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
+	TDO: Add a HUD version for timers.
 
 Alpha 1.16.1 (//23) "Mackerel Update": Sprite improvement
 	TDO: Unify all the caves' darkness system.

@@ -30,9 +30,15 @@ end
 
 function switch_door_23_n1:on_activated()
   map:open_doors("door_23_n1")
-	game:start_dialog("maps.dungeons.1.door_timer")
-	sol.timer.start(map, 15000, function()
-		map:close_doors("door_23_n1")
-	end)
+  sol.timer.start(map, 15000, function() --Timer for 15 seconds
+    map:close_doors("door_23_n1")
+  end)
+  local num_calls = 0 --Timer for timer sound
+  sol.timer.start(game, 1000, function()
+    sol.audio.play_sound("danger")
+    num_calls = num_calls + 1
+    return num_calls < 15	
+  end)
 end
+
 

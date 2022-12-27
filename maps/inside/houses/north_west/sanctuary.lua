@@ -28,17 +28,19 @@ function map:on_started()
       door:set_enabled(false)
       dialog:set_enabled(false)
       npc_agahnim:set_enabled(true)
-    elseif game:get_time() >= 7 and game:get_time() < 15 then
-      sol.audio.play_music("inside/sanctuary_3")
-      priest:set_enabled(true)
-      door:set_enabled(true)
-      dialog:set_enabled(true)
-      npc_agahnim:set_enabled(false)
-    else -- The priest isn't present.
-      priest:set_enabled(false)
-      door:set_enabled(false)
-      dialog:set_enabled(false)
-      npc_agahnim:set_enabled(false)
+    else
+      if game:get_time() >= 7 and game:get_time() < 15 then
+        sol.audio.play_music("inside/sanctuary_3")
+        priest:set_enabled(true)
+        door:set_enabled(true)
+        dialog:set_enabled(true)
+        npc_agahnim:set_enabled(false)
+      else -- The priest isn't present.
+        priest:set_enabled(false)
+        door:set_enabled(false)
+        dialog:set_enabled(false)
+        npc_agahnim:set_enabled(false)
+      end
     end
   --end
   -- You can initialize the movement and sprites of various
@@ -75,7 +77,7 @@ end)
 dialog:register_event("on_interaction", function()
   map:set_cinematic_mode(true, options)
   hero:freeze()
-  game:start_dialog("maps.houses.north_west.sanctuary.priest_1", function()
+  game:start_dialog("maps.houses.north_west.sanctuary.priest_1", game:get_player_name(), function()
     sol.timer.start(map, 2000, function()
       if game:is_step_last("world_map_obtained") then
         tell_legend()
