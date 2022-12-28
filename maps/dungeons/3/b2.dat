@@ -2886,17 +2886,17 @@ enemy{
 enemy{
   name = "auto_enemy_6",
   layer = -1,
-  x = 1352,
+  x = 1400,
   y = 1037,
   direction = 0,
-  breed = "dungeons/fireball_animated",
+  breed = "dungeons/fireball",
   treasure_name = "random_mountains",
 }
 
 enemy{
   name = "auto_enemy_7",
   layer = -1,
-  x = 1512,
+  x = 1480,
   y = 1125,
   direction = 0,
   breed = "dungeons/helmasaur_red",
@@ -3160,6 +3160,22 @@ destructible{
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
+}
+
+stairs{
+  layer = -1,
+  x = 1704,
+  y = 1056,
+  direction = 3,
+  subtype = 4,
+}
+
+stairs{
+  layer = -1,
+  x = 1640,
+  y = 1080,
+  direction = 2,
+  subtype = 4,
 }
 
 tile{
@@ -19235,7 +19251,7 @@ enemy{
   x = 520,
   y = 149,
   direction = 0,
-  breed = "dungeons/helmasaur_purple",
+  breed = "dungeons/bari_red",
   savegame_variable = "dungeon_3_b2_enemy_2",
   treasure_name = "random_mountains",
 }
@@ -19246,7 +19262,7 @@ enemy{
   x = 536,
   y = 93,
   direction = 0,
-  breed = "dungeons/helmasaur_purple",
+  breed = "dungeons/tentacle_orange",
   savegame_variable = "dungeon_3_b2_enemy_2",
   treasure_name = "random_mountains",
 }
@@ -20208,14 +20224,6 @@ destructible{
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
-}
-
-stairs{
-  layer = 0,
-  x = 1704,
-  y = 1056,
-  direction = 3,
-  subtype = 4,
 }
 
 destructible{
@@ -21848,8 +21856,8 @@ enemy{
 enemy{
   name = "auto_enemy_39",
   layer = 0,
-  x = 536,
-  y = 149,
+  x = 768,
+  y = 837,
   direction = 0,
   breed = "dungeons/wallmaster",
   treasure_name = "random_mountains",

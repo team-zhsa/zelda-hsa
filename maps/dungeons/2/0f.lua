@@ -22,18 +22,28 @@ map:register_event("on_started", function()
 	map:open_doors("door_3_s")
 	map:open_doors("door_8_n")
 	chest_20_blue_key:set_enabled(false)
+	enemy_10_1:set_enabled(false)
+	enemy_10_2:set_enabled(false)
+	enemy_10_3:set_enabled(false)
+	enemy_10_4:set_enabled(false)
 	if not game:get_value("dungeon_2_compass", true) then
 		chest_30_compass:set_enabled(false)
 	else
     chest_30_compass:set_enabled(true)
   end
+
+	if game:get_value("dungeon_2_1f_10_collapse_ground") == true then
+		dynamic_10_light:set_enabled(false)
+		dynamic_10_collapse:set_enabled(false)
+	end
   
-  if not game:get_value("dungeon_2_1f_11_chest_small_key", true) then
+  if not game:get_value("dungeon_2_1f_11_chest_small_key") == true then
 		chest_11_small_key:set_enabled(false)
 	else
     chest_11_small_key:set_enabled(true)
 	end
   
+
 	map:set_light(1)
 end)
 
@@ -83,18 +93,19 @@ function block_8:on_moved()
 	map:open_doors("door_19_s")
 end
 
-local life = game:get_life()
-for custom_entity in map:get_entities("torch_10") do
-	function custom_entity:on_lit()
-		if math.random(1, 2) == 1 then
-			game:remove_life(life / 2)
-		else
-			game:set_value("dungeon_2_1f_10_collapse_ground", true)
-			dynamic_10_light:set_enabled(false)
-			dynamic_10_collapse:set_enabled(false)
-		end
-	end
-end
+pull_handle_10_1:register_event("on_released", function()
+	audio_manager:play_sound("common/secret_discover_minor")
+	game:set_value("dungeon_2_1f_10_collapse_ground", true)
+	dynamic_10_light:set_enabled(false)
+	dynamic_10_collapse:set_enabled(false)
+end)
+
+pull_handle_10_2:register_event("on_released", function()
+	enemy_10_1:set_enabled(true)
+	enemy_10_2:set_enabled(true)
+	enemy_10_3:set_enabled(true)
+	enemy_10_4:set_enabled(true)
+end)
 
 function sensor_4_collapse:on_collision_explosion()
 	dynamic_4_collapse:set_enabled(false)

@@ -232,6 +232,8 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	CHG: Changed the room 14 (B1) of the Forest Temple structure in order to be able to move the block from every directions (#6).
 	CHG: Copied changelog.txt issues to GitHub in order to improve issue tracking.
 	CHG: Changed some sanctuary priest dialogues.
+	CHG: Moved the location of the big key lock to the door 12N instead of the big chest in the room 12 (B2) of the Forest Temple.
+	CHG: Replaced the torches in the room 10 (0F) of the Forest Temple by a pull handle (#43).
 	FIX: Fixed missing "tunic0" sprite in the hero head's sprite in the minimap.
 	FIX: Fixed map inconsistencies.
 	FIX: Fixed some wrong bushes weights.
@@ -241,17 +243,20 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	FIX: Fixed destructibles weights being too high around the Blacksmith.
 	FIX: Fixed teletransporter to Temple of Time linking to a deleted map (#40).
 	FIX: Fixed door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
+	FIX: Fixed water resetting itself in the room 24 (B2) of the Forest Temple (#4).
+	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
+	FIX: Fixed "yellow_key" not saved in the Forest Temple (#5).
+	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
 	TDO: Add dialogues for Sahasrahla.
 	TDO: Add dialogues for Ravio.
 	TDO: Replace corrupted files.
-	TDO: Fix bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
 	TDO: Fix pot weights in the Forest Temple.
-	TDO: Fix water resetting itself in the Forest Temple (B2).
-	TDO: Fix "yellow_key" not saved in the Forest Temple.
 	TDO: Update the minimap of the Forest Temple.
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lenghts being too high in the mountains (#38).
 	TDO: Fix not enough memory issues on MacOS (#39).
+	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
+	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
 
 Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
 	TDO: Fix game intro dialogues.
@@ -259,49 +264,49 @@ Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
 	TDO: Fix victory animation not being synchronised with Link movement.
 	TDO: Fix wrong dialogue icons.
 	TDO: Clean up unused sprite files.
-	TDO: Fix Link being invisible after fighting boss.
+	TDO: Fix Link being invisible after fighting boss (#16).
 
 Alpha 1.16 (//23) "Mackerel Update": Improvement
 	TDO: Add maps.
 	TDO: Rename all the soldiers in order to make them appear during the game and not at the beginning.
-	TDO: Fix Link being able to run on water right after jumping from a cliff.
+	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Add soldiers along the way from the Blacksmith's to Kakarico Village at the beginning to prevent the player from going where he shouldn't.
-	TDO: Rename owl entities according to main quest steps.
+	TDO: Rename owl entities according to main quest steps (#19).
 	TDO: Change the Master Sword sprite on the title screen.
-	TDO: Change sword colour on hero.	
+	TDO: Change sword colour on hero (#21).	
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Draw the introduction cinematic slides.
 	TDO: Clean up dialogues.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
-	TDO: Add a HUD version for timers.
+	TDO: Add a HUD version for timers (#36).
 
 Alpha 1.16.1 (//23) "Mackerel Update": Sprite improvement
 	TDO: Unify all the caves' darkness system.
 	TDO: Unify all the electrocution systems.
-	TDO: Rename the sprites of some NPCs.
+	TDO: Rename the sprites of some NPCs (#23).
 	TDO: Change the pull handle's sprite.
-	TDO: Readapt fixed map to scrollable minimap.
+	TDO: Update the pause map image to the scrollable one (#24).
 
 Alpha 1.16.2 (//23) "Mackerel Update": Musics and sounds
 	TDO: Loop the rest of the musics.
 	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
-	TDO: Fix music loops. !
+	TDO: Fix music loops (#25). !
 	TDO: Clean up unused musics.
-	TDO: Improve the shovel usability.
-	TDO: Move shovel animation into "/hero/item/shovel/".
+	TDO: Improve the shovel usability (#26).
+	TDO: Move shovel animation into "/hero/item/shovel/" (#27).
 
 Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Add maps.
 	TDO: Add decoration to temples.
-	TDO: Find throwing and holding bomb animations for Hinox sprite.
+	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
 	TDO: Make the status menu at least usable.
-	TDO: Make a new sprite for Spectral Ganon.
+	TDO: Make a new sprite for Spectral Ganon (#29).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
-	TDO: Improve the shield usability.
-	TDO: Fix bombs not being liftable when starting the game inside unless going outside.
-	TDO: Fix remaining wrong sprite palettes.
-	TDO: Fix signs being readable after being cut.
+	TDO: Improve the shield usability (#30).
+	TDO: Fix bombs not being liftable when starting the game inside unless going outside (#31).
+	TDO: Fix remaining wrong sprite palettes (#32).
+	TDO: Fix signs being readable after being cut (#34).
 	TDO: Change Helmasaur reaction to hookshot.
 
 Alpha 1.18 (//23) "Opah Update":

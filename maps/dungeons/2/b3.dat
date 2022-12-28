@@ -10542,7 +10542,6 @@ chest{
   treasure_name = "bow",
   treasure_savegame_variable = "dungeon_2_treasure",
   sprite = "entities/Chests/chest_big_LttP",
-  opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
 }
 
@@ -12189,6 +12188,30 @@ destination{
   y = 429,
   direction = 1,
   default = true,
+}
+
+door{
+  layer = 0,
+  x = 472,
+  y = 440,
+  direction = 3,
+  sprite = "entities/Doors/Inside/door_d1_big_key",
+  savegame_variable = "dungeon_2_b2_door_7_12",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_big_key",
+  cannot_open_dialog = "_cannot_open_without_big_key",
+}
+
+door{
+  layer = 0,
+  x = 472,
+  y = 504,
+  direction = 1,
+  sprite = "entities/Doors/Inside/door_d1_big_key",
+  savegame_variable = "dungeon_2_b2_door_7_12",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_big_key",
+  cannot_open_dialog = "_cannot_open_without_big_key",
 }
 
 tile{

@@ -12835,6 +12835,24 @@ tile{
   pattern = "door.3.support.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 1360,
+  y = 320,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
+tile{
+  layer = 0,
+  x = 1488,
+  y = 320,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
 sensor{
   name = "dungeon_room_8_3",
   layer = 0,
@@ -14294,30 +14312,6 @@ door{
   opening_condition_consumed = true,
 }
 
-destructible{
-  name = "auto_destructible_2",
-  layer = 0,
-  x = 1544,
-  y = 541,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_4",
-  layer = 0,
-  x = 1464,
-  y = 653,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
 enemy{
   name = "auto_enemy_9",
   layer = 0,
@@ -15162,90 +15156,6 @@ destructible{
 }
 
 destructible{
-  name = "auto_destructible_5",
-  layer = 0,
-  x = 1464,
-  y = 669,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_6",
-  layer = 0,
-  x = 1448,
-  y = 669,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_7",
-  layer = 0,
-  x = 1352,
-  y = 669,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_8",
-  layer = 0,
-  x = 1336,
-  y = 669,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_9",
-  layer = 0,
-  x = 1336,
-  y = 653,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_3",
-  layer = 0,
-  x = 1544,
-  y = 557,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_10",
-  layer = 0,
-  x = 1528,
-  y = 541,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
   name = "auto_destructible_11",
   layer = 0,
   x = 1352,
@@ -15253,31 +15163,6 @@ destructible{
   treasure_name = "heart",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_12",
-  layer = 0,
-  x = 1336,
-  y = 541,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
-  can_be_cut = true,
-}
-
-destructible{
-  name = "auto_destructible_30",
-  layer = 0,
-  x = 1336,
-  y = 557,
-  treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  weight = 1,
   can_be_cut = true,
 }
 
@@ -15415,6 +15300,220 @@ crystal{
   layer = 0,
   x = 584,
   y = 189,
+}
+
+destructible{
+  name = "auto_destructible_12",
+  layer = 0,
+  x = 1336,
+  y = 541,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_30",
+  layer = 0,
+  x = 1336,
+  y = 557,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_33",
+  layer = 0,
+  x = 1336,
+  y = 653,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_34",
+  layer = 0,
+  x = 1336,
+  y = 669,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_35",
+  layer = 0,
+  x = 1352,
+  y = 669,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_36",
+  layer = 0,
+  x = 1464,
+  y = 653,
+  treasure_name = "fairy",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_37",
+  layer = 0,
+  x = 1464,
+  y = 669,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_38",
+  layer = 0,
+  x = 1448,
+  y = 669,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_39",
+  layer = 0,
+  x = 1544,
+  y = 557,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_40",
+  layer = 0,
+  x = 1528,
+  y = 541,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_41",
+  layer = 0,
+  x = 1544,
+  y = 541,
+  treasure_name = "arrow",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+enemy{
+  name = "enemy_10_1",
+  layer = 0,
+  x = 1384,
+  y = 373,
+  direction = 0,
+  breed = "dungeons/rope",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_10_2",
+  layer = 0,
+  x = 1496,
+  y = 389,
+  direction = 0,
+  breed = "dungeons/rope",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_10_3",
+  layer = 0,
+  x = 1480,
+  y = 309,
+  direction = 0,
+  breed = "dungeons/rope",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_10_4",
+  layer = 0,
+  x = 1344,
+  y = 349,
+  direction = 0,
+  breed = "dungeons/rope",
+  treasure_name = "random_west",
+}
+
+custom_entity{
+  name = "pull_handle_10_1",
+  layer = 0,
+  x = 1384,
+  y = 293,
+  width = 16,
+  height = 16,
+  direction = 3,
+  sprite = "entities/handle",
+  model = "pull_handle",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1384,
+  y = 277,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/handle_base",
+}
+
+custom_entity{
+  name = "pull_handle_10_2",
+  layer = 0,
+  x = 1496,
+  y = 293,
+  width = 16,
+  height = 16,
+  direction = 3,
+  sprite = "entities/handle",
+  model = "pull_handle",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1496,
+  y = 277,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/handle_base",
+}
+
+npc{
+  layer = 0,
+  x = 1440,
+  y = 277,
+  direction = 3,
+  subtype = 1,
+  behavior = "dialog#maps.dungeons.2.hint_2",
 }
 
 tile{

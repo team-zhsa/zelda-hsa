@@ -14633,8 +14633,8 @@ door{
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
-  opening_method = "interaction_if_item",
-  opening_condition = "yellow_key",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_yellow_key",
   cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 
@@ -14820,8 +14820,8 @@ door{
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
-  opening_method = "interaction_if_item",
-  opening_condition = "yellow_key",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_yellow_key",
   cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 
@@ -14832,8 +14832,8 @@ door{
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
-  opening_method = "interaction_if_item",
-  opening_condition = "yellow_key",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_yellow_key",
   cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 
@@ -14844,8 +14844,8 @@ door{
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
-  opening_method = "interaction_if_item",
-  opening_condition = "yellow_key",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_2_yellow_key",
   cannot_open_dialog = "_cannot_open_without_yellow_key",
 }
 

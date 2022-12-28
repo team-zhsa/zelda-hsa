@@ -19,14 +19,23 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 local cannonball_manager = require("scripts/maps/cannonball_manager")
 cannonball_manager:create_cannons(map, "cannon_")
 local water_delay = 500
-local pool_full = false
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
-	if pool_full == false then
+	if game:get_value("dungeon_2_b2_24_pool_full") == false then
 		for tile in map:get_entities("static_water_") do
    		tile:set_enabled(false)
 		end  
+    dynamic_water_1:set_enabled(false)
+    switch_24_pool_empty:set_activated(true)
+    switch_24_pool_fill:set_activated(false)
+  elseif game:get_value("dungeon_2_b2_24_pool_full") ~= false then
+    switch_24_pool_empty:set_activated(false)
+    switch_24_pool_fill:set_activated(true)
+    game:set_value("dungeon_2_b2_24_pool_full", true)
 	end
+  dynamic_water_2:set_enabled(false)
+  dynamic_water_3:set_enabled(false)
+  dynamic_water_4:set_enabled(false)
 	separator_manager:manage_map(map)
 	map:set_doors_open("door_33_e", false)
 	map:set_doors_open("door_34_w", false)
@@ -41,7 +50,7 @@ map:register_event("on_started", function()
 end)
 
 -- Pool fill switch mechanism
--- The switch fills up the champagne swimming pool
+-- The switch fills up the swimming pool
 function switch_24_pool_fill:on_activated()
   hero:freeze()
   switch_24_pool_empty:set_activated(false)
@@ -65,11 +74,11 @@ function switch_24_pool_fill:on_activated()
   for tile in map:get_entities("static_water_") do
     tile:set_enabled(true)
   end
-	pool_full = true
+	game:set_value("dungeon_2_b2_24_pool_full", true)
 end
 
 -- Pool empty switch mechanism
--- The switch drains the champagne swimming pool
+-- The switch drains the swimming pool
 function switch_24_pool_empty:on_activated()
   hero:freeze()
   switch_24_pool_fill:set_activated(false)
@@ -95,5 +104,5 @@ function switch_24_pool_empty:on_activated()
   for tile in map:get_entities("static_water_") do
     tile:set_enabled(false)
   end
-	pool_full = false
+	game:set_value("dungeon_2_b2_24_pool_full", false)
 end
