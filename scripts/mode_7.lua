@@ -157,7 +157,7 @@ function mode_7_manager:teleport(game, src_entity, destination_map_id, destinati
     xy.x, xy.y = map_x + src_x_in_map, map_y + src_y_in_map
 
     hero_sprite:set_direction(3)
-    hero_sprite:set_animation("walking") --TDO find flying animation
+    hero_sprite:set_animation("walking") --TODO find flying animation
     owl_sprite:set_direction(1)
     owl_sprite:set_animation("walking")
 

@@ -105,11 +105,13 @@ function debug:on_key_pressed(key, modifiers)
         hero:set_walking_speed(400)
       end
     elseif key == "s" then
-      local statistics = statistics_manager:new(game)
-      game:set_suspended(true)
-      sol.menu.start(game, statistics)
-      function statistics:on_finished()
-        game:set_suspended(false)
+      if game:is_suspended(false) then
+        local statistics = statistics_manager:new(game)
+        game:set_suspended(true)
+        sol.menu.start(game, statistics)
+        function statistics:on_finished()
+          game:set_suspended(false)
+        end
       end
 		elseif key == "7" then
       local map_id = "out/a3"
