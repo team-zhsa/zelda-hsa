@@ -7944,6 +7944,42 @@ tile{
   pattern = "barrier_big.border.1-1",
 }
 
+tile{
+  layer = 0,
+  x = 1056,
+  y = 1224,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 1080,
+  y = 1224,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 1064,
+  y = 1224,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1064,
+  y = 1224,
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/north_west/hylia_to_kakarico",
+}
+
 wall{
   layer = 0,
   x = 152,
@@ -8599,8 +8635,8 @@ enemy{
 destination{
   name = "from_kakarico_cave",
   layer = 0,
-  x = 1112,
-  y = 1333,
+  x = 1072,
+  y = 1237,
   direction = 1,
 }
 
@@ -9013,10 +9049,18 @@ custom_entity{
 
 enemy{
   layer = 0,
-  x = 1064,
-  y = 1293,
+  x = 1144,
+  y = 1341,
   direction = 0,
   breed = "dungeons/beamos",
+}
+
+stairs{
+  layer = 0,
+  x = 1064,
+  y = 1224,
+  direction = 1,
+  subtype = 0,
 }
 
 tile{
@@ -9536,6 +9580,24 @@ tile{
   layer = 1,
   x = 792,
   y = 16,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_up.1-1",
+}
+
+tile{
+  layer = 1,
+  x = 1056,
+  y = 1216,
+  width = 32,
+  height = 8,
+  pattern = "door_top.1-3",
+}
+
+tile{
+  layer = 1,
+  x = 1064,
+  y = 1216,
   width = 16,
   height = 8,
   pattern = "door_top.stairs_up.1-1",

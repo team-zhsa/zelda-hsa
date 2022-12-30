@@ -69620,6 +69620,33 @@ tile{
   tileset = "outside_additions",
 }
 
+tile{
+  layer = 0,
+  x = 824,
+  y = 232,
+  width = 8,
+  height = 40,
+  pattern = "261",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 232,
+  width = 8,
+  height = 40,
+  pattern = "260",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 232,
+  width = 16,
+  height = 40,
+  pattern = "262",
+}
+
 jumper{
   layer = 0,
   x = 600,
@@ -70549,7 +70576,7 @@ jumper{
   layer = 0,
   x = 688,
   y = 232,
-  width = 184,
+  width = 112,
   height = 8,
   direction = 6,
   jump_length = 56,
@@ -71463,7 +71490,7 @@ destination{
 }
 
 destination{
-  name = "from_cave_to_upper_mountain_3",
+  name = "from_fairy_cave",
   layer = 0,
   x = 336,
   y = 581,
@@ -71494,6 +71521,32 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
+}
+
+teletransporter{
+  layer = 0,
+  x = 328,
+  y = 552,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/mountains/fairy_cave_1",
+  destination = "from_outside",
+}
+
+jumper{
+  layer = 0,
+  x = 832,
+  y = 232,
+  width = 40,
+  height = 8,
+  direction = 6,
+  jump_length = 56,
 }
 
 tile{
