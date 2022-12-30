@@ -25093,6 +25093,15 @@ tile{
   pattern = "100",
 }
 
+tile{
+  layer = 0,
+  x = 1232,
+  y = 576,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 jumper{
   layer = 0,
   x = 120,
@@ -29020,7 +29029,7 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.field.sign_13",
+  behavior = "dialog#maps.out.north_field.sign_13",
 }
 
 teletransporter{

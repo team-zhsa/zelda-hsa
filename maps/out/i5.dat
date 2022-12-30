@@ -12403,26 +12403,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 624,
-  y = 416,
-  width = 16,
-  height = 16,
-  pattern = "6146",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
-  x = 1024,
-  y = 552,
-  width = 16,
-  height = 16,
-  pattern = "6143",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 1136,
   y = 16,
   width = 16,
@@ -16753,6 +16733,24 @@ tile{
   pattern = "13892",
 }
 
+tile{
+  layer = 0,
+  x = 1024,
+  y = 552,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 teletransporter{
   layer = 0,
   x = 1280,
@@ -17032,18 +17030,32 @@ npc{
   layer = 0,
   x = 632,
   y = 429,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
   direction = 3,
-  subtype = 1,
-  behavior = "dialog#maps.out.field.sign_3",
+  subtype = 0,
+  sprite = "entities/sign",
+  behavior = "dialog#maps.out.south_field.sign_3",
 }
 
 npc{
   layer = 0,
   x = 1032,
   y = 565,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.field.sign_4",
+  sprite = "entities/sign",
+  behavior = "dialog#maps.out.south_field.sign_4",
 }
 
 destination{

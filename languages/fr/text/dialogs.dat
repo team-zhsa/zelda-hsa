@@ -4296,30 +4296,14 @@ Oui
 }
 
 dialog{
-  id = "maps.out._boundaries",
-  text = [[
-Vous ne pouvez pas aller plus
-loin.
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia.shop.bombs",
+  id = "maps.out.cordinia_town.shop.bombs",
   text = [[
 Trois bombes, pour tout démolir !
 ]],
 }
 
 dialog{
-  id = "maps.out.cordinia.sign_1",
-  text = [[
-Est : Enfin !
-Vill. des Animaux
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia.witch.give_mushroom",
+  id = "maps.out.cordinia_town.witch.give_mushroom",
   question = "1",
   text = [[
 Voilà un beau champignon que
@@ -4332,7 +4316,7 @@ Non !
 }
 
 dialog{
-  id = "maps.out.cordinia.witch.needs_mushroom",
+  id = "maps.out.cordinia_town.witch.needs_mushroom",
   text = [[
 Je cherche des champignons de
 Paris pour faire de la poudre
@@ -4342,7 +4326,7 @@ Tu sais où en trouver ?
 }
 
 dialog{
-  id = "maps.out.cordinia.witch.powder_not_ready",
+  id = "maps.out.cordinia_town.witch.powder_not_ready",
   text = [[
 Merci beaucoup !$0
 Reviens plus tard à la boutique
@@ -4352,7 +4336,7 @@ poudre magique !
 }
 
 dialog{
-  id = "maps.out.cordinia.witch.powder_ready",
+  id = "maps.out.cordinia_town.witch.powder_ready",
   text = [[
 Tiens, voilà ta poudre magique !$0
 Saupoudre-la sur ce que tu veux !
@@ -4360,7 +4344,7 @@ Saupoudre-la sur ce que tu veux !
 }
 
 dialog{
-  id = "maps.out.cordinia.witch.trading_ask_straw",
+  id = "maps.out.cordinia_town.witch.trading_ask_straw",
   question = "1",
   text = [[
 Ah ! $0 Voilà une belle paille que
@@ -4373,9 +4357,43 @@ Non !
 }
 
 dialog{
-  id = "maps.out.cordinia.witch.trading_no_straw",
+  id = "maps.out.cordinia_town.witch.trading_no_straw",
   text = [[
 Garde-là pour toi, alors !
+]],
+}
+
+dialog{
+  id = "maps.out.death_mountains.sign_1",
+  text = [[
+Est : Enfin !
+Vill. des Animaux
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_1",
+  text = [[
+SOUS TES PIEDS, DORT 
+UN SECRET.
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_2",
+  text = [[
+Est : Cordinia
+Sud-Ouest : Ranch Lonlon
+Ouest : Caverne
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_3",
+  text = [[
+Nord : Caverne
+Sud : Ranch Lonlon
+Ouest : Château d'Hyrule 
 ]],
 }
 
@@ -4412,155 +4430,26 @@ Coquillages
 }
 
 dialog{
-  id = "maps.out.field.owl_statue_1",
+  id = "maps.out.faron_woods.sign_1",
   text = [[
-SOUS TES PIEDS, DORT 
-UN SECRET.
+Bananes, bananes ! 
+Kik i!     
+Les copains, venez !
+On va le remercier !
 ]],
 }
 
 dialog{
-  id = "maps.out.field.sign_1",
+  id = "maps.out.finallis_island.sign_1",
   text = [[
-Attention : Montagnes
-Risque de mort élevé
-Faites gaffe
+Le pont des singes      
+est prêt !       
+Salut ! Kiki !
 ]],
 }
 
 dialog{
-  id = "maps.out.field.sign_10",
-  text = [[
-Nord : Temple du Temps
-Est : Forêt de Firone
-Sud : Plaine d'Hyrule
-Ouest : Château
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_11",
-  text = [[
-Sud-Ouest : Boutique de Lavio
-Sud : Marais
-Nord-Ouest : Château
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_12",
-  text = [[
-Est : Forêt de Firone
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_13",
-  text = [[
-Est : Domaine Zora
-Pas de chemin,
-continuer tout droit
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_2",
-  text = [[
-Le Sanctuaire
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_3",
-  text = [[
-Nord : Forêt hantée
-Plus au nord : Cordinia
-le hameau des sorcières
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_4",
-  text = [[
-Est : Forêt de Firone
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_5",
-  text = [[
-Est : Plaine d'Hyrule
-Sud : Bois Perdus
-Ouest : Village Cocorico
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_6",
-  text = [[
-Nord : Plaine
-Plus au nord : Ville d'Hyrule
-Sud : Marais
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_7",
-  text = [[
-Est : Cordinia
-Sud-Ouest : Ranch Lonlon
-Ouest : Caverne
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_8",
-  text = [[
-Nord : Caverne
-Sud : Ranch Lonlon
-Ouest : Château d'Hyrule 
-]],
-}
-
-dialog{
-  id = "maps.out.field.sign_9",
-  text = [[
-Nord : La forge
-Nord-Est : Domaine Zora
-Sud : Temple du Temps
-]],
-}
-
-dialog{
-  id = "maps.out.forest.priest_kidnapped",
-  text = [[
-$2A l'aide !$0 $v !
-Le prêtre du sanctuaire s'est
-fait kidnapper ! $0Viens vite !
-]],
-}
-
-dialog{
-  id = "maps.out.forest.sign_1",
-  text = [[
-Attention au plancher        
-fissuré.        
-Rondouillards : 
-abstenez-vous !
-]],
-}
-
-dialog{
-  id = "maps.out.forest.song_learnt",
-  text = [[
-Je vais t'apprendre le menuet
-de la Forêt, qui te servira à te
-téléporter ici.
-]],
-}
-
-dialog{
-  id = "maps.out.gerudo_desert.sign_1",
+  id = "maps.out.gerudo.sign_1",
   text = [[
 Nord : Village Gerudo
 Est : Plaine
@@ -4569,17 +4458,17 @@ Ouest : Désert
 }
 
 dialog{
-  id = "maps.out.gerudo_desert.strong_current",
+  id = "maps.out.gerudo.strong_current",
   text = [[
 Attention : Courant très fort
 ]],
 }
 
 dialog{
-  id = "maps.out.gerudo_village.to_village",
+  id = "maps.out.haunted_forest.sign_1",
   text = [[
-
-Ouest : Village Gerudo
+Vous ne pouvez pas aller plus
+loin.
 ]],
 }
 
@@ -5111,7 +5000,17 @@ Ci-gît le Coq Volant.
 }
 
 dialog{
-  id = "maps.out.lonlon.sign_2",
+  id = "maps.out.kokiri_village.sign_1",
+  text = [[
+Attention au plancher        
+fissuré.        
+Rondouillards : 
+abstenez-vous !
+]],
+}
+
+dialog{
+  id = "maps.out.lonlon_ranch.sign_2",
   text = [[
 > Cimetière     
 v La Prairie
@@ -5119,7 +5018,7 @@ v La Prairie
 }
 
 dialog{
-  id = "maps.out.lonlon.welcome.first",
+  id = "maps.out.lonlon_ranch.welcome.first",
   text = [[
 MALON : Oh ! c'est le
 Roi ! Nous ne savions
@@ -5129,6 +5028,58 @@ TALON : Ne t'inquiète pas,
 Malon. Je vais l'accueillir
 et lui dire que nous
 n'avons rien préparé.
+]],
+}
+
+dialog{
+  id = "maps.out.lost_woods.priest_kidnapped",
+  text = [[
+$2A l'aide !$0 $v !
+Le prêtre du sanctuaire s'est
+fait kidnapper ! $0Viens vite !
+]],
+}
+
+dialog{
+  id = "maps.out.lost_woods.song_learnt",
+  text = [[
+Je vais t'apprendre le menuet
+de la Forêt, qui te servira à te
+téléporter ici.
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_1",
+  skip = "all",
+  text = [[
+Attention : Montagnes
+Risque de mort élevé
+Faites gaffe
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_13",
+  text = [[
+Est : Domaine Zora
+Pas de chemin,
+continuer tout droit
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_2",
+  text = [[
+Le Sanctuaire
+]],
+}
+
+dialog{
+  id = "maps.out.north_west_castle.sign_1",
+  text = [[
+<--Vill. Cocorico
+Domaine Zora-->
 ]],
 }
 
@@ -5146,38 +5097,6 @@ dialog{
   text = [[
 Nord : Plaine
 Est : Baie de Parapa
-]],
-}
-
-dialog{
-  id = "maps.out.snowpeaks.monkey_3",
-  question = "1",
-  text = [[
-Bananes, bananes ...    
-Miam Miam !      
-
-Pour Kiki ?      
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.out.snowpeaks.monkey_4",
-  text = [[
-Bananes, bananes ! 
-Kik i!     
-Les copains, venez !
-On va le remercier !
-]],
-}
-
-dialog{
-  id = "maps.out.snowpeaks.monkey_5",
-  text = [[
-Le pont des singes      
-est prêt !       
-Salut ! Kiki !
 ]],
 }
 
@@ -5204,14 +5123,6 @@ dialog{
 Une serrure ici?
 Hum, voyons :   
 Serrure Cyclope
-]],
-}
-
-dialog{
-  id = "maps.out.south_castle.sign.sanctuary",
-  text = [[
-<--Vill. Cocorico
-Domaine Zora-->
 ]],
 }
 
@@ -5350,6 +5261,81 @@ Ouest : Plages de la Jument
 }
 
 dialog{
+  id = "maps.out.south_field.sign_1",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_10",
+  text = [[
+Nord : Temple du Temps
+Est : Forêt de Firone
+Sud : Plaine d'Hyrule
+Ouest : Château
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_11",
+  text = [[
+Sud-Ouest : Boutique de Lavio
+Sud : Marais
+Nord-Ouest : Château
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_12",
+  text = [[
+Est : Forêt de Firone
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_3",
+  text = [[
+Nord : Forêt hantée
+Plus au nord : Cordinia
+le hameau des sorcières
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_4",
+  text = [[
+Est : Forêt de Firone
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_5",
+  text = [[
+Est : Plaine d'Hyrule
+Sud : Bois Perdus
+Ouest : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_6",
+  text = [[
+Nord : Plaine
+Plus au nord : Ville d'Hyrule
+Sud : Marais
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_9",
+  text = [[
+Nord : La forge
+Nord-Est : Domaine Zora
+Sud : Temple du Temps
+]],
+}
+
+dialog{
   id = "maps.out.west_mountains.sign_1",
   text = [[
 Devant vous : Pic Lazare,  2 cm
@@ -5370,6 +5356,14 @@ dialog{
 Voici le Boléro du Feu, qui
 te permettra de revenir ici
 facilement.
+]],
+}
+
+dialog{
+  id = "maps.out.zora_forest.to_village",
+  text = [[
+
+Ouest : Village Gerudo
 ]],
 }
 
