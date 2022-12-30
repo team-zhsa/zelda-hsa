@@ -10,14 +10,6 @@
 local map = ...
 local game = map:get_game()
 
-
-local function random_walk(npc)
-  local m = sol.movement.create("random_path")
-  m:set_speed(32)
-  m:start(npc)
-  npc:get_sprite():set_animation("walking")
-end
-
 map:register_event("on_started", function()
 	game:show_map_name("hyrule_town")
 	map:set_digging_allowed(true)
@@ -25,6 +17,13 @@ map:register_event("on_started", function()
     town_gate:set_enabled(false)
   end
 end)
+
+local function random_walk(npc)
+  local m = sol.movement.create("random_path")
+  m:set_speed(32)
+  m:start(npc)
+  npc:get_sprite():set_animation("walking")
+end
 
 open_house_door_castle_sensor:register_event("on_activated", function()
   if hero:get_direction() == 1 and door_castle_1:is_enabled() and door_castle_2:is_enabled() then

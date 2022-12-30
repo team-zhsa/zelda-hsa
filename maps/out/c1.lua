@@ -15,12 +15,6 @@ map:register_event("on_started", function()
 	map:set_digging_allowed(true)
 end)
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
-
 -- Handle boulders spawning depending on activated sensor.
 for sensor in map:get_entities("sensor_activate_boulder_") do
   sensor:register_event("on_activated", function(sensor)

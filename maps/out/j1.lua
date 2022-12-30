@@ -8,7 +8,7 @@ local switch_manager = require("scripts/maps/switch_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
 
 -- Map events
-map:register_event("on_started", function(map, destination)
+map:register_event("on_started", function()
 	game:set_world_snow_mode("outside_world", "snowstorm")
 	game:show_map_name("snowpeaks")
 	map:set_digging_allowed(true)

@@ -16,8 +16,9 @@ local audio_manager = require("scripts/audio_manager")
 local field_music_manager = require("scripts/maps/field_music_manager")
 
 map:register_event("on_draw", function(map)
-
-  -- Music
   field_music_manager:init(map)
+end)
 
+map:register_event("on_started", function()
+  game:show_map_name("south_field")
 end)

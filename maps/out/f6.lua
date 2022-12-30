@@ -15,30 +15,10 @@ local audio_manager = require("scripts/audio_manager")
 local field_music_manager = require("scripts/maps/field_music_manager")
 
 map:register_event("on_draw", function(map)
-
-  -- Music
   field_music_manager:init(map)
-
 end)
 
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
+  game:show_map_name("south_field")
 end)
-
---[[function woman_bush:on_lifting()
-  sol.audio.play_sound("common/secret_discover_minor")
-  woman_npc:set_enabled(true)
-end
-
-function woman_bush:on_cut()
-  sol.audio.play_sound("common/secret_discover_minor")
-  woman_npc:set_enabled(true)
-end
-function woman_bush:on_exploded()
-  sol.audio.play_sound("common/secret_discover_minor")
-  woman_npc:set_enabled(true)
-end
-
-function woman_npc:on_interaction()
-  game:start_dialog("maps.field.f6.woman")
-end--]]

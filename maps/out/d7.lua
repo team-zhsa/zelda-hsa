@@ -11,8 +11,7 @@ local map = ...
 local game = map:get_game()
 local field_music_manager = require("scripts/maps/field_music_manager")
 
-
-
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
+	game:show_map_name("miracles_coast")
 end)

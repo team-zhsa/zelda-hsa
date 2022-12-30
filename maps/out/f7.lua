@@ -11,8 +11,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 map:register_event("on_started", function(map, destination)
 	game:set_world_rain_mode("outside_world", "storm")
 	game:show_map_name("swamp")
-  -- Music
-  map:init_music()
+ 	map:init_music()
   map:set_digging_allowed(true)
 end)
 

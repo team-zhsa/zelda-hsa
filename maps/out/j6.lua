@@ -1,6 +1,11 @@
 local map = ...
 local game = map:get_game()
--- Variables
+
+map:register_event("on_started", function()
+  map:set_overlay()
+  game:show_map_name("faron_woods")
+  map:set_digging_allowed(true)
+end)
 
 map.overlay_angles = {
   3 * math.pi / 4,
@@ -36,13 +41,6 @@ function map:restart_overlay_movement()
     map:restart_overlay_movement()
   end)
 
-end
-
--- Events
-
-function map:on_started(destination)
-  map:set_overlay()
-  map:set_digging_allowed(true)
 end
 
 function map:on_draw(destination_surface)

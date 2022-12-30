@@ -70928,8 +70928,8 @@ sensor{
 custom_entity{
   name = "spawner_boulder_3",
   layer = 0,
-  x = 384,
-  y = 413,
+  x = 376,
+  y = 405,
   properties = {
     {
       key = "breed",
@@ -71470,23 +71470,30 @@ destination{
   direction = 3,
 }
 
-sensor{
-  name = "owl_position",
-  layer = 0,
-  x = 392,
-  y = 389,
-  width = 16,
-  height = 16,
-}
-
 npc{
   name = "owl",
   layer = 0,
-  x = 296,
-  y = 189,
+  x = 496,
+  y = 237,
   direction = 3,
   subtype = 1,
   sprite = "npc/owl",
+}
+
+custom_entity{
+  name = "owl_position",
+  layer = 0,
+  x = 464,
+  y = 461,
+  properties = {
+    {
+      key = "breed",
+      value = "outside/boulder",
+    },
+  },
+  width = 16,
+  height = 16,
+  direction = 0,
 }
 
 tile{

@@ -11,12 +11,10 @@ local map = ...
 local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+function map:register_event("on_started", function()
 	game:show_map_name("cordinia_town")
-  -- You can initialize the movement and sprites of various
-  
 	map:set_digging_allowed(true)
-end
+end)
 
 if day_npc_witch ~= nil then
 	function day_npc_witch:on_interaction()

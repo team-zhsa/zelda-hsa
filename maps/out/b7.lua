@@ -15,9 +15,3 @@ map:register_event("on_started", function()
 	game:show_map_name("parapa_bay")
 	map:set_digging_allowed(true)
 end)
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
