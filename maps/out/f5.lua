@@ -21,4 +21,5 @@ end)
 
 map:register_event("on_started", function()
   game:show_map_name("south_field")
+  map:set_digging_allowed(true)
 end)

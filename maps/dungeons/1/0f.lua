@@ -32,6 +32,7 @@ function switch_door_23_n1:on_activated()
   map:open_doors("door_23_n1")
   sol.timer.start(map, 15000, function() --Timer for 15 seconds
     map:close_doors("door_23_n1")
+    switch_door_23_n1:set_activated(false)
   end)
   local num_calls = 0 --Timer for timer sound
   sol.timer.start(game, 1000, function()

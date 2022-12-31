@@ -4235,7 +4235,7 @@ au fond de la caverne et est
 réputé très difficile.
 C'est la dernière étape avant
 l'épée de Légende ! Tu y
-trouveras le pendentif du Pouvoir !
+trouveras le pendentif du Pouvoir.
 Les bombes s'y cachent et te
 seront d'une très grande utilité.
 
@@ -4519,6 +4519,14 @@ Le Temple du Temps...$0 Hic !
 }
 
 dialog{
+  id = "maps.out.hyrule_town.drunk_man.sleeping",
+  text = [[
+Zzzz...$0 Hic !
+Zzzz...$0 Hic !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.fisher.welcome",
   text = [[
 Bienvenue à la meilleure
@@ -4543,20 +4551,65 @@ pourra t'aider ! Mais ne le dis
 }
 
 dialog{
-  id = "maps.out.hyrule_town.generic_4",
+  id = "maps.out.hyrule_town.fisher.welcome_no_sword",
   text = [[
+Bienvenue à la meilleure
+poissonnerie d'Hyrule ! $0
+J'attends encore ma livraison
+de poissons... $0 Par contre,
+il paraît qu'à la forge au nord-
+est de la ville, il font de super
+couteaux !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.impa.sahasrahla",
+  question = "1",
+  text = [[
+$2Ah ! Te voilà enfin, $v
+Je t'attendais.
+
+Depuis que Ganon a installé
+ses sbires dans les étages
+supérieurs du château, des
+monstres sont apparus un peu
+partout dans le pays. $0 Je trouve
+cela très bizarre...
+Je pense que Ganon cherche
+à asseoir sa domination sur
+Hyrule.$0
+Ecoute-moi bien. $0 Je voudrais
+que tu ailles au village Cocorico
+voir Sahasrahla. Il pourra t'en
+dire plus.$0 Mais avant, passe à
+la forge, Hyrule est très
+dangereux !
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.impa.song_learnt",
+  text = [[
+Je vais t'apprendre la berceuse
+de Zelda. Elle te servira
+sûrement beaucoup.
 ]],
 }
 
 dialog{
   id = "maps.out.hyrule_town.laundry_pool.no_magic_bar",
   text = [[
-Les portes sont fermées, mais
-je crois qu'une lampe est cachée
-dans les égouts derrière le
-poissonnier.$0 Elle pourra t'aider
-à te repérer la nuit. Vas-y, mais
-ne le dis à personne !
+Les portes de la ville sont
+fermées, mais je crois qu'une
+lampe est cachée dans les
+égouts derrière le poissonnier.$0
+Elle pourra t'aider à te repérer
+la nuit. Vas-y, mais ne le dis
+à personne !
 ]],
 }
 
@@ -4607,7 +4660,7 @@ dialog{
   id = "maps.out.hyrule_town.soldiers.no_lamp",
   text = [[
 Hé petit !$0
-Où vas-tu comme ça ?$0
+Où vas-tu comme ça ?
 C'est dangereux de partir seul.
 Tu n'iras pas loin sans lampe.
 ]],
@@ -5332,6 +5385,28 @@ dialog{
 Nord : La forge
 Nord-Est : Domaine Zora
 Sud : Temple du Temps
+]],
+}
+
+dialog{
+  id = "maps.out.west_mountains.kaeopora_gaeobora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora Gaebora !$0
+Tu es devant le Cratère de la
+Montagne !
+Le Temple du Feu se trouve
+au fond de la caverne et est
+réputé très difficile.
+C'est la dernière étape avant
+l'épée de Légende ! Tu y
+trouveras le pendentif du Pouvoir.
+Les bombes s'y cachent et te
+seront d'une très grande utilité.
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
 ]],
 }
 

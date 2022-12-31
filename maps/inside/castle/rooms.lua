@@ -9,6 +9,7 @@
 
 local map = ...
 local game = map:get_game()
+local audio_manager = require("scripts/audio_manager")
 function map:jump_from_bed()
   hero:set_enabled(true)
   hero:start_jumping(7, 24, true)
@@ -39,16 +40,16 @@ function map:on_started(destination)
     bed:get_sprite():set_animation("hero_sleeping")
     hero:freeze()
     hero:set_enabled(false)
-    sol.audio.play_music("cutscenes/raining")
+    npc_zelda:set_enabled(true)
+    audio_manager:play_music("cutscenes/raining")
     sol.timer.start(3000, function()
       game:set_step_done("game_started")
       map:jump_from_bed()
     end)
+  elseif not game:is_step_done("sword_obtained") then
+    audio_manager:play_music("cutscenes/raining")
+    npc_zelda:set_enabled(true)
+  else  audio_manager:play_music("inside/castle")
+    npc_zelda:set_enabled(false)
   end
-	if not game:is_step_done("sword_obtained") then
-		sol.audio.play_music("cutscenes/raining")
-		npc_zelda:set_enabled(true)
-	else
-		npc_zelda:set_enabled(false)
-	end
 end

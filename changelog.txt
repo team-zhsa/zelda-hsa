@@ -227,6 +227,7 @@ Alpha 1.14 (18/10/22) "Koi Update":
 
 Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	ADD: Added maps.
+	ADD: Added dialogues.
 	CHG: Moved data files to another hard drive.
 	CHG: Replaced the timer dialog in the room 23 (0F) of the Ruins by a real timer sound (#37).
 	CHG: Changed the room 14 (B1) of the Forest Temple structure in order to be able to move the block from every directions (#6).
@@ -234,6 +235,7 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	CHG: Changed some sanctuary priest dialogues.
 	CHG: Moved the location of the big key lock to the door 12N instead of the big chest in the room 12 (B2) of the Forest Temple.
 	CHG: Replaced the torches in the room 10 (0F) of the Forest Temple by a pull handle (#43).
+	CHG: Cleaned up signs dialogues.
 	FIX: Fixed missing "tunic0" sprite in the hero head's sprite in the minimap.
 	FIX: Fixed map inconsistencies.
 	FIX: Fixed some wrong bushes weights.
@@ -258,6 +260,7 @@ Alpha 1.15 (started 18/10/22) "Ladyfish Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
+	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#51).
 
 Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
 	TDO: Fix game intro dialogues.
@@ -267,6 +270,9 @@ Alpha 1.15.1 (//23) "Ladyfish Update": Sprites and images
 	TDO: Clean up unused sprite files.
 	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Fix missing animations for other tunics (#47).
+	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	TDO: Center minimap arrows (#49).
+	TDO: Update title screen (#50).
 
 Alpha 1.16 (//23) "Mackerel Update": Improvement
 	TDO: Add maps.

@@ -22,6 +22,96 @@ tile{
 
 tile{
   layer = 0,
+  x = 832,
+  y = 152,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "66",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "4018",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "4018",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 120,
+  width = 16,
+  height = 64,
+  pattern = "4018",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 72,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 104,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "4018",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 104,
+  width = 16,
+  height = 16,
+  pattern = "4018",
+}
+
+tile{
+  layer = 0,
   x = 552,
   y = 1120,
   width = 728,
@@ -1296,7 +1386,7 @@ tile{
   y = 352,
   width = 16,
   height = 64,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -1305,7 +1395,7 @@ tile{
   y = 368,
   width = 16,
   height = 96,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6651,7 +6741,7 @@ tile{
   y = 384,
   width = 16,
   height = 16,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6660,7 +6750,7 @@ tile{
   y = 368,
   width = 16,
   height = 48,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6669,7 +6759,7 @@ tile{
   y = 448,
   width = 16,
   height = 32,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6678,7 +6768,7 @@ tile{
   y = 384,
   width = 16,
   height = 48,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6687,7 +6777,7 @@ tile{
   y = 400,
   width = 16,
   height = 16,
-  pattern = "111",
+  pattern = "917",
 }
 
 tile{
@@ -6751,16 +6841,6 @@ tile{
   width = 48,
   height = 8,
   pattern = "2203",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 384,
-  width = 16,
-  height = 16,
-  pattern = "6140",
-  tileset = "outside_buildings",
 }
 
 tile{
@@ -18377,7 +18457,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 480,
+  y = 520,
   width = 16,
   height = 8,
   pattern = "914",
@@ -21794,8 +21874,15 @@ npc{
   layer = 0,
   x = 96,
   y = 397,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
   direction = 3,
   subtype = 0,
+  sprite = "entities/sign",
   behavior = "dialog#maps.out.gerudo_desert.strong_current",
 }
 
