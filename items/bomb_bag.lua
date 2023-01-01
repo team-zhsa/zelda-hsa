@@ -24,7 +24,7 @@ function item:on_variant_changed(variant)
   if variant == 0 then
     bombs_counter:set_max_amount(0)
   else
-    local max_amounts = {30, 60}
+    local max_amounts = {20, 30, 40}
     local max_amount = max_amounts[variant]
     -- Set the max value of the bow counter.
     bombs_counter:set_variant(1)

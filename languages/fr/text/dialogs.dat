@@ -343,12 +343,10 @@ dialog{
   id = "_treasure.bomb_bag.1",
   icon = "53",
   text = [[
-Tu as trouvé le Sac
-de Bombes !$0 Il
-contient 10 Bombes.
-Assigne-les à une
-touche et fais tout
-sauter !
+Tu as obtenu le Sac de Bombes !$0
+Il contient 20 bombes !
+Assigne- les à une touche et
+fais tout sauter !
 ]],
 }
 
@@ -356,12 +354,10 @@ dialog{
   id = "_treasure.bomb_bag.2",
   icon = "54",
   text = [[
-Tu as trouvé le
-Grand Sac de
+Tu as obtenu le Grand Sac de
 Bombes !$0
-Il peut contenir
-jusqu'à 30 Bombes
-au lieu de 10 !
+Il peut contenir jusqu'à 30
+Bombes au lieu de 20 !
 ]],
 }
 
@@ -369,12 +365,10 @@ dialog{
   id = "_treasure.bomb_bag.3",
   icon = "55",
   text = [[
-Tu as trouvé le Sac
-de Bombes Géant !$0
-
-Il peut contenir
-jusqu'à 99 Bombes
-au lieu de 30 !
+Tu as obtenu le Grand Sac de
+Bombes !$0
+Il peut contenir jusqu'à 40
+Bombes au lieu de 30 !
 ]],
 }
 
@@ -1206,11 +1200,9 @@ dialog{
   id = "_treasure.quiver.1",
   icon = "56",
   text = [[
-Tu as trouvé le
-Carquois !$0
-
-Il peut contenir
-jusqu'à 10 Flèches !
+Tu as obtenu le Carquois !$0
+Il peut contenir jusqu'à 30
+Flèches !
 ]],
 }
 
@@ -1218,12 +1210,10 @@ dialog{
   id = "_treasure.quiver.2",
   icon = "57",
   text = [[
-Tu as trouvé le
-Grand Carquois !$0
+Tu as obtenu le Grand Carquois !$0
+Il peut contenir jusqu'à 40
+Flèches au lieu de 30 !
 
-Il peut contenir
-jusqu'à 30 Flèches
-au lieu de 10 !
 ]],
 }
 
@@ -1231,12 +1221,9 @@ dialog{
   id = "_treasure.quiver.3",
   icon = "59",
   text = [[
-Tu as trouvé le
-Carquois Géant !$0
-
-Il peut contenir
-jusqu'à 99 Flèches
-au lieu de 30 !
+Tu as obtenu le Carquois Géant !$0
+Il peut contenir jusqu'à 50
+Flèches au lieu de 40 !
 ]],
 }
 
@@ -4027,14 +4014,74 @@ de retrouver ton énergie vitale.
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.merchant_first_welcome",
+  id = "maps.houses.south_field.lost_woods_mapper.mapper_directions",
+  question = "1",
   text = [[
-A FAIRE
+Que souhaiterais-tu savoir ?
+Aller au Bosquet Sacré !
+Aller au village Kokiri !
 ]],
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.merchant_welcome",
+  id = "maps.houses.south_field.lost_woods_mapper.mapper_kokiri",
+  text = [[
+Si tu veux aller au Village
+Kokiri, il suffit d'aller :
+une fois à droite
+deux fois en bas
+une fois à gauche
+trois fois en bas
+Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.south_field.lost_woods_mapper.mapper_sacred_grove",
+  text = [[
+Si tu veux aller au Bosquet
+Sacré, il suffit d'aller :
+
+une fois à droite
+deux fois en bas
+deux fois à droite
+Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.south_field.lost_woods_mapper.mapper_search_pendant",
+  text = [[
+Tu cherches le pendentif du
+Pouvoir je crois...
+Il est caché dans le Bosquet
+Sacré, mais pour y accéder
+tu dois passer par les Bois
+Perdus...$0
+Je crois que j'ai une carte qui
+pourra t'aider...
+]],
+}
+
+dialog{
+  id = "maps.houses.south_field.lost_woods_mapper.mapper_welcome",
+  text = [[
+Bonjour, $v
+La maison est un peu exiguë
+mais ne te fais pas de souci.
+]],
+}
+
+dialog{
+  id = "maps.houses.south_field.ravios_shop.merchant_first_welcome",
+  text = [[
+TODO
+
+]],
+}
+
+dialog{
+  id = "maps.houses.south_field.ravios_shop.merchant_welcome",
   text = [[
 Hé $v !$0
 Ce monde peut être dangereux.
@@ -4043,7 +4090,7 @@ Choisis ce que tu aimes.
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.product_arrows",
+  id = "maps.houses.south_field.ravios_shop.product_arrows",
   text = [[
 Voici les flèches !
 Vise tes ennemis avec !
@@ -4051,7 +4098,7 @@ Vise tes ennemis avec !
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.product_bombs",
+  id = "maps.houses.south_field.ravios_shop.product_bombs",
   text = [[
 Voici les bombes !
 Elles peuvent tout exploser !
@@ -4059,7 +4106,7 @@ Elles peuvent tout exploser !
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.product_bottle",
+  id = "maps.houses.south_field.ravios_shop.product_bottle",
   text = [[
 Voici un Flacon Magique !
 Tu peux y stocker ce que tu
@@ -4068,15 +4115,15 @@ aimes.
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.product_healing_wand",
+  id = "maps.houses.south_field.ravios_shop.product_healing_wand",
   text = [[
 Voici le sceptre de soin !
-Tu peux te soigner avec lui !
+Tu peux te soigner avec !
 ]],
 }
 
 dialog{
-  id = "maps.houses.south_castle.ravios_shop.product_heart",
+  id = "maps.houses.south_field.ravios_shop.product_heart",
   text = [[
 Voici un Coeur pour régénérer
 de la vie.
@@ -4469,33 +4516,6 @@ dialog{
   text = [[
 Vous ne pouvez pas aller plus
 loin.
-]],
-}
-
-dialog{
-  id = "maps.out.hylia_lake.sign_1",
-  text = [[
-Devant vous se trouve la baie du
-Tourne-main ou de l'ogre, je ne
-sais plus !
-]],
-}
-
-dialog{
-  id = "maps.out.hylia_lake.sign_2",
-  text = [[
-Nord : Cimetière
-Est : Sanctuaire
-Plus à l'est : Lac Zora
-Sud : Village Cocorico
-]],
-}
-
-dialog{
-  id = "maps.out.hylia_lake.sign_3",
-  text = [[
-Vous êtes ici.
-Là : --> *
 ]],
 }
 
@@ -5125,6 +5145,33 @@ dialog{
   id = "maps.out.north_field.sign_2",
   text = [[
 Le Sanctuaire
+]],
+}
+
+dialog{
+  id = "maps.out.north_west.sign_1",
+  skip = "all",
+  text = [[
+Nord : Lac Hylia
+Sud : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_west.sign_2",
+  text = [[
+Nord : Cimetière
+Est : Sanctuaire
+Plus à l'est : Lac Zora
+Sud : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_west.sign_3",
+  text = [[
+Vous êtes ici.
+Là : --> *
 ]],
 }
 
@@ -5887,7 +5934,7 @@ dialog{
   id = "scripts.menus.pause_inventory.blue_tunic.1",
   icon = "44",
   text = [[
-Une tunique bleu qui te
+Une tunique bleue qui te
 protège du froid et te permet
 de respirer sous l'eau.
 ]],
@@ -6838,7 +6885,7 @@ dialog{
   skip = "all",
   text = [[
 Crée un rayon de vie pour
-éliminer tes ennms de loin !
+éliminer tes enemis de loin !
 Ne fonctionne qui si tu as ta
 barre de vie pleine.
 ]],
