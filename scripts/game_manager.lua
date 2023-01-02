@@ -39,9 +39,11 @@ function game_manager:create(file)
 		game:set_world_rain_mode("outside_world", nil)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(1000)
+    print("Main quest step start:"..game:get_value("main_quest_step"))
 	end)
 
 	game:register_event("on_finished", function()
+    print("Main quest step finish:"..game:get_value("main_quest_step"))
 	end)
 
 	game:register_event("on_map_changed", function()

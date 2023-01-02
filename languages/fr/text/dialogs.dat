@@ -3832,10 +3832,50 @@ n'est jamais revenu...$0 Hic !
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper",
-  skip = "all",
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_has_world_map",
   text = [[
-$1Ah ! Te voilà $v !
+$1 Va au sanctuaire, le
+sage a quelque chose à te
+dire.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_lost_woods_map",
+  question = "1",
+  text = [[
+$2Zzzz... Zzzz...$0
+Ah ! Te voilà $v !
+
+Je vois que tu as réussi à
+vaincre les monstres des
+Ruines.
+Tu as obtenu le premier
+pendentif, celui du Courage.
+Il en reste deux. $0Le deuxième
+se trouve au fond du Bosquet
+Sacré, dans les Bois Perdus.
+
+On raconte que tous ceux qui y
+sont rentrés n'en sont jamais
+ressortis et se sont transformés
+en Stalfos...$0 Quoi qu'il en
+soit, je connais quelqu'un qui
+peut t'aider. Je t'ai indiqué
+l'endroit sur la carte.
+
+
+Veux-tu que je répète ?
+Oui !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper",
+  text = [[
+$2Zzzz... Zzzz...$0
+Ah ! Te voilà $v !
 Je t'attendais depuis un moment.
 Cela va être difficile pour toi
 de t'orienter dans ce vaste
@@ -3845,7 +3885,7 @@ ce moment sur les cartes.
 Cours donc le voir, sa boutique
 au sud est immanquable !
 Va au sanctuaire après, le
-prêtre a quelque chose à te
+sage a quelque chose à te
 dire.
 ]],
 }
@@ -3855,6 +3895,13 @@ dialog{
   skip = "all",
   text = [[
 Zzzz... Zzzz...
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_wake_up",
+  text = [[
+
 ]],
 }
 

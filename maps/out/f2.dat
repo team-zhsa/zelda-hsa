@@ -31870,6 +31870,33 @@ tile{
   pattern = "119",
 }
 
+tile{
+  layer = 0,
+  x = 224,
+  y = 1392,
+  width = 32,
+  height = 16,
+  pattern = "1000000",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 1408,
+  width = 64,
+  height = 16,
+  pattern = "1000000",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 1424,
+  width = 128,
+  height = 16,
+  pattern = "1000000",
+}
+
 sensor{
   name = "layer_up_sensor",
   layer = 0,
@@ -34606,6 +34633,17 @@ npc{
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 648,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/f3",
+  destination = "_side",
 }
 
 tile{
@@ -38188,6 +38226,114 @@ tile{
   width = 48,
   height = 8,
   pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 96,
+  y = 1424,
+  width = 48,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 96,
+  y = 1432,
+  width = 48,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 88,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 144,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 480,
+  y = 1424,
+  width = 48,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 480,
+  y = 1432,
+  width = 48,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 472,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 528,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 624,
+  y = 1424,
+  width = 96,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 624,
+  y = 1432,
+  width = 96,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 616,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 720,
+  y = 1432,
+  width = 8,
+  height = 48,
+  pattern = "1489",
 }
 
 dynamic_tile{

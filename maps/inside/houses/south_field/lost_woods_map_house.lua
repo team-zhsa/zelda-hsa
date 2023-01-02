@@ -15,7 +15,7 @@ map:register_event("on_started", function()
 end)
 
 npc_lost_woods_mapper:register_event("on_interaction", function()
-  if game:is_step_last("dungeon_1_completed") then
+  if game:is_step_last("sahasrahla_lost_woods_map") then
     game:start_dialog("maps.houses.south_field.lost_woods_mapper.mapper_search_pendant", function()
       npc_directions()
     end)

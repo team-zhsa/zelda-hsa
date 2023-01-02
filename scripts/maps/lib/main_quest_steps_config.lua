@@ -7,6 +7,7 @@ local steps={
   "priest_met",
   "dungeon_1_started",
   "dungeon_1_completed",
+  "sahasrahla_lost_woods_map",
   "lost_woods_map_obtained",
   "dungeon_2_started",
   "dungeon_2_completed",
@@ -17,7 +18,7 @@ local steps={
   "master_sword_obtained",
   "zelda_kidnapped",
   "castle_unlocked",
-  "castle_completed",
+  "castle_completed"
 }
 
 local index={}

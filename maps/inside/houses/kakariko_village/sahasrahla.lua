@@ -26,9 +26,20 @@ end
 sahasrahla:register_event("on_interaction", function()
   if game:is_step_last("sword_obtained") then
     game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_mapper", game:get_player_name())
+  elseif game:is_step_last("world_map_obtained") then
+    game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_has_world_map")
+  elseif game:is_step_last("dungeon_1_completed") then
+    lost_woods_map_dialog()
   else
     game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_sleep")
   end
-
-
 end)
+
+function lost_woods_map_dialog()
+  game:start_dialog("maps.houses.kakarico_village.sahasrahla_house.sahasrahla_lost_woods_map", game:get_player_name(), function(answer)
+    if answer == 1 then
+      lost_woods_map_dialog()
+    else game:set_step_done("sahasrahla_lost_woods_map")
+    end
+  end)
+end

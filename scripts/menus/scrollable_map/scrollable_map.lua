@@ -22,6 +22,8 @@ cross_positions = { -- Indicates the coordinates in the entire world of the next
   {x = 00904, y = 00080}, -- Ruins (completing)
   -- "dungeon_1_completed",
   {x = 00656, y = 03048}, -- Ruins completed, go to Sahasrahla's house in Kakarico
+  -- "sahasrahla_lost_woods_map",
+  {x = 04608, y = 07928}, -- Sahasrahla met, go to Lost Woods mapper
   -- "lost_woods_map_obtained",
   {x = 02336, y = 04520}, -- Forest Temple
   -- "dungeon_2_started",
