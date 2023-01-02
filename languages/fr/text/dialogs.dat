@@ -4535,6 +4535,24 @@ Nord-ouest : Village Cocorico
 }
 
 dialog{
+  id = "maps.out.east_castle.soldiers.no_sword_day",
+  text = [[
+Que fais-tu ici, petit ?$0
+C'est dangereux de t'aventurer
+tout seul, rentre dans la ville !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.no_sword_night",
+  text = [[
+Hé ! Que fais tu encore debout
+à cette heure-ci ?$0
+Maintenant rentre dans la ville !
+]],
+}
+
+dialog{
   id = "maps.out.east_mountains.sign_1",
   text = [[
 Est : Village Goron
@@ -4852,20 +4870,6 @@ ne suis qu'un gosse !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.kids_11",
-  skip = "all",
-  text = [[
-Hé M'sieu !      
-A propos du Gîte des
-Rêves... A l'intérieur,  
-il y a un...   
-Mais comme je ne suis
-qu'un gosse, je n'en  
-dirai pas plus !
-]],
-}
-
-dialog{
   id = "maps.out.kakarico_village.kids_2",
   skip = "all",
   text = [[
@@ -4902,28 +4906,6 @@ dans une maison ou
 une grotte. Pourquoi ? 
 Je ne sais pas, je suis
 trop petit !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_5",
-  skip = "all",
-  text = [[
-M'sieu ! Que     
-pensez-vous de Marine ? 
-Moi ? Ben ! Je ne suis 
-qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_6",
-  skip = "all",
-  text = [[
-M'sieu! D'où vous 
-venez ? De l'extérieur ? 
-Je ne connais pas ce 
-mot, je suis trop petit !
 ]],
 }
 
@@ -5252,6 +5234,24 @@ dialog{
 Nord : Forge
 Sud-est : Village Gerudo
 Sud-ouest : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.soldiers.no_pendant_day",
+  text = [[
+Que fais-tu là, petit ?
+Le monde est très dangereux,
+ne va pas plus loin !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.soldiers.no_pendant_night",
+  text = [[
+Que fais-tu debout à cette
+heure-ci ? Rentre chez toi et
+dors un peu !
 ]],
 }
 
