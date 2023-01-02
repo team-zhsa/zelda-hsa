@@ -20,7 +20,7 @@ time_flow = 1000
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
-	
+	product_key = math.random(1000, 9999)
   -- Create the game (but do not start it).
   local exists = sol.game.exists(file)
   local game = sol.game.load(file)
@@ -39,7 +39,6 @@ function game_manager:create(file)
 		game:set_world_rain_mode("outside_world", nil)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(1000)
-    
 	end)
 
 	game:register_event("on_finished", function()

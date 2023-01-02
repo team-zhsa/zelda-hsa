@@ -23554,6 +23554,24 @@ tile{
   pattern = "122",
 }
 
+tile{
+  layer = 0,
+  x = 304,
+  y = 1360,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
+tile{
+  layer = 0,
+  x = 1248,
+  y = 1136,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 npc{
   name = "npc_soldier",
   layer = 0,
@@ -23576,18 +23594,21 @@ npc{
 
 npc{
   layer = 0,
-  x = 1160,
-  y = 1117,
+  x = 312,
+  y = 1373,
   properties = {
     {
       key = "model",
       value = "sign",
     },
+    {
+      key = "dialog",
+      value = "maps.out.east_castle.sign_1",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.south_field.sign_10",
 }
 
 teletransporter{
@@ -24677,6 +24698,25 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/g1",
   destination = "_side",
+}
+
+npc{
+  layer = 0,
+  x = 1256,
+  y = 1149,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+    {
+      key = "dialog",
+      value = "maps.out.east_castle.sign_4",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 tile{

@@ -42,6 +42,24 @@ custom_entity{
 
 tile{
   layer = 0,
+  x = 296,
+  y = 808,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 848,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
   x = 1536,
   y = 560,
   width = 16,
@@ -7384,6 +7402,69 @@ tile{
   pattern = "floor.13-1",
 }
 
+tile{
+  layer = 0,
+  x = 280,
+  y = 824,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 848,
+  width = 16,
+  height = 8,
+  pattern = "door.4.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 848,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 824,
+  width = 16,
+  height = 8,
+  pattern = "door.3.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 832,
+  width = 16,
+  height = 16,
+  pattern = "door.4",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 832,
+  width = 16,
+  height = 16,
+  pattern = "door.3",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 832,
+  width = 48,
+  height = 16,
+  pattern = "floor.13-1",
+}
+
 chest{
   layer = 0,
   x = 800,
@@ -7813,6 +7894,56 @@ switch{
   inactivate_when_leaving = false,
 }
 
+wall{
+  layer = 0,
+  x = 280,
+  y = 832,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 344,
+  y = 832,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+door{
+  name = "door_16_e",
+  layer = 0,
+  x = 280,
+  y = 832,
+  direction = 0,
+  sprite = "entities/Doors/Inside/door_d1_small_key",
+  savegame_variable = "dungeon_7_1f_door_16_17",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_7_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
+}
+
+door{
+  name = "door_17_w",
+  layer = 0,
+  x = 344,
+  y = 832,
+  direction = 2,
+  sprite = "entities/Doors/Inside/door_d1_small_key",
+  savegame_variable = "dungeon_7_1f_door_16_17",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_7_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
+}
+
 tile{
   layer = 1,
   x = 768,
@@ -8066,6 +8197,42 @@ tile{
 }
 
 tile{
+  layer = 1,
+  x = 296,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 336,
+  y = 832,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 296,
+  y = 824,
+  width = 8,
+  height = 32,
+  pattern = "door_top.closed.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 336,
+  y = 824,
+  width = 8,
+  height = 32,
+  pattern = "door_top.closed.3-2",
+}
+
+tile{
   layer = 2,
   x = 792,
   y = 352,
@@ -8126,5 +8293,14 @@ tile{
   width = 16,
   height = 16,
   pattern = "450",
+}
+
+tile{
+  layer = 2,
+  x = 1112,
+  y = 360,
+  width = 16,
+  height = 16,
+  pattern = "570",
 }
 

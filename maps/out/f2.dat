@@ -15078,9 +15078,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 48,
+  x = 0,
   y = 400,
-  width = 48,
+  width = 96,
   height = 32,
   pattern = "907",
 }
@@ -15326,15 +15326,6 @@ tile{
   width = 32,
   height = 48,
   pattern = "907",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 408,
-  width = 8,
-  height = 24,
-  pattern = "13892",
 }
 
 tile{
@@ -16122,9 +16113,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 48,
+  x = 0,
   y = 392,
-  width = 32,
+  width = 80,
   height = 8,
   pattern = "123",
 }
@@ -16136,15 +16127,6 @@ tile{
   width = 16,
   height = 8,
   pattern = "119",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 408,
-  width = 8,
-  height = 24,
-  pattern = "125",
 }
 
 tile{
@@ -16190,15 +16172,6 @@ tile{
   width = 8,
   height = 16,
   pattern = "125",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 432,
-  width = 8,
-  height = 8,
-  pattern = "119",
 }
 
 tile{
@@ -17274,15 +17247,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 392,
-  width = 8,
-  height = 8,
-  pattern = "116",
-}
-
-tile{
-  layer = 0,
   x = 80,
   y = 392,
   width = 8,
@@ -17306,24 +17270,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "114",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "116",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "124",
 }
 
 tile{
@@ -17468,15 +17414,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "117",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 432,
-  width = 8,
-  height = 8,
-  pattern = "115",
 }
 
 tile{
@@ -21640,42 +21577,6 @@ tile{
 tile{
   layer = 0,
   x = 0,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 8,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 8,
-  y = 408,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 408,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 0,
   y = 384,
   width = 8,
   height = 8,
@@ -21686,24 +21587,6 @@ tile{
   layer = 0,
   x = 8,
   y = 384,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 8,
-  y = 392,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 392,
   width = 8,
   height = 8,
   pattern = "101",
@@ -21776,42 +21659,6 @@ tile{
   layer = 0,
   x = 0,
   y = 456,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 432,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 8,
-  y = 432,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 8,
-  y = 440,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 440,
   width = 8,
   height = 8,
   pattern = "101",
@@ -32005,6 +31852,24 @@ tile{
   pattern = "454",
 }
 
+tile{
+  layer = 0,
+  x = 1008,
+  y = 992,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 432,
+  width = 48,
+  height = 8,
+  pattern = "119",
+}
+
 sensor{
   name = "layer_up_sensor",
   layer = 0,
@@ -34722,6 +34587,25 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/f1",
   destination = "_side",
+}
+
+npc{
+  layer = 0,
+  x = 1016,
+  y = 1005,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+    {
+      key = "dialog",
+      value = "maps.out.north_field.sign_3",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 tile{

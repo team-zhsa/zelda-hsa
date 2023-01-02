@@ -2601,6 +2601,39 @@ côté.
 }
 
 dialog{
+  id = "maps.houses.east_castle.shop.merchant_welcome",
+  text = [[
+Bonjour. Choisis ce que tu
+aimes. Appuie sur A.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.shop.product_arrows",
+  text = [[
+Des flèches pour éliminer à
+distance tes ennemis.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.shop.product_bombs",
+  text = [[
+Des bombes !
+Savais-tu que tu pouvais soulever
+la bombe que tu as placée ?
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.shop.product_shield",
+  text = [[
+Des flèches pour tirer à
+distance.
+]],
+}
+
+dialog{
   id = "maps.houses.faron_woods.collector_house.give_rare_pearl",
   text = [[
 Serait-ce une perle rare que je
@@ -3853,8 +3886,8 @@ de la vie si tu es mal en point.
 dialog{
   id = "maps.houses.kakarico_village.shop.product_shield",
   text = [[
-Des flèches pour tirer à
-distance.
+Un bouclier pour te protéger des
+attaques des ennemis.
 ]],
 }
 
@@ -4421,8 +4454,8 @@ Vill. des Animaux
 dialog{
   id = "maps.out.east_castle.sign_1",
   text = [[
-SOUS TES PIEDS, DORT 
-UN SECRET.
+Est : Forge
+Sud : Château d'Hyrule
 ]],
 }
 
@@ -4441,6 +4474,16 @@ dialog{
 Nord : Caverne
 Sud : Ranch Lonlon
 Ouest : Château d'Hyrule 
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_4",
+  text = [[
+Nord-est : Domaine Zora
+Est : Forge
+Sud-ouest : Château
+Nord-ouest : Village Cocorico
 ]],
 }
 
@@ -4673,6 +4716,14 @@ dialog{
   id = "maps.out.hyrule_town.sign_1",
   text = [[
 Poissonnerie
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_2",
+  text = [[
+Clé de produit :
+$v
 ]],
 }
 
@@ -5133,18 +5184,27 @@ Faites gaffe
 }
 
 dialog{
-  id = "maps.out.north_field.sign_13",
+  id = "maps.out.north_field.sign_2",
   text = [[
-Est : Domaine Zora
-Pas de chemin,
-continuer tout droit
+Le Sanctuaire
 ]],
 }
 
 dialog{
-  id = "maps.out.north_field.sign_2",
+  id = "maps.out.north_field.sign_3",
   text = [[
-Le Sanctuaire
+Est : Domaine Zora
+Sud : Château
+Ouest : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_4",
+  text = [[
+Nord : Forge
+Sud-est : Village Gerudo
+Sud-ouest : Village Cocorico
 ]],
 }
 
@@ -5942,7 +6002,7 @@ de respirer sous l'eau.
 
 dialog{
   id = "scripts.menus.pause_inventory.bombs_counter.1",
-  icon = "3",
+  icon = "4",
   skip = "all",
   text = [[
 Utilise les Bombes
@@ -5966,7 +6026,7 @@ attraper des objets à distance.
 
 dialog{
   id = "scripts.menus.pause_inventory.boomerang.2",
-  icon = "9",
+  icon = "1",
   skip = "all",
   text = [[
 Utilise le Super Boomerang pour
@@ -7017,8 +7077,7 @@ Non
 dialog{
   id = "scripts.menus.quit_menu.save",
   text = [[
-Votre partie a été
-sauvegardée.
+Votre partie a été sauvegardée.
 ]],
 }
 

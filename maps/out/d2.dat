@@ -11048,7 +11048,7 @@ tile{
   layer = 0,
   x = 1200,
   y = 608,
-  width = 64,
+  width = 80,
   height = 32,
   pattern = "907",
 }
@@ -11669,7 +11669,7 @@ tile{
   layer = 0,
   x = 1232,
   y = 640,
-  width = 32,
+  width = 48,
   height = 8,
   pattern = "119",
 }
@@ -24195,78 +24195,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1264,
-  y = 616,
-  width = 8,
-  height = 16,
-  pattern = "13892",
-}
-
-tile{
-  layer = 0,
-  x = 1264,
-  y = 600,
-  width = 8,
-  height = 8,
-  pattern = "117",
-}
-
-tile{
-  layer = 0,
-  x = 1264,
-  y = 608,
-  width = 8,
-  height = 8,
-  pattern = "122",
-}
-
-tile{
-  layer = 0,
-  x = 1272,
-  y = 608,
-  width = 8,
-  height = 8,
-  pattern = "117",
-}
-
-tile{
-  layer = 0,
-  x = 1264,
-  y = 632,
-  width = 8,
-  height = 8,
-  pattern = "120",
-}
-
-tile{
-  layer = 0,
-  x = 1264,
-  y = 640,
-  width = 8,
-  height = 8,
-  pattern = "114",
-}
-
-tile{
-  layer = 0,
-  x = 1272,
-  y = 632,
-  width = 8,
-  height = 8,
-  pattern = "114",
-}
-
-tile{
-  layer = 0,
-  x = 1272,
-  y = 616,
-  width = 8,
-  height = 16,
-  pattern = "121",
-}
-
-tile{
-  layer = 0,
   x = 520,
   y = 664,
   width = 8,
@@ -25095,11 +25023,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 1232,
-  y = 576,
+  x = 1264,
+  y = 600,
   width = 16,
-  height = 16,
-  pattern = "1038",
+  height = 8,
+  pattern = "123",
 }
 
 jumper{
@@ -29014,22 +28942,6 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/e2",
   destination = "_side",
-}
-
-npc{
-  layer = 0,
-  x = 1240,
-  y = 589,
-  properties = {
-    {
-      key = "model",
-      value = "sign",
-    },
-  },
-  direction = 3,
-  subtype = 1,
-  sprite = "entities/sign",
-  behavior = "dialog#maps.out.north_field.sign_13",
 }
 
 teletransporter{

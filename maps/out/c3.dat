@@ -20766,6 +20766,15 @@ tile{
   pattern = "84",
 }
 
+tile{
+  layer = 0,
+  x = 1136,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 enemy{
   layer = 0,
   x = 168,
@@ -20933,6 +20942,25 @@ enemy{
   direction = 0,
   breed = "soldiers/sword_soldier_green",
   treasure_name = "random_west",
+}
+
+npc{
+  layer = 0,
+  x = 1144,
+  y = 45,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+    {
+      key = "dialog",
+      value = "maps.out.north_field.sign_4",
+    },
+  },
+  direction = 3,
+  subtype = 1,
+  sprite = "entities/sign",
 }
 
 tile{
