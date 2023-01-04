@@ -381,7 +381,7 @@ local function initialize_dialog_box_features(game)
     local special = false
     if current_char == "$" then
       -- Special character.
-
+      command_names = { "action", "attack", "item_1", "item_2", "pause", "left", "right", "up", "down" }
       special = true
       current_char = line:sub(self.char_index, self.char_index)
       self.char_index = self.char_index + 1
@@ -401,7 +401,11 @@ local function initialize_dialog_box_features(game)
       elseif current_char == "3" then
         -- Fast.
         self.char_delay = char_delays["fast"]
-
+        -- TODO issue #44
+      --[[elseif current_char == "X" then
+        local keyboard_binding = game:get_command_keyboard_binding(command_names[1])
+        text_surface:set_text(keyboard_binding:sub(1) .. "$")
+        special = true--]]
       else
         -- Not a special char, actually.
         text_surface:set_text(text_surface:get_text() .. "$")

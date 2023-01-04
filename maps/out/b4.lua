@@ -35,7 +35,7 @@ function map:on_started(destination)
 end
 
 sensor_cutscene:register_event("on_activated", function()
-	if game:is_step_last("dungeon_1_completed") then
+	if game:is_step_last("lost_woods_map_obtained") then
     map:set_cinematic_mode(true, options)
     hero:freeze()
     hero:set_direction(1)
@@ -56,7 +56,7 @@ function owl_dialog()
     if answer == 1 then
       owl_dialog()
     elseif answer == 2 then
-      game:start_dialog("maps.out.forest.song_learnt", function()
+      game:start_dialog("maps.out.lost_woods.song_learnt", function()
         hero:start_treasure("song_1_forest")
         game:set_step_done("dungeon_2_started")
         local owl_movement_leave = sol.movement.create("target")
@@ -101,7 +101,7 @@ sensor_priest_kidnapped:register_event("on_activated", function()
     villager_movement_to_position_3:set_speed(128)
     villager_movement_to_position_3:set_max_distance(96)
     villager_movement_to_position_3:start(npc_villager_3, function()
-      game:start_dialog("maps.out.forest.priest_kidnapped", game:get_player_name(), function()
+      game:start_dialog("maps.out.lost_woods.priest_kidnapped", game:get_player_name(), function()
         local villager_movement_leave_1 = sol.movement.create("straight")
         villager_movement_leave_1:set_ignore_obstacles(true)
         villager_movement_leave_1:set_ignore_suspend(true)

@@ -9399,29 +9399,15 @@ npc{
   layer = 0,
   x = 1256,
   y = 677,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
   direction = 2,
   subtype = 1,
-  sprite = "npc/soldier_blue",
-}
-
-npc{
-  name = "npc_soldier_2",
-  layer = 0,
-  x = 1256,
-  y = 701,
-  direction = 2,
-  subtype = 1,
-  sprite = "npc/soldier_blue",
-}
-
-npc{
-  name = "npc_soldier_3",
-  layer = 0,
-  x = 1256,
-  y = 725,
-  direction = 2,
-  subtype = 1,
-  sprite = "npc/soldier_blue",
+  sprite = "npc/soldier",
 }
 
 sensor{
@@ -9556,6 +9542,38 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/f3",
   destination = "_side",
+}
+
+npc{
+  name = "npc_soldier_2",
+  layer = 0,
+  x = 1256,
+  y = 701,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 2,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_3",
+  layer = 0,
+  x = 1256,
+  y = 725,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 2,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
 tile{

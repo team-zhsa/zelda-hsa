@@ -654,7 +654,7 @@ tile{
   x = 88,
   y = 16,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
@@ -663,51 +663,42 @@ tile{
   x = 216,
   y = 16,
   width = 16,
-  height = 32,
-  pattern = "wall_pillar.1-9",
-}
-
-tile{
-  layer = 0,
-  x = 152,
-  y = 16,
-  width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
 tile{
   layer = 0,
   x = 88,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
 tile{
   layer = 0,
   x = 216,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
 tile{
   layer = 0,
-  x = 272,
+  x = 280,
   y = 152,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
 
 tile{
   layer = 0,
-  x = 272,
+  x = 280,
   y = 56,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
@@ -716,7 +707,7 @@ tile{
   layer = 0,
   x = 16,
   y = 56,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
@@ -725,7 +716,7 @@ tile{
   layer = 0,
   x = 16,
   y = 152,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
@@ -1160,6 +1151,24 @@ tile{
   width = 8,
   height = 56,
   pattern = "floor_border.1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
 }
 
 destination{

@@ -3395,6 +3395,20 @@ tile{
 }
 
 wall{
+  name = "wall_wizard",
+  layer = 0,
+  x = 40,
+  y = 416,
+  width = 40,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
   layer = 0,
   x = 56,
   y = 200,

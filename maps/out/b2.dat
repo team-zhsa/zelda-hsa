@@ -12427,7 +12427,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 424,
+  x = 464,
   y = 208,
   width = 16,
   height = 16,
@@ -12477,7 +12477,7 @@ enemy{
 
 npc{
   layer = 0,
-  x = 432,
+  x = 472,
   y = 221,
   properties = {
     {
@@ -12718,6 +12718,38 @@ enemy{
   direction = 0,
   breed = "outside/octorok_blue",
   treasure_name = "random_west",
+}
+
+npc{
+  name = "npc_soldier_1",
+  layer = 0,
+  x = 368,
+  y = 221,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_2",
+  layer = 0,
+  x = 392,
+  y = 221,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
 tile{

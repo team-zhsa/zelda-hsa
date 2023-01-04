@@ -19053,6 +19053,51 @@ tile{
   pattern = "1000000",
 }
 
+wall{
+  name = "wall_soldier",
+  layer = 0,
+  x = 8,
+  y = 944,
+  width = 16,
+  height = 288,
+  stops_hero = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+npc{
+  name = "npc_soldier_10",
+  layer = 0,
+  x = 32,
+  y = 1157,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_9",
+  layer = 0,
+  x = 32,
+  y = 1189,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
 teletransporter{
   layer = 0,
   x = 168,
@@ -19406,6 +19451,86 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/f3",
   destination = "_side",
+}
+
+npc{
+  name = "npc_soldier_1",
+  layer = 0,
+  x = 32,
+  y = 965,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_3",
+  layer = 0,
+  x = 32,
+  y = 997,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_4",
+  layer = 0,
+  x = 32,
+  y = 1029,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_6",
+  layer = 0,
+  x = 32,
+  y = 1061,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+
+npc{
+  name = "npc_soldier_7",
+  layer = 0,
+  x = 32,
+  y = 1221,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 0,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
 tile{

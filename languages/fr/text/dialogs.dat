@@ -183,8 +183,7 @@ dialog{
   icon = "3",
   next = "_treasure.arrow.1.1",
   text = [[
-Tu as trouvé une
-Flèche !$0
+Tu as trouvé une Flèche !$0
 Utilise l'Arc et les
 ]],
 }
@@ -2628,8 +2627,8 @@ la bombe que tu as placée ?
 dialog{
   id = "maps.houses.east_castle.shop.product_shield",
   text = [[
-Des flèches pour tirer à
-distance.
+Un bouclier pour te protéger des
+attaques des ennemis.
 ]],
 }
 
@@ -3362,7 +3361,7 @@ dialog{
   question = "1",
   text = [[
 Bonjour ! Tu peux ouvrir un
-coffre pour 40 rubis.
+coffre pour 40 rubis.$0
 Allez viens jouer !
 Bon, tu te décides ?
 Je joue !
@@ -4133,7 +4132,7 @@ dialog{
   id = "maps.houses.south_field.lost_woods_mapper.mapper_search_pendant",
   text = [[
 Tu cherches le pendentif du
-Pouvoir je crois...
+Pouvoir je crois$0.$0.$0.
 Il est caché dans le Bosquet
 Sacré, mais pour y accéder
 tu dois passer par les Bois
@@ -4535,7 +4534,7 @@ Nord-ouest : Village Cocorico
 }
 
 dialog{
-  id = "maps.out.east_castle.soldiers.no_sword_day",
+  id = "maps.out.east_castle.soldiers.soldiers_day",
   text = [[
 Que fais-tu ici, petit ?$0
 C'est dangereux de t'aventurer
@@ -4544,11 +4543,43 @@ tout seul, rentre dans la ville !
 }
 
 dialog{
-  id = "maps.out.east_castle.soldiers.no_sword_night",
+  id = "maps.out.east_castle.soldiers.soldiers_night",
   text = [[
 Hé ! Que fais tu encore debout
 à cette heure-ci ?$0
 Maintenant rentre dans la ville !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_lift",
+  text = [[
+T'as l'air plutôt costaud pour
+un enfant. Combien tu peux
+soulever ? Appuie sur le
+bouton A en touchant un
+objet pour le soulever.
+
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !
+Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_sword",
+  text = [[
+Je parie que tu meurs d'envie
+de te servir d'une épée !
+Quand tu en auras une,
+appuie sur le bouton B
+pour t'en servir.
 ]],
 }
 
@@ -4796,9 +4827,81 @@ dialog{
   id = "maps.out.hyrule_town.soldiers.no_lamp",
   text = [[
 Hé petit !$0
-Où vas-tu comme ça ?
+Où vas-tu comme ça ?$0
 C'est dangereux de partir seul.
 Tu n'iras pas loin sans lampe.
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.soldiers.tip_item",
+  text = [[
+Si tu as un objet dans ton
+inventaire, sélectionne-le
+et appuie sur X ou V
+pour l'équiper !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.soldiers.tip_pause",
+  text = [[
+Pour sauvegarder ton jeu,
+appuie sur START puis sur
+le bouton B !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.soldiers.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !$0
+Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.bottle_merchant.merchant_no",
+  text = [[
+Reviens plus tard alors !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.bottle_merchant.merchant_no_bottle",
+  text = [[
+J'ai vendu tous mes flacons.
+Tant pis pour toi !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.bottle_merchant.merchant_question",
+  question = "1",
+  text = [[
+Qu'en dites-vous ?
+J'achète !
+J'en ai pas besoin !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.bottle_merchant.merchant_welcome",
+  next = "maps.out.kakarico_village.bottle_merchant.merchant_question",
+  text = [[
+Monsieur ! Comment avez-vous pu
+vivre sans un de mes Flacons
+Magiques fourre-tout.
+J'en ai un à vendre pour le prix
+dérisoire de 300 rubis.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.bottle_merchant.merchant_yes",
+  text = [[
+Très bien, bonne journée !
 ]],
 }
 
@@ -4844,110 +4947,6 @@ mais moi je ne sais que balayer !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.kids_1",
-  skip = "all",
-  text = [[
-M'sieu !
-Pour sauvegarder,    
-appuyez sur tous
-les boutons à la fois !
-Heu, je n'en sais pas
-plus, je ne suis qu'un
-gosse !
-
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_10",
-  skip = "all",
-  text = [[
-Où allez-vous tous les
-deux ? Mais non, je    
-n'insinue rien ! Moi, je 
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_2",
-  skip = "all",
-  text = [[
-Ben... Après une
-sauvegarde, vous
-pouvez redémarrer 
-à la dernière porte  
-par laquelle vous êtes
-passé ! Pourquoi ? 
-Je n'en sais rien, 
-je suis un môme !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_3",
-  skip = "all",
-  text = [[
-Consultez la carte de 
-l'île en appuyant     
-sur SELECT. Après, je 
-ne sais pas trop car je
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_4",
-  skip = "all",
-  text = [[
-Si vos coeurs 
-diminuent trop, entrez 
-dans une maison ou 
-une grotte. Pourquoi ? 
-Je ne sais pas, je suis
-trop petit !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_7",
-  skip = "all",
-  text = [[
-L'Oeuf Sacré du Mt
-Tamaranch ? Il paraît
-que le Poisson-Rêve    
-dort dedans. Je ne sais
-pas, je suis un môme !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_8",
-  skip = "all",
-  text = [[
-Depuis quand nous 
-vivons sur cette île ?  
-Qu'est-ce que cela 
-signifie : depuis 
-quand ?   
-N'oubliez pas que je 
-ne suis qu'un gosse !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.kids_9",
-  skip = "all",
-  text = [[
-Souvent, Marine va
-toute seule regarder 
-la mer. Pourquoi ? 
-Je ne sais pas moi,   
-je ne suis qu'un gosse !
-]],
-}
-
-dialog{
   id = "maps.out.kakarico_village.marine_1",
   skip = "all",
   text = [[
@@ -4985,38 +4984,7 @@ que tu aimes ?
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze_2",
-  question = "1",
-  text = [[
-Hey ! Tu veux participer au
-nouveau jeu du labyrinthe ?
-Ca fera 20 rubis la partie !
-Jouer ?
-Oui !
-Non, plus tard.
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.maze_3_no",
-  text = [[
-Bon plus tard alors.
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.maze_3_yes",
-  text = [[
-Tu as 30 secondes pour aller
-actionner l'interrupteur là-bas
-et en revenir.
-Si tu gagnes, tu auras une
-superbe réconpense !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.maze_activate_switch",
+  id = "maps.out.kakarico_village.maze.maze_activate_switch",
   text = [[
 Tu dois activer l'interrupteur
 là-bas pour gagner.
@@ -5024,7 +4992,7 @@ là-bas pour gagner.
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze_loose",
+  id = "maps.out.kakarico_village.maze.maze_loose",
   text = [[
 Tu as perdu...
 Reviens une autre fois si tu veux
@@ -5033,7 +5001,14 @@ rejouer !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze_piece_of_heart",
+  id = "maps.out.kakarico_village.maze.maze_no",
+  text = [[
+Bon plus tard alors.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze.maze_piece_of_heart",
   text = [[
 Voici un fragment de coeur pour
 toi !
@@ -5041,14 +5016,27 @@ toi !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze_rupee",
+  id = "maps.out.kakarico_village.maze.maze_rupee",
   text = [[
 Tiens, voici des rubis !
 ]],
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze_win",
+  id = "maps.out.kakarico_village.maze.maze_welcome",
+  question = "1",
+  text = [[
+Hey ! Tu veux participer au
+nouveau jeu du labyrinthe ?$0
+Ca fera 20 rubis la partie !
+Jouer ?
+Oui !
+Non, plus tard.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.maze.maze_win",
   text = [[
 C'est gagné !
 Retourne me voir pour ta
@@ -5057,46 +5045,13 @@ récompense !
 }
 
 dialog{
-  id = "maps.out.kakarico_village.shop_1",
-  next = "maps.out.kakarico_village.shop_2",
+  id = "maps.out.kakarico_village.maze.maze_yes",
   text = [[
-Monsieur ! Comment avez-vous pu
-vivre sans un de mes Flacons
-Magiques fourre-tout.
-J'en ai un à vendre pour le prix
-dérisoire de 300 rubis.
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.shop_2",
-  question = "1",
-  text = [[
-Qu'en dites-vous ?
-J'achète !
-J'en ai pas besoin !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.shop_3",
-  text = [[
-Très bien, bonne journée !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.shop_4",
-  text = [[
-Reviens plus tard alors !
-]],
-}
-
-dialog{
-  id = "maps.out.kakarico_village.shop_5",
-  text = [[
-J'ai vendu tous mes flacons.
-Tant pis pour toi !
+Tu as 30 secondes pour aller
+actionner l'interrupteur là-bas
+et en revenir.
+Si tu gagnes, tu auras une
+superbe réconpense !
 ]],
 }
 
@@ -5136,11 +5091,61 @@ Ouest : Village Cocorico
 }
 
 dialog{
-  id = "maps.out.kakarico_village.thief_message",
+  id = "maps.out.kakarico_village.soldiers.soldiers_day",
   text = [[
-Tu as pu sortir sans 
-payer ?  Tu n'as pas 
-honte, voyou ?!
+Où veux-tu aller, petit ?$0
+N'entre pas dans cette forêt,
+tu risquerais de ne jamais en
+ressortir !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.soldiers.soldiers_night",
+  text = [[
+Pourquoi es-tu encore debout
+à cette heure ?$0 Les gosses de
+ton âge ont besoin de dormir !
+Rentre chez toi !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.soldiers.tip_map",
+  text = [[
+Si tu te perds, appuie sur le
+bouton W pour visualiser le
+plan.$0 Cette marque lumineuse
+indique ta destination.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.soldiers.tip_shop",
+  text = [[
+Des boutiques situées un peu
+partout dans le pays vendent
+de l'équipement. $0Si tu as
+envie d'acheter quelque chose,
+appuie sur le bouton A face à
+l'objet que tu veux.
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.soldiers.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !$0
+Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.kakarico_village.test_dialogue",
+  text = [[
+$X
+a  a  a
 ]],
 }
 
@@ -5238,20 +5243,50 @@ Sud-ouest : Village Cocorico
 }
 
 dialog{
-  id = "maps.out.north_field.soldiers.no_pendant_day",
+  id = "maps.out.north_field.soldiers.soldiers_day",
   text = [[
-Que fais-tu là, petit ?
+Que fais-tu là, petit ?$0
 Le monde est très dangereux,
 ne va pas plus loin !
 ]],
 }
 
 dialog{
-  id = "maps.out.north_field.soldiers.no_pendant_night",
+  id = "maps.out.north_field.soldiers.soldiers_night",
   text = [[
 Que fais-tu debout à cette
-heure-ci ? Rentre chez toi et
+heure-ci ?$0 Rentre chez toi et
 dors un peu !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.soldiers.tip_chest",
+  text = [[
+On trouve souvent des objets
+précieux dans les coffres.$0
+Quand tu es devant le coffre,
+appuie sur le bouton A
+pour l'ouvrir.
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.soldiers.tip_read",
+  text = [[
+Souvent, tu verras des panneaux.$0
+Si tu veux savoir ce qu'il y
+a écrit dessus, appuie sur le
+bouton A devant le panneau !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.soldiers.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !$0
+Tu comprendras plus tard !
 ]],
 }
 
@@ -5357,7 +5392,7 @@ dialog{
   id = "maps.out.south_coast.path_sign_1",
   skip = "all",
   text = [[
-Plages de la Jument
+Plages de la Jument$0
 Ici commence la côte des
 miracles et le sentier côtier.
 Prenez le temps d'admirer les
@@ -5370,7 +5405,7 @@ dialog{
   id = "maps.out.south_coast.path_sign_2",
   skip = "all",
   text = [[
-Phare de la Pointe du Loup
+Phare de la Pointe du Loup$0
 Ici se trouve la plage de la
 Pointe du Loup et son phare.
 Il est visible de très loin par
@@ -5385,7 +5420,7 @@ dialog{
   note = "Kouebengue = ind. eur. ḱwen (sacré) + bʰeh₂go (hêtre)",
   skip = "all",
   text = [[
-Phare du Kouebengue
+Phare du Kouebengue$0
 Le sentier côtier se poursuit
 vers le sud. Ce phare permet
 avec le phare de la Pointe du
@@ -5401,7 +5436,7 @@ dialog{
   note = "",
   skip = "all",
   text = [[
-Pointe du Promontoire
+Pointe du Promontoire$0
 Le sentier côtier se poursuit
 vers l'est. Admirez du côté du
 ponant le golfe du Kouebengue,
@@ -5417,7 +5452,7 @@ dialog{
   note = "",
   skip = "all",
   text = [[
-Crique du Salut
+Crique du Salut$0
 Séparant les falaises de la
 Côte des Miracles de la
 Presqu'île de Marc'h torr, la
@@ -5432,7 +5467,7 @@ dialog{
   note = "Marc'h torr = bret. marc'h (cheval) + torr (cassé)",
   skip = "all",
   text = [[
-Presqu'île de Marc'h torr
+Presqu'île de Marc'h torr$0
 Le sentier côtier se poursuit
 vers le nord-est. Prenez le
 temps d'admirer la côte sauvage
@@ -5447,7 +5482,7 @@ dialog{
   note = "",
   skip = "all",
   text = [[
-Pointe Millin
+Pointe Millin$0
 La côte des miracles s'achève
 ici. Le sentier côtier se
 poursuit vers le nord. Admirez

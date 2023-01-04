@@ -254,8 +254,11 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
+	ADD: Added a NPC property making them able to face the player when they move (#52).
 	CHG: Divided the Hyrule Field in smaller parts for better dialogues organisation.
 	FIX: Fix main quest step being saved to 5 after starting the game by calling the step done method after the world map is obtained and not when the item is created (#51).
+	REM: Removed debug printing when dropping from a ceiling.
+	REM: Removed map discovering values being saved because not needed.
 	TDO: Add dialogues for Sahasrahla.
 	TDO: Add dialogues for Ravio.
 	TDO: Replace corrupted files.

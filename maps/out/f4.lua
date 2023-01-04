@@ -10,25 +10,19 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
+local field_music_manager = require("scripts/maps/field_music_manager")
+local num_dialogue = 0
+
 
 map:register_event("on_started", function()
 	game:show_map_name("hyrule_town")
 	map:set_digging_allowed(true)
   npc_impa:set_enabled(false)
-  npc_soldier_1:set_enabled(false)
-  npc_soldier_2:set_enabled(false)
-  npc_soldier_3:set_enabled(false)
-
-  if game:is_step_done("world_map_obtained") then
+  if game:is_step_done("sahasrahla_lost_woods_map") then
     town_gate:set_enabled(false)
-  elseif not game:is_step_done("lamp_obtained") then
-    npc_soldier_1:set_enabled(true)
-    npc_soldier_2:set_enabled(true)
-    npc_soldier_3:set_enabled(true)
+  elseif game:is_step_done("lamp_obtained") then
     for npc in map:get_entities("npc_soldier_") do
-      npc:register_event("on_interaction", function()
-        game:start_dialog("maps.out.hyrule_town.soldiers.no_lamp")
-      end)
+      npc:set_enabled(false)
     end
   end
   if game:is_step_last("game_started") then
@@ -43,6 +37,26 @@ map:register_event("on_started", function()
     npc_movement:start(npc)
   end--]]
 end)
+
+
+for npc in map:get_entities("npc_soldier_") do
+  npc:register_event("on_interaction", function()
+    if num_dialogue == 0 then
+      game:start_dialog("maps.out.hyrule_town.soldiers.no_lamp")
+      num_dialogue = 1
+    elseif num_dialogue == 1 then
+      game:start_dialog("maps.out.hyrule_town.soldiers.tip_item")
+      num_dialogue = 2
+    elseif num_dialogue == 2 then
+      game:start_dialog("maps.out.hyrule_town.soldiers.tip_pause")
+      num_dialogue = 3
+    elseif num_dialogue == 3 then
+      game:start_dialog("maps.out.hyrule_town.soldiers.tip_speak")
+      num_dialogue = 0
+    end
+  end)
+end
+
 
 sensor_ocarina_cutscene:register_event("on_activated", function()
   if game:is_step_last("game_started") then

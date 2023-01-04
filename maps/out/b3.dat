@@ -7110,16 +7110,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
-  y = 1104,
-  width = 16,
-  height = 16,
-  pattern = "6145",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 944,
   y = 1424,
   width = 240,
@@ -19862,6 +19852,15 @@ tile{
   pattern = "1038",
 }
 
+tile{
+  layer = 0,
+  x = 592,
+  y = 1104,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -19920,9 +19919,19 @@ npc{
   layer = 0,
   x = 600,
   y = 1117,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+    {
+      key = "dialog",
+      value = "maps.out.kakarico_village.sign_4",
+    },
+  },
   direction = 3,
-  subtype = 1,
-  behavior = "dialog#maps.out.kakarico_village.sign_4",
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 sensor{
@@ -25245,5 +25254,21 @@ sensor{
   y = 1197,
   width = 48,
   height = 16,
+}
+
+npc{
+  name = "npc_soldier_1",
+  layer = 1,
+  x = 576,
+  y = 1277,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 1,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
