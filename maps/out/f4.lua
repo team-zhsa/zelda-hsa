@@ -20,9 +20,11 @@ map:register_event("on_started", function()
   npc_impa:set_enabled(false)
   if game:is_step_done("sahasrahla_lost_woods_map") then
     town_gate:set_enabled(false)
-  elseif game:is_step_done("lamp_obtained") then
-    for npc in map:get_entities("npc_soldier_") do
+  end
+  for npc in map:get_entities("npc_soldier_") do
+    if game:is_step_done("lamp_obtained") then
       npc:set_enabled(false)
+    else npc:set_enabled(true)
     end
   end
   if game:is_step_last("game_started") then

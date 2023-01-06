@@ -10,16 +10,6 @@ properties{
   music = "outside/southern_hyrule",
 }
 
-custom_entity{
-  layer = -1,
-  x = 8,
-  y = 13,
-  width = 768,
-  height = 352,
-  direction = 0,
-  sprite = "maps/overworld",
-}
-
 tile{
   layer = 0,
   x = 0,
@@ -27,6 +17,15 @@ tile{
   width = 768,
   height = 352,
   pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 584,
+  y = 264,
+  width = 184,
+  height = 8,
+  pattern = "123",
 }
 
 tile{
@@ -5746,15 +5745,6 @@ tile{
   x = 568,
   y = 256,
   width = 8,
-  height = 8,
-  pattern = "123",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 264,
-  width = 184,
   height = 8,
   pattern = "123",
 }
