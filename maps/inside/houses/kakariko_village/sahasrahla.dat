@@ -12,6 +12,15 @@ properties{
 
 tile{
   layer = 0,
+  x = 368,
+  y = 48,
+  width = 64,
+  height = 144,
+  pattern = "floor_low.1-1",
+}
+
+tile{
+  layer = 0,
   x = 48,
   y = 48,
   width = 224,
@@ -26,15 +35,6 @@ tile{
   width = 64,
   height = 48,
   pattern = "floor.4-1",
-}
-
-tile{
-  layer = 0,
-  x = 368,
-  y = 48,
-  width = 64,
-  height = 144,
-  pattern = "floor_low.1-1",
 }
 
 tile{
@@ -1171,6 +1171,42 @@ tile{
   pattern = "window.2-2",
 }
 
+tile{
+  layer = 0,
+  x = 392,
+  y = 120,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 408,
+  y = 120,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 424,
+  y = 120,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 136,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
 destination{
   name = "from_outside",
   layer = 0,
@@ -1301,6 +1337,16 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/wise_old_man_yellow",
+}
+
+chest{
+  layer = 0,
+  x = 408,
+  y = 157,
+  treasure_name = "rupee",
+  treasure_variant = 4,
+  treasure_savegame_variable = "inside_kakarico_sahasrahla_rupees",
+  sprite = "entities/Chests/chest_LttP",
 }
 
 tile{

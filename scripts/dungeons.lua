@@ -106,6 +106,34 @@ local function initialize_dungeon_features(game)
       },
       completing_sequence = "simple",
     },
+
+    [3] = { -- Fire Temple
+    floor_width = 1920,
+    floor_height = 1440,
+    minimap_width = 48,
+    minimap_height = 48,
+    lowest_floor = -1,
+    highest_floor = 0,
+    maps = {
+      "dungeons/6/0f",
+      "dungeons/6/b1",
+    },
+    boss = {
+      floor = -1,
+      savegame_variable = "dungeon_6_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/6/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/b2",
+      destination_name = "from_temple"
+    },
+    completing_sequence = "simple",
+  },
   }
 
   -- Returns the index of the current dungeon if any, or nil.
