@@ -107,7 +107,7 @@ local function initialize_dungeon_features(game)
       completing_sequence = "simple",
     },
 
-    [3] = { -- Fire Temple
+    [6] = { -- Water Temple
     floor_width = 1920,
     floor_height = 1440,
     minimap_width = 48,
