@@ -241,10 +241,12 @@ hero_meta:register_event("notify_object_thrown", function() end)
 
 hero_meta:register_event("on_position_changed", function(hero)
 
+  
     local game = hero:get_game()
     local map = game:get_map()
+    local x, y, layer = hero:get_center_position()
+    -- Map explored values (not needed in the game)
     local dungeon = game:get_dungeon()
-    local x, y = hero:get_center_position()
     if dungeon == nil then
       local world = map:get_world()
       local square_x = 0
@@ -291,7 +293,6 @@ hero_meta:register_event("on_position_changed", function(hero)
       local room_old = game:get_value("room")
       game:set_value("room", room)
       game:set_explored_dungeon_room(nil, nil, room)
-
     end
 
   end)

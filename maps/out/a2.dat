@@ -15137,6 +15137,22 @@ teletransporter{
   destination = "from_east",
 }
 
+teletransporter{
+  layer = 0,
+  x = 584,
+  y = 408,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/6/0f",
+  destination = "from_outside",
+}
+
 tile{
   layer = 1,
   x = 360,
