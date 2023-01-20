@@ -43,6 +43,10 @@ function map:get_water_level()
 	return game:get_value("dungeon_6_water_level")
 end
 
+npc_18_hint:register_event("on_interaction", function()
+	game:start_dialog("maps.dungeons.6.hint_1", game:get_player_name())
+end)
+
 handle_4_water_1:register_event("on_released", function()
 	if map:get_water_level() == 1 then map:set_water_level(0)
 	elseif map:get_water_level() == 0 then map:set_water_level(1) end
@@ -97,6 +101,19 @@ handle_17_water_3:register_event("on_released", function()
 	end
 end)
 
+handle_17_water_4:register_event("on_released", function()
+	for stream in map:get_entities("water_stream_17_2_") do
+		local sprite = stream:get_sprite()
+		if sprite:get_direction() < 4 then
+			stream:set_direction(4)
+			sprite:set_direction(4)
+		elseif sprite:get_direction() >= 4 then
+			stream:set_direction(0)
+			sprite:set_direction(0)
+		end
+	end
+end)
+
 handle_18_water:register_event("on_released", function()
 	if map:get_water_level() == 1 then map:set_water_level(0)
 	elseif map:get_water_level() == 0 then map:set_water_level(1) end
@@ -115,10 +132,15 @@ Water levels:
 5: water at -1 of B5
 
 For handle base sprites :
-Up arrow set to 0
-Down arrow set to 1
+Up arrow set to 1
+Down arrow set to 2
 Circle switch stream direction
-Heart set to 2
+Heart switch between water at the current floor and floor below
+
+Triangle set to 3
+Rupee set to 4
+Wave set to 5
+
 
 ]]
 

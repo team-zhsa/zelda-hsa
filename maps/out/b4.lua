@@ -52,7 +52,7 @@ sensor_cutscene:register_event("on_activated", function()
 end)
 
 function owl_dialog()
-  game:start_dialog("maps.kaepora_gaebora.owl_8", function(answer)
+  game:start_dialog("maps.out.lost_woods.kaepora_gaebora", function(answer)
     if answer == 1 then
       owl_dialog()
     elseif answer == 2 then

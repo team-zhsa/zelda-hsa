@@ -538,9 +538,9 @@ dialog{
   id = "_treasure.flippers.1",
   icon = "49",
   text = [[
-Tu as acheté les Palmes de Zora !$0
-Elles vont te permettre de nager
-même en eau profonde.
+Tu as acheté les Palmes de
+Zora !$0 Elles vont te permettre
+de nager même en eau profonde.
 ]],
 }
 
@@ -2215,17 +2215,8 @@ clé BLEUE.
 }
 
 dialog{
-  id = "maps.dungeons.2.boss_welcome",
-  text = [[
-HI HI HI !!      
-Attends un peu,
-que je m'occupe de 
-toi... HI HI!
-]],
-}
-
-dialog{
   id = "maps.dungeons.2.hint_1",
+  skip = "current",
   text = [[
 $v, c'est moi Sahasrahla.
 Tu vois les fleurs-bombes à tes
@@ -2345,6 +2336,17 @@ dialog{
   text = [[
         Niveau 5       
     Poisson-chat
+]],
+}
+
+dialog{
+  id = "maps.dungeons.6.hint_1",
+  skip = "current",
+  text = [[
+$v, c'est moi Sahasrahla. $0
+Tu vois ce levier ? Tire sur
+celui-ci pour changer le
+niveau de l'eau.
 ]],
 }
 
@@ -3330,6 +3332,117 @@ d'accord ?
 }
 
 dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.gang_hideout",
+  text = [[
+Salut $v !
+Cet endroit était un repère pour
+une bande de bandits.
+Quel était le nom de leur chef...
+Ah oui ! L'Aveugle. Je crois
+qu'il détestait la lumière.
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_2",
+  text = [[
+Au secours !     
+Quelle horreur ! 
+Toutou a été chien-nappé 
+par des Moblins !    
+OHH ! AHH !       
+Je t'en prie, va secourir
+mon Toutou !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_3",
+  text = [[
+Ah! Tu m'as ramené 
+mon Toutou adoré !   
+Quelle joie !    
+Et en plus, tu veux 
+aller le promener ?    
+Cela m'arrange ! 
+Du fond de mon coeur,
+merci !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_4",
+  text = [[
+Je te suis vraiment 
+reconnaissante ! 
+C'est si gentil d'avoir 
+ramené mon Toutou !     
+Comment te prouver      
+ma gratitude??  
+BISOU BISOU...  
+Tu as eu la récompense 
+de Mme Miaou Miaou.
+Petit veinard...
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_1_1",
+  text = [[
+Ouaf Ouaf !      
+Ouaf Ouaf !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_1",
+  text = [[
+Ouaf Ouaf ! 
+Je suis un 
+chien très branché !
+J'aimerais avoir des 
+accessoires à la mode !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_2",
+  question = "1",
+  text = [[
+Ouaf Ouaf ! 
+Je suis un 
+chien très branché !
+Ce ruban, c'est d'un
+chic ! Il me le faut 
+absolument... Tu 
+l'échanges contre
+ma pâtée ? 
+
+
+Oui
+Non   
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_3",
+  text = [[
+Je n'arrive pas à 
+y croire...   
+Tu es nul !
+]],
+}
+
+dialog{
+  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_4",
+  text = [[
+Génial, merci !  
+En échange,     
+voici ma patée ...
+]],
+}
+
+dialog{
   id = "maps.houses.kakarico_village.chest_house.minigame_already_playing",
   text = [[
 Très bien ! Ouvre le coffre que
@@ -3698,114 +3811,6 @@ complète et détaillée.
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_1",
-  text = [[
-Hmmm...         
-Mon Toutou est si fier     
-de son pelage !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_2",
-  text = [[
-Au secours !     
-Quelle horreur ! 
-Toutou a été chien-nappé 
-par des Moblins !    
-OHH ! AHH !       
-Je t'en prie, va secourir
-mon Toutou !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_3",
-  text = [[
-Ah! Tu m'as ramené 
-mon Toutou adoré !   
-Quelle joie !    
-Et en plus, tu veux 
-aller le promener ?    
-Cela m'arrange ! 
-Du fond de mon coeur,
-merci !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.meow_meow_4",
-  text = [[
-Je te suis vraiment 
-reconnaissante ! 
-C'est si gentil d'avoir 
-ramené mon Toutou !     
-Comment te prouver      
-ma gratitude??  
-BISOU BISOU...  
-Tu as eu la récompense 
-de Mme Miaou Miaou.
-Petit veinard...
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_1_1",
-  text = [[
-Ouaf Ouaf !      
-Ouaf Ouaf !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_1",
-  text = [[
-Ouaf Ouaf ! 
-Je suis un 
-chien très branché !
-J'aimerais avoir des 
-accessoires à la mode !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_2",
-  question = "1",
-  text = [[
-Ouaf Ouaf ! 
-Je suis un 
-chien très branché !
-Ce ruban, c'est d'un
-chic ! Il me le faut 
-absolument... Tu 
-l'échanges contre
-ma pâtée ? 
-
-
-Oui
-Non   
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_3",
-  text = [[
-Je n'arrive pas à 
-y croire...   
-Tu es nul !
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.meow_meow_house.small_bowwow_2_4",
-  text = [[
-Génial, merci !  
-En échange,     
-voici ma patée ...
-]],
-}
-
-dialog{
   id = "maps.houses.kakarico_village.milk_bar.drunk_man_1",
   text = [[
 Des rumeurs m'ont dit...$0 Hic !
@@ -3844,15 +3849,27 @@ dialog{
 $2Zzzz... Zzzz...$0
 Ah ! Te voilà $v !
 
-Je vois que tu as réussi à
-vaincre les monstres des
-Ruines.
-Tu as obtenu le premier
-pendentif, celui du Courage.
-Il en reste deux. $0Le deuxième
+Je vois que tu as trouvé le
+Pendentif du Courage. Je vais
+t'en dire plus sur la légende.
+Il y a quelques générations, un
+Ordre de Chevaliers d'Hyrule
+protégeait le royaume.
+Ces chevaliers étaient les
+gardiens des trois pendentifs
+de Vertu. Mais quand Ganon
+parvint à prendre le contrôle du
+Château, la plupart d'entre eux
+furent tués.
+Ce sont les Sept Sages qui
+protégèrent les pendentifs dans
+leurs familles. C'est pourquoi
+doit arriver un héros pour sauver
+Hyrule...
+
+Le deuxième pendentif
 se trouve au fond du Bosquet
 Sacré, dans les Bois Perdus.
-
 On raconte que tous ceux qui y
 sont rentrés n'en sont jamais
 ressortis et se sont transformés
@@ -3873,14 +3890,17 @@ dialog{
   text = [[
 $2Zzzz... Zzzz...$0
 Ah ! Te voilà $v !
+
+Je suis bien Sahasrahla,
+l'ancien du village.
 Je t'attendais depuis un moment.
 Cela va être difficile pour toi
 de t'orienter dans ce vaste
 monde. Le cartographe du village
 fait une promotion spéciale en
 ce moment sur les cartes.
-Cours donc le voir, sa boutique
-au sud est immanquable !
+Cours donc le voir dans sa
+boutique au sud !
 Va au sanctuaire après, le
 sage a quelque chose à te
 dire.
@@ -4363,56 +4383,6 @@ trouveras le pendentif du Pouvoir.
 Les bombes s'y cachent et te
 seront d'une très grande utilité.
 
-As-tu tout compris ?
-Non, pas du tout !
-Oui
-]],
-}
-
-dialog{
-  id = "maps.kaepora_gaebora.owl_4",
-  question = "1",
-  text = [[
-$2Hou ! C'est moi Kaepora Gaebora !$0
-Tu es devant les Ruines !
-
-Des monstres tentacules y errent
-et ils sont très dangereux. Tu y
-trouveras une carte et une
-boussole pour t'y orienter.$0
-Le Boomerang y est aussi
-caché et te sera très utile. Ton
-but est de récupérer le pendentif
-du Courage qui y est caché.
-
-As-tu tout compris ?
-Non, pas du tout !
-Oui
-]],
-}
-
-dialog{
-  id = "maps.kaepora_gaebora.owl_8",
-  question = "1",
-  text = [[
-$2Hou ! C'est moi Kaepora Gaebora !$0
-Tu es devant le Temple de la
-Forêt !
-Comme aux Ruines, tu trouveras
-une carte et une boussole qui te
-permettront de te repérer dans le
-donjon.$0 Fais attention, les
-monstres sont plus coriaces qu'
-avant et il y a beaucoup de
-trous dans lesquels tomber.$0
-C'est l'avant dernière étape
-avant l'épée de Légende.$0
-Trouve le pendentif de la
-Sagesse.$0 Ce temple est habité
-par Ganon Spectral et est très
-tortueux et rempli de pièges !$0
-Tu y trouveras l'Arc du Héros,
-nécessaire pour le vaincre.$0
 As-tu tout compris ?
 Non, pas du tout !
 Oui
@@ -5188,6 +5158,34 @@ n'avons rien préparé.
 }
 
 dialog{
+  id = "maps.out.lost_woods.kaepora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Temple de la Forêt !
+Comme aux Ruines, tu trouveras
+une carte et une boussole qui te
+permettront de te repérer dans le
+donjon.$0 Fais attention, les
+monstres sont plus coriaces qu'
+avant et il y a beaucoup de
+trous dans lesquels tomber.$0
+C'est l'avant dernière étape
+avant l'épée de Légende.$0
+Trouve le pendentif de la
+Sagesse.$0 Ce temple est habité
+par Ganon Spectral et est très
+tortueux et rempli de pièges !$0
+Tu y trouveras l'Arc du Héros,
+nécessaire pour le vaincre.$0
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
   id = "maps.out.lost_woods.priest_kidnapped",
   text = [[
 $2A l'aide !$0 $v !
@@ -5285,6 +5283,28 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.north_west.kaepora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0
+Tu es devant les Ruines !
+Des monstres tentacules y errent
+et ils sont très dangereux. Tu y
+trouveras une carte et une
+boussole pour t'y orienter.$0
+Le Boomerang y est aussi
+caché et te sera très utile. Ton
+but est de récupérer le pendentif
+du Courage qui y est caché.
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
 ]],
 }
 
@@ -5640,11 +5660,57 @@ Nord : Espace en travaux
 }
 
 dialog{
-  id = "maps.out.zora_village.zora_1",
+  id = "maps.out.zora_village.zora_king.flippers_no",
   text = [[
-Qui ? Le roi Zora ?
-Non, il est parti en vacances...$0
-Reviens plus tard, petit !
+Bien ! Si tu veux revenir me
+voir, tu es le bienvenu ici. $0
+Ah, ah, ah !
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.flippers_question",
+  question = "1",
+  text = [[
+Ah, ah, ah, ah ! Mais je ne
+donne pas les palmes gratis.
+Je les vends 750 rubis la
+paire. Qu'en dis-tu ?
+Je paye.
+Je renonce.
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.flippers_yes",
+  text = [[
+Ah, ah, ah, ah ! Voici la paire
+de palmes. Si tu vois un
+tourbillon magique dans l'eau,
+plonges-y. Qui sait où tu
+arriveras !
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.welcome_has_flippers",
+  text = [[
+Ah ! Ah ! Ah ! $0
+Savais-tu que tu pouvais nager
+plus vite en appuyant sur A
+dans l'eau ?
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.welcome_no_flippers",
+  text = [[
+Ah ! Ah ! Ah ! $0 Qu'est-ce que
+tu veux, petit ?
+
+T'as quelque chose à me dire ?
+Je veux les palmes !
+Je ne faisais que passer !
 ]],
 }
 

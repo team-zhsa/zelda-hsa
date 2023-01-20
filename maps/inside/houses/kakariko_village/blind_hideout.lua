@@ -17,8 +17,6 @@ function map:on_started()
   -- map entities here.
 end
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
+npc_blind_hideout:register_event("on_interaction", fucntion()
+	
+end)
