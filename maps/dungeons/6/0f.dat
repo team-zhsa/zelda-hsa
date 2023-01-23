@@ -8,7 +8,6 @@ properties{
   world = "dungeon_6",
   floor = 0,
   tileset = "Absolute Dungeon 19",
-  music = "dungeons/06_water",
 }
 
 tile{
@@ -3728,6 +3727,206 @@ stairs{
   y = 1104,
   direction = 3,
   subtype = 4,
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_1",
+  layer = -1,
+  x = 64,
+  y = 1104,
+  width = 32,
+  height = 32,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_2",
+  layer = -1,
+  x = 128,
+  y = 928,
+  width = 32,
+  height = 208,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_3",
+  layer = -1,
+  x = 128,
+  y = 896,
+  width = 128,
+  height = 32,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_4",
+  layer = -1,
+  x = 704,
+  y = 384,
+  width = 144,
+  height = 32,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_5",
+  layer = -1,
+  x = 816,
+  y = 112,
+  width = 32,
+  height = 272,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_6",
+  layer = -1,
+  x = 816,
+  y = 64,
+  width = 80,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_7",
+  layer = -1,
+  x = 1024,
+  y = 64,
+  width = 144,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_8",
+  layer = -1,
+  x = 1120,
+  y = 112,
+  width = 48,
+  height = 64,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_9",
+  layer = -1,
+  x = 1120,
+  y = 304,
+  width = 48,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_10",
+  layer = -1,
+  x = 1120,
+  y = 352,
+  width = 96,
+  height = 32,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_1",
+  layer = -1,
+  x = 56,
+  y = 1096,
+  width = 32,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_2",
+  layer = -1,
+  x = 120,
+  y = 936,
+  width = 48,
+  height = 208,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_3",
+  layer = -1,
+  x = 120,
+  y = 888,
+  width = 144,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_4",
+  layer = -1,
+  x = 696,
+  y = 376,
+  width = 112,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_5",
+  layer = -1,
+  x = 808,
+  y = 120,
+  width = 48,
+  height = 304,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_6",
+  layer = -1,
+  x = 808,
+  y = 56,
+  width = 96,
+  height = 64,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_7",
+  layer = -1,
+  x = 1016,
+  y = 56,
+  width = 160,
+  height = 64,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_8",
+  layer = -1,
+  x = 1112,
+  y = 120,
+  width = 64,
+  height = 64,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_9",
+  layer = -1,
+  x = 1112,
+  y = 296,
+  width = 64,
+  height = 96,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_10",
+  layer = -1,
+  x = 1176,
+  y = 344,
+  width = 48,
+  height = 48,
+  pattern = "water.transparent",
 }
 
 tile{
@@ -16772,8 +16971,8 @@ dynamic_tile{
   name = "water_static_0_1",
   layer = 0,
   x = 112,
-  y = 880,
-  width = 160,
+  y = 1088,
+  width = 64,
   height = 64,
   pattern = "water.transparent",
 }
@@ -16791,9 +16990,9 @@ dynamic_tile{
 dynamic_tile{
   name = "water_static_0_3",
   layer = 0,
-  x = 48,
-  y = 1088,
-  width = 128,
+  x = 112,
+  y = 880,
+  width = 160,
   height = 64,
   pattern = "water.transparent",
 }
@@ -16810,8 +17009,8 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 480,
-  y = 1173,
+  x = 64,
+  y = 1061,
   direction = 1,
 }
 
@@ -16828,8 +17027,8 @@ custom_entity{
 custom_entity{
   name = "handle_18_water",
   layer = 0,
-  x = 152,
-  y = 829,
+  x = 88,
+  y = 965,
   width = 16,
   height = 16,
   direction = 0,
@@ -18400,6 +18599,16 @@ npc{
   direction = 3,
   subtype = 0,
   sprite = "entities/hint_stone",
+}
+
+enemy{
+  name = "auto_enemy_1",
+  layer = 0,
+  x = 392,
+  y = 685,
+  direction = 0,
+  breed = "outside/tektite_water",
+  treasure_name = "random_west",
 }
 
 tile{

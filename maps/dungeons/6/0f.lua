@@ -17,27 +17,157 @@ local switch_manager = require("scripts/maps/switch_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
 local flying_tile_manager = require("scripts/maps/flying_tile_manager")
 local cannonball_manager = require("scripts/maps/cannonball_manager")
+local water_delay = 500
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
 	if destination:get_name() == "from_outside" then map:set_water_level(1) end
+	for tile in map:get_entities("water_dynamic_") do
+		tile:set_enabled(false)
+	end
+	for tile in map:get_entities("water_static_") do
+		tile:set_enabled(false)
+	end
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
 end
 
 function map:set_water_level(level)
-	game:set_value("dungeon_6_water_level", level)
-	local water_tile_id = "water_static_"
-	local water_tile_level
-	for water_tile_level = 0, 10 do
-		for tile in map:get_entities(water_tile_id..water_tile_level.."_") do
-			if water_tile_level == level then
-				tile:set_enabled(true)
-			elseif water_tile_level ~= level then
-				tile:set_enabled(false)
+	local current_water_level = game:get_value("dungeon_6_water_level")
+	local water_tile_static_id = "water_static_"
+	local water_tile_dynamic_id = "water_dynamic_"
+	local water_tile_level = level
+	local water_animation_step_index = -1
+	-- Water level higher than wanted level: lower water level
+	
+	-- Water level lower than wanted level: raise water level
+	if current_water_level >= level then
+		sol.timer.start(water_delay, function()
+			for tile in map:get_entities(water_tile_dynamic_id..water_tile_level.."_"..water_animation_step_index.."_") do
+				local previous_tile
+				previous_tile = tile
 			end
-		end
+			for tile in map:get_entities(water_tile_dynamic_id..water_tile_level.."_"..(water_animation_step_index + 1).."_") do
+				local next_tile
+				next_tile = tile
+			end
+				if next_tile == nil then
+					previous_tile:set_enabled(false)
+					for tile in map:get_entities(water_tile_static_id..water_tile_level.."_") do
+						tile:set_enabled(true)
+						game:set_value("dungeon_6_water_level", level)
+					end
+					return false
+				end
+				next_tile:set_enabled(true)
+				if previous_tile ~= nil then
+					previous_tile:set_enabled(false)
+				end
+				i = i +1
+				water_animation_step_index = water_animation_step_index + 1
+				print(water_animation_step_index)
+				return true
+		end)
 	end
 end
+--[[ 
+
+
+			local next_tile = map:get_entity("dynamic_water_" .. water_tile_index)
+			local previous_tile = map:get_entity("dynamic_water_" .. water_tile_index + 1)
+			if next_tile == nil then
+				hero:unfreeze()
+				return false
+			end
+			next_tile:set_enabled(true)
+			if previous_tile ~= nil then
+				previous_tile:set_enabled(false)
+			end
+			water_tile_index = water_tile_index - 1
+			return true
+
+
+		for tile in map:get_entities(water_tile_static_id..water_tile_level.."_") do
+
+				for tile in  do
+					tile:set_enabled(false)
+					sol.timer.start(water_delay, function()
+						for tile in  do
+							tile:set_enabled(false)
+							sol.timer.start(water_delay, function()
+								for tile in map:get_entities(water_tile_static_id..water_tile_level.."_") do tile:set_enabled(false) end
+							end)game:set_value("dungeon_6_water_level", level)
+						end
+					end)
+				end
+			end
+		end
+
+
+end ]]
+		--[[ for tile in map:get_entities(water_tile_id..water_tile_level.."_") do
+			if water_tile_level <= level then
+
+
+				sol.audio.play_sound("water_fill_begin")
+				sol.audio.play_sound("water_fill")
+				local water_tile_animation_index = -1
+				function enable_static_tile()
+					for tile in map:get_entities(water_tile_id..water_tile_level) do
+						tile:set_enabled(true)
+					end
+				end
+				for water_tile_dynamic_index = 0, 99 do
+					sol.timer.start(500, function()
+						local next_tile = map:get_entity("water_dynamic_"..water_tile_level.."_"..(water_tile_animation_index + 1).."_"..water_tile_dynamic_index)
+						local previous_tile = map:get_entity("water_dynamic_"..water_tile_level.."_"..(water_tile_animation_index).."_"..water_tile_dynamic_index)
+				
+						if next_tile ~= nil then
+							next_tile:set_enabled(true)
+						end
+						if previous_tile ~= nil then
+							previous_tile:set_enabled(false)
+						end
+						
+						water_tile_animation_index = water_tile_animation_index + 1
+							if next_tile == nil then
+							enable_static_tile()
+							return false
+						end
+						return true
+					end)
+				end
+			elseif water_tile_level ~= level then
+				sol.audio.play_sound("water_drain_begin")
+				sol.audio.play_sound("water_drain")
+				local water_tile_animation_index = 1
+				function disable_static_tile()
+					for tile in map:get_entities(water_tile_id..water_tile_level) do
+						tile:set_enabled(false)
+					end
+				end
+				for water_tile_dynamic_index = 0, 99 do
+					sol.timer.start(500, function()
+						local next_tile = map:get_entity("water_dynamic_"..water_tile_level.."_"..(water_tile_animation_index).."_"..water_tile_dynamic_index)
+						local previous_tile = map:get_entity("water_dynamic_"..water_tile_level.."_"..(water_tile_animation_index + 1).."_"..water_tile_dynamic_index)
+				
+						if next_tile ~= nil then
+							next_tile:set_enabled(true)
+						end
+						if previous_tile ~= nil then
+							previous_tile:set_enabled(false)
+						end
+						
+						water_tile_animation_index = water_tile_animation_index - 1
+						if next_tile == nil then
+							disable_static_tile()
+							return false
+						end
+						return true
+					end)
+				end
+			end
+		end
+	end ]]
 
 function map:get_water_level()
 	return game:get_value("dungeon_6_water_level")
@@ -46,6 +176,7 @@ end
 npc_18_hint:register_event("on_interaction", function()
 	game:start_dialog("maps.dungeons.6.hint_1", game:get_player_name())
 end)
+
 
 handle_4_water_1:register_event("on_released", function()
 	if map:get_water_level() == 1 then map:set_water_level(0)
