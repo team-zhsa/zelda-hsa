@@ -1122,16 +1122,16 @@ tile{
   layer = 0,
   x = 608,
   y = 760,
-  width = 32,
+  width = 40,
   height = 104,
   pattern = "4148",
 }
 
 tile{
   layer = 0,
-  x = 672,
+  x = 664,
   y = 760,
-  width = 32,
+  width = 40,
   height = 104,
   pattern = "4148",
 }
@@ -10964,17 +10964,8 @@ tile{
   layer = 0,
   x = 616,
   y = 752,
-  width = 24,
-  height = 8,
-  pattern = "4148",
-}
-
-tile{
-  layer = 0,
-  x = 640,
-  y = 752,
   width = 32,
-  height = 112,
+  height = 8,
   pattern = "4148",
 }
 
@@ -24951,9 +24942,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 672,
+  x = 664,
   y = 752,
-  width = 24,
+  width = 32,
   height = 8,
   pattern = "4148",
 }
@@ -25069,6 +25060,15 @@ tile{
   width = 16,
   height = 16,
   pattern = "1038",
+}
+
+tile{
+  layer = 0,
+  x = 648,
+  y = 784,
+  width = 16,
+  height = 80,
+  pattern = "4148",
 }
 
 teletransporter{
@@ -26925,7 +26925,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/kakariko_village/bar_0f",
+  destination_map = "inside/houses/kakariko_village/milk_bar",
   destination = "from_outside",
 }
 
@@ -27205,8 +27205,8 @@ dynamic_tile{
 dynamic_tile{
   name = "door_milk_bar",
   layer = 0,
-  x = 648,
-  y = 864,
+  x = 656,
+  y = 904,
   width = 16,
   height = 16,
   pattern = "6020",
@@ -27331,6 +27331,58 @@ npc{
   direction = 1,
   subtype = 1,
   sprite = "npc/soldier",
+}
+
+destination{
+  name = "from_bar_2",
+  layer = 0,
+  x = 656,
+  y = 749,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 648,
+  y = 768,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko_village/milk_bar",
+  destination = "from_outside_2",
+}
+
+dynamic_tile{
+  name = "tile_milk_bar_door",
+  layer = 0,
+  x = 648,
+  y = 752,
+  width = 16,
+  height = 16,
+  pattern = "4148",
+}
+
+sensor{
+  name = "sensor_milk_bar_door",
+  layer = 0,
+  x = 656,
+  y = 765,
+  width = 16,
+  height = 16,
+}
+
+tile{
+  layer = 1,
+  x = 648,
+  y = 752,
+  width = 16,
+  height = 32,
+  pattern = "4148",
 }
 
 tile{

@@ -28,6 +28,16 @@ map:register_event("on_started", function()
 			npc:set_enabled(false)
 		end
 	end
+	if game:get_value("outside_kakarico_milk_bar_door", true) then
+		sensor_milk_bar_door:set_enabled(false)
+		tile_milk_bar_door:set_enabled(false)
+	end
+end)
+
+sensor_milk_bar_door:register_event("on_collision_explosion", function()
+	tile_milk_bar_door:set_enabled(false)
+	game:set_value("outside_kakarico_milk_bar_door", true)
+	sol.audio.play_sound("common/secret_discover_minor")
 end)
 
 for npc in map:get_entities("npc_soldier_") do

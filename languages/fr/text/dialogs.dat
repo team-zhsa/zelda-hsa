@@ -3301,6 +3301,37 @@ Potion rouge
 }
 
 dialog{
+  id = "maps.houses.hyrule_town.sick_kid.give_piece_of_heart",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.sick_kid.soldier_gate_open",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.sick_kid.soldier_no_magic_bar",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
   id = "maps.houses.hyrule_town.vase_house.soldier_gate_closed",
   text = [[
 Les portes de la ville sont
@@ -3956,7 +3987,7 @@ attaques des ennemis.
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.agahnim_1",
+  id = "maps.houses.north_field.sanctuary.agahnim_1",
   text = [[
 $2Mouah ! Ah ! Ah ! $0
 Te voilà enfin, $v...$0
@@ -3976,21 +4007,21 @@ A bientôt , $v !
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.altar_paper_left",
+  id = "maps.houses.north_field.sanctuary.altar_paper_left",
   text = [[
 Pentagone de gauche
 ]],
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.altar_paper_right",
+  id = "maps.houses.north_field.sanctuary.altar_paper_right",
   text = [[
 Pentagone de droite
 ]],
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_1",
+  id = "maps.houses.north_field.sanctuary.priest_1",
   text = [[
 ...$0
 ...$0
@@ -4002,7 +4033,7 @@ J'avais quelque chose d'important
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_2",
+  id = "maps.houses.north_field.sanctuary.priest_2",
   text = [[
 $2Après que Ganon, ayant pris le
 contrôle des étages supérieurs
@@ -4020,7 +4051,7 @@ a quelques générations.
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_3",
+  id = "maps.houses.north_field.sanctuary.priest_3",
   text = [[
 $2La légende stipule que seule une
 arme est capable de vaincre ce
@@ -4035,7 +4066,7 @@ sortir de son socle.
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_4",
+  id = "maps.houses.north_field.sanctuary.priest_4",
   question = "1",
   text = [[
 $2Ces trois pendentifs seraient
@@ -4060,7 +4091,7 @@ Oui.
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_5",
+  id = "maps.houses.north_field.sanctuary.priest_5",
   text = [[
 $2Les ruines du nord t'attendent !
 Tu y trouveras le pendentif du
@@ -4069,9 +4100,19 @@ Courage !
 }
 
 dialog{
-  id = "maps.houses.north_west.sanctuary.priest_praying",
+  id = "maps.houses.north_field.sanctuary.priest_praying",
   text = [[
 ...
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.fortune_teller.welcome",
+  text = [[
+Ce n'est pas une
+commode... Quoi ?
+Tu avais remarqué ?
+... OK !
 ]],
 }
 
@@ -4170,6 +4211,14 @@ mais ne te fais pas de souci.
 }
 
 dialog{
+  id = "maps.houses.south_field.lumberjack.cutting_game_welcome",
+  text = [[
+Salut petit ! Tu veux bien nous
+aider à couper tous ces
+]],
+}
+
+dialog{
   id = "maps.houses.south_field.ravios_shop.merchant_first_welcome",
   text = [[
 TODO
@@ -4224,26 +4273,6 @@ dialog{
   text = [[
 Voici un Coeur pour régénérer
 de la vie.
-]],
-}
-
-dialog{
-  id = "maps.houses.wardrobe_1",
-  text = [[
-$v a inspecté la
-commode.     
-C'est un objet 
-d'art... ...
-]],
-}
-
-dialog{
-  id = "maps.houses.wardrobe_2",
-  text = [[
-Ce n'est pas une
-commode... Quoi ?
-Tu avais remarqué ?
-... OK !
 ]],
 }
 
