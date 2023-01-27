@@ -28,19 +28,22 @@ map:register_event("on_started", function()
 	end
 end)
 
+
 for npc in map:get_entities("npc_soldier_") do
 	npc:register_event("on_interaction", function()
-		if num_dialogue == 0 and game:get_time_of_day() == "dawn" or game:get_time_of_day() == "day" or game:get_time_of_day() == "sunset" then
-			game:start_dialog("maps.out.kakarico_village.soldiers.soldiers_day")
-			num_dialogue = 1
-		elseif num_dialogue == 0 and game:get_time_of_day() == "night" or game:get_time_of_day() == "twillight" then
-			game:start_dialog("maps.out.kakarico_village.soldiers.soldiers_night")
-			num_dialogue = 1
+		if num_dialogue == 0 then
+			if game:get_time_of_day() == "dawn" or game:get_time_of_day() == "day" or game:get_time_of_day() == "sunset" then
+				game:start_dialog("maps.out.kakarico_village.soldiers.soldiers_day")
+				num_dialogue = 1
+			elseif game:get_time_of_day() == "night" or game:get_time_of_day() == "twillight" then
+				game:start_dialog("maps.out.kakarico_village.soldiers.soldiers_night")
+				num_dialogue = 1
+			end
 		elseif num_dialogue == 1 then
-			game:start_dialog("maps.out.kakarico_village.soldiers.tip_map")
+			game:start_dialog("maps.out.kakarico_village.soldiers.tip_chest")
 			num_dialogue = 2
 		elseif num_dialogue == 2 then
-			game:start_dialog("maps.out.kakarico_village.soldiers.tip_shop")
+			game:start_dialog("maps.out.kakarico_village.soldiers.tip_read")
 			num_dialogue = 3
 		elseif num_dialogue == 3 then
 			game:start_dialog("maps.out.kakarico_village.soldiers.tip_speak")
@@ -48,7 +51,6 @@ for npc in map:get_entities("npc_soldier_") do
 		end
 	end)
 end
-
 
 function map:on_finished()
 	outside_kakarico_playing_maze = false

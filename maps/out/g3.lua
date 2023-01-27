@@ -28,18 +28,19 @@ end)
 
 for npc in map:get_entities("npc_soldier_") do
 	npc:register_event("on_interaction", function()
-    print(num_dialogue)
-    if num_dialogue == 0 and (game:get_time_of_day() == "dawn" or game:get_time_of_day() == "day" or game:get_time_of_day() == "sunset") then
-      game:start_dialog("maps.out.east_castle.soldiers.soldiers_day")
-      num_dialogue = 1
-		elseif num_dialogue == 0 and (game:get_time_of_day() == "night" or game:get_time_of_day() == "twillight") then
-			game:start_dialog("maps.out.east_castle.soldiers.soldiers_night")
-			num_dialogue = 1
+		if num_dialogue == 0 then
+			if game:get_time_of_day() == "dawn" or game:get_time_of_day() == "day" or game:get_time_of_day() == "sunset" then
+				game:start_dialog("maps.out.east_castle.soldiers.soldiers_day")
+				num_dialogue = 1
+			elseif game:get_time_of_day() == "night" or game:get_time_of_day() == "twillight" then
+				game:start_dialog("maps.out.east_castle.soldiers.soldiers_night")
+				num_dialogue = 1
+			end
 		elseif num_dialogue == 1 then
-			game:start_dialog("maps.out.east_castle.soldiers.tip_lift")
+			game:start_dialog("maps.out.east_castle.soldiers.tip_chest")
 			num_dialogue = 2
 		elseif num_dialogue == 2 then
-			game:start_dialog("maps.out.east_castle.soldiers.tip_sword")
+			game:start_dialog("maps.out.east_castle.soldiers.tip_read")
 			num_dialogue = 3
 		elseif num_dialogue == 3 then
 			game:start_dialog("maps.out.east_castle.soldiers.tip_speak")
