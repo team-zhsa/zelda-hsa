@@ -2017,6 +2017,40 @@ six coeurs, très utile.
 }
 
 dialog{
+  id = "maps.caves.east_mountains.shop.merchant_welcome",
+  text = [[
+Bonjour jeune héros.
+Choisis ce que tu aimes.
+Appuie sur A.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.shop.product_bombs",
+  text = [[
+Des bombes pour dégager les
+obstacles, tout droit du village
+Goron !
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.shop.product_heart",
+  text = [[
+Un coeur pour te redonner
+de la vie si tu es mal en point.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.shop.product_potion",
+  text = [[
+Potion rouge :
+redonne de la vie.
+]],
+}
+
+dialog{
   id = "maps.caves.goron.ascii",
   text = [[
 ]],
@@ -2108,35 +2142,6 @@ dialog{
   id = "maps.caves.hyrule_town.lamp_cave.wizard_magic_bar_no",
   text = [[
 Alors va-t-en !
-]],
-}
-
-dialog{
-  id = "maps.caves.mountains.lost_old_man_cave.bowwow_1",
-  text = [[
-Tu as trouvé Toutou !
-Il a l'air féroce...
-]],
-}
-
-dialog{
-  id = "maps.caves.mountains.lost_old_man_cave.moblins_1",
-  text = [[
-C'est qui ce freluquet?   
-Les gars, débarrassez-moi 
-vite de lui !
-]],
-}
-
-dialog{
-  id = "maps.caves.mountains.lost_old_man_cave.moblins_2",
-  text = [[
-Tu es venu chercher 
-Toutou ?
-Tu dois être le 
-mercenaire envoyé par      
-Mme Miaou Miaou.
-Je vais te corriger !!
 ]],
 }
 
@@ -2684,18 +2689,18 @@ Prends ceci, tu peux le garder.
 dialog{
   id = "maps.houses.fortune_teller.0",
   text = [[
-Je vois... $0 Je vois des villageois
-au sud du Lac. Une grande quête
-t'attend !
+Abracadabra, abracadabra !
+Tu trouveras l'Ancien du
+village.
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.1",
   text = [[
-Je vois...$0 je vois...$0 une ruine
-au nord du Lac. Je vois des
-redoutables tentacules.
+Abracadabra, abracadabra !
+Le sage du sanctuaire te dira
+quelque chose d'important.
 ]],
 }
 
@@ -2875,16 +2880,9 @@ Salut ! CLIC !
 dialog{
   id = "maps.houses.fortune_teller.2",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Habitants de la 
-Forêt Enchantée,
-les Moblins     
-vivent également
-dans la cave du 
-Plateau Tartare.
-Salut ! CLIC !
+Abracadabra, abracadabra !
+Tu trouveras le sage du
+village.
 ]],
 }
 
@@ -2975,53 +2973,27 @@ Vas-y mon gars !
 dialog{
   id = "maps.houses.fortune_teller.3",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Les fleurs du   
-Marais des      
-Anémones sont   
-les préférées de
-Toutou. C'est ce
-qu'on dit...    
-Pourquoi        
-n'y vas-tu pas? 
-Salut ! CLIC !
+Abracadabra, abracadabra !
+Tu trouveras le sage du
+village.
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.4",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-As-tu rencontré 
-tous les gens   
-de cette île ?   
-Au Sud-Est du   
-village, à côté 
-du Champ        
-aux Pièges,     
-vit un homme    
-appelé Richard. 
-Je te conseille 
-d'aller le voir.
-Salut ! CLIC !
+Abracadabra, abracadabra !
+Tu trouveras le sage du
+village.
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.5",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Si tu veux des  
-bananes, parle  
-de nouveau aux  
-gens du village.
-Salut ! CLIC !
+Abracadabra, abracadabra !
+Tu trouveras le sage du
+village.
 ]],
 }
 
@@ -3087,6 +3059,47 @@ Cave aux Clés,
 située dans     
 La Prairie.     
 Salut ! CLIC !
+]],
+}
+
+dialog{
+  id = "maps.houses.fortune_teller.fortune_no",
+  text = [[
+Pauvre malheureux...$0
+Tu reviendras bien un jour...
+]],
+}
+
+dialog{
+  id = "maps.houses.fortune_teller.fortune_not_enough_money",
+  text = [[
+Bon, je dois dire que ma santé
+n'est pas très bonne en ce
+moment...
+Reviens plus tard !
+]],
+}
+
+dialog{
+  id = "maps.houses.fortune_teller.fortune_pay",
+  text = [[
+Ca fera $v rubis. J'espère que
+tu resteras en bonne santé !
+Ha ! ha ! ha !
+]],
+}
+
+dialog{
+  id = "maps.houses.fortune_teller.fortune_question",
+  text = [[
+Il semblerait que tu aies un
+destin intéressant...$0
+Puis-je te raconter ton avenir ?
+Ce ne sera pas cher...
+Prédis-moi l'avenir !
+Je ne suis pas intéressé.
+
+
 ]],
 }
 
@@ -4107,7 +4120,7 @@ dialog{
 }
 
 dialog{
-  id = "maps.houses.north_west_castle.fortune_teller.welcome",
+  id = "maps.houses.north_west_castle.storyteller.welcome_question",
   text = [[
 Ce n'est pas une
 commode... Quoi ?

@@ -694,6 +694,19 @@ tile{
   pattern = "dresser.2a",
 }
 
+wall{
+  layer = 0,
+  x = 96,
+  y = 96,
+  width = 128,
+  height = 32,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
 destination{
   name = "from_outside",
   layer = 0,
@@ -761,32 +774,6 @@ shop_treasure{
   price = 40,
   font = "white_digits",
   dialog = "maps.houses.east_castle.shop.product_arrows",
-}
-
-wall{
-  layer = 0,
-  x = 176,
-  y = 96,
-  width = 16,
-  height = 32,
-  stops_hero = true,
-  stops_npcs = true,
-  stops_enemies = true,
-  stops_blocks = true,
-  stops_projectiles = true,
-}
-
-wall{
-  layer = 0,
-  x = 128,
-  y = 96,
-  width = 16,
-  height = 32,
-  stops_hero = true,
-  stops_npcs = true,
-  stops_enemies = true,
-  stops_blocks = true,
-  stops_projectiles = true,
 }
 
 sensor{

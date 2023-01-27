@@ -98,6 +98,7 @@ map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith 
 map{ id = "inside/caves/east_castle/east_swamp_path_cave", description = "East Swamp path cave" }
 map{ id = "inside/caves/east_castle/temple_of_time_path", description = "Temple of Time Path" }
 map{ id = "inside/caves/east_castle/to_blacksmith", description = "Cave to blacksmith" }
+map{ id = "inside/caves/east_mountains/shop", description = "East mountains shop" }
 map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
@@ -113,14 +114,14 @@ map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to fire t
 map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to Spectacle Rock (Ground Floor)" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_1f", description = "Cave to Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_b1", description = "Cave to Spectacle Rock (Basement 1)" }
-map{ id = "inside/caves/north_west/hylia_to_kakarico", description = "Hylia to Kakarico" }
-map{ id = "inside/caves/north_west/ruins_building", description = "Ruins building" }
-map{ id = "inside/caves/north_west/ruins_cave", description = "Ruins Cave" }
+map{ id = "inside/caves/north_field/hylia_to_kakarico", description = "Hylia to Kakarico" }
+map{ id = "inside/caves/north_field/ruins_building", description = "Ruins building" }
+map{ id = "inside/caves/north_field/ruins_cave", description = "Ruins Cave" }
 map{ id = "inside/caves/parapa_town/great_fairy", description = "Great Fairy Cave" }
 map{ id = "inside/caves/parapa_town/mineshaft_1f", description = "Mineshaft (1st Floor)" }
 map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/rito_village/rito_village" }
 map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
-map{ id = "inside/caves/south_castle/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
+map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
 map{ id = "inside/houses/cordinia/chest_house", description = "Chest house" }
@@ -148,7 +149,7 @@ map{ id = "inside/houses/kakariko_village/sahasrahla", description = "Sahasrahla
 map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/north_field/sanctuary", description = "Sanctuary" }
-map{ id = "inside/houses/north_west_castle/shop", description = "Shop" }
+map{ id = "inside/houses/north_west_castle/fortune_teller", description = "Fortune Teller" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
@@ -156,6 +157,7 @@ map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost 
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
 map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
+map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
 map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
 map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/temple_time", description = "Temple of Time" }
@@ -216,7 +218,7 @@ map{ id = "out/f5", description = "F5 (Hyrule Field)" }
 map{ id = "out/f6", description = "F6 (Hyrule Field)" }
 map{ id = "out/f7", description = "F7 (Great Swamp)" }
 map{ id = "out/f8", description = "F8 (Miracles Coast)" }
-map{ id = "out/g1", description = "G1 (Death Mountain, Cesar's Peak)" }
+map{ id = "out/g1", description = "G1 (East Mountains, Cesar's Peak)" }
 map{ id = "out/g2", description = "G2 (Zora River)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
 map{ id = "out/g4", description = "G4 (Hyrule Field, Temple of Time)" }
@@ -224,7 +226,7 @@ map{ id = "out/g5", description = "G5 (Hyrule Field)" }
 map{ id = "out/g6", description = "G6 (Hyrule Field)" }
 map{ id = "out/g7", description = "G7 (Garnet Coast)" }
 map{ id = "out/g8", description = "G8 (Garnet Coast)" }
-map{ id = "out/h1", description = "H1 (Death Mountain)" }
+map{ id = "out/h1", description = "H1 (East Mountains)" }
 map{ id = "out/h2", description = "H2 (Zora River)" }
 map{ id = "out/h3", description = "H3 (East Swamp)" }
 map{ id = "out/h4", description = "H4 (Lon Lon Ranch, needs to be redone with better graphics)" }
@@ -2196,7 +2198,6 @@ file{ path = "scripts/maps/jump_manager.lua", author = "PhoenixII54", license = 
 file{ path = "scripts/maps/laser_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/lib/companion_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/lib/main_quest_steps_config.lua", license = "GPL v3" }
-file{ path = "scripts/maps/lib/phone_messages_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/lib/shop_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/lib/windfish_maze_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/light_manager.lua", license = "GPL v3" }

@@ -20820,7 +20820,7 @@ tile{
 
 tile{
   layer = -1,
-  x = 1000,
+  x = 1040,
   y = 560,
   width = 8,
   height = 16,
@@ -41416,18 +41416,9 @@ tile{
   layer = 0,
   x = 984,
   y = 576,
-  width = 64,
-  height = 16,
+  width = 96,
+  height = 24,
   pattern = "347",
-}
-
-tile{
-  layer = 0,
-  x = 1040,
-  y = 592,
-  width = 16,
-  height = 16,
-  pattern = "1699",
 }
 
 tile{
@@ -51838,18 +51829,9 @@ tile{
   layer = 0,
   x = 992,
   y = 616,
-  width = 48,
+  width = 80,
   height = 16,
   pattern = "1805",
-}
-
-tile{
-  layer = 0,
-  x = 1040,
-  y = 600,
-  width = 16,
-  height = 24,
-  pattern = "1806",
 }
 
 tile{
@@ -52486,25 +52468,25 @@ tile{
   layer = 0,
   x = 992,
   y = 600,
-  width = 48,
+  width = 80,
   height = 8,
   pattern = "1701",
 }
 
 tile{
   layer = 0,
-  x = 992,
+  x = 1040,
   y = 584,
-  width = 48,
+  width = 32,
   height = 8,
   pattern = "1751",
 }
 
 tile{
   layer = 0,
-  x = 992,
+  x = 1040,
   y = 592,
-  width = 48,
+  width = 32,
   height = 8,
   pattern = "1752",
 }
@@ -52513,7 +52495,7 @@ tile{
   layer = 0,
   x = 992,
   y = 560,
-  width = 48,
+  width = 80,
   height = 16,
   pattern = "1706",
 }
@@ -52529,15 +52511,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1040,
-  y = 576,
-  width = 8,
-  height = 16,
-  pattern = "1755",
-}
-
-tile{
-  layer = 0,
   x = 976,
   y = 576,
   width = 8,
@@ -52547,16 +52520,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1048,
-  y = 576,
-  width = 8,
-  height = 16,
-  pattern = "1731",
-}
-
-tile{
-  layer = 0,
-  x = 992,
+  x = 1032,
   y = 560,
   width = 8,
   height = 16,
@@ -52565,7 +52529,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1000,
+  x = 1040,
   y = 560,
   width = 16,
   height = 16,
@@ -52574,7 +52538,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 992,
+  x = 1032,
   y = 552,
   width = 32,
   height = 8,
@@ -52583,7 +52547,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1016,
+  x = 1056,
   y = 560,
   width = 8,
   height = 16,
@@ -89926,7 +89890,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1000,
+  x = 1040,
   y = 560,
   width = 8,
   height = 16,
@@ -89936,12 +89900,83 @@ tile{
 
 tile{
   layer = 0,
-  x = 1024,
-  y = 688,
+  x = 1072,
+  y = 576,
   width = 8,
   height = 16,
-  pattern = "3",
-  tileset = "outside_special",
+  pattern = "1755",
+}
+
+tile{
+  layer = 0,
+  x = 1080,
+  y = 576,
+  width = 8,
+  height = 16,
+  pattern = "1731",
+}
+
+tile{
+  layer = 0,
+  x = 1072,
+  y = 592,
+  width = 16,
+  height = 16,
+  pattern = "1699",
+}
+
+tile{
+  layer = 0,
+  x = 1072,
+  y = 600,
+  width = 16,
+  height = 24,
+  pattern = "1806",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 592,
+  width = 8,
+  height = 8,
+  pattern = "1768",
+}
+
+tile{
+  layer = 0,
+  x = 1032,
+  y = 592,
+  width = 8,
+  height = 8,
+  pattern = "1767",
+}
+
+tile{
+  layer = 0,
+  x = 1032,
+  y = 584,
+  width = 8,
+  height = 8,
+  pattern = "14799",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 584,
+  width = 8,
+  height = 8,
+  pattern = "14800",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 592,
+  width = 32,
+  height = 8,
+  pattern = "1778",
 }
 
 npc{
@@ -92177,5 +92212,39 @@ enemy{
   direction = 0,
   breed = "outside/tektite_red",
   treasure_name = "random_mountains",
+}
+
+jumper{
+  layer = 0,
+  x = 1000,
+  y = 600,
+  width = 32,
+  height = 8,
+  direction = 6,
+  jump_length = 120,
+}
+
+destination{
+  name = "from_shop",
+  layer = 0,
+  x = 1032,
+  y = 709,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1024,
+  y = 680,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/east_mountains/shop",
+  destination = "from_outside",
 }
 
