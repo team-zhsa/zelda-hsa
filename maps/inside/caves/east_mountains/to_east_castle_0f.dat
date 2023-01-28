@@ -1,6 +1,6 @@
 properties{
-  x = 0,
-  y = 0,
+  x = 9472,
+  y = 1552,
   width = 704,
   height = 704,
   min_layer = -1,
@@ -2355,8 +2355,8 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "out/g4",
-  destination = "from_cave_2",
+  destination_map = "out/h1",
+  destination = "from_east_castle",
 }
 
 stairs{
@@ -2689,5 +2689,21 @@ tile{
   width = 80,
   height = 8,
   pattern = "ceiling.2",
+}
+
+separator{
+  layer = 2,
+  x = 0,
+  y = 344,
+  width = 704,
+  height = 16,
+}
+
+separator{
+  layer = 2,
+  x = 344,
+  y = -8,
+  width = 16,
+  height = 704,
 }
 

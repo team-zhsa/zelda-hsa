@@ -66,6 +66,7 @@ function camera_meta:shake(config, callback)
 end
 
 
+
 --shake while following an entity
 function camera_meta:dynamic_shake(config, callback)
 

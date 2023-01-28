@@ -28,9 +28,9 @@ hero_meta:register_event("on_position_changed", function(hero)
         audio_manager:play_sound("walk_on_grass")
       end
     end
-
-  local map = hero:get_map()
-  for npc in map:get_entities(npc) do
+    
+    local map = hero:get_map()
+    for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
     local x, y, z = hero:get_position()
     local nx, ny, nz = npc:get_position()
