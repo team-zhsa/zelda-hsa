@@ -570,25 +570,25 @@ tile{
 
 tile{
   layer = 0,
+  x = 80,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
   x = 96,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = 0,
-  x = 104,
   y = 104,
   width = 8,
   height = 32,
@@ -597,7 +597,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 216,
   y = 104,
   width = 8,
   height = 32,
@@ -606,9 +606,18 @@ tile{
 
 tile{
   layer = 0,
-  x = 104,
+  x = 96,
   y = 96,
-  width = 112,
+  width = 128,
+  height = 8,
+  pattern = "floor_border.4",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 136,
+  width = 128,
   height = 8,
   pattern = "floor_border.4",
 }
@@ -616,17 +625,8 @@ tile{
 tile{
   layer = 0,
   x = 104,
-  y = 136,
-  width = 112,
-  height = 8,
-  pattern = "floor_border.4",
-}
-
-tile{
-  layer = 0,
-  x = 112,
   y = 104,
-  width = 96,
+  width = 112,
   height = 32,
   pattern = "floor_small.1",
 }
@@ -716,7 +716,7 @@ tile{
   layer = 0,
   x = 40,
   y = 136,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
@@ -725,25 +725,25 @@ tile{
   layer = 0,
   x = 40,
   y = 88,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
 
 tile{
   layer = 0,
-  x = 248,
+  x = 256,
   y = 88,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
 
 tile{
   layer = 0,
-  x = 248,
+  x = 256,
   y = 136,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
@@ -751,18 +751,18 @@ tile{
 tile{
   layer = 0,
   x = 120,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
 tile{
   layer = 0,
   x = 184,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
@@ -771,7 +771,7 @@ tile{
   x = 120,
   y = 16,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
@@ -780,13 +780,14 @@ tile{
   x = 184,
   y = 16,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
 shop_treasure{
+  name = "product_heart",
   layer = 0,
-  x = 112,
+  x = 96,
   y = 104,
   treasure_name = "heart",
   price = 10,
@@ -795,23 +796,25 @@ shop_treasure{
 }
 
 shop_treasure{
+  name = "product_potion",
   layer = 0,
   x = 144,
   y = 104,
   treasure_name = "green_potion",
-  price = 70,
+  price = 290,
   font = "white_digits",
-  dialog = "maps.houses.zora_village.shop.product_green_potion",
+  dialog = "maps.houses.zora_village.shop.product_potion",
 }
 
 shop_treasure{
+  name = "product_shield",
   layer = 0,
-  x = 176,
+  x = 192,
   y = 104,
-  treasure_name = "potion",
-  price = 80,
+  treasure_name = "hero_shield",
+  price = 150,
   font = "white_digits",
-  dialog = "maps.houses.zora_village.shop.product_red_potion",
+  dialog = "maps.houses.zora_village.shop.product_shield",
 }
 
 destination{

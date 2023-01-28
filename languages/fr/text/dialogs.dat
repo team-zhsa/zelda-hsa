@@ -2687,15 +2687,6 @@ Prends ceci, tu peux le garder.
 }
 
 dialog{
-  id = "maps.houses.fortune_teller.0",
-  text = [[
-Abracadabra, abracadabra !
-Tu trouveras l'Ancien du
-village.
-]],
-}
-
-dialog{
   id = "maps.houses.fortune_teller.1",
   text = [[
 Abracadabra, abracadabra !
@@ -4371,14 +4362,6 @@ Choisis ce que tu aimes.
 }
 
 dialog{
-  id = "maps.houses.zora_village.shop.product_green_potion",
-  text = [[
-Une potion verte pour regagner
-de la magie !
-]],
-}
-
-dialog{
   id = "maps.houses.zora_village.shop.product_heart",
   text = [[
 Voici un coeur si tu es blessé !
@@ -4386,11 +4369,18 @@ Voici un coeur si tu es blessé !
 }
 
 dialog{
-  id = "maps.houses.zora_village.shop.product_red_potion",
+  id = "maps.houses.zora_village.shop.product_potion",
   text = [[
-Une potion rouge qui redonne de
-la vie... $0 Un peu comme les
-coeurs, mais en mieux.
+Une potion verte pour regagner
+de la magie !
+]],
+}
+
+dialog{
+  id = "maps.houses.zora_village.shop.product_shield",
+  text = [[
+Un bouclier pour te protéger des
+attaques des ennemis.
 ]],
 }
 

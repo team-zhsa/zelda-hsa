@@ -12,7 +12,6 @@ local fsa = require('scripts/maps/fsa_effect')
 function sol.main:on_started()
   sol.main.load_settings()
   math.randomseed(os.time())
-
   -- Show the initial menus.
   if #initial_menus_config == 0 then
     return
