@@ -51,13 +51,6 @@ animation{
   },
 }
 animation{
-  name = "blue_potion",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 144, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "blue_tunic",
   src_image = "entities/items.png",
   directions = {
@@ -118,8 +111,8 @@ animation{
   name = "bottle_1",
   src_image = "entities/items.png",
   directions = {
-    { x = 208, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 160, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 208, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 160, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 176, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 176, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
@@ -272,13 +265,6 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 96, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "green_potion",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 128, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -639,13 +625,6 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 128, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "red_potion",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 112, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

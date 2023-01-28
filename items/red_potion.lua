@@ -8,3 +8,6 @@ function item:on_obtaining(variant, savegame_variable)
   end
 end
 
+function item:on_created()
+  self:set_brandish_when_picked(true)
+end

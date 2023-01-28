@@ -1,8 +1,13 @@
 -- A Lua console that can be enabled with F12 at any time during the program.
+local mode_7_manager = require("scripts/mode_7")
+
+local language_manager = require("scripts/language_manager")
+
+local mono_font, mono_font_size = language_manager:get_monospace_font()
 
 local console = {
-  font = "enter_command_mono",            -- Font of the console (monospaced).
-  font_size = 16,                        -- Font size in pixels.
+  font = mono_font,            -- Font of the console (monospaced).
+  font_size = mono_font_size,                        -- Font size in pixels.
   char_width = 6,                       -- Character width in pixels.
   line_spacing = 2,                     -- Space between two lines in pixels.
 
