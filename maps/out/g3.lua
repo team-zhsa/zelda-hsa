@@ -23,6 +23,7 @@ map:register_event("on_started", function()
 		for npc in map:get_entities("npc_soldier_") do
 			npc:set_enabled(false)
 		end
+		wall_soldier:set_enabled(false)
 	end
 end)
 

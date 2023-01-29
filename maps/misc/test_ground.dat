@@ -1057,10 +1057,11 @@ chest{
 npc{
   layer = 0,
   x = 40,
-  y = 109,
+  y = 125,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.kaepora_gaebora.owl_1",
+  sprite = "npc/bully",
+  behavior = "dialog#maps.out.faron_woods.marathon_man.marathon_bridge_closed",
 }
 
 teletransporter{
@@ -1342,8 +1343,8 @@ custom_entity{
 
 custom_entity{
   layer = 0,
-  x = 72,
-  y = 125,
+  x = -8,
+  y = 133,
   width = 16,
   height = 16,
   direction = 0,

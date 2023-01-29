@@ -524,6 +524,30 @@ npc{
   sprite = "npc/mustache_man",
 }
 
+destination{
+  name = "from_outside",
+  layer = 0,
+  x = 160,
+  y = 205,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 224,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "out/i2",
+  destination = "from_camper",
+}
+
 tile{
   layer = 1,
   x = 200,

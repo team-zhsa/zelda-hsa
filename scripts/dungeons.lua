@@ -133,7 +133,35 @@ local function initialize_dungeon_features(game)
       destination_name = "from_temple"
     },
     completing_sequence = "simple",
-  },
+    },
+
+    [7] = { -- Water Temple
+    floor_width = 1600,
+    floor_height = 1200,
+    minimap_width = 48,
+    minimap_height = 48,
+    lowest_floor = -1,
+    highest_floor = 1,
+    maps = {
+      "dungeons/6/0f",
+      "dungeons/6/b1",
+    },
+    boss = {
+      floor = -1,
+      savegame_variable = "dungeon_7_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/7/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/b2",
+      destination_name = "from_temple"
+    },
+    completing_sequence = "simple",
+    },
   }
 
   -- Returns the index of the current dungeon if any, or nil.

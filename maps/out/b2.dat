@@ -12752,6 +12752,30 @@ npc{
   sprite = "npc/soldier",
 }
 
+destination{
+  name = "from_fairy",
+  layer = 0,
+  x = 1008,
+  y = 53,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1000,
+  y = 24,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/north_field/sanctuary_fairy",
+  destination = "from_outside",
+}
+
 tile{
   layer = 1,
   x = 800,

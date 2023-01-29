@@ -15,7 +15,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 map:register_event("on_started", function()
 
   -- Chests
-
+  chest_7_small_key:set_enabled(false)
   -- Doors
   
   -- Enemies
@@ -25,6 +25,10 @@ map:register_event("on_started", function()
   -- Pickables
 
   -- Separators
-  separator_manager:init(map)
+  separator_manager:manage_map(map)
 
+end)
+
+switch_7_chest:register_event("on_activated", function()
+  treasure_manager:appear_chest(map, "chest_7_small_key")
 end)

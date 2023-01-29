@@ -2349,19 +2349,16 @@ Donjon 6
 }
 
 dialog{
-  id = "maps.dungeons.7.indication",
+  id = "maps.dungeons.7.welcome_description",
   text = [[
-...OCARINA...   
-Sa musique      
-te guidera.
+Palais du désert
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.7.welcome",
+  id = "maps.dungeons.7.welcome_name",
   text = [[
-        Niveau 7       
-  Tour du vautour
+Donjon 7
 ]],
 }
 
@@ -4276,12 +4273,12 @@ devrais y jeter un coup d'oeil.
 dialog{
   id = "maps.houses.zora_forest.camper_house.lonlon_ranch",
   text = [[
-Salut $v ! Je vois que tu as
-les Bottes de Pégase.
+Salut $v ! Je vois que
+tu as les Bottes de Pégase.
 Tu pourrais te rendre au ranch
 Lon Lon, leur lait Meuh Meuh
 est réputé dans tout le pays
-pour son goût.!
+pour son goût !
 ]],
 }
 
@@ -4593,6 +4590,57 @@ dialog{
   text = [[
 Maison aux      
 Coquillages
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_finished_higher",
+  text = [[
+Ton temps est de $v.
+C'est dommage, tu aurais
+pu faire un peu mieux...
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_finished_lower",
+  question = "1",
+  text = [[
+Ton temps est de $v.
+Félicitations ! La prochaine
+fois, peut-être que tu pourras
+faire encore mieux !
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_piece_of_heart",
+  text = [[
+Tu as fait beaucoup d'efforts.
+Voici un quart de coeur pour
+toi.
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_previous_record",
+  text = [[
+Le précédent record est de
+$v.
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_rupee",
+  text = [[
+Tiens, voici des rubis pour toi.
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_timeout",
+  text = [[
+Le temps est écoulé !
 ]],
 }
 
@@ -5213,6 +5261,82 @@ dialog{
 Je vais t'apprendre le menuet
 de la Forêt, qui te servira à te
 téléporter ici.
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_bridge_closed",
+  text = [[
+Je suis le marathonien errant !$0
+Je cherche un coureur à l'esprit
+du guerrier sanguinaire !
+Mon frère est dans la forêt de
+Firone, mais les soldats ont
+bloqué l'accès à la plaine du
+Sud, donc je suis coincé ici.$0
+Reviens plus tard si tu veux
+courir !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_bridge_no_shoes",
+  text = [[
+Je suis le marathonien errant !$0
+Cours d'ici jusqu'à la ligne
+d'arrivée !
+Mais tu comptes quand même pas
+courir avec des bottes comme ça ?
+Reviens quand tu auras de
+nouvelles bottes.
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_bridge_opened",
+  question = "1",
+  text = [[
+Je suis le marathonien errant !$0
+Cours d'ici jusqu'à la ligne
+d'arrivée !
+Tu m'as l'air d'être un bon
+coureur ! Je suis sûr que tu
+peux y arriver !
+Pour participer, c'est 60 rubis !$0
+Si tu franchis la ligne d'arrivée
+dans les temps, tu gagneras un
+super prix.$0 Les ponts vers la
+plaine du Sud sont à nouveau
+ouverts et je cherche un coureur
+digne de faire cette course.
+Le précédent record est de
+$v.
+
+Tu veux tenter ta chanche ?
+Ouais !
+Euh, non...
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_no",
+  text = [[
+Si tu changes d'avis, reviens
+me voir ! Je reste ici !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_yes",
+  text = [[
+L'arrivée se trouve à côté de
+la chaumière du cartographe
+de la forêt de Firone.
+Je t'ai indiqué l'endroit sur ta
+carte. Une fois là-bas, mon
+frère t'attendra devant la
+maison. Le temps limite est
+de 5 minutes !
 ]],
 }
 

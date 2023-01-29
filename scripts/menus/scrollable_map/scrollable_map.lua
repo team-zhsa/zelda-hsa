@@ -23,7 +23,7 @@ cross_positions = { -- Indicates the coordinates in the entire world of the next
   -- "dungeon_1_completed",
   {x = 00656, y = 03048}, -- Ruins completed, go to Sahasrahla's house in Kakarico
   -- "sahasrahla_lost_woods_map",
-  {x = 04608, y = 07928}, -- Sahasrahla met, go to Lost Woods mapper
+  {x = 04472, y = 07792}, -- Sahasrahla met, go to Lost Woods mapper
   -- "lost_woods_map_obtained",
   {x = 02336, y = 04520}, -- Forest Temple
   -- "dungeon_2_started",
@@ -360,18 +360,18 @@ function map_submenu:draw_world_map(dst_surface)
 
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, 126, 32)
-      self.up_arrow_sprite:draw(dst_surface, 192, 32)
+      self.up_arrow_sprite:draw(dst_surface, 100, 32)
+      self.up_arrow_sprite:draw(dst_surface, 208, 32)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
-      self.down_arrow_sprite:draw(dst_surface, 126, 200)
-      self.down_arrow_sprite:draw(dst_surface, 192, 200)
+      self.down_arrow_sprite:draw(dst_surface, 100, 200)
+      self.down_arrow_sprite:draw(dst_surface, 208, 200)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 51, 62)
-      self.left_arrow_sprite:draw(dst_surface, 51, 158)
+      self.left_arrow_sprite:draw(dst_surface, 52, 62)
+      self.left_arrow_sprite:draw(dst_surface, 52, 158)
     end
     
     if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 199 then

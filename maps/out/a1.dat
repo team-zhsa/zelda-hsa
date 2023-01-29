@@ -1858,7 +1858,7 @@ tile{
   layer = 0,
   x = 96,
   y = 472,
-  width = 128,
+  width = 80,
   height = 8,
   pattern = "1007",
 }
@@ -1867,7 +1867,7 @@ tile{
   layer = 0,
   x = 96,
   y = 480,
-  width = 128,
+  width = 80,
   height = 8,
   pattern = "1008",
 }
@@ -21181,6 +21181,51 @@ tile{
   pattern = "454",
 }
 
+tile{
+  layer = 0,
+  x = 184,
+  y = 480,
+  width = 32,
+  height = 8,
+  pattern = "1030",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 480,
+  width = 8,
+  height = 8,
+  pattern = "1020",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 472,
+  width = 8,
+  height = 8,
+  pattern = "14796",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 472,
+  width = 8,
+  height = 8,
+  pattern = "14795",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 480,
+  width = 8,
+  height = 8,
+  pattern = "1024",
+}
+
 teletransporter{
   layer = 0,
   x = 0,
@@ -22066,6 +22111,16 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/owl",
+}
+
+jumper{
+  layer = 0,
+  x = 184,
+  y = 488,
+  width = 32,
+  height = 8,
+  direction = 6,
+  jump_length = 56,
 }
 
 tile{

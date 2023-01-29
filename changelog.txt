@@ -272,18 +272,21 @@ Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
 	ADD: Added a debug screen from ALTTD.
 	CHG: Changed normal pull handles sprites (#53).
 	CHG: Divided the Hyrule Field in smaller parts for better dialogues organisation.
-	FIX: Fix main quest step being saved to 5 after starting the game by calling the step done method after the world map is obtained and not when the item is created (#51).
+	CHG: Changed heavy rocks colours' to ALTTP's (#61).
+	CHG: Centered minimap arrows (#49).
+	FIX: Fixed main quest step being saved to 5 after starting the game by calling the step done method after the world map is obtained and not when the item is created (#51).
+	FIX: Fixed wrong dialogue icons (#64).
+	FIX: Fixed invisible wall in "out/g3" being enabled after obtaining the sword (#65).
+	FIX: Fixed wrong coordinates for the Lost Woods mapper minimap cross (#66).
 	REM: Removed debug printing when dropping from a ceiling.
 	REM: Removed map discovering values being saved because not needed.
 	REM: Removed Kokiri Village layout in the minimap (#57).
 	TDO: Remove red, green and blue potions item as they are replaced by a more general potion (#62).
 	TDO: Fix Link being able to walk on wall edge when there is water (#54).
-	TDO: Add dialogues for Sahasrahla.
-	TDO: Add dialogues for Ravio.
 	TDO: Replace corrupted files.
 	TDO: Fix pot weights in the Forest Temple.
 	TDO: Fix the water level changing animation in the Water Temple (#56).
-	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#51).
+	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
 	TDO: Fix changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lenghts being too high in the mountains (#38).
@@ -291,17 +294,14 @@ Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
-	TDO: Hide Kokiri Village layout in the minimap.
 
 Alpha 1.15.2 (started 01/02/23) "Ladyfish Update": Sprites and images
 	TDO: Fix game intro dialogues.
 	TDO: Add items treasure and inventory missing dialogues.
 	TDO: Fix victory animation not being synchronised with Link movement.
-	TDO: Fix wrong dialogue icons.
 	TDO: Clean up unused sprite files.
 	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Fix missing animations for other tunics (#47).
-	TDO: Center minimap arrows (#49).
 	TDO: Update title screen (#50).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
 
