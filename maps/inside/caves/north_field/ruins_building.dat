@@ -7,6 +7,7 @@ properties{
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 04",
+  music = "inside/cave",
 }
 
 tile{
@@ -56,79 +57,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
-  y = 272,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 272,
-  width = 48,
-  height = 24,
-  pattern = "wall.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 216,
-  y = 272,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 272,
-  width = 48,
-  height = 24,
-  pattern = "wall.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 80,
-  y = 296,
-  width = 24,
-  height = 48,
-  pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 336,
-  width = 48,
-  height = 24,
-  pattern = "wall.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 336,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 360,
-  width = 24,
-  height = 80,
-  pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 16,
+  x = 96,
   y = 440,
   width = 24,
   height = 24,
@@ -137,25 +66,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 40,
-  y = 440,
-  width = 112,
+  x = 56,
+  y = 272,
+  width = 96,
   height = 24,
-  pattern = "wall.2-2",
+  pattern = "wall.1-2",
 }
 
 tile{
   layer = 0,
-  x = 168,
-  y = 440,
-  width = 112,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 280,
+  x = 200,
   y = 440,
   width = 24,
   height = 24,
@@ -164,8 +84,89 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
-  y = 360,
+  x = 168,
+  y = 272,
+  width = 96,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 392,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 376,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 272,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 296,
+  width = 24,
+  height = 80,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 376,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 440,
+  width = 32,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 440,
+  width = 32,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 376,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 296,
   width = 24,
   height = 80,
   pattern = "wall.4-2",
@@ -173,8 +174,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 216,
-  y = 296,
+  x = 200,
+  y = 392,
   width = 24,
   height = 48,
   pattern = "wall.4-2",
@@ -182,17 +183,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 232,
-  y = 336,
+  x = 216,
+  y = 376,
   width = 48,
   height = 24,
-  pattern = "wall.1-2",
+  pattern = "wall.2-2",
 }
 
 tile{
   layer = 0,
-  x = 280,
-  y = 336,
+  x = 264,
+  y = 272,
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
@@ -200,20 +201,20 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
-  y = 336,
+  x = 96,
+  y = 376,
   width = 24,
   height = 24,
-  pattern = "wall.corner_reverse.1-2",
+  pattern = "wall.corner_reverse.3-2",
 }
 
 tile{
   layer = 0,
-  x = 216,
-  y = 336,
+  x = 200,
+  y = 376,
   width = 24,
   height = 24,
-  pattern = "wall.corner_reverse.2-2",
+  pattern = "wall.corner_reverse.4-2",
 }
 
 tile{
@@ -308,18 +309,18 @@ tile{
 
 tile{
   layer = 0,
-  x = 48,
-  y = 368,
-  width = 224,
+  x = 64,
+  y = 304,
+  width = 192,
   height = 64,
   pattern = "floor.22-1",
 }
 
 tile{
   layer = 0,
-  x = 112,
-  y = 304,
-  width = 96,
+  x = 128,
+  y = 368,
+  width = 64,
   height = 64,
   pattern = "floor.22-1",
 }
@@ -362,16 +363,52 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 64,
   y = 296,
-  width = 96,
+  width = 192,
   height = 8,
   pattern = "wall_border.1-2",
 }
 
 tile{
   layer = 0,
-  x = 104,
+  x = 120,
+  y = 376,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 376,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 368,
+  width = 64,
+  height = 8,
+  pattern = "wall_border.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 368,
+  width = 64,
+  height = 8,
+  pattern = "wall_border.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
   y = 304,
   width = 8,
   height = 64,
@@ -380,7 +417,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 256,
   y = 304,
   width = 8,
   height = 64,
@@ -389,45 +426,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 48,
-  y = 360,
-  width = 64,
-  height = 8,
-  pattern = "wall_border.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 360,
-  width = 64,
-  height = 8,
-  pattern = "wall_border.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 368,
-  width = 8,
-  height = 64,
-  pattern = "wall_border.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 272,
-  y = 368,
-  width = 8,
-  height = 64,
-  pattern = "wall_border.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 48,
+  x = 128,
   y = 432,
-  width = 224,
+  width = 64,
   height = 8,
   pattern = "wall_border.2-2",
 }
@@ -470,7 +471,25 @@ tile{
 
 tile{
   layer = 0,
-  x = 104,
+  x = 120,
+  y = 368,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner_reverse.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 368,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner_reverse.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
   y = 296,
   width = 8,
   height = 8,
@@ -479,52 +498,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
-  y = 296,
-  width = 8,
-  height = 8,
-  pattern = "wall_border.corner.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 360,
-  width = 8,
-  height = 8,
-  pattern = "wall_border.corner.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 360,
-  width = 8,
-  height = 8,
-  pattern = "wall_border.corner_reverse.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 360,
-  width = 8,
-  height = 8,
-  pattern = "wall_border.corner_reverse.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 272,
-  y = 360,
-  width = 8,
-  height = 8,
-  pattern = "wall_border.corner.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 40,
+  x = 120,
   y = 432,
   width = 8,
   height = 8,
@@ -533,8 +507,35 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 192,
   y = 432,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 296,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 368,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 368,
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
@@ -592,6 +593,96 @@ tile{
   width = 8,
   height = 16,
   pattern = "door.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 304,
+  width = 32,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 320,
+  width = 64,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
 }
 
 separator{
@@ -701,6 +792,130 @@ teletransporter{
   destination = "from_building",
 }
 
+chest{
+  layer = 0,
+  x = 192,
+  y = 173,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  layer = 0,
+  x = 160,
+  y = 173,
+  treasure_savegame_variable = "gfh",
+  sprite = "entities/Chests/chest_LttP",
+}
+
+chest{
+  layer = 0,
+  x = 128,
+  y = 173,
+  sprite = "entities/Chests/chest_LttP",
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 317,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 317,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 333,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 333,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 184,
+  y = 333,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 136,
+  y = 333,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 72,
+  y = 317,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 248,
+  y = 317,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 248,
+  y = 365,
+  treasure_name = "bomb",
+  treasure_variant = 4,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 72,
+  y = 365,
+  treasure_name = "arrow",
+  treasure_variant = 3,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
 tile{
   layer = 1,
   x = 152,
@@ -717,6 +932,42 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.2-2",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 208,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 96,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
 }
 
 dynamic_tile{
