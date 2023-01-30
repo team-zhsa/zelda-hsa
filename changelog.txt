@@ -119,12 +119,12 @@ Alpha 1.8 (11/05/21) "Eel Update":
 	ADD: Added ocarina song durations instead of using 20 seconds for everything.
 	ADD: Added bumpers.
 	ADD: Added day/night cycle (finally!).
-	ADD: Added mode 7 teletransportation system from ALTTD.
-	ADD: Added additions tileset.
+	ADD: Added the mode 7 teletransportation system from ALTTD.
+	ADD: Added the "outside_additions" tileset.
 	ADD: Added FSA and GB effects.
-	ADD: Added camera shaking when reaching an obstacle while running.
-	ADD: Added scrollable map menu.
-	ADD: Added big magic bar in the HUD.
+	ADD: Added a camera shaking when reaching an obstacle while running.
+	ADD: Added a scrollable map menu.
+	ADD: Added a big magic bar in the HUD.
 	ADD: Added hero conditions (electrocution, freezing, confusion, slow, poisoned) from BOM.
 	ADD: Added ennemies.
 	ADD: Added map name system.
@@ -263,7 +263,7 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 	FIX: Fixed "yellow_key" not saved in the Forest Temple (#5).
 	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
 
-Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
+Alpha 1.15.1 (31/01/23) "Ladyfish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
 	ADD: Added a NPC property making them able to face the player when they move (#52).
@@ -281,8 +281,8 @@ Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
 	REM: Removed debug printing when dropping from a ceiling.
 	REM: Removed map discovering values being saved because not needed.
 	REM: Removed Kokiri Village layout in the minimap (#57).
-	TDO: Remove red, green and blue potions item as they are replaced by a more general potion (#62).
-	TDO: Fix Link being able to walk on wall edge when there is water (#54).
+	REM: Removed red, green and blue potions item (replaced by potion variants) (#62).
+	TDO: Fix Link being able to walk on wall edges when there is water (#54).
 	TDO: Replace corrupted files.
 	TDO: Fix pot weights in the Forest Temple.
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -296,6 +296,7 @@ Alpha 1.15.1 (started 01/01/23) "Ladyfish Update":
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 
 Alpha 1.15.2 (started 01/02/23) "Ladyfish Update": Sprites and images
+	TDO: Add night entities to maps (#67).
 	TDO: Fix game intro dialogues.
 	TDO: Add items treasure and inventory missing dialogues.
 	TDO: Fix victory animation not being synchronised with Link movement.

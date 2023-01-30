@@ -498,18 +498,18 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 256,
   y = 72,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
 
 tile{
   layer = 0,
-  x = 248,
+  x = 256,
   y = 152,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.4-9",
 }
@@ -518,7 +518,7 @@ tile{
   layer = 0,
   x = 40,
   y = 152,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
@@ -527,7 +527,7 @@ tile{
   layer = 0,
   x = 40,
   y = 72,
-  width = 32,
+  width = 24,
   height = 16,
   pattern = "wall_pillar.3-9",
 }
@@ -537,7 +537,7 @@ tile{
   x = 104,
   y = 16,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
@@ -546,25 +546,25 @@ tile{
   x = 200,
   y = 16,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.1-9",
 }
 
 tile{
   layer = 0,
   x = 104,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
 tile{
   layer = 0,
   x = 200,
-  y = 192,
+  y = 200,
   width = 16,
-  height = 32,
+  height = 24,
   pattern = "wall_pillar.2-9",
 }
 
@@ -597,7 +597,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
+  x = 88,
   y = 120,
   width = 8,
   height = 8,
@@ -606,16 +606,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 96,
   y = 120,
-  width = 144,
+  width = 128,
   height = 8,
   pattern = "carpet.8",
 }
 
 tile{
   layer = 0,
-  x = 80,
+  x = 88,
   y = 88,
   width = 8,
   height = 32,
@@ -624,16 +624,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 96,
   y = 88,
-  width = 144,
+  width = 128,
   height = 32,
   pattern = "carpet.5",
 }
 
 tile{
   layer = 0,
-  x = 232,
+  x = 224,
   y = 120,
   width = 8,
   height = 8,
@@ -642,7 +642,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 232,
+  x = 224,
   y = 88,
   width = 8,
   height = 32,
@@ -651,7 +651,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 232,
+  x = 224,
   y = 80,
   width = 8,
   height = 8,
@@ -660,7 +660,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
+  x = 88,
   y = 80,
   width = 8,
   height = 8,
@@ -669,16 +669,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 96,
   y = 80,
-  width = 144,
+  width = 128,
   height = 8,
   pattern = "carpet.2",
 }
 
 tile{
   layer = 0,
-  x = 64,
+  x = 72,
   y = 96,
   width = 16,
   height = 16,
@@ -687,7 +687,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 232,
   y = 96,
   width = 16,
   height = 16,
@@ -696,7 +696,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 120,
+  x = 128,
   y = 88,
   width = 16,
   height = 16,
@@ -705,7 +705,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 184,
+  x = 176,
   y = 88,
   width = 16,
   height = 16,
@@ -737,33 +737,38 @@ teletransporter{
 }
 
 shop_treasure{
+  name = "product_blue_potion",
   layer = 0,
-  x = 200,
+  x = 192,
   y = 88,
-  treasure_name = "blue_potion",
+  treasure_name = "potion",
+  treasure_variant = 3,
   price = 300,
   font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_blue_potion",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_blue_potion",
 }
 
 shop_treasure{
+  name = "product_red_potion",
   layer = 0,
-  x = 88,
+  x = 96,
   y = 88,
   treasure_name = "potion",
   price = 160,
   font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_red_potion",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_red_potion",
 }
 
 shop_treasure{
+  name = "product_green_potion",
   layer = 0,
   x = 144,
   y = 88,
-  treasure_name = "green_potion",
+  treasure_name = "potion",
+  treasure_variant = 2,
   price = 120,
   font = "white_digits",
-  dialog = "maps.houses.cordinia_town.potion_shop.product_green_potion",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_green_potion",
 }
 
 npc{
@@ -805,7 +810,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 64,
+  x = 72,
   y = 80,
   width = 16,
   height = 16,
@@ -814,7 +819,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 240,
+  x = 232,
   y = 80,
   width = 16,
   height = 16,

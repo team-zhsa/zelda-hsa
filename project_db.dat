@@ -127,9 +127,9 @@ map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
-map{ id = "inside/houses/cordinia/chest_house", description = "Chest house" }
-map{ id = "inside/houses/cordinia/green_hut", description = "Green Hut" }
-map{ id = "inside/houses/cordinia/white_hut", description = "White Hut" }
+map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
+map{ id = "inside/houses/cordinia_town/green_hut", description = "Green Hut" }
+map{ id = "inside/houses/cordinia_town/witch_hut", description = "Witch's Hut" }
 map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
@@ -239,7 +239,7 @@ map{ id = "out/h6", description = "H6 (Flower house)" }
 map{ id = "out/h7", description = "H7 (Beach)" }
 map{ id = "out/i1", description = "I1 (Snowpeaks)" }
 map{ id = "out/i2", description = "I2 (Zora River)" }
-map{ id = "out/i3", description = "I3 (Cordinia)" }
+map{ id = "out/i3", description = "I3 (Cordinia Town)" }
 map{ id = "out/i4", description = "I4 (Haunted Forest)" }
 map{ id = "out/i5", description = "I5 (Hyrule Field)" }
 map{ id = "out/i6", description = "out/i6" }
@@ -1626,13 +1626,15 @@ sound{ id = "wrong", description = "Wrong" }
 sound{ id = "zora", description = "zora" }
 
 item{ id = "_placeholder", description = "Placeholder" }
+item{ id = "_unused_blue_potion", description = "Blue Potion" }
+item{ id = "_unused_green_potion", description = "Green Potion" }
+item{ id = "_unused_red_potion", description = "Red Potion" }
 item{ id = "angler_key", description = "Angler key" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
 item{ id = "beak_of_stone", description = "Beak of stone" }
 item{ id = "big_key", description = "Dungeon big key" }
 item{ id = "bird_key", description = "Bird key" }
 item{ id = "blue_key", description = "Blue Key" }
-item{ id = "blue_potion", description = "Blue Potion" }
 item{ id = "blue_tunic", description = "Blue tunic" }
 item{ id = "bomb", description = "Bomb (1 / 3 / 8 / 10)" }
 item{ id = "bomb_bag", description = "Bombs bag" }
@@ -1657,7 +1659,6 @@ item{ id = "flippers", description = "Flippers" }
 item{ id = "golden_leaf", description = "Golden leaf" }
 item{ id = "golden_leaves_counter", description = "Golden leafs counter" }
 item{ id = "green_key", description = "Green Key" }
-item{ id = "green_potion", description = "Green Potion" }
 item{ id = "green_tunic", description = "Green Tunic" }
 item{ id = "hammer", description = "Hammer" }
 item{ id = "healing_wand", description = "Healing Wand" }
@@ -1702,7 +1703,6 @@ item{ id = "random_mountains", description = "Random (Mountains)" }
 item{ id = "random_south", description = "Random (South Hyrule)" }
 item{ id = "random_west", description = "Random (West Hyrule)" }
 item{ id = "red_key", description = "Red Key" }
-item{ id = "red_potion", description = "Red Potion" }
 item{ id = "red_tunic", description = "Red tunic" }
 item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 1000)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
