@@ -110,7 +110,7 @@ function door_manager:open_when_switch_activated(map, switch_prefix, door_prefix
         if not switch.is_activated then
           switch.is_activated = true
           map:open_doors(door_prefix)
-          --sol.audio.play_sound("common/secret_discover_minor")
+          sol.audio.play_sound("common/secret_discover_minor")
         end
        end
       for switch in map:get_entities(switch_prefix) do
@@ -156,7 +156,7 @@ function door_manager:destroy_wall(map, weak_wall_prefix)
   local game = map:get_game()
   local dungeon = game:get_dungeon_index()
   map:remove_entities(weak_wall_prefix)
-  audio_manager:play_sound("misc/secret1")
+  audio_manager:play_sound("common/secret_discover_minor")
 
 end
 

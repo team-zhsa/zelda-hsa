@@ -15,9 +15,17 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 map:register_event("on_started", function()
 
   -- Chests
-  chest_7_small_key:set_enabled(false)
+  treasure_manager:disappear_chest(map, "chest_7_small_key")
+  treasure_manager:disappear_chest(map, "chest_6_compass")
+  treasure_manager:appear_chest_when_torches_lit(map, "torch_6_", "chest_6_compass")
+
+
   -- Doors
-  
+  map:set_doors_open("door_11_n", true)
+  map:set_doors_open("door_11_e", true)
+  map:set_doors_open("door_11_s", true)
+
+
   -- Enemies
 
   -- Music
@@ -32,3 +40,32 @@ end)
 switch_7_chest:register_event("on_activated", function()
   treasure_manager:appear_chest(map, "chest_7_small_key")
 end)
+
+for sensor in map:get_entities("sensor_11_door_") do
+  sensor:register_event("on_activated", function()
+    map:close_doors("door_11_n")
+    map:close_doors("door_11_e")
+    map:close_doors("door_11_s")
+  end)
+end
+
+for sensor in map:get_entities("sensor_11_sensor_") do
+  -- Enables the sensors to close the doors
+  sensor:register_event("on_activated", function()
+    for sensor in map:get_entities("sensor_11_door_") do
+      sensor:set_enabled(true)
+    end
+    switch_11_door:set_activated(false)
+  end)
+end
+
+switch_11_door:register_event("on_activated", function()
+  map:open_doors("door_11_n")
+  map:open_doors("door_11_e")
+  map:open_doors("door_11_s")
+  -- Prevent doors from closing
+  for sensor in map:get_entities("sensor_11_door_") do
+    sensor:set_enabled(false)
+  end
+end)
+

@@ -135,19 +135,19 @@ local function initialize_dungeon_features(game)
     completing_sequence = "simple",
     },
 
-    [7] = { -- Water Temple
+    [7] = { -- Desert Temple
     floor_width = 1600,
     floor_height = 1200,
     minimap_width = 48,
     minimap_height = 48,
-    lowest_floor = -1,
+    lowest_floor = 0,
     highest_floor = 1,
     maps = {
-      "dungeons/6/0f",
-      "dungeons/6/b1",
+      "dungeons/7/0f",
+      "dungeons/7/1f",
     },
     boss = {
-      floor = -1,
+      floor = 1,
       savegame_variable = "dungeon_7_boss",
       x = 1448,
       y = 320,
