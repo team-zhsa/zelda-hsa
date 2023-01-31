@@ -9715,6 +9715,24 @@ tile{
   pattern = "floor_pot",
 }
 
+tile{
+  layer = 0,
+  x = 1024,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 1072,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
 wall{
   layer = 0,
   x = 152,
@@ -10295,20 +10313,24 @@ wall{
 }
 
 door{
+  name = "door_9_n",
   layer = 0,
   x = 1192,
   y = 264,
   direction = 1,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_7_0f_door_4_9",
   opening_condition_consumed = true,
 }
 
 door{
+  name = "door_4_s",
   layer = 0,
   x = 1192,
   y = 200,
   direction = 3,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_4_0f_door_4_9",
   opening_condition_consumed = true,
 }
 
@@ -10601,7 +10623,7 @@ switch{
   x = 1104,
   y = 128,
   subtype = "walkable",
-  sprite = "entities/Switches/switch_d1-2",
+  sprite = "entities/Switches/switch_d3-2",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -10994,6 +11016,15 @@ destructible{
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
+}
+
+enemy{
+  name = "auto_enemy_8",
+  layer = 0,
+  x = 1080,
+  y = 381,
+  direction = 0,
+  breed = "dungeons/firebar",
 }
 
 tile{
@@ -11480,6 +11511,24 @@ tile{
   width = 8,
   height = 32,
   pattern = "door_top.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 1024,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 1072,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
 }
 
 tile{

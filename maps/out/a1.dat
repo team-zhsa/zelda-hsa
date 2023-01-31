@@ -21226,6 +21226,25 @@ tile{
   pattern = "1024",
 }
 
+tile{
+  layer = 0,
+  x = 408,
+  y = 672,
+  width = 8,
+  height = 16,
+  pattern = "972",
+}
+
+jumper{
+  layer = 0,
+  x = 608,
+  y = 304,
+  width = 8,
+  height = 40,
+  direction = 4,
+  jump_length = 40,
+}
+
 teletransporter{
   layer = 0,
   x = 0,
@@ -21523,16 +21542,6 @@ pickable{
   y = 157,
   treasure_name = "piece_of_heart",
   treasure_savegame_variable = "outside_ruins_piece_of_heart",
-}
-
-jumper{
-  layer = 0,
-  x = 608,
-  y = 304,
-  width = 8,
-  height = 40,
-  direction = 4,
-  jump_length = 40,
 }
 
 jumper{
@@ -22121,6 +22130,38 @@ jumper{
   height = 8,
   direction = 6,
   jump_length = 56,
+}
+
+jumper{
+  layer = 0,
+  x = 608,
+  y = 664,
+  width = 8,
+  height = 32,
+  direction = 4,
+  jump_length = 88,
+}
+
+jumper{
+  layer = 0,
+  x = 408,
+  y = 672,
+  width = 8,
+  height = 16,
+  direction = 0,
+  jump_length = 40,
+}
+
+custom_entity{
+  layer = 0,
+  x = 416,
+  y = 685,
+  width = 8,
+  height = 16,
+  direction = 0,
+  sprite = "entities/Utils/cliff",
+  tiled = true,
+  model = "cliff",
 }
 
 tile{

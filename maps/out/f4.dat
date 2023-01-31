@@ -9228,7 +9228,7 @@ teletransporter{
   },
   width = 32,
   height = 16,
-  destination_map = "inside/castle/1f",
+  destination_map = "inside/castle/0f",
   destination = "from_outside_2",
 }
 
@@ -9255,7 +9255,8 @@ teletransporter{
   y = 752,
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/vase_house",
+  destination_map = "inside/houses/hyrule_town/library",
+  destination = "_side",
 }
 
 destructible{
@@ -11471,16 +11472,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 720,
-  y = 728,
-  width = 32,
-  height = 16,
-  pattern = "6068",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 1,
   x = 208,
   y = 424,
   width = 16,
@@ -12003,6 +11994,16 @@ tile{
   height = 16,
   pattern = "137",
   tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 720,
+  y = 712,
+  width = 32,
+  height = 32,
+  pattern = "6073",
+  tileset = "outside_buildings",
 }
 
 teletransporter{
