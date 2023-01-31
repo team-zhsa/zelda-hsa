@@ -42,6 +42,123 @@ custom_entity{
 
 tile{
   layer = 0,
+  x = 680,
+  y = 992,
+  width = 240,
+  height = 96,
+  pattern = "hole",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 992,
+  width = 224,
+  height = 8,
+  pattern = "hole.1",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1000,
+  width = 8,
+  height = 80,
+  pattern = "hole.3",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1000,
+  width = 8,
+  height = 80,
+  pattern = "hole.4",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1080,
+  width = 224,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 992,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.1",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 992,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.2",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1080,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.3",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1080,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.4",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 944,
+  width = 8,
+  height = 48,
+  pattern = "wall_border.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1088,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1088,
+  width = 8,
+  height = 64,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 944,
+  width = 224,
+  height = 48,
+  pattern = "922",
+}
+
+tile{
+  layer = 0,
   x = 1256,
   y = 816,
   width = 48,
@@ -448,9 +565,9 @@ tile{
 tile{
   layer = 0,
   x = 688,
-  y = 944,
+  y = 1088,
   width = 224,
-  height = 208,
+  height = 64,
   pattern = "922",
 }
 
@@ -2058,8 +2175,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
-  y = 1008,
+  x = 720,
+  y = 1088,
   width = 16,
   height = 16,
   pattern = "floor_pot",
@@ -2067,26 +2184,26 @@ tile{
 
 tile{
   layer = 0,
-  x = 736,
-  y = 1040,
+  x = 688,
+  y = 1120,
   width = 16,
-  height = 16,
+  height = 32,
   pattern = "floor_pot",
 }
 
 tile{
   layer = 0,
-  x = 848,
-  y = 1040,
+  x = 896,
+  y = 1120,
   width = 16,
-  height = 16,
+  height = 32,
   pattern = "floor_pot",
 }
 
 tile{
   layer = 0,
   x = 720,
-  y = 1072,
+  y = 960,
   width = 16,
   height = 16,
   pattern = "floor_pot",
@@ -2095,7 +2212,7 @@ tile{
 tile{
   layer = 0,
   x = 864,
-  y = 1072,
+  y = 1088,
   width = 16,
   height = 16,
   pattern = "floor_pot",
@@ -2258,24 +2375,6 @@ tile{
   layer = 0,
   x = 912,
   y = 960,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.4-5",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 1008,
-  width = 32,
-  height = 16,
-  pattern = "wall_pillar.4-5",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 1056,
   width = 32,
   height = 16,
   pattern = "wall_pillar.4-5",
@@ -2747,24 +2846,6 @@ tile{
   width = 48,
   height = 8,
   pattern = "wall_border.1-2",
-}
-
-tile{
-  layer = 0,
-  x = 680,
-  y = 944,
-  width = 8,
-  height = 208,
-  pattern = "wall_border.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 944,
-  width = 8,
-  height = 208,
-  pattern = "wall_border.4-2",
 }
 
 tile{
@@ -5650,52 +5731,52 @@ tile{
 tile{
   layer = 0,
   x = 784,
-  y = 1112,
+  y = 1120,
   width = 16,
-  height = 24,
+  height = 16,
   pattern = "door_main.2.floor.2-1",
 }
 
 tile{
   layer = 0,
-  x = 760,
-  y = 1112,
-  width = 24,
-  height = 40,
+  x = 768,
+  y = 1120,
+  width = 16,
+  height = 32,
   pattern = "door_main.2.floor.2-1",
 }
 
 tile{
   layer = 0,
   x = 800,
-  y = 1112,
+  y = 1120,
   width = 16,
-  height = 24,
+  height = 16,
   pattern = "door_main.2.floor.3-1",
 }
 
 tile{
   layer = 0,
   x = 816,
-  y = 1112,
-  width = 24,
-  height = 40,
+  y = 1120,
+  width = 16,
+  height = 32,
   pattern = "door_main.2.floor.3-1",
 }
 
 tile{
   layer = 0,
-  x = 752,
-  y = 1104,
+  x = 760,
+  y = 1120,
   width = 8,
-  height = 48,
+  height = 32,
   pattern = "floor_border.2",
 }
 
 tile{
   layer = 0,
   x = 760,
-  y = 1104,
+  y = 1112,
   width = 80,
   height = 8,
   pattern = "floor_border.2",
@@ -5703,10 +5784,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 840,
-  y = 1104,
+  x = 832,
+  y = 1120,
   width = 8,
-  height = 48,
+  height = 32,
   pattern = "floor_border.2",
 }
 
@@ -7161,8 +7242,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 816,
-  y = 1008,
+  x = 864,
+  y = 960,
   width = 16,
   height = 16,
   pattern = "floor_pot",
@@ -9319,6 +9400,87 @@ tile{
   pattern = "wall_border.1-2",
 }
 
+tile{
+  layer = 0,
+  x = 896,
+  y = 944,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 944,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 944,
+  width = 8,
+  height = 48,
+  pattern = "wall_border.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 712,
+  y = 1112,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
+tile{
+  layer = 0,
+  x = 856,
+  y = 1112,
+  width = 32,
+  height = 32,
+  pattern = "statue_eye-1",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1104,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.1",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 1104,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.2",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1112,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.3",
+}
+
+tile{
+  layer = 0,
+  x = 696,
+  y = 1112,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.4",
+}
+
 wall{
   layer = 0,
   x = 144,
@@ -10355,6 +10517,46 @@ enemy{
   direction = 0,
   breed = "dungeons/bari_blue",
   treasure_name = "random_west",
+}
+
+block{
+  layer = 0,
+  x = 904,
+  y = 1117,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = 0,
+  x = 696,
+  y = 1117,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = 0,
+  x = 856,
+  y = 973,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = 0,
+  x = 744,
+  y = 973,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
 }
 
 tile{

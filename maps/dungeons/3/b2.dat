@@ -21929,6 +21929,16 @@ stairs{
   subtype = 1,
 }
 
+npc{
+  layer = 0,
+  x = 1328,
+  y = 1269,
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/hint_stone",
+  behavior = "dialog#maps.dungeons.3.hint_1",
+}
+
 tile{
   layer = 1,
   x = 392,
