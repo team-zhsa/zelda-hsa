@@ -3875,6 +3875,78 @@ tile{
   pattern = "wall_low.corner_inner-fix.4-1",
 }
 
+tile{
+  layer = -1,
+  x = 496,
+  y = 744,
+  width = 16,
+  height = 16,
+  pattern = "pillar.bottom",
+}
+
+tile{
+  layer = -1,
+  x = 496,
+  y = 728,
+  width = 16,
+  height = 16,
+  pattern = "pillar.top",
+}
+
+tile{
+  layer = -1,
+  x = 528,
+  y = 744,
+  width = 16,
+  height = 16,
+  pattern = "pillar.bottom",
+}
+
+tile{
+  layer = -1,
+  x = 528,
+  y = 728,
+  width = 16,
+  height = 16,
+  pattern = "pillar.top",
+}
+
+tile{
+  layer = -1,
+  x = 736,
+  y = 744,
+  width = 16,
+  height = 16,
+  pattern = "pillar.bottom",
+}
+
+tile{
+  layer = -1,
+  x = 736,
+  y = 728,
+  width = 16,
+  height = 16,
+  pattern = "pillar.top",
+}
+
+tile{
+  layer = -1,
+  x = 768,
+  y = 744,
+  width = 16,
+  height = 16,
+  pattern = "pillar.bottom",
+}
+
+tile{
+  layer = -1,
+  x = 768,
+  y = 728,
+  width = 16,
+  height = 16,
+  pattern = "pillar.top",
+}
+
 stairs{
   layer = -1,
   x = 120,
@@ -4530,194 +4602,74 @@ destructible{
   can_be_cut = true,
 }
 
-enemy{
-  name = "auto_enemy",
+npc{
+  name = "npc_soldier_1",
   layer = -1,
-  x = 632,
-  y = 653,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  x = 672,
+  y = 669,
+  direction = 2,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_2",
+npc{
+  name = "npc_soldier_2",
   layer = -1,
-  x = 568,
-  y = 749,
+  x = 600,
+  y = 669,
   direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_3",
+npc{
+  name = "npc_soldier_3",
   layer = -1,
-  x = 776,
-  y = 685,
+  x = 600,
+  y = 717,
   direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_4",
+npc{
+  name = "npc_soldier_4",
   layer = -1,
-  x = 1088,
-  y = 685,
+  x = 600,
+  y = 765,
   direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_5",
+npc{
+  name = "npc_soldier_5",
   layer = -1,
-  x = 1088,
-  y = 293,
+  x = 640,
+  y = 781,
   direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_6",
+npc{
+  name = "npc_soldier_6",
   layer = -1,
-  x = 752,
-  y = 133,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
+  x = 672,
+  y = 717,
+  direction = 2,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
-enemy{
-  name = "auto_enemy_7",
+npc{
+  name = "npc_soldier_7",
   layer = -1,
-  x = 112,
-  y = 133,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_8",
-  layer = -1,
-  x = 144,
-  y = 253,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_9",
-  layer = -1,
-  x = 136,
-  y = 573,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_10",
-  layer = -1,
-  x = 184,
-  y = 749,
-  direction = 0,
-  breed = "soldiers/sword_soldier_green",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_11",
-  layer = -1,
-  x = 128,
-  y = 733,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_12",
-  layer = -1,
-  x = 648,
-  y = 693,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_13",
-  layer = -1,
-  x = 1088,
-  y = 773,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_14",
-  layer = -1,
-  x = 1192,
-  y = 709,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_15",
-  layer = -1,
-  x = 1080,
-  y = 349,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_16",
-  layer = -1,
-  x = 1096,
-  y = 173,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_17",
-  layer = -1,
-  x = 784,
-  y = 117,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_18",
-  layer = -1,
-  x = 496,
-  y = 125,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
-}
-
-enemy{
-  name = "auto_enemy_19",
-  layer = -1,
-  x = 224,
-  y = 125,
-  direction = 0,
-  breed = "soldiers/sword_soldier_blue",
-  treasure_name = "random_central",
+  x = 672,
+  y = 765,
+  direction = 2,
+  subtype = 1,
+  sprite = "npc/soldier",
 }
 
 tile{
@@ -8391,6 +8343,51 @@ tile{
   width = 16,
   height = 32,
   pattern = "floor.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 584,
+  width = 32,
+  height = 208,
+  pattern = "floor_small.2",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 752,
+  width = 8,
+  height = 48,
+  pattern = "floor_border.1",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 608,
+  width = 8,
+  height = 112,
+  pattern = "floor_border.1",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 608,
+  width = 8,
+  height = 112,
+  pattern = "floor_border.1",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 752,
+  width = 8,
+  height = 48,
+  pattern = "floor_border.1",
 }
 
 teletransporter{

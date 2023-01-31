@@ -3075,56 +3075,12 @@ Je ne suis pas intéressé.
 dialog{
   id = "maps.houses.hyrule_castle.waking_up",
   text = [[
-$1Il y a fort longtemps,$0 dans
-le merveilleux royaume d'Hyrule,
-bordé de montagnes,$0 de mers
-et forêts,$0 vécut un jeune héros.
+$v, $v !$0
+Réveille-toi ! $0
 
-
-Il était tout de vert vêtu,$0 et avait
-déjà repoussé le mal par de
-multiples occasions.
-Il eut affaire à un magicien,$0
-ayant pouvoir de transformer
-en peinture toutes choses.
-Il alla chercher les 3 pendentifs
-de Vertu, $0 afin de pouvoir
-posséder l'épée de Légende.
-Dans trois donjons,$0 il vainquit
-des monstres.$0 Il récupéra
-cette épée dans les Bois.
-Ce magicien alla au château
-d'Hyrule,$0 prenant alors son
-contrôle total.
-Mais ce héros le transperça
-alors.
-
-Il arriva dans un monde très
-ténébreux, Lorule.
-
-Là,$0 il vit ce magicien,$0 qui
-fusionna avec la bête des
-ténèbres...$0GANON.
-Par la même occasion,$0 le
-sorcier dispersa les 7 sages
-d'Hyrule à travers 7 donjons.
-Il découvrit son but :$0 rétablir
-la paix avec la TRIFORCE.
-Celui qui la touche...$0 en
-formulant un voeu...$0
-aura son voeu exaucé.
-Nul ne sait quel voeu fit
-ce héros, mais il redonna
-à Lorule sa beauté d'antan.$0
-Il se maria à la princesse
-Zelda et devint Roi 
-du royaume d'Hyrule.
-C'est 3 ans après cela...$0
-que commence...
-
-
-
-L'AVENTURE D'HYRULE
+Impa te cherche, elle veut te
+parler. Elle t'attend dans la
+cour du château, viens vite !
 ]],
 }
 
@@ -3272,6 +3228,153 @@ Bienvenue !
 Je t'offrirais bien un lit pour te
 reposer, mais je n'ai plus de
 place !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_1.content",
+  text = [[
+Le monde d'Hyrule est très vaste.
+Il est occupé par plusieurs 
+peuples :
+les Hyliens, qui occupent des
+villages parsemés autour de la
+Plaine,
+les Gorons, qui résident dans les
+montagnes et qui mangent des
+pierres,
+les Zoras, qui résident au nord-
+est d'Hyrule et qui vivent de
+l'eau, et les Piafs, qui sont
+mi-hommes, mi-oiseaux et qui
+occupent l'est d'Hyrule.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_1.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 4 : LE CHÂTEAU
+
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_2.content",
+  text = [[
+Hyrule est divisé en plusieurs
+zones géographiques ayant chacune
+leurs particularités.
+Le centre est occupé par le
+château et la ville. Il y a de
+nombreuses activités telles
+qu'une salle de sport, une
+bibliothèque, un grand jardin et
+un marché.
+Tout autour, on trouve la Plaine,
+vaste étendue de verdure qui
+sépare la ville des villages.
+On y retrouve le célèbre ranch
+Lonlon avec le meilleur lait
+d'Hyrule !
+Au sud, il y a un vaste marais
+que l'on dit hanté. Les eaux y
+sont vert foncé et sont infestées
+de monstres ! Il y a le Palais
+des Marais.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_2.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 1 : CENTRE ET SUD
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_3.content",
+  text = [[
+Il suffit de marcher quelques
+minutes vers l'ouest pour
+arriver au village Cocorico.
+Habité par des Hyliens, il permet
+notamment d'accéder à des zones
+remarquables.
+Par exemple, il est bordé au nord
+par le lac Hylia, célèbre lac
+abritant le Temple de l'Eau.
+De nombreuses personnes y
+vont chaque année pour admirer
+ces eaux.
+A l'ouest, il y a le cimetière, où
+reposent nombre de personnes.
+Au nord se trouvent les Ruines.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_3.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 2 : NORD-OUEST 
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_4.content",
+  text = [[
+Depuis le village Cocorico,
+il suffit de faire quelques pas
+vers le sud pour aller dans les
+Bois Perdus. Par contre, de
+nombreux aventuriers n'en sont
+jamais ressortis et sont devenus
+des Stalfos, monstres sans chair
+maniant les arcs.
+Plus au sud encore, habitent les
+Kokiris, éternels enfants vêtus
+de vert et qui ne sortent jamais.
+On retrouve dans cette zone le
+Temple de la Forêt.
+Encore au sud, il y a la ville
+Parapa.
+A l'est, on retrouve le Désert
+Gerudo, où coule le fleuve
+du même nom.
+Les chaleurs y sont cependant
+écrasantes et il faut beaucoup
+boire.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.library.book_4.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 3 : SUD-OUEST
+ 
+Tu veux le lire ?
+Oui
+Non
 ]],
 }
 
