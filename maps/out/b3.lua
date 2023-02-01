@@ -40,10 +40,10 @@ for npc in map:get_entities("npc_soldier_") do
 				num_dialogue = 1
 			end
 		elseif num_dialogue == 1 then
-			game:start_dialog("maps.out.kakarico_village.soldiers.tip_chest")
+			game:start_dialog("maps.out.kakarico_village.soldiers.tip_map")
 			num_dialogue = 2
 		elseif num_dialogue == 2 then
-			game:start_dialog("maps.out.kakarico_village.soldiers.tip_read")
+			game:start_dialog("maps.out.kakarico_village.soldiers.tip_shop")
 			num_dialogue = 3
 		elseif num_dialogue == 3 then
 			game:start_dialog("maps.out.kakarico_village.soldiers.tip_speak")

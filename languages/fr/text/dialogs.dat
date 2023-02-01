@@ -3952,9 +3952,8 @@ n'est jamais revenu...$0 Hic !
 dialog{
   id = "maps.houses.kakarico_village.sahasrahla_house.sahasrahla_has_world_map",
   text = [[
-$1 Va au sanctuaire, le
-sage a quelque chose à te
-dire.
+Va au sanctuaire, le sage a
+quelque chose à te dire.
 ]],
 }
 
@@ -3966,20 +3965,20 @@ $2Zzzz... Zzzz...$0
 Ah ! Te voilà $v !
 
 Je vois que tu as trouvé le
-Pendentif du Courage. Je vais
+Pendentif du Courage. $0Je vais
 t'en dire plus sur la légende.
 Il y a quelques générations, un
 Ordre de Chevaliers d'Hyrule
 protégeait le royaume.
 Ces chevaliers étaient les
 gardiens des trois pendentifs
-de Vertu. Mais quand Ganon
+de Vertu.$0 Mais quand Ganon
 parvint à prendre le contrôle du
 Château, la plupart d'entre eux
 furent tués.
 Ce sont les Sept Sages qui
 protégèrent les pendentifs dans
-leurs familles. C'est pourquoi
+leurs familles.$0 C'est pourquoi
 doit arriver un héros pour sauver
 Hyrule...
 
@@ -3991,7 +3990,7 @@ sont rentrés n'en sont jamais
 ressortis et se sont transformés
 en Stalfos...$0 Quoi qu'il en
 soit, je connais quelqu'un qui
-peut t'aider. Je t'ai indiqué
+peut t'aider. $0Je t'ai indiqué
 l'endroit sur la carte.
 
 
@@ -4008,15 +4007,17 @@ $2Zzzz... Zzzz...$0
 Ah ! Te voilà $v !
 
 Je suis bien Sahasrahla,
-l'ancien du village.
+l'ancien du village.$0
 Je t'attendais depuis un moment.
 Cela va être difficile pour toi
 de t'orienter dans ce vaste
-monde. Le cartographe du village
+monde.
+Le cartographe du village
 fait une promotion spéciale en
 ce moment sur les cartes.
 Cours donc le voir dans sa
 boutique au sud !
+
 Va au sanctuaire après, le
 sage a quelque chose à te
 dire.
@@ -4486,21 +4487,6 @@ dialog{
   id = "maps.kaepora_gaebora.owl_13",
   question = "1",
   text = [[
-$2Hou ! C'est moi Kaepora Gaebora !$0
-Tu es devant le Cratère de la
-Montagne !
-Le Temple du Feu se trouve
-au fond de la caverne et est
-réputé très difficile.
-C'est la dernière étape avant
-l'épée de Légende ! Tu y
-trouveras le pendentif du Pouvoir.
-Les bombes s'y cachent et te
-seront d'une très grande utilité.
-
-As-tu tout compris ?
-Non, pas du tout !
-Oui
 ]],
 }
 
@@ -4769,7 +4755,37 @@ Salut ! Kiki !
 }
 
 dialog{
-  id = "maps.out.gerudo.sign_1",
+  id = "maps.out.gerudo_desert.kaeopora_gaebora",
+  text = [[
+$2Hou ! C'est moi Kaepora Gaebora !$0
+Tu es devant le Colosse du
+Désert !
+Le Palais du Désert se trouve
+en haut de l'escalier. Il abrite
+le Gant de Puissance qui te
+permettra de soulever des
+choses plus lourdes.
+
+Cet endroit était jadis un repère
+pour les Gerudos, voleurs qui
+sévissaient à travers tout le
+pays. Depuis que Ganon s'est
+libéré, ce palais est devenu
+une ruine en proie aux forces
+du Mal.
+Le premier des descendants des
+Sept Sages y est enfermé, je
+compte sur toi pour le libérer !
+
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.sign_1",
   text = [[
 Nord : Village Gerudo
 Est : Plaine
@@ -4778,9 +4794,19 @@ Ouest : Désert
 }
 
 dialog{
-  id = "maps.out.gerudo.strong_current",
+  id = "maps.out.gerudo_desert.sign_2",
   text = [[
 Attention : Courant très fort
+Risque de noyade élevé
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.song_learnt",
+  text = [[
+Je vais t'apprendre le requiem
+de l'Esprit, qui te servira à te
+téléporter ici.
 ]],
 }
 
@@ -5370,6 +5396,28 @@ téléporter ici.
 }
 
 dialog{
+  id = "maps.out.north_field.kaepora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0
+Tu es devant les Ruines !
+Des monstres tentacules y errent
+et ils sont très dangereux. Tu y
+trouveras une carte et une
+boussole pour t'y orienter.$0
+Le Boomerang y est aussi
+caché et te sera très utile. Ton
+but est de récupérer le pendentif
+du Courage qui y est caché.
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
   id = "maps.out.north_field.marathon_man.marathon_bridge_closed",
   text = [[
 Je suis le marathonien errant !$0
@@ -5481,6 +5529,33 @@ Sud-ouest : Village Cocorico
 }
 
 dialog{
+  id = "maps.out.north_field.sign_5",
+  skip = "all",
+  text = [[
+Nord : Lac Hylia
+Sud : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_6",
+  text = [[
+Nord : Cimetière
+Est : Sanctuaire
+Plus à l'est : Lac Zora
+Sud : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.sign_7",
+  text = [[
+Vous êtes ici.
+Là : --> *
+]],
+}
+
+dialog{
   id = "maps.out.north_field.soldiers.soldiers_day",
   text = [[
 Que fais-tu là, petit ?$0
@@ -5525,55 +5600,6 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
-]],
-}
-
-dialog{
-  id = "maps.out.north_west.kaepora_gaebora",
-  question = "1",
-  text = [[
-$2Hou ! C'est moi Kaepora
-Gaebora !$0
-Tu es devant les Ruines !
-Des monstres tentacules y errent
-et ils sont très dangereux. Tu y
-trouveras une carte et une
-boussole pour t'y orienter.$0
-Le Boomerang y est aussi
-caché et te sera très utile. Ton
-but est de récupérer le pendentif
-du Courage qui y est caché.
-
-As-tu tout compris ?
-Non, pas du tout !
-Oui
-]],
-}
-
-dialog{
-  id = "maps.out.north_west.sign_1",
-  skip = "all",
-  text = [[
-Nord : Lac Hylia
-Sud : Village Cocorico
-]],
-}
-
-dialog{
-  id = "maps.out.north_west.sign_2",
-  text = [[
-Nord : Cimetière
-Est : Sanctuaire
-Plus à l'est : Lac Zora
-Sud : Village Cocorico
-]],
-}
-
-dialog{
-  id = "maps.out.north_west.sign_3",
-  text = [[
-Vous êtes ici.
-Là : --> *
 ]],
 }
 

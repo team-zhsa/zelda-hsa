@@ -42,6 +42,33 @@ custom_entity{
 
 tile{
   layer = 0,
+  x = 680,
+  y = 992,
+  width = 240,
+  height = 96,
+  pattern = "hole",
+}
+
+tile{
+  layer = 0,
+  x = 904,
+  y = 992,
+  width = 16,
+  height = 96,
+  pattern = "wall_hole.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 992,
+  width = 16,
+  height = 96,
+  pattern = "wall_hole.3-1",
+}
+
+tile{
+  layer = 0,
   x = 1256,
   y = 32,
   width = 48,
@@ -207,15 +234,6 @@ tile{
   x = 680,
   y = 992,
   width = 240,
-  height = 96,
-  pattern = "hole",
-}
-
-tile{
-  layer = 0,
-  x = 688,
-  y = 992,
-  width = 224,
   height = 8,
   pattern = "hole.1",
 }
@@ -223,64 +241,10 @@ tile{
 tile{
   layer = 0,
   x = 680,
-  y = 1000,
-  width = 8,
-  height = 80,
-  pattern = "hole.3",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 1000,
-  width = 8,
-  height = 80,
-  pattern = "hole.4",
-}
-
-tile{
-  layer = 0,
-  x = 688,
   y = 1080,
-  width = 224,
+  width = 80,
   height = 8,
   pattern = "hole.2",
-}
-
-tile{
-  layer = 0,
-  x = 680,
-  y = 992,
-  width = 8,
-  height = 8,
-  pattern = "hole.corner.1",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 992,
-  width = 8,
-  height = 8,
-  pattern = "hole.corner.2",
-}
-
-tile{
-  layer = 0,
-  x = 680,
-  y = 1080,
-  width = 8,
-  height = 8,
-  pattern = "hole.corner.3",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 1080,
-  width = 8,
-  height = 8,
-  pattern = "hole.corner.4",
 }
 
 tile{
@@ -9895,6 +9859,141 @@ tile{
   pattern = "floor.12-1",
 }
 
+tile{
+  layer = 0,
+  x = 840,
+  y = 1080,
+  width = 80,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
+  x = 768,
+  y = 1032,
+  width = 64,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1080,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.4",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 1080,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.3",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 1040,
+  width = 8,
+  height = 40,
+  pattern = "hole.3",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1040,
+  width = 8,
+  height = 40,
+  pattern = "hole.4",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1032,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.4",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 1032,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner_reverse.3",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1056,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 1008,
+  width = 32,
+  height = 16,
+  pattern = "wall_pillar.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 768,
+  y = 1040,
+  width = 64,
+  height = 48,
+  pattern = "floor.13-1",
+}
+
+tile{
+  layer = 0,
+  x = 760,
+  y = 1088,
+  width = 80,
+  height = 8,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 1184,
+  width = 24,
+  height = 16,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 768,
+  y = 1184,
+  width = 24,
+  height = 16,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 792,
+  y = 1176,
+  width = 16,
+  height = 32,
+  pattern = "floor.13-1",
+}
+
 wall{
   layer = 0,
   x = 152,
@@ -10198,7 +10297,7 @@ destination{
   name = "from_outside",
   layer = 0,
   x = 800,
-  y = 1149,
+  y = 1157,
   direction = 1,
 }
 
@@ -11370,6 +11469,26 @@ destructible{
   can_be_cut = true,
 }
 
+block{
+  layer = 0,
+  x = 792,
+  y = 1069,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = 0,
+  x = 808,
+  y = 1069,
+  sprite = "entities/block",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
 tile{
   layer = 1,
   x = 768,
@@ -11980,6 +12099,15 @@ tile{
   width = 8,
   height = 32,
   pattern = "door_top.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 792,
+  y = 1176,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-2",
 }
 
 tile{

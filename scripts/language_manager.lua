@@ -33,7 +33,7 @@ end
 function language_manager:get_menu_font(language)
 
   -- No font differences between languages (for now).
-  return "minecraftia", 8
+  return "enter_command_mono", 16
 end
 
 -- Returns the font and font size to be used to display text on HUD icons
