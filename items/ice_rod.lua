@@ -17,7 +17,7 @@ function item:shoot()
   local direction = hero:get_direction()
 
   local x, y, layer = hero:get_center_position()
-  local ice = map:create_custom_entity({
+  local ice_beam = map:create_custom_entity({
     model = "rod_ice",
     x = x,
     y = y + 3,
@@ -27,15 +27,9 @@ function item:shoot()
     direction = direction,
   })
 
- -- local ice_sprite = entity:get_sprite("ice")
-  --ice_sprite:set_animation("flying")
-		sol.audio.play_sound("items/ice_rod/shoot")
+  sol.audio.play_sound("items/ice_rod/shoot")
   local angle = direction * math.pi / 2
-  local movement = sol.movement.create("straight")
-  movement:set_speed(192)
-  movement:set_angle(angle)
-  movement:set_smooth(false)
-  movement:start(ice)
+  ice_beam:go(angle)
 end
 
 function item:on_using()

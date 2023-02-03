@@ -44,6 +44,55 @@ local function bush_collision_test(ice, other)
   return other:overlaps(x - 1, y - 1, width + 2, height + 2)
 end
 
+-- Create an ice square at the specified place if there is deep water.
+local function check_square(x, y)
+
+  local map = ice:get_map()
+  local _, _, layer = ice:get_position()
+
+  -- Top-left corner of the candidate 16x16 square.
+  x = math.floor(x / 16) * 16
+  y = math.floor(y / 16) * 16
+
+  -- Check that the four corners of the 16x16 square are on deep water.
+  if map:get_ground(      x,      y, layer) ~= "lava" or
+      map:get_ground(x + 15,      y, layer) ~= "lava" or
+      map:get_ground(     x, y + 15, layer) ~= "lava" or
+      map:get_ground(x + 15, y + 15, layer) ~= "lava" then
+    return
+  end
+
+  local ice_path = map:create_custom_entity({
+    x = x,
+    y = y,
+    layer = layer,
+    width = 16,
+    height = 16,
+    direction = 0,
+  })
+  ice_path:set_origin(0, 0)
+  ice_path:set_modified_ground("ice")
+  ice_path:create_sprite("entities/ice")
+end
+
+-- Create ice on two squares around the specified place if there is deep water.
+local function check_two_squares(x, y)
+
+  local movement = ice:get_movement()
+  if movement == nil then
+    return
+  end
+  local direction4 = movement:get_direction4()
+  local horizontal = (direction4 % 2) == 0
+  if horizontal then
+    check_square(x, y - 8)
+    check_square(x, y + 8)
+  else
+    check_square(x - 8, y)
+    check_square(x + 8, y)
+  end
+end
+
 -- Traversable rules.
 ice:set_can_traverse("crystal", true)
 ice:set_can_traverse("crystal_block", true)
@@ -61,6 +110,37 @@ ice:set_can_traverse_ground("prickles", true)
 ice:set_can_traverse_ground("low_wall", true)
 ice:set_can_traverse(true)
 ice.apply_cliffs = true
+
+function ice:go(angle)
+
+  local movement = sol.movement.create("straight")
+  movement:set_speed(192)
+  movement:set_angle(angle)
+  movement:set_max_distance(104)
+  movement:set_smooth(false)
+
+  -- Compute the coordinate offset of each sprite.
+  local x = math.cos(angle) * 16
+  local y = -math.sin(angle) * 16
+  sprites[1]:set_xy(2 * x, 2 * y)
+  sprites[2]:set_xy(x, y)
+  sprites[3]:set_xy(0, 0)
+
+  sprites[1]:set_animation("1")
+  sprites[2]:set_animation("2")
+  sprites[3]:set_animation("3")
+
+  movement:start(ice)
+
+  -- The head of the beam will be used to determine candidate squares,
+  -- so make sure we don't forget the first squares.
+  local ice_x, ice_y = ice:get_position()
+  local dx, dy = sprites[2]:get_xy()
+  check_two_squares(ice_x + dx, ice_y + dy)
+  dx, dy = sprites[1]:get_xy()
+  check_two_squares(ice_x + dx, ice_y + dy)
+end
+
 
 
 -- Hurt enemies.
