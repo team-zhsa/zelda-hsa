@@ -16,6 +16,7 @@ function enemy_meta:get_hero_weapons_reactions()
   reactions.sword = self:get_attack_consequence("sword")
   reactions.thrown_item = self:get_attack_consequence("thrown_item")
   reactions.fire = self:get_fire_reaction()
+  reactions.ice = self:get_ice_reaction()
   reactions.jump_on = self:get_jump_on_reaction()
   reactions.hammer = self:get_hammer_reaction()
   reactions.hookshot = self:get_hookshot_reaction()
@@ -49,6 +50,9 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
   end
   if reactions.fire then
     self:set_attack_consequence("fire", reactions.fire)
+  end
+  if reactions.ice then
+    self:set_attack_consequence("ice", reactions.ice)
   end
   if reactions.hammer then
     self:set_hammer_reaction(reactions.hammer)
@@ -233,7 +237,7 @@ local function on_protected(enemy, attack)
   end
 
   -- Push the enemy on all weapon type except fire and magic powder, and if the enemy allow it.
-  if attack ~= "fire" and attack ~= "magic_powder" then
+  if attack ~= "fire" and attack ~= "ice" and attack ~= "magic_powder" then
     if enemy:is_pushed_back_when_hurt() then -- Workaround : Use the pushed back when hurt behavior to know if the enemy should be pushed by the attack.
       push(enemy, hero, 150, 100)
     end

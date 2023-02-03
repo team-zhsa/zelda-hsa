@@ -107,6 +107,33 @@ local function initialize_dungeon_features(game)
       completing_sequence = "simple",
     },
 
+    [5] = { -- Dodongo's Cavern
+    floor_width = 1600,
+    floor_height = 1440,
+    minimap_width = 48,
+    minimap_height = 48,
+    lowest_floor = 0,
+    highest_floor = 0,
+    maps = {
+      "dungeons/5/0f",
+    },
+    boss = {
+      floor = 0,
+      savegame_variable = "dungeon_5_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/5/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/b2",
+      destination_name = "from_temple"
+    },
+    completing_sequence = "simple",
+    },
+
     [6] = { -- Water Temple
     floor_width = 1920,
     floor_height = 1440,

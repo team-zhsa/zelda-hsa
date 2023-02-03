@@ -36,7 +36,6 @@ map{ id = "dungeons/2/b2", description = "Forest Temple (Basement 2)" }
 map{ id = "dungeons/2/b3", description = "Forest Temple (Basement 3)" }
 map{ id = "dungeons/2/copy_protect", description = "Copy protection map" }
 map{ id = "dungeons/3/0f", description = "Fire Temple (Ground Floor)" }
-map{ id = "dungeons/3/1fo", description = "Fire Temple (1st Floor)" }
 map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
 map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3)" }
@@ -44,7 +43,8 @@ map{ id = "dungeons/3/b4", description = "Fire Temple (Basement 4)" }
 map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
 map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/4/0f", description = "Deku Tree (Ground Floor)" }
-map{ id = "dungeons/5/1o", description = "Dodongo's Cavern (1st Floor)" }
+map{ id = "dungeons/5/0f", description = "Dodongo's Cavern (1st Floor)" }
+map{ id = "dungeons/5/1f", description = "Dodongo's Cavern (1st Floor)" }
 map{ id = "dungeons/6/0f", description = "Water Temple (Ground Floor)" }
 map{ id = "dungeons/6/b1", description = "Water Temple (Basement 1)" }
 map{ id = "dungeons/7/0f", description = "Desert Palace (Ground Floor)" }
@@ -366,6 +366,8 @@ sprite{ id = "enemies/dungeons/evil_tile4", description = "Evil Tile 4" }
 sprite{ id = "enemies/dungeons/eyegore_statue", description = "Eyegore Statue" }
 sprite{ id = "enemies/dungeons/fireball", description = "Circular moving fireball" }
 sprite{ id = "enemies/dungeons/fireball_animated", description = "Animated fireball" }
+sprite{ id = "enemies/dungeons/firebar", description = "Fire bar (for use in editor only)" }
+sprite{ id = "enemies/dungeons/flame_red_fixed", description = "Fixed red flame" }
 sprite{ id = "enemies/dungeons/flying_tile", description = "Evil Tile 1" }
 sprite{ id = "enemies/dungeons/gel", description = "Gel" }
 sprite{ id = "enemies/dungeons/gibdo", description = "Gibdo" }
@@ -1792,6 +1794,7 @@ enemy{ id = "dungeons/eyegore_statue", description = "Eyegore statue" }
 enemy{ id = "dungeons/fireball", description = "Circular moving fireball" }
 enemy{ id = "dungeons/fireball_animated", description = "Animated fireball" }
 enemy{ id = "dungeons/firebar", description = "Fire bar" }
+enemy{ id = "dungeons/flame_red_fixed", description = "Red Flame (fixed)" }
 enemy{ id = "dungeons/flying_tile", description = "Flying tile" }
 enemy{ id = "dungeons/gel", description = "Gel" }
 enemy{ id = "dungeons/gibdo", description = "Gibdo" }
@@ -1943,7 +1946,7 @@ entity{ id = "dice", description = "Dice" }
 entity{ id = "explosion", description = "Explosion" }
 entity{ id = "eye_switch", description = "Eye switch" }
 entity{ id = "fire", description = "Fire" }
-entity{ id = "fire_old", description = "Fire" }
+entity{ id = "fire_old", description = "Fire old" }
 entity{ id = "follower", description = "Follower" }
 entity{ id = "frog", description = "Frog" }
 entity{ id = "green_crystal", description = "Green crystal" }

@@ -12,7 +12,7 @@ end
 
 function enemy:go_circle(center_entity, rayon, notRev)
   local m = sol.movement.create("circle")
-  m:set_center(center_entity, -8, -29)
+  m:set_center(center_entity, 0, 0)
   m:set_radius(rayon)
   m:set_angular_speed(2)
   m:set_ignore_obstacles(true)
