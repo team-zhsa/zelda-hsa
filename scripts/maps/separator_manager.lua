@@ -22,7 +22,10 @@ function separator_manager:manage_map(map)
   local function separator_on_activated(separator)
 
     local hero = map:get_hero()
-	--hero:walk(hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2 .. hero:get_direction() * 2)
+    local d = hero:get_direction() * 2
+    if game:is_in_dungeon() then
+	    hero:walk(d..d..d..d..d..d)
+    end
 
     -- Enemies.
     for _, enemy_place in ipairs(enemy_places) do

@@ -9,16 +9,29 @@
 
 local map = ...
 local game = map:get_game()
+local audio_manager = require("scripts/audio_manager")
+local door_manager = require("scripts/maps/door_manager")
+local enemy_manager = require("scripts/maps/enemy_manager")
+local separator_manager = require("scripts/maps/separator_manager")
+local switch_manager = require("scripts/maps/switch_manager")
+local treasure_manager = require("scripts/maps/treasure_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+map:register_event("on_started", function()
+	separator_manager:manage_map(map)
+  
+-- Enemies
 
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
+-- Treasures
+treasure_manager:disappear_pickable(map, "pickable_26_small_key")
+treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_26_", "pickable_26_small_key")
 
-end
+-- Doors
+  map:set_doors_open("door_26_n", true)
+	door_manager:open_when_enemies_dead(map, "enemy_26_", "door_26_n", sound)
+end)
+
+sensor_26_door:register_event("on_activated", function()
+  door_manager:close_if_enemies_not_dead(map, "enemy_26_", "door_26_n")
+end)
