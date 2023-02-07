@@ -4066,15 +4066,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
-  y = 680,
-  width = 16,
-  height = 16,
-  pattern = "door_stairs.spiral_up.2",
-}
-
-tile{
-  layer = 0,
   x = 264,
   y = 680,
   width = 8,
@@ -4107,6 +4098,15 @@ tile{
   width = 16,
   height = 16,
   pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 680,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_down.2",
 }
 
 crystal{
@@ -4492,15 +4492,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 248,
-  y = 696,
-  width = 16,
-  height = 8,
-  pattern = "door_top.stairs_up.2-1",
-}
-
-tile{
-  layer = 1,
   x = 736,
   y = 1056,
   width = 16,
@@ -4515,6 +4506,15 @@ tile{
   width = 16,
   height = 16,
   pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 248,
+  y = 696,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_down.2-1",
 }
 
 tile{
