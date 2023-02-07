@@ -2608,9 +2608,9 @@ tile{
 tile{
   layer = 0,
   x = 1008,
-  y = 968,
+  y = 976,
   width = 32,
-  height = 168,
+  height = 160,
   pattern = "922",
 }
 
@@ -11514,6 +11514,59 @@ block{
   pushable = false,
   pullable = false,
   max_moves = 0,
+}
+
+destructible{
+  name = "auto_destructible_19",
+  layer = 0,
+  x = 1432,
+  y = 653,
+  treasure_name = "bomb",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_20",
+  layer = 0,
+  x = 1448,
+  y = 653,
+  treasure_name = "bomb",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_21",
+  layer = 0,
+  x = 1416,
+  y = 333,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_22",
+  layer = 0,
+  x = 1384,
+  y = 333,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+enemy{
+  name = "auto_enemy_9",
+  layer = 0,
+  x = 88,
+  y = 413,
+  direction = 0,
+  breed = "dungeons/medusa",
 }
 
 tile{
