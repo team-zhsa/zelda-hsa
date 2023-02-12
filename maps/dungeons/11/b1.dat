@@ -4223,6 +4223,85 @@ enemy{
   breed = "dungeons/medusa",
 }
 
+destructible{
+  name = "auto_destructible_2",
+  layer = 0,
+  x = 1048,
+  y = 61,
+  treasure_name = "magic_flask",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_3",
+  layer = 0,
+  x = 1048,
+  y = 189,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_4",
+  layer = 0,
+  x = 1192,
+  y = 189,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_5",
+  layer = 0,
+  x = 1104,
+  y = 325,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_6",
+  layer = 0,
+  x = 1168,
+  y = 325,
+  treasure_name = "rupee",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_7",
+  layer = 0,
+  x = 1168,
+  y = 389,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_8",
+  layer = 0,
+  x = 1104,
+  y = 389,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
 tile{
   layer = 1,
   x = 240,
