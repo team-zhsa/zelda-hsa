@@ -13,6 +13,42 @@ properties{
 
 tile{
   layer = -1,
+  x = 704,
+  y = 192,
+  width = 192,
+  height = 112,
+  pattern = "997",
+}
+
+tile{
+  layer = -1,
+  x = 704,
+  y = 64,
+  width = 128,
+  height = 128,
+  pattern = "997",
+}
+
+tile{
+  layer = -1,
+  x = 480,
+  y = 96,
+  width = 224,
+  height = 208,
+  pattern = "997",
+}
+
+tile{
+  layer = -1,
+  x = 448,
+  y = 304,
+  width = 448,
+  height = 112,
+  pattern = "997",
+}
+
+tile{
+  layer = -1,
   x = 1344,
   y = 0,
   width = 256,
@@ -738,6 +774,42 @@ tile{
   width = 16,
   height = 16,
   pattern = "wall_hole.corner_reverse.4-1",
+}
+
+separator{
+  name = "auto_separator_1",
+  layer = -1,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 1200,
+}
+
+separator{
+  name = "auto_separator_2",
+  layer = -1,
+  x = 952,
+  y = 0,
+  width = 16,
+  height = 1200,
+}
+
+separator{
+  name = "auto_separator_3",
+  layer = -1,
+  x = 320,
+  y = 472,
+  width = 1280,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_4",
+  layer = -1,
+  x = 320,
+  y = 952,
+  width = 1280,
+  height = 16,
 }
 
 tile{
@@ -1591,7 +1663,7 @@ tile{
   x = 424,
   y = 344,
   width = 448,
-  height = 32,
+  height = 24,
   pattern = "floor_grid",
 }
 
@@ -2417,25 +2489,7 @@ tile{
 tile{
   layer = 0,
   x = 416,
-  y = 344,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 344,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 368,
+  y = 360,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
@@ -2453,7 +2507,7 @@ tile{
 tile{
   layer = 0,
   x = 456,
-  y = 368,
+  y = 360,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
@@ -2698,16 +2752,16 @@ tile{
   x = 416,
   y = 288,
   width = 8,
-  height = 56,
+  height = 40,
   pattern = "barrier.2-1",
 }
 
 tile{
   layer = 0,
   x = 416,
-  y = 376,
+  y = 368,
   width = 8,
-  height = 24,
+  height = 32,
   pattern = "barrier.2-1",
 }
 
@@ -2750,16 +2804,7 @@ tile{
 tile{
   layer = 0,
   x = 424,
-  y = 344,
-  width = 32,
-  height = 8,
-  pattern = "barrier.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 424,
-  y = 368,
+  y = 360,
   width = 32,
   height = 8,
   pattern = "barrier.1-1",
@@ -4232,6 +4277,114 @@ tile{
   pattern = "door_stairs.spiral_up.1",
 }
 
+tile{
+  layer = 0,
+  x = 1448,
+  y = 216,
+  width = 96,
+  height = 32,
+  pattern = "floor_grid",
+}
+
+tile{
+  layer = 0,
+  x = 1520,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1424,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1424,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1424,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 424,
+  y = 328,
+  width = 40,
+  height = 16,
+  pattern = "floor_grid",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 456,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 424,
+  y = 328,
+  width = 32,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
 custom_entity{
   name = "torch_2_door_1",
   layer = 0,
@@ -4390,20 +4543,24 @@ wall{
 }
 
 door{
+  name = "door_8_e",
   layer = 0,
   x = 920,
   y = 344,
   direction = 0,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_11_b1_door_8_9",
   opening_condition_consumed = true,
 }
 
 door{
+  name = "door_9_w",
   layer = 0,
   x = 984,
   y = 344,
   direction = 2,
   sprite = "entities/Doors/Inside/door_d1_normal",
+  savegame_variable = "dungeon_11_b1_door_8_9",
   opening_condition_consumed = true,
 }
 
@@ -4464,7 +4621,7 @@ destructible{
   x = 1192,
   y = 61,
   treasure_name = "small_key",
-  treasure_savegame_variable = "dungeon_11_b1_destructible_small_key",
+  treasure_savegame_variable = "dungeon_11_b1_4_destructible_small_key",
   sprite = "entities/Destructables/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
@@ -4858,6 +5015,70 @@ enemy{
   direction = 0,
   breed = "dungeons/tentacle_blue",
   treasure_name = "random_mountains",
+}
+
+destructible{
+  name = "auto_destructible_19",
+  layer = 0,
+  x = 1528,
+  y = 237,
+  treasure_name = "small_key",
+  treasure_savegame_variable = "dungeon_11_b1_5_destructible_small_key",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destination{
+  name = "from_0f_1",
+  layer = 0,
+  x = 256,
+  y = 693,
+  direction = 1,
+}
+
+destination{
+  name = "from_0f_2",
+  layer = 0,
+  x = 1544,
+  y = 37,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1536,
+  y = 24,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/11/0f",
+  destination = "from_b1_2",
+}
+
+teletransporter{
+  layer = 0,
+  x = 248,
+  y = 680,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/11/0f",
+  destination = "from_b1_1",
+}
+
+stairs{
+  layer = 0,
+  x = 248,
+  y = 680,
+  direction = 3,
+  subtype = 0,
+}
+
+stairs{
+  layer = 0,
+  x = 1536,
+  y = 24,
+  direction = 1,
+  subtype = 0,
 }
 
 tile{
