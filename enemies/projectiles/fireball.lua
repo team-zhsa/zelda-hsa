@@ -31,9 +31,10 @@ local function go(angle)
   movement:set_speed(128)
   movement:set_angle(angle)
   movement:set_smooth(false)
+  movement:set_ignore_obstacles(false)
 
   function movement:on_obstacle_reached()
-    enemy:remove()
+    enemy:start_death()
   end
 
   -- Compute the coordinate offset of follower sprites.
