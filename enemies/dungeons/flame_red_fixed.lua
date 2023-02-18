@@ -11,5 +11,6 @@ function enemy:on_created()
   self:set_origin(12, 17)
   self:set_can_hurt_hero_running(true)
   self:set_invincible()
-  --self:set_traversable(false)
+  self:set_traversable(false)
+  enemy:set_attacking_collision_mode("touching")
 end

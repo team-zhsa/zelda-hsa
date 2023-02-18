@@ -21,7 +21,7 @@ local waiting_minimum_duration = 2000
 local waiting_maximum_duration = 4000
 local appearing_duration = 1000
 local throwing_duration = 600
-local before_desappearing_delay = 1000
+local before_disappearing_delay = 1000
 
 -- Make the enemy appear.
 function enemy:appear()
@@ -43,7 +43,7 @@ function enemy:appear()
       })
       sprite:set_animation("firing")
       sol.audio.play_sound("zora")
-      sol.timer.start(enemy, before_desappearing_delay, function()
+      sol.timer.start(enemy, before_disappearing_delay, function()
         sprite:set_animation("disappearing", function()
           enemy:restart()
         end)
