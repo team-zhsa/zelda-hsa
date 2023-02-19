@@ -42315,8 +42315,8 @@ enemy{
 enemy{
   name = "auto_enemy_7",
   layer = 0,
-  x = 920,
-  y = 733,
+  x = 424,
+  y = 181,
   direction = 0,
   breed = "outside/deadrock",
   treasure_name = "random_mountains",
@@ -42385,28 +42385,8 @@ enemy{
 enemy{
   name = "auto_enemy_16",
   layer = 0,
-  x = 944,
-  y = 789,
-  direction = 0,
-  breed = "outside/octorok_red",
-  treasure_name = "random_mountains",
-}
-
-enemy{
-  name = "auto_enemy_17",
-  layer = 0,
-  x = 984,
-  y = 917,
-  direction = 0,
-  breed = "outside/octorok_red",
-  treasure_name = "random_mountains",
-}
-
-enemy{
-  name = "auto_enemy_18",
-  layer = 0,
-  x = 1056,
-  y = 757,
+  x = 448,
+  y = 237,
   direction = 0,
   breed = "outside/octorok_red",
   treasure_name = "random_mountains",
@@ -42418,7 +42398,7 @@ enemy{
   x = 568,
   y = 933,
   direction = 0,
-  breed = "outside/octorok_red",
+  breed = "outside/moblin_red",
   treasure_name = "random_mountains",
 }
 
@@ -42433,30 +42413,10 @@ enemy{
 }
 
 enemy{
-  name = "auto_enemy_24",
-  layer = 0,
-  x = 528,
-  y = 1149,
-  direction = 0,
-  breed = "outside/octorok_red",
-  treasure_name = "random_mountains",
-}
-
-enemy{
   name = "auto_enemy_25",
   layer = 0,
   x = 664,
   y = 821,
-  direction = 0,
-  breed = "outside/octorok_red",
-  treasure_name = "random_mountains",
-}
-
-enemy{
-  name = "auto_enemy_26",
-  layer = 0,
-  x = 808,
-  y = 1045,
   direction = 0,
   breed = "outside/octorok_red",
   treasure_name = "random_mountains",
@@ -42621,6 +42581,140 @@ custom_entity{
   height = 16,
   direction = 0,
   model = "spawner",
+}
+
+enemy{
+  name = "auto_enemy_21",
+  layer = 0,
+  x = 328,
+  y = 981,
+  direction = 0,
+  breed = "outside/moblin_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_23",
+  layer = 0,
+  x = 528,
+  y = 1117,
+  direction = 0,
+  breed = "outside/moblin_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_24",
+  layer = 0,
+  x = 912,
+  y = 893,
+  direction = 0,
+  breed = "outside/moblin_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_26",
+  layer = 0,
+  x = 512,
+  y = 189,
+  direction = 0,
+  breed = "outside/moblin_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_28",
+  layer = 0,
+  x = 832,
+  y = 1037,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_29",
+  layer = 0,
+  x = 728,
+  y = 789,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_30",
+  layer = 0,
+  x = 360,
+  y = 1013,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_31",
+  layer = 0,
+  x = 520,
+  y = 221,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_32",
+  layer = 0,
+  x = 176,
+  y = 309,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_33",
+  layer = 0,
+  x = 872,
+  y = 237,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "auto_enemy_34",
+  layer = 0,
+  x = 1088,
+  y = 157,
+  direction = 0,
+  breed = "outside/tektite_red",
+  treasure_name = "random_mountains",
+}
+
+destination{
+  name = "from_temple",
+  layer = 0,
+  x = 1072,
+  y = 693,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1064,
+  y = 664,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/5/0f",
+  destination = "from_outside",
 }
 
 tile{

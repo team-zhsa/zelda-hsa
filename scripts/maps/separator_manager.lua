@@ -69,10 +69,10 @@ function separator_manager:manage_map(map)
     local hero = map:get_hero()
     hero.respawn_point_saved=nil
     local directions={
-      {16,0},
-      {0,-16},
-      {-16,0},
-      {0,16}
+      {32,0},
+      {0,-32},
+      {-32,0},
+      {0,32}
     }
     local x,y,layer=hero:get_position()
     local offset_x, offset_y=unpack(directions[hero:get_direction()+1])
