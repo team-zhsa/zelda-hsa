@@ -22,12 +22,31 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 function map:on_started()
 	fall_manager:create("pickable")
 	treasure_manager:disappear_pickable(map, "pendant")
+
+	sol.timer.start(map, 2000, function()
+		local i = 1
+		for entity in map:get_entities("a_") do -- C.E. for animation
+			entity:set_visible(false)
+		end
+		sol.timer.start(map, 1000, function() -- real tile
+			for tile in map:get_entities("d_"..i) do
+				tile:set_enabled(false)
+			end
+			for entity in map:get_entities("a_"..i) do -- C.E. for animation
+				entity:set_visible(true)
+				local sprite = entity:get_sprite()
+				sprite:set_animation("destroy")
+			end
+			i = i + 1
+		return true
+		end)
+	end)
+
 --	house_manager:init(map)
 --	hero:fall_from_ceiling(320)
   --map:set_light(0)
 --	sol.menu.start(map, credits, true)
 end
-
 
 
 function tp:on_activated()
