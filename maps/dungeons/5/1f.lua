@@ -10,6 +10,10 @@ local separator_manager = require("scripts/maps/separator_manager.lua")
 
 map:register_event("on_started", function()
 	separator_manager:manage_map(map)
+	for sensor in map:get_entities("sensor_7_tile_") do
+		sensor:set_enabled(true)
+		appear_tiles_7()
+	end
 end)
 
 function collapse_tiles_7()

@@ -5146,7 +5146,7 @@ tile{
   x = 1208,
   y = 552,
   width = 32,
-  height = 80,
+  height = 96,
   pattern = "floor.7-1",
 }
 
@@ -6714,15 +6714,6 @@ tile{
   width = 16,
   height = 8,
   pattern = "barrier_big.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 408,
-  y = 40,
-  width = 16,
-  height = 16,
-  pattern = "barrier_big.border.1-1",
 }
 
 tile{
@@ -10170,6 +10161,15 @@ tile{
   width = 8,
   height = 48,
   pattern = "hole.3.jump",
+}
+
+tile{
+  layer = 0,
+  x = 408,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "barrier_big.border.1-1",
 }
 
 wall{
