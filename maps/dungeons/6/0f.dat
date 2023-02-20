@@ -8,6 +8,7 @@ properties{
   world = "dungeon_6",
   floor = 0,
   tileset = "Absolute Dungeon 19",
+  music = "dungeons/06_water",
 }
 
 tile{
@@ -3637,6 +3638,16 @@ tile{
   pattern = "ceiling.1",
 }
 
+dynamic_tile{
+  name = "water_dynamic_0_0_1",
+  layer = -1,
+  x = 64,
+  y = 1104,
+  width = 64,
+  height = 32,
+  pattern = "water.transparent",
+}
+
 stairs{
   layer = -1,
   x = 112,
@@ -3730,19 +3741,9 @@ stairs{
 }
 
 dynamic_tile{
-  name = "water_dynamic_0_0_1",
-  layer = -1,
-  x = 64,
-  y = 1104,
-  width = 32,
-  height = 32,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
   name = "water_dynamic_0_0_2",
   layer = -1,
-  x = 104,
+  x = 128,
   y = 936,
   width = 32,
   height = 208,
@@ -3834,7 +3835,7 @@ dynamic_tile{
   layer = -1,
   x = 56,
   y = 1096,
-  width = 32,
+  width = 64,
   height = 48,
   pattern = "water.transparent",
 }
@@ -3842,7 +3843,7 @@ dynamic_tile{
 dynamic_tile{
   name = "water_dynamic_0_1_2",
   layer = -1,
-  x = 144,
+  x = 120,
   y = 936,
   width = 48,
   height = 208,
@@ -3927,6 +3928,36 @@ dynamic_tile{
   width = 48,
   height = 48,
   pattern = "water.transparent",
+}
+
+enemy{
+  name = "auto_enemy_9",
+  layer = -1,
+  x = 1024,
+  y = 1333,
+  direction = 0,
+  breed = "dungeons/bubble_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_10",
+  layer = -1,
+  x = 1032,
+  y = 1253,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_11",
+  layer = -1,
+  x = 832,
+  y = 1341,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
 }
 
 tile{
@@ -16736,6 +16767,17 @@ tile{
   pattern = "door.1.support.2-1",
 }
 
+destructible{
+  name = "auto_destructible_13",
+  layer = 0,
+  x = 776,
+  y = 1261,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase_skull",
+  destruction_sound = "objects/e_skull_shatter",
+  can_be_cut = true,
+}
+
 wall{
   layer = 0,
   x = 1328,
@@ -16970,7 +17012,7 @@ crystal{
 dynamic_tile{
   name = "water_static_0_1",
   layer = 0,
-  x = 112,
+  x = 48,
   y = 1088,
   width = 64,
   height = 64,
@@ -16980,10 +17022,10 @@ dynamic_tile{
 dynamic_tile{
   name = "water_static_0_2",
   layer = 0,
-  x = 40,
-  y = 904,
+  x = 112,
+  y = 944,
   width = 64,
-  height = 144,
+  height = 208,
   pattern = "water.transparent",
 }
 
@@ -17009,8 +17051,8 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 64,
-  y = 1061,
+  x = 480,
+  y = 1165,
   direction = 1,
 }
 
@@ -18601,16 +18643,6 @@ npc{
   sprite = "entities/hint_stone",
 }
 
-enemy{
-  name = "auto_enemy_1",
-  layer = 0,
-  x = 392,
-  y = 685,
-  direction = 0,
-  breed = "outside/tektite_water",
-  treasure_name = "random_west",
-}
-
 wall{
   layer = 0,
   x = 752,
@@ -19467,6 +19499,368 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
+}
+
+enemy{
+  name = "auto_enemy_3",
+  layer = 0,
+  x = 488,
+  y = 549,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_4",
+  layer = 0,
+  x = 392,
+  y = 773,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_5",
+  layer = 0,
+  x = 464,
+  y = 685,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_6",
+  layer = 0,
+  x = 432,
+  y = 909,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_7",
+  layer = 0,
+  x = 1192,
+  y = 1053,
+  direction = 0,
+  breed = "dungeons/stalfos_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_8",
+  layer = 0,
+  x = 1144,
+  y = 1149,
+  direction = 0,
+  breed = "dungeons/stalfos_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_12",
+  layer = 0,
+  x = 1440,
+  y = 573,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_13",
+  layer = 0,
+  x = 1376,
+  y = 869,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_14",
+  layer = 0,
+  x = 1752,
+  y = 837,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_15",
+  layer = 0,
+  x = 1728,
+  y = 605,
+  direction = 0,
+  breed = "dungeons/hover",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_16",
+  layer = 0,
+  x = 736,
+  y = 125,
+  direction = 0,
+  breed = "dungeons/helmasaur_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_17",
+  layer = 0,
+  x = 744,
+  y = 181,
+  direction = 1,
+  breed = "dungeons/helmasaur_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_18",
+  layer = 0,
+  x = 592,
+  y = 869,
+  direction = 1,
+  breed = "dungeons/fireball",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_19",
+  layer = 0,
+  x = 1064,
+  y = 437,
+  direction = 1,
+  breed = "dungeons/fireball",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_20",
+  layer = 0,
+  x = 768,
+  y = 1269,
+  direction = 3,
+  breed = "dungeons/wizzrobe_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_21",
+  layer = 0,
+  x = 1144,
+  y = 1253,
+  direction = 1,
+  breed = "dungeons/pike_auto",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_22",
+  layer = 0,
+  x = 1144,
+  y = 1381,
+  direction = 1,
+  breed = "dungeons/pike_auto",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_23",
+  layer = 0,
+  x = 1096,
+  y = 1029,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_24",
+  layer = 0,
+  x = 1208,
+  y = 1117,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_25",
+  layer = 0,
+  x = 1176,
+  y = 1293,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_26",
+  layer = 0,
+  x = 832,
+  y = 789,
+  direction = 0,
+  breed = "dungeons/stalfos_grey",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_27",
+  layer = 0,
+  x = 1056,
+  y = 901,
+  direction = 0,
+  breed = "dungeons/tentacle_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_28",
+  layer = 0,
+  x = 880,
+  y = 549,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_29",
+  layer = 0,
+  x = 1112,
+  y = 653,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_30",
+  layer = 0,
+  x = 1048,
+  y = 317,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_31",
+  layer = 0,
+  x = 768,
+  y = 333,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_32",
+  layer = 0,
+  x = 440,
+  y = 733,
+  direction = 0,
+  breed = "dungeons/bubble_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_33",
+  layer = 0,
+  x = 120,
+  y = 853,
+  direction = 0,
+  breed = "dungeons/bari_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_34",
+  layer = 0,
+  x = 1080,
+  y = 901,
+  direction = 0,
+  breed = "dungeons/stalfos_grey",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_35",
+  layer = 0,
+  x = 1024,
+  y = 653,
+  direction = 0,
+  breed = "dungeons/tentacle_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_36",
+  layer = 0,
+  x = 888,
+  y = 677,
+  direction = 0,
+  breed = "dungeons/tentacle_blue",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_37",
+  layer = 0,
+  x = 1528,
+  y = 653,
+  direction = 0,
+  breed = "dungeons/bari_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_38",
+  layer = 0,
+  x = 1456,
+  y = 909,
+  direction = 0,
+  breed = "dungeons/bari_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "auto_enemy_39",
+  layer = 0,
+  x = 1840,
+  y = 789,
+  direction = 0,
+  breed = "dungeons/bari_red",
+  treasure_name = "random_west",
+}
+
+destructible{
+  name = "auto_destructible_12",
+  layer = 0,
+  x = 760,
+  y = 1293,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase_skull",
+  destruction_sound = "objects/e_skull_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_14",
+  layer = 0,
+  x = 776,
+  y = 1325,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase_skull",
+  destruction_sound = "objects/e_skull_shatter",
+  can_be_cut = true,
 }
 
 tile{
