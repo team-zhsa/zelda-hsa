@@ -271,6 +271,7 @@ Alpha 1.15.1 (31/01/23) "Ladyfish Update":
 	ADD: Added a hint pointing to the extra small key in the Fire Temple (#68).
 	ADD: Added water variations for pull handles (#53).
 	ADD: Added a debug screen from ALTTD.
+	ADD: Added soldiers around the Northern Hyrule Field.
 	CHG: Changed normal pull handles sprites (#53).
 	CHG: Divided the Hyrule Field in smaller parts for better dialogues organisation.
 	CHG: Changed heavy rocks colours' to ALTTP's (#61).
@@ -296,7 +297,8 @@ Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 	REM: Removed "la" font.
 
 Alpha 1.15.3 (started 15/02/23) "Ladyfish Update":
-	ADD: Added a collapsing ground function in Dodongo's Cavern.
+	ADD: Added maps.
+	ADD: Added a collapsing ground function in the Dodongo's Cavern.
 	FIX: Fixed Medusa fireballs going through walls (#79).
 	TDO: Replace corrupted files.
 	TDO: Fix pot weights in the Forest Temple.
@@ -305,7 +307,7 @@ Alpha 1.15.3 (started 15/02/23) "Ladyfish Update":
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
 	TDO: Fix changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
-	TDO: Fix diagonal jumpers jump lenghts being too high in the mountains (#38).
+	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix not enough memory issues on MacOS (#39).
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
@@ -320,13 +322,16 @@ Alpha 1.16 (//23) "Mackerel Update":
 	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Fix missing animations for other tunics (#47).
 	TDO: Update title screen (#50).
+	TDO: Change all the enemies in the Hyrule Field (#81).
+	TDO: Fix cursor moving too fast with analog controller in menus (#82).
+	TDO: Fix possible crash at the beginning of the game when moving with the analog stick while not configured (#83).
+	TDO: Add a falling animation for enemies (#84).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
 
 Alpha 1.16.1 (//23) "Mackerel Update":
 	TDO: Add maps.
 	TDO: Rename all the soldiers in order to make them appear during the game and not at the beginning.
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
-	TDO: Add soldiers along the way from the Blacksmith's to Kakarico Village at the beginning to prevent the player from going where he shouldn't.
 	TDO: Rename owl entities according to main quest steps (#19).
 	TDO: Change the Master Sword sprite on the title screen.
 	TDO: Change sword colour on hero (#21).	
