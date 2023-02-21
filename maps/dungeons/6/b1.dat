@@ -605,15 +605,6 @@ tile{
   pattern = "ceiling.1",
 }
 
-tile{
-  layer = -1,
-  x = 888,
-  y = 1008,
-  width = 16,
-  height = 16,
-  pattern = "door_stairs.spiral_down.1",
-}
-
 separator{
   name = "auto_separator_9",
   layer = -1,
@@ -9326,6 +9317,33 @@ tile{
   pattern = "wall.1-5",
 }
 
+tile{
+  layer = 0,
+  x = 888,
+  y = 984,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 880,
+  y = 984,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 904,
+  y = 984,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-1",
+}
+
 crystal_block{
   layer = 0,
   x = 1104,
@@ -9753,6 +9771,24 @@ tile{
   width = 16,
   height = 8,
   pattern = "door_top.stairs_up.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 880,
+  y = 976,
+  width = 32,
+  height = 8,
+  pattern = "door_top.stairs.1-2",
+}
+
+tile{
+  layer = 1,
+  x = 888,
+  y = 976,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_up.1-1",
 }
 
 tile{
