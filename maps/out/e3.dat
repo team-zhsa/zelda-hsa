@@ -10,6 +10,78 @@ properties{
 
 tile{
   layer = 0,
+  x = 648,
+  y = 1488,
+  width = 384,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 648,
+  y = 1448,
+  width = 384,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 1448,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 1032,
+  y = 1448,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 1488,
+  width = 336,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 1448,
+  width = 336,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 1448,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 504,
+  y = 1448,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
   x = 832,
   y = 1264,
   width = 448,
@@ -102,6 +174,96 @@ destructible{
   weight = -1,
   can_be_cut = true,
   ground = "grass",
+}
+
+tile{
+  layer = 1,
+  x = 648,
+  y = 1416,
+  width = 384,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = 648,
+  y = 1464,
+  width = 384,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 640,
+  y = 1416,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 1032,
+  y = 1416,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 648,
+  y = 1408,
+  width = 384,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 1416,
+  width = 336,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 1464,
+  width = 336,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = 1416,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 504,
+  y = 1416,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 1408,
+  width = 336,
+  height = 8,
+  pattern = "1487",
 }
 
 tile{
@@ -244,6 +406,24 @@ tile{
   x = 1256,
   y = 1000,
   width = 192,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 648,
+  y = 1416,
+  width = 384,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 168,
+  y = 1416,
+  width = 336,
   height = 48,
   pattern = "7155",
 }
