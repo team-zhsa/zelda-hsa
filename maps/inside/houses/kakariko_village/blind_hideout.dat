@@ -1,10 +1,11 @@
 properties{
-  x = 0,
-  y = 0,
+  x = 520,
+  y = 3032,
   width = 320,
   height = 240,
-  min_layer = 0,
+  min_layer = -1,
   max_layer = 2,
+  world = "inside_world",
   tileset = "Absolute Dungeon 09",
   music = "inside/cave",
 }
@@ -654,6 +655,30 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/blind_hideout_man",
+}
+
+destination{
+  name = "from_outside",
+  layer = 0,
+  x = 160,
+  y = 205,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 224,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "out/a3",
+  destination = "from_windmill",
 }
 
 tile{

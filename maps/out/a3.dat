@@ -27376,6 +27376,30 @@ sensor{
   height = 16,
 }
 
+destination{
+  name = "from_windmill",
+  layer = 0,
+  x = 528,
+  y = 173,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 520,
+  y = 144,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/kakariko_village/windmill",
+  destination = "from_outside",
+}
+
 tile{
   layer = 1,
   x = 648,

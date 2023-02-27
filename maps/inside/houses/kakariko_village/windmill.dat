@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 03",
-  music = "inside/house",
+  music = "inside/windmill",
 }
 
 tile{
@@ -557,6 +557,24 @@ tile{
   width = 16,
   height = 16,
   pattern = "pillar.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "torch",
 }
 
 destination{
