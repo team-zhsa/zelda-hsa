@@ -3947,6 +3947,33 @@ tile{
   pattern = "pillar.top",
 }
 
+tile{
+  layer = -1,
+  x = 624,
+  y = 584,
+  width = 32,
+  height = 208,
+  pattern = "floor_small.2",
+}
+
+tile{
+  layer = -1,
+  x = 656,
+  y = 608,
+  width = 8,
+  height = 184,
+  pattern = "floor_border.1",
+}
+
+tile{
+  layer = -1,
+  x = 616,
+  y = 608,
+  width = 8,
+  height = 184,
+  pattern = "floor_border.1",
+}
+
 stairs{
   layer = -1,
   x = 120,
@@ -4637,16 +4664,6 @@ npc{
   layer = -1,
   x = 600,
   y = 765,
-  direction = 0,
-  subtype = 1,
-  sprite = "npc/soldier",
-}
-
-npc{
-  name = "npc_soldier_5",
-  layer = -1,
-  x = 640,
-  y = 781,
   direction = 0,
   subtype = 1,
   sprite = "npc/soldier",
@@ -8343,51 +8360,6 @@ tile{
   width = 16,
   height = 32,
   pattern = "floor.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 624,
-  y = 584,
-  width = 32,
-  height = 208,
-  pattern = "floor_small.2",
-}
-
-tile{
-  layer = 0,
-  x = 656,
-  y = 752,
-  width = 8,
-  height = 48,
-  pattern = "floor_border.1",
-}
-
-tile{
-  layer = 0,
-  x = 656,
-  y = 608,
-  width = 8,
-  height = 112,
-  pattern = "floor_border.1",
-}
-
-tile{
-  layer = 0,
-  x = 616,
-  y = 608,
-  width = 8,
-  height = 112,
-  pattern = "floor_border.1",
-}
-
-tile{
-  layer = 0,
-  x = 616,
-  y = 752,
-  width = 8,
-  height = 48,
-  pattern = "floor_border.1",
 }
 
 teletransporter{

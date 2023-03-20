@@ -303,6 +303,10 @@ Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 	FIX: Fixed Medusa fireballs going through walls (#79).
 
 Alpha 1.16 (started 22/02/23) "Mackerel Update":
+	ADD: Added maps.
+	CHG: Replaced "Stalfos" by "Skull Kid" in a dialgoue from Sahasrahla (#94).
+	FIX: Fixed carpet tiles in the Hyrule Castle main room being on the wrong layer (#89).
+	FIX: Fixed wrong tree tiles in the Blacksmith area (#93).
 	TDO: Replace corrupted files.
 	TDO: Fix pot weights in the Forest Temple.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
@@ -315,6 +319,10 @@ Alpha 1.16 (started 22/02/23) "Mackerel Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
+	TDO: Fix unassigned "main_quest_step" value right after starting the game for the first time (#88).
+	TDO: Fix Hyrule Town soldiers not disappearing after obtaining the lamp (#90).
+	TDO: Fix cliff shadows in the Kokiri Village (#91).
+	TDO: Fix a nil value error in the inventory after obtaining a bottle or a wand from Ravio (#92).
 
 Alpha 1.16.1 (started 22/03/23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
