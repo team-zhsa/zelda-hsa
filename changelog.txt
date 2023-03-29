@@ -299,15 +299,20 @@ Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 	ADD: Added maps.
 	ADD: Added a collapsing ground function in the Dodongo's Cavern.
-	CHG: Started realigning trees in the Hyrule Field.
+	CHG: Moved trees in the Hyrule Field (#96).
+	CHG: Renamed soldier enemies in order to make them appear during the game and not at the beginning (#97).
 	FIX: Fixed Medusa fireballs going through walls (#79).
 
-Alpha 1.16 (started 22/02/23) "Mackerel Update":
+Alpha 1.16 (29/03/23) "Mackerel Update":
 	ADD: Added maps.
 	ADD: Added issues templates for the GitHub repository.
 	CHG: Replaced "Stalfos" by "Skull Kid" in a dialgoue from Sahasrahla (#94).
+	CHG: Moved trees in the Hyrule Field (#96).
+	CHG: Renamed soldier enemies in order to make them appear during the game and not at the beginning (#97).
 	FIX: Fixed carpet tiles in the Hyrule Castle main room being on the wrong layer (#89).
 	FIX: Fixed wrong tree tiles in the Blacksmith area (#93).
+
+Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	TDO: Replace corrupted files.
 	TDO: Fix pot weights in the Forest Temple.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
@@ -325,15 +330,15 @@ Alpha 1.16 (started 22/02/23) "Mackerel Update":
 	TDO: Fix cliff shadows in the Kokiri Village (#91).
 	TDO: Fix a nil value error in the inventory after obtaining a bottle or a wand from Ravio (#92).
 
-Alpha 1.16.1 (started 22/03/23) "Mackerel Update":
+Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
 	TDO: Fix game intro dialogues.
 	TDO: Add items treasure and inventory missing dialogues.
 	TDO: Fix victory animation not being synchronised with Link movement.
-	TDO: Clean up unused sprite files.
+	TDO: Clean up unused sprite files (#98).
 	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Fix missing animations for other tunics (#47).
-	TDO: Update title screen (#50).
+	TDO: Update the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
 	TDO: Fix cursor moving too fast with analog controller in menus (#82).
 	TDO: Fix possible crash at the beginning of the game when moving with the analog stick while not configured (#83).
@@ -341,9 +346,8 @@ Alpha 1.16.1 (started 22/03/23) "Mackerel Update":
 	TDO: Write the game's walkthrough (#85).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
 
-Alpha 1.16.2 (//23) "Mackerel Update":
+Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Add maps.
-	TDO: Rename all the soldiers in order to make them appear during the game and not at the beginning.
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Rename owl entities according to main quest steps (#19).
 	TDO: Change the Master Sword sprite on the title screen.
@@ -355,13 +359,13 @@ Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Slightly change HUD icons.
 	TDO: Add a HUD version for timers (#36).
 
-Alpha 1.16.3 (//23) "Mackerel Update":
+Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Unify all the caves' darkness system.
 	TDO: Unify all the electrocution systems.
 	TDO: Rename the sprites of some NPCs (#23).
 	TDO: Update the pause map image to the scrollable one (#24).
 
-Alpha 1.17 (//23) "Needlefish Update": Musics and sounds
+Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Loop the rest of the musics.
 	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
 	TDO: Fix music loops (#25). !
@@ -369,7 +373,7 @@ Alpha 1.17 (//23) "Needlefish Update": Musics and sounds
 	TDO: Improve the shovel usability (#26).
 	TDO: Move shovel animation into "/hero/item/shovel/" (#27).
 
-Alpha 1.17.1 (01/04/23) "Needlefish Update":
+Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add maps.
 	TDO: Add decoration to temples.
 	TDO: Add all the Pokémons.
@@ -383,7 +387,7 @@ Alpha 1.17.1 (01/04/23) "Needlefish Update":
 	TDO: Fix signs being readable after being cut (#34).
 	TDO: Change Helmasaur reaction to hookshot.
 
-Alpha 1.18 (//23) "Opah Update":
+Alpha 1.19 (//23) "Perch Update":
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.
@@ -391,19 +395,10 @@ Alpha 1.18 (//23) "Opah Update":
 	TDO: Add new items.
 	TDO: Finish all the items.
 
-
-
-
-
-
-
-
+Alpha 1.19.1 (//) "Perch Update":
 	TDO: Add an extension loader.
-
 	TDO: Add quests.
 	TDO: Add quests in quest pause menu.
-
-Alpha 1.19 (//) "Perch Update":
 
 Beta 1.0 (//)"The Great Update":
 Beta 1.1 (//)"Weapon Update":
