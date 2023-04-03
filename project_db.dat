@@ -32,7 +32,7 @@ map{ id = "dungeons/17/b1", description = "Ganon's Tower (Basement 1)" }
 map{ id = "dungeons/17/b2", description = "Ganon's Tower (Basement 2)" }
 map{ id = "dungeons/2/0f", description = "Forest Temple (Ground Floor)" }
 map{ id = "dungeons/2/1f", description = "Forest Temple (1st Floor)" }
-map{ id = "dungeons/2/2f", description = "Forest Temple (2nd Floor)" }
+map{ id = "dungeons/2/2f", description = "Forest Temple (Unused, 2nd Floor)" }
 map{ id = "dungeons/2/b1", description = "Forest Temple (Basement 1)" }
 map{ id = "dungeons/2/b2", description = "Forest Temple (Basement 2)" }
 map{ id = "dungeons/2/b3", description = "Forest Temple (Basement 3)" }
@@ -42,8 +42,8 @@ map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
 map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3)" }
 map{ id = "dungeons/3/b4", description = "Fire Temple (Basement 4)" }
-map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
-map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
+map{ id = "dungeons/3v/1f", description = "Fire Temple (Unused)" }
+map{ id = "dungeons/3v/b1", description = "Fire Temple (Unused)" }
 map{ id = "dungeons/4/0f", description = "Deku Tree (Ground Floor)" }
 map{ id = "dungeons/5/0f", description = "Dodongo's Cavern (Ground Floor)" }
 map{ id = "dungeons/5/1f", description = "Dodongo's Cavern (1st Floor)" }
@@ -137,12 +137,13 @@ map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
+map{ id = "inside/houses/hyrule_town/bridge_house", description = "Bridge House" }
 map{ id = "inside/houses/hyrule_town/fisher_house", description = "Fisher's House" }
 map{ id = "inside/houses/hyrule_town/inn", description = "Hyrule Town Inn" }
 map{ id = "inside/houses/hyrule_town/library", description = "Library" }
 map{ id = "inside/houses/hyrule_town/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/hyrule_town/vase_house", description = "Vase House" }
-map{ id = "inside/houses/kakariko_village/bar_b1", description = "Milk Bar (Basement 1)" }
+map{ id = "inside/houses/kakariko_village/bar_b1", description = "Kakarico Inn" }
 map{ id = "inside/houses/kakariko_village/blind_hideout", description = "Blind Hideout" }
 map{ id = "inside/houses/kakariko_village/chest_house", description = "Chest House" }
 map{ id = "inside/houses/kakariko_village/chicken_house", description = "Chicken House" }
@@ -156,6 +157,10 @@ map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/north_field/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/north_west_castle/fortune_teller", description = "Fortune Teller" }
+map{ id = "inside/houses/north_west_castle/grey_house", description = "Grey House" }
+map{ id = "inside/houses/north_west_castle/poultry_shop", description = "Poultry Shop" }
+map{ id = "inside/houses/north_west_castle/red_house", description = "Red House" }
+map{ id = "inside/houses/north_west_castle/treasure_house", description = "Treasure House" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
@@ -167,10 +172,10 @@ map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl 
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
 map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
 map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
-map{ id = "inside/temple_time", description = "Temple of Time" }
+map{ id = "inside/temple_time", description = "Temple of Time (Unused)" }
 map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
-map{ id = "memory/00", description = "00MEMORY" }
-map{ id = "memory/01", description = "01MEMORY" }
+map{ id = "memory/00", description = "(Unused)" }
+map{ id = "memory/01", description = "(Unused)" }
 map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
@@ -1633,9 +1638,9 @@ sound{ id = "wrong", description = "Wrong" }
 sound{ id = "zora", description = "zora" }
 
 item{ id = "_placeholder", description = "Placeholder" }
-item{ id = "_unused_blue_potion", description = "Blue Potion" }
-item{ id = "_unused_green_potion", description = "Green Potion" }
-item{ id = "_unused_red_potion", description = "Red Potion" }
+item{ id = "_unused_blue_potion", description = "Blue Potion (Unused)" }
+item{ id = "_unused_green_potion", description = "Green Potion (Unused)" }
+item{ id = "_unused_red_potion", description = "Red Potion (Unused)" }
 item{ id = "angler_key", description = "Angler key" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
 item{ id = "beak_of_stone", description = "Beak of stone" }
@@ -2123,8 +2128,36 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "Lucifer"
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/hyrule_town/bridge_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/bridge_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/fisher_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/inn.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/library.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/library.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/temple_of_time.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/temple_of_time.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/vase_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/vase_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "Lucifer", }
 file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/north_west_castle/fortune_teller.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/fortune_teller.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/grey_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/grey_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/poultry_shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/poultry_shop.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/red_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/red_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/shop.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/trading_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/zora_king.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/zora_king.lua", author = "The Unknown", }
 file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "Lucifer", }
 file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "Lucifer", }
 file{ path = "maps/out/a1.dat", author = "Lucifer", }
@@ -2183,9 +2216,9 @@ file{ path = "maps/sanctuaries/shibo_nayru/1f.dat", author = "Linkff", }
 file{ path = "maps/sanctuaries/shibo_nayru/1f.lua", author = "Linkff", }
 file{ path = "musics/inside/pop_estrgg.ogg", author = "Francis Mechner", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
-file{ path = "scripts/automation", author = "Olivier Cléro", license = "BSD, GPL v3" }
-file{ path = "scripts/automation/automation.lua", author = "Olivier Cléro", license = "GPL v3" }
-file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Cléro", license = "BSD" }
+file{ path = "scripts/automation", author = "Olivier Clï¿½ro", license = "BSD, GPL v3" }
+file{ path = "scripts/automation/automation.lua", author = "Olivier Clï¿½ro", license = "GPL v3" }
+file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Clï¿½ro", license = "BSD" }
 file{ path = "scripts/coroutine_helper.lua", license = "GPL v3" }
 file{ path = "scripts/gfx_effects", author = "PhoenixII54, Stdgregwar", license = "GPL v3" }
 file{ path = "scripts/gfx_effects/distorsion.lua", author = "PhoenixII54", license = "GPL v3" }

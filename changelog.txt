@@ -305,6 +305,7 @@ Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 
 Alpha 1.16 (29/03/23) "Mackerel Update":
 	ADD: Added maps.
+	ADD: Added dialogues.
 	ADD: Added issues templates for the GitHub repository.
 	CHG: Replaced "Stalfos" by "Skull Kid" in a dialgoue from Sahasrahla (#94).
 	CHG: Moved trees in the Hyrule Field (#96).
@@ -313,11 +314,15 @@ Alpha 1.16 (29/03/23) "Mackerel Update":
 	FIX: Fixed wrong tree tiles in the Blacksmith area (#93).
 
 Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
 	CHG: Changed the height of stone destructibles sprites from 24 to 16 (#101).
 	CHG: Renamed unused stone sprites in order to avoid confusion (#101).
-	FIX: Fixed the cemetery border tile being resizable  only horizontally (#102).
-	TDO: Replace corrupted files.
-	TDO: Fix pot weights in the Forest Temple.
+	CHG: Updated file author names (#107).
+	FIX: Fixed pot weights in the Forest Temple (#3).
+	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
+	FIX: Fixed a carpet border tile being resizable in both directions (#108).
+	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
@@ -335,6 +340,9 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 
 Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
+	TDO: Add hook entities to trees (#103).
+	TDO: Finish the remaining houses (#104).
+	TDO: Add remaining inside maps coordinates (#105).
 	TDO: Add items treasure and inventory missing dialogues.
 	TDO: Fix victory animation not being synchronised with Link movement.
 	TDO: Clean up unused sprite files (#98).
@@ -343,10 +351,11 @@ Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Update the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
 	TDO: Fix cursor moving too fast with analog controller in menus (#82).
-	TDO: Fix possible crash at the beginning of the game when moving with the analog stick while not configured (#83).
+	TDO: Fix possible crash at the beginning of the game when moving with the analog stick (#83).
 	TDO: Add a falling animation for enemies (#84).
 	TDO: Write the game's walkthrough (#85).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	TDO: Update file author names (#107).
 
 Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Add maps.
@@ -360,6 +369,7 @@ Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Clean up dialogues.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
+	TDO: Add file licenses to the project database (#106).
 	TDO: Add a HUD version for timers (#36).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
@@ -369,7 +379,7 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Update the pause map image to the scrollable one (#24).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
-	TDO: Loop the rest of the musics.
+	TDO: Loop the remaining musics.
 	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
 	TDO: Fix music loops (#25). !
 	TDO: Clean up unused musics.
