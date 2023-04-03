@@ -12,11 +12,57 @@ properties{
 
 tile{
   layer = 0,
-  x = 64,
+  x = 56,
   y = 8,
   width = 1152,
   height = 1288,
   pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 1032,
+  width = 32,
+  height = 16,
+  pattern = "112",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 1032,
+  width = 32,
+  height = 24,
+  pattern = "6172",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1064,
+  width = 32,
+  height = 16,
+  pattern = "112",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 1048,
+  width = 8,
+  height = 88,
+  pattern = "4163",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 1048,
+  width = 8,
+  height = 88,
+  pattern = "4163",
 }
 
 tile{
@@ -901,7 +947,7 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 1112,
+  y = 1128,
   width = 8,
   height = 24,
   pattern = "5996",
@@ -911,7 +957,7 @@ tile{
 tile{
   layer = 0,
   x = 184,
-  y = 1120,
+  y = 1136,
   width = 176,
   height = 16,
   pattern = "5999",
@@ -921,7 +967,7 @@ tile{
 tile{
   layer = 0,
   x = 360,
-  y = 1112,
+  y = 1128,
   width = 8,
   height = 24,
   pattern = "6000",
@@ -933,7 +979,7 @@ tile{
   x = 184,
   y = 1064,
   width = 176,
-  height = 56,
+  height = 72,
   pattern = "4163",
 }
 
@@ -952,24 +998,6 @@ tile{
   y = 1040,
   width = 56,
   height = 24,
-  pattern = "4163",
-}
-
-tile{
-  layer = 0,
-  x = 176,
-  y = 1048,
-  width = 8,
-  height = 64,
-  pattern = "4163",
-}
-
-tile{
-  layer = 0,
-  x = 360,
-  y = 1048,
-  width = 8,
-  height = 64,
   pattern = "4163",
 }
 
@@ -1006,7 +1034,7 @@ tile{
   x = 360,
   y = 1048,
   width = 8,
-  height = 48,
+  height = 64,
   pattern = "5981",
   tileset = "outside_buildings",
 }
@@ -1016,7 +1044,7 @@ tile{
   x = 176,
   y = 1048,
   width = 8,
-  height = 48,
+  height = 64,
   pattern = "5982",
   tileset = "outside_buildings",
 }
@@ -1074,7 +1102,7 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 1096,
+  y = 1112,
   width = 16,
   height = 16,
   pattern = "5995",
@@ -1084,7 +1112,7 @@ tile{
 tile{
   layer = 0,
   x = 352,
-  y = 1096,
+  y = 1112,
   width = 16,
   height = 16,
   pattern = "5994",
@@ -1094,7 +1122,7 @@ tile{
 tile{
   layer = 0,
   x = 264,
-  y = 1120,
+  y = 1136,
   width = 16,
   height = 16,
   pattern = "6008",
@@ -1104,7 +1132,7 @@ tile{
 tile{
   layer = 0,
   x = 256,
-  y = 1120,
+  y = 1136,
   width = 8,
   height = 16,
   pattern = "5974",
@@ -1114,7 +1142,7 @@ tile{
 tile{
   layer = 0,
   x = 280,
-  y = 1120,
+  y = 1136,
   width = 8,
   height = 16,
   pattern = "5975",
@@ -1124,7 +1152,7 @@ tile{
 tile{
   layer = 0,
   x = 280,
-  y = 1136,
+  y = 1152,
   width = 8,
   height = 8,
   pattern = "5920",
@@ -1134,7 +1162,7 @@ tile{
 tile{
   layer = 0,
   x = 256,
-  y = 1136,
+  y = 1152,
   width = 8,
   height = 8,
   pattern = "5919",
@@ -1793,7 +1821,7 @@ tile{
 tile{
   layer = 0,
   x = 232,
-  y = 1144,
+  y = 1160,
   width = 16,
   height = 8,
   pattern = "6157",
@@ -1954,26 +1982,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "5919",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
-  x = 496,
-  y = 1032,
-  width = 32,
-  height = 24,
-  pattern = "6172",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
-  x = 496,
-  y = 1032,
-  width = 32,
-  height = 16,
-  pattern = "6171",
   tileset = "outside_buildings",
 }
 
@@ -3224,7 +3232,7 @@ tile{
 tile{
   layer = 0,
   x = 264,
-  y = 1120,
+  y = 1136,
   width = 16,
   height = 16,
   pattern = "6008",
@@ -4005,7 +4013,7 @@ tile{
   layer = 0,
   x = 1072,
   y = 656,
-  width = 128,
+  width = 48,
   height = 16,
   pattern = "1111",
 }
@@ -4200,7 +4208,7 @@ tile{
 tile{
   layer = 0,
   x = 312,
-  y = 1120,
+  y = 1136,
   width = 24,
   height = 16,
   pattern = "5998",
@@ -4210,7 +4218,7 @@ tile{
 tile{
   layer = 0,
   x = 200,
-  y = 1120,
+  y = 1136,
   width = 24,
   height = 16,
   pattern = "5998",
@@ -7909,7 +7917,7 @@ tile{
 tile{
   layer = 0,
   x = 328,
-  y = 1144,
+  y = 1152,
   width = 24,
   height = 16,
   pattern = "flower_pot",
@@ -8404,8 +8412,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 1152,
-  y = 984,
+  x = 1104,
+  y = 968,
   width = 8,
   height = 8,
   pattern = "6007",
@@ -8414,17 +8422,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 1152,
+  x = 1104,
   y = 912,
   width = 8,
-  height = 72,
+  height = 56,
   pattern = "6006",
   tileset = "outside_buildings",
 }
 
 tile{
   layer = 0,
-  x = 1152,
+  x = 1104,
   y = 904,
   width = 8,
   height = 8,
@@ -8502,8 +8510,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 1104,
-  y = 976,
+  x = 1096,
+  y = 1000,
   width = 8,
   height = 16,
   pattern = "6170",
@@ -8512,8 +8520,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 1088,
-  y = 976,
+  x = 1080,
+  y = 1000,
   width = 16,
   height = 16,
   pattern = "6169",
@@ -8522,8 +8530,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 1080,
-  y = 976,
+  x = 1072,
+  y = 1000,
   width = 8,
   height = 16,
   pattern = "6168",
@@ -8537,6 +8545,693 @@ tile{
   width = 16,
   height = 16,
   pattern = "6206",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 288,
+  width = 32,
+  height = 96,
+  pattern = "1073",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 352,
+  width = 32,
+  height = 32,
+  pattern = "1073",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 416,
+  width = 32,
+  height = 32,
+  pattern = "1073",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 416,
+  width = 16,
+  height = 24,
+  pattern = "947",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 416,
+  width = 16,
+  height = 24,
+  pattern = "947",
+}
+
+tile{
+  layer = 0,
+  x = 592,
+  y = 416,
+  width = 16,
+  height = 24,
+  pattern = "1502",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 416,
+  width = 16,
+  height = 24,
+  pattern = "1502",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 416,
+  width = 32,
+  height = 32,
+  pattern = "1503",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 352,
+  width = 32,
+  height = 32,
+  pattern = "1503",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 352,
+  width = 32,
+  height = 32,
+  pattern = "1503",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 320,
+  width = 32,
+  height = 32,
+  pattern = "1503",
+}
+
+tile{
+  layer = 0,
+  x = 800,
+  y = 288,
+  width = 32,
+  height = 32,
+  pattern = "1503",
+}
+
+tile{
+  layer = 0,
+  x = 952,
+  y = 640,
+  width = 16,
+  height = 16,
+  pattern = "6008",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 640,
+  width = 8,
+  height = 16,
+  pattern = "5974",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 968,
+  y = 640,
+  width = 8,
+  height = 16,
+  pattern = "5975",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 968,
+  y = 656,
+  width = 8,
+  height = 8,
+  pattern = "5920",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 656,
+  width = 8,
+  height = 8,
+  pattern = "5919",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 952,
+  y = 656,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 640,
+  width = 16,
+  height = 16,
+  pattern = "6008",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1128,
+  y = 640,
+  width = 8,
+  height = 16,
+  pattern = "5974",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 640,
+  width = 8,
+  height = 16,
+  pattern = "5975",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 656,
+  width = 8,
+  height = 8,
+  pattern = "5920",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1128,
+  y = 656,
+  width = 8,
+  height = 8,
+  pattern = "5919",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 656,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1128,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1168,
+  y = 656,
+  width = 32,
+  height = 16,
+  pattern = "1111",
+}
+
+tile{
+  layer = 0,
+  x = 1104,
+  y = 864,
+  width = 16,
+  height = 32,
+  pattern = "109",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 976,
+  width = 32,
+  height = 24,
+  pattern = "6172",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1040,
+  width = 32,
+  height = 24,
+  pattern = "6172",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1064,
+  width = 32,
+  height = 24,
+  pattern = "6172",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1088,
+  width = 32,
+  height = 24,
+  pattern = "6172",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1040,
+  width = 32,
+  height = 16,
+  pattern = "6171",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 1088,
+  width = 32,
+  height = 16,
+  pattern = "6171",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 976,
+  width = 32,
+  height = 16,
+  pattern = "6171",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 480,
+  width = 48,
+  height = 16,
+  pattern = "flower_pot",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 384,
+  width = 8,
+  height = 24,
+  pattern = "140_2",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 1056,
+  y = 384,
+  width = 8,
+  height = 24,
+  pattern = "140",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 824,
+  y = 1120,
+  width = 8,
+  height = 16,
+  pattern = "141",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 784,
+  y = 1120,
+  width = 8,
+  height = 16,
+  pattern = "148",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 0,
+  x = 560,
+  y = 1120,
+  width = 32,
+  height = 32,
+  pattern = "6124",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 704,
+  width = 8,
+  height = 8,
+  pattern = "6187",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 712,
+  width = 8,
+  height = 96,
+  pattern = "6193",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 704,
+  width = 64,
+  height = 8,
+  pattern = "6192",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 808,
+  width = 8,
+  height = 8,
+  pattern = "6190",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 808,
+  width = 8,
+  height = 8,
+  pattern = "6189",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 808,
+  width = 64,
+  height = 8,
+  pattern = "6191",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 704,
+  width = 8,
+  height = 8,
+  pattern = "6188",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 712,
+  width = 64,
+  height = 96,
+  pattern = "6195",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 712,
+  width = 8,
+  height = 96,
+  pattern = "6194",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 640,
+  width = 24,
+  height = 16,
+  pattern = "5998",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1168,
+  y = 640,
+  width = 24,
+  height = 16,
+  pattern = "5998",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 640,
+  width = 24,
+  height = 16,
+  pattern = "5998",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 904,
+  y = 640,
+  width = 24,
+  height = 16,
+  pattern = "5998",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 440,
+  y = 552,
+  width = 16,
+  height = 40,
+  pattern = "7496",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 552,
+  width = 32,
+  height = 56,
+  pattern = "281",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 552,
+  width = 16,
+  height = 40,
+  pattern = "7496",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 552,
+  width = 32,
+  height = 56,
+  pattern = "281",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 72,
+  width = 16,
+  height = 40,
+  pattern = "7496",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 72,
+  width = 32,
+  height = 56,
+  pattern = "281",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 376,
+  width = 16,
+  height = 40,
+  pattern = "7496",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 928,
+  y = 376,
+  width = 32,
+  height = 56,
+  pattern = "281",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 152,
+  width = 16,
+  height = 8,
+  pattern = "266",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 176,
+  width = 16,
+  height = 8,
+  pattern = "6152",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "6149",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 152,
+  width = 16,
+  height = 8,
+  pattern = "266",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 176,
+  width = 16,
+  height = 8,
+  pattern = "6152",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "6149",
   tileset = "outside_buildings",
 }
 
@@ -8555,7 +9250,7 @@ sensor{
   name = "open_house_door_inn_sensor",
   layer = 0,
   x = 264,
-  y = 1149,
+  y = 1165,
   width = 32,
   height = 16,
 }
@@ -8666,26 +9361,6 @@ destructible{
 destructible{
   layer = 0,
   x = 1112,
-  y = 669,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1144,
-  y = 669,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
-  x = 1128,
   y = 669,
   treasure_name = "random_central",
   sprite = "entities/Bushes/bush_l_01",
@@ -9067,14 +9742,14 @@ destination{
   name = "from_inn",
   layer = 0,
   x = 272,
-  y = 1149,
+  y = 1165,
   direction = 3,
 }
 
 teletransporter{
   layer = 0,
   x = 264,
-  y = 1120,
+  y = 1136,
   properties = {
     {
       key = "effect",
@@ -9117,16 +9792,6 @@ dynamic_tile{
   height = 24,
   pattern = "4070",
   tileset = "outside_buildings",
-}
-
-destructible{
-  layer = 0,
-  x = 1160,
-  y = 669,
-  treasure_name = "random_central",
-  sprite = "entities/Bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
-  can_be_cut = true,
 }
 
 destructible{
@@ -9275,7 +9940,7 @@ dynamic_tile{
   name = "door_inn",
   layer = 0,
   x = 264,
-  y = 1120,
+  y = 1136,
   width = 16,
   height = 16,
   pattern = "6020",
@@ -9993,7 +10658,7 @@ tile{
 tile{
   layer = 1,
   x = 184,
-  y = 1112,
+  y = 1128,
   width = 176,
   height = 8,
   pattern = "5997",
@@ -10129,7 +10794,7 @@ tile{
 tile{
   layer = 1,
   x = 192,
-  y = 1096,
+  y = 1112,
   width = 160,
   height = 16,
   pattern = "5992",
@@ -10139,7 +10804,7 @@ tile{
 tile{
   layer = 1,
   x = 184,
-  y = 1088,
+  y = 1104,
   width = 16,
   height = 8,
   pattern = "5987",
@@ -10149,7 +10814,7 @@ tile{
 tile{
   layer = 1,
   x = 344,
-  y = 1088,
+  y = 1104,
   width = 16,
   height = 8,
   pattern = "5989",
@@ -10159,7 +10824,7 @@ tile{
 tile{
   layer = 1,
   x = 200,
-  y = 1088,
+  y = 1104,
   width = 144,
   height = 8,
   pattern = "5988",
@@ -10181,7 +10846,7 @@ tile{
   x = 192,
   y = 1048,
   width = 8,
-  height = 40,
+  height = 56,
   pattern = "5984",
   tileset = "outside_buildings",
 }
@@ -10201,7 +10866,7 @@ tile{
   x = 344,
   y = 1048,
   width = 8,
-  height = 40,
+  height = 56,
   pattern = "5985",
   tileset = "outside_buildings",
 }
@@ -10211,7 +10876,7 @@ tile{
   x = 184,
   y = 1048,
   width = 8,
-  height = 40,
+  height = 56,
   pattern = "5992",
   tileset = "outside_buildings",
 }
@@ -10221,7 +10886,7 @@ tile{
   x = 352,
   y = 1048,
   width = 8,
-  height = 40,
+  height = 56,
   pattern = "5992",
   tileset = "outside_buildings",
 }
@@ -10251,7 +10916,7 @@ tile{
   x = 200,
   y = 1048,
   width = 24,
-  height = 40,
+  height = 56,
   pattern = "5986",
   tileset = "outside_buildings",
 }
@@ -10261,7 +10926,7 @@ tile{
   x = 320,
   y = 1048,
   width = 24,
-  height = 40,
+  height = 56,
   pattern = "5986",
   tileset = "outside_buildings",
 }
@@ -10271,7 +10936,7 @@ tile{
   x = 224,
   y = 1072,
   width = 96,
-  height = 16,
+  height = 32,
   pattern = "5986",
   tileset = "outside_buildings",
 }
@@ -10279,7 +10944,7 @@ tile{
 tile{
   layer = 1,
   x = 256,
-  y = 1104,
+  y = 1120,
   width = 32,
   height = 16,
   pattern = "5976",
@@ -10579,7 +11244,7 @@ tile{
 tile{
   layer = 1,
   x = 232,
-  y = 1128,
+  y = 1144,
   width = 16,
   height = 16,
   pattern = "6158",
@@ -11103,7 +11768,7 @@ tile{
 tile{
   layer = 1,
   x = 256,
-  y = 1096,
+  y = 1112,
   width = 32,
   height = 16,
   pattern = "6067",
@@ -11123,7 +11788,7 @@ tile{
 tile{
   layer = 1,
   x = 200,
-  y = 1080,
+  y = 1096,
   width = 8,
   height = 8,
   pattern = "5980",
@@ -11143,7 +11808,7 @@ tile{
 tile{
   layer = 1,
   x = 336,
-  y = 1080,
+  y = 1096,
   width = 8,
   height = 8,
   pattern = "5980",
@@ -12274,7 +12939,7 @@ tile{
 tile{
   layer = 1,
   x = 328,
-  y = 1128,
+  y = 1136,
   width = 24,
   height = 16,
   pattern = "flower_top_red",
@@ -12528,6 +13193,286 @@ tile{
   width = 16,
   height = 8,
   pattern = "6207",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 944,
+  y = 624,
+  width = 32,
+  height = 16,
+  pattern = "5976",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 1128,
+  y = 624,
+  width = 32,
+  height = 16,
+  pattern = "5976",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 1024,
+  y = 744,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 1024,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 952,
+  y = 776,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 952,
+  y = 744,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 768,
+  y = 680,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 768,
+  y = 712,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 696,
+  y = 712,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 696,
+  y = 680,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 216,
+  y = 1072,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 216,
+  y = 1048,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 320,
+  y = 1072,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 320,
+  y = 1048,
+  width = 8,
+  height = 8,
+  pattern = "5980",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 176,
+  y = 464,
+  width = 24,
+  height = 16,
+  pattern = "flower_top_red",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 200,
+  y = 464,
+  width = 24,
+  height = 16,
+  pattern = "flower_top_yellow",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 1000,
+  y = 272,
+  width = 64,
+  height = 24,
+  pattern = "135_5",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 1000,
+  y = 296,
+  width = 64,
+  height = 64,
+  pattern = "138_5",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 1000,
+  y = 360,
+  width = 64,
+  height = 24,
+  pattern = "139_5",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 1040,
+  width = 24,
+  height = 64,
+  pattern = "146",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 808,
+  y = 1104,
+  width = 24,
+  height = 16,
+  pattern = "142",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 808,
+  y = 1040,
+  width = 24,
+  height = 64,
+  pattern = "144",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 1104,
+  width = 24,
+  height = 16,
+  pattern = "147",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 1024,
+  width = 24,
+  height = 16,
+  pattern = "145",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 808,
+  y = 1024,
+  width = 24,
+  height = 16,
+  pattern = "143",
+  tileset = "outside_additions",
+}
+
+tile{
+  layer = 1,
+  x = 560,
+  y = 1096,
+  width = 32,
+  height = 24,
+  pattern = "6130",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 616,
+  y = 552,
+  width = 48,
+  height = 16,
+  pattern = "7522",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = 592,
+  y = 544,
+  width = 96,
+  height = 24,
+  pattern = "4106",
   tileset = "outside_buildings",
 }
 

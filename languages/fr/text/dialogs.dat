@@ -4204,12 +4204,24 @@ dialog{
 }
 
 dialog{
-  id = "maps.houses.north_west_castle.storyteller.welcome_question",
+  id = "maps.houses.north_west_castle.grey_house.welcome_no_master_sword",
   text = [[
-Ce n'est pas une
-commode... Quoi ?
-Tu avais remarqué ?
-... OK !
+Les monstres commencent à
+s'agiter dehors...$0
+Je sens que quelque chose de
+mauvais va arriver...$0
+Bref, fais attention à toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.grey_house.welcome_no_world_map",
+  text = [[
+Salut !$0 Je suis le propriétaire
+du domaine.$0
+Le village Cocorico ?$0
+Suis le chemin vers l'ouest,
+c'est le plus rapide.
 ]],
 }
 
@@ -4995,6 +5007,13 @@ $v
 }
 
 dialog{
+  id = "maps.out.hyrule_town.sign_3",
+  text = [[
+Cour du Château
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.soldiers.no_lamp",
   text = [[
 Hé petit !$0
@@ -5626,6 +5645,7 @@ Nord : La Poulaillerie
 
 dialog{
   id = "maps.out.north_west_castle.sign_2",
+  skip = "all",
   text = [[
 Poulaillerie du Château
 Vente de volaille tous les jours
