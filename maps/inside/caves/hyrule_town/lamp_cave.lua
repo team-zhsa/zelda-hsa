@@ -10,7 +10,6 @@
 local map = ...
 local game = map:get_game()
 local separator_manager = require("scripts/maps/separator_manager.lua")
-require("scripts/maps/light_manager")
 
 function map:on_started()
 	separator_manager:manage_map(map)
@@ -49,14 +48,17 @@ sensor_cutscene:register_event("on_activated", function()
         game:start_dialog("maps.caves.hyrule_town.lamp_cave.wizard_magic_bar_no", function()
           map:set_cinematic_mode(false, options)
           hero:set_direction(3)
+          local hero_movement = sol.movement.create("straight")
+          hero_movement:set_ignore_suspend(true)
+          hero_movement:set_angle(math.pi / 2)
+          hero_movement:set_speed(88)
+          hero_movement:set_max_distance(24)
+          hero_movement:start(hero, function()
+            hero:unfreeze()
+          end)
         end)
       end
     end)
   end
 end)
 
-function map:on_obtained_treasure(item_name, item_variant, item_savegame)
-  if item_name == "lamp" and item_variant == 1 and item_savegame == "inside_hyrule_town_lamp" then
-    game:set_step_done("lamp_obtained")
-  end
-end

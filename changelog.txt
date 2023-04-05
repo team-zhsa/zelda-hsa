@@ -319,9 +319,14 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	CHG: Changed the height of stone destructibles sprites from 24 to 16 (#101).
 	CHG: Renamed unused stone sprites in order to avoid confusion (#101).
 	CHG: Updated file author names (#107).
+	CHG: Renamed unused files.
 	FIX: Fixed pot weights in the Forest Temple (#3).
 	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
 	FIX: Fixed a carpet border tile being resizable in both directions (#108).
+	FIX: Fixed a nil value error in game_manager.lua when starting the intro cutscene (#109).
+	FIX: Fixed the Blacksmith not giving the sword (#110).
+	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
+	TDO: Fix a light source being visible in the lamp cave (#111).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -336,16 +341,15 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	TDO: Fix unassigned "main_quest_step" value right after starting the game for the first time (#88).
 	TDO: Fix Hyrule Town soldiers not disappearing after obtaining the lamp (#90).
 	TDO: Fix cliff shadows in the Kokiri Village (#91).
-	TDO: Fix a nil value error in the inventory after obtaining a bottle or a wand from Ravio (#92).
 
 Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103).
 	TDO: Finish the remaining houses (#104).
 	TDO: Add remaining inside maps coordinates (#105).
-	TDO: Add items treasure and inventory missing dialogues.
-	TDO: Fix victory animation not being synchronised with Link movement.
-	TDO: Clean up unused sprite files (#98).
+	TDO: Add items treasure and inventory missing dialogues (#9).
+	TDO: Fix victory animation not being synchronised with Link movement (#10).
+	TDO: Clean up unused files (#98).
 	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Fix missing animations for other tunics (#47).
 	TDO: Update the title screen (#50).
@@ -355,7 +359,6 @@ Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add a falling animation for enemies (#84).
 	TDO: Write the game's walkthrough (#85).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
-	TDO: Update file author names (#107).
 
 Alpha 1.17 (//23) "Needlefish Update":
 	TDO: Add maps.

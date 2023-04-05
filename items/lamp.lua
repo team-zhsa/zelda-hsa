@@ -9,6 +9,10 @@ function item:on_created()
   item:set_assignable(true)
 end
 
+function item:on_obtained()
+  game:set_step_done("lamp_obtained")
+end
+
 -- Shoots some fire on the map.
 function item:shoot()
 
