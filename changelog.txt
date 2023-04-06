@@ -320,13 +320,14 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	CHG: Renamed unused stone sprites in order to avoid confusion (#101).
 	CHG: Updated file author names (#107).
 	CHG: Renamed unused files.
+	CHG: Replaced the pause world map background by rescaling the scrollable one (#24).
 	FIX: Fixed pot weights in the Forest Temple (#3).
 	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
 	FIX: Fixed a carpet border tile being resizable in both directions (#108).
 	FIX: Fixed a nil value error in game_manager.lua when starting the intro cutscene (#109).
 	FIX: Fixed the Blacksmith not giving the sword (#110).
+	FIX: Fixed a light source being visible in the lamp cave (#111).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
-	TDO: Fix a light source being visible in the lamp cave (#111).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -380,7 +381,6 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Unify all the caves' darkness system.
 	TDO: Unify all the electrocution systems.
 	TDO: Rename the sprites of some NPCs (#23).
-	TDO: Update the pause map image to the scrollable one (#24).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Loop the remaining musics.
