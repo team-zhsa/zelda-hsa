@@ -3084,14 +3084,39 @@ Je ne suis pas intéressé.
 }
 
 dialog{
-  id = "maps.houses.hyrule_castle.waking_up",
+  id = "maps.houses.hyrule_castle.commands_direction",
   text = [[
-$v, $v !$0
-Réveille-toi ! $0
+Appuie sur les flèches
+directionnelles pour te déplacer.
+]],
+}
 
-Impa te cherche, elle veut te
-parler. Elle t'attend dans la
-cour du château, viens vite !
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_1",
+  text = [[
+$v !$0 $v !$0
+Debout là-dedans !$0
+Réveille-toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_2",
+  text = [[
+Allez !$0 Il est déjà dix heures !$0
+Tu vas quand même pas rester
+au lit jusqu'à midi quand même !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_3",
+  text = [[
+Impa t'attend depuis ce matin.$0
+Elle a des choses importantes
+à te dire...
+On te retrouve dans la cour du
+château, viens vite !
 ]],
 }
 
@@ -5041,8 +5066,10 @@ $v
 
 dialog{
   id = "maps.out.hyrule_town.sign_3",
+  skip = "all",
   text = [[
-Cour du Château
+Nord-Est : La forge
+Est : Temple du Temps
 ]],
 }
 
