@@ -43,7 +43,7 @@ function inventory_submenu:on_started()
   self.counters = {}
   self.menu_ocarina = true
 
-  -- Initialize the cursor
+  -- initialise the cursor
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 4)
   local column = index % 7

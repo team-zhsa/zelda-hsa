@@ -17,7 +17,7 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
   hud_icon.normal_x, hud_icon.normal_y = icon_x, icon_y
   hud_icon.dialog_x, hud_icon.dialog_y = dialog_icon_x, dialog_icon_y
 
-  -- Initialize layers.
+  -- initialise layers.
   hud_icon.surface = nil
   hud_icon.background_sprite = nil
   hud_icon.foreground = nil
@@ -25,7 +25,7 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
   hud_icon.foreground_h = 0
   hud_icon.foreground_text_cache = {}
   
-  -- Initialize state.
+  -- initialise state.
   hud_icon.enabled = true
   hud_icon.active = true
   hud_icon.animating = false

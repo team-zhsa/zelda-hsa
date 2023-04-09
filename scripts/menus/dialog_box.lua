@@ -9,7 +9,7 @@ local audio_manager = require("scripts/audio_manager")
 local text_utils = require("scripts/lib/text_utils")
 local text_fx_helper = require("scripts/text_fx_helper")
 -- Creates and sets up a dialog box for the specified game.
-local function initialize_dialog_box_features(game)
+local function initialise_dialog_box_features(game)
 
 	if game.get_dialog_box ~= nil then
 		-- Already done.
@@ -64,7 +64,7 @@ local function initialize_dialog_box_features(game)
 	local box_width = 220
 	local box_height = 60
 
-  -- Initialize dialog box data.
+  -- initialise dialog box data.
   dialog_box.font, dialog_box.font_size = language_manager:get_dialog_font()
   for i = 1, nb_visible_lines do
     dialog_box.lines[i] = ""
@@ -157,7 +157,7 @@ local function initialize_dialog_box_features(game)
 		if not dialog_box:is_full() then
 			dialog_box:add_character()
 		else
-			sol.audio.play_sound("message_end")
+			sol.audio.play_sound("menu/dialogue_end")
 			if dialog_box:has_more_lines()
 				or dialog_box.dialog.next ~= nil
 				or dialog_box.selected_answer ~= nil then
@@ -228,7 +228,7 @@ local function initialize_dialog_box_features(game)
 	function dialog_box:show_dialog()
 
 
-		-- Initialize this dialog.
+		-- initialise this dialog.
 		local dialog = self.dialog
 
 		if dialog.icon ~= nil then
@@ -475,7 +475,7 @@ local function initialize_dialog_box_features(game)
 
     if not special and current_char ~= nil and self.need_letter_sound then
       -- Play a letter sound sometimes.
-      audio_manager:play_sound("menus/text_letter")
+      audio_manager:play_sound("menu/dialogue_letter")
       self.need_letter_sound = false
       sol.timer.start(self, letter_sound_delay, function()
         self.need_letter_sound = true
@@ -622,7 +622,7 @@ end
 
 -- Set up the dialog box on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_dialog_box_features)
+game_meta:register_event("on_started", initialise_dialog_box_features)
 
 return true
 --]]

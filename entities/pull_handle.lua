@@ -15,7 +15,7 @@ local map = pull_handle:get_map()
 -- Include scripts
 require("scripts/multi_events")
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 pull_handle:register_event("on_created", function()
 
 	local movement_count = 0

@@ -3,7 +3,7 @@
 --> Manage time system tones and also light effects.
 --]]
 
-local function initialize_tone_features(game)
+local function initialise_tone_features(game)
 	time_flow = 1000
   local tone_manager = {
   lantern_effect = sol.sprite.create("entities/torch_light_tile"),
@@ -290,7 +290,7 @@ end
   end
 
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_tone_features)
+game_meta:register_event("on_started", initialise_tone_features)
 
   return tone_manager
 end

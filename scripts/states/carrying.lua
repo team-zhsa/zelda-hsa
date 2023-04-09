@@ -26,7 +26,7 @@ function carrying_state.start(hero, carriable, carriable_sprite) -- Pass the car
     end
   end
 
-  -- Initialize.
+  -- initialise.
   local x, y, layer = hero:get_position()
   adjust_direction = {
     [0] = function () x = x + 16 end,

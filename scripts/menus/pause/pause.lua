@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 
 -- Creates a pause menu for the specified game.
-local function initialize_pause_features(game)
+local function initialise_pause_features(game)
 
   if game.pause_menu ~= nil then
     -- Already done.
@@ -87,6 +87,6 @@ end
 
 -- Set up the pause menu on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_pause_features)
+game_meta:register_event("on_started", initialise_pause_features)
 
 return true

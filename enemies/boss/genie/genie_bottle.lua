@@ -18,10 +18,10 @@ local genie
 local bottle_entity
 local is_freeze
 
--- Event called when the enemy is initialized.
+-- Event called when the enemy is initialised.
 function enemy:on_created()
 
-  -- Initialize the properties of your enemy here,
+  -- initialise the properties of your enemy here,
   -- like the sprite, the life and the damage.
   sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
   enemy:set_damage(0)

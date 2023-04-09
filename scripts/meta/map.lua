@@ -1,4 +1,4 @@
--- Initialize Map behavior specific to this quest.
+-- initialise Map behavior specific to this quest.
 
 -- Variables
 local map_meta = sol.main.get_metatable("map")

@@ -112,7 +112,7 @@ function carriable_behavior.apply(carriable, properties)
     local shadow_sprite = properties.shadow_sprite or default_properties.shadow_sprite
     local slowdown_ratio = properties.slowdown_ratio or default_properties.slowdown_ratio
 
-    -- Initialize throwing state.
+    -- initialise throwing state.
     local num_bounces = #bounce_distances
     local current_bounce = 1
     local current_instant = 0
@@ -205,7 +205,7 @@ function carriable_behavior.apply(carriable, properties)
         return
       end  
 
-      -- Initialize parameters for the bounce.
+      -- initialise parameters for the bounce.
       local _, sy = sprite:get_xy()
       local t = current_instant
       local dist = bounce_distances[current_bounce]

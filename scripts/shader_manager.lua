@@ -4,7 +4,7 @@ local shader_ids
 local shaders
 local current_shader_index = 0  -- 0 means no shader.
 
-local function initialize_shaders()
+local function initialise_shaders()
 
   shaders = {}
   shader_ids = sol.main.get_resource_ids("shader")
@@ -23,7 +23,7 @@ end
 function shader_manager:switch_shader()
 
   if shaders == nil then
-    initialize_shaders()
+    initialise_shaders()
   end
   if #shader_ids == 0 then
     return

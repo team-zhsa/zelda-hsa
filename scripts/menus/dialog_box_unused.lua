@@ -9,7 +9,7 @@ local audio_manager = require("scripts/audio_manager")
 local text_utils = require("scripts/lib/text_utils")
 
 -- Creates and sets up a dialog box for the specified game.
-local function initialize_dialog_box_features(game)
+local function initialise_dialog_box_features(game)
 
   if game.get_dialog_box ~= nil then
     -- Already done.
@@ -64,7 +64,7 @@ local function initialize_dialog_box_features(game)
   local box_width = 220 -- Todo change this box width when an icon dialog is visible.
   local box_height = 60
 
-  -- Initialize dialog box data.
+  -- initialise dialog box data.
   dialog_box.font, dialog_box.font_size = language_manager:get_dialog_font()
   for i = 1, nb_visible_lines do
     dialog_box.lines[i] = ""
@@ -234,7 +234,7 @@ local function initialize_dialog_box_features(game)
   -- A dialog starts (not necessarily the first one of its sequence).
   function dialog_box:show_dialog()
 
-    -- Initialize this dialog.
+    -- initialise this dialog.
     local dialog = self.dialog
 
     if dialog.icon ~= nil then
@@ -627,6 +627,6 @@ end
 
 -- Set up the dialog box on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_dialog_box_features)
+game_meta:register_event("on_started", initialise_dialog_box_features)
 
 return true

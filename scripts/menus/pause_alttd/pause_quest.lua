@@ -33,7 +33,7 @@ function quest_submenu:on_started()
   -- Set title
   self:set_title(sol.language.get_string("quest_status.title"))
 
-  -- Initialize the menu.
+  -- initialise the menu.
   self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
   self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
   self.counters = {}
@@ -41,7 +41,7 @@ function quest_submenu:on_started()
   self.sprites_static_right = {}
   self.sprites_static_bottom = {}
 
-  -- Initialize the cursor.
+  -- initialise the cursor.
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 7)
   local column = index % 7

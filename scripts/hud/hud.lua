@@ -7,7 +7,7 @@ require("scripts/multi_events")
 local hud_config = require("scripts/hud/hud_config")
 
 -- Creates and runs a HUD for the specified game.
-local function initialize_hud_features(game)
+local function initialise_hud_features(game)
 
   if game.set_hud_enabled ~= nil then
     -- Already done.
@@ -210,6 +210,6 @@ end
 
 -- Set up the HUD features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_hud_features)
+game_meta:register_event("on_started", initialise_hud_features)
 
 return true

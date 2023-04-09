@@ -24,7 +24,7 @@ map:register_event("on_started", function()
 	if heart_container ~= nil then
 		treasure_manager:disappear_pickable(map, "heart_container")
 	end
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end)
 

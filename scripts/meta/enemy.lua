@@ -1,4 +1,4 @@
--- Initialize enemy behavior specific to this quest.
+-- initialise enemy behavior specific to this quest.
 
 -- Include scripts
 local enemy_meta = sol.main.get_metatable("enemy")

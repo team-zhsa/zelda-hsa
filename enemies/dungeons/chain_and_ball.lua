@@ -32,7 +32,7 @@ function enemy:on_created()
   link_sprite = sol.sprite.create("enemies/" .. enemy:get_breed())
   link_sprite:set_animation("chain")
 
-  -- Initialize the links of the chain.
+  -- initialise the links of the chain.
   for i = 1, nb_links do
     link_xy[i].x = 0
     link_xy[i].y = 0

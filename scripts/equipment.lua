@@ -7,7 +7,7 @@ require("scripts/multi_events")
 
 local num_bottles = 4
 
-local function initialize_equipment_features(game)
+local function initialise_equipment_features(game)
 
   if game.are_small_keys_enabled ~= nil then
     -- Already done.
@@ -123,6 +123,6 @@ end
 
 -- Set up equipment features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_equipment_features)
+game_meta:register_event("on_started", initialise_equipment_features)
 
 return true

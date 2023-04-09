@@ -1,4 +1,4 @@
--- Initialize NPC behavior specific to this quest.
+-- initialise NPC behavior specific to this quest.
 -- Variables
 local npc_meta = sol.main.get_metatable("npc")
 

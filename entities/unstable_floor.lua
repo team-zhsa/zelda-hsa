@@ -15,7 +15,7 @@ local time_resistance = 1500 -- The time it resists with hero above. In millisec
 local audio_manager = require("scripts/audio_manager")
 require("scripts/multi_events")
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 entity:register_event("on_created", function()
 
   local hero = entity:get_map():get_hero()

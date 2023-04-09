@@ -12,7 +12,7 @@ local entity = ...
 local game = entity:get_game()
 local map = entity:get_map()
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 
   entity:set_traversable_by(true)

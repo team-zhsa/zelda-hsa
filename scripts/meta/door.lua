@@ -1,4 +1,4 @@
--- Initialize door behavior specific to this quest.
+-- initialise door behavior specific to this quest.
 
 -- Variables
 local door_meta = sol.main.get_metatable("door")

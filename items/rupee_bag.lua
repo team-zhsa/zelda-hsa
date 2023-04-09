@@ -4,7 +4,7 @@
 -- Variables
 local item = ...
 
--- Event called when the game is initialized.
+-- Event called when the game is initialised.
 function item:on_created()
 
   item:set_savegame_variable("possession_rupee_bag")

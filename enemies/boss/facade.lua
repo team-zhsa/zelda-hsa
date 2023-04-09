@@ -9,7 +9,7 @@ local hero = map:get_hero()
 local sprite
 local movement
 
--- Event called when the enemy is initialized.
+-- Event called when the enemy is initialised.
 function enemy:on_created()
 
   sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

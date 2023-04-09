@@ -14,7 +14,7 @@ function house_manager:init(map)
   -- One instance per map.
   local instance = {}
 
-  -- Initialize the feature.
+  -- initialise the feature.
   function instance:init(map)
     instance.hud = map:get_game():get_hud()
 

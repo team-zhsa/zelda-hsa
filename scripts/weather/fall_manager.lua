@@ -60,12 +60,12 @@ function game_meta:set_world_fall_mode(world, fall_mode)
   if current_world == world then self:set_fall_mode(fall_mode) end
 end
 
--- Initialize fall manager.
+-- initialise fall manager.
 game_meta:register_event("on_started", function(game)
   current_game = game
   fall_manager:on_created()
 end)
--- Initialize fall on maps when necessary.
+-- initialise fall on maps when necessary.
 game_meta:register_event("on_map_changed", function(game)
   fall_manager:on_map_changed(game:get_map())
 end)
@@ -83,7 +83,7 @@ function fall_manager:on_created()
   fall_surface:set_blend_mode("add")
   dark_surface:set_blend_mode("multiply")
   leaf_surface = sol.surface.create(8, 8)
-  -- Initialize main variables.
+  -- initialise main variables.
   current_fall_mode, previous_fall_mode, previous_world = nil, nil, nil
   num_leaves, num_splashes, current_darkness = 0, 0, 0
   leaf_list, splash_list, timers = {}, {}, {}
@@ -93,7 +93,7 @@ function fall_manager:on_created()
     splash_list[i] = {index = i}
   end
   -- Add scrolling feature with teletransporters.
-  self:initialize_scrolling_feature()
+  self:initialise_scrolling_feature()
 end
 
 -- Update current_fall_mode and current_map variables.
@@ -229,13 +229,13 @@ function fall_manager:start_fall_mode(fall_mode)
   self:update_darkness()
   -- Nothing more to do if there is no fall.
   if fall_mode == nil then return end
-  --Initialize leaf parameters (used by "fall_manager.create_leaf").
+  --initialise leaf parameters (used by "fall_manager.create_leaf").
   local game = current_game
   local current_leaf_delay
   if fall_mode == "fall" then current_leaf_delay = fall_leaf_delay
   elseif fall_mode == "fall_storm" then current_leaf_delay = fall_storm_leaf_delay
   elseif fall_mode ~= nil then error("Invalid fall mode.") end
-  -- Initialize leaf creation timer.
+  -- initialise leaf creation timer.
   timers["leaf_creation_timer"] = sol.timer.start(game, current_leaf_delay, function()
     -- Random angle deviation in case of fall_storm.
     local leaf_deviation = 0
@@ -245,7 +245,7 @@ function fall_manager:start_fall_mode(fall_mode)
     fall_manager:create_leaf(leaf_deviation)
     return true -- Repeat loop.
   end)
-  -- Initialize leaf position timer.
+  -- initialise leaf position timer.
   if timers["leaf_position_timer"] == nil then
     local dt = 10 -- Timer delay.
     timers["leaf_position_timer"] = sol.timer.start(game, dt, function()
@@ -347,7 +347,7 @@ function fall_manager:update_darkness()
 end
 
 -- Add scrolling features to teletransporters.
-function fall_manager:initialize_scrolling_feature()
+function fall_manager:initialise_scrolling_feature()
   local tele_meta = sol.main.get_metatable("teletransporter")
   tele_meta:register_event("on_activated", function(tele)
     local dir = tele:get_scrolling_direction()

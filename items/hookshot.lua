@@ -460,8 +460,8 @@ function item:on_using()
   item:set_finished()
 end
 
--- Initialize the metatable of appropriate entities to work with the hookshot.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the hookshot.
+local function initialise_meta()
 
   -- Add Lua hookhost properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -522,4 +522,4 @@ local function initialize_meta()
   end
 end
 
-initialize_meta()
+initialise_meta()

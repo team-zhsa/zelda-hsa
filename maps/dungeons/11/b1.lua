@@ -23,7 +23,7 @@ map:register_event("on_started", function()
   door_manager:open_when_torches_lit(map, "torch_2_door_", "door_8_e")
   door_manager:close_when_torches_unlit(map, "torch_2_door_", "door_8_e")
   door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_w")
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end)
 

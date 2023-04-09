@@ -14,7 +14,7 @@ local x, y, layer = hero:get_position()
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 	game:show_map_name("hylia_lake")
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   
 	map:set_digging_allowed(true)
 end

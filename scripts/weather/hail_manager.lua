@@ -64,12 +64,12 @@ function game_meta:set_world_hail_mode(world, hail_mode)
   if current_world == world then self:set_hail_mode(hail_mode) end
 end
 
--- Initialize hail manager.
+-- initialise hail manager.
 game_meta:register_event("on_started", function(game)
   current_game = game
   hail_manager:on_created()
 end)
--- Initialize hail on maps when necessary.
+-- initialise hail on maps when necessary.
 game_meta:register_event("on_map_changed", function(game)
   hail_manager:on_map_changed(game:get_map())
 end)
@@ -88,7 +88,7 @@ function hail_manager:on_created()
   stone_surface:fill_color({255, 255, 255})
   dark_surface:set_blend_mode("add")
   hail_surface:set_blend_mode("add")
-  -- Initialize main variables.
+  -- initialise main variables.
   current_hail_mode, previous_hail_mode, previous_world = nil, nil, nil
   num_stones, num_splashes, current_darkness = 0, 0, 0
   stone_list, splash_list, timers = {}, {}, {}
@@ -98,7 +98,7 @@ function hail_manager:on_created()
     splash_list[i] = {index = i}
   end
   -- Add scrolling feature with teletransporters.
-  self:initialize_scrolling_feature()
+  self:initialise_scrolling_feature()
 end
 
 -- Update current_hail_mode and current_map variables.
@@ -226,13 +226,13 @@ function hail_manager:start_hail_mode(hail_mode)
   self:update_darkness()
   -- Nothing more to do if there is no hail.
   if hail_mode == nil then return end
-  --Initialize stone parameters (used by "hail_manager.create_stone").
+  --initialise stone parameters (used by "hail_manager.create_stone").
   local game = current_game
   local current_stone_delay
   if hail_mode == "hail" then current_stone_delay = hail_stone_delay
   elseif hail_mode == "hailstorm" then current_stone_delay = hailstorm_stone_delay
   elseif hail_mode ~= nil then error("Invalid hail mode.") end
-  -- Initialize stone creation timer.
+  -- initialise stone creation timer.
   timers["stone_creation_timer"] = sol.timer.start(game, current_stone_delay, function()
     -- Random angle deviation in case of hailstorm.
     local stone_deviation = 0
@@ -242,7 +242,7 @@ function hail_manager:start_hail_mode(hail_mode)
     hail_manager:create_stone(stone_deviation)
     return true -- Repeat loop.
   end)
-  -- Initialize stone position timer.
+  -- initialise stone position timer.
   if timers["stone_position_timer"] == nil then
     local dt = 10 -- Timer delay.
     timers["stone_position_timer"] = sol.timer.start(game, dt, function()
@@ -342,7 +342,7 @@ function hail_manager:update_darkness()
 end
 
 -- Add scrolling features to teletransporters.
-function hail_manager:initialize_scrolling_feature()
+function hail_manager:initialise_scrolling_feature()
   local tele_meta = sol.main.get_metatable("teletransporter")
   tele_meta:register_event("on_activated", function(tele)
     local dir = tele:get_scrolling_direction()

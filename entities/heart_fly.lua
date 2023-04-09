@@ -15,7 +15,7 @@ local shadow
 local sprite
 local sprite_shadow
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 
   entity:set_layer_independent_collisions(true)

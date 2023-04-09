@@ -14,7 +14,7 @@ condition_manager.timers = {
   drunk = nil
 }
 
-function condition_manager:initialize(game)
+function condition_manager:initialise(game)
   local hero = game:get_hero()
   hero.condition = {
     slow = false,

@@ -8,7 +8,7 @@ require("scripts/multi_events")
 local audio_manager = require("scripts/audio_manager")
 local parchment = require("scripts/menus/parchment")
 
-local function initialize_dungeon_features(game)
+local function initialise_dungeon_features(game)
 
   if game.get_dungeon ~= nil then
     -- Already done.
@@ -759,7 +759,7 @@ end
 
 -- Set up dungeon features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_dungeon_features)
+game_meta:register_event("on_started", initialise_dungeon_features)
 
 return true
 --]]

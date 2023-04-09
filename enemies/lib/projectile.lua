@@ -26,7 +26,7 @@ function behavior.apply(enemy, sprite)
   local hero = map:get_hero()
   local camera = map:get_camera()
 
-  local is_initialized = false
+  local is_initialised = false
   local default_speed = 192
 
   -- Call the enemy:on_hit() callback if the enemy still can attack, and remove the entity if it doesn't return false.
@@ -57,7 +57,7 @@ function behavior.apply(enemy, sprite)
   -- Remove any projectile if its main sprite is completely out of the screen.
   enemy:register_event("on_position_changed", function(enemy)
 
-    if is_initialized then -- Workaround: on_position_changed() is called before on_restarted(), make sure it won't.
+    if is_initialised then -- Workaround: on_position_changed() is called before on_restarted(), make sure it won't.
       if not camera:overlaps(enemy:get_max_bounding_box()) then
         enemy:start_death()
       end
@@ -65,7 +65,7 @@ function behavior.apply(enemy, sprite)
   end)
 
   enemy:register_event("on_restarted", function(enemy)
-    is_initialized = true
+    is_initialised = true
   end)
 
   -- Check if the projectile should be destroyed when the hero is touched. 

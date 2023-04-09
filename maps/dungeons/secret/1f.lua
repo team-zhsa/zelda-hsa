@@ -21,7 +21,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

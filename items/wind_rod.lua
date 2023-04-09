@@ -77,8 +77,8 @@ function item:on_using()
   end)
 end
 
--- Initialize the metatable of appropriate entities to work with the wind.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the wind.
+local function initialise_meta()
 
   -- Add Lua wind properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -121,4 +121,4 @@ local function initialize_meta()
   end
 
 end
-initialize_meta()
+initialise_meta()

@@ -5,7 +5,7 @@
 
 require("scripts/multi_events")
 
-local function initialize_sidequest_features(game)
+local function initialise_sidequest_features(game)
 
   function game:is_quest_active(quest_name)
 		return game:get_value("sidequest_" .. quest_name .. "_active")
@@ -35,6 +35,6 @@ end
 
 -- Set up dungeon features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_sidequest_features)
+game_meta:register_event("on_started", initialise_sidequest_features)
 
 return true

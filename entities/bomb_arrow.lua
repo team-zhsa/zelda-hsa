@@ -5,7 +5,7 @@ local game = entity:get_game()
 local map = entity:get_map()
 local audio_manager=require "scripts/audio_manager"
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 
   entity.apply_cliffs=true,

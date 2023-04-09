@@ -18,7 +18,7 @@ movement:set_speed(64)
 movement:set_path{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4}
 movement:start(tile)
 end
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 
 

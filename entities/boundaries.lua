@@ -14,7 +14,7 @@ local map = entity:get_map()
 local hero_is_on_boundary = false
 local hero = game:get_hero()
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
   self:set_modified_ground("empty")
   local distance = self:get_distance(hero)

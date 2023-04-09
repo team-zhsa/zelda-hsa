@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 
 -- Creates a map menu for the specified game.
-local function initialize_map_features(game)
+local function initialise_map_features(game)
 
   if game.map_menu ~= nil then
     -- Already done.
@@ -88,6 +88,6 @@ end
 
 -- Set up the map menu on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_map_features)
+game_meta:register_event("on_started", initialise_map_features)
 
 return true

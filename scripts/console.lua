@@ -160,7 +160,7 @@ function console.clear()
   console.cursor_sprite:set_frame(0)
 end
 
--- Initializes the console.
+-- initialises the console.
 function console:init()
 
   self.enabled = false

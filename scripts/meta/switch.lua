@@ -1,4 +1,4 @@
--- Initialize switch behavior specific to this quest.
+-- initialise switch behavior specific to this quest.
 
 -- Variables
 local switch_meta = sol.main.get_metatable("switch")

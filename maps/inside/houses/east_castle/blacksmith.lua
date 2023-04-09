@@ -14,7 +14,7 @@ local game = map:get_game()
 function map:on_started()
 	blacksmith_1:get_sprite():set_animation("hammer")
 	blacksmith_2:get_sprite():set_animation("hammer")
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

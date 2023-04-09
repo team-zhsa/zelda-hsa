@@ -1,4 +1,4 @@
--- Initialize destructible behavior specific to this quest.
+-- initialise destructible behavior specific to this quest.
 
 -- Variables
 local destructible_meta = sol.main.get_metatable("destructible")

@@ -68,7 +68,7 @@ function title_screen:on_started()
 		sol.audio.stop_music()
 	end)
 	surface:fade_in(100)
-  -- Initialize or reinitialize the animation.
+  -- initialise or reinitialise the animation.
   animation_step = 0
   timer = nil
   surface:set_opacity(255)

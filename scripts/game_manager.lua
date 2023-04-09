@@ -26,13 +26,13 @@ function game_manager:create(file)
   local game = sol.game.load(file)
   if not exists then
     -- This is a new savegame file.
-    initial_game:initialize_new_savegame(game)
+    initial_game:initialise_new_savegame(game)
   end
 
 	game:register_event("on_started", function()
 		tone = tone_manager:create(game)
-		condition_manager:initialize(game)
-		map_name:initialize(game)
+		condition_manager:initialise(game)
+		map_name:initialise(game)
 		field_music(game)
     effect_manager:set_effect(game, fsa)
     game:set_value("mode", "fsa")

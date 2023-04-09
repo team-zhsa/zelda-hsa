@@ -7,11 +7,11 @@ function hero_condition:new(game)
   setmetatable(object, self)
   self.__index = self
 
-  object:initialize(game)
+  object:initialise(game)
   return object
 end
 
-function hero_condition:initialize(game)
+function hero_condition:initialise(game)
   self.game = game
   self.surface = sol.surface.create(24, 24)
   self.condition_icons_img = sol.surface.create("hud/condition_icon.png")

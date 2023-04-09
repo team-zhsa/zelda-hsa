@@ -7,12 +7,12 @@ function clock:new(game)
   setmetatable(object, self)
   self.__index = self
 
-  object:initialize(game)
+  object:initialise(game)
 
   return object
 end
 
-function clock:initialize(game)
+function clock:initialise(game)
   self.game = game
   self.surface = sol.surface.create(32, 32)
   self.clock_img = sol.sprite.create("hud/clock")

@@ -67,10 +67,10 @@ local function is_game_started()
 end
 
 ----------------
--- Initialize --
+-- initialise --
 ----------------
 
--- Initialize all the menu's features.
+-- initialise all the menu's features.
 function keyboardbox_menu:on_started()
 
   -- Fix the font shift (issue with some fonts)
@@ -99,10 +99,10 @@ function keyboardbox_menu:on_started()
   self.surface = sol.surface.create(self.frame_w, self.frame_h)
   
   -- Prepare all different symbols.
-  self:initialize_symbols()
+  self:initialise_symbols()
   
   -- Prepare keyboard layouts.
-  self:initialize_layouts()
+  self:initialise_layouts()
   
   -- Prepare texts.
   self.title_text = sol.text_surface.create{
@@ -155,8 +155,8 @@ function keyboardbox_menu:on_started()
   
 end
 
--- Initialize the keyboard layouts.
-function keyboardbox_menu:initialize_layouts()
+-- initialise the keyboard layouts.
+function keyboardbox_menu:initialise_layouts()
 
   local keyboard_layout_main_lower = {
     "-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "erase",
@@ -318,8 +318,8 @@ function keyboardbox_menu:initialize_layouts()
 
 end
 
--- Initialize the symbols not drawn with the font.
-function keyboardbox_menu:initialize_symbols()
+-- initialise the symbols not drawn with the font.
+function keyboardbox_menu:initialise_symbols()
 
   local symbols_img = sol.surface.create("menus/keyboardbox/keyboardbox_symbols.png")
   self.symbols = {}

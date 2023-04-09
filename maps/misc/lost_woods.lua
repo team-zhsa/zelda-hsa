@@ -16,7 +16,7 @@ function map:on_started()
 	if tp_index == 0 then
 		tele_true:set_enabled(false)
 	end
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

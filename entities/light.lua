@@ -72,9 +72,9 @@ if fire_sprite then
 end
 
 
--- Event called when the custom light is initialized.
+-- Event called when the custom light is initialised.
 function light:on_created()
-  -- Initialize the properties of your custom light here,
+  -- initialise the properties of your custom light here,
   -- like the sprite, the size, and whether it can traverse other
   -- entities and be traversed by them.
   light_mgr:add_light(self,light:get_name())
