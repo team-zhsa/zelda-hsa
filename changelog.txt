@@ -316,6 +316,7 @@ Alpha 1.16 (29/03/23) "Mackerel Update":
 Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
+	ADD: Added musics.
 	ADD: Added more cloud tiles in the world map tileset.
 	CHG: Changed the height of stone destructibles sprites from 24 to 16 (#101).
 	CHG: Renamed unused stone sprites in order to avoid confusion (#101).
@@ -325,9 +326,14 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	FIX: Fixed pot weights in the Forest Temple (#3).
 	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
 	FIX: Fixed a carpet border tile being resizable in both directions (#108).
+	FIX: Fixed unassigned "main_quest_step" value right after starting the game for the first time (#88).
 	FIX: Fixed a nil value error in game_manager.lua when starting the intro cutscene (#109).
 	FIX: Fixed the Blacksmith not giving the sword (#110).
+	FIX: Fixed Hyrule Town soldiers not disappearing after obtaining the lamp (#90).
+	FIX: Fixed cliff shadows in the Kokiri Village (#91).
 	FIX: Fixed a light source being visible in the lamp cave (#111).
+	FIX: Fixed possible crash at the beginning of the game when moving with the analog stick (#83).
+	REM: Removed ignored files.
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
@@ -340,9 +346,6 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Add special characters for key bindings in the dialogue boxes (A, B, X, Y, SELECT, START) (#44).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
-	TDO: Fix unassigned "main_quest_step" value right after starting the game for the first time (#88).
-	TDO: Fix Hyrule Town soldiers not disappearing after obtaining the lamp (#90).
-	TDO: Fix cliff shadows in the Kokiri Village (#91).
 
 Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
@@ -357,7 +360,6 @@ Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Update the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
 	TDO: Fix cursor moving too fast with analog controller in menus (#82).
-	TDO: Fix possible crash at the beginning of the game when moving with the analog stick (#83).
 	TDO: Add a falling animation for enemies (#84).
 	TDO: Write the game's walkthrough (#85).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
@@ -384,6 +386,7 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Rename the sprites of some NPCs (#23).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
+	TDO: Replace all the space indenting by tabs (#112).
 	TDO: Loop the remaining musics.
 	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
 	TDO: Add Koume and Koutake

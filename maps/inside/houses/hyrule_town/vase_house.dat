@@ -1,6 +1,6 @@
 properties{
-  x = 7120,
-  y = 5448,
+  x = 7552,
+  y = 4960,
   width = 320,
   height = 240,
   min_layer = 0,
@@ -606,60 +606,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 232,
-  y = 80,
-  width = 8,
-  height = 24,
-  pattern = "stairs_inner_up.2.border.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 80,
-  width = 16,
-  height = 24,
-  pattern = "stairs_inner_up.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 104,
-  width = 16,
-  height = 8,
-  pattern = "stairs_inner_up.2.top-1",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 104,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 232,
-  y = 104,
-  width = 8,
-  height = 8,
-  pattern = "stairs_inner_up.2.top.border.1-1",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 80,
-  width = 8,
-  height = 24,
-  pattern = "stairs_inner_up.2.border.2-1",
-}
-
-tile{
-  layer = 0,
   x = 128,
   y = 112,
   width = 16,
@@ -676,12 +622,67 @@ tile{
   pattern = "torch",
 }
 
-destination{
-  name = "from_roof",
+tile{
   layer = 0,
-  x = 248,
-  y = 101,
-  direction = 1,
+  x = 128,
+  y = 48,
+  width = 64,
+  height = 64,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 48,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 48,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 64,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 48,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 216,
+  y = 64,
+  width = 16,
+  height = 24,
+  pattern = "barrel",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 64,
+  width = 32,
+  height = 48,
+  pattern = "floor_pot",
 }
 
 npc{
@@ -896,16 +897,6 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 120,
-  y = 125,
-  treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
-  destruction_sound = "objects/e_pot_shatter",
-  can_be_cut = true,
-}
-
-destructible{
-  layer = 0,
   x = 200,
   y = 173,
   treasure_name = "arrow",
@@ -1014,30 +1005,6 @@ destructible{
   can_be_cut = true,
 }
 
-stairs{
-  layer = 0,
-  x = 240,
-  y = 88,
-  direction = 3,
-  subtype = 2,
-}
-
-teletransporter{
-  layer = 0,
-  x = 240,
-  y = 88,
-  properties = {
-    {
-      key = "effect",
-      value = "radial_fade_out",
-    },
-  },
-  width = 16,
-  height = 16,
-  destination_map = "out/f4",
-  destination = "from_vase_top",
-}
-
 destination{
   name = "from_outside",
   layer = 0,
@@ -1060,6 +1027,249 @@ teletransporter{
   height = 16,
   destination_map = "out/f4",
   destination = "from_vase",
+}
+
+destructible{
+  layer = 0,
+  x = 136,
+  y = 77,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 77,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 93,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 136,
+  y = 93,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 120,
+  y = 125,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 136,
+  y = 109,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 109,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 93,
+  treasure_name = "magic_flask",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 77,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 184,
+  y = 77,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 184,
+  y = 93,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 136,
+  y = 61,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 152,
+  y = 61,
+  treasure_name = "arrow",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 61,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 184,
+  y = 61,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 184,
+  y = 109,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 168,
+  y = 109,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 248,
+  y = 109,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 264,
+  y = 109,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 264,
+  y = 93,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 248,
+  y = 93,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 248,
+  y = 77,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 264,
+  y = 77,
+  treasure_name = "heart",
+  sprite = "entities/Destructables/vase",
+  destruction_sound = "objects/e_pot_shatter",
+  can_be_cut = true,
 }
 
 tile{

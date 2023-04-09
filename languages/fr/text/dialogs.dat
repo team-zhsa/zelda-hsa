@@ -5040,6 +5040,25 @@ C'est un rubis, très cher.
 }
 
 dialog{
+  id = "maps.out.hyrule_town.shop.welcome_merchant_bombs",
+  text = [[
+Salam jeune héros !
+Voici des bombes artisanales
+pas cher !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.shop.welcome_merchant_bombs_no_bag",
+  text = [[
+Salam jeune héros !$0
+Je n'ai malheureusement pas
+encore reçu mon stock.
+Reviens plus tard !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.shop.wine",
   text = [[
 Voici du bon vin rouge !
@@ -5079,6 +5098,7 @@ dialog{
   text = [[
 Ici se trouve le centre
 géographique d'Hyrule
+1\\\[arrow_down\]2\\\[arrow_up\]
 ]],
 }
 

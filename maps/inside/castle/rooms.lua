@@ -10,12 +10,17 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
+local effect_manager = require('scripts/maps/effect_manager')
+local gb = require('scripts/maps/gb_effect')
+local fsa = require('scripts/maps/fsa_effect')
 local black_surface
 
 function map:on_started(destination)
 	black_surface = sol.surface.create()
   black_surface:fill_color({ 0, 0, 0 })
   black_surface:set_opacity(0)
+	effect_manager:set_effect(game, fsa)
+	game:set_value("mode", "fsa")
 
 	if destination:get_name() == "start_game" then
 		-- the intro scene is playing

@@ -1,5 +1,8 @@
 local map = ...
 local game = map:get_game()
+local effect_manager = require('scripts/maps/effect_manager')
+local gb = require('scripts/maps/gb_effect')
+local fsa = require('scripts/maps/fsa_effect')
 
 -- Intro.
 
@@ -71,16 +74,32 @@ local function next_fresco()
   end
 end
 
-function map:on_started()
 
+function map:on_started()
+  map:set_joypad_commands()
+  effect_manager:set_effect(game, nil)
+  game:set_value("mode", "snes")
   game:get_dialog_box():set_style("empty")
   game:get_dialog_box():set_position({ x = 32, y = 160})
   next_fresco()
 end
 
 function map:on_opening_transition_finished()
-
+  hero:set_position(640, 480)
   hero:freeze()
+end
+
+function map:set_joypad_commands()
+  -- Button mapping according commonly used xbox gamepad on PC
+  game:set_command_joypad_binding("action", "button 2") -- button 0 = A (xbox/pc)
+  game:set_command_joypad_binding("attack", "button 1") -- button 2 = X (xbox/pc)
+  game:set_command_joypad_binding("item_1", "button 0") -- button 3 = Y (xbox/pc)
+  game:set_command_joypad_binding("item_2", "button 3") -- button 1 = B (xbox/pc)
+  game:set_command_joypad_binding("pause", "button 9")  -- button 7 = Menu/Start (xbox/pc)
+  game:set_command_joypad_binding("up", "hat 0 up")
+  game:set_command_joypad_binding("left", "hat 0 left")
+  game:set_command_joypad_binding("right", "hat 0 right")
+  game:set_command_joypad_binding("down", "hat 0 down")
 end
 
 function map:on_draw(dst_surface)
