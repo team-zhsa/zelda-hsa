@@ -29,6 +29,7 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
     end
     
+
     local map = hero:get_map()
     for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
@@ -49,6 +50,7 @@ hero_meta:register_event("on_position_changed", function(hero)
     end
   end
 end)
+
 hero_meta:register_event("on_state_changed", function(hero, current_state)
 
     local game = hero:get_game()

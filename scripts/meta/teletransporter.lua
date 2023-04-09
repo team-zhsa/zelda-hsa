@@ -28,6 +28,7 @@ tele_meta:register_event("on_activated", function(teletransporter)
     game:set_value("tp_destination", teletransporter:get_destination_name())
     game:set_value("tp_ground", ground) --save last ground for the ceiling drop manager
 
+
 		if teletransporter:get_transition() == "scrolling" then
 			if teletransporter:get_scrolling_direction() == 1 then
 				game:set_value("tp_scroll_direction", 2)

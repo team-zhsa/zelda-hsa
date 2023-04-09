@@ -15,6 +15,16 @@ function tu.mono_wrap_predicate(character_count)
   end
 end
 
+function tu.sol_text_wrap_with_icons_predicate(max_width, font, font_size, num_spaces)
+  num_spaces = num_spaces or 3
+  local holder = string.rep(" ", num_spaces)
+  return function(text)
+    local ttext = text:gsub("%[[^%[%]]*%]", holder)
+    local prw,prh = sol.text_surface.get_predicted_size(font, font_size, ttext)
+    return prw <= max_width
+  end
+end
+
 ----------------------------------------
 -- return an iterator of lines from a single line text
 
@@ -74,5 +84,63 @@ function tu.page_breaker(iterator, line_base, pattern)
     return line
   end
 end
+
+------------------------------------------------------------------------------------------------
+-- Text surface wrapper that adds support for icons in text
+------------------------------------------------------------------------------------------------
+local text_surface_mt = {}
+text_surface_mt.__index = text_surface_mt
+local icon_space_width = 4
+
+function text_surface_mt:set_text(text)
+  self.text = text
+  
+  -- first collect all tags
+  local tags = {}
+  local lastlast = 1
+  local position_offset = 0
+  
+  local holder = string.rep(" ", icon_space_width)
+  
+  local ttext = text:gsub("%[[^%[%]]*%]", holder)
+  
+  for tag in text:gmatch("%[([^%[%]]*)%]") do
+    
+    local start, last = text:find("["..tag.."]", lastlast, true)
+    lastlast = last
+    
+    local until_tag_text = ttext:sub(1, start + position_offset - 1)
+    -- substract the width of the tag in text
+    position_offset = position_offset - last + start + icon_space_width - 1
+    local prw,prh = sol.text_surface.get_predicted_size(self.font, self.font_size, until_tag_text)
+    
+    table.insert(tags, {
+        surface = sol.surface.create(string.format('hud/text_icons/%s_icon.png', tag)),
+        tag = tag,
+        x = prw
+        })
+  end
+  
+  self.inner_text_surface:set_text(ttext)
+  self.icons = tags
+end
+
+function text_surface_mt:get_text()
+  return self.text
+end
+
+function text_surface_mt:draw(dst, x,y)
+  self.inner_text_surface:draw(dst, x, y)
+  for _, icon in ipairs(self.icons) do
+    icon.surface:draw(dst, x+icon.x, y)
+  end
+end
+
+function tu.create_icon_text_surface(params)
+  local inner = sol.text_surface.create(params)
+  params.inner_text_surface = inner
+  return setmetatable(params, text_surface_mt)
+end
+
 
 return tu
