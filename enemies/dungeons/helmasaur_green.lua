@@ -110,6 +110,6 @@ enemy:register_event("on_restarted", function(enemy)
 
   -- States.
   enemy:set_can_attack(true)
-  enemy:set_damage(8)
+  enemy:set_damage(2)
   start_walking()
 end)

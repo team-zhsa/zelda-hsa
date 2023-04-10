@@ -34,7 +34,6 @@ enemy:register_event("on_created", function(enemy)
 end)
 
 enemy:register_event("on_restarted", function(enemy)
-  print("restarted")
   local map = enemy:get_map()
   local hero = map:get_hero()
   sol.timer.start(enemy, 5000, function()

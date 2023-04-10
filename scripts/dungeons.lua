@@ -289,9 +289,9 @@ local function initialise_dungeon_features(game)
 
     local room_name
     if floor >= 0 then
-      room_name = tostring(floor + 1) .. "f_" .. room
+      room_name = tostring(floor) .. "f_" .. room
     else
-      room_name = math.abs(floor) .. "b_" .. room
+      room_name = "b" .. math.abs(floor) .. "_" .. room
     end
 
     return "dungeon_" .. dungeon_index .. "_explored_" .. room_name

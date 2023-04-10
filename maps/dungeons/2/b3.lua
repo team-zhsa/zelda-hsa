@@ -31,7 +31,7 @@ map:register_event("on_started", function()
 	door_manager:open_when_flying_tiles_dead(map, "enemy_10_enemy", "door_10_w")
 	door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_s")
 	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_29", "pickable_29_small_key")
-	if miniboss ~= nil then
+	if game:get_value("dungeon_2_miniboss") ~= true then
 		treasure_manager:appear_pickable_when_enemies_dead(map, "miniboss", "pickable_18_big_key")
 		miniboss:set_enabled(false)
 		door_manager:open_when_enemies_dead(map, "miniboss", "door_13_s", sound)
@@ -39,12 +39,16 @@ map:register_event("on_started", function()
   flying_tile_manager:reset(map, "enemy_10")
 end)
 
-if miniboss ~= nil then
+if game:get_value("dungeon_2_miniboss") ~= true then
 	miniboss_sensor:register_event("on_activated", function()
 		audio_manager:play_music("boss/miniboss")
 		miniboss:set_enabled(true)
 		door_manager:close_if_enemies_not_dead(map, "miniboss", "door_13_s")
 		miniboss_sensor:remove()
+	end)
+
+	miniboss:register_event("on_dead", function()
+		audio_manager:play_music("dungeons/02_forest")
 	end)
 end
 
