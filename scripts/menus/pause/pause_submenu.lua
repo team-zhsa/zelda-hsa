@@ -21,11 +21,11 @@ function submenu:on_started()
 	self.background_surfaces = sol.surface.create("menus/pause/pause_submenus.png")
 	local img_width, img_height = self.background_surfaces:get_size()
 	self.width, self.height = img_width / 4, img_height
-	self.title_arrows = sol.surface.create("menus/pause/pause_submenus_arrows.png")
+	self.title_arrows = sol.surface.create("menus/pause/submenus_arrows.png")
 	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png")
 	self.caption_background_w, self.caption_background_h = self.caption_background:get_size()
-	self.save_dialog_background = sol.surface.create("menus/dialog_background.png")
-	self.save_dialog_cursor = sol.sprite.create("menus/dialog_cursor")
+	self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
+	self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
 	self.save_dialog_cursor_pos = "left"
 	self.save_dialog_state = 0
 	self.text_color = { 40, 40, 40 }

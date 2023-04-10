@@ -40,12 +40,12 @@ function map_submenu:on_started()
 		if self.game:get_item("world_map"):get_variant() > 0 and self.game:get_map():get_world() == "outside_world" then
       -- if in South Hyrule with World Map, then show the map
       map_shown = true
-      self.world_minimap_img = sol.surface.create("menus/outside_world_map.png")
+      self.world_minimap_img = sol.surface.create("menus/map/pause_hyrule_world_map.png")
       self.world_minimap_visible_xy.y = math.min(outside_world_minimap_size.height - 133, math.max(0, hero_minimap_y - 65))
     else
       -- if World Map not in inventory, show clouds in map screen
       map_shown = false
-      self.world_minimap_img = sol.surface.create("menus/outside_world_clouds.png")
+      self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
       self.world_minimap_visible_xy.y = 0
     end
 
@@ -57,8 +57,8 @@ function map_submenu:on_started()
     self:set_caption_key("map.caption.dungeon_name_" .. self.dungeon_index)
 
     -- Item icons.
-    self.dungeon_map_background_img = sol.surface.create("menus/dungeon_map_background.png")
-    self.dungeon_map_icons_img = sol.surface.create("menus/dungeon_map_icons.png")
+    self.dungeon_map_background_img = sol.surface.create("menus/map/dungeon_map_background.png")
+    self.dungeon_map_icons_img = sol.surface.create("menus/map/dungeon_map_icons.png")
     self.small_keys_text = sol.text_surface.create{
       font = "white_digits",
       horizontal_alignment = "right",
@@ -97,7 +97,7 @@ function map_submenu:on_started()
   end
 
   -- Common to dungeons and outside dungeons.
-  self.hero_head_sprite = sol.sprite.create("menus/hero_head")
+  self.hero_head_sprite = sol.sprite.create("menus/map/hero_head")
   self.hero_head_sprite:set_animation("tunic" .. self.game:get_item("tunic"):get_variant())
   self.up_arrow_sprite = sol.sprite.create("menus/arrow")
   self.up_arrow_sprite:set_direction(1)
@@ -359,7 +359,7 @@ function map_submenu:load_dungeon_map_image()
 
   if self.game:has_dungeon_compass() then
     -- Hero.
-    self.hero_point_sprite = sol.sprite.create("menus/hero_point")
+    self.hero_point_sprite = sol.sprite.create("menus/map/hero_point")
 
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()

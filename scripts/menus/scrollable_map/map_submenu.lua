@@ -16,12 +16,11 @@ end
 function submenu:on_started()
 
 	sol.menu.bring_to_front(submenu)
---  self.background_surfaces = sol.surface.create("menus/map/map_menu_background.png")
-  self.title_arrows = sol.surface.create("menus/pause_submenus_arrows.png")
+  self.title_arrows = sol.surface.create("menus/pause/submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
-	self.caption_background = sol.surface.create("menus/pause_submenus_caption.png") 
-  self.save_dialog_background = sol.surface.create("menus/dialog_background.png")
-  self.save_dialog_cursor = sol.sprite.create("menus/dialog_cursor")
+	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png") 
+  self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
+  self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
   self.save_dialog_cursor_pos = "left"
   self.save_dialog_state = 0
   self.text_color = { 115, 59, 22 }
@@ -29,7 +28,7 @@ function submenu:on_started()
   -- Dark surface whose goal is to slightly hide the game and better highlight the menu.
   local quest_w, quest_h = sol.video.get_quest_size()
   self.dark_surface = sol.surface.create(quest_w, quest_h)
-  self.dark_surface:fill_color({112, 112, 112})
+  self.dark_surface:fill_color({180, 180, 180})
   self.dark_surface:set_blend_mode("multiply")
 
   local menu_font, menu_font_size = language_manager:get_menu_font()

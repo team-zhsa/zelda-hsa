@@ -55,9 +55,9 @@ function map_submenu:on_started()
   submenu.on_started(self)
 	self.game:set_hud_enabled(false)  
   -- Common to dungeons and outside areas.
-  self.hero_head_sprite = sol.sprite.create("menus/hero_head")
+  self.hero_head_sprite = sol.sprite.create("menus/map/hero_head")
   self.hero_head_sprite:set_animation("tunic" .. self.game:get_item("tunic"):get_variant())
-  self.cross_sprite = sol.sprite.create("menus/map_cross")
+  self.cross_sprite = sol.sprite.create("menus/map/map_cross")
   self.cross_sprite:set_animation("blinking")
   self.up_arrow_sprite = sol.sprite.create("menus/arrow")
   self.up_arrow_sprite:set_direction(1)
@@ -72,7 +72,7 @@ function map_submenu:on_started()
   if self.dungeon == nil then
     -- Not in a dungeon: show a world map.
     self:set_caption("map.title")
-    self.world_map_background_img = sol.surface.create("menus/pause_menu_world_background.png")
+    self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     local cross_absolute_x = cross_positions[self.game:get_value("main_quest_step")].x
@@ -99,7 +99,7 @@ function map_submenu:on_started()
 	      map_shown = true      -- If in North Hyrule with World Map, then show the map.
 	      self.outside_world_size = { width = 15360, height = 12960 }
 	      self.outside_world_minimap_size = { width = 960, height = 810 }
-	      self.world_minimap_img = sol.surface.create("menus/pause_outside_map.png")
+	      self.world_minimap_img = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
 	      local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 	      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
 	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 45 + 64 -- 64 is the real map's offset with the sprite image
@@ -114,8 +114,8 @@ function map_submenu:on_started()
     else
       -- if World Map not in inventory, show clouds in map screen
       map_shown = false
-      self.world_map_background_img = sol.surface.create("menus/pause_menu_world_background.png")
-      self.world_minimap_img = sol.surface.create("menus/outside_world_clouds.png")
+      self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
+      self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
       self.world_minimap_visible_xy.y = 0
 			self.world_minimap_visible_xy.x = 0
     end
@@ -128,8 +128,8 @@ function map_submenu:on_started()
     self:set_caption("map.caption.dungeon_name_" .. self.dungeon_index)
 
     -- Item icons.
-    self.dungeon_map_background_img = sol.surface.create("menus/dungeon_map_background.png")
-    self.dungeon_map_icons_img = sol.surface.create("menus/dungeon_map_icons.png")
+    self.dungeon_map_background_img = sol.surface.create("menus/map/dungeon_map_background.png")
+    self.dungeon_map_icons_img = sol.surface.create("menus/map/dungeon_map_icons.png")
     self.small_keys_text = sol.text_surface.create{
       font = "white_digits",
       horizontal_alignment = "right",
@@ -528,7 +528,7 @@ function map_submenu:load_dungeon_map_image()
 
   if self.game:has_dungeon_compass() then
     -- Hero.
-    self.hero_point_sprite = sol.sprite.create("menus/hero_point")
+    self.hero_point_sprite = sol.sprite.create("menus/map/hero_point")
 
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
