@@ -1,4 +1,4 @@
--- Initialize hero behavior specific to this quest.
+-- initialise hero behavior specific to this quest.
 
 -- Variables
 local hero_meta = sol.main.get_metatable("hero")
@@ -29,6 +29,7 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
     end
     
+
     local map = hero:get_map()
     for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
@@ -49,6 +50,7 @@ hero_meta:register_event("on_position_changed", function(hero)
     end
   end
 end)
+
 hero_meta:register_event("on_state_changed", function(hero, current_state)
 
     local game = hero:get_game()
@@ -372,11 +374,11 @@ game_meta:register_event("on_map_changed", function(game, map)
 
   end)
 
--- Initialize hero behavior specific to this quest.
+-- initialise hero behavior specific to this quest.
 hero_meta:register_event("on_created", function(hero)
     hero:set_previous_state("NONE", "")
     hero:remove_sprite(hero:get_sprite("shadow"))
-    hero:initialize_fixing_functions() -- Used to fix direction and animations.
+    hero:initialise_fixing_functions() -- Used to fix direction and animations.
 
     local variant=hero:get_game():get_item("sword"):get_variant()
     if  variant>0 then
@@ -422,7 +424,7 @@ function hero_meta:set_fixed_animations(new_stopped_animation, new_walking_anima
 
   fixed_stopped_animation = new_stopped_animation
   fixed_walking_animation = new_walking_animation
-  -- Initialize fixed animations if necessary.
+  -- initialise fixed animations if necessary.
   local state = self:get_state()
   if state == "free" then
     if self:is_walking() then self:set_animation(fixed_walking_animation or "walking")
@@ -431,9 +433,9 @@ function hero_meta:set_fixed_animations(new_stopped_animation, new_walking_anima
 
 end
 
--- Initialize events to fix direction and animation for the tunic sprite of the hero.
+-- initialise events to fix direction and animation for the tunic sprite of the hero.
 -- For this purpose, we redefine on_created and set_tunic_sprite_id events for the hero metatable.
-function hero_meta:initialize_fixing_functions()
+function hero_meta:initialise_fixing_functions()
 
   local hero = self
   local sprite = hero:get_sprite("tunic")
@@ -458,11 +460,11 @@ function hero_meta:initialize_fixing_functions()
       end
     end
   end
-  -- Initialize fixing functions for the new sprite when the tunic sprite is changed.
+  -- initialise fixing functions for the new sprite when the tunic sprite is changed.
   local old_set_tunic = hero_meta.set_tunic_sprite_id -- We redefine this function.
   function hero_meta:set_tunic_sprite_id(sprite_id)
     old_set_tunic(self, sprite_id)
-    self:initialize_fixing_functions()
+    self:initialise_fixing_functions()
   end
 
 end

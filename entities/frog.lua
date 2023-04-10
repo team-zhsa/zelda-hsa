@@ -13,7 +13,7 @@ local game = entity:get_game()
 local map = entity:get_map()
 local sprite = entity:get_sprite()
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 
   local duration = 500 + math.random(1000)

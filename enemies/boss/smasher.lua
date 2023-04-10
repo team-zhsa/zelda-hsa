@@ -245,7 +245,7 @@ local function start_carrying()
   -- Clean the previous throw if the ball is catched before it finished normally.
   finish_throw()
 
-  -- Initialize the carrying.
+  -- initialise the carrying.
   ball:set_position(x , y)
   ball_sprite:set_xy(0, 0)
   movement:start(ball_sprite)

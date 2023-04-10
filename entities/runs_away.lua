@@ -34,7 +34,7 @@ local function stop_walking()
     
 end
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 follower:register_event("on_created", function()
     
   follower:set_optimization_distance(0)

@@ -72,8 +72,8 @@ function item:on_using()
   end)
 end
 
--- Initialize the metatable of appropriate entities to work with the ice.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the ice.
+local function initialise_meta()
 
   -- Add Lua ice properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -116,4 +116,4 @@ local function initialize_meta()
   end
 
 end
-initialize_meta()
+initialise_meta()

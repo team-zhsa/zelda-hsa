@@ -1,4 +1,4 @@
--- Initialize block behavior specific to this quest.
+-- initialise block behavior specific to this quest.
 
 -- Variables
 local game_meta = sol.main.get_metatable("game")

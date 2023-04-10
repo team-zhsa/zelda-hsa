@@ -72,7 +72,7 @@ end
 -- Starting the menu.
 function solarus_logo_menu:on_started()
 
-  -- Initialize or reinitialize the animation.
+  -- initialise or reinitialise the animation.
   animation_step = 0
   timer = nil
   surface:set_opacity(255)

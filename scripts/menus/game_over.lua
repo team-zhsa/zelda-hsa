@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 
 -- Creates and sets up a game-over menu for the specified game.
-local function initialize_game_over_features(game)
+local function initialise_game_over_features(game)
 
   if game.game_over_menu ~= nil then
     -- Already done.
@@ -211,7 +211,7 @@ end
 
 -- Set up the game-over menu on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_game_over_features)
+game_meta:register_event("on_started", initialise_game_over_features)
 
 return true
 

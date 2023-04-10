@@ -45,7 +45,7 @@ function item:on_obtaining(variant, savegame_variable)
   end
 end
 
-local function initialize_meta()
+local function initialise_meta()
   -- Add Lua arrow properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
   if enemy_meta.set_attack_arrow ~= nil then

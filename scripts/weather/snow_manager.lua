@@ -63,12 +63,12 @@ function game_meta:set_world_snow_mode(world, snow_mode)
   if current_world == world then self:set_snow_mode(snow_mode) end
 end
 
--- Initialize snow manager.
+-- initialise snow manager.
 game_meta:register_event("on_started", function(game)
   current_game = game
   snow_manager:on_created()
 end)
--- Initialize snow on maps when necessary.
+-- initialise snow on maps when necessary.
 game_meta:register_event("on_map_changed", function(game)
   snow_manager:on_map_changed(game:get_map())
 end)
@@ -86,7 +86,7 @@ function snow_manager:on_created()
   snow_surface:set_blend_mode("add")
   dark_surface:set_blend_mode("add")
   flake_surface = sol.surface.create(8, 8)
-  -- Initialize main variables.
+  -- initialise main variables.
   current_snow_mode, previous_snow_mode, previous_world = nil, nil, nil
   num_flakes, num_splashes, current_darkness = 0, 0, 0
   flake_list, splash_list, timers = {}, {}, {}
@@ -96,7 +96,7 @@ function snow_manager:on_created()
     splash_list[i] = {index = i}
   end
   -- Add scrolling feature with teletransporters.
-  self:initialize_scrolling_feature()
+  self:initialise_scrolling_feature()
 end
 
 -- Update current_snow_mode and current_map variables.
@@ -231,13 +231,13 @@ function snow_manager:start_snow_mode(snow_mode)
   self:update_darkness()
   -- Nothing more to do if there is no snow.
   if snow_mode == nil then return end
-  --Initialize flake parameters (used by "snow_manager.create_flake").
+  --initialise flake parameters (used by "snow_manager.create_flake").
   local game = current_game
   local current_flake_delay
   if snow_mode == "snow" then current_flake_delay = snow_flake_delay
   elseif snow_mode == "snowstorm" then current_flake_delay = snowstorm_flake_delay
   elseif snow_mode ~= nil then error("Invalid snow mode.") end
-  -- Initialize flake creation timer.
+  -- initialise flake creation timer.
   timers["flake_creation_timer"] = sol.timer.start(game, current_flake_delay, function()
     -- Random angle deviation in case of snowstorm.
     local flake_deviation = 0
@@ -247,7 +247,7 @@ function snow_manager:start_snow_mode(snow_mode)
     snow_manager:create_flake(flake_deviation)
     return true -- Repeat loop.
   end)
-  -- Initialize flake position timer.
+  -- initialise flake position timer.
   if timers["flake_position_timer"] == nil then
     local dt = 10 -- Timer delay.
     timers["flake_position_timer"] = sol.timer.start(game, dt, function()
@@ -348,7 +348,7 @@ function snow_manager:update_darkness()
 end
 
 -- Add scrolling features to teletransporters.
-function snow_manager:initialize_scrolling_feature()
+function snow_manager:initialise_scrolling_feature()
   local tele_meta = sol.main.get_metatable("teletransporter")
   tele_meta:register_event("on_activated", function(tele)
     local dir = tele:get_scrolling_direction()

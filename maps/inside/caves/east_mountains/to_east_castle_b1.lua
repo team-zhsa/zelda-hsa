@@ -15,7 +15,7 @@ function map:on_started(destination)
 	if destination == "from_outside_1" then
 		map:set_music("inside/fairy")
 	end
-	-- You can initialize the movement and sprites of various
+	-- You can initialise the movement and sprites of various
 	-- map entities here.
 end
 

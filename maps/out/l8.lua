@@ -12,7 +12,7 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   
 	map:set_digging_allowed(true)
 end)

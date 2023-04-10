@@ -12,10 +12,10 @@ local entity = ...
 local game = entity:get_game()
 local map = entity:get_map()
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 	entity:set_modified_ground("ice")
-  -- Initialize the properties of your custom entity here,
+  -- initialise the properties of your custom entity here,
   -- like the sprite, the size, and whether it can traverse other
   -- entities and be traversed by them.
 end

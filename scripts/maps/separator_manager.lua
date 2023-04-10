@@ -24,7 +24,7 @@ function separator_manager:manage_map(map)
     local hero = map:get_hero()
     local d = hero:get_direction() * 2
     if game:is_in_dungeon() then
-	    hero:walk(d..d..d..d..d..d)
+	    hero:walk(d..d..d..d..d)
     end
 
     -- Enemies.

@@ -49,7 +49,7 @@ hero_meta:register_event("on_position_changed", function(hero, x, y, layer)
 
   end)
 
--- Initialize diving state.
+-- initialise diving state.
 local state = sol.state.create()
 state:set_description("diving")
 state:set_can_control_movement(true)

@@ -72,7 +72,7 @@ function state:on_started()
   entity:get_sprite("trail"):set_animation("running") 
   sprite:set_animation("walking")
 
-  -- Initialize state abilities that may have changed.
+  -- initialise state abilities that may have changed.
   state:set_can_be_hurt(true)
   state:set_can_control_direction(true)
   state:set_can_control_movement(true)

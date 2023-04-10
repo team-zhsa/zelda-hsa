@@ -12,6 +12,9 @@ function options_submenu:on_started()
   local width, height = sol.video.get_quest_size()
   local center_x, center_y = width / 2, height / 2
 
+  -- Set the title.
+  self:set_title(sol.language.get_string("options.title"))
+
   self.column_color = { 255, 255, 255}
   self.text_color = { 115, 59, 22 }
 
@@ -111,8 +114,8 @@ function options_submenu:on_started()
   self.down_arrow_sprite = sol.sprite.create("menus/arrow")
   self.down_arrow_sprite:set_direction(3)
   self.down_arrow_sprite:set_xy(center_x - 64, center_y + 62)
-  self.cursor_sprite = sol.sprite.create("menus/pause_menu_options_cursor")
-  self.command_cursor_sprite = sol.sprite.create("menus/pause_menu_options_command_cursor")
+  self.cursor_sprite = sol.sprite.create("menus/pause/pause_menu_options_cursor")
+  self.command_cursor_sprite = sol.sprite.create("menus/pause/pause_menu_options_command_cursor")
   self.cursor_position = nil
   self:set_cursor_position(1)
   self.waiting_for_command = false
@@ -146,11 +149,11 @@ function options_submenu:set_cursor_position(position)
 
     self.cursor_position = position
     if position == 1 then  -- Video mode.
-      self:set_caption("options.caption.press_action_change_mode")
+      self:set_caption_key("options.caption.press_action_change_mode")
       self.cursor_sprite.x = width / 2 + 78
       self.cursor_sprite.y = height / 2 - 51
     else  -- Customization of a command.
-      self:set_caption("options.caption.press_action_customize_key")
+      self:set_caption_key("options.caption.press_action_customize_key")
 
       -- Make sure the selected command is visible.
       while position <= self.commands_highest_visible do
@@ -176,7 +179,7 @@ function options_submenu:on_draw(dst_surface)
   
   -- Draw caption.
   self:draw_caption(dst_surface)
-  
+
   -- Text.
   self.video_mode_label_text:draw(dst_surface)
   self.video_mode_text:draw(dst_surface)
@@ -244,13 +247,13 @@ function options_submenu:on_command_pressed(command)
     		sol.video.switch_mode()
       else
         -- Customize a game command.
-        self:set_caption("options.caption.press_key")
+        self:set_caption_key("options.caption.press_key")
         self.waiting_for_command = true
         local command_to_customize = self.command_names[self.cursor_position - 1]
         self.game:capture_command_binding(command_to_customize, function()
           self.waiting_for_command = false
           sol.audio.play_sound("danger")
-          self:set_caption("options.caption.press_action_customize_key")
+          self:set_caption_key("options.caption.press_action_customize_key")
           self:load_command_texts()
           -- TODO restore HUD icons.
         end)

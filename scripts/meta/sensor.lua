@@ -1,4 +1,4 @@
--- Initialize sensor behavior specific to this quest.
+-- initialise sensor behavior specific to this quest.
 
 local sensor_meta = sol.main.get_metatable("sensor")
 require("scripts/maps/light_manager")

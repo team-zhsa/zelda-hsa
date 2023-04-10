@@ -9,6 +9,10 @@ function item:on_created()
   item:set_assignable(true)
 end
 
+function item:on_obtained()
+  game:set_step_done("lamp_obtained")
+end
+
 -- Shoots some fire on the map.
 function item:shoot()
 
@@ -79,8 +83,8 @@ function item:on_using()
   end)
 end
 
--- Initialize the metatable of appropriate entities to work with the fire.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the fire.
+local function initialise_meta()
 
   -- Add Lua fire properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -123,4 +127,4 @@ local function initialize_meta()
   end
 
 end
-initialize_meta()
+initialise_meta()

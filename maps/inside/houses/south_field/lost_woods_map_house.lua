@@ -33,7 +33,7 @@ function npc_directions()
         game:start_dialog("maps.houses.south_field.lost_woods_mapper.mapper_sacred_grove")
       else game:start_dialog("maps.houses.south_field.lost_woods_mapper.mapper_kokiri")
       end
-      if game:is_step_last("sahasrahla_lost_woods_map") then game:set_step_done("lost_woods_map_obtained") end
+      if game:is_step_last("sahasrahla_lost_woods_map") then game:set_step_done("lost_woods_mapper_met") end
     end)
   end)
 end

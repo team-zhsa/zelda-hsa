@@ -1164,17 +1164,6 @@ wall{
   stops_projectiles = true,
 }
 
-switch{
-  layer = -1,
-  x = 880,
-  y = 304,
-  subtype = "walkable",
-  sprite = "entities/Switches/switch",
-  sound = "objects/on_switch",
-  needs_block = false,
-  inactivate_when_leaving = false,
-}
-
 wall{
   layer = -1,
   x = 576,
@@ -1330,6 +1319,15 @@ stairs{
   y = 336,
   direction = 1,
   subtype = 4,
+}
+
+sensor{
+  name = "sensor_8_door_1",
+  layer = -1,
+  x = 632,
+  y = 325,
+  width = 16,
+  height = 16,
 }
 
 tile{
@@ -14044,60 +14042,6 @@ sensor{
   height = 16,
 }
 
-sensor{
-  name = "start_dark_sensor",
-  layer = 0,
-  x = 1120,
-  y = 1197,
-  width = 16,
-  height = 16,
-}
-
-sensor{
-  name = "start_dark_sensor_2",
-  layer = 0,
-  x = 1120,
-  y = 973,
-  width = 16,
-  height = 16,
-}
-
-sensor{
-  name = "start_dark_sensor_3",
-  layer = 0,
-  x = 1272,
-  y = 1085,
-  width = 16,
-  height = 16,
-}
-
-sensor{
-  name = "stop_dark_sensor",
-  layer = 0,
-  x = 1120,
-  y = 957,
-  width = 16,
-  height = 16,
-}
-
-sensor{
-  name = "stop_dark_sensor_2",
-  layer = 0,
-  x = 1288,
-  y = 1085,
-  width = 16,
-  height = 16,
-}
-
-sensor{
-  name = "stop_dark_sensor_3",
-  layer = 0,
-  x = 1120,
-  y = 1213,
-  width = 16,
-  height = 16,
-}
-
 wall{
   layer = 0,
   x = 280,
@@ -15078,7 +15022,7 @@ door{
 }
 
 sensor{
-  name = "sensor_7_door_2",
+  name = "sensor_8_door_2",
   layer = 0,
   x = 632,
   y = 381,
@@ -15514,6 +15458,96 @@ npc{
   direction = 3,
   subtype = 1,
   behavior = "dialog#maps.dungeons.2.hint_2",
+}
+
+sensor{
+  name = "dungeon_room_9_1",
+  layer = 0,
+  x = 968,
+  y = 533,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_8_4",
+  layer = 0,
+  x = 952,
+  y = 533,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "sensor_8_door_3",
+  layer = 0,
+  x = 800,
+  y = 237,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "sensor_8_door_4",
+  layer = 0,
+  x = 632,
+  y = 605,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "sensor_8_door_5",
+  layer = 0,
+  x = 968,
+  y = 533,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_9_2",
+  layer = 0,
+  x = 1120,
+  y = 253,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_4_2",
+  layer = 0,
+  x = 1120,
+  y = 237,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_10_1",
+  layer = 0,
+  x = 1440,
+  y = 477,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_15_1",
+  layer = 0,
+  x = 1440,
+  y = 493,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "dungeon_room_15_2",
+  layer = 0,
+  x = 1536,
+  y = 613,
+  width = 16,
+  height = 16,
 }
 
 tile{

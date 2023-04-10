@@ -17,7 +17,7 @@ local function grid_movement(d4)
   return m
 end
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
   self:set_traversable_by(false)
   self:set_can_traverse(false)

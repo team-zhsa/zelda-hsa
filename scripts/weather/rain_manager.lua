@@ -65,12 +65,12 @@ function game_meta:set_world_rain_mode(world, rain_mode)
   if current_world == world then self:set_rain_mode(rain_mode) end
 end
 
--- Initialize rain manager.
+-- initialise rain manager.
 game_meta:register_event("on_started", function(game)
   current_game = game
   rain_manager:on_created()
 end)
--- Initialize rain on maps when necessary.
+-- initialise rain on maps when necessary.
 game_meta:register_event("on_map_changed", function(game)
   rain_manager:on_map_changed(game:get_map())
 end)
@@ -89,7 +89,7 @@ function rain_manager:on_created()
   dark_surface:set_blend_mode("multiply")
   flash_surface:fill_color({250, 250, 250})
   flash_surface:set_blend_mode("add")
-  -- Initialize main variables.
+  -- initialise main variables.
   current_rain_mode, previous_rain_mode, previous_world = nil, nil, nil
   num_drops, num_splashes, current_darkness = 0, 0, 0
   draw_flash_surface = false
@@ -100,7 +100,7 @@ function rain_manager:on_created()
     splash_list[i] = {index = i}
   end
   -- Add scrolling feature with teletransporters.
-  self:initialize_scrolling_feature()
+  self:initialise_scrolling_feature()
 end
 
 -- Update current_rain_mode and current_map variables.
@@ -224,7 +224,7 @@ function rain_manager:start_rain_mode(rain_mode)
   self:update_darkness()
   -- Nothing more to do if there is no rain.
   if rain_mode == nil then return end
-  --Initialize drop parameters (used by "rain_manager.create_drop").
+  --initialise drop parameters (used by "rain_manager.create_drop").
   local game = current_game
   local current_drop_delay
   if rain_mode == "rain" then current_drop_delay = rain_drop_delay
@@ -232,7 +232,7 @@ function rain_manager:start_rain_mode(rain_mode)
   elseif rain_mode ~= nil then error("Invalid rain mode.") end
   -- Start lightnings if necessary.
   if rain_mode == "storm" then self:start_lightnings() end
-  -- Initialize drop creation timer.
+  -- initialise drop creation timer.
   timers["drop_creation_timer"] = sol.timer.start(game, current_drop_delay, function()
     -- Random angle deviation in case of storm.
     local drop_deviation = 0
@@ -242,7 +242,7 @@ function rain_manager:start_rain_mode(rain_mode)
     rain_manager:create_drop(drop_deviation)
     return true -- Repeat loop.
   end)
-  -- Initialize drop position timer.
+  -- initialise drop position timer.
   if timers["drop_position_timer"] == nil then
     local dt = 10 -- Timer delay.
     timers["drop_position_timer"] = sol.timer.start(game, dt, function()
@@ -370,7 +370,7 @@ function rain_manager:update_darkness()
 end
 
 -- Add scrolling features to teletransporters.
-function rain_manager:initialize_scrolling_feature()
+function rain_manager:initialise_scrolling_feature()
   local tele_meta = sol.main.get_metatable("teletransporter")
   tele_meta:register_event("on_activated", function(tele)
     local dir = tele:get_scrolling_direction()

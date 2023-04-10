@@ -32,7 +32,7 @@ map{ id = "dungeons/17/b1", description = "Ganon's Tower (Basement 1)" }
 map{ id = "dungeons/17/b2", description = "Ganon's Tower (Basement 2)" }
 map{ id = "dungeons/2/0f", description = "Forest Temple (Ground Floor)" }
 map{ id = "dungeons/2/1f", description = "Forest Temple (1st Floor)" }
-map{ id = "dungeons/2/2f", description = "Forest Temple (2nd Floor)" }
+map{ id = "dungeons/2/2f", description = "Forest Temple (Unused, 2nd Floor)" }
 map{ id = "dungeons/2/b1", description = "Forest Temple (Basement 1)" }
 map{ id = "dungeons/2/b2", description = "Forest Temple (Basement 2)" }
 map{ id = "dungeons/2/b3", description = "Forest Temple (Basement 3)" }
@@ -42,8 +42,8 @@ map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
 map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3)" }
 map{ id = "dungeons/3/b4", description = "Fire Temple (Basement 4)" }
-map{ id = "dungeons/3v/1f", description = "Fire Temple Beta (1st Floor)" }
-map{ id = "dungeons/3v/b1", description = "Fire Temple (Basement 1)" }
+map{ id = "dungeons/3v/1f", description = "Fire Temple (Unused)" }
+map{ id = "dungeons/3v/b1", description = "Fire Temple (Unused)" }
 map{ id = "dungeons/4/0f", description = "Deku Tree (Ground Floor)" }
 map{ id = "dungeons/5/0f", description = "Dodongo's Cavern (Ground Floor)" }
 map{ id = "dungeons/5/1f", description = "Dodongo's Cavern (1st Floor)" }
@@ -128,6 +128,7 @@ map{ id = "inside/caves/parapa_town/mineshaft_1f", description = "Mineshaft (1st
 map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/rito_village/rito_village" }
 map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
+map{ id = "inside/caves/south_field/vah_naboris_fairy_cave", description = "Vah'Naboris Fairy Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
@@ -137,17 +138,20 @@ map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
+map{ id = "inside/houses/hyrule_town/bank", description = "Bank" }
 map{ id = "inside/houses/hyrule_town/fisher_house", description = "Fisher's House" }
 map{ id = "inside/houses/hyrule_town/inn", description = "Hyrule Town Inn" }
 map{ id = "inside/houses/hyrule_town/library", description = "Library" }
+map{ id = "inside/houses/hyrule_town/purple_house", description = "Purple House" }
 map{ id = "inside/houses/hyrule_town/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/hyrule_town/vase_house", description = "Vase House" }
-map{ id = "inside/houses/kakariko_village/bar_b1", description = "Milk Bar (Basement 1)" }
+map{ id = "inside/houses/hyrule_town/wooden_house", description = "Wooden House" }
 map{ id = "inside/houses/kakariko_village/blind_hideout", description = "Blind Hideout" }
 map{ id = "inside/houses/kakariko_village/chest_house", description = "Chest House" }
 map{ id = "inside/houses/kakariko_village/chicken_house", description = "Chicken House" }
 map{ id = "inside/houses/kakariko_village/grandma_house", description = "Grandma House" }
 map{ id = "inside/houses/kakariko_village/graveyard", description = "Graveyard" }
+map{ id = "inside/houses/kakariko_village/inn", description = "Kakarico Inn" }
 map{ id = "inside/houses/kakariko_village/library", description = "Library" }
 map{ id = "inside/houses/kakariko_village/mapper_shop", description = "Mapper's Shop" }
 map{ id = "inside/houses/kakariko_village/milk_bar", description = "Milk Bar" }
@@ -156,6 +160,10 @@ map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/north_field/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/north_west_castle/fortune_teller", description = "Fortune Teller" }
+map{ id = "inside/houses/north_west_castle/grey_house", description = "Grey House" }
+map{ id = "inside/houses/north_west_castle/poultry_shop", description = "Poultry Shop" }
+map{ id = "inside/houses/north_west_castle/red_house", description = "Red House (Potion Maker)" }
+map{ id = "inside/houses/north_west_castle/treasure_house", description = "Treasure House" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
@@ -167,10 +175,10 @@ map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl 
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
 map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
 map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
-map{ id = "inside/temple_time", description = "Temple of Time" }
+map{ id = "inside/temple_time", description = "Temple of Time (Unused)" }
 map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
-map{ id = "memory/00", description = "00MEMORY" }
-map{ id = "memory/01", description = "01MEMORY" }
+map{ id = "memory/00", description = "(Unused)" }
+map{ id = "memory/01", description = "(Unused)" }
 map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
@@ -215,13 +223,14 @@ map{ id = "out/e1", description = "E1 (Mountains)" }
 map{ id = "out/e2", description = "E2 (Hyrule Field)" }
 map{ id = "out/e3", description = "E3 (North West Castle)" }
 map{ id = "out/e4", description = "E4 (Hyrule Field)" }
-map{ id = "out/e6", description = "E6 (Hyrule Field, Thunder Temple)" }
+map{ id = "out/e5", description = "E5 (Hyrule Field, Vah'Naboris)" }
+map{ id = "out/e6", description = "E6 (Hyrule Field)" }
 map{ id = "out/e7", description = "E7 (Miracles Coast)" }
 map{ id = "out/e8", description = "E8 (Miracles Coast)" }
 map{ id = "out/f1", description = "F1 (Death Mountain, Dodongo's Cavern)" }
 map{ id = "out/f2", description = "F2 (Hyrule Field)" }
 map{ id = "out/f3", description = "F3 (North West Castle)" }
-map{ id = "out/f4", description = "F4 (Castle Courtyard)" }
+map{ id = "out/f4", description = "F4 (Hyrule Town)" }
 map{ id = "out/f5", description = "F5 (Hyrule Field)" }
 map{ id = "out/f6", description = "F6 (Hyrule Field)" }
 map{ id = "out/f7", description = "F7 (Great Swamp)" }
@@ -296,7 +305,6 @@ tileset{ id = "Absolute Dungeon 21", description = "Blue Purple" }
 tileset{ id = "Absolute Dungeon 22", description = "Turquoise" }
 tileset{ id = "Absolute Dungeon 23", description = "Light Yellow" }
 tileset{ id = "Full Hyrule", description = "Full Hyrule" }
-tileset{ id = "Outside_minimap", description = "Outside" }
 tileset{ id = "desert", description = "Gerudo Desert" }
 tileset{ id = "dungeon-minimap", description = "Dungeon minimap" }
 tileset{ id = "forest", description = "Forest" }
@@ -312,6 +320,7 @@ tileset{ id = "out/outside_special", description = "out/outside_special" }
 tileset{ id = "outside_additions", description = "Outside Additions" }
 tileset{ id = "outside_buildings", description = "Outside Buildings" }
 tileset{ id = "outside_main", description = "Outside Main" }
+tileset{ id = "outside_minimap", description = "Outside_minimap" }
 tileset{ id = "outside_special", description = "outside_special" }
 tileset{ id = "us", description = "US City" }
 
@@ -813,19 +822,19 @@ sprite{ id = "entities/Stones/stone_lg_light05", description = "Large Stone (Lig
 sprite{ id = "entities/Stones/stone_lg_light06", description = "Large Stone (Light World 06)" }
 sprite{ id = "entities/Stones/stone_lg_light07", description = "Large Stone (Light World 07)" }
 sprite{ id = "entities/Stones/stone_lg_light08", description = "Large Stone (Light World 08)" }
-sprite{ id = "entities/Stones/stone_sm_dark01", description = "Dark Stone 01" }
+sprite{ id = "entities/Stones/stone_sm_dark01", description = "Dark Stone 01 (Unused)" }
 sprite{ id = "entities/Stones/stone_sm_dark02", description = "Dark Stone 02" }
 sprite{ id = "entities/Stones/stone_sm_dark03", description = "Dark Stone 03" }
 sprite{ id = "entities/Stones/stone_sm_dark04", description = "Dark Stone 04" }
-sprite{ id = "entities/Stones/stone_sm_dark05", description = "Dark Skull 01" }
+sprite{ id = "entities/Stones/stone_sm_dark05", description = "Dark Skull 01 (Unused)" }
 sprite{ id = "entities/Stones/stone_sm_dark06", description = "Dark Skull 02" }
 sprite{ id = "entities/Stones/stone_sm_dark07", description = "Dark Skull 03" }
 sprite{ id = "entities/Stones/stone_sm_dark08", description = "Dark Skull 04" }
-sprite{ id = "entities/Stones/stone_sm_light01", description = "Light Stone 01" }
+sprite{ id = "entities/Stones/stone_sm_light01", description = "Light Stone 01 (Unused)" }
 sprite{ id = "entities/Stones/stone_sm_light02", description = "Light Stone 02" }
 sprite{ id = "entities/Stones/stone_sm_light03", description = "Light Stone 03" }
 sprite{ id = "entities/Stones/stone_sm_light04", description = "Light Stone 04" }
-sprite{ id = "entities/Stones/stone_sm_light05", description = "Light Skull 01" }
+sprite{ id = "entities/Stones/stone_sm_light05", description = "Light Skull 01 (Unused)" }
 sprite{ id = "entities/Stones/stone_sm_light06", description = "Light Skull 02" }
 sprite{ id = "entities/Stones/stone_sm_light07", description = "Light Skull 03" }
 sprite{ id = "entities/Stones/stone_sm_light08", description = "Light Skull 04" }
@@ -1130,10 +1139,9 @@ sprite{ id = "menus/dungeon_maps/map1", description = "Dungeon 1 minimap" }
 sprite{ id = "menus/dungeon_maps/map_1", description = "Map 1" }
 sprite{ id = "menus/dungeon_maps/map_2", description = "Map 2 " }
 sprite{ id = "menus/dungeon_maps/map_3", description = "Map 3" }
-sprite{ id = "menus/hero_head", description = "Hero head" }
-sprite{ id = "menus/hero_point", description = "Hero point" }
-sprite{ id = "menus/intro_alttp", description = "Introduction" }
-sprite{ id = "menus/map_cross", description = "Map cross" }
+sprite{ id = "menus/map/hero_head", description = "Hero head" }
+sprite{ id = "menus/map/hero_point", description = "Hero point" }
+sprite{ id = "menus/map/map_cross", description = "Map waypoint cross" }
 sprite{ id = "menus/options_cursor", description = "Options cursor" }
 sprite{ id = "menus/parchment/parchment_boss", description = "Parchment to display boss name" }
 sprite{ id = "menus/parchment/parchment_default", description = "Parchment to display info" }
@@ -1379,6 +1387,7 @@ music{ id = "inside/house_beach", description = "Beach House" }
 music{ id = "inside/house_kokiri", description = "Kokiri House" }
 music{ id = "inside/house_sword", description = "Sword House" }
 music{ id = "inside/house_zuna", description = "Zuna House" }
+music{ id = "inside/library", description = "Library" }
 music{ id = "inside/mask_salesman", description = "Masks Shop" }
 music{ id = "inside/minigame_1", description = "Minigames" }
 music{ id = "inside/minigame_alttp", description = "Minigames (ALTTP)" }
@@ -1561,6 +1570,8 @@ sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "jump", description = "Jump" }
 sound{ id = "lift", description = "lift" }
 sound{ id = "menu/cursor", description = "Cursor" }
+sound{ id = "menu/dialogue_end", description = "Dialogue end" }
+sound{ id = "menu/dialogue_letter", description = "Dialogue letter" }
 sound{ id = "menu/dir_left", description = "Left" }
 sound{ id = "menu/dir_right", description = "Right" }
 sound{ id = "menu/fileselect_created", description = "Fileselect created" }
@@ -1574,8 +1585,6 @@ sound{ id = "menu/option_modifyvalue", description = "Option" }
 sound{ id = "menu/pause_close", description = "Pause close" }
 sound{ id = "menu/pause_open", description = "Pause open" }
 sound{ id = "menu/select", description = "Select" }
-sound{ id = "message_end", description = "message_end" }
-sound{ id = "message_letter", description = "message_letter" }
 sound{ id = "monster_hurt", description = "monster_hurt" }
 sound{ id = "no_arrows_shoot", description = "No arrows shoot" }
 sound{ id = "objects/e_bush", description = "Bush" }
@@ -1633,9 +1642,9 @@ sound{ id = "wrong", description = "Wrong" }
 sound{ id = "zora", description = "zora" }
 
 item{ id = "_placeholder", description = "Placeholder" }
-item{ id = "_unused_blue_potion", description = "Blue Potion" }
-item{ id = "_unused_green_potion", description = "Green Potion" }
-item{ id = "_unused_red_potion", description = "Red Potion" }
+item{ id = "_unused_blue_potion", description = "Blue Potion (Unused)" }
+item{ id = "_unused_green_potion", description = "Green Potion (Unused)" }
+item{ id = "_unused_red_potion", description = "Red Potion (Unused)" }
 item{ id = "angler_key", description = "Angler key" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
 item{ id = "beak_of_stone", description = "Beak of stone" }
@@ -2007,6 +2016,7 @@ language{ id = "fr", description = "FranÃ§ais" }
 font{ id = "04b03", description = "04b03" }
 font{ id = "alttp", description = "alttp" }
 font{ id = "alttp_floors", description = "Alttp Floors" }
+font{ id = "alttp_ttf", description = "alttp_ttf" }
 font{ id = "capital", description = "Capital" }
 font{ id = "default", description = "default" }
 font{ id = "enter_command_mono", description = "Enter Command Mono" }
@@ -2123,8 +2133,36 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "Lucifer"
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "Lucifer", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/fisher_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/inn.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/library.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/library.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/temple_of_time.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/temple_of_time.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/vase_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/vase_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/wooden_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/wooden_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "Lucifer", }
 file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/north_west_castle/fortune_teller.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/fortune_teller.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/grey_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/grey_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/poultry_shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/poultry_shop.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/red_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/red_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/shop.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/trading_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/zora_king.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_village/zora_king.lua", author = "The Unknown", }
 file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "Lucifer", }
 file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "Lucifer", }
 file{ path = "maps/out/a1.dat", author = "Lucifer", }
@@ -2183,9 +2221,9 @@ file{ path = "maps/sanctuaries/shibo_nayru/1f.dat", author = "Linkff", }
 file{ path = "maps/sanctuaries/shibo_nayru/1f.lua", author = "Linkff", }
 file{ path = "musics/inside/pop_estrgg.ogg", author = "Francis Mechner", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
-file{ path = "scripts/automation", author = "Olivier Cléro", license = "BSD, GPL v3" }
-file{ path = "scripts/automation/automation.lua", author = "Olivier Cléro", license = "GPL v3" }
-file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Cléro", license = "BSD" }
+file{ path = "scripts/automation", author = "Olivier Clï¿½ro", license = "BSD, GPL v3" }
+file{ path = "scripts/automation/automation.lua", author = "Olivier Clï¿½ro", license = "GPL v3" }
+file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Clï¿½ro", license = "BSD" }
 file{ path = "scripts/coroutine_helper.lua", license = "GPL v3" }
 file{ path = "scripts/gfx_effects", author = "PhoenixII54, Stdgregwar", license = "GPL v3" }
 file{ path = "scripts/gfx_effects/distorsion.lua", author = "PhoenixII54", license = "GPL v3" }
@@ -2224,7 +2262,6 @@ file{ path = "scripts/menus/keyboardbox.lua", author = "Olivier ClÃ©ro", license
 file{ path = "scripts/menus/messagebox.lua", author = "Olivier ClÃ©ro", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "scripts/menus/pause_alttd/pause_inventory.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_map.lua", author = "Christopho, Olivier ClÃ©ro", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_options.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_quest.lua", author = "Christopho", license = "GPL v3" }

@@ -17,7 +17,7 @@ map:register_event("on_started", function()
 --	separator_manager:manage_map(map)
 
 	map:set_light(0)
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end)
 

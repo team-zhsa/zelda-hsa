@@ -1,4 +1,4 @@
--- Initialize Map behavior specific to this quest.
+-- initialise Map behavior specific to this quest.
 
 -- Variables
 local map_meta = sol.main.get_metatable("map")
@@ -11,6 +11,7 @@ local audio_manager = require("scripts/audio_manager")
 
 
 local transition_finished_callback
+
 function map_meta:wait_on_next_map_opening_transition_finished(callback)
   assert(type(callback) == 'function')
   transition_finished_callback = callback

@@ -20,7 +20,7 @@ local audio_manager = require("scripts/audio_manager")
 require("scripts/multi_events")
 require("scripts/states/running")
 
--- Event called when the game is initialized.
+-- Event called when the game is initialised.
 function item:on_created()
   self:set_savegame_variable("possession_pegasus_shoes")
   self:set_sound_when_brandished(nil)
@@ -93,8 +93,8 @@ function item:on_obtaining()
   audio_manager:play_sound("items/fanfare_item_extended")
 end
 
--- Initialize the metatable of appropriate entities to work with pegasus shoes.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with pegasus shoes.
+local function initialise_meta()
 
   local enemy_meta = sol.main.get_metatable("enemy")
   if enemy_meta.get_thrust_reaction ~= nil then
@@ -133,4 +133,4 @@ local function initialize_meta()
   end
 end
 
-initialize_meta()
+initialise_meta()

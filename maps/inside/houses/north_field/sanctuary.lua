@@ -43,7 +43,7 @@ function map:on_started()
       end
     end
   --end
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

@@ -15,7 +15,7 @@ local hero = map:get_hero()
 local timer = nil
 local hero_is_on_soil = false
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
   
   self:set_modified_ground("traversable")

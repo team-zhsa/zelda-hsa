@@ -34,7 +34,7 @@ function parchment:show(context, type, position, delay, text_line_1, text_line_2
   parchment.on_closing_callback = on_closing_callback
   parchment.on_closed_callback = on_closed_callback
 
-  parchment:initialize()
+  parchment:initialise()
 
   -- Show the menu.
   sol.menu.start(context, parchment, true)
@@ -114,7 +114,7 @@ function parchment:hide(animate)
 end
 
 -- Prepare all sprites and surfaces.
-function parchment:initialize()
+function parchment:initialise()
 
   parchment.started = false
   parchment.finished = false

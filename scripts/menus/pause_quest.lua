@@ -35,7 +35,7 @@ function quest_submenu:on_started()
   self.sprites_static_right = {}
   self.sprites_static_bottom = {}
 
-  -- Initialize the cursor.
+  -- initialise the cursor.
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 7)
   local column = index % 7

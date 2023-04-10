@@ -42,9 +42,7 @@ map:register_event("on_started", function()
 	else
     chest_11_small_key:set_enabled(true)
 	end
-  
 
-	map:set_light(1)
 end)
 
 
@@ -141,19 +139,43 @@ function switch_13_chest:on_activated()
   chest_11_small_key:set_enabled(true)
 end
 
-function sensor_7_door:on_activated()
-  map:set_doors_open("door_3_s", false)
-  map:set_doors_open("door_8_n", false)
+function sensor_8_door_1:on_activated()
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
+	sensor_3_door:set_enabled(true)
 end
 
-function sensor_7_door_2:on_activated()
-  map:set_doors_open("door_3_s", false)
-  map:set_doors_open("door_8_n", false)
+function sensor_8_door_2:on_activated()
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
+	sensor_3_door:set_enabled(true)
 end
+
+
+function sensor_8_door_3:on_activated()
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
+	sensor_3_door:set_enabled(true)
+end
+
+
+function sensor_8_door_4:on_activated()
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
+	sensor_3_door:set_enabled(true)
+end
+
+
+function sensor_8_door_5:on_activated()
+  map:set_doors_open("door_3_s", true)
+  map:set_doors_open("door_8_n", true)
+	sensor_3_door:set_enabled(true)
+end
+
 
 function sensor_3_door:on_activated()
   map:close_doors("door_3_s")
-  sensor_3_door:remove()
+  sensor_3_door:set_enabled(false)
 end
 
 function switch_3_door:on_activated()

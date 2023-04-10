@@ -10,7 +10,7 @@ local sprite_shadow
 local audio_manager = require("scripts/audio_manager")
 require("scripts/multi_events")
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 entity:register_event("on_created", function()
 
   entity:set_layer_independent_collisions(true)

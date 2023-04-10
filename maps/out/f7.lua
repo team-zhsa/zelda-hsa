@@ -15,7 +15,7 @@ map:register_event("on_started", function(map, destination)
   map:set_digging_allowed(true)
 end)
 
--- Initialize the music of the map
+-- initialise the music of the map
 function map:init_music()
 	audio_manager:play_music("outside/black_mist")
 end

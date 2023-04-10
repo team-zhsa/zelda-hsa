@@ -39,7 +39,7 @@ local function set_grabing_abilities_level(level)
   end
 end
 
--- Initialize the item.
+-- initialise the item.
 item:set_savegame_variable("possession_mirror_shield")
 function item:on_created()
 
@@ -77,7 +77,7 @@ function item:on_using()
   end
   item.is_used = true
 
-  -- Initialize the state.
+  -- initialise the state.
   game:set_ability("shield", 3)
   local shield_sprite = hero:get_sprite("shield")
 
@@ -130,8 +130,8 @@ function item:stop_using()
   set_grabing_abilities_level(1)
 end
 
--- Initialize the metatable of hero entity.
-local function initialize_hero_meta()
+-- initialise the metatable of hero entity.
+local function initialise_hero_meta()
 
   local hero_meta = sol.main.get_metatable("hero")
   if hero_meta.is_shield_protecting then
@@ -148,8 +148,8 @@ local function initialize_hero_meta()
   end
 end
 
--- Initialize the metatable of enemy entities to be able to set a reaction on protecting shield.
-local function initialize_enemy_meta()
+-- initialise the metatable of enemy entities to be able to set a reaction on protecting shield.
+local function initialise_enemy_meta()
 
   local enemy_meta = sol.main.get_metatable("enemy")
   if enemy_meta.get_shield_reaction then
@@ -199,5 +199,5 @@ local function initialize_enemy_meta()
   end
 end
 
-initialize_hero_meta()
-initialize_enemy_meta()
+initialise_hero_meta()
+initialise_enemy_meta()

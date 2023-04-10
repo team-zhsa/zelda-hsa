@@ -8,7 +8,7 @@ local properties = {
   life = 4,
   damage = 6,
   normal_speed = 32,
-  faster_speed = 64,
+  faster_speed = 48,
 }
 
 behavior:create(enemy, properties)

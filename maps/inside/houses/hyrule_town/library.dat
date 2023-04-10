@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "inside_world",
   tileset = "Absolute Dungeon 03",
-  music = "inside/house",
+  music = "inside/library",
 }
 
 tile{
@@ -777,7 +777,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
+  x = 96,
   y = 200,
   width = 16,
   height = 24,
@@ -786,7 +786,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 208,
   y = 200,
   width = 16,
   height = 24,
@@ -935,6 +935,42 @@ tile{
   width = 16,
   height = 32,
   pattern = "bookshelf.1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 200,
+  width = 32,
+  height = 24,
+  pattern = "window.2-2",
 }
 
 custom_entity{

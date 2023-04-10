@@ -5,12 +5,12 @@ function map_name:new(game)
   setmetatable(object, self)
   self.__index = self
   
-  self:initialize(game)
+  self:initialise(game)
 
   return object
 end
 
-function map_name:initialize(game)
+function map_name:initialise(game)
   -- Map Name control
   function game:show_map_name(name, display_extra)
 		sol.menu.stop(map_name)

@@ -7,8 +7,8 @@ local properties = {
   main_sprite = "enemies/dungeons/lizalfos_yellow",
   life = 10,
   damage = 8,
-  normal_speed = 48,
-  faster_speed = 72,
+  normal_speed = 32,
+  faster_speed = 48,
 }
 
 behavior:create(enemy, properties)

@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 local parchment = require("scripts/menus/parchment")
 
-local function initialize_dungeon_features(game)
+local function initialise_dungeon_features(game)
 
   if game.get_dungeon ~= nil then
     -- Already done.
@@ -289,9 +289,9 @@ local function initialize_dungeon_features(game)
 
     local room_name
     if floor >= 0 then
-      room_name = tostring(floor + 1) .. "f_" .. room
+      room_name = tostring(floor) .. "f_" .. room
     else
-      room_name = math.abs(floor) .. "b_" .. room
+      room_name = "b" .. math.abs(floor) .. "_" .. room
     end
 
     return "dungeon_" .. dungeon_index .. "_explored_" .. room_name
@@ -392,6 +392,6 @@ end
 
 -- Set up dungeon features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_dungeon_features)
+game_meta:register_event("on_started", initialise_dungeon_features)
 
 return true

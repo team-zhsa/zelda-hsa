@@ -14,7 +14,7 @@ local audio_manager = require("scripts/audio_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	game:show_map_name("finallis_island")
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
 	map:set_digging_allowed(true)
 end)
 

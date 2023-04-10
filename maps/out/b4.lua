@@ -35,7 +35,7 @@ function map:on_started(destination)
 end
 
 sensor_cutscene:register_event("on_activated", function()
-	if game:is_step_last("lost_woods_map_obtained") then
+	if game:is_step_last("lost_woods_mapper_met") then
     map:set_cinematic_mode(true, options)
     hero:freeze()
     hero:set_direction(1)

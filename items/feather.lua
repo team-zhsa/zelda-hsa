@@ -4,7 +4,7 @@ require("scripts/multi_events")
 require("scripts/ground_effects")
 local hero_meta = sol.main.get_metatable("hero")
 
--- Initialize parameters for custom jump.
+-- initialise parameters for custom jump.
 local is_hero_jumping = false
 local jump_duration = 600 -- Duration of jump in milliseconds.
 local max_height = 16 -- Height of jump in pixels.

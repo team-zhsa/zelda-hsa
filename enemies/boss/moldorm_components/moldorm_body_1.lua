@@ -14,7 +14,7 @@ local map = enemy:get_map()
 local hero = map:get_hero()
 local sprite
 
--- Event called when the enemy is initialized.
+-- Event called when the enemy is initialised.
 function enemy:on_created()
 
   sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

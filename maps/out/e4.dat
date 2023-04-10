@@ -10992,6 +10992,24 @@ tile{
   pattern = "915",
 }
 
+tile{
+  layer = 0,
+  x = 528,
+  y = 0,
+  width = 96,
+  height = 16,
+  pattern = "1000000",
+}
+
+tile{
+  layer = 0,
+  x = 560,
+  y = 16,
+  width = 32,
+  height = 16,
+  pattern = "1000000",
+}
+
 teletransporter{
   layer = 0,
   x = 1280,
@@ -11276,8 +11294,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 568,
-  y = 77,
+  x = 416,
+  y = 861,
   treasure_name = "random_central",
   sprite = "entities/Grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -13828,6 +13846,30 @@ enemy{
   direction = 0,
   breed = "outside/octorok_red",
   treasure_name = "random_central",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/e3",
+  destination = "_side",
+}
+
+destructible{
+  layer = 0,
+  x = 568,
+  y = 77,
+  treasure_name = "random_central",
+  sprite = "entities/Grass/grass01",
+  destruction_sound = "objects/e_bush",
+  weight = -1,
+  can_be_cut = true,
+  damage_on_enemies = 0,
+  ground = "grass",
 }
 
 tile{

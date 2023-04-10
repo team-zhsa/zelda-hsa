@@ -677,7 +677,8 @@ Tu as obtenu le Bouclier du
 Héros !$0
 
 Utilise-le pour te protéger des
-attaques !
+attaques en appuyant sur
+\[controller_r\] !
 ]],
 }
 
@@ -752,9 +753,9 @@ dialog{
 Tu as obtenu la Lanterne !$0
 Maintenant tu peux allumer les
 torches en appuyant sur le bouton
-Y pour te frayer un chemin dans
-l'obscurité. Mais surveille ta
-barre de magie !
+\[controller_y\] pour te frayer un chemin
+dans l'obscurité. Mais surveille
+ta barre de magie !
 ]],
 }
 
@@ -1058,7 +1059,8 @@ Tu as obtenu les Bottes de
 Pégase. $0 Maintenant tu peux
 lancer une Attaque Eclair
 Dévastatrice ! Maintiens appuyé
-le bouton A un court instant.
+le bouton \[controller_a\] un court
+instant.
 ]],
 }
 
@@ -1407,7 +1409,7 @@ dialog{
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
 dans l'épée, maintiens le bouton
-B appuyé, puis relâche-le en
+\[controller_b\] appuyé, puis relâche-le en
 utilisant la technique secrète
 transmise par notre peuple.
 ]],
@@ -2492,7 +2494,16 @@ redonne de la vie.
 }
 
 dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_sahasrahla",
+  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
+  text = [[
+Bonjour, jeune héros !
+Choisis ce que tu aimes.
+
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.offer_sword",
   text = [[
 Des rumeurs racontent que des
 monstres sont apparus un peu
@@ -2510,29 +2521,11 @@ balader tout seul, prends ceci !
 }
 
 dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
-  text = [[
-Bonjour, jeune héros !
-Choisis ce que tu aimes.
-
-]],
-}
-
-dialog{
   id = "maps.houses.east_castle.blacksmith.product_arrows",
   text = [[
 Des flèches !
 Elles sont d'excellentes armes
 pour tirer de loin !
-]],
-}
-
-dialog{
-  id = "maps.houses.east_castle.blacksmith.product_bombs",
-  text = [[
-Des bombes !
-Savais-tu que tu pouvais soulever
-la bombe que tu as placée ?
 ]],
 }
 
@@ -2545,10 +2538,26 @@ tu es mal en point.
 }
 
 dialog{
+  id = "maps.houses.east_castle.blacksmith.product_shield",
+  text = [[
+Un bouclier pour te protéger
+des attaques des ennemis.
+]],
+}
+
+dialog{
   id = "maps.houses.east_castle.blacksmith.sword_upgrade_no",
   text = [[
 Nous sommes toujours ici.
 Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_not_ready",
+  text = [[
+Ton épée est en train d'être
+trempée, reviens plus tard !
 ]],
 }
 
@@ -3084,14 +3093,39 @@ Je ne suis pas intéressé.
 }
 
 dialog{
-  id = "maps.houses.hyrule_castle.waking_up",
+  id = "maps.houses.hyrule_castle.commands_direction",
   text = [[
-$v, $v !$0
-Réveille-toi ! $0
+Appuie sur \[controller_dpad\] pour te
+déplacer.
+]],
+}
 
-Impa te cherche, elle veut te
-parler. Elle t'attend dans la
-cour du château, viens vite !
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_1",
+  text = [[
+$v !$0 $v !$0
+Debout là-dedans !$0
+Réveille-toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_2",
+  text = [[
+Allez !$0 Il est déjà dix heures !$0
+Tu vas quand même pas rester
+au lit jusqu'à midi quand même !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_castle.waking_up_3",
+  text = [[
+Impa t'attend depuis ce matin.$0
+Elle a des choses importantes
+à te dire...
+On te retrouve dans la cour du
+château, viens vite !
 ]],
 }
 
@@ -3999,7 +4033,7 @@ Sacré, dans les Bois Perdus.
 On raconte que tous ceux qui y
 sont rentrés n'en sont jamais
 ressortis et se sont transformés
-en Stalfos...$0 Quoi qu'il en
+en Skull Kid...$0 Quoi qu'il en
 soit, je connais quelqu'un qui
 peut t'aider. $0Je t'ai indiqué
 l'endroit sur la carte.
@@ -4204,12 +4238,57 @@ dialog{
 }
 
 dialog{
-  id = "maps.houses.north_west_castle.storyteller.welcome_question",
+  id = "maps.houses.north_west_castle.grey_house.welcome_no_master_sword",
   text = [[
-Ce n'est pas une
-commode... Quoi ?
-Tu avais remarqué ?
-... OK !
+Les monstres commencent à
+s'agiter dehors...$0
+Je sens que quelque chose de
+mauvais va arriver...$0
+Bref, fais attention à toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.grey_house.welcome_no_world_map",
+  text = [[
+Salut !$0 Je suis le propriétaire
+du domaine.$0
+Le village Cocorico ?$0
+Suis le chemin vers l'ouest,
+c'est le plus rapide.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.shop.merchant_welcome",
+  text = [[
+Bonjour. Choisis ce que tu
+aimes. Appuie sur A.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.shop.product_arrows",
+  text = [[
+Des flèches pour éliminer à
+distance tes ennemis.
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.shop.product_bombs",
+  text = [[
+Des bombes !
+Savais-tu que tu pouvais soulever
+la bombe que tu as placée ?
+]],
+}
+
+dialog{
+  id = "maps.houses.north_west_castle.shop.product_potion",
+  text = [[
+Une potion bleue pour regagner
+de la magie et de la vie !
 ]],
 }
 
@@ -4491,13 +4570,6 @@ Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integ
 Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat.
 Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique.
 Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-]],
-}
-
-dialog{
-  id = "maps.kaepora_gaebora.owl_13",
-  question = "1",
-  text = [[
 ]],
 }
 
@@ -4970,6 +5042,25 @@ C'est un rubis, très cher.
 }
 
 dialog{
+  id = "maps.out.hyrule_town.shop.welcome_merchant_bombs",
+  text = [[
+Salam jeune héros !
+Voici des bombes artisanales
+pas cher !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.shop.welcome_merchant_bombs_no_bag",
+  text = [[
+Salam jeune héros !$0
+Je n'ai malheureusement pas
+encore reçu mon stock.
+Reviens plus tard !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.shop.wine",
   text = [[
 Voici du bon vin rouge !
@@ -4991,6 +5082,60 @@ dialog{
   text = [[
 Clé de produit :
 $v
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_3",
+  skip = "all",
+  text = [[
+Nord-Est : La forge
+Est : Temple du Temps
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_4",
+  skip = "all",
+  text = [[
+Ici se trouve le centre
+géographique d'Hyrule
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_5",
+  skip = "all",
+  text = [[
+Quartier Nord-Ouest
+La poissonnerie
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_6",
+  skip = "all",
+  text = [[
+Quartier Nord-Est
+La cour du lavoir
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_7",
+  skip = "all",
+  text = [[
+Quatier Sud-Est
+La place du marché
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_8",
+  skip = "all",
+  text = [[
+Quartier Sud-Ouest
+L'esplanade
 ]],
 }
 
@@ -5616,9 +5761,21 @@ Tu comprendras plus tard !
 
 dialog{
   id = "maps.out.north_west_castle.sign_1",
+  skip = "all",
   text = [[
-<--Vill. Cocorico
-Domaine Zora-->
+Est : La Forge
+Ouest : Village Cocorico
+Nord : La Poulaillerie
+]],
+}
+
+dialog{
+  id = "maps.out.north_west_castle.sign_2",
+  skip = "all",
+  text = [[
+Poulaillerie du Château
+Vente de volaille tous les jours
+de 8h à 15h
 ]],
 }
 
@@ -5801,7 +5958,10 @@ Ouest : Plages de la Jument
 
 dialog{
   id = "maps.out.south_field.sign_1",
+  skip = "all",
   text = [[
+Boutique de Lavio
+Ouverte 24h sur 24
 ]],
 }
 
@@ -5832,6 +5992,19 @@ Est : Forêt de Firone
 }
 
 dialog{
+  id = "maps.out.south_field.sign_2",
+  skip = "all",
+  text = [[
+Tiens, voilà un
+flacon !
+
+Le prendre ?
+Oui
+Non
+]],
+}
+
+dialog{
   id = "maps.out.south_field.sign_3",
   text = [[
 Nord : Forêt hantée
@@ -5858,10 +6031,33 @@ Ouest : Village Cocorico
 
 dialog{
   id = "maps.out.south_field.sign_6",
+  skip = "all",
   text = [[
 Nord : Plaine
 Plus au nord : Ville d'Hyrule
 Sud : Marais
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_7",
+  skip = "all",
+  text = [[
+Nord : Boutique de Lavio
+Plus au Nord : Château
+Est : Fleuriste
+Sud : Marais
+Ouest : Cartographe des Bois
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_8",
+  skip = "all",
+  text = [[
+Nord : Vah'Naboris
+Sud-Est : Marais
+Sud-Ouest : Cartographe des Bois
 ]],
 }
 
@@ -6170,19 +6366,6 @@ Va au ranch, et
 si tu reviens,
 tu auras une
 récompense!
-]],
-}
-
-dialog{
-  id = "quest.potion.bottle",
-  question = "1",
-  text = [[
-Tiens, voilà un
-flacon !
-
-Le prendre ?
-Oui
-Non
 ]],
 }
 
@@ -7915,14 +8098,6 @@ parlent
 du Poisson-Rêve.
 Tu en sauras    
 sûrement plus...
-]],
-}
-
-dialog{
-  id = "scripts.misc.world.mapbound",
-  text = [[
-Vous ne pouvez pas
-aller plus loin.
 ]],
 }
 

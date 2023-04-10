@@ -15,7 +15,7 @@ local audio_manager = require("scripts/audio_manager")
 function item:on_created()
 	self:set_assignable(true)
 	self:set_savegame_variable("possession_magic_mirror")
-  -- Initialize the properties of your item here,
+  -- initialise the properties of your item here,
   -- like whether it can be saved, whether it has an amount
   -- and whether it can be assigned.
 end
