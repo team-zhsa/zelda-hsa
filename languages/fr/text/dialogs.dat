@@ -677,7 +677,8 @@ Tu as obtenu le Bouclier du
 Héros !$0
 
 Utilise-le pour te protéger des
-attaques !
+attaques en appuyant sur
+\[controller_r\] !
 ]],
 }
 
@@ -752,9 +753,9 @@ dialog{
 Tu as obtenu la Lanterne !$0
 Maintenant tu peux allumer les
 torches en appuyant sur le bouton
-Y pour te frayer un chemin dans
-l'obscurité. Mais surveille ta
-barre de magie !
+\[controller_y\] pour te frayer un chemin
+dans l'obscurité. Mais surveille
+ta barre de magie !
 ]],
 }
 
@@ -1058,7 +1059,8 @@ Tu as obtenu les Bottes de
 Pégase. $0 Maintenant tu peux
 lancer une Attaque Eclair
 Dévastatrice ! Maintiens appuyé
-le bouton A un court instant.
+le bouton \[controller_a\] un court
+instant.
 ]],
 }
 
@@ -1407,7 +1409,7 @@ dialog{
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
 dans l'épée, maintiens le bouton
-B appuyé, puis relâche-le en
+\[controller_b\] appuyé, puis relâche-le en
 utilisant la technique secrète
 transmise par notre peuple.
 ]],
@@ -2492,7 +2494,16 @@ redonne de la vie.
 }
 
 dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_sahasrahla",
+  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
+  text = [[
+Bonjour, jeune héros !
+Choisis ce que tu aimes.
+
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.offer_sword",
   text = [[
 Des rumeurs racontent que des
 monstres sont apparus un peu
@@ -2510,29 +2521,11 @@ balader tout seul, prends ceci !
 }
 
 dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
-  text = [[
-Bonjour, jeune héros !
-Choisis ce que tu aimes.
-
-]],
-}
-
-dialog{
   id = "maps.houses.east_castle.blacksmith.product_arrows",
   text = [[
 Des flèches !
 Elles sont d'excellentes armes
 pour tirer de loin !
-]],
-}
-
-dialog{
-  id = "maps.houses.east_castle.blacksmith.product_bombs",
-  text = [[
-Des bombes !
-Savais-tu que tu pouvais soulever
-la bombe que tu as placée ?
 ]],
 }
 
@@ -2545,10 +2538,26 @@ tu es mal en point.
 }
 
 dialog{
+  id = "maps.houses.east_castle.blacksmith.product_shield",
+  text = [[
+Un bouclier pour te protéger
+des attaques des ennemis.
+]],
+}
+
+dialog{
   id = "maps.houses.east_castle.blacksmith.sword_upgrade_no",
   text = [[
 Nous sommes toujours ici.
 Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.blacksmith.sword_upgrade_not_ready",
+  text = [[
+Ton épée est en train d'être
+trempée, reviens plus tard !
 ]],
 }
 
@@ -3086,8 +3095,8 @@ Je ne suis pas intéressé.
 dialog{
   id = "maps.houses.hyrule_castle.commands_direction",
   text = [[
-Appuie sur les flèches
-directionnelles pour te déplacer.
+Appuie sur \[controller_dpad\] pour te
+déplacer.
 ]],
 }
 
@@ -5098,7 +5107,6 @@ dialog{
   text = [[
 Ici se trouve le centre
 géographique d'Hyrule
-1\[arrow_down\]2\[arrow_up\]
 ]],
 }
 
@@ -8071,14 +8079,6 @@ parlent
 du Poisson-Rêve.
 Tu en sauras    
 sûrement plus...
-]],
-}
-
-dialog{
-  id = "scripts.misc.world.mapbound",
-  text = [[
-Vous ne pouvez pas
-aller plus loin.
 ]],
 }
 
