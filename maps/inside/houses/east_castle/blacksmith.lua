@@ -34,13 +34,34 @@ blacksmith_dialog_4:register_event("on_interaction", function()
   blacksmith_interaction()
 end)
 
+function sensor_shop_welcome:on_activated()
+  game:start_dialog("maps.houses.east_castle.blacksmith.merchant_welcome")
+  sensor_shop_welcome:remove()
+end
+
+function sensor_welcome:on_activated()
+  game:start_dialog("maps.houses.east_castle.blacksmith.welcome")
+  sensor_shop_welcome:remove()
+end
 
 function blacksmith_interaction()
   if game:is_step_last("lamp_obtained") then
-    game:start_dialog("maps.houses.east_castle.blacksmith.merchant_sahasrahla", function()
+    game:start_dialog("maps.houses.east_castle.blacksmith.offer_sword", function()
       hero:start_treasure("sword", 1)
       game:set_step_done("sword_obtained")
     end)
+  elseif game:is_step_done("dungeon_7_completed") and game:get_item("sword"):get_variant(2) then
+    game:start_dialog("maps.houses.east_castle.blacksmith.sword_upgrade_offer", function(answer)
+      if answer == 1 then
+        game:start_dialog("maps.houses.east_castle.blacksmith.sword_yes", function()
+          game:get_item("sword"):set_variant(0)
+          game:set_value("sword_being_upgraded", true)
+        end)
+      else game:start_dialog("maps.houses.east_castle.blacksmith.sword_no")
+      end
+    end)
+  elseif game:get_value("sword_being_upgraded", true) then
+    game:start_dialog("maps.houses.east_castle.blacksmith.sword_upgrade_not_ready")
   end
 end
 
