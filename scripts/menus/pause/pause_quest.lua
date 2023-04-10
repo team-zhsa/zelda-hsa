@@ -37,12 +37,15 @@ function quest_submenu:on_started()
   self.caption_text_keys = {}
 
  	local item_sprite = sol.sprite.create("entities/items")
+
+  -- Set the title.
+  self:set_title(sol.language.get_string("quest_status.title"))
+
   -- initialise the cursor.
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 7)
   local column = index % 7
   self:set_cursor_position(row, column)
-
 
   -- Load Items.
   for i,item_name in ipairs(item_names_static_left) do
@@ -98,7 +101,7 @@ function quest_submenu:on_draw(dst_surface)
     local x = 64
     for j = 0, 2 do
       if x == 1 and x == 1 then
-        x=x+1
+        x = x + 1
       end
       k = k + 1
       if item_names_static_left[k] ~= nil then
@@ -336,24 +339,24 @@ function quest_submenu:set_cursor_position(row, column)
   local item_name = self:get_item_name(row, column)
   if item_name =="piece_of_heart" then
       local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
-      self:set_caption("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
+      self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
       self.game:set_custom_command_effect("action", "info")
   elseif item_name =="seashells_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      self:set_caption("inventory.caption.item.seashells_counter.1")
+      self:set_caption_key("inventory.caption.item.seashells_counter.1")
       self.game:set_custom_command_effect("action", "info")
     end
   elseif item_name =="photos_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      self:set_caption("inventory.caption.item.photos_counter.1")
+      self:set_caption_key("inventory.caption.item.photos_counter.1")
       self.game:set_custom_command_effect("action", "info")
     end
   elseif item_name =="golden_leaves_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      self:set_caption("inventory.caption.item.golden_leaves_counter.1")
+      self:set_caption_key("inventory.caption.item.golden_leaves_counter.1")
       self.game:set_custom_command_effect("action", "info")
    end
   else
@@ -361,13 +364,13 @@ function quest_submenu:set_cursor_position(row, column)
     local variant = item and item:get_variant()
     local item_icon_opacity = 128
     if variant > 0 then
-      self:set_caption("inventory.caption.item." .. item_name .. "." .. variant)
+      self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
       self.game:set_custom_command_effect("action", "info")
       if item:is_assignable() then
         item_icon_opacity = 255
       end
     else
-      self:set_caption(nil)
+      self:set_caption_key(nil)
       self.game:set_custom_command_effect("action", nil)
     end
     self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)

@@ -43,6 +43,9 @@ function inventory_submenu:on_started()
   self.counters = {}
   self.menu_ocarina = true
 
+  -- Set the title.
+  self:set_title(sol.language.get_string("inventory.title_inventory"))
+  
   -- initialise the cursor
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
   local row = math.floor(index / 4)
@@ -91,7 +94,7 @@ function inventory_submenu:on_draw(dst_surface)
   -- Draw the cursor caption.
   self:draw_caption(dst_surface)
 
-  --Draw each inventory static item.
+  -- Draw each inventory static item.
   local y = 90
   local k = 0
   local x = 64
@@ -236,13 +239,13 @@ function inventory_submenu:set_cursor_position(row, column)
   local variant = item and item:get_variant()
   local item_icon_opacity = 128
   if variant > 0 then
-    self:set_caption("inventory.caption.item." .. item_name .. "." .. variant)
+    self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
       item_icon_opacity = 255
     end
   else
-    self:set_caption(nil)
+    self:set_caption_key(nil)
     self.game:set_custom_command_effect("action", nil)
   end
   self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)

@@ -4574,13 +4574,6 @@ Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi trist
 }
 
 dialog{
-  id = "maps.kaepora_gaebora.owl_13",
-  question = "1",
-  text = [[
-]],
-}
-
-dialog{
   id = "maps.out.cordinia_town.shop.bombs",
   text = [[
 Trois bombes, pour tout démolir !
@@ -5965,7 +5958,10 @@ Ouest : Plages de la Jument
 
 dialog{
   id = "maps.out.south_field.sign_1",
+  skip = "all",
   text = [[
+Boutique de Lavio
+Ouverte 24h sur 24
 ]],
 }
 
@@ -5996,6 +5992,19 @@ Est : Forêt de Firone
 }
 
 dialog{
+  id = "maps.out.south_field.sign_2",
+  skip = "all",
+  text = [[
+Tiens, voilà un
+flacon !
+
+Le prendre ?
+Oui
+Non
+]],
+}
+
+dialog{
   id = "maps.out.south_field.sign_3",
   text = [[
 Nord : Forêt hantée
@@ -6022,10 +6031,33 @@ Ouest : Village Cocorico
 
 dialog{
   id = "maps.out.south_field.sign_6",
+  skip = "all",
   text = [[
 Nord : Plaine
 Plus au nord : Ville d'Hyrule
 Sud : Marais
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_7",
+  skip = "all",
+  text = [[
+Nord : Boutique de Lavio
+Plus au Nord : Château
+Est : Fleuriste
+Sud : Marais
+Ouest : Cartographe des Bois
+]],
+}
+
+dialog{
+  id = "maps.out.south_field.sign_8",
+  skip = "all",
+  text = [[
+Nord : Vah'Naboris
+Sud-Est : Marais
+Sud-Ouest : Cartographe des Bois
 ]],
 }
 
@@ -6334,19 +6366,6 @@ Va au ranch, et
 si tu reviens,
 tu auras une
 récompense!
-]],
-}
-
-dialog{
-  id = "quest.potion.bottle",
-  question = "1",
-  text = [[
-Tiens, voilà un
-flacon !
-
-Le prendre ?
-Oui
-Non
 ]],
 }
 
