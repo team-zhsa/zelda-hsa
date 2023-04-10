@@ -14,9 +14,14 @@ function map_submenu:on_started()
   submenu.on_started(self)
 	self.game:set_hud_enabled(false)
   self.dungeon = self.game:get_dungeon()
+
+  -- Set the title.
+  self:set_title(sol.language.get_string("map.title"))
+
+
   if self.dungeon == nil then
     -- Not in a dungeon: show the world map.
-    self:set_caption("map.caption.world_map")
+    self:set_caption_key("map.caption.world_map")
 
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     if self.game:is_in_outside_world() then
@@ -49,7 +54,7 @@ function map_submenu:on_started()
     self.dungeon_index = self.game:get_dungeon_index()
 
     -- Caption text.
-    self:set_caption("map.caption.dungeon_name_" .. self.dungeon_index)
+    self:set_caption_key("map.caption.dungeon_name_" .. self.dungeon_index)
 
     -- Item icons.
     self.dungeon_map_background_img = sol.surface.create("menus/dungeon_map_background.png")

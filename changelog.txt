@@ -325,6 +325,8 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	CHG: Renamed unused files.
 	CHG: Replaced the pause world map background by rescaling the scrollable one (#24).
 	CHG: Replaced "initialize" by "initialise" to keep UK spelling.
+	CHG: Splitted the pause menu background in multiple rows (#117).
+	CHG: Drawn pause menu title captions separately to add support for translations (#118).
 	FIX: Fixed pot weights in the Forest Temple (#3).
 	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
 	FIX: Fixed a carpet border tile being resizable in both directions (#108).
@@ -336,9 +338,11 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	FIX: Fixed a light source being visible in the lamp cave (#111).
 	FIX: Fixed possible crash at the beginning of the game when moving with the analog stick (#83).
 	FIX: Fixed the Lost Woods mapper step not being registered as done (#113).
+	FIX: Fixed the miniboss of the Forest Temple (B3) death sequence not being triggered (#115).
 	FIX: Fixed a wall being visible in the Fire Temple (B2) at door 35N (#116).
 	REM: Removed ignored files.
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
+	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -350,7 +354,6 @@ Alpha 1.16.1 (started 29/03/23) "Mackerel Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
-	TDO: Fix the miniboss of the Forest Temple (B3) death sequence not being triggered (#115).
 
 Alpha 1.16.2 (//23) "Mackerel Update":
 	TDO: Add night entities to maps (#67).
