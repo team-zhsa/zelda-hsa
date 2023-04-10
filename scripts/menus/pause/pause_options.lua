@@ -1,7 +1,7 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
 local shader_manager = require("scripts/shader_manager")
-
+local text_fx_helper = require("scripts/text_fx_helper")
 local options_submenu = submenu:new()
 
 function options_submenu:on_started()
@@ -15,8 +15,9 @@ function options_submenu:on_started()
   -- Set the title.
   self:set_title(sol.language.get_string("options.title"))
 
-  self.column_color = { 255, 255, 255}
-  self.text_color = { 115, 59, 22 }
+  self.column_color = { 224, 224, 224}
+  self.column_stroke_color = { 55, 55, 25}
+  self.text_color = { 224, 224, 224 }
 
   self.video_mode_label_text = sol.text_surface.create{
     horizontal_alignment = "left",
@@ -183,9 +184,9 @@ function options_submenu:on_draw(dst_surface)
   -- Text.
   self.video_mode_label_text:draw(dst_surface)
   self.video_mode_text:draw(dst_surface)
-  self.command_column_text:draw(dst_surface)
-  self.keyboard_column_text:draw(dst_surface)
-  self.joypad_column_text:draw(dst_surface)
+  text_fx_helper:draw_text_with_stroke(dst_surface, self.command_column_text, self.column_stroke_color)
+  text_fx_helper:draw_text_with_stroke(dst_surface, self.keyboard_column_text, self.column_stroke_color)
+  text_fx_helper:draw_text_with_stroke(dst_surface, self.joypad_column_text, self.column_stroke_color)
   self.commands_surface:draw_region(0, self.commands_visible_y, 215, 84, dst_surface)
   
   -- Arrows.

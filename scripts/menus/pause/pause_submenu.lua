@@ -162,7 +162,7 @@ function submenu:draw_caption(dst_surface)
 			text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
 		else
 			-- If two lines.
-			local line_spacing = 2 --self.font_size / 2 + 2
+			local line_spacing = 0 --self.font_size / 2 + 2
 
 			self.caption_text_1:set_xy(center_x, caption_center_y - self.font_size)
 			self.caption_text_2:set_xy(center_x, caption_center_y + line_spacing)
