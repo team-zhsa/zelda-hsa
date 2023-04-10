@@ -28,8 +28,8 @@ local item_names_static_bottom = {
 function quest_submenu:on_started()
   self.quest_items_surface = sol.surface.create(320, 240)
   submenu.on_started(self)
-  self.cursor_sprite = sol.sprite.create("menus/pause_cursor")
-  self.hearts = sol.surface.create("menus/pieces_of_heart.png")
+  self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+  self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
   self.counters = {}
   self.sprites_static_left = {}
   self.sprites_static_right = {}

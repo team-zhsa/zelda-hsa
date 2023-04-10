@@ -36,7 +36,7 @@ local item_names_static = {
 
 function inventory_submenu:on_started()
   submenu.on_started(self)
-  self.cursor_sprite = sol.sprite.create("menus/pause_cursor")
+  self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
   self.sprites_assignables = {}
   self.sprites_static = {}
   self.captions = {}
