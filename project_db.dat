@@ -128,6 +128,7 @@ map{ id = "inside/caves/parapa_town/mineshaft_1f", description = "Mineshaft (1st
 map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/rito_village/rito_village" }
 map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
+map{ id = "inside/caves/south_field/vah_naboris_fairy_cave", description = "Vah'Naboris Fairy Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
@@ -222,8 +223,8 @@ map{ id = "out/e1", description = "E1 (Mountains)" }
 map{ id = "out/e2", description = "E2 (Hyrule Field)" }
 map{ id = "out/e3", description = "E3 (North West Castle)" }
 map{ id = "out/e4", description = "E4 (Hyrule Field)" }
-map{ id = "out/e5", description = "E5 (Hyrule Field)" }
-map{ id = "out/e6", description = "E6 (Hyrule Field, Thunder Temple)" }
+map{ id = "out/e5", description = "E5 (Hyrule Field, Vah'Naboris)" }
+map{ id = "out/e6", description = "E6 (Hyrule Field)" }
 map{ id = "out/e7", description = "E7 (Miracles Coast)" }
 map{ id = "out/e8", description = "E8 (Miracles Coast)" }
 map{ id = "out/f1", description = "F1 (Death Mountain, Dodongo's Cavern)" }
@@ -2262,7 +2263,6 @@ file{ path = "scripts/menus/keyboardbox.lua", author = "Olivier Cléro", license
 file{ path = "scripts/menus/messagebox.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "scripts/menus/pause_alttd/pause_inventory.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_map.lua", author = "Christopho, Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_options.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause_alttd/pause_quest.lua", author = "Christopho", license = "GPL v3" }
