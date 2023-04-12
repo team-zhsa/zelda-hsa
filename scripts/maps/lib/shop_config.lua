@@ -28,11 +28,11 @@ return {
     dialog_id = "bomb",
     buy_callback = function(map)
       local item_bombs_bag = map:get_game():get_item("bombs_bag")
-      local item_bombs_counter = map:get_game():get_item("bombs_counter")
+      local item_bomb_counter = map:get_game():get_item("bomb_counter")
       if item_bombs_bag:get_variant() == 0 then
         item_bombs_bag:set_variant(1)
       end  
-      item_bombs_counter:add_amount(10)
+      item_bomb_counter:add_amount(10)
     end,  
     activation_condition = function(map)
       local item_shovel = map:get_game():get_item("shovel")

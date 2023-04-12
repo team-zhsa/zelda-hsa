@@ -25,7 +25,7 @@ local treasure_savegame_variables = {
   "possession_fire_rod",
   "possession_wind_rod",
   "possession_ice_rod",
-  "possession_bombs_counter",
+  "possession_bomb_counter",
   "possession_somaria_cane",
   "possession_hammer",
   "possession_flippers",

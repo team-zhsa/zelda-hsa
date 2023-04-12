@@ -7,7 +7,7 @@ local item_names_assignable = {
   "bow",
 	"bow",
   "bow",
-  "bombs_counter", -- Row 2
+  "bomb_counter", -- Row 2
 	"shovel",
   "hookshot",
 	"bow",
@@ -16,7 +16,7 @@ local item_names_assignable = {
 	"hammer", -- Row 3
 	"feather",
 	"_placeholder", -- Iron boots
-	"magic_powders_counter",
+	"magic_powder_counter",
 	"green_tunic",
 	"blue_tunic",
 	"_placeholder", -- Row 4 -- Magic Cape

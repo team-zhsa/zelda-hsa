@@ -5,8 +5,8 @@ local sound_timer
 
 function item:on_created()
 
-  item:set_savegame_variable("possession_bombs_counter")
-  item:set_amount_savegame_variable("amount_bombs_counter")
+  item:set_savegame_variable("possession_bomb_counter")
+  item:set_amount_savegame_variable("amount_bomb_counter")
   item:set_assignable(true)
 end
 

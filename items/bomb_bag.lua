@@ -20,15 +20,15 @@ end
 function item:on_variant_changed(variant)
 
   -- The quiver determines the maximum amount of the bow.
-  local bombs_counter = self:get_game():get_item("bombs_counter")
+  local bomb_counter = self:get_game():get_item("bomb_counter")
   if variant == 0 then
-    bombs_counter:set_max_amount(0)
+    bomb_counter:set_max_amount(0)
   else
     local max_amounts = {20, 30, 40}
     local max_amount = max_amounts[variant]
     -- Set the max value of the bow counter.
-    bombs_counter:set_variant(1)
-    bombs_counter:set_max_amount(max_amount)
+    bomb_counter:set_variant(1)
+    bomb_counter:set_max_amount(max_amount)
   end
   
 end
@@ -36,8 +36,8 @@ end
 function item:on_obtaining(variant, savegame_variable)
 
   if variant > 0 then
-    local bombs_counter = self:get_game():get_item("bombs_counter")
-    bombs_counter:set_amount(bombs_counter:get_max_amount())
+    local bomb_counter = self:get_game():get_item("bomb_counter")
+    bomb_counter:set_amount(bomb_counter:get_max_amount())
   end
   
 end

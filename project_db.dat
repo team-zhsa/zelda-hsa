@@ -1190,6 +1190,8 @@ sprite{ id = "npc/deku", description = "Deku" }
 sprite{ id = "npc/dog", description = "Dog" }
 sprite{ id = "npc/drunk_man", description = "Drunk Man" }
 sprite{ id = "npc/fat_fairy", description = "Fat Fairy" }
+sprite{ id = "npc/fisher_blue", description = "Blue Fisher" }
+sprite{ id = "npc/fisher_green", description = "Green Fisher" }
 sprite{ id = "npc/flute_boy", description = "Flute Boy" }
 sprite{ id = "npc/fortune_teller_purple", description = "Fortune teller" }
 sprite{ id = "npc/fortune_teller_red", description = "Red Fortune teller" }
@@ -1663,8 +1665,6 @@ sound{ id = "wrong", description = "Wrong" }
 sound{ id = "zora", description = "zora" }
 
 item{ id = "_placeholder", description = "Placeholder" }
-item{ id = "_unused_blue_potion", description = "Blue Potion (Unused)" }
-item{ id = "_unused_green_potion", description = "Green Potion (Unused)" }
 item{ id = "_unused_red_potion", description = "Red Potion (Unused)" }
 item{ id = "angler_key", description = "Angler key" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
@@ -1675,7 +1675,7 @@ item{ id = "blue_key", description = "Blue Key" }
 item{ id = "blue_tunic", description = "Blue tunic" }
 item{ id = "bomb", description = "Bomb (1 / 3 / 8 / 10)" }
 item{ id = "bomb_bag", description = "Bombs bag" }
-item{ id = "bombs_counter", description = "Bombs counter" }
+item{ id = "bomb_counter", description = "Bombs counter" }
 item{ id = "book_of_mudora", description = "Book of Mudora" }
 item{ id = "boomerang", description = "Boomerang" }
 item{ id = "boss_key", description = "Boss key" }
@@ -1694,7 +1694,7 @@ item{ id = "feather", description = "Feather" }
 item{ id = "fire_rod", description = "Fire rod" }
 item{ id = "flippers", description = "Flippers" }
 item{ id = "golden_leaf", description = "Golden leaf" }
-item{ id = "golden_leaves_counter", description = "Golden leafs counter" }
+item{ id = "golden_leaf_counter", description = "Golden Leaf counter" }
 item{ id = "green_key", description = "Green Key" }
 item{ id = "green_tunic", description = "Green Tunic" }
 item{ id = "hammer", description = "Hammer" }
@@ -1718,17 +1718,19 @@ item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
 item{ id = "magic_mirror", description = "Magic Mirror" }
 item{ id = "magic_powder", description = "Magic Powder" }
-item{ id = "magic_powders_counter", description = "Magic powders counter" }
+item{ id = "magic_powder_counter", description = "Magic Powder counter" }
 item{ id = "magnifying_lens", description = "Magnifying lens" }
 item{ id = "map", description = "Dungeon map" }
 item{ id = "mirror_shield", description = "Mirror Shield" }
+item{ id = "monster_gut", description = "Monster Gut" }
+item{ id = "monster_gut_counter", description = "Monster Gut counter" }
 item{ id = "mushroom", description = "Mushroom" }
 item{ id = "pegasus_shoes", description = "Pegasus shoes" }
 item{ id = "pendant_1", description = "Courage Pendant" }
 item{ id = "pendant_2", description = "Power Pendant" }
 item{ id = "pendant_3", description = "Wisdom Pendant" }
 item{ id = "photo", description = "Photo" }
-item{ id = "photos_counter", description = "Photos counter" }
+item{ id = "photo_counter", description = "Photos counter" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
 item{ id = "potion", description = "Potion (Red / Green / Blue)" }
 item{ id = "power_gloves", description = "Power bracelet" }
@@ -1745,7 +1747,7 @@ item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 10
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "seas_map", description = "Seas map" }
 item{ id = "seashell", description = "Seashell" }
-item{ id = "seashells_counter", description = "Seashells counter" }
+item{ id = "seashell_counter", description = "Seashell counter" }
 item{ id = "shovel", description = "Shovel" }
 item{ id = "slim_key", description = "Slim key" }
 item{ id = "small_key", description = "Small key" }
@@ -2362,6 +2364,8 @@ file{ path = "sprites/menus/title_screen/small_shine.dat", author = "Olivier Cl√
 file{ path = "sprites/menus/title_screen/small_shine.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/menus/title_screen/triforce.dat", author = "Olivier Cl√©ro", license = "CC BY-SA 4.0" }
 file{ path = "sprites/menus/title_screen/triforce.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/npc/fisher_blue.dat", author = "The Unknown", }
+file{ path = "sprites/npc/fisher_green.dat", author = "The Unknown", }
 file{ path = "tilesets/oh_cave.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
 file{ path = "tilesets/oh_cave.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
 file{ path = "tilesets/oh_indoors_cabin.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
