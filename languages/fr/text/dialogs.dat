@@ -474,6 +474,62 @@ Donjon !
 }
 
 dialog{
+  id = "_treasure.crystal_1.1",
+  text = [[
+Tu as délivré la première
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_2.1",
+  text = [[
+Tu as délivré la deuxième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_3.1",
+  text = [[
+Tu as délivré la troisième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_4.1",
+  text = [[
+Tu as délivré la quatrième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_5.1",
+  text = [[
+Tu as délivré la cinquième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_6.1",
+  text = [[
+Tu as délivré la sixième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_7.1",
+  text = [[
+Tu as délivré la septième
+jeune fille !
+]],
+}
+
+dialog{
   id = "_treasure.face_key.1",
   icon = "44",
   text = [[
@@ -707,46 +763,6 @@ attaques de feu !
 }
 
 dialog{
-  id = "_treasure.instrument_4.1",
-  text = [[
-Tu as la harpe
-du reflux !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_5.1",
-  text = [[
-Tu as le xylophone
-marin !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_6.1",
-  text = [[
-Tu as le triangle
-de corail !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_7.1",
-  text = [[
-Tu as l'orgue
-de l'embellie !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_8.1",
-  text = [[
-Tu as le tambour
-des marées !
-]],
-}
-
-dialog{
   id = "_treasure.lamp.1",
   icon = "9",
   text = [[
@@ -779,7 +795,7 @@ dialog{
 Tu as trouvé la Baguette de
 Feu !$0 Elle envoie des rayons
 de lumière ! Mais surveille ton
-CompteurMagique !
+Compteur Magique !
 ]],
 }
 
@@ -846,7 +862,7 @@ l'entrée du donjon !
 }
 
 dialog{
-  id = "_treasure.magic_powders_counter.1",
+  id = "_treasure.magic_powder_counter.1",
   icon = "14",
   text = [[
 Tu as gagné la  
@@ -7282,6 +7298,15 @@ dialog{
   text = [[
 Permet de repousser
 les rayons lasers.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_gut_counter.1",
+  icon = "150",
+  skip = "all",
+  text = [[
+dialogue TDO
 ]],
 }
 
