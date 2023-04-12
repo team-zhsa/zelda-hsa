@@ -20,10 +20,10 @@ local item_names_static_left = {
 }
 local item_names_static_right = {
 	"monster_gut_counter",
-	"monster_gut_counter",
-	"monster_gut_counter",
-	"monster_gut_counter",
-	"monster_gut_counter",
+	"monster_claw_counter",
+	"monster_horn_counter",
+	"monster_tail_counter",
+	"goron_amber_counter",
 	"monster_gut_counter",
 }
 
@@ -338,9 +338,6 @@ function quest_submenu:on_command_pressed(command)
 		end
 	end
 
-	print(self.cursor_row, self.cursor_column)
-	print(quest_submenu:get_item_name(3, 6))
-	print(quest_submenu:get_item_name(self.cursor_row, self.cursor_column))
 	return handled
 
 end
@@ -357,20 +354,30 @@ function quest_submenu:show_info_message()
 	self.game:set_custom_command_effect("attack", nil)
 	if item_name == "piece_of_heart" then
 		dialog_id =  "scripts.menus.pause_inventory.piece_of_heart.1" 
-	elseif item_name == "seashell_counter" then
+	elseif item_name == "monster_claw_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.seashell_counter.1" 
-		end
-	elseif item_name == "photo_counter" then
-		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.photo_counter.1" 
+			dialog_id =  "scripts.menus.pause_inventory.monster_claw_counter.1" 
 		end
 	elseif item_name == "monster_gut_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
 			dialog_id =  "scripts.menus.pause_inventory.monster_gut_counter.1" 
+		end
+	elseif item_name == "monster_horn_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_horn_counter.1" 
+		end
+	elseif item_name == "monster_tail_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_tail_counter.1" 
+		end
+	elseif item_name == "goron_amber_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.goron_amber_counter.1" 
 		end
 	else
 		local variant = self.game:get_item(item_name):get_variant()
@@ -399,22 +406,34 @@ function quest_submenu:set_cursor_position(row, column)
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
 			self.game:set_custom_command_effect("action", "info")
-	elseif item_name =="seashell_counter" then
+	elseif item_name =="goron_amber" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.seashell_counter.1")
+			self:set_caption_key("inventory.caption.item.goron_amber.1")
 			self.game:set_custom_command_effect("action", "info")
 		end
-	elseif item_name =="photo_counter" then
+	elseif item_name =="monster_claw_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.photo_counter.1")
+			self:set_caption_key("inventory.caption.item.monster_claw_counter.1")
 			self.game:set_custom_command_effect("action", "info")
 		end
 	elseif item_name =="monster_gut_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
 			self:set_caption_key("inventory.caption.item.monster_gut_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+	 end
+	elseif item_name =="monster_horn_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_horn_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+	 end
+	elseif item_name =="monster_tail_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_tail_counter.1")
 			self.game:set_custom_command_effect("action", "info")
 	 end
 	else
@@ -442,7 +461,7 @@ function quest_submenu:get_item_name(row, column)
 			index = ((row + 2) % 3) * 3 + column
 			item_name = item_names_static_left[index + 1]
 		elseif column > 3 and (row > 0 and row < 3) then
-			index = ((row + 2) % 3) * 3 + (column % 3)
+			index = ((row + 2) % 3) * 3 + ((column + 2) % 3)
 			item_name = item_names_static_right[index + 1]
 		elseif column == 0 and row == 0 then
 			item_name = "crystal_1"

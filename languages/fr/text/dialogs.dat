@@ -635,6 +635,15 @@ lui de la Clé...
 }
 
 dialog{
+  id = "_treasure.goron_amber.1",
+  icon = "184",
+  text = [[
+Tu as trouvé un fragment
+d'Ambre Goron !
+]],
+}
+
+dialog{
   id = "_treasure.green_key.1",
   icon = "124",
   text = [[
@@ -1056,6 +1065,45 @@ lasers.
 }
 
 dialog{
+  id = "_treasure.monster_claw.1",
+  icon = "182",
+  text = [[
+Tu as obtenu une griffe de
+monstre !$0 Attention à ne pas
+te couper avec !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_gut.1",
+  icon = "180",
+  text = [[
+Tu as obtenu un foie de monstre !$0
+Attention, c'est très visqueux !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_horn.1",
+  icon = "181",
+  text = [[
+Tu as obtenu une corne de
+monstre !$0 Attention aux doigts,
+elle est couverte d'épines !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_tail.1",
+  icon = "183",
+  text = [[
+Tu as obtenu une queue de
+monstre !$0 Attention, elle
+bouge encore !
+]],
+}
+
+dialog{
   id = "_treasure.mushroom.1",
   icon = "19",
   text = [[
@@ -1420,7 +1468,7 @@ s'en servir !
 
 dialog{
   id = "_treasure.sword.1",
-  icon = "160",
+  icon = "170",
   text = [[
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
@@ -1433,7 +1481,7 @@ transmise par notre peuple.
 
 dialog{
   id = "_treasure.sword.2",
-  icon = "161",
+  icon = "171",
   text = [[
 Tu as obtenu l'épée de
 Légende !$0 Seul un véritable
@@ -1445,7 +1493,7 @@ cette épée émet des rayons.
 
 dialog{
   id = "_treasure.sword.3",
-  icon = "162",
+  icon = "172",
   text = [[
 Génial ! Ton épée est plus
 puissante ! Sens la fabuleuse
@@ -1456,7 +1504,7 @@ veines !
 
 dialog{
   id = "_treasure.sword.4",
-  icon = "163",
+  icon = "173",
   text = [[
 Tu as obtenu l'épée dorée !
 Elle est bien plus puissante
@@ -1466,7 +1514,7 @@ que la vieille !
 
 dialog{
   id = "_treasure.sword.5",
-  icon = "164",
+  icon = "174",
   text = [[
 Formidable !$0
 Tu as obtenu l'épée de Lumière !
@@ -1663,7 +1711,7 @@ Désormais tu pourras arpenter
 plus facilement tous ces chemins
 et partir à la conquête des
 recoins les plus reculés !
-Appuie sur SELECT.
+Appuie sur \[controller_select\].
 ]],
 }
 
@@ -6588,19 +6636,9 @@ Hyrule's Adventure
 dialog{
   id = "scripts.menus.pause_inventory._placeholder.1",
   icon = "150",
-  text = [[
-Cet objet ne sert à rien.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.angler_key.1",
-  icon = "41",
   skip = "all",
   text = [[
-Permet d'ouvrir
-la porte de
-l'abîme du poisson.
+Cet objet ne sert à rien.
 ]],
 }
 
@@ -6618,6 +6656,7 @@ la tour du vautour.
 dialog{
   id = "scripts.menus.pause_inventory.blue_tunic.1",
   icon = "44",
+  skip = "all",
   text = [[
 Une tunique bleue qui te
 protège du froid et te permet
@@ -6904,6 +6943,80 @@ des ennemis coriaces.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.crystal_1.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La première jeune fille,
+délivrée dans l'Arbre Mojo.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_2.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La deuxième jeune fille,
+délivrée dans la Caverne
+Dodongo.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_3.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La troisième jeune fille,
+délivrée dans le Palais du
+Désert.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_4.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La quaitrième jeune fille,
+délivrée dans le Ventre de
+Jabu-Jabu.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_5.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La cinquième jeune fille,
+délivrée dans le Pic César.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_6.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La sixième jeune fille,
+délivrée dans le Temple Oublié.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_7.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La septième jeune fille,
+délivrée dans le Temple de
+la Glace.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.face_key.1",
   icon = "44",
   skip = "all",
@@ -6953,6 +7066,16 @@ Retrouvez toutes les
 feuilles d'or et
 apportez-les
 à Richard.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.goron_amber_counter.1",
+  icon = "184",
+  skip = "all",
+  text = [[
+Des Ambres Gorons qui peuvent
+être troqués ou vendus.
 ]],
 }
 
@@ -7034,51 +7157,6 @@ dialog{
   text = [[
 Permet de repousser
 les attaques de feu.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_4.1",
-  skip = "all",
-  text = [[
-C'est le quatrième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_5.1",
-  skip = "all",
-  text = [[
-C'est le cinquième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_6.1",
-  skip = "all",
-  text = [[
-C'est le sixième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_7.1",
-  skip = "all",
-  text = [[
-C'est le septième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_8.1",
-  skip = "all",
-  text = [[
-C'est le huitième 
-instrument des sirènes.
 ]],
 }
 
@@ -7302,11 +7380,46 @@ les rayons lasers.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.monster_gut_counter.1",
-  icon = "150",
+  id = "scripts.menus.pause_inventory.monster_claw_counter.1",
+  icon = "182",
   skip = "all",
   text = [[
-dialogue TDO
+Des griffes de monstres qui
+peuvent être troquées ou
+vendues.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_gut_counter.1",
+  icon = "180",
+  skip = "all",
+  text = [[
+Des foies de monstres qui
+peuvent être troqués ou
+vendus.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_horn_counter.1",
+  icon = "181",
+  skip = "all",
+  text = [[
+Des queues de monstres qui
+peuvent être troquées ou
+vendues.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_tail_counter.1",
+  icon = "183",
+  skip = "all",
+  text = [[
+Des queues de monstres qui
+peuvent être troquées ou
+vendues.
 ]],
 }
 
@@ -7778,6 +7891,16 @@ dialog{
 Un peu d'énergie
 pour croquer la vie
 à pleines dents !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.world_map.1",
+  icon = "150",
+  text = [[
+La carte d'Hyrule, te permettant
+de te repérer dans ce vaste
+pays.
 ]],
 }
 
