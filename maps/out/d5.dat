@@ -16756,6 +16756,17 @@ jumper{
   jump_length = 64,
 }
 
+teletransporter{
+  layer = 0,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/e5",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 1128,

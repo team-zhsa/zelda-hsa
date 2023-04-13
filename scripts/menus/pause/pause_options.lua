@@ -2,6 +2,9 @@ local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
 local shader_manager = require("scripts/shader_manager")
 local text_fx_helper = require("scripts/text_fx_helper")
+local effect_manager = require('scripts/maps/effect_manager')
+local tft = require('scripts/maps/tft_effect')
+local fsa = require('scripts/maps/fsa_effect')
 local options_submenu = submenu:new()
 
 function options_submenu:on_started()
@@ -19,7 +22,7 @@ function options_submenu:on_started()
   self.column_stroke_color = { 55, 55, 25}
   self.text_color = { 224, 224, 224 }
 
-  self.video_mode_label_text = sol.text_surface.create{
+  self.shader_effect_label_text = sol.text_surface.create{
     horizontal_alignment = "left",
     vertical_alignment = "top",
     font = font,
@@ -27,9 +30,9 @@ function options_submenu:on_started()
     text_key = "selection_menu.options.video_mode",
     color = self.text_color,
   }
-  self.video_mode_label_text:set_xy(center_x - 50, center_y - 58)
+  self.shader_effect_label_text:set_xy(center_x - 50, center_y - 58)
 
-  self.video_mode_text = sol.text_surface.create{
+  self.shader_effect_text = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "top",
     font = font,
@@ -37,7 +40,7 @@ function options_submenu:on_started()
     text = sol.video.get_shader(),
     color = self.text_color,
   }
-  self.video_mode_text:set_xy(center_x + 74, center_y - 58)
+  self.shader_effect_text:set_xy(center_x + 74, center_y - 58)
 
   self.command_column_text = sol.text_surface.create{
     horizontal_alignment = "center",
@@ -182,8 +185,8 @@ function options_submenu:on_draw(dst_surface)
   self:draw_caption(dst_surface)
 
   -- Text.
-  self.video_mode_label_text:draw(dst_surface)
-  self.video_mode_text:draw(dst_surface)
+  self.shader_effect_label_text:draw(dst_surface)
+  self.shader_effect_text:draw(dst_surface)
   text_fx_helper:draw_text_with_stroke(dst_surface, self.command_column_text, self.column_stroke_color)
   text_fx_helper:draw_text_with_stroke(dst_surface, self.keyboard_column_text, self.column_stroke_color)
   text_fx_helper:draw_text_with_stroke(dst_surface, self.joypad_column_text, self.column_stroke_color)
@@ -224,6 +227,12 @@ function options_submenu:on_command_pressed(command)
   end
 
   local handled = submenu.on_command_pressed(self, command)
+  local screen_w, screen_h = sol.video.get_quest_size()
+  local resolution_list_w = {320, 256, 300, 320}
+  local resolution_list_h = {240, 224, 240, 180}
+  local resolution_list = {"320_240", "256_224", "300_240", "320_180"}
+  local shader_effect_list_str = {"snes", "fsa", "tft"}
+  local shader_effect_list = {nil, require('scripts/maps/fsa_effect'), require('scripts/maps/tft_effect')}
 
   if not handled then
     if command == "left" then
@@ -243,9 +252,12 @@ function options_submenu:on_command_pressed(command)
     elseif command == "action" then
       sol.audio.play_sound("danger")
       if self.cursor_position == 1 then
-        -- Change the video mode.
-        self.video_mode_text:set_text(sol.video.get_mode())
-    		sol.video.switch_mode()
+        --[[ Change the video mode
+          i = 0
+          effect_manager:set_effect(self.game, shader_effect_list[i + 1])
+          self.game:set_value("mode", shader_effect_list_str[i + 1])
+          self.shader_effect_text:set_text_key("options.shader_effect."..shader_effect_list_str[(i + 1)])
+          i = i + 1--]]
       else
         -- Customize a game command.
         self:set_caption_key("options.caption.press_key")

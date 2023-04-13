@@ -1,5 +1,6 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
+local text_fx_helper = require("scripts/text_fx_helper")
 local quest_submenu = submenu:new()
 
 local item_names_static_top = {
@@ -233,20 +234,23 @@ function quest_submenu:on_draw(dst_surface)
 	)
 	
 -- Game time.
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
 	local menu_font, menu_font_size = language_manager:get_menu_font()
 	self.chronometer_txt = sol.text_surface.create({
 		horizontal_alignment = "center",
 		vertical_alignment = "bottom",
 		font = menu_font,
 		font_size = menu_font_size,
-		color = { 115, 59, 22 },
+		color = { 224, 224, 224 },
+		text_stroke_color = { 115, 59, 22 },
 		text = self.game:get_time_played_string()
 	})
+	
 	sol.timer.start(self.game, 1000, function()
 		self.chronometer_txt:set_text(self.game:get_time_played_string())
 		return true  -- Repeat the timer.
 	end)
-
 
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then

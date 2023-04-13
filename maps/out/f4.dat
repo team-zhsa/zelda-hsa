@@ -10212,6 +10212,15 @@ tile{
   tileset = "outside_buildings",
 }
 
+tile{
+  layer = 0,
+  x = 968,
+  y = 656,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 teletransporter{
   layer = 0,
   x = 624,
@@ -11736,6 +11745,25 @@ dynamic_tile{
   height = 24,
   pattern = "304",
   tileset = "outside_buildings",
+}
+
+npc{
+  layer = 0,
+  x = 976,
+  y = 669,
+  properties = {
+    {
+      key = "dialog_id",
+      value = "maps.out.hyrule_town.sign_2",
+    },
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 tile{
