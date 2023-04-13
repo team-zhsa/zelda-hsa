@@ -9,7 +9,9 @@ function item:on_created()
 end
 
 function item:on_obtaining(variant, savegame_variable)
-
+  if self:get_game():get_item("monster_claw_counter"):get_variant() == 0 then
+    self:get_game():get_item("monster_claw_counter"):set_variant(1)
+  end
   self:get_game():get_item("monster_claw_counter"):add_amount(1)
 
 end

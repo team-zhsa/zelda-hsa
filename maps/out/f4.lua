@@ -126,6 +126,14 @@ open_house_door_vase_sensor:register_event("on_activated", function()
   end
 end)
 
+open_house_door_bank_sensor:register_event("on_activated", function()
+  if hero:get_direction() == 1 and door_bank_1:is_enabled() and door_bank_2:is_enabled() then
+    door_bank_1:set_enabled(false)
+    door_bank_2:set_enabled(false)
+    sol.audio.play_sound("door_open")
+  end
+end)
+
 for npc in map:get_entities("npc_laundry_") do
   npc:register_event("on_interaction", function()
     if game:is_step_last("ocarina_obtained") then

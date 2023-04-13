@@ -170,15 +170,6 @@ Ne pas acheter
 }
 
 dialog{
-  id = "_treasure.angler_key.1",
-  icon = "41",
-  text = [[
-Tu as la        
-Clé Poisson!
-]],
-}
-
-dialog{
   id = "_treasure.arrow.1",
   icon = "3",
   next = "_treasure.arrow.1.1",
@@ -1397,6 +1388,33 @@ dialog{
   text = [[
 Tu as trouvé 2000 rubis.      
 Incroyable !
+]],
+}
+
+dialog{
+  id = "_treasure.rupee_bag.1",
+  icon = "50",
+  text = [[
+]],
+}
+
+dialog{
+  id = "_treasure.rupee_bag.2",
+  icon = "51",
+  text = [[
+Tu as obtenu la Grande Bourse !$0
+Elle peut transporter jusqu'à
+499 rubis. 
+]],
+}
+
+dialog{
+  id = "_treasure.rupee_bag.3",
+  icon = "52",
+  text = [[
+Tu as obtenu la Bourse Géante !$0
+Elle peut contenir jusqu'à
+999 rubis.
 ]],
 }
 
@@ -4461,15 +4479,28 @@ aider à couper tous ces
 dialog{
   id = "maps.houses.south_field.ravios_shop.merchant_first_welcome",
   text = [[
-TODO
-
+Bonjour $v !$0 C'est moi
+Lavio. Je ne sais pas si tu te
+souviens de moi.
+Cela fait déjà trente ans
+que l'on ne s'est pas vu mais
+je suis content de savoir que
+tu vas toujours bien.$0
+Après être retourné à Lorule,
+j'ai entendu ce qui se passait
+ici à Hyrule et j'ai décidé de
+repartir voir ce qu'il en était.
+J'ai donc retrouvé ta maison
+et vu qu'elle était abandonnée,
+j'y ai réinstallé ma boutique.$0
+Choisis ce que tu aimes.
 ]],
 }
 
 dialog{
   id = "maps.houses.south_field.ravios_shop.merchant_welcome",
   text = [[
-Hé $v !$0
+Salut $v !$0
 Ce monde peut être dangereux.
 Choisis ce que tu aimes.
 ]],
@@ -7535,6 +7566,36 @@ dialog{
 Une tunique rouge qui te
 protège du feu et de la
 chaleur.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.1",
+  icon = "50",
+  skip = "all",
+  text = [[
+La Petite Bourse, qui permet
+de transporter jusqu'à 199
+rubis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.2",
+  icon = "50",
+  text = [[
+La Bourse de Géant, qui permet
+de transporter jusqu'à 499 rubis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.3",
+  icon = "52",
+  skip = "all",
+  text = [[
+La Bourse de Géant, qui permet
+de transporter jusqu'à 999 rubis
 ]],
 }
 

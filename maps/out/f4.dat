@@ -9039,26 +9039,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 936,
-  y = 632,
-  width = 32,
-  height = 24,
-  pattern = "4127",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
-  x = 936,
-  y = 632,
-  width = 32,
-  height = 24,
-  pattern = "304",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 1008,
   y = 648,
   width = 16,
@@ -10189,6 +10169,46 @@ tile{
   width = 192,
   height = 8,
   pattern = "6161",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 656,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 952,
+  y = 664,
+  width = 16,
+  height = 8,
+  pattern = "6201",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 632,
+  width = 16,
+  height = 24,
+  pattern = "292",
   tileset = "outside_buildings",
 }
 
@@ -11661,6 +11681,61 @@ destination{
   x = 728,
   y = 1149,
   direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 944,
+  y = 640,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/hyrule_town/bank",
+  destination = "from_outside",
+}
+
+sensor{
+  name = "open_house_door_bank_sensor",
+  layer = 0,
+  x = 944,
+  y = 669,
+  width = 32,
+  height = 16,
+}
+
+destination{
+  name = "from_bank",
+  layer = 0,
+  x = 952,
+  y = 669,
+  direction = 3,
+}
+
+dynamic_tile{
+  name = "door_bank_2",
+  layer = 0,
+  x = 936,
+  y = 632,
+  width = 32,
+  height = 24,
+  pattern = "4127",
+  tileset = "outside_buildings",
+}
+
+dynamic_tile{
+  name = "door_bank_1",
+  layer = 0,
+  x = 936,
+  y = 632,
+  width = 32,
+  height = 24,
+  pattern = "304",
+  tileset = "outside_buildings",
 }
 
 tile{

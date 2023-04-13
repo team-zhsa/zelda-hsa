@@ -5,7 +5,7 @@ local quest_submenu = submenu:new()
 local item_names_static_top = {
 	"crystal_1",
 	"crystal_7",
-	"world_map",
+	"rupee_bag",
 }
 local item_names_static_left = {
 	"crystal_2",
@@ -468,7 +468,7 @@ function quest_submenu:get_item_name(row, column)
 		elseif column == 2 and row == 0 then
 			item_name = "crystal_7"
 		elseif column == 5 and row == 0 then
-			item_name = "world_map"
+			item_name = "rupee_bag"
 		elseif column == 3 and row == 3 then
 			item_name = "piece_of_heart"
 		elseif column == 4 and row == 3 then
