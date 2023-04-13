@@ -103,6 +103,8 @@ function quest_submenu:on_draw(dst_surface)
 
 	local cell_size = 28
 	local cell_spacing = 4
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
 
 	-- Draw the background.
 	self:draw_background(dst_surface)
@@ -111,10 +113,10 @@ function quest_submenu:on_draw(dst_surface)
 	self:draw_caption(dst_surface)
 
 	-- Draw each inventory static item left.
-	local y = 122
+	local y = center_y + 2
 	local k = 0
 	for i = 0, 2 do
-		local x = 64
+		local x = center_x - 96
 		for j = 0, 2 do
 			if x == 1 and x == 1 then
 				x = x + 1
@@ -132,16 +134,16 @@ function quest_submenu:on_draw(dst_surface)
 					self.sprites_static_left[k]:draw(dst_surface, x, y)
 				end
 			end
-			x = x + 32
+			x = x + cell_size + cell_spacing
 		end
-		y = y + 32
+		y = y + cell_size + cell_spacing
 	end
 	
 	-- Draw each inventory static item right.
-	local y = 122
+	local y = center_y + 2
   local k = 0
   for i = 0, 2 do
-		local x = 192
+		local x = center_x + 32
 		for j = 0, 2 do
 			if x == 1 and x == 1 then
 				x = x + 1
@@ -163,14 +165,14 @@ function quest_submenu:on_draw(dst_surface)
 					end
 				end
 			end
-			x = x + 32
+			x = x + cell_size + cell_spacing
 		end
-		y = y + 32
+		y = y + cell_size + cell_spacing
   end
 
 	-- Draw each inventory static item top.
-	local y = 90
-	local x = 64
+	local y = center_y - 30
+	local x = center_x - 96
 	local k = 0
 	for i = 0, 2 do
 		k = k + 1
@@ -179,27 +181,27 @@ function quest_submenu:on_draw(dst_surface)
 			if item:get_variant() > 0 then
 				-- The player has this item: draw it.
 				if i == 0 then
-					x = 64
-					y = 90
+					x = center_x - 96
+					y = center_y - 30
 				elseif i == 1 then
-					x = 128
-					y = 90
+					x = center_x - 32
+					y = center_y - 30
 				elseif i == 2 then
-					x = 224
-					y = 90
+					x = center_x + 64
+					y = center_y - 30
 				end
 				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
 				self.sprites_static_top[k]:draw(dst_surface, x, y)
 			end
 		end
-		x = x + 32
+		x = x + cell_size + cell_spacing
 	end
 
 	-- Draw each inventory static item bottom.
-	local y = 186
+	local y = center_y + 66
 	local k = 0
 	for i = 0, 2 do
-		local x = 192
+		local x = center_x + 32
 		for j = 0, 2 do
 			if x == 1 and x == 1 then
 				x = x + 1
@@ -217,9 +219,9 @@ function quest_submenu:on_draw(dst_surface)
 					self.sprites_static_bottom[k]:draw(dst_surface, x, y)
 				end
 			end
-			x = x + 32
+			x = x + cell_size + cell_spacing
 		end
-		y = y + 32
+		y = y + cell_size + cell_spacing
 	end
 
 	-- Pieces of heart.
@@ -230,12 +232,10 @@ function quest_submenu:on_draw(dst_surface)
 		pieces_of_heart_x, 0,                 -- region position in image
 		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
 		dst_surface,                          -- destination surface
-		146, 168                              -- position in destination surface
+		center_x - 14, center_y + 50          -- position in destination surface
 	)
 	
 -- Game time.
-	local width, height = dst_surface:get_size()
-	local center_x, center_y = width / 2, height / 2
 	local menu_font, menu_font_size = language_manager:get_menu_font()
 	self.chronometer_txt = sol.text_surface.create({
 		horizontal_alignment = "center",
@@ -254,7 +254,9 @@ function quest_submenu:on_draw(dst_surface)
 
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then
-		self.cursor_sprite:draw(dst_surface, 64 + 32 * self.cursor_column, 86 + 32 * self.cursor_row)
+		self.cursor_sprite:draw(dst_surface,
+		center_x - 96 + (cell_size + cell_spacing) * self.cursor_column,
+		center_y - 34 + (cell_size + cell_spacing) * self.cursor_row)
 	end
 
 	-- Draw save dialog if necessary.

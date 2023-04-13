@@ -34,6 +34,9 @@ local item_names_static = {
  	"pegasus_shoes"
 }
 
+local cell_size = 28
+local cell_spacing = 4
+
 function inventory_submenu:on_started()
   submenu.on_started(self)
   self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
@@ -86,8 +89,8 @@ end
 
 function inventory_submenu:on_draw(dst_surface)
 
-  local cell_size = 28
-  local cell_spacing = 4
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
 
   -- Draw the background.
   self:draw_background(dst_surface)
@@ -96,9 +99,9 @@ function inventory_submenu:on_draw(dst_surface)
   self:draw_caption(dst_surface)
 
   -- Draw each inventory static item.
-  local y = 90
+  local y = center_y - 30
   local k = 0
-  local x = 64
+  local x = center_x - 96
   for j = 0, 3 do
     k = k + 1
     local item = self.game:get_item(item_names_static[k])
@@ -111,11 +114,11 @@ function inventory_submenu:on_draw(dst_surface)
   end
 
   -- Draw each inventory assignable item.
-  local y = 90
+  local y = center_y - 30
   local k = 0
 
   for i = 0, 3 do
-    local x = 95
+    local x = center_x - 65
     for j = 0, 5 do
       k = k + 1
       if item_names_assignable[k] ~= nil then
@@ -135,10 +138,12 @@ function inventory_submenu:on_draw(dst_surface)
   end
 
 
-  -- Draw cursor only when the save dialog is not displayed.
-  if self.save_dialog_state == 0 then
-    self.cursor_sprite:draw(dst_surface, 64 + 32 * self.cursor_column, 86 + 32 * self.cursor_row)
-  end
+	-- Draw cursor only when the save dialog is not displayed.
+	if self.save_dialog_state == 0 then
+		self.cursor_sprite:draw(dst_surface,
+		center_x - 96 + (cell_size + cell_spacing) * self.cursor_column,
+		center_y - 34 + (cell_size + cell_spacing) * self.cursor_row)
+	end
 
   -- Draw the item being assigned if any.
   if self:is_assigning_item() then
@@ -307,11 +312,13 @@ function inventory_submenu:assign_item(slot)
       -- Play the sound.
       sol.audio.play_sound("throw")
 
-      -- Compute the movement.
-      local x1 = 63 + 32 * self.cursor_column
-      local y1 = 90 + 32 * self.cursor_row
+      local screen_w, screen_h = sol.video.get_quest_size()
 
-      local x2 = (slot == 1) and 237 or 284
+      -- Compute the movement.
+      local x1 = (screen_w / 2) - 96 + (cell_size + cell_spacing) * self.cursor_column
+      local y1 = (screen_h / 2) - 34 + (cell_size + cell_spacing) * self.cursor_row
+
+      local x2 = (slot == 1) and (screen_w - 95) or (screen_w - 45)
       local y2 = 16
 
       self.item_assigned_sprite:set_xy(x1, y1)

@@ -116,14 +116,10 @@ local function initialise_hud_features(game)
       local hero = map:get_entity("hero")
       local hero_x, hero_y = hero:get_position()
       local camera_x, camera_y = map:get_camera():get_position()
+      local screen_w, screen_h = sol.video.get_quest_size()
       local x, y = hero_x - camera_x, hero_y - camera_y
       local opacity_l = nil
       local opacity_r = nil
-
-      local hero = map:get_entity("hero")
-      local hero_x, hero_y = hero:get_position()
-      local camera_x, camera_y = map:get_camera():get_position()
-      local x, y = hero_x - camera_x, hero_y - camera_y
       top_left_transparent = x < 128 and y < 50
       top_right_transparent = x > 166 and y < 64
 
@@ -157,13 +153,13 @@ local function initialise_hud_features(game)
       if not hud.showing_dialog and
         game:is_dialog_enabled() then
         hud.showing_dialog = true
-        action_icon:set_dst_position(175, 20)
-        attack_icon:set_dst_position(226, 20)
+        action_icon:set_dst_position(screen_w - 145, 20)
+        attack_icon:set_dst_position(screen_w - 95, 20)
       elseif hud.showing_dialog and
         not game:is_dialog_enabled() then
         hud.showing_dialog = false
-        action_icon:set_dst_position(175, 20)
-        attack_icon:set_dst_position(226, 20)
+        action_icon:set_dst_position(screen_w - 145, 20)
+        attack_icon:set_dst_position(screen_w - 95, 20)
       end
     end
 
