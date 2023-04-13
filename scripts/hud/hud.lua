@@ -20,13 +20,15 @@ local function initialise_hud_features(game)
     enabled = false,
     elements = {},
     showing_dialog = false,
-    top_left_opacity = 255,
     custom_command_effects = {},
   }
 
   local item_icons = {}
   local action_icon
   local attack_icon
+  local hearts
+  local rupees
+  local keys
 
   function game:get_hud()
     return hud
@@ -105,30 +107,49 @@ local function initialise_hud_features(game)
   -- Called periodically to change the transparency or position of icons.
   local function check_hud()
 
+    local top_left_transparent = false
+    local top_right_transparent = false
+
     local map = game:get_map()
     if map ~= nil then
       -- If the hero is below the top-right icons, make them semi-transparent.
       local hero = map:get_entity("hero")
       local hero_x, hero_y = hero:get_position()
       local camera_x, camera_y = map:get_camera():get_position()
-      local x = hero_x - camera_x
-      local y = hero_y - camera_y
-      local opacity = nil
+      local x, y = hero_x - camera_x, hero_y - camera_y
+      local opacity_l = nil
+      local opacity_r = nil
 
-			if hud.top_left_opacity == 96
-				and (game:is_suspended()
-        and x > 300
-        or y < 240) then
-        opacity = 255
+      local hero = map:get_entity("hero")
+      local hero_x, hero_y = hero:get_position()
+      local camera_x, camera_y = map:get_camera():get_position()
+      local x, y = hero_x - camera_x, hero_y - camera_y
+      top_left_transparent = x < 128 and y < 50
+      top_right_transparent = x > 166 and y < 64
+
+			if top_left_transparent then
+        opacity_l = 128
+      elseif top_right_transparent then
+        opacity_r = 128
+      else opacity_l = 255
+        opacity_r = 255
       end
 
-      if opacity ~= nil then
-        hud.top_left_opacity = opacity
+      if opacity_l ~= nil then
+        hud.top_left_opacity = opacity_l
         for i, element_config in ipairs(hud_config) do
-          if element_config.x >= 0 and element_config.x < 248 and
-              element_config.y >= 0 and element_config.y < 80 then
-            hud.elements[i]:get_surface():set_opacity(opacity)
-          end
+          hud.elements[1]:get_surface():set_opacity(opacity_l)
+          hud.elements[2]:get_surface():set_opacity(opacity_l)
+        end
+      end
+
+      if opacity_r ~= nil then
+        hud.top_right_opacity = opacity_r
+        for i, element_config in ipairs(hud_config) do
+          hud.elements[7]:get_surface():set_opacity(opacity_r)
+          hud.elements[8]:get_surface():set_opacity(opacity_r)
+          hud.elements[9]:get_surface():set_opacity(opacity_r)
+          hud.elements[10]:get_surface():set_opacity(opacity_r)
         end
       end
 
