@@ -340,6 +340,7 @@ Alpha 1.16.1 (11/04/23) "Mackerel Update":
 	REM: Removed ignored files.
 
 Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
+	ADD: Added maps.
 	ADD: Added more than 30 NPC sprites (#23).
 	ADD: Added treasure items.
 	CHG: Renamed NPC sprites (#23).
@@ -350,8 +351,10 @@ Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
 	CHG: Changed sword colour on hero (#21).
 	CHG: Made the HUD icons semi-transparent when the hero is underneath (#123).
 	FIX: Fixed collectible treasures amount not being updated (#122).
+	FIX: Fixed static items sprites not showing the right variant in the inventory (#125).
+	FIX: Fixed scrollable map not being centered when using another quest size (#126).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
-	TDO: Add the ability to switch shaders through the options menu (#119).
+	TDO: Add coloured keys to the dungeon minimap menu.
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -365,6 +368,7 @@ Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 
 Alpha 1.17 (//23) "Needlefish Update":
+	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103).
 	TDO: Finish the remaining houses (#104).
@@ -412,7 +416,6 @@ Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add decoration to temples.
 	TDO: Add all the Pokémons.
 	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
-	TDO: Make the status menu at least usable.
 	TDO: Make a new sprite for Spectral Ganon (#29).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Improve the shield usability (#30).
@@ -426,7 +429,6 @@ Alpha 1.19 (//23) "Perch Update":
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.
-	TDO: Make it possible to switch between shaders with the option menu.
 	TDO: Add new items.
 	TDO: Finish all the items.
 

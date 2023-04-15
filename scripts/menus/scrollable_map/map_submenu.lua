@@ -129,7 +129,7 @@ function submenu:draw_caption(dst_surface)
     local width, height = dst_surface:get_size()
 
     -- Draw caption frame.
-    self.caption_background:draw(dst_surface, width / 2 - 79, height / 2 + 74)
+    --self.caption_background:draw(dst_surface, width / 2 - 79, height / 2 + 74)
 
     -- Draw caption text.
     if self.caption_text_2:get_text():len() == 0 then

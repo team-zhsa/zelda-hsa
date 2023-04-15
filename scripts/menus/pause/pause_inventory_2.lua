@@ -106,6 +106,7 @@ function inventory_submenu:on_draw(dst_surface)
     local item = self.game:get_item(item_names_static[k])
     if item:get_variant() > 0 then
       -- The player has this item: draw it.
+      self.sprites_static[k]:set_direction(item:get_variant() - 1)
       self.sprites_static[k]:draw(dst_surface, x, y)
     end
     -- Next item position (they are on the same column).
