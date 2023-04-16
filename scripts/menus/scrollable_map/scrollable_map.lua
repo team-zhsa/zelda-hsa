@@ -105,11 +105,11 @@ function map_submenu:on_started()
 	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 45 + 64 -- 64 is the real map's offset with the sprite image
 	      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28 + 64
         local cross_minimap_x = math.floor(cross_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-        local cross_minimap_y = math.floor(cross_absolute_y * self.outside_world_minimap_size.width / self.outside_world_size.width)
+        local cross_minimap_y = math.floor(cross_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
         self.cross_x = cross_minimap_x + (cross_absolute_x / map_width) + 45 + 64 + 16 -- 64 is the real map's offset with the sprite image
-	      self.cross_y = cross_minimap_y + (cross_absolute_y / map_width) + 28 + 64 + 16
-	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
+	      self.cross_y = cross_minimap_y + (cross_absolute_y / map_height) + 28 + 64 + 16
 	      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
+	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
 			end
     else
       -- if World Map not in inventory, show clouds in map screen
@@ -339,47 +339,59 @@ end
 
 
 function map_submenu:draw_world_map(dst_surface)
-  -- Draw the minimap.
-  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x, self.world_minimap_visible_xy.y, 200, 160, dst_surface, 60, 40)
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
   
+  -- Draw the minimap.
+  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x,
+   self.world_minimap_visible_xy.y,
+   182, 148,
+   dst_surface,
+   center_x - 87, center_y - 70)
+
   if map_shown then
 		-- Draw background image
-  	self.world_map_background_img:draw(dst_surface, 52, 32)
+  	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
 
     -- Draw the hero's position.
     local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
     local cross_position_visible_x = self.cross_x - self.world_minimap_visible_xy.x
     local cross_position_visible_y = self.cross_y - self.world_minimap_visible_xy.y
-    if (hero_visible_y >= 30 and hero_visible_y <= 160 + 40) and (hero_visible_x >= 60 and hero_visible_x <= 200 + 60) then -- Makes the hero icon invisible when it is out of bounds.
+    if (hero_visible_y >= 30 and hero_visible_y + 40 <= center_y + 40 + 40)
+    and (hero_visible_x >= 60 and hero_visible_x <= center_x + 40 + 60) then
+      -- Makes the hero icon invisible when it is out of bounds.
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
-    if (cross_position_visible_x >= 60 and cross_position_visible_y >= 40) and (cross_position_visible_x <= 260 and cross_position_visible_y <= 200) then -- Offset
+    if (cross_position_visible_x >= 60 and cross_position_visible_y >= 40)
+    and (cross_position_visible_x <= center_x + 100
+    and cross_position_visible_y <= center_x + 80) then
+      -- Offset
       self.cross_sprite:draw(dst_surface, cross_position_visible_x, cross_position_visible_y)
     end
 
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, 100, 32)
-      self.up_arrow_sprite:draw(dst_surface, 208, 32)
+      self.up_arrow_sprite:draw(dst_surface, center_x - 68, center_y - 88)
+      self.up_arrow_sprite:draw(dst_surface, center_x + 48, center_y - 88)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
-      self.down_arrow_sprite:draw(dst_surface, 100, 200)
-      self.down_arrow_sprite:draw(dst_surface, 208, 200)
+      self.down_arrow_sprite:draw(dst_surface, center_x - 68, center_y + 88)
+      self.down_arrow_sprite:draw(dst_surface, center_x + 48, center_y + 88)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 52, 62)
-      self.left_arrow_sprite:draw(dst_surface, 52, 158)
+      self.left_arrow_sprite:draw(dst_surface, center_x - 108, center_y - 68)
+      self.left_arrow_sprite:draw(dst_surface, center_x - 108, center_y + 32)
     end
     
     if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 199 then
-      self.right_arrow_sprite:draw(dst_surface, 260, 62)
-      self.right_arrow_sprite:draw(dst_surface, 260, 158)
+      self.right_arrow_sprite:draw(dst_surface, center_x + 108, center_y - 68)
+      self.right_arrow_sprite:draw(dst_surface, center_x + 108, center_y + 32)
     end
   else
-    self.world_map_background_img:draw(dst_surface, 52, 32)
+  	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
   end
 end
 
