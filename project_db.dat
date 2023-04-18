@@ -1757,6 +1757,7 @@ item{ id = "seas_map", description = "Seas map" }
 item{ id = "seashell", description = "Seashell" }
 item{ id = "seashell_counter", description = "Seashell counter" }
 item{ id = "shovel", description = "Shovel" }
+item{ id = "silver_key", description = "Silver Key" }
 item{ id = "slim_key", description = "Slim key" }
 item{ id = "small_key", description = "Small key" }
 item{ id = "somaria_cane", description = "Somaria Cane" }
@@ -1784,7 +1785,6 @@ item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }
 item{ id = "wings", description = "Wings" }
 item{ id = "world_map", description = "World Map" }
-item{ id = "yellow_key", description = "Yellow Key" }
 
 enemy{ id = "boss/agahnim", description = "Agahnim" }
 enemy{ id = "boss/agahnim_lightning", description = "Agahnim Lightning" }
@@ -2151,19 +2151,19 @@ file{ path = "fonts/04b03.ttf", author = "Yuji Oshimoto", license = "Free for pe
 file{ path = "items/bomb_bag.lua", license = "GPL v3" }
 file{ path = "items/rupee_bag.lua", license = "GPL v3" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "maps/dungeons/1/0f.dat", author = "Lucifer", }
-file{ path = "maps/dungeons/10/0f.dat", author = "Lucifer", }
-file{ path = "maps/dungeons/10/0f.lua", author = "Lucifer", }
-file{ path = "maps/dungeons/2/0f.dat", author = "Lucifer", }
-file{ path = "maps/dungeons/9/0f.dat", author = "Lucifer", }
-file{ path = "maps/dungeons/secret/1f.dat", author = "Lucifer", }
-file{ path = "maps/dungeons/secret/1f.lua", author = "Lucifer", }
-file{ path = "maps/extensions/east_continent/a1.dat", author = "Lucifer", }
-file{ path = "maps/extensions/east_continent/a1.lua", author = "Lucifer", }
-file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "Lucifer", }
-file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "Lucifer", }
-file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "Lucifer", }
-file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "Lucifer", }
+file{ path = "maps/dungeons/1/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/10/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/10/0f.lua", author = "The Unknown", }
+file{ path = "maps/dungeons/2/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/secret/1f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/secret/1f.lua", author = "The Unknown", }
+file{ path = "maps/extensions/east_continent/a1.dat", author = "The Unknown", }
+file{ path = "maps/extensions/east_continent/a1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/fisher_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
@@ -2176,8 +2176,8 @@ file{ path = "maps/inside/houses/hyrule_town/vase_house.dat", author = "The Unkn
 file{ path = "maps/inside/houses/hyrule_town/vase_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/wooden_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/wooden_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "Lucifer", }
-file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "Lucifer", }
+file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/fortune_teller.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/fortune_teller.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/grey_house.dat", author = "The Unknown", }
@@ -2194,60 +2194,60 @@ file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The 
 file{ path = "maps/inside/houses/zora_village/trading_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/zora_king.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/zora_king.lua", author = "The Unknown", }
-file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "Lucifer", }
-file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "Lucifer", }
-file{ path = "maps/out/a1.dat", author = "Lucifer", }
-file{ path = "maps/out/a2.dat", author = "Lucifer", }
-file{ path = "maps/out/a3.dat", author = "Nintendo, Lucifer", }
-file{ path = "maps/out/a4.dat", author = "Lucifer", }
-file{ path = "maps/out/a5.dat", author = "Lucifer", }
-file{ path = "maps/out/a6.dat", author = "Lucifer", }
-file{ path = "maps/out/a7.dat", author = "Lucifer", }
-file{ path = "maps/out/b1.dat", author = "Nintendo, Lucifer", }
-file{ path = "maps/out/b2.dat", author = "Lucifer", }
-file{ path = "maps/out/b3.dat", author = "Lucifer", }
-file{ path = "maps/out/b4.dat", author = "Lucifer", }
-file{ path = "maps/out/b5.dat", author = "Lucifer", }
-file{ path = "maps/out/b6.dat", author = "Lucifer", }
-file{ path = "maps/out/c1.dat", author = "Nintendo, Lucifer", }
-file{ path = "maps/out/c4.dat", author = "Lucifer", }
-file{ path = "maps/out/c5.dat", author = "Lucifer", }
-file{ path = "maps/out/c7.dat", author = "Lucifer", }
-file{ path = "maps/out/d1.dat", author = "Lucifer", }
-file{ path = "maps/out/d4.dat", author = "Lucifer", }
-file{ path = "maps/out/d6.dat", author = "Lucifer", }
-file{ path = "maps/out/e4.dat", author = "Lucifer", }
-file{ path = "maps/out/e6.dat", author = "Lucifer", }
-file{ path = "maps/out/f4.dat", author = "Lucifer", }
-file{ path = "maps/out/f5.dat", author = "Lucifer", }
-file{ path = "maps/out/f6.dat", author = "Lucifer", }
-file{ path = "maps/out/f7.dat", author = "Lucifer", }
-file{ path = "maps/out/g4.dat", author = "Lucifer", }
-file{ path = "maps/out/g4.lua", author = "Lucifer", }
-file{ path = "maps/out/g7.dat", author = "Lucifer", }
-file{ path = "maps/out/h4.dat", author = "Linkff, Lucifer", }
+file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "The Unknown", }
+file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "The Unknown", }
+file{ path = "maps/out/a1.dat", author = "The Unknown", }
+file{ path = "maps/out/a2.dat", author = "The Unknown", }
+file{ path = "maps/out/a3.dat", author = "Nintendo, The Unknown", }
+file{ path = "maps/out/a4.dat", author = "The Unknown", }
+file{ path = "maps/out/a5.dat", author = "The Unknown", }
+file{ path = "maps/out/a6.dat", author = "The Unknown", }
+file{ path = "maps/out/a7.dat", author = "The Unknown", }
+file{ path = "maps/out/b1.dat", author = "Nintendo, The Unknown", }
+file{ path = "maps/out/b2.dat", author = "The Unknown", }
+file{ path = "maps/out/b3.dat", author = "The Unknown", }
+file{ path = "maps/out/b4.dat", author = "The Unknown", }
+file{ path = "maps/out/b5.dat", author = "The Unknown", }
+file{ path = "maps/out/b6.dat", author = "The Unknown", }
+file{ path = "maps/out/c1.dat", author = "Nintendo, The Unknown", }
+file{ path = "maps/out/c4.dat", author = "The Unknown", }
+file{ path = "maps/out/c5.dat", author = "The Unknown", }
+file{ path = "maps/out/c7.dat", author = "The Unknown", }
+file{ path = "maps/out/d1.dat", author = "The Unknown", }
+file{ path = "maps/out/d4.dat", author = "The Unknown", }
+file{ path = "maps/out/d6.dat", author = "The Unknown", }
+file{ path = "maps/out/e4.dat", author = "The Unknown", }
+file{ path = "maps/out/e6.dat", author = "The Unknown", }
+file{ path = "maps/out/f4.dat", author = "The Unknown", }
+file{ path = "maps/out/f5.dat", author = "The Unknown", }
+file{ path = "maps/out/f6.dat", author = "The Unknown", }
+file{ path = "maps/out/f7.dat", author = "The Unknown", }
+file{ path = "maps/out/g4.dat", author = "The Unknown", }
+file{ path = "maps/out/g4.lua", author = "The Unknown", }
+file{ path = "maps/out/g7.dat", author = "The Unknown", }
+file{ path = "maps/out/h4.dat", author = "Linkff, The Unknown", }
 file{ path = "maps/out/i3.dat", author = "Linkff", }
 file{ path = "maps/out/i4.dat", author = "Linkff", }
 file{ path = "maps/out/i4.lua", author = "Linkff", }
 file{ path = "maps/out/i5.dat", author = "Linkff", }
 file{ path = "maps/out/i5.lua", author = "Linkff", }
-file{ path = "maps/out/j1.dat", author = "Lucifer", }
-file{ path = "maps/out/j1.lua", author = "Lucifer", }
+file{ path = "maps/out/j1.dat", author = "The Unknown", }
+file{ path = "maps/out/j1.lua", author = "The Unknown", }
 file{ path = "maps/out/j5.dat", author = "Linkff", }
 file{ path = "maps/out/j5.lua", author = "Linkff", }
 file{ path = "maps/out/j6.dat", author = "Linkff", }
 file{ path = "maps/out/j6.lua", author = "Linkff", }
 file{ path = "maps/out/j7.dat", author = "Linkff", }
-file{ path = "maps/out/k1.dat", author = "Lucifer", }
+file{ path = "maps/out/k1.dat", author = "The Unknown", }
 file{ path = "maps/out/k7.dat", author = "Linkff", }
-file{ path = "maps/out/k8.dat", author = "Lucifer", }
-file{ path = "maps/out/k9.dat", author = "Lucifer", }
+file{ path = "maps/out/k8.dat", author = "The Unknown", }
+file{ path = "maps/out/k9.dat", author = "The Unknown", }
 file{ path = "maps/out/l1.dat", author = "Linkff", }
 file{ path = "maps/out/l1.lua", author = "Linkff", }
-file{ path = "maps/out/l7.dat", author = "Lucifer", }
-file{ path = "maps/out/l8.dat", author = "Lucifer", }
-file{ path = "maps/out/l9.dat", author = "Linkff, Lucifer", }
-file{ path = "maps/out/l9.lua", author = "Linkff, Lucifer", }
+file{ path = "maps/out/l7.dat", author = "The Unknown", }
+file{ path = "maps/out/l8.dat", author = "The Unknown", }
+file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
+file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
 file{ path = "maps/sanctuaries/shibo_nayru/1f.dat", author = "Linkff", }
 file{ path = "maps/sanctuaries/shibo_nayru/1f.lua", author = "Linkff", }
 file{ path = "musics/inside/pop_estrgg.ogg", author = "Francis Mechner", }
@@ -2344,7 +2344,7 @@ file{ path = "shaders/radial_fade_out.frag.glsl", author = "PhoenixII54", }
 file{ path = "shaders/starman.dat", author = "PhoenixII54", }
 file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
-file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, Lucifer", }
+file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
 file{ path = "sprites/entities/Utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/Utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
@@ -2353,8 +2353,8 @@ file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = 
 file{ path = "sprites/hero/loading.shield1.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/loading.shield2.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/loading.shield3.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hud/temperature.dat", author = "Lucifer", }
-file{ path = "sprites/maps/room_layout.dat", author = "Lucifer", }
+file{ path = "sprites/hud/temperature.dat", author = "The Unknown", }
+file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_default.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_shadow.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }

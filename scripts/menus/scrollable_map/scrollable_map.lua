@@ -397,8 +397,10 @@ end
 
 function map_submenu:draw_dungeon_map(dst_surface)
 
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
   -- Background.
-  self.dungeon_map_background_img:draw(dst_surface, 47, 58)
+  self.dungeon_map_background_img:draw(dst_surface, center_x - 116, center_y - 76)
 
   -- Items.
   self:draw_dungeon_items(dst_surface)
@@ -411,39 +413,86 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 187, 102)
+  self.dungeon_map_img:draw(dst_surface, center_x - 9, center_y - 65)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
-
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
+  local item_box_x, item_box_y = center_x - 108, center_y + 34
   -- Map.
   if self.game:has_dungeon_map() then
-    self.dungeon_map_icons_img:draw_region(0, 0, 17, 17, dst_surface, 50, 168)
+    self.dungeon_map_icons_img:draw_region(
+    0, 0, 16, 16,
+    dst_surface,
+    item_box_x + 2, item_box_y + 2)
   end
 
   -- Compass.
   if self.game:has_dungeon_compass() then
-    self.dungeon_map_icons_img:draw_region(17, 0, 17, 17, dst_surface, 69, 168)
+    self.dungeon_map_icons_img:draw_region(
+    16, 0, 16, 16,
+    dst_surface,
+    item_box_x + 22, item_box_y + 2)
   end
 
   -- Big key.
   if self.game:has_dungeon_big_key() then
-    self.dungeon_map_icons_img:draw_region(34, 0, 17, 17, dst_surface, 88, 168)
+    self.dungeon_map_icons_img:draw_region(
+    32, 0, 16, 16,
+    dst_surface,
+    item_box_x + 42, item_box_y + 4)
+  end
+
+  -- Silver key.
+  if self.game:has_dungeon_silver_key() then
+    self.dungeon_map_icons_img:draw_region(
+    0, 16, 16, 16,
+    dst_surface,
+    item_box_x + 2, item_box_y + 22)
+  end
+
+  -- Green key.
+  if self.game:has_dungeon_green_key() then
+    self.dungeon_map_icons_img:draw_region(
+    16, 16, 16, 16,
+    dst_surface,
+    item_box_x + 22, item_box_y + 22)
+  end
+
+  -- Blue key.
+  if self.game:has_dungeon_blue_key() then
+    self.dungeon_map_icons_img:draw_region(
+    32, 16, 16, 16,
+    dst_surface,
+    item_box_x + 42, item_box_y + 22)
+  end
+
+  -- Red key.
+  if self.game:has_dungeon_red_key() then
+    self.dungeon_map_icons_img:draw_region(
+    48, 16, 16, 16,
+    dst_surface,
+    item_box_x + 62, item_box_y + 22)
   end
 
   -- Boss key.
   if self.game:has_dungeon_boss_key() then
-    self.dungeon_map_icons_img:draw_region(51, 0, 17, 17, dst_surface, 107, 168)
+    -- self.dungeon_map_icons_img:draw_region(51, 0, 16, 16, dst_surface, 107, 168)
   end
 
   -- Small keys.
-  self.dungeon_map_icons_img:draw_region(68, 0, 9, 17, dst_surface, 126, 168)
-  self.small_keys_text:draw(dst_surface, 140, 180)
+  self.dungeon_map_icons_img:draw_region(48, 0, 8, 16,
+  dst_surface,
+  item_box_x + 62, item_box_y + 2)
+  self.small_keys_text:draw(dst_surface, item_box_x + 80, item_box_y + 8)
 end
 
 function map_submenu:draw_dungeon_floors(dst_surface)
-
+  
   -- Draw some floors.
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
   local src_x = 96
   local src_y = (15 - self.highest_floor_displayed) * 12
   local src_width = 32
@@ -504,8 +553,8 @@ function map_submenu:to_dungeon_minimap_coordinates(x, y)
 	 -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
   local minimap_x = 0
   local minimap_y = -15
-  local minimap_width = 123
-  local minimap_height = 120
+  local minimap_width = 112
+  local minimap_height = 112
 
   x = x * scale_x
   y = y * scale_y

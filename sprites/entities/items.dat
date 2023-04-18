@@ -47,7 +47,7 @@ animation{
   name = "blue_key",
   src_image = "entities/items.png",
   directions = {
-    { x = 112, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 112, y = 256, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -320,7 +320,7 @@ animation{
   name = "green_key",
   src_image = "entities/items.png",
   directions = {
-    { x = 96, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 96, y = 256, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -736,7 +736,7 @@ animation{
   name = "red_key",
   src_image = "entities/items.png",
   directions = {
-    { x = 128, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 128, y = 256, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -798,6 +798,13 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "silver_key",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 80, y = 256, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -1024,12 +1031,5 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 96, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "yellow_key",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 144, y = 272, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }

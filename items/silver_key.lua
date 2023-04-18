@@ -2,11 +2,11 @@ local item = ...
 
 function item:on_obtaining(variant, savegame_variable)
 
-  -- Save the possession of the green key in the current dungeon.
+  -- Save the possession of the silverpurple key in the current dungeon.
   local game = self:get_game()
   local dungeon = game:get_dungeon_index()
   if dungeon == nil then
     error("This map is not in a dungeon")
   end
-  game:set_value("dungeon_" .. dungeon .. "_green_key", true)
+  game:set_value("dungeon_" .. dungeon .. "_silver_key", true)
 end
