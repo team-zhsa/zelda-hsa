@@ -191,6 +191,7 @@ Alpha 1.10 (27/07/21) "Goldfish Update":
 	ADD: Added TFT effect.
 	ADD: Added musics.
 	ADD: Added maps.
+	ADD: Merged TQ maps into Hyrule's Adventure.
 	CHG: Changed outside musics.
 	CHG: Changed the electrocution system.
 	CHG: Changed outside tilesets to smaller versions.
@@ -343,7 +344,8 @@ Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
 	ADD: Added maps.
 	ADD: Added more than 30 NPC sprites (#23).
 	ADD: Added treasure items.
-	ADD: Added coloured keys to dungeon informations.
+	ADD: Added coloured keys to dungeon informations (#127).
+	ADD: Add coloured keys to the dungeon minimap menu (#127).
 	CHG: Renamed NPC sprites (#23).
 	CHG: Splitted the pause menu background in multiple rows (#117).
 	CHG: Drawn pause menu title captions separately to add support for translations (#118).
@@ -354,8 +356,8 @@ Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
 	FIX: Fixed collectible treasures amount not being updated (#122).
 	FIX: Fixed static items sprites not showing the right variant in the inventory (#125).
 	FIX: Fixed scrollable map not being centered when using another quest size (#126).
+	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
-	TDO: Add coloured keys to the dungeon minimap menu.
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).

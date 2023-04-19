@@ -23,7 +23,7 @@ function submenu:on_started()
   self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
   self.save_dialog_cursor_pos = "left"
   self.save_dialog_state = 0
-  self.text_color = { 115, 59, 22 }
+  self.text_color = { 224, 224, 224 }
 
   -- Dark surface whose goal is to slightly hide the game and better highlight the menu.
   local quest_w, quest_h = sol.video.get_quest_size()
