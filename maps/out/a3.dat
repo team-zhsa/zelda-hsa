@@ -14151,33 +14151,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1184,
-  y = 720,
-  width = 32,
-  height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
-  x = 1088,
-  y = 672,
-  width = 16,
-  height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
-  x = 1088,
-  y = 736,
-  width = 96,
-  height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
   x = 112,
   y = 176,
   width = 16,
@@ -21380,33 +21353,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1224,
-  y = 336,
-  width = 56,
-  height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
-  x = 1216,
-  y = 432,
-  width = 8,
-  height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
-  x = 1216,
-  y = 336,
-  width = 8,
-  height = 96,
-  pattern = "1110",
-}
-
-tile{
-  layer = 0,
   x = 1112,
   y = 144,
   width = 8,
@@ -23230,7 +23176,7 @@ tile{
   layer = 0,
   x = 1216,
   y = 608,
-  width = 64,
+  width = 8,
   height = 16,
   pattern = "1108",
 }
@@ -24996,15 +24942,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1176,
-  y = 720,
-  width = 8,
-  height = 16,
-  pattern = "1110",
-}
-
-tile{
-  layer = 0,
   x = 440,
   y = 832,
   width = 16,
@@ -25069,6 +25006,87 @@ tile{
   width = 16,
   height = 80,
   pattern = "4148",
+}
+
+tile{
+  layer = 0,
+  x = 1264,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1108",
+}
+
+tile{
+  layer = 0,
+  x = 1248,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1108",
+}
+
+tile{
+  layer = 0,
+  x = 1232,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1108",
+}
+
+tile{
+  layer = 0,
+  x = 1256,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1109",
+}
+
+tile{
+  layer = 0,
+  x = 1272,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1109",
+}
+
+tile{
+  layer = 0,
+  x = 1240,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1109",
+}
+
+tile{
+  layer = 0,
+  x = 1224,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "1109",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 672,
+  width = 8,
+  height = 64,
+  pattern = "1110",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 736,
+  width = 8,
+  height = 16,
+  pattern = "1108",
 }
 
 teletransporter{
@@ -27398,6 +27416,56 @@ teletransporter{
   height = 16,
   destination_map = "inside/houses/kakariko_village/windmill",
   destination = "from_outside",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1192,
+  y = 589,
+  width = 8,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1200,
+  y = 597,
+  width = 8,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1208,
+  y = 605,
+  width = 8,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1216,
+  y = 613,
+  width = 8,
+  height = 16,
+  direction = 0,
+  model = "hookable",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1224,
+  y = 621,
+  width = 64,
+  height = 16,
+  direction = 0,
+  model = "hookable",
 }
 
 tile{
