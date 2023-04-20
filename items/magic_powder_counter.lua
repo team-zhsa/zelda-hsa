@@ -4,8 +4,8 @@ local game = item:get_game()
 
 function item:on_created()
 
-  self:set_savegame_variable("possession_magic_powders_counter")
-  self:set_amount_savegame_variable("amount_magic_powders_counter")
+  self:set_savegame_variable("possession_magic_powder_counter")
+  self:set_amount_savegame_variable("amount_magic_powder_counter")
   self:set_assignable(true)
 end
 

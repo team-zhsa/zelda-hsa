@@ -18,10 +18,14 @@ function map:on_started()
 end
 
 function sensor_welcome:on_activated()
-	game:start_dialog("maps.houses.south_castle.ravios_shop.merchant_welcome", game:get_player_name())
+	if not game:get_value("ravio_first_interaction", true) then
+		game:start_dialog("maps.houses.south_field.ravios_shop.merchant_first_welcome", game:get_player_name())
+		game:set_value("ravio_first_interaction", true)
+	else game:start_dialog("maps.houses.south_field.ravios_shop.merchant_welcome", game:get_player_name())
+	end
 	sensor_welcome:remove()
 end
 
 function npc_ravio:on_interaction()
-	game:start_dialog("maps.houses.south_castle.ravios_shop.merchant_welcome", game:get_player_name())
+	game:start_dialog("maps.houses.south_field.ravios_shop.merchant_welcome", game:get_player_name())
 end

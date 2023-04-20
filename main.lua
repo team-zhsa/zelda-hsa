@@ -5,13 +5,13 @@ local shader_manager = require("scripts/shader_manager")
 local initial_menus_config = require("scripts/initial_menus/menus_config")
 local initial_menus = {}
 local effect_manager = require('scripts/maps/effect_manager')
---local gb = require('scripts/maps/gb_effect')
 local tft = require('scripts/maps/tft_effect')
 local fsa = require('scripts/maps/fsa_effect')
 -- This function is called when Solarus starts.
 function sol.main:on_started()
   sol.main.load_settings()
   math.randomseed(os.time())
+  
   -- Show the initial menus.
   if #initial_menus_config == 0 then
     return

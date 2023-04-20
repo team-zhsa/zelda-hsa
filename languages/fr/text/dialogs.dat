@@ -170,15 +170,6 @@ Ne pas acheter
 }
 
 dialog{
-  id = "_treasure.angler_key.1",
-  icon = "41",
-  text = [[
-Tu as la        
-Clé Poisson!
-]],
-}
-
-dialog{
   id = "_treasure.arrow.1",
   icon = "3",
   next = "_treasure.arrow.1.1",
@@ -474,6 +465,62 @@ Donjon !
 }
 
 dialog{
+  id = "_treasure.crystal_1.1",
+  text = [[
+Tu as délivré la première
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_2.1",
+  text = [[
+Tu as délivré la deuxième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_3.1",
+  text = [[
+Tu as délivré la troisième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_4.1",
+  text = [[
+Tu as délivré la quatrième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_5.1",
+  text = [[
+Tu as délivré la cinquième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_6.1",
+  text = [[
+Tu as délivré la sixième
+jeune fille !
+]],
+}
+
+dialog{
+  id = "_treasure.crystal_7.1",
+  text = [[
+Tu as délivré la septième
+jeune fille !
+]],
+}
+
+dialog{
   id = "_treasure.face_key.1",
   icon = "44",
   text = [[
@@ -575,6 +622,15 @@ Feuille d'Or !
 Amène-les chez  
 Richard. Parle- 
 lui de la Clé...
+]],
+}
+
+dialog{
+  id = "_treasure.goron_amber.1",
+  icon = "184",
+  text = [[
+Tu as trouvé un fragment
+d'Ambre Goron !
 ]],
 }
 
@@ -707,46 +763,6 @@ attaques de feu !
 }
 
 dialog{
-  id = "_treasure.instrument_4.1",
-  text = [[
-Tu as la harpe
-du reflux !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_5.1",
-  text = [[
-Tu as le xylophone
-marin !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_6.1",
-  text = [[
-Tu as le triangle
-de corail !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_7.1",
-  text = [[
-Tu as l'orgue
-de l'embellie !
-]],
-}
-
-dialog{
-  id = "_treasure.instrument_8.1",
-  text = [[
-Tu as le tambour
-des marées !
-]],
-}
-
-dialog{
   id = "_treasure.lamp.1",
   icon = "9",
   text = [[
@@ -779,7 +795,7 @@ dialog{
 Tu as trouvé la Baguette de
 Feu !$0 Elle envoie des rayons
 de lumière ! Mais surveille ton
-CompteurMagique !
+Compteur Magique !
 ]],
 }
 
@@ -846,7 +862,7 @@ l'entrée du donjon !
 }
 
 dialog{
-  id = "_treasure.magic_powders_counter.1",
+  id = "_treasure.magic_powder_counter.1",
   icon = "14",
   text = [[
 Tu as gagné la  
@@ -1036,6 +1052,45 @@ Miroir !$0
 Il te protège de quasiment toutes
 les attaques et repousse les
 lasers.
+]],
+}
+
+dialog{
+  id = "_treasure.monster_claw.1",
+  icon = "182",
+  text = [[
+Tu as obtenu une griffe de
+monstre !$0 Attention à ne pas
+te couper avec !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_gut.1",
+  icon = "180",
+  text = [[
+Tu as obtenu un foie de monstre !$0
+Attention, c'est très visqueux !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_horn.1",
+  icon = "181",
+  text = [[
+Tu as obtenu une corne de
+monstre !$0 Attention aux doigts,
+elle est couverte d'épines !
+]],
+}
+
+dialog{
+  id = "_treasure.monster_tail.1",
+  icon = "183",
+  text = [[
+Tu as obtenu une queue de
+monstre !$0 Attention, elle
+bouge encore !
 ]],
 }
 
@@ -1337,6 +1392,33 @@ Incroyable !
 }
 
 dialog{
+  id = "_treasure.rupee_bag.1",
+  icon = "50",
+  text = [[
+]],
+}
+
+dialog{
+  id = "_treasure.rupee_bag.2",
+  icon = "51",
+  text = [[
+Tu as obtenu la Grande Bourse !$0
+Elle peut transporter jusqu'à
+499 rubis. 
+]],
+}
+
+dialog{
+  id = "_treasure.rupee_bag.3",
+  icon = "52",
+  text = [[
+Tu as obtenu la Bourse Géante !$0
+Elle peut contenir jusqu'à
+999 rubis.
+]],
+}
+
+dialog{
   id = "_treasure.seas_map.1",
   icon = "152",
   text = [[
@@ -1404,7 +1486,7 @@ s'en servir !
 
 dialog{
   id = "_treasure.sword.1",
-  icon = "160",
+  icon = "170",
   text = [[
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
@@ -1417,7 +1499,7 @@ transmise par notre peuple.
 
 dialog{
   id = "_treasure.sword.2",
-  icon = "161",
+  icon = "171",
   text = [[
 Tu as obtenu l'épée de
 Légende !$0 Seul un véritable
@@ -1429,7 +1511,7 @@ cette épée émet des rayons.
 
 dialog{
   id = "_treasure.sword.3",
-  icon = "162",
+  icon = "172",
   text = [[
 Génial ! Ton épée est plus
 puissante ! Sens la fabuleuse
@@ -1440,7 +1522,7 @@ veines !
 
 dialog{
   id = "_treasure.sword.4",
-  icon = "163",
+  icon = "173",
   text = [[
 Tu as obtenu l'épée dorée !
 Elle est bien plus puissante
@@ -1450,7 +1532,7 @@ que la vieille !
 
 dialog{
   id = "_treasure.sword.5",
-  icon = "164",
+  icon = "174",
   text = [[
 Formidable !$0
 Tu as obtenu l'épée de Lumière !
@@ -1647,7 +1729,7 @@ Désormais tu pourras arpenter
 plus facilement tous ces chemins
 et partir à la conquête des
 recoins les plus reculés !
-Appuie sur SELECT.
+Appuie sur \[controller_select\].
 ]],
 }
 
@@ -4397,15 +4479,28 @@ aider à couper tous ces
 dialog{
   id = "maps.houses.south_field.ravios_shop.merchant_first_welcome",
   text = [[
-TODO
-
+Bonjour $v !$0 C'est moi
+Lavio. Je ne sais pas si tu te
+souviens de moi.
+Cela fait déjà trente ans
+que l'on ne s'est pas vu mais
+je suis content de savoir que
+tu vas toujours bien.$0
+Après être retourné à Lorule,
+j'ai entendu ce qui se passait
+ici à Hyrule et j'ai décidé de
+repartir voir ce qu'il en était.
+J'ai donc retrouvé ta maison
+et vu qu'elle était abandonnée,
+j'y ai réinstallé ma boutique.$0
+Choisis ce que tu aimes.
 ]],
 }
 
 dialog{
   id = "maps.houses.south_field.ravios_shop.merchant_welcome",
   text = [[
-Hé $v !$0
+Salut $v !$0
 Ce monde peut être dangereux.
 Choisis ce que tu aimes.
 ]],
@@ -4998,7 +5093,7 @@ dialog{
   text = [[
 Je vais t'apprendre la berceuse
 de Zelda. Elle te servira
-sûrement beaucoup.
+dans ton aventure.
 ]],
 }
 
@@ -5079,9 +5174,10 @@ Poissonnerie
 
 dialog{
   id = "maps.out.hyrule_town.sign_2",
+  skip = "all",
   text = [[
-Clé de produit :
-$v
+Banque
+Ouverte de 10h à 16h
 ]],
 }
 
@@ -6429,6 +6525,7 @@ Matt Wright,
 MetalZelda,
 FFOmega,
 Bruce Juice,
+Newlink,
 LinkFF,
 The Unknown
 
@@ -6571,19 +6668,9 @@ Hyrule's Adventure
 dialog{
   id = "scripts.menus.pause_inventory._placeholder.1",
   icon = "150",
-  text = [[
-Cet objet ne sert à rien.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.angler_key.1",
-  icon = "41",
   skip = "all",
   text = [[
-Permet d'ouvrir
-la porte de
-l'abîme du poisson.
+Cet objet ne sert à rien.
 ]],
 }
 
@@ -6601,6 +6688,7 @@ la tour du vautour.
 dialog{
   id = "scripts.menus.pause_inventory.blue_tunic.1",
   icon = "44",
+  skip = "all",
   text = [[
 Une tunique bleue qui te
 protège du froid et te permet
@@ -6609,7 +6697,7 @@ de respirer sous l'eau.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.bombs_counter.1",
+  id = "scripts.menus.pause_inventory.bomb_counter.1",
   icon = "4",
   skip = "all",
   text = [[
@@ -6887,6 +6975,80 @@ des ennemis coriaces.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.crystal_1.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La première jeune fille,
+délivrée dans l'Arbre Mojo.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_2.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La deuxième jeune fille,
+délivrée dans la Caverne
+Dodongo.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_3.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La troisième jeune fille,
+délivrée dans le Palais du
+Désert.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_4.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La quaitrième jeune fille,
+délivrée dans le Ventre de
+Jabu-Jabu.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_5.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La cinquième jeune fille,
+délivrée dans le Pic César.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_6.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La sixième jeune fille,
+délivrée dans le Temple Oublié.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_7.1",
+  icon = "20",
+  skip = "all",
+  text = [[
+La septième jeune fille,
+délivrée dans le Temple de
+la Glace.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.face_key.1",
   icon = "44",
   skip = "all",
@@ -6936,6 +7098,16 @@ Retrouvez toutes les
 feuilles d'or et
 apportez-les
 à Richard.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.goron_amber_counter.1",
+  icon = "184",
+  skip = "all",
+  text = [[
+Des Ambres Gorons qui peuvent
+être troqués ou vendus.
 ]],
 }
 
@@ -7017,51 +7189,6 @@ dialog{
   text = [[
 Permet de repousser
 les attaques de feu.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_4.1",
-  skip = "all",
-  text = [[
-C'est le quatrième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_5.1",
-  skip = "all",
-  text = [[
-C'est le cinquième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_6.1",
-  skip = "all",
-  text = [[
-C'est le sixième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_7.1",
-  skip = "all",
-  text = [[
-C'est le septième 
-instrument des sirènes.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.instrument_8.1",
-  skip = "all",
-  text = [[
-C'est le huitième 
-instrument des sirènes.
 ]],
 }
 
@@ -7285,6 +7412,50 @@ les rayons lasers.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.monster_claw_counter.1",
+  icon = "182",
+  skip = "all",
+  text = [[
+Des griffes de monstres qui
+peuvent être troquées ou
+vendues.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_gut_counter.1",
+  icon = "180",
+  skip = "all",
+  text = [[
+Des foies de monstres qui
+peuvent être troqués ou
+vendus.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_horn_counter.1",
+  icon = "181",
+  skip = "all",
+  text = [[
+Des queues de monstres qui
+peuvent être troquées ou
+vendues.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.monster_tail_counter.1",
+  icon = "183",
+  skip = "all",
+  text = [[
+Des queues de monstres qui
+peuvent être troquées ou
+vendues.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.mushroom.1",
   icon = "19",
   skip = "all",
@@ -7338,7 +7509,7 @@ Sagesse.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.photos_counter.1",
+  id = "scripts.menus.pause_inventory.photo_counter.1",
   icon = "150",
   skip = "all",
   text = [[
@@ -7400,6 +7571,36 @@ chaleur.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.1",
+  icon = "50",
+  skip = "all",
+  text = [[
+La Petite Bourse, qui permet
+de transporter jusqu'à 199
+rubis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.2",
+  icon = "50",
+  text = [[
+La Bourse de Géant, qui permet
+de transporter jusqu'à 499 rubis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rupee_bag.3",
+  icon = "52",
+  skip = "all",
+  text = [[
+La Bourse de Géant, qui permet
+de transporter jusqu'à 999 rubis
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.seas_map.1",
   icon = "152",
   skip = "all",
@@ -7410,7 +7611,7 @@ en mer.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.seashells_counter.1",
+  id = "scripts.menus.pause_inventory.seashell_counter.1",
   icon = "94",
   skip = "all",
   text = [[
@@ -7752,6 +7953,16 @@ dialog{
 Un peu d'énergie
 pour croquer la vie
 à pleines dents !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.world_map.1",
+  icon = "150",
+  text = [[
+La carte d'Hyrule, te permettant
+de te repérer dans ce vaste
+pays.
 ]],
 }
 

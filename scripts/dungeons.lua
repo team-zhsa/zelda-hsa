@@ -266,6 +266,30 @@ local function initialise_dungeon_features(game)
     return game:get_value("dungeon_" .. dungeon_index .. "_big_key")
   end
 
+  function game:has_dungeon_green_key(dungeon_index)
+
+    dungeon_index = dungeon_index or game:get_dungeon_index()
+    return game:get_value("dungeon_" .. dungeon_index .. "_green_key")
+  end
+
+  function game:has_dungeon_red_key(dungeon_index)
+
+    dungeon_index = dungeon_index or game:get_dungeon_index()
+    return game:get_value("dungeon_" .. dungeon_index .. "_red_key")
+  end
+
+  function game:has_dungeon_blue_key(dungeon_index)
+
+    dungeon_index = dungeon_index or game:get_dungeon_index()
+    return game:get_value("dungeon_" .. dungeon_index .. "_blue_key")
+  end
+
+  function game:has_dungeon_silver_key(dungeon_index)
+
+    dungeon_index = dungeon_index or game:get_dungeon_index()
+    return game:get_value("dungeon_" .. dungeon_index .. "_silver_key")
+  end
+
   function game:has_dungeon_boss_key(dungeon_index)
 
     dungeon_index = dungeon_index or game:get_dungeon_index()

@@ -4,61 +4,17 @@ local max_floors_displayed = 6
 local outside_world_size = {}
 local outside_world_minimap_size = {}
 local map_shown = false
-
-cross_positions = { -- Indicates the coordinates in the entire world of the next step goal (when negative, the cross isn't displayed).
-  -- Game started
-  {x = 07040, y = 04424}, -- Hyrule Castle (Ocarina)
-  -- "ocarina_obtained",
-  {x = 07040, y = 04424}, -- Hyrule Castle (Lamp)
-  -- "lamp_obtained",
-  {x = 09856, y = 02416}, -- Blacksmith
-  -- "sword_obtained",
-  {x = 00656, y = 03048}, -- Sahasrahla's house in Kakarico
-  -- "world_map_obtained",
-  {x = 01808, y = 01736}, -- Priest in sanctuary
-  -- "priest_met",
-  {x = 00904, y = 00080}, -- Ruins
-  -- "dungeon_1_started",
-  {x = 00904, y = 00080}, -- Ruins (completing)
-  -- "dungeon_1_completed",
-  {x = 00656, y = 03048}, -- Ruins completed, go to Sahasrahla's house in Kakarico
-  -- "sahasrahla_lost_woods_map",
-  {x = 04472, y = 07792}, -- Sahasrahla met, go to Lost Woods mapper
-  -- "lost_woods_map_obtained",
-  {x = 02336, y = 04520}, -- Forest Temple
-  -- "dungeon_2_started",
-  {x = 02336, y = 04520}, -- Forest Temple (completing)
-  -- "dungeon_2_completed",
-  {x = 01808, y = 01736}, -- Forest Temple completed, show Sanctuary
-  -- "priest_kidnapped",
-  {x = 01808, y = 01736}, -- Forest Temple completed, go to Sanctuary
-  -- "agahnim_met",
-  {x = 01736, y = 00408}, -- Fire Temple
-  -- "dungeon_3_started",
-  {x = 01736, y = 00408}, -- Fire Temple (completing)
-  -- "dungeon_3_completed",
-  {x = 07824, y = 04660}, -- Fire Temple completed, go to  Temple of Time
-  -- "master_sword_obtained",
-  {x = 07040, y = 04424}, -- Hyrule Castle
-  -- "zelda_kidnapped",
-  {x = 07040, y = 04424}, -- Hyrule Castle
-  -- "castle_unlocked",
-  {x = 07040, y = 04424}, -- Hyrule Castle
-  -- "castle_completed",
-  {x = 00000, y = 05760} -- Deku Tree
-  
-  
-}
-
+local waypoint_positions = require("scripts/menus/scrollable_map/waypoint_config")
 
 function map_submenu:on_started()
   submenu.on_started(self)
-	self.game:set_hud_enabled(false)  
+	self.game:set_hud_enabled(false)
+  
   -- Common to dungeons and outside areas.
   self.hero_head_sprite = sol.sprite.create("menus/map/hero_head")
   self.hero_head_sprite:set_animation("tunic" .. self.game:get_item("tunic"):get_variant())
-  self.cross_sprite = sol.sprite.create("menus/map/map_cross")
-  self.cross_sprite:set_animation("blinking")
+  self.waypoint_sprite = sol.sprite.create("menus/map/map_waypoint")
+  self.waypoint_sprite:set_animation("blinking")
   self.up_arrow_sprite = sol.sprite.create("menus/arrow")
   self.up_arrow_sprite:set_direction(1)
   self.down_arrow_sprite = sol.sprite.create("menus/arrow")
@@ -75,22 +31,22 @@ function map_submenu:on_started()
     self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
-    local cross_absolute_x = cross_positions[self.game:get_value("main_quest_step")].x
-    local cross_absolute_y = cross_positions[self.game:get_value("main_quest_step")].y
+    local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
+    local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
     local map_width, map_height = self.game:get_map():get_size()
     if self.game:is_in_outside_world() then -- What maps are outside?
       local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
       hero_absolute_x = hero_absolute_x + hero_map_x
       hero_absolute_y = hero_absolute_y + hero_map_y
-      cross_absolute_x = cross_absolute_x
-      cross_absolute_y = cross_absolute_y
+      waypoint_absolute_x = waypoint_absolute_x
+      waypoint_absolute_y = waypoint_absolute_y
     end
     if self.game:is_in_inside_world() then -- What maps are inside?
       local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
       hero_absolute_x = hero_absolute_x
       hero_absolute_y = hero_absolute_y
-      cross_absolute_x = cross_absolute_x
-      cross_absolute_y = cross_absolute_y
+      waypoint_absolute_x = waypoint_absolute_x
+      waypoint_absolute_y = waypoint_absolute_y
     end
     self.world_minimap_movement = nil
     self.world_minimap_visible_xy = {x = 0, y = 0}
@@ -104,12 +60,12 @@ function map_submenu:on_started()
 	      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
 	      self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 45 + 64 -- 64 is the real map's offset with the sprite image
 	      self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 28 + 64
-        local cross_minimap_x = math.floor(cross_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-        local cross_minimap_y = math.floor(cross_absolute_y * self.outside_world_minimap_size.width / self.outside_world_size.width)
-        self.cross_x = cross_minimap_x + (cross_absolute_x / map_width) + 45 + 64 + 16 -- 64 is the real map's offset with the sprite image
-	      self.cross_y = cross_minimap_y + (cross_absolute_y / map_width) + 28 + 64 + 16
-	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
+        local waypoint_minimap_x = math.floor(waypoint_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
+        local waypoint_minimap_y = math.floor(waypoint_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
+        self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + 45 + 64 + 16 -- 64 is the real map's offset with the sprite image
+	      self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + 28 + 64 + 16
 	      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
+	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
 			end
     else
       -- if World Map not in inventory, show clouds in map screen
@@ -339,54 +295,72 @@ end
 
 
 function map_submenu:draw_world_map(dst_surface)
-  -- Draw the minimap.
-  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x, self.world_minimap_visible_xy.y, 200, 160, dst_surface, 60, 40)
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
   
+  -- Draw the minimap.
+  self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x,
+   self.world_minimap_visible_xy.y,
+   182, 148,
+   dst_surface,
+   center_x - 87, center_y - 70)
+
   if map_shown then
 		-- Draw background image
-  	self.world_map_background_img:draw(dst_surface, 52, 32)
+  	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
 
     -- Draw the hero's position.
     local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
-    local cross_position_visible_x = self.cross_x - self.world_minimap_visible_xy.x
-    local cross_position_visible_y = self.cross_y - self.world_minimap_visible_xy.y
-    if (hero_visible_y >= 30 and hero_visible_y <= 160 + 40) and (hero_visible_x >= 60 and hero_visible_x <= 200 + 60) then -- Makes the hero icon invisible when it is out of bounds.
+    local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x
+    local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y
+    if (hero_visible_y >= 30 and hero_visible_y + 40 <= center_y + 40 + 40)
+    and (hero_visible_x >= 60 and hero_visible_x <= center_x + 40 + 60) then
+      -- Makes the hero icon invisible when it is out of bounds.
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
-    if (cross_position_visible_x >= 60 and cross_position_visible_y >= 40) and (cross_position_visible_x <= 260 and cross_position_visible_y <= 200) then -- Offset
-      self.cross_sprite:draw(dst_surface, cross_position_visible_x, cross_position_visible_y)
+    if (waypoint_position_visible_x >= 60 and waypoint_position_visible_y >= 40)
+    and (waypoint_position_visible_x <= center_x + 100
+    and waypoint_position_visible_y <= center_x + 80) then
+      -- Offset
+      self.waypoint_sprite:draw(dst_surface, waypoint_position_visible_x, waypoint_position_visible_y)
     end
 
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, 100, 32)
-      self.up_arrow_sprite:draw(dst_surface, 208, 32)
+      self.up_arrow_sprite:draw(dst_surface, center_x - 40, center_y - 87)
+      self.up_arrow_sprite:draw(dst_surface, center_x + 24, center_y - 87)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
-      self.down_arrow_sprite:draw(dst_surface, 100, 200)
-      self.down_arrow_sprite:draw(dst_surface, 208, 200)
+      self.down_arrow_sprite:draw(dst_surface, center_x - 40, center_y + 79)
+      self.down_arrow_sprite:draw(dst_surface, center_x + 24, center_y + 79)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
-      self.left_arrow_sprite:draw(dst_surface, 52, 62)
-      self.left_arrow_sprite:draw(dst_surface, 52, 158)
+      self.left_arrow_sprite:draw(dst_surface, center_x - 103, center_y - 48)
+      self.left_arrow_sprite:draw(dst_surface, center_x - 103, center_y + 32)
     end
     
     if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 199 then
-      self.right_arrow_sprite:draw(dst_surface, 260, 62)
-      self.right_arrow_sprite:draw(dst_surface, 260, 158)
+      self.right_arrow_sprite:draw(dst_surface, center_x + 94, center_y - 48)
+      self.right_arrow_sprite:draw(dst_surface, center_x + 94, center_y + 32)
     end
   else
-    self.world_map_background_img:draw(dst_surface, 52, 32)
+  	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
   end
 end
 
 function map_submenu:draw_dungeon_map(dst_surface)
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
+  local map_box_x, map_box_y = center_x - 9, center_y - 65
+  local map_box_center_x, map_box_center_y = map_box_x + 52, map_box_y + 52
+  local dungeon_map_w, dungeon_map_h = self.dungeon.minimap_width, self.dungeon.minimap_height
+  local dungeon_map_center_x, dungeon_map_center_y = dungeon_map_w / 2, dungeon_map_h / 2
 
   -- Background.
-  self.dungeon_map_background_img:draw(dst_surface, 47, 58)
+  self.dungeon_map_background_img:draw(dst_surface, center_x - 116, center_y - 76)
 
   -- Items.
   self:draw_dungeon_items(dst_surface)
@@ -399,45 +373,94 @@ function map_submenu:draw_dungeon_map(dst_surface)
       and self.selected_floor == self.hero_floor then
     self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
   end
-  self.dungeon_map_img:draw(dst_surface, 187, 102)
+  self.dungeon_map_img:draw(dst_surface,
+  map_box_center_x - dungeon_map_center_x,
+  map_box_center_y - dungeon_map_center_y)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
-
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
+  local item_box_x, item_box_y = center_x - 108, center_y + 34
   -- Map.
   if self.game:has_dungeon_map() then
-    self.dungeon_map_icons_img:draw_region(0, 0, 17, 17, dst_surface, 50, 168)
+    self.dungeon_map_icons_img:draw_region(
+    0, 0, 16, 16,
+    dst_surface,
+    item_box_x + 2, item_box_y + 2)
   end
 
   -- Compass.
   if self.game:has_dungeon_compass() then
-    self.dungeon_map_icons_img:draw_region(17, 0, 17, 17, dst_surface, 69, 168)
+    self.dungeon_map_icons_img:draw_region(
+    16, 0, 16, 16,
+    dst_surface,
+    item_box_x + 22, item_box_y + 2)
   end
 
   -- Big key.
   if self.game:has_dungeon_big_key() then
-    self.dungeon_map_icons_img:draw_region(34, 0, 17, 17, dst_surface, 88, 168)
+    self.dungeon_map_icons_img:draw_region(
+    32, 0, 16, 16,
+    dst_surface,
+    item_box_x + 42, item_box_y + 4)
+  end
+
+  -- Silver key.
+  if self.game:has_dungeon_silver_key() then
+    self.dungeon_map_icons_img:draw_region(
+    0, 16, 16, 16,
+    dst_surface,
+    item_box_x + 2, item_box_y + 22)
+  end
+
+  -- Green key.
+  if self.game:has_dungeon_green_key() then
+    self.dungeon_map_icons_img:draw_region(
+    16, 16, 16, 16,
+    dst_surface,
+    item_box_x + 22, item_box_y + 22)
+  end
+
+  -- Blue key.
+  if self.game:has_dungeon_blue_key() then
+    self.dungeon_map_icons_img:draw_region(
+    32, 16, 16, 16,
+    dst_surface,
+    item_box_x + 42, item_box_y + 22)
+  end
+
+  -- Red key.
+  if self.game:has_dungeon_red_key() then
+    self.dungeon_map_icons_img:draw_region(
+    48, 16, 16, 16,
+    dst_surface,
+    item_box_x + 62, item_box_y + 22)
   end
 
   -- Boss key.
   if self.game:has_dungeon_boss_key() then
-    self.dungeon_map_icons_img:draw_region(51, 0, 17, 17, dst_surface, 107, 168)
+    -- self.dungeon_map_icons_img:draw_region(51, 0, 16, 16, dst_surface, 107, 168)
   end
 
   -- Small keys.
-  self.dungeon_map_icons_img:draw_region(68, 0, 9, 17, dst_surface, 126, 168)
-  self.small_keys_text:draw(dst_surface, 140, 180)
+  self.dungeon_map_icons_img:draw_region(48, 0, 8, 16,
+  dst_surface,
+  item_box_x + 62, item_box_y + 2)
+  self.small_keys_text:draw(dst_surface, item_box_x + 80, item_box_y + 8)
 end
 
 function map_submenu:draw_dungeon_floors(dst_surface)
-
+  
   -- Draw some floors.
+  local width, height = dst_surface:get_size()
+  local center_x, center_y = width / 2, height / 2
   local src_x = 96
   local src_y = (15 - self.highest_floor_displayed) * 12
   local src_width = 32
   local src_height = self.nb_floors_displayed * 12 + 1
-  local dst_x = 79
-  local dst_y = 70 + (max_floors_displayed + 1 - self.nb_floors_displayed) * 6
+  local dst_x = center_x - 84
+  local dst_y = (center_y - 50) + (max_floors_displayed + 1 - self.nb_floors_displayed) * 6
   local old_dst_y = dst_y
 
   self.dungeon_floors_img:draw_region(src_x, src_y, src_width, src_height,
@@ -456,7 +479,7 @@ function map_submenu:draw_dungeon_floors(dst_surface)
   if self.hero_floor ~= nil
       and self.hero_floor >= lowest_floor_displayed
       and self.hero_floor <= self.highest_floor_displayed then
-    dst_x = 61
+    dst_x = center_x - 100
     dst_y = old_dst_y + (self.highest_floor_displayed - self.hero_floor) * 12
     self.hero_head_sprite:draw(dst_surface, dst_x, dst_y)
   end
@@ -492,8 +515,8 @@ function map_submenu:to_dungeon_minimap_coordinates(x, y)
 	 -- The minimap is a grid of 10*10 rooms. -- = map size / dungeon size
   local minimap_x = 0
   local minimap_y = -15
-  local minimap_width = 123
-  local minimap_height = 120
+  local minimap_width = 112
+  local minimap_height = 112
 
   x = x * scale_x
   y = y * scale_y
@@ -549,7 +572,7 @@ function map_submenu:load_dungeon_map_image()
       local dst_x, dst_y = self:to_dungeon_minimap_coordinates(boss.x, boss.y)
       dst_x = dst_x - 4
       dst_y = dst_y - 4
-      self.dungeon_map_icons_img:draw_region(78, 0, 8, 8,
+      self.dungeon_map_icons_img:draw_region(56, 0, 8, 8,
           self.dungeon_map_img, dst_x, dst_y)
     end
 
@@ -568,11 +591,11 @@ function map_submenu:load_dungeon_map_image()
         dst_y = dst_y - 1
         if chest.big then
           dst_x = dst_x - 3
-          self.dungeon_map_icons_img:draw_region(78, 12, 6, 4,
+          self.dungeon_map_icons_img:draw_region(56, 13, 6, 4,
           self.dungeon_map_img, dst_x, dst_y)
         else
           dst_x = dst_x - 2
-          self.dungeon_map_icons_img:draw_region(78, 8, 4, 4,
+          self.dungeon_map_icons_img:draw_region(56, 9, 4, 4,
           self.dungeon_map_img, dst_x, dst_y)
         end
       end

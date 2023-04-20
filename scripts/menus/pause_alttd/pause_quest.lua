@@ -21,8 +21,8 @@ local item_names_static_right = {
   "bird_key",
 }
 local item_names_static_bottom = {
-  "seashells_counter",
-  "photos_counter",
+  "seashell_counter",
+  "photo_counter",
   "golden_leaves_counter",
 }
 
@@ -284,15 +284,15 @@ function quest_submenu:show_info_message()
   local dialog_id = false
   if item_name == "piece_of_heart" then
     dialog_id =  "scripts.menus.pause_inventory.piece_of_heart.1" 
-  elseif item_name == "seashells_counter" then
+  elseif item_name == "seashell_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      dialog_id =  "scripts.menus.pause_inventory.seashells_counter.1" 
+      dialog_id =  "scripts.menus.pause_inventory.seashell_counter.1" 
     end
-  elseif item_name == "photos_counter" then
+  elseif item_name == "photo_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      dialog_id =  "scripts.menus.pause_inventory.photos_counter.1" 
+      dialog_id =  "scripts.menus.pause_inventory.photo_counter.1" 
     end
   elseif item_name == "golden_leaves_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
@@ -324,19 +324,19 @@ function quest_submenu:set_cursor_position(row, column)
       local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
       self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
       self.game:set_custom_command_effect("action", "info")
-  elseif item_name =="seashells_counter" then
+  elseif item_name =="seashell_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      self:set_caption_key("inventory.caption.item.seashells_counter.1")
+      self:set_caption_key("inventory.caption.item.seashell_counter.1")
       self.game:set_custom_command_effect("action", "info")
     else
       self:set_caption_key(nil)
       self.game:set_custom_command_effect("action", nil)
     end
-  elseif item_name =="photos_counter" then
+  elseif item_name =="photo_counter" then
     local item = item_name and self.game:get_item(item_name) or nil
     if item:get_amount() > 0 then
-      self:set_caption_key("inventory.caption.item.photos_counter.1")
+      self:set_caption_key("inventory.caption.item.photo_counter.1")
       self.game:set_custom_command_effect("action", "info")
     else
       self:set_caption_key(nil)

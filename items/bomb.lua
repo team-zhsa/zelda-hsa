@@ -13,7 +13,7 @@ function item:on_started()
   -- Disable pickable bombs if the player has no bomb counter.
   -- We cannot do this from on_created() because we don't know if the bomb counter
   -- is already created there.
-  self:set_obtainable(self:get_game():has_item("bombs_counter"))
+  self:set_obtainable(self:get_game():has_item("bomb_counter"))
 
 end
 
@@ -25,7 +25,7 @@ function item:on_obtaining(variant, savegame_variable)
   if amount == nil then
     error("Invalid variant '" .. variant .. "' for item 'bomb'")
   end
-  self:get_game():get_item("bombs_counter"):add_amount(amount)
+  self:get_game():get_item("bomb_counter"):add_amount(amount)
 
 end
 

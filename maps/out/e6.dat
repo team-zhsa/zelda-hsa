@@ -13747,6 +13747,17 @@ npc{
   sprite = "entities/sign",
 }
 
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/e5",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 728,

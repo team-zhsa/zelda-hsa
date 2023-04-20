@@ -81,7 +81,7 @@ local hud_config = {
   -- Attack icon.
   {
     menu_script = "scripts/hud/attack_icon",
-    x = -94,
+    x = -95,
     y = 20,
   },
 

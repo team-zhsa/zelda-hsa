@@ -191,6 +191,7 @@ Alpha 1.10 (27/07/21) "Goldfish Update":
 	ADD: Added TFT effect.
 	ADD: Added musics.
 	ADD: Added maps.
+	ADD: Merged TQ maps into Hyrule's Adventure.
 	CHG: Changed outside musics.
 	CHG: Changed the electrocution system.
 	CHG: Changed outside tilesets to smaller versions.
@@ -338,8 +339,25 @@ Alpha 1.16.1 (11/04/23) "Mackerel Update":
 	FIX: Fixed the miniboss of the Forest Temple (B3) death sequence not being triggered (#115).
 	FIX: Fixed a wall being visible in the Fire Temple (B2) at door 35N (#116).
 	REM: Removed ignored files.
+
+Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
+	ADD: Added maps.
+	ADD: Added more than 30 NPC sprites (#23).
+	ADD: Added treasure items.
+	ADD: Added coloured keys to dungeon informations (#127).
+	ADD: Add coloured keys to the dungeon minimap menu (#127).
+	CHG: Renamed NPC sprites (#23).
+	CHG: Splitted the pause menu background in multiple rows (#117).
+	CHG: Drawn pause menu title captions separately to add support for translations (#118).
+	CHG: Moved pause menu sprites to a separate folder.
+	CHG: Renamed collectible treasure items.
+	CHG: Changed sword colour on hero (#21).
+	CHG: Made the HUD icons semi-transparent when the hero is underneath (#123).
+	FIX: Fixed collectible treasures amount not being updated (#122).
+	FIX: Fixed static items sprites not showing the right variant in the inventory (#125).
+	FIX: Fixed scrollable map not being centered when using another quest size (#126).
+	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
-	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
@@ -352,11 +370,9 @@ Alpha 1.16.1 (11/04/23) "Mackerel Update":
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 
-Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
-	ADD: Added more than 30 NPC sprites.
-	CHG: Splitted the pause menu background in multiple rows (#117).
-	CHG: Drawn pause menu title captions separately to add support for translations (#118).
-	CHG: Moved pause menu sprites to a separate folder.
+Alpha 1.17 (//23) "Needlefish Update":
+	TDO: Remove work *.xcf and *.psd files from the data files.
+	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103).
 	TDO: Finish the remaining houses (#104).
@@ -374,27 +390,22 @@ Alpha 1.16.2 (started 11/04/23) "Mackerel Update":
 	TDO: Write the game's walkthrough (#85).
 	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
 
-Alpha 1.17 (//23) "Needlefish Update":
+Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add maps.
 	TDO: Add food.
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Rename owl entities according to main quest steps (#19).
 	TDO: Check game intro dialogues (#8). 
-	TDO: Change sword colour on hero (#21).	
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Make the introduction cinematic slides (#86).
-	TDO: Clean up dialogues.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).
 	TDO: Add a HUD version for timers (#36).
 
-Alpha 1.17.1 (//23) "Needlefish Update":
+Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Unify all the caves' darkness system.
 	TDO: Unify all the electrocution systems.
-	TDO: Rename the sprites of some NPCs (#23).
-
-Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Replace all the space indenting by tabs (#112).
 	TDO: Loop the remaining musics.
 	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
@@ -409,7 +420,6 @@ Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add decoration to temples.
 	TDO: Add all the Pokémons.
 	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
-	TDO: Make the status menu at least usable.
 	TDO: Make a new sprite for Spectral Ganon (#29).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Improve the shield usability (#30).
@@ -419,10 +429,10 @@ Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Change Helmasaur reaction to hookshot.
 
 Alpha 1.19 (//23) "Perch Update":
+	TDO: Add support for multiple aspect ratios (#123).
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.
-	TDO: Make it possible to switch between shaders with the option menu.
 	TDO: Add new items.
 	TDO: Finish all the items.
 

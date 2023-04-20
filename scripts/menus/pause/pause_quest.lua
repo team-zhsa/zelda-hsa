@@ -1,289 +1,350 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
+local text_fx_helper = require("scripts/text_fx_helper")
 local quest_submenu = submenu:new()
+
+local item_names_static_top = {
+	"crystal_1",
+	"crystal_7",
+	"rupee_bag",
+}
 local item_names_static_left = {
-  "pendant_1",
-  "pendant_2",
-  "pendant_3",
-  "instrument_4",
-  "trading_2",
-  "instrument_5",
-  "instrument_6",
-  "instrument_7",
-  "instrument_8",
+	"crystal_2",
+	"crystal_2", -- Legend scrolls
+	"crystal_6",
+	"crystal_3",
+	"crystal_4",
+	"crystal_5",
+	"pendant_1",
+	"pendant_2",
+	"pendant_3",
 }
 local item_names_static_right = {
-  "world_map",
-  "seas_map",
-  "angler_key",
-  "face_key",
-  "bird_key",
+	"monster_gut_counter",
+	"monster_claw_counter",
+	"monster_horn_counter",
+	"monster_tail_counter",
+	"goron_amber_counter",
+	"monster_gut_counter",
 }
+
 local item_names_static_bottom = {
-  "seashells_counter",
-  "photos_counter",
-  "golden_leaves_counter",
+	"world_map",
+	"world_map",
+	"world_map",
 }
 
 function quest_submenu:on_started()
-  self.quest_items_surface = sol.surface.create(320, 240)
-  submenu.on_started(self)
-  self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
-  self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
-  self.counters = {}
-  self.sprites_static_left = {}
-  self.sprites_static_right = {}
-  self.sprites_static_bottom = {}
-  self.caption_text_keys = {}
+	self.quest_items_surface = sol.surface.create(320, 240)
+	submenu.on_started(self)
+	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
+	self.counters = {}
+	self.sprites_static_left = {}
+	self.sprites_static_right = {}
+	self.sprites_static_top = {}
+	self.sprites_static_bottom = {}
+	self.caption_text_keys = {}
 
- 	local item_sprite = sol.sprite.create("entities/items")
+	 local item_sprite = sol.sprite.create("entities/items")
 
-  -- Set the title.
-  self:set_title(sol.language.get_string("quest_status.title"))
+	-- Set the title.
+	self:set_title(sol.language.get_string("quest_status.title"))
 
-  -- initialise the cursor.
-  local index = self.game:get_value("pause_inventory_last_item_index") or 0
-  local row = math.floor(index / 7)
-  local column = index % 7
-  self:set_cursor_position(row, column)
+	-- initialise the cursor.
+	local index = self.game:get_value("pause_inventory_last_item_index") or 0
+	local row = math.floor(index / 7)
+	local column = index % 7
+	self:set_cursor_position(row, column)
 
-  -- Load Items.
-  for i,item_name in ipairs(item_names_static_left) do
-    local item = self.game:get_item(item_name)
-    local variant = item:get_variant()
-    self.sprites_static_left[i] = sol.sprite.create("entities/items")
-    self.sprites_static_left[i]:set_animation(item_name)
-  end
-  for i,item_name in ipairs(item_names_static_right) do
-    local item = self.game:get_item(item_name)
-    local variant = item:get_variant()
-    self.sprites_static_right[i] = sol.sprite.create("entities/items")
-    self.sprites_static_right[i]:set_animation(item_name)
-  end
-  for i,item_name in ipairs(item_names_static_bottom) do
-    local item = self.game:get_item(item_name)
-    local variant = item:get_variant()
-    self.sprites_static_bottom[i] = sol.sprite.create("entities/items")
-    self.sprites_static_bottom[i]:set_animation(item_name)
-    if item:has_amount() then
-      -- Show a counter in this case.
-      local amount = item:get_amount()
-      local maximum = item:get_max_amount()
-      self.counters[i] = sol.text_surface.create{
-        horizontal_alignment = "center",
-        vertical_alignment = "top",
-        text = item:get_amount(),
-        font = (amount == maximum) and "green_digits" or "white_digits",
-      }
-    end
-  end
+	-- Load Items.
+	for i,item_name in ipairs(item_names_static_left) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_left[i] = sol.sprite.create("entities/items")
+		self.sprites_static_left[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_right) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_right[i] = sol.sprite.create("entities/items")
+		self.sprites_static_right[i]:set_animation(item_name)
+		if item:has_amount() then
+			-- Show a counter in this case.
+			local amount = item:get_amount()
+			local maximum = item:get_max_amount()
+			self.counters[i] = sol.text_surface.create{
+				horizontal_alignment = "center",
+				vertical_alignment = "top",
+				text = item:get_amount(),
+				font = (amount == maximum) and "green_digits" or "white_digits",
+			}
+		end
+	end
+	for i,item_name in ipairs(item_names_static_top) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_top[i] = sol.sprite.create("entities/items")
+		self.sprites_static_top[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_bottom) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_bottom[i] = sol.sprite.create("entities/items")
+		self.sprites_static_bottom[i]:set_animation(item_name)
+	end
 end
 
 function quest_submenu:on_finished()
-  -- Nothing.
+	-- Nothing.
 end
 
 function quest_submenu:on_draw(dst_surface)
 
-  local cell_size = 28
-  local cell_spacing = 4
+	local cell_size = 28
+	local cell_spacing = 4
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
 
-  -- Draw the background.
-  self:draw_background(dst_surface)
-  
-  -- Draw the cursor caption.
-  self:draw_caption(dst_surface)
+	-- Draw the background.
+	self:draw_background(dst_surface)
+	
+	-- Draw the cursor caption.
+	self:draw_caption(dst_surface)
 
-  -- Draw each inventory static item left.
-  local y = 90
+	-- Draw each inventory static item left.
+	local y = center_y + 2
+	local k = 0
+	for i = 0, 2 do
+		local x = center_x - 96
+		for j = 0, 2 do
+			if x == 1 and x == 1 then
+				x = x + 1
+			end
+			k = k + 1
+			if item_names_static_left[k] ~= nil then
+				local item = self.game:get_item(item_names_static_left[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					if item_names_static_left[k] == "magnifying_lens" then
+						self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
+					else
+						self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
+					end
+					self.sprites_static_left[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+	
+	-- Draw each inventory static item right.
+	local y = center_y + 2
   local k = 0
   for i = 0, 2 do
-    local x = 64
-    for j = 0, 2 do
-      if x == 1 and x == 1 then
-        x = x + 1
-      end
-      k = k + 1
-      if item_names_static_left[k] ~= nil then
-        local item = self.game:get_item(item_names_static_left[k])
-        if item:get_variant() > 0 then
-          -- The player has this item: draw it.
-          if item_names_static_left[k] == "magnifying_lens" then
-            self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-          else
-            self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-          end
-          self.sprites_static_left[k]:draw(dst_surface, x, y)
-        end
-      end
-      x = x + 32
-    end
-    y = y + 32
-  end
-  
-  -- Draw each inventory static item right.
-  for i, item_name in ipairs(item_names_static_right) do
-        local item = self.game:get_item(item_name)
-        local x = 0
-        local y = 0
-        if item:get_variant() > 0 then
-          -- The player has this item: draw it.
-          if i == 1 then
-            x = 192
-            y = 122
-          elseif i == 2 then
-            x = 224
-            y = 90
-          elseif i == 3 then
-            x = 256
-            y = 122
-          elseif i == 4 then
-            x = 224
-            y = 154
-          elseif i == 5 then
-            x = 224
-            y = 122
-          end
-          self.sprites_static_right[i]:set_direction(item:get_variant() - 1)
-          self.sprites_static_right[i]:draw(dst_surface, x, y)
-        end
+		local x = center_x + 32
+		for j = 0, 2 do
+			if x == 1 and x == 1 then
+				x = x + 1
+			end
+			k = k + 1
+			if item_names_static_right[k] ~= nil then
+				local item = self.game:get_item(item_names_static_right[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					if self.counters[k] ~= nil then
+						if item:get_amount() > 0 then
+							self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
+							self.sprites_static_right[k]:draw(dst_surface, x, y)
+							self.counters[k]:draw(dst_surface, x + 8, y)
+						end
+					else
+						self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
+						self.sprites_static_right[k]:draw(dst_surface, x, y)
+					end
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
   end
 
-  -- Draw each inventory static item bottom.
-  local y = 187
-  local x = 64
-  local k = 0
-  for i = 0, 2 do
-    k = k + 1
-    if item_names_static_bottom[k] ~= nil then
-      local item = self.game:get_item(item_names_static_bottom[k])
-      --if item:get_variant() > 0 then
-        -- The player has this item: draw it.
-        if self.counters[k] ~= nil then
-          if item:get_amount() > 0 then
-            self.sprites_static_bottom[k]:set_direction(item:get_variant() )
-            self.sprites_static_bottom[k]:draw(dst_surface, x, y)
-            self.counters[k]:draw(dst_surface, x + 8, y)
-          end
-        else
-          self.sprites_static_bottom[k]:set_direction(item:get_variant() )
-          self.sprites_static_bottom[k]:draw(dst_surface, x, y)
-        end
-      --end
-    end
-    x = x + 32
-  end
+	-- Draw each inventory static item top.
+	local y = center_y - 30
+	local x = center_x - 96
+	local k = 0
+	for i = 0, 2 do
+		k = k + 1
+		if item_names_static_top[k] ~= nil then
+			local item = self.game:get_item(item_names_static_top[k])
+			if item:get_variant() > 0 then
+				-- The player has this item: draw it.
+				if i == 0 then
+					x = center_x - 96
+					y = center_y - 30
+				elseif i == 1 then
+					x = center_x - 32
+					y = center_y - 30
+				elseif i == 2 then
+					x = center_x + 64
+					y = center_y - 30
+				end
+				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
+				self.sprites_static_top[k]:draw(dst_surface, x, y)
+			end
+		end
+		x = x + cell_size + cell_spacing
+	end
 
-  -- Pieces of heart.
-  local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
-  local pieces_of_heart_w = 28
-  local pieces_of_heart_x = pieces_of_heart_w * num_pieces_of_heart
-  self.hearts:draw_region(
-    pieces_of_heart_x, 0,                 -- region position in image
-    pieces_of_heart_w, pieces_of_heart_w, -- region size in image
-    dst_surface,                          -- destination surface
-    146, 168                              -- position in destination surface
-  )
-  
+	-- Draw each inventory static item bottom.
+	local y = center_y + 66
+	local k = 0
+	for i = 0, 2 do
+		local x = center_x + 32
+		for j = 0, 2 do
+			if x == 1 and x == 1 then
+				x = x + 1
+			end
+			k = k + 1
+			if item_names_static_bottom[k] ~= nil then
+				local item = self.game:get_item(item_names_static_bottom[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					if item_names_static_bottom[k] == "magnifying_lens" then
+						self.sprites_static_bottom[k]:set_direction(item:get_variant() - 1)
+					else
+						self.sprites_static_bottom[k]:set_direction(item:get_variant() - 1)
+					end
+					self.sprites_static_bottom[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+	-- Pieces of heart.
+	local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
+	local pieces_of_heart_w = 28
+	local pieces_of_heart_x = pieces_of_heart_w * num_pieces_of_heart
+	self.hearts:draw_region(
+		pieces_of_heart_x, 0,                 -- region position in image
+		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
+		dst_surface,                          -- destination surface
+		center_x - 14, center_y + 50          -- position in destination surface
+	)
+	
 -- Game time.
-  local menu_font, menu_font_size = language_manager:get_menu_font()
-  self.chronometer_txt = sol.text_surface.create({
-    horizontal_alignment = "center",
-    vertical_alignment = "bottom",
-    font = menu_font,
-    font_size = menu_font_size,
-    color = { 115, 59, 22 },
-    text = self.game:get_time_played_string()
-  })
-  sol.timer.start(self.game, 1000, function()
-    self.chronometer_txt:set_text(self.game:get_time_played_string())
-    return true  -- Repeat the timer.
-  end)
+	local menu_font, menu_font_size = language_manager:get_menu_font()
+	self.chronometer_txt = sol.text_surface.create({
+		horizontal_alignment = "center",
+		vertical_alignment = "bottom",
+		font = menu_font,
+		font_size = menu_font_size,
+		color = { 224, 224, 224 },
+		text_stroke_color = { 115, 59, 22 },
+		text = self.game:get_time_played_string()
+	})
+	
+	sol.timer.start(self.game, 1000, function()
+		self.chronometer_txt:set_text(self.game:get_time_played_string())
+		return true  -- Repeat the timer.
+	end)
 
+	-- Draw cursor only when the save dialog is not displayed.
+	if self.save_dialog_state == 0 then
+		self.cursor_sprite:draw(dst_surface,
+		center_x - 96 + (cell_size + cell_spacing) * self.cursor_column,
+		center_y - 34 + (cell_size + cell_spacing) * self.cursor_row)
+	end
 
-  -- Draw cursor only when the save dialog is not displayed.
-  if self.save_dialog_state == 0 then
-    self.cursor_sprite:draw(dst_surface, 64 + 32 * self.cursor_column, 86 + 32 * self.cursor_row)
-  end
-
-  -- Draw save dialog if necessary.
-  self:draw_save_dialog_if_any(dst_surface)
+	-- Draw save dialog if necessary.
+	self:draw_save_dialog_if_any(dst_surface)
 end
 
 function quest_submenu:on_command_pressed(command)
-  
-  local handled = submenu.on_command_pressed(self, command)
+	
+	local handled = submenu.on_command_pressed(self, command)
 
-  if not handled then
+	if not handled then
 
-    if command == "action" then
-      if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
-        self:show_info_message()
-        handled = true
-      end
+		if command == "action" then
+			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
+				self:show_info_message()
+				handled = true
+			end
 
-    elseif command == "left" then
-      if self.cursor_column == 0 then
-        self:previous_submenu()
-      else
-        sol.audio.play_sound("cursor")
-        if self.cursor_column == 5 and  self.cursor_row == 0 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column - 3)
-        elseif self.cursor_column == 4 and  self.cursor_row == 1 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
-        elseif self.cursor_column == 5 and  self.cursor_row == 2 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column - 3)
-        else
-          self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
-        end
-      end
-      handled = true
+		elseif command == "left" then
+			if self.cursor_column == 0 then
+				self:previous_submenu()
+			else
+				sol.audio.play_sound("cursor")
+				if self.cursor_column == 2 and self.cursor_row == 0 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
+				elseif self.cursor_column == 5 and self.cursor_row == 0 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column - 3)
+				elseif self.cursor_column == 4 and self.cursor_row == 1 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
+				elseif self.cursor_column == 4 and self.cursor_row == 2 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
+				else
+					self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
+				end
+			end
+			handled = true
 
-    elseif command == "right" then
-      if self.cursor_column == 6
-          or self.cursor_column == 5 and  self.cursor_row == 0
-          or self.cursor_column == 5 and  self.cursor_row == 2 
-          or self.cursor_column == 3 and  self.cursor_row == 3  then
-        self:next_submenu()
-      else
-        sol.audio.play_sound("cursor")
-        if self.cursor_column == 2 and  self.cursor_row == 0 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column + 3)
-        elseif self.cursor_column == 2 and  self.cursor_row == 1 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
-        elseif self.cursor_column == 2 and  self.cursor_row == 2 then
-          self:set_cursor_position(self.cursor_row, self.cursor_column + 3)
-        else
-          self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
-        end
-      end
-      handled = true
+		elseif command == "right" then
+			if self.cursor_column == 5 and self.cursor_row == 0
+					or self.cursor_column == 6 and  self.cursor_row == 1
+					or self.cursor_column == 6 and  self.cursor_row == 2 
+					or self.cursor_column == 6 and  self.cursor_row == 3  then
+				self:next_submenu()
+			else
+				sol.audio.play_sound("cursor")
+				if self.cursor_column == 0 and self.cursor_row == 0 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
+				elseif self.cursor_column == 2 and self.cursor_row == 0 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column + 3)
+				elseif self.cursor_column == 2 and self.cursor_row == 1 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
+				elseif self.cursor_column == 2 and self.cursor_row == 2 then
+					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
+				else
+					self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
+				end
+			end
+			handled = true
 
-    elseif command == "up" then
-      if self.cursor_column ~= 3 and self.cursor_column ~= 4 and self.cursor_column ~= 6 then
-        sol.audio.play_sound("cursor")
-        if self.cursor_column == 5 and  self.cursor_row == 0 then
-          self:set_cursor_position((self.cursor_row + 2) % 4, self.cursor_column)
-        else
-          self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
-        end
-      end
-      handled = true
+		elseif command == "up" then
+			if self.cursor_column ~= 3 then
+				sol.audio.play_sound("cursor")
+				if self.cursor_column == 1 and self.cursor_row == 1
+					or self.cursor_column == 4 and self.cursor_row == 1
+					or self.cursor_column == 6 and self.cursor_row == 1 then
+					self:set_cursor_position((self.cursor_row + 2) % 4, self.cursor_column)
+				else
+					self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
+				end
+			end
+			handled = true
 
-    elseif command == "down" then
-      if self.cursor_column ~= 3 and self.cursor_column ~= 4 and self.cursor_column ~= 6 then
-        sol.audio.play_sound("cursor")
-        if self.cursor_column == 5 and  self.cursor_row == 2 then
-          self:set_cursor_position((self.cursor_row - 2) % 4, self.cursor_column)
-        else
-          self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
-        end
-      end
-      handled = true
-    end
-  end
+		elseif command == "down" then
+			if self.cursor_column ~= 3 then
+				sol.audio.play_sound("cursor")
+				if self.cursor_column == 1 and self.cursor_row == 3
+					or self.cursor_column == 4 and self.cursor_row == 3
+					or self.cursor_column == 6 and self.cursor_row == 3 then
+					self:set_cursor_position((self.cursor_row - 2) % 4, self.cursor_column)
+				else
+					self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
+				end
+			end
+			handled = true
+		end
+	end
 
-  return handled
+	return handled
 
 end
 
@@ -291,116 +352,140 @@ end
 -- The player is supposed to have this item.
 function quest_submenu:show_info_message()
 
-  local item_name = self:get_item_name(self.cursor_row, self.cursor_column)
-  local game = self.game
-  local map = game:get_map()
-  local dialog_id = false
-  self.game:set_custom_command_effect("action", nil)
-  self.game:set_custom_command_effect("attack", nil)
-  if item_name == "piece_of_heart" then
-    dialog_id =  "scripts.menus.pause_inventory.piece_of_heart.1" 
-  elseif item_name == "seashells_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      dialog_id =  "scripts.menus.pause_inventory.seashells_counter.1" 
-    end
-  elseif item_name == "photos_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      dialog_id =  "scripts.menus.pause_inventory.photos_counter.1" 
-    end
-  elseif item_name == "golden_leaves_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      dialog_id =  "scripts.menus.pause_inventory.golden_leaves_counter.1" 
-    end
-  else
-    local variant = self.game:get_item(item_name):get_variant()
-    dialog_id = "scripts.menus.pause_inventory." .. item_name .. "." .. variant
-  end
-  if dialog_id then
-    game:start_dialog(dialog_id, function()
-      self.game:set_custom_command_effect("action", "info")
-      self.game:set_custom_command_effect("attack", "save")
-     -- game:set_dialog_position("auto")  -- Back to automatic position.
-    end)
-  end
+	local item_name = self:get_item_name(self.cursor_row, self.cursor_column)
+	local game = self.game
+	local map = game:get_map()
+	local dialog_id = false
+	self.game:set_custom_command_effect("action", nil)
+	self.game:set_custom_command_effect("attack", nil)
+	if item_name == "piece_of_heart" then
+		dialog_id =  "scripts.menus.pause_inventory.piece_of_heart.1" 
+	elseif item_name == "monster_claw_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_claw_counter.1" 
+		end
+	elseif item_name == "monster_gut_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_gut_counter.1" 
+		end
+	elseif item_name == "monster_horn_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_horn_counter.1" 
+		end
+	elseif item_name == "monster_tail_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.monster_tail_counter.1" 
+		end
+	elseif item_name == "goron_amber_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			dialog_id =  "scripts.menus.pause_inventory.goron_amber_counter.1" 
+		end
+	else
+		local variant = self.game:get_item(item_name):get_variant()
+		dialog_id = "scripts.menus.pause_inventory." .. item_name .. "." .. variant
+	end
+	if dialog_id then
+		game:start_dialog(dialog_id, function()
+			self.game:set_custom_command_effect("action", "info")
+			self.game:set_custom_command_effect("attack", "save")
+		 -- game:set_dialog_position("auto")  -- Back to automatic position.
+		end)
+	end
 end
 
 function quest_submenu:set_cursor_position(row, column)
 
-  self.cursor_row = row
-  self.cursor_column = column
-  local index
-  local item_name
-  self.game:set_value("pause_inventory_last_item_index", index)
+	self.cursor_row = row
+	self.cursor_column = column
+	local index
+	local item_name
+	self.game:set_value("pause_inventory_last_item_index", index)
 
-  -- Update the caption text and the action icon.
-  local item_name = self:get_item_name(row, column)
-  if item_name =="piece_of_heart" then
-      local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
-      self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
-      self.game:set_custom_command_effect("action", "info")
-  elseif item_name =="seashells_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      self:set_caption_key("inventory.caption.item.seashells_counter.1")
-      self.game:set_custom_command_effect("action", "info")
-    end
-  elseif item_name =="photos_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      self:set_caption_key("inventory.caption.item.photos_counter.1")
-      self.game:set_custom_command_effect("action", "info")
-    end
-  elseif item_name =="golden_leaves_counter" then
-    local item = item_name and self.game:get_item(item_name) or nil
-    if item:get_amount() > 0 then
-      self:set_caption_key("inventory.caption.item.golden_leaves_counter.1")
-      self.game:set_custom_command_effect("action", "info")
-   end
-  else
-    local item = item_name and self.game:get_item(item_name) or nil
-    local variant = item and item:get_variant()
-    local item_icon_opacity = 128
-    if variant > 0 then
-      self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
-      self.game:set_custom_command_effect("action", "info")
-      if item:is_assignable() then
-        item_icon_opacity = 255
-      end
-    else
-      self:set_caption_key(nil)
-      self.game:set_custom_command_effect("action", nil)
-    end
-    self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)
-    self.game:get_hud():set_item_icon_opacity(2, item_icon_opacity)
-  end
+	-- Update the caption text and the action icon.
+	local item_name = self:get_item_name(row, column)
+	if item_name =="piece_of_heart" then
+			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
+			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
+			self.game:set_custom_command_effect("action", "info")
+	elseif item_name =="goron_amber" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.goron_amber.1")
+			self.game:set_custom_command_effect("action", "info")
+		end
+	elseif item_name =="monster_claw_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_claw_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+		end
+	elseif item_name =="monster_gut_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_gut_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+	 end
+	elseif item_name =="monster_horn_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_horn_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+	 end
+	elseif item_name =="monster_tail_counter" then
+		local item = item_name and self.game:get_item(item_name) or nil
+		if item:get_amount() > 0 then
+			self:set_caption_key("inventory.caption.item.monster_tail_counter.1")
+			self.game:set_custom_command_effect("action", "info")
+	 end
+	else
+		local item = item_name and self.game:get_item(item_name) or nil
+		local variant = item and item:get_variant()
+		local item_icon_opacity = 128
+		if variant > 0 then
+			self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
+			self.game:set_custom_command_effect("action", "info")
+			if item:is_assignable() then
+				item_icon_opacity = 255
+			end
+		else
+			self:set_caption_key(nil)
+			self.game:set_custom_command_effect("action", nil)
+		end
+		self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)
+		self.game:get_hud():set_item_icon_opacity(2, item_icon_opacity)
+	end
 end
 
 function quest_submenu:get_item_name(row, column)
 
-    if column < 3 and row < 3 then
-      index = row * 3 + column
-      item_name = item_names_static_left[index + 1]
-    elseif column == 5 and row == 0 then
-      item_name = "slim_key"
-    elseif column == 4 and row == 1 then
-      item_name = "tail_key"
-    elseif column == 5 and row == 1 then
-      item_name = "bird_key"
-    elseif column == 6 and row == 1 then
-      item_name = "angler_key"
-    elseif column == 5 and row == 2 then
-      item_name = "face_key"
-    elseif column == 3 and row == 3 then
-      item_name = "piece_of_heart"
-    else 
-      index = column
-      item_name = item_names_static_bottom[index + 1]
-    end
+		if column < 3 and row > 0 then
+			index = ((row + 2) % 3) * 3 + column
+			item_name = item_names_static_left[index + 1]
+		elseif column > 3 and (row > 0 and row < 3) then
+			index = ((row + 2) % 3) * 3 + ((column + 2) % 3)
+			item_name = item_names_static_right[index + 1]
+		elseif column == 0 and row == 0 then
+			item_name = "crystal_1"
+		elseif column == 2 and row == 0 then
+			item_name = "crystal_7"
+		elseif column == 5 and row == 0 then
+			item_name = "rupee_bag"
+		elseif column == 3 and row == 3 then
+			item_name = "piece_of_heart"
+		elseif column == 4 and row == 3 then
+			item_name = "world_map"
+		elseif column == 5 and row == 3 then
+			item_name = "world_map"
+		elseif column == 6 and row == 3 then
+			item_name = "world_map"
+		end
 
-  return item_name
+	return item_name
 end
 
 return quest_submenu

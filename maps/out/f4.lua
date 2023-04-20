@@ -32,15 +32,12 @@ map:register_event("on_started", function()
     npc_impa:set_visible(false)
   else npc_impa:set_enabled(false)
   end
-  
---[[  for npc in map:get_entities("") do
-    local npc_movement = sol.movement.create("random_path")
-    npc_movement:set_speed(64)
-    npc_movement:start(npc)
-  end--]]
 end)
 
+map:register_event("on_draw", function()
+end)
 
+-- Bridge soldiers
 for npc in map:get_entities("npc_soldier_") do
   npc:register_event("on_interaction", function()
     if num_dialogue == 0 then
@@ -59,7 +56,7 @@ for npc in map:get_entities("npc_soldier_") do
   end)
 end
 
-
+-- Impa cutscene
 sensor_ocarina_cutscene:register_event("on_activated", function()
   if game:is_step_last("game_started") then
     npc_impa:set_enabled(true)
@@ -103,17 +100,27 @@ function ocarina_dialog()
   end)
 end
 
-local function random_walk(npc)
-  local m = sol.movement.create("random_path")
-  m:set_speed(32)
-  m:start(npc)
-  npc:get_sprite():set_animation("walking")
-end
-
+-- Door events
 open_house_door_castle_sensor:register_event("on_activated", function()
   if hero:get_direction() == 1 and door_castle_1:is_enabled() and door_castle_2:is_enabled() then
     door_castle_1:set_enabled(false)
     door_castle_2:set_enabled(false)
+    sol.audio.play_sound("door_open")
+  end
+end)
+
+open_house_door_vase_sensor:register_event("on_activated", function()
+  if hero:get_direction() == 1 and door_vase_1:is_enabled() and door_vase_2:is_enabled() then
+    door_vase_1:set_enabled(false)
+    door_vase_2:set_enabled(false)
+    sol.audio.play_sound("door_open")
+  end
+end)
+
+open_house_door_bank_sensor:register_event("on_activated", function()
+  if hero:get_direction() == 1 and door_bank_1:is_enabled() and door_bank_2:is_enabled() then
+    door_bank_1:set_enabled(false)
+    door_bank_2:set_enabled(false)
     sol.audio.play_sound("door_open")
   end
 end)

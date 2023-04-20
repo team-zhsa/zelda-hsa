@@ -13,6 +13,6 @@ end
 
 function item:on_obtaining(variant, savegame_variable)
 
-  self:get_game():get_item("photos_counter"):add_amount(1)
+  self:get_game():get_item("photo_counter"):add_amount(1)
 
 end
