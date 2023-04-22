@@ -1932,15 +1932,6 @@ au mot demandé.
 }
 
 dialog{
-  id = "inside.hyrule_town.temple_of_time.wrong",
-  text = [[
-Si tu manies le Courage, la
-Sagesse et le Pouvoir, tu 
-pourras prendre l'Epée de Légende.
-]],
-}
-
-dialog{
   id = "items.mushroom.1",
   skip = "all",
   text = [[
@@ -3183,6 +3174,23 @@ déplacer.
 }
 
 dialog{
+  id = "maps.houses.hyrule_castle.soldiers_impa_waiting",
+  text = [[
+Impa t'attend depuis ce matin.
+Va dans la cour du château !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_castle.soldiers_training",
+  text = [[
+Tu ne vois pas qu'on est en
+train de s'entraîner ?$0
+Allez, va jouer ailleurs !
+]],
+}
+
+dialog{
   id = "maps.houses.hyrule_castle.waking_up_1",
   text = [[
 $v !$0 $v !$0
@@ -3506,9 +3514,34 @@ Non
 }
 
 dialog{
-  id = "maps.houses.hyrule_town.shop.potion",
+  id = "maps.houses.hyrule_town.shop.merchant_welcome",
   text = [[
-Potion rouge
+Bonjour jeune héros !
+Choisis ce que tu aimes.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.shop.product_green_potion",
+  text = [[
+Une potion verte qui te restaure
+toute ta magie.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.shop.product_heart",
+  text = [[
+Un coeur pour te régénérer si tu es
+mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.shop.product_milk",
+  text = [[
+Du lait Meuh-Meuh venu tout
+droit du Pic Eliott.
 ]],
 }
 
@@ -5232,6 +5265,14 @@ dialog{
   text = [[
 Quartier Sud-Ouest
 L'esplanade
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.sign_9",
+  text = [[
+Boulangerie
+Fermée temporairement
 ]],
 }
 
@@ -7438,7 +7479,7 @@ dialog{
   icon = "181",
   skip = "all",
   text = [[
-Des queues de monstres qui
+Des cornes de monstres qui
 peuvent être troquées ou
 vendues.
 ]],
