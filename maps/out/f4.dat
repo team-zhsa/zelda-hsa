@@ -9681,16 +9681,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 624,
-  y = 624,
-  width = 32,
-  height = 32,
-  pattern = "8306",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 560,
   y = 688,
   width = 32,
@@ -11528,7 +11518,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 992,
+  x = 984,
   y = 848,
   width = 16,
   height = 16,
@@ -11556,9 +11546,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 632,
+  x = 624,
   y = 656,
-  width = 16,
+  width = 32,
   height = 520,
   pattern = "4145",
 }
@@ -11575,9 +11565,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 632,
+  x = 624,
   y = 656,
-  width = 16,
+  width = 32,
   height = 528,
   pattern = "6159",
   tileset = "outside_buildings",
@@ -11585,19 +11575,48 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 360,
   y = 624,
-  width = 272,
+  width = 264,
   height = 16,
   pattern = "4145",
 }
 
 tile{
   layer = 0,
-  x = 352,
+  x = 344,
+  y = 336,
+  width = 16,
+  height = 304,
+  pattern = "4145",
+}
+
+tile{
+  layer = 0,
+  x = 360,
   y = 624,
   width = 272,
   height = 16,
+  pattern = "6159",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 624,
+  width = 32,
+  height = 32,
+  pattern = "8306",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 336,
+  width = 16,
+  height = 304,
   pattern = "6159",
   tileset = "outside_buildings",
 }
@@ -13433,7 +13452,7 @@ dynamic_tile{
 
 npc{
   layer = 0,
-  x = 1000,
+  x = 992,
   y = 861,
   properties = {
     {
