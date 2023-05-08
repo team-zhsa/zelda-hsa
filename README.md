@@ -2,7 +2,7 @@
 
 ## About
 
-**Current version : Alpha 1.16.1**
+**Current version : Alpha 1.17**
 
 This repository contains the essential data files from the Solarus Action-RPG game *The Legend of Zelda: Hyrule's Adventure*. To learn more about Solarus, see the [Solarus website](https://www.solarus-games.org).
 This project is currently in development and isn't complete so your game may crash. If you encounter something which seems wrong, please [create a new issue](https://github.com/team-zhsa/zelda-hsa/issues/new?assignees=&labels=bug%2C+invalid&template=bug_report.md&title=) (you need to create a GitHub account).
