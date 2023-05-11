@@ -4,22 +4,22 @@ animation{
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 4 },
-    { x = 0, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 4 },
-    { x = 0, y = 528, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 4 },
-    { x = 0, y = 528, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 4 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
   },
 }
 animation{
   name = "aiming",
   src_image = "enemies/boss/spectral_ganon.png",
-  frame_delay = 120,
+  frame_delay = 800,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 352, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 352, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 880, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 880, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
+    { x = 0, y = 144, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 400, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 464, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 208, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
   },
 }
 animation{
@@ -39,22 +39,22 @@ animation{
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {
-    { x = 352, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 352, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 352, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
-    { x = 352, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 2 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 272, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 272, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
   },
 }
 animation{
   name = "invoking",
   src_image = "enemies/boss/spectral_ganon.png",
-  frame_delay = 120,
+  frame_delay = 800,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 264, frame_width = 88, frame_height = 88, origin_x = 37, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 264, frame_width = 88, frame_height = 88, origin_x = 37, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 792, frame_width = 88, frame_height = 88, origin_x = 51, origin_y = 85, num_frames = 2 },
-    { x = 0, y = 792, frame_width = 88, frame_height = 88, origin_x = 52, origin_y = 85, num_frames = 2 },
+    { x = 0, y = 144, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 400, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 464, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
+    { x = 0, y = 208, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42, num_frames = 3 },
   },
 }
 animation{
@@ -63,7 +63,7 @@ animation{
   frame_delay = 120,
   directions = {
     { x = 0, y = 88, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 6 },
-    { x = 0, y = 88, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 6 },
+    { x = 0, y = 88, frame_width = 64, frame_height = 48, origin_x = 44, origin_y = 85, num_frames = 6 },
     { x = 0, y = 704, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 6 },
     { x = 0, y = 704, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85, num_frames = 6 },
   },
@@ -72,10 +72,10 @@ animation{
   name = "stopped",
   src_image = "enemies/boss/spectral_ganon.png",
   directions = {
-    { x = 0, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 0, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 528, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 528, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 272, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 272, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 0, y = 16, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
   },
 }
 animation{
@@ -84,9 +84,9 @@ animation{
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 440, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 440, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 968, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
-    { x = 0, y = 968, frame_width = 88, frame_height = 88, origin_x = 44, origin_y = 85 },
+    { x = 64, y = 144, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 64, y = 400, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 64, y = 464, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
+    { x = 64, y = 208, frame_width = 64, frame_height = 48, origin_x = 32, origin_y = 42 },
   },
 }

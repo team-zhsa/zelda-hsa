@@ -26,12 +26,12 @@ local is_pushing_back = false
 -- Configuration variables.
 local before_arming_duration = 800
 local after_arming_duration = 800
-local bats_count = 1--8
+local bats_count = 1
 local bats_distance = 40
 local between_bats_duration = 5000 --500
-local aiming_duration = 1000
+local aiming_duration = 500
 local moving_speed = 120
-local moving_distance_from_center = 52
+local moving_distance_from_center = 48
 local hurt_duration = 600
 local dying_duration = 2000
 
@@ -62,9 +62,9 @@ end
 -- Only hurt a sword attack received if the attack is a spin one.
 local function on_sword_attack_received()
 
-  if hero:get_sprite():get_animation() == "spin_attack" or hero:get_sprite():get_animation() == "super_spin_attack" then
+  --if hero:get_sprite():get_animation() == "spin_attack" or hero:get_sprite():get_animation() == "super_spin_attack" then
     hurt(1)
-  end
+  --end
   if not is_pushing_back then
     is_pushing_back = true
     enemy:start_pushing_back(hero, 200, 100, sprite, nil, function()
@@ -110,7 +110,7 @@ local function start_throwing()
 
   local mirror_ratio = (sprite:get_direction() == 0) and 1 or -1
   sprite:set_animation("aiming")
-  axe:start_aiming(4 * mirror_ratio, -26)
+  axe:start_aiming(19 * mirror_ratio, 15)
   sol.timer.start(enemy, aiming_duration, function()
     sprite:set_animation("throwing")
     axe:start_throwed(enemy)
@@ -122,7 +122,7 @@ local function start_invoking()
 
   local mirror_ratio = (sprite:get_direction() == 0) and 1 or -1
   sprite:set_animation("invoking")
-  axe:start_spinning(-28 * mirror_ratio, -20)
+  axe:start_spinning(19 * mirror_ratio, 15)
 
   -- Start invoking bats.
   local bat_count = 0
@@ -170,7 +170,7 @@ local function start_taking_axe()
     -- Start invoking bats when the axe is holded or catched.
     local function holded()
       sprite:set_animation("stopped")
-      axe:start_holded(-4, 24)
+      axe:start_holded(-4, 21)
       sol.timer.start(enemy, after_arming_duration, function()
         start_invoking()
       end)
@@ -182,7 +182,7 @@ local function start_taking_axe()
     function axe:on_catched()
       holded()
     end
-    axe:start_taking(-32, -16)
+    axe:start_taking(-4, 21)
 
     -- Start moving when axe go back.
     function axe:on_go_back()
@@ -213,9 +213,9 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(12)
-  enemy:set_size(88, 88)
-  enemy:set_origin(45, 85)
+  enemy:set_life(15)
+  enemy:set_size(48, 48)
+  enemy:set_origin(32, 42)
   enemy:set_hurt_style("boss")
 
   local camera_x, camera_y, camera_width, camera_height = camera:get_bounding_box()

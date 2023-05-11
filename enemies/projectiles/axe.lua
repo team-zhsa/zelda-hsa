@@ -39,7 +39,7 @@ function enemy:start_throwed(thrower_entity)
 
   is_throwed = true
   sprite:set_rotation(0)
-  sprite:set_xy(0, -45)
+  sprite:set_xy(0, -42)
   sprite:set_animation("spinning")
   local go_movement = enemy:start_straight_walking(enemy:get_angle(hero), throwed_speed, throwed_distance, function()
     local back_movement = enemy:start_target_walking(thrower_entity, throwed_speed)
@@ -74,16 +74,16 @@ end
 -- Start spinning the enemy.
 function enemy:start_aiming(offset_x, offset_y)
 
-  sprite:set_rotation(0)
-  sprite:set_xy(offset_x, offset_y)
-  sprite:set_animation("aiming")
+  mirror_ratio = (sprite:get_direction() == 0) and 1 or -1
+  sprite:set_xy(offset_x, offset_y - 42)
+  sprite:set_animation("spinning")
 end
 
 -- Start spinning the enemy.
 function enemy:start_spinning(offset_x, offset_y)
 
   mirror_ratio = (sprite:get_direction() == 0) and 1 or -1
-  sprite:set_xy(offset_x, offset_y - 45)
+  sprite:set_xy(offset_x, offset_y - 42)
   sprite:set_animation("spinning")
 end
 
