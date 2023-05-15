@@ -6327,150 +6327,6 @@ Je ne faisais que passer !
 }
 
 dialog{
-  id = "movies.introduction.intro_1",
-  text = [[
-$1Il y a quelques générations, dans
-le Royaume d'Hyrule entouré de
-montagnes et de forêts...$0
-Des légendes racontaient
-l'histoire d'un jeune héros du
-nom de Link...
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_2",
-  text = [[
-$1La Triforce, seule relique des
-divinités qui ont créé ce monde,
-permettait à toute personne qui
-formulait un voeu d'avoir son
-voeu exaucé.$0
-
-Mais cette Triforce ne faisait
-pas de distiction entre le bien
-et le mal.$0
-Convoitée par beaucoup de
-personnes, on disait qu'elle se
-situait dans le Saint Royaume.$0
-Un jour, un groupe de voleurs
-menés par leur chef Ganondorf
-mit la main sur la Triforce et
-Ganondorf fit le souhait de
-posséder une armée puissante
-pour conquérir Hyrule.$0
-Les années passèrent et son
-nom disparut, mais sa légende
-est restée.
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_3",
-  text = [[
-$1Un beau matin, un apprenti du
-forgeron du nom de $v eut
-affaire à Yuga, un magicien
-oeuvrant pour le mal et ayant le
-pouvoir de transformer quiconque
-en peinture.$0
-Il le vainquit alors
-une première fois.$0
-
-Mais de nombreuses failles
-appurent alors en Hyrule et elles
-menaient à Lorule, monde ravagé
-par la perte de sa Triforce.$0
-
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_4",
-  text = [[
-$1Heureusement , $v le
-vainquit aussi et le voeu
-qu'il fit avec la princesse
-Zelda redonna à Lorule
-sa beauté d'antan.$0
-
-Alors les habitants d'Hyrule
-vécurent en paix...$0
-Mais ce n'était qu'une illusion.$0
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_5",
-  text = [[
-$1Une nuit bien sombre, l'esprit
-d'Agahnim ressuscita grâce à
-un homme encapuchonné.
-Celui qu'on pensait être une
-légende revint alors pour se
-venger de celui qui l'avait jadis
-tué. $0
-
-
-Il déclencha un immense
-tremblement de terre qui
-détruisit Hyrule et modifia
-sa configuration.
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_6",
-  text = [[
-$1Trois ans durant, hommes et
-femmes travaillèrent sans relâche
-pour reconstruire le pays et la
-princesse construisit des
-créatures divines pour protéger
-le pays.$0
-La ville de Cordinia
-devint la capitale d'Hyrule.
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_7",
-  text = [[
-$1Mais Ganon attendait toujours
-le bon moment pour attaquer le
-royaume d'Hyrule...$0
-En effet, il avait besoin d'un
-empire pour assoir sa domination
-et attaqua la ville démocratique
-de Shin Hikari, où il érigea un
-empire dictatorial : Néo Kuni.$0
-Maintenant très puissant,
-Ganon installa l'homologue
-du monde des ténèbres à la place
-de Cordinia.$0
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_8",
-  text = [[
-$1La princesse Zelda, sentant la
-menace venir, condamna les étages
-du château, où Ganon installa ses
-sbires...$0
-]],
-}
-
-dialog{
-  id = "movies.introduction.intro_9",
-  text = [[
-$1 $v devenu roi d'Hyrule entre
-temps, entend alors une voix
-familière dans son sommeil...
-]],
-}
-
-dialog{
   id = "quest.butter.need_butter",
   question = "1",
   text = [[
@@ -6699,10 +6555,159 @@ Nintendo
 
 The Legend of Zelda :
 Hyrule's Adventure
-(C) Team ZeldaHSA 2017 - 2022
-(C) Nintendo 1985 - 2022
+(C) Team ZeldaHSA 2017 - 2023
+(C) Nintendo 1985 - 2023
 
 - THE END -
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_1",
+  text = [[
+$1Il y a quelques générations,
+dans le Royaume d'Hyrule
+entouré de montagnes et
+de forêts...
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_10",
+  text = [[
+$1Il fallut trois ans pour
+reconstruire le pays, hommes
+et femmes oeuvrant sans relâche
+pour bâtir des créatures divines.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_11",
+  text = [[
+$1Or Ganon attendait toujours,
+tapi dans l’ombre, l’instant
+propice pour agir.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_12",
+  text = [[
+$1Il avait pour cela besoin de
+se reconstruire une armée plus
+puissante et c’est pourquoi il
+attaqua la ville de Shin Hikari
+pour y installer son empire,
+Néo Kuni.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_13",
+  text = [[
+$1Cordinia, où jadis rayonnait la
+capitale d’Hyrule, n’était alors
+plus que ruine et désespoir...
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_14",
+  text = [[
+$1 $v devenu roi d'Hyrule entre
+temps, entend alors une voix
+familière dans son sommeil...
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_2",
+  text = [[
+$1Des légendes racontaient
+l'histoire de la Triforce, seule
+relique des divinités qui ont
+créé ce monde, et qui permettait
+à toute personne formulant un
+voeu de le voir exaucé.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_3",
+  text = [[
+$1Mais cette Triforce ne faisait
+pas de distinction entre le bien
+et le mal.
+Convoitée par beaucoup de
+personnes, on la disait située
+dans le Saint Royaume.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_4",
+  text = [[
+$1Un jour, un groupe de voleurs
+menés par leur chef Ganondorf
+mit la main sur la Triforce et
+firent le souhait de posséder
+une armée puissante
+pour conquérir Hyrule.$0
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_5",
+  text = [[
+$1C’est alors qu’un jeune héros
+du nom de Link parvint à vaincre
+son armée et à restaurer au
+royaume sa prospérité.
+Les années passèrent,
+mais sa légende est restée.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_6",
+  text = [[
+$1S’associant avec Ganon, ce
+magicien eut l’intention
+d’étendre sa domination
+sur Hyrule, comme l’avait fait
+Ganondorf plusieurs années
+auparavant.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_7",
+  text = [[
+C’est alors que $v le détruisit,
+restaurant la paix au Royaume...
+Mais cela ne dura pas.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_8",
+  text = [[
+$1Une nuit bien sombre, un sorcier
+venu d’un autre monde invoqua
+l’esprit d’Agahnim, afin que
+celui-ci pût ressusciter et
+se venger de celui qui l’avait
+jadis tué.
+]],
+}
+
+dialog{
+  id = "scripts.menus.introduction.intro_9",
+  text = [[
+$1Agahnim provoqua alors un 
+terrible tremblement de terre
+qui bouleversa l’ordre hylien.
 ]],
 }
 
