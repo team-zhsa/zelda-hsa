@@ -6,10 +6,6 @@ local map_meta = sol.main.get_metatable("map")
 -- Include scripts
 require ("scripts/multi_events")
 local audio_manager = require("scripts/audio_manager")
-
-
-
-
 local transition_finished_callback
 
 function map_meta:wait_on_next_map_opening_transition_finished(callback)

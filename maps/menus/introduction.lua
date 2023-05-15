@@ -5,9 +5,7 @@ local gb = require('scripts/maps/gb_effect')
 local fsa = require('scripts/maps/fsa_effect')
 
 -- Intro.
-
 local map_width, map_height = map:get_size()
-
 game:set_hud_enabled(false)
 
 -- Scrolling backgrounds.
@@ -29,7 +27,7 @@ bg2_movement:start(bg2_xy)
 
 -- Frescos.
 local frescos = {}
-for i = 1, 9 do
+for i = 1, 14 do
   frescos[i] = sol.surface.create("menus/intro/intro" .. i .. ".png")
   frescos[i]:set_xy(0, 16)
 end
@@ -41,31 +39,25 @@ dialog_background_img:set_xy(32, 160)
 dialog_background_img:fill_color({255, 255, 128, 128})
 
 function bg1_movement:on_position_changed(x, y)
-
   if y <= -bg1_height then
     bg1_movement:set_xy(0, 0)
   end
-
 end
 
 function bg2_movement:on_position_changed(x, y)
-
   if y <= -bg2_height then
     bg2_movement:set_xy(0, 0)
   end
-
 end
 
 local function next_fresco()
-
-
   if fresco_index < #frescos then
     fresco_index = fresco_index + 1
-		game:get_dialog_box():set_style("box")
-    game:start_dialog("movies.introduction.intro_" .. fresco_index, game:get_player_name(), next_fresco)
+		game:get_dialog_box():set_style("empty")
+    game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), next_fresco)
   else
     -- Restore usual settings.
-    game:get_dialog_box():set_style("box")
+    game:get_dialog_box():set_style("empty")
     game:get_dialog_box():set_position("bottom")
     hero:unfreeze()
 

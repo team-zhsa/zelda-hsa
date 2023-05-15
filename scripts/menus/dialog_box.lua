@@ -120,10 +120,7 @@ local function initialise_dialog_box_features(game)
 	function dialog_box:set_style(style)
 
 		dialog_box.style = style
-		-- if style == "box" then
-		--   -- Make the dialog box slightly transparent.
-		--   dialog_box.dialog_surface:set_opacity(216)
-		-- end
+
 	end
 
 	-- Sets the vertical position of the dialog box for subsequent dialogs.
@@ -204,7 +201,7 @@ local function initialise_dialog_box_features(game)
 		local y = top and 32 or (screen_height - 80)
 
 		if self.style == "empty" then
-			y = y + (top and -24 or 24)
+		--	y = y + (top and -24 or 24)
 		end
 
 		self.box_dst_position = { x = x, y = y }
@@ -273,7 +270,7 @@ local function initialise_dialog_box_features(game)
 		self.char_index = 1
 		self.skipped = false
 		self.full = false
-		self.need_letter_sound = self.style ~= "empty"
+		self.need_letter_sound = self.style-- ~= "empty"
 
 		if dialog.skip ~= nil then
 			-- The skip mode changes for this dialog.
@@ -429,11 +426,7 @@ local function initialise_dialog_box_features(game)
 			elseif current_char == "3" then
 				-- Fast.
 				self.char_delay = char_delays["fast"]
-				-- TODO issue #44
-			--[[elseif current_char == "X" then
-				local keyboard_binding = game:get_command_keyboard_binding(command_names[1])
-				text_surface:set_text(keyboard_binding:sub(1) .. "$")
-				special = true--]]
+
 			else
 				-- Not a special char, actually.
 				text_surface:set_text(text_surface:get_text() .. "$")
@@ -561,7 +554,7 @@ local function initialise_dialog_box_features(game)
 
 		if self.style == "empty" then
 			-- Draw a dark rectangle.
-			dst_surface:fill_color({0, 0, 0}, x, y, 220, 60)
+			--dst_surface:fill_color({0, 0, 0}, x, y, 220, 60)
 		elseif self.icon_index ~= nil then
 			self.box_img:draw_region(0, 76, 256, box_height, self.dialog_surface, x, y)
 		else
