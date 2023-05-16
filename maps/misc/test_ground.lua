@@ -26,7 +26,7 @@ local text = sol.text_surface.create{
 local t = sol.sprite.create("menus/title_triforce")
 t:set_animation("triforce")
 
-local map_surface = sol.surface.create("menus/map/outside_world_map.png")
+local map_surface = sol.surface.create("menus/map/pause_outside_map.png")
 local ds = 0.1
 local smax = 8
 local timer = 100

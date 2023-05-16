@@ -13,7 +13,7 @@ properties{
 tile{
   layer = 0,
   x = 0,
-  y = 0,
+  y = 8,
   width = 1280,
   height = 1440,
   pattern = "14667",
@@ -10633,8 +10633,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 648,
-  y = 520,
+  x = 608,
+  y = 488,
   width = 96,
   height = 8,
   pattern = "2203",
@@ -10642,8 +10642,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 648,
-  y = 480,
+  x = 608,
+  y = 448,
   width = 96,
   height = 40,
   pattern = "2202",
@@ -10651,8 +10651,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 640,
-  y = 480,
+  x = 600,
+  y = 448,
   width = 8,
   height = 40,
   pattern = "2204",
@@ -10660,8 +10660,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 744,
-  y = 480,
+  x = 704,
+  y = 448,
   width = 8,
   height = 40,
   pattern = "2205",
@@ -12190,8 +12190,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 848,
-  y = 480,
+  x = 880,
+  y = 448,
   width = 8,
   height = 8,
   pattern = "97",
@@ -13144,8 +13144,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 848,
-  y = 488,
+  x = 880,
+  y = 456,
   width = 8,
   height = 8,
   pattern = "84",
@@ -13219,7 +13219,7 @@ tile{
   x = 856,
   y = 416,
   width = 16,
-  height = 64,
+  height = 80,
   pattern = "6162",
   tileset = "outside_buildings",
 }
@@ -13227,7 +13227,7 @@ tile{
 tile{
   layer = 0,
   x = 808,
-  y = 464,
+  y = 480,
   width = 48,
   height = 16,
   pattern = "6162",
@@ -13237,9 +13237,9 @@ tile{
 tile{
   layer = 0,
   x = 808,
-  y = 480,
+  y = 496,
   width = 16,
-  height = 48,
+  height = 32,
   pattern = "6162",
   tileset = "outside_buildings",
 }
@@ -15271,6 +15271,16 @@ destructible{
   sprite = "entities/Bushes/bush_l_01",
   destruction_sound = "objects/e_bush",
   can_be_cut = true,
+}
+
+npc{
+  name = "day_gardener",
+  layer = 0,
+  x = 832,
+  y = 621,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/running_man_yellow",
 }
 
 tile{
@@ -17475,8 +17485,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 648,
-  y = 448,
+  x = 608,
+  y = 416,
   width = 96,
   height = 32,
   pattern = "2210",
@@ -17484,8 +17494,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 648,
-  y = 496,
+  x = 608,
+  y = 464,
   width = 96,
   height = 8,
   pattern = "1490",
@@ -17493,8 +17503,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 640,
-  y = 448,
+  x = 600,
+  y = 416,
   width = 8,
   height = 48,
   pattern = "1488",
@@ -17502,8 +17512,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 744,
-  y = 448,
+  x = 704,
+  y = 416,
   width = 8,
   height = 48,
   pattern = "1489",
@@ -17511,8 +17521,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 648,
-  y = 440,
+  x = 608,
+  y = 408,
   width = 96,
   height = 8,
   pattern = "1487",
@@ -17520,8 +17530,8 @@ tile{
 
 tile{
   layer = 1,
-  x = 648,
-  y = 448,
+  x = 608,
+  y = 416,
   width = 96,
   height = 48,
   pattern = "7155",
