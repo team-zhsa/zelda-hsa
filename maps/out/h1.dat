@@ -89959,6 +89959,16 @@ tile{
   pattern = "1778",
 }
 
+tile{
+  layer = 0,
+  x = 0,
+  y = 1432,
+  width = 1280,
+  height = 16,
+  pattern = "12344",
+  tileset = "outside_special",
+}
+
 npc{
   layer = 0,
   x = 712,
@@ -92282,5 +92292,16 @@ custom_entity{
   direction = 0,
   sprite = "entities/Rockstacks/rockstack_light01",
   model = "stone_pile",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h7",
+  destination = "_side",
 }
 

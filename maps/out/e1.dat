@@ -65559,6 +65559,16 @@ tile{
   pattern = "67",
 }
 
+tile{
+  layer = 0,
+  x = 0,
+  y = 1424,
+  width = 1280,
+  height = 16,
+  pattern = "12344",
+  tileset = "outside_special",
+}
+
 custom_entity{
   name = "spawner_boulder_1",
   layer = 0,
@@ -65941,6 +65951,17 @@ teletransporter{
   height = 1440,
   transition = "scrolling",
   destination_map = "out/f1",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/e8",
   destination = "_side",
 }
 

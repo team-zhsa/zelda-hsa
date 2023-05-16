@@ -12946,6 +12946,17 @@ destructible{
   ground = "grass",
 }
 
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/k2",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 848,

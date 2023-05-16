@@ -41727,6 +41727,16 @@ tile{
   tileset = "outside_additions",
 }
 
+tile{
+  layer = 0,
+  x = 0,
+  y = 1336,
+  width = 1280,
+  height = 104,
+  pattern = "12344",
+  tileset = "outside_special",
+}
+
 separator{
   layer = 0,
   x = 0,
@@ -42715,6 +42725,17 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/5/0f",
   destination = "from_outside",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/f8",
+  destination = "_side",
 }
 
 tile{
