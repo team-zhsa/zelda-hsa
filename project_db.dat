@@ -131,6 +131,7 @@ map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupee
 map{ id = "inside/caves/south_field/vah_naboris_fairy_cave", description = "Vah'Naboris Fairy Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
+map{ id = "inside/caves/zora_forest/river_cave", description = "River Cave" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia_town/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia_town/pond_house", description = "Pond House" }
@@ -174,6 +175,7 @@ map{ id = "inside/houses/south_field/flower_house", description = "Flower House"
 map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost Woods Map House" }
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
 map{ id = "inside/houses/zora_forest/camper_house", description = "Camper's House" }
+map{ id = "inside/houses/zora_forest/red_hut", description = "Red Hut" }
 map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
@@ -255,14 +257,14 @@ map{ id = "out/h5", description = "H5 (Hyrule Field)" }
 map{ id = "out/h6", description = "H6 (Flower house)" }
 map{ id = "out/h7", description = "H7 (Beach)" }
 map{ id = "out/i1", description = "I1 (Snowpeaks, Ice Temple)" }
-map{ id = "out/i2", description = "I2 (Zora River)" }
+map{ id = "out/i2", description = "I2 (Zora Forest)" }
 map{ id = "out/i3", description = "I3 (Cordinia Town)" }
 map{ id = "out/i4", description = "I4 (Haunted Forest)" }
 map{ id = "out/i5", description = "I5 (Hyrule Field)" }
 map{ id = "out/i6", description = "out/i6" }
 map{ id = "out/i7", description = "I7 (Beach)" }
 map{ id = "out/j1", description = "J1 (Snowpeaks)" }
-map{ id = "out/j2", description = "out/j2" }
+map{ id = "out/j2", description = "J2 (Zora Forest)" }
 map{ id = "out/j3", description = "J3 (Hyrule Field)" }
 map{ id = "out/j4", description = "J4 (Hyrule Field)" }
 map{ id = "out/j5", description = "J5 (Faron Woods)" }
@@ -280,7 +282,7 @@ map{ id = "out/k9", description = "K9 (Sea)" }
 map{ id = "out/l1", description = "L1 (Zora Falls)" }
 map{ id = "out/l7", description = "L7 (Sea)" }
 map{ id = "out/l8", description = "L8 (Sea)" }
-map{ id = "out/l9", description = "L9 (Finallis Island, Forgotten Temple)" }
+map{ id = "out/l9", description = "L9 (Eventide Island, Forgotten Temple)" }
 map{ id = "out/m1 - n2", description = "M1 - N2 (North Korea)" }
 map{ id = "sanctuaries/shibo_nayru/1f", description = "Shibo'Nayru Sanctuary" }
 map{ id = "trailer/zora", description = "Zora" }
@@ -2169,6 +2171,8 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "The Unkn
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/zora_forest/river_cave.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/zora_forest/river_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.dat", author = "The Unknown", }
@@ -2197,6 +2201,8 @@ file{ path = "maps/inside/houses/north_west_castle/red_house.dat", author = "The
 file{ path = "maps/inside/houses/north_west_castle/red_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_forest/red_hut.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_forest/red_hut.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/shop.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The Unknown", }
