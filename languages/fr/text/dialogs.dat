@@ -2038,15 +2038,6 @@ Non
 }
 
 dialog{
-  id = "main_quest.step_2",
-  text = [[
-Vas chercher une
-épée ! Hyrule peut
-être très dangereux!
-]],
-}
-
-dialog{
   id = "maps.caves.east_castle.to_blacksmith_shop.merchant_welcome",
   text = [[
 Bonjour, jeune héros !
@@ -2672,6 +2663,18 @@ Bienvenue à la forge, jeune
 héros ! 
 La boutique se situe juste à
 côté.
+]],
+}
+
+dialog{
+  id = "maps.houses.east_castle.gardener.no_sword",
+  text = [[
+Bonjour !$0 Je suis le jardinier
+du château. Tu peux te promener
+comme tu veux dans le jardin.
+La Forge ?$0 Emprunte le passage
+situé juste à droite de la maison
+puis continue vers le nord.
 ]],
 }
 
