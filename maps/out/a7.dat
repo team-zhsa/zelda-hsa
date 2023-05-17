@@ -18236,6 +18236,114 @@ tile{
   tileset = "outside_additions",
 }
 
+tile{
+  layer = 0,
+  x = 224,
+  y = 1264,
+  width = 32,
+  height = 16,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 1280,
+  width = 16,
+  height = 32,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 1312,
+  width = 16,
+  height = 16,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 1328,
+  width = 48,
+  height = 16,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 1344,
+  width = 16,
+  height = 48,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 1392,
+  width = 16,
+  height = 48,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 1392,
+  width = 16,
+  height = 48,
+  pattern = "1039",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 1344,
+  width = 16,
+  height = 48,
+  pattern = "1039",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 1328,
+  width = 48,
+  height = 16,
+  pattern = "1039",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 1312,
+  width = 16,
+  height = 16,
+  pattern = "1039",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 1280,
+  width = 16,
+  height = 32,
+  pattern = "1039",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 1264,
+  width = 32,
+  height = 16,
+  pattern = "1039",
+}
+
 block{
   layer = 0,
   x = 832,
@@ -19868,6 +19976,17 @@ custom_entity{
   sprite = "entities/utils/cliff",
   tiled = true,
   model = "cliff",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/a8",
+  destination = "_side",
 }
 
 tile{

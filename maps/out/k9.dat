@@ -136,6 +136,24 @@ tile{
   pattern = "914",
 }
 
+tile{
+  layer = 0,
+  x = 1264,
+  y = 1424,
+  width = 16,
+  height = 16,
+  pattern = "913",
+}
+
+tile{
+  layer = 0,
+  x = 1264,
+  y = 1424,
+  width = 16,
+  height = 16,
+  pattern = "1039",
+}
+
 teletransporter{
   layer = 0,
   x = 0,
@@ -155,6 +173,28 @@ teletransporter{
   height = 1440,
   transition = "scrolling",
   destination_map = "out/l9",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/j9",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/k9",
   destination = "_side",
 }
 

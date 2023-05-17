@@ -361,22 +361,24 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
+	ADD: Added sea maps (#132).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
 	CHG: Rewrote the game intro dialogues (#8).
 	CHG: Changed chicken hit values.
+	CHG: Renamed dungeon tilesets (#133).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
+	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
+	FIX: Fixed case sensibility issues (#133).
+	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	TDO: Setup the quest files for the Solarus launcher.
-	TDO: Add sea maps (#132).
-	TDO: Fix case sensibility issues (#133).
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix the water level changing animation in the Water Temple (#56).
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
-	TDO: Fix changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix not enough memory issues on MacOS (#39).
