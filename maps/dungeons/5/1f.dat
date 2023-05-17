@@ -7331,10 +7331,10 @@ stairs{
 
 crystal_block{
   layer = -1,
-  x = 1640,
-  y = 1312,
-  width = 16,
-  height = 32,
+  x = 1432,
+  y = 1072,
+  width = 32,
+  height = 16,
   subtype = 1,
 }
 
@@ -8016,6 +8016,15 @@ custom_entity{
   height = 16,
   direction = 0,
   sprite = "entities/collapsing_tiles/collapse_tile1",
+}
+
+crystal_block{
+  layer = -1,
+  x = 1448,
+  y = 1040,
+  width = 16,
+  height = 32,
+  subtype = 1,
 }
 
 tile{
@@ -26513,7 +26522,7 @@ door{
   x = 1624,
   y = 1064,
   direction = 2,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   savegame_variable = "dungeon_5_1f_door_29_30",
   opening_condition_consumed = true,
 }
@@ -26546,7 +26555,7 @@ door{
   x = 1752,
   y = 1224,
   direction = 1,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   savegame_variable = "dungeon_5_1f_door_30_36",
   opening_condition_consumed = true,
 }
@@ -26557,7 +26566,7 @@ door{
   x = 1752,
   y = 1160,
   direction = 3,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   savegame_variable = "dungeon_5_1f_door_30_36",
   opening_condition_consumed = true,
 }
@@ -26568,7 +26577,7 @@ door{
   x = 1560,
   y = 1064,
   direction = 0,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   savegame_variable = "dungeon_5_1f_door_29_30",
   opening_condition_consumed = true,
 }
@@ -26652,8 +26661,8 @@ teletransporter{
 
 crystal{
   layer = 0,
-  x = 1544,
-  y = 1117,
+  x = 1952,
+  y = 1101,
 }
 
 switch{
@@ -26673,7 +26682,7 @@ door{
   x = 600,
   y = 824,
   direction = 0,
-  sprite = "entities/doors/Inside/door_d2_small_key",
+  sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
@@ -26684,7 +26693,7 @@ door{
   x = 664,
   y = 824,
   direction = 2,
-  sprite = "entities/doors/Inside/door_d2_small_key",
+  sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
@@ -26717,7 +26726,7 @@ door{
   x = 1112,
   y = 264,
   direction = 1,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   opening_condition_consumed = true,
 }
 
@@ -26726,7 +26735,7 @@ door{
   x = 1112,
   y = 200,
   direction = 3,
-  sprite = "entities/doors/Inside/door_d2_normal",
+  sprite = "entities/doors/inside/door_d2_normal",
   opening_condition_consumed = true,
 }
 
@@ -26801,7 +26810,7 @@ door{
   x = 792,
   y = 504,
   direction = 1,
-  sprite = "entities/doors/Inside/door_d2_small_key",
+  sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
@@ -26812,7 +26821,7 @@ door{
   x = 792,
   y = 440,
   direction = 3,
-  sprite = "entities/doors/Inside/door_d2_small_key",
+  sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
