@@ -8827,7 +8827,7 @@ door{
   x = 1112,
   y = 504,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_9_14",
   opening_condition_consumed = true,
 }
@@ -8838,7 +8838,7 @@ door{
   x = 1112,
   y = 440,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_9_14",
   opening_condition_consumed = true,
 }
@@ -9001,7 +9001,7 @@ door{
   x = 1432,
   y = 744,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  sprite = "entities/doors/Inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b3_door_15_20",
   opening_method = "explosion",
 }
@@ -9012,7 +9012,7 @@ door{
   x = 1432,
   y = 680,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_weak_wall",
+  sprite = "entities/doors/Inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b3_door_15_20",
   opening_method = "explosion",
 }
@@ -9149,7 +9149,7 @@ door{
   x = 1432,
   y = 1224,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b3_door_25_30",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -9163,7 +9163,7 @@ door{
   x = 1432,
   y = 1160,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b3_door_25_30",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -9241,7 +9241,7 @@ door{
   x = 792,
   y = 680,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_13_18",
 }
 
@@ -9251,7 +9251,7 @@ door{
   x = 792,
   y = 744,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_13_18",
 }
 
@@ -10099,7 +10099,7 @@ destructible{
   x = 1192,
   y = 293,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10109,7 +10109,7 @@ destructible{
   x = 1192,
   y = 437,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10119,7 +10119,7 @@ destructible{
   x = 1048,
   y = 437,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10129,7 +10129,7 @@ destructible{
   x = 1048,
   y = 293,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10139,7 +10139,7 @@ destructible{
   x = 1512,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10149,7 +10149,7 @@ destructible{
   x = 1512,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10159,7 +10159,7 @@ destructible{
   x = 1368,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10169,7 +10169,7 @@ destructible{
   x = 1368,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10180,7 +10180,7 @@ destructible{
   y = 653,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10191,7 +10191,7 @@ destructible{
   y = 653,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10231,7 +10231,7 @@ destructible{
   x = 776,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10241,7 +10241,7 @@ destructible{
   x = 776,
   y = 557,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10251,7 +10251,7 @@ destructible{
   x = 776,
   y = 653,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10261,7 +10261,7 @@ destructible{
   x = 776,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10271,7 +10271,7 @@ destructible{
   x = 824,
   y = 557,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10281,7 +10281,7 @@ destructible{
   x = 824,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10291,7 +10291,7 @@ destructible{
   x = 888,
   y = 573,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10301,7 +10301,7 @@ destructible{
   x = 872,
   y = 573,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10311,7 +10311,7 @@ destructible{
   x = 856,
   y = 573,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10321,7 +10321,7 @@ destructible{
   x = 840,
   y = 573,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10331,7 +10331,7 @@ destructible{
   x = 888,
   y = 637,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10341,7 +10341,7 @@ destructible{
   x = 872,
   y = 637,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10351,7 +10351,7 @@ destructible{
   x = 856,
   y = 637,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10361,7 +10361,7 @@ destructible{
   x = 840,
   y = 637,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10371,7 +10371,7 @@ destructible{
   x = 824,
   y = 653,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10381,7 +10381,7 @@ destructible{
   x = 824,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10532,7 +10532,7 @@ chest{
   y = 637,
   treasure_name = "yellow_key",
   treasure_savegame_variable = "dungeon_2_yellow_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 chest{
@@ -10541,7 +10541,7 @@ chest{
   y = 565,
   treasure_name = "bow",
   treasure_savegame_variable = "dungeon_2_treasure",
-  sprite = "entities/Chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_LttP",
   opening_condition = "dungeon_2_big_key",
 }
 
@@ -10982,7 +10982,7 @@ destructible{
   x = 456,
   y = 77,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -10992,7 +10992,7 @@ destructible{
   x = 504,
   y = 77,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11002,7 +11002,7 @@ destructible{
   x = 520,
   y = 109,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11012,7 +11012,7 @@ destructible{
   x = 456,
   y = 141,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11022,7 +11022,7 @@ destructible{
   x = 440,
   y = 109,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11032,7 +11032,7 @@ destructible{
   x = 456,
   y = 349,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11042,7 +11042,7 @@ destructible{
   x = 440,
   y = 381,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11052,7 +11052,7 @@ destructible{
   x = 456,
   y = 413,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11062,7 +11062,7 @@ destructible{
   x = 504,
   y = 413,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11072,7 +11072,7 @@ destructible{
   x = 520,
   y = 381,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11082,7 +11082,7 @@ destructible{
   x = 504,
   y = 349,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -11500,7 +11500,7 @@ door{
   x = 1336,
   y = 352,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_10",
 }
 
@@ -11510,7 +11510,7 @@ door{
   x = 1432,
   y = 440,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_10",
 }
 
@@ -12184,7 +12184,7 @@ door{
   x = 472,
   y = 440,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/Inside/door_d1_big_key",
   savegame_variable = "dungeon_2_b2_door_7_12",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -12196,7 +12196,7 @@ door{
   x = 472,
   y = 504,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/Inside/door_d1_big_key",
   savegame_variable = "dungeon_2_b2_door_7_12",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",

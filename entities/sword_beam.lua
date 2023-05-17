@@ -25,7 +25,7 @@ local function is_bush(destructible)
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/Destructables/vase" or sprite_id:match("^entities/Bushes/bush_")
+  return sprite_id == "entities/destructibles/vase" or sprite_id:match("^entities/bushes/bush_")
 end
 
 local function bush_collision_test(beam, other)
