@@ -123,7 +123,7 @@ beam:add_collision_test("overlapping", function(beam, entity)
       local switch = entity
       local sprite = switch:get_sprite()
         if sprite ~= nil and
-        sprite:get_animation_set() == "entities/Switches/solid_switch" then
+        sprite:get_animation_set() == "entities/switches/solid_switch" then
 
         	if switch:is_activated() then
           	sol.audio.play_sound("sword_tapping")

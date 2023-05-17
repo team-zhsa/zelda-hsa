@@ -1691,7 +1691,7 @@ switch{
   x = 656,
   y = 800,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -1794,7 +1794,7 @@ switch{
   x = 744,
   y = 1072,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -13369,7 +13369,7 @@ switch{
   x = 1152,
   y = 416,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   sound = "common/switch_crystal_hit",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -14169,7 +14169,7 @@ switch{
   x = 720,
   y = 768,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -16333,7 +16333,7 @@ destination{
   x = 216,
   y = 77,
   direction = -1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 teletransporter{
@@ -16350,7 +16350,7 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/2/0f",
   destination = "from_fairy",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "warp",
 }
 

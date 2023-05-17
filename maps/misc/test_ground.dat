@@ -465,7 +465,7 @@ destination{
   x = 536,
   y = 365,
   direction = 1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 teletransporter{
@@ -475,7 +475,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "inside/castle/0f",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "warp",
 }
 
@@ -488,7 +488,7 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/1/0f",
   destination = "from_below",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 
@@ -498,7 +498,7 @@ switch{
   x = 0,
   y = 256,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -517,7 +517,7 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/9/0f",
   destination = "destination",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
 }
 
 switch{
@@ -525,7 +525,7 @@ switch{
   x = 208,
   y = 80,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -547,7 +547,7 @@ teletransporter{
   height = 16,
   destination_map = "out/a2",
   destination = "from_fortune",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 
@@ -618,7 +618,7 @@ teletransporter{
   height = 16,
   destination_map = "misc/test_arena",
   destination = "destination",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "world_warp",
 }
 
@@ -630,7 +630,7 @@ teletransporter{
   height = 16,
   destination_map = "out/b3",
   destination = "destination_maze",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "world_warp",
 }
 
@@ -1052,7 +1052,7 @@ destination{
   x = 24,
   y = 173,
   direction = 1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 chest{
@@ -1080,7 +1080,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "inside/caves/gerudo_valley/north_east_desert_cave_1f",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 

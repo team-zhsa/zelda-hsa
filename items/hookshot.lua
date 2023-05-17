@@ -370,7 +370,7 @@ function item:on_using()
       if not hooked and
           not going_back and
           sprite ~= nil and
-          sprite:get_animation_set() == "entities/Switches/solid_switch" then
+          sprite:get_animation_set() == "entities/switches/solid_switch" then
 
         if switch:is_activated() then
           sol.audio.play_sound("sword_tapping")
