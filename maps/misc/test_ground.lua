@@ -35,7 +35,7 @@ local nsx, nsy = 0.5, 0.5
 
 function map:on_draw(dst_surface)
 	map_surface:set_transformation_origin(120, 90)
-	map_surface:draw(dst_surface)
+	--map_surface:draw(dst_surface)
 	
 
 	text:draw(dst_surface, 160, 220)
@@ -49,11 +49,20 @@ function map:on_started()
 		nsx = nsx + ds
 		nsy = nsy + ds
 		map_surface:set_scale(nsx, nsy)
-		print(nsx)
+		--print(nsx)
 		return nsx < smax
 	end)
-	
-	
+
+	--for stream in map:get_entities("water_stream_17_1_") do
+		stream:set_direction(0)
+		sol.timer.start(1000, function()
+			local direction = (stream:get_direction() + 2) % 8
+			stream:set_direction(direction)
+			print(direction)
+			return true  -- To call the timer again (with the same delay).
+		end)
+	--end
+
 	fall_manager:create("pickable")
 	treasure_manager:disappear_pickable(map, "pendant")
 	

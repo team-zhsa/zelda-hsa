@@ -267,13 +267,17 @@ end)
 handle_17_water_1:register_event("on_released", function()
 	for stream in map:get_entities("water_stream_17_1_") do
 		local sprite = stream:get_sprite()
-		if stream:get_direction() < 4 then
+--[[		if stream:get_direction() < 4 then
 			stream:set_direction(6)
-			sprite:set_direction(6)
 		elseif sprite:get_direction() >= 4 then
 			stream:set_direction(2)
-			sprite:set_direction(2)
 		end
+		stream:set_direction(0)
+		sol.timer.start(1000, function()
+			local direction = (stream:get_direction() + 2) % 8
+			stream:set_direction(direction)
+			return true  -- To call the timer again (with the same delay).
+		end)--]]
 	end
 end)
 
@@ -282,10 +286,8 @@ handle_17_water_2:register_event("on_released", function()
 		local sprite = stream:get_sprite()
 		if sprite:get_direction() < 4 then
 			stream:set_direction(4)
-			sprite:set_direction(4)
 		elseif sprite:get_direction() >= 4 then
 			stream:set_direction(0)
-			sprite:set_direction(0)
 		end
 	end
 end)
@@ -295,10 +297,8 @@ handle_17_water_3:register_event("on_released", function()
 		local sprite = stream:get_sprite()
 		if stream:get_direction() < 4 then
 			stream:set_direction(6)
-			sprite:set_direction(6)
 		elseif sprite:get_direction() >= 4 then
 			stream:set_direction(2)
-			sprite:set_direction(2)
 		end
 	end
 end)
@@ -308,10 +308,8 @@ handle_17_water_4:register_event("on_released", function()
 		local sprite = stream:get_sprite()
 		if sprite:get_direction() < 4 then
 			stream:set_direction(4)
-			sprite:set_direction(4)
 		elseif sprite:get_direction() >= 4 then
 			stream:set_direction(0)
-			sprite:set_direction(0)
 		end
 	end
 end)
