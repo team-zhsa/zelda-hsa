@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_6",
   floor = 0,
-  tileset = "Absolute Dungeon 19",
+  tileset = "absolute_dungeon_19",
   music = "dungeons/06_water",
 }
 
@@ -3716,7 +3716,7 @@ door{
   x = 832,
   y = 1376,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_6_0f_door_33",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_6_small_keys",
@@ -16773,7 +16773,7 @@ destructible{
   x = 776,
   y = 1261,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -16997,7 +16997,7 @@ switch{
   x = 472,
   y = 1032,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -17219,7 +17219,7 @@ door{
   x = 376,
   y = 920,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_6_0f_door_14_26_1",
   opening_condition_consumed = true,
 }
@@ -17230,7 +17230,7 @@ door{
   x = 568,
   y = 920,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_6_0f_door_14_26_2",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_6_small_keys",
@@ -17630,7 +17630,7 @@ chest{
   y = 773,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_6_map",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 door{
@@ -17639,7 +17639,7 @@ door{
   x = 376,
   y = 984,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_6_0f_door_14_26_1",
   opening_condition_consumed = true,
 }
@@ -17650,7 +17650,7 @@ door{
   x = 568,
   y = 984,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_6_0f_door_14_26_2",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_6_small_keys",
@@ -17694,7 +17694,7 @@ stream{
   x = 1400,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 88,
 }
 
@@ -17792,7 +17792,7 @@ stream{
   x = 1576,
   y = 589,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17802,7 +17802,7 @@ stream{
   x = 1576,
   y = 573,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17812,7 +17812,7 @@ stream{
   x = 1576,
   y = 557,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17822,7 +17822,7 @@ stream{
   x = 1576,
   y = 541,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17832,7 +17832,7 @@ stream{
   x = 1592,
   y = 589,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17842,7 +17842,7 @@ stream{
   x = 1592,
   y = 573,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17852,7 +17852,7 @@ stream{
   x = 1592,
   y = 557,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17862,7 +17862,7 @@ stream{
   x = 1592,
   y = 541,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17872,7 +17872,7 @@ stream{
   x = 1608,
   y = 589,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17882,7 +17882,7 @@ stream{
   x = 1608,
   y = 573,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17892,7 +17892,7 @@ stream{
   x = 1608,
   y = 557,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17902,7 +17902,7 @@ stream{
   x = 1608,
   y = 541,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17912,7 +17912,7 @@ stream{
   x = 1624,
   y = 589,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17922,7 +17922,7 @@ stream{
   x = 1624,
   y = 573,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17932,7 +17932,7 @@ stream{
   x = 1624,
   y = 557,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17942,7 +17942,7 @@ stream{
   x = 1624,
   y = 541,
   direction = 4,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17952,7 +17952,7 @@ stream{
   x = 1736,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17962,7 +17962,7 @@ stream{
   x = 1752,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17972,7 +17972,7 @@ stream{
   x = 1768,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17982,7 +17982,7 @@ stream{
   x = 1784,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -17992,7 +17992,7 @@ stream{
   x = 1736,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18002,7 +18002,7 @@ stream{
   x = 1752,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18012,7 +18012,7 @@ stream{
   x = 1768,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18022,7 +18022,7 @@ stream{
   x = 1784,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18032,7 +18032,7 @@ stream{
   x = 1736,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18042,7 +18042,7 @@ stream{
   x = 1752,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18052,7 +18052,7 @@ stream{
   x = 1768,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18062,7 +18062,7 @@ stream{
   x = 1784,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18072,7 +18072,7 @@ stream{
   x = 1736,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18082,7 +18082,7 @@ stream{
   x = 1752,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18092,7 +18092,7 @@ stream{
   x = 1768,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18102,7 +18102,7 @@ stream{
   x = 1784,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18112,7 +18112,7 @@ chest{
   y = 605,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_6_0f_18_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 wall{
@@ -18199,7 +18199,7 @@ stream{
   x = 1416,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 88,
 }
 
@@ -18209,7 +18209,7 @@ stream{
   x = 1432,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18219,7 +18219,7 @@ stream{
   x = 1448,
   y = 701,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18229,7 +18229,7 @@ stream{
   x = 1400,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18239,7 +18239,7 @@ stream{
   x = 1416,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18249,7 +18249,7 @@ stream{
   x = 1432,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18259,7 +18259,7 @@ stream{
   x = 1448,
   y = 717,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18269,7 +18269,7 @@ stream{
   x = 1400,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18279,7 +18279,7 @@ stream{
   x = 1416,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18289,7 +18289,7 @@ stream{
   x = 1432,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18299,7 +18299,7 @@ stream{
   x = 1448,
   y = 733,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18309,7 +18309,7 @@ stream{
   x = 1400,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18319,7 +18319,7 @@ stream{
   x = 1416,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18329,7 +18329,7 @@ stream{
   x = 1432,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18339,7 +18339,7 @@ stream{
   x = 1448,
   y = 749,
   direction = 2,
-  sprite = "entities/Streams/current1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18383,7 +18383,7 @@ destructible{
   y = 1021,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_6_0f_27_pot_small_key",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18395,7 +18395,7 @@ destructible{
   y = 1021,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18407,7 +18407,7 @@ destructible{
   y = 1021,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18419,7 +18419,7 @@ destructible{
   y = 1021,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18558,7 +18558,7 @@ destructible{
   y = 701,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18570,7 +18570,7 @@ destructible{
   y = 749,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18582,7 +18582,7 @@ destructible{
   y = 749,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18594,7 +18594,7 @@ destructible{
   y = 717,
   treasure_name = "bomb",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18606,7 +18606,7 @@ destructible{
   y = 717,
   treasure_name = "bomb",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18617,7 +18617,7 @@ destructible{
   x = 424,
   y = 765,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -18628,7 +18628,7 @@ destructible{
   x = 424,
   y = 733,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -19847,7 +19847,7 @@ destructible{
   x = 760,
   y = 1293,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }
@@ -19858,7 +19858,7 @@ destructible{
   x = 776,
   y = 1325,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase_skull",
+  sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
 }

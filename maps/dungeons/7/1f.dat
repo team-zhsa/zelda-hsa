@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_7",
   floor = 1,
-  tileset = "Absolute Dungeon 05",
+  tileset = "absolute_dungeon_05",
   music = "dungeons/07_desert",
 }
 
@@ -2035,7 +2035,7 @@ chest{
   y = 109,
   treasure_name = "power_gloves",
   treasure_savegame_variable = "dungeon_7_treasure",
-  sprite = "entities/Chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_LttP",
 }
 
 wall{
@@ -2055,7 +2055,7 @@ door{
   x = 152,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_7_1f_door_6_11",
   opening_condition_consumed = true,
 }

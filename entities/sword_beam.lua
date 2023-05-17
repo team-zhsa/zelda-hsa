@@ -25,7 +25,7 @@ local function is_bush(destructible)
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/Destructables/vase" or sprite_id:match("^entities/Bushes/bush_")
+  return sprite_id == "entities/destructibles/vase" or sprite_id:match("^entities/bushes/bush_")
 end
 
 local function bush_collision_test(beam, other)
@@ -123,7 +123,7 @@ beam:add_collision_test("overlapping", function(beam, entity)
       local switch = entity
       local sprite = switch:get_sprite()
         if sprite ~= nil and
-        sprite:get_animation_set() == "entities/Switches/solid_switch" then
+        sprite:get_animation_set() == "entities/switches/solid_switch" then
 
         	if switch:is_activated() then
           	sol.audio.play_sound("sword_tapping")

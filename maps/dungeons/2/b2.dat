@@ -7,7 +7,7 @@ properties{
   max_layer = 3,
   world = "dungeon_2",
   floor = -2,
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
   music = "dungeons/02_forest",
 }
 
@@ -2829,7 +2829,7 @@ door{
   x = 896,
   y = 1584,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_33_34",
   opening_condition_consumed = true,
 }
@@ -2840,7 +2840,7 @@ door{
   x = 1008,
   y = 1584,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_33_34",
   opening_condition_consumed = true,
 }
@@ -2965,7 +2965,7 @@ door{
   x = 256,
   y = 1312,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b2_door_26_27",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -2978,7 +2978,7 @@ door{
   x = 368,
   y = 1312,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b2_door_26_27",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -3067,7 +3067,7 @@ switch{
   x = 864,
   y = 1520,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = true,
   inactivate_when_leaving = true,
@@ -3078,7 +3078,7 @@ destructible{
   x = 872,
   y = 1533,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -3351,7 +3351,7 @@ door{
   x = 528,
   y = 1248,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b3_door_27_stairs",
   opening_condition_consumed = true,
 }
@@ -4668,7 +4668,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4687,7 +4687,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4697,7 +4697,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4707,7 +4707,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4717,7 +4717,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4727,7 +4727,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4737,7 +4737,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4747,7 +4747,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4757,7 +4757,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4767,7 +4767,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4777,7 +4777,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4787,7 +4787,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4797,7 +4797,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4807,7 +4807,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4817,7 +4817,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4827,7 +4827,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4837,7 +4837,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -13150,7 +13150,7 @@ door{
   x = 472,
   y = 680,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_blue_key",
+  sprite = "entities/doors/Inside/door_d1_blue_key",
   savegame_variable = "dungeon_2_b2_door_12_17",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_blue_key",
@@ -13162,7 +13162,7 @@ door{
   x = 472,
   y = 744,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_blue_key",
+  sprite = "entities/doors/Inside/door_d1_blue_key",
   savegame_variable = "dungeon_2_b2_door_12_17",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_blue_key",
@@ -13241,7 +13241,7 @@ switch{
   x = 576,
   y = 1328,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -13253,7 +13253,7 @@ chest{
   y = 1549,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_b2_31_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 wall{
@@ -13430,7 +13430,7 @@ door{
   x = 1160,
   y = 1224,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_24_29",
   opening_condition_consumed = true,
 }
@@ -13441,7 +13441,7 @@ door{
   x = 1160,
   y = 1160,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_b2_door_24_29",
   opening_condition_consumed = true,
 }
@@ -13473,7 +13473,7 @@ door{
   x = 920,
   y = 1368,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b2_door_28_29",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -13486,7 +13486,7 @@ door{
   x = 984,
   y = 1368,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b2_door_28_29",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -13560,7 +13560,7 @@ chest{
   y = 1493,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_b2_33_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 wall{
@@ -13698,7 +13698,7 @@ destructible{
   x = 568,
   y = 909,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13708,7 +13708,7 @@ destructible{
   x = 584,
   y = 909,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13718,7 +13718,7 @@ destructible{
   x = 584,
   y = 893,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13728,7 +13728,7 @@ destructible{
   x = 584,
   y = 797,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13738,7 +13738,7 @@ destructible{
   x = 584,
   y = 781,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13748,7 +13748,7 @@ destructible{
   x = 568,
   y = 781,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13758,7 +13758,7 @@ destructible{
   x = 392,
   y = 781,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13768,7 +13768,7 @@ destructible{
   x = 376,
   y = 781,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13778,7 +13778,7 @@ destructible{
   x = 376,
   y = 797,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13788,7 +13788,7 @@ destructible{
   x = 376,
   y = 893,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13798,7 +13798,7 @@ destructible{
   x = 376,
   y = 909,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13808,7 +13808,7 @@ destructible{
   x = 392,
   y = 909,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -13847,7 +13847,7 @@ switch{
   x = 1000,
   y = 1480,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -13883,7 +13883,7 @@ switch{
   x = 1008,
   y = 1056,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -13894,7 +13894,7 @@ switch{
   x = 1216,
   y = 1056,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -14106,7 +14106,7 @@ chest{
   y = 1085,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_b2_23_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 enemy{
@@ -14619,7 +14619,7 @@ door{
   x = 152,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  sprite = "entities/doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_yellow_key",
@@ -14752,7 +14752,7 @@ switch{
   x = 1008,
   y = 1008,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -14806,7 +14806,7 @@ door{
   x = 152,
   y = 264,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  sprite = "entities/doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_yellow_key",
@@ -14818,7 +14818,7 @@ door{
   x = 472,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  sprite = "entities/doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_yellow_key",
@@ -14830,7 +14830,7 @@ door{
   x = 472,
   y = 264,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_yellow_key",
+  sprite = "entities/doors/Inside/door_d1_yellow_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_yellow_key",

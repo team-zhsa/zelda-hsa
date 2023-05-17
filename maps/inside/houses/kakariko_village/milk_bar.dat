@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "inside_world",
-  tileset = "Absolute Dungeon 03",
+  tileset = "absolute_dungeon_03",
   music = "outside/kakarico",
 }
 
@@ -1598,7 +1598,7 @@ door{
   x = 152,
   y = 24,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_very_weak_wall",
+  sprite = "entities/doors/Inside/door_d1_very_weak_wall",
   savegame_variable = "outside_kakarico_milk_bar_door",
   opening_method = "explosion",
 }
@@ -1618,7 +1618,7 @@ destructible{
   x = 56,
   y = 397,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1628,7 +1628,7 @@ destructible{
   x = 72,
   y = 397,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1638,7 +1638,7 @@ destructible{
   x = 72,
   y = 413,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1648,7 +1648,7 @@ destructible{
   x = 56,
   y = 413,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1659,7 +1659,7 @@ destructible{
   y = 429,
   treasure_name = "bomb",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1670,7 +1670,7 @@ destructible{
   y = 429,
   treasure_name = "arrow",
   treasure_variant = 3,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }

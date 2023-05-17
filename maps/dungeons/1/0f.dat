@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_1",
   floor = 0,
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
   music = "dungeons/01_ruins",
 }
 
@@ -2097,7 +2097,7 @@ door{
   x = 1008,
   y = 320,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
 }
 
 enemy{
@@ -2199,7 +2199,7 @@ door{
   x = 1112,
   y = 288,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeons_1_final_door",
 }
 
@@ -2281,7 +2281,7 @@ chest{
   y = 861,
   treasure_name = "compass",
   treasure_savegame_variable = "dungeon_1_compass",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 teletransporter{
@@ -2368,7 +2368,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4700,7 +4700,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4710,7 +4710,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4720,7 +4720,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4730,7 +4730,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4740,7 +4740,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4750,7 +4750,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -4760,7 +4760,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -5202,7 +5202,7 @@ tile{
   width = 80,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -5212,7 +5212,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -5222,7 +5222,7 @@ tile{
   width = 80,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -5232,7 +5232,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -5242,7 +5242,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
 }
 
 tile{
@@ -6621,7 +6621,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 3,
   treasure_savegame_variable = "dungeon_1_0f_29_rupees",
-  sprite = "entities/Chests/chest_yellow",
+  sprite = "entities/chests/chest_yellow",
 }
 
 chest{
@@ -6630,7 +6630,7 @@ chest{
   y = 1325,
   treasure_name = "piece_of_heart",
   treasure_savegame_variable = "dungeon_1_0f_29_piece_of_heart",
-  sprite = "entities/Chests/chest_yellow",
+  sprite = "entities/chests/chest_yellow",
 }
 
 sensor{
@@ -6674,7 +6674,7 @@ door{
   x = 696,
   y = 1464,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_1_door_small_key",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_1_small_keys",
@@ -6699,7 +6699,7 @@ door{
   x = 696,
   y = 984,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "door_d1_23_n1",
 }
 
@@ -6911,7 +6911,7 @@ chest{
   y = 893,
   treasure_name = "boomerang",
   treasure_savegame_variable = "treasure_d1",
-  sprite = "entities/Chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_LttP",
 }
 
 crystal{
@@ -7071,7 +7071,7 @@ chest{
   y = 1021,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_1_0f_23_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 crystal_block{
@@ -7423,7 +7423,7 @@ teletransporter{
   height = 16,
   destination_map = "out/a1",
   destination = "from_dungeon",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "warp",
 }
 
@@ -7603,7 +7603,7 @@ chest{
   y = 1021,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_1_map",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 tile{

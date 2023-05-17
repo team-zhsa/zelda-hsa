@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_2",
   floor = 0,
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
   music = "dungeons/02_forest",
 }
 
@@ -1191,7 +1191,7 @@ door{
   x = 576,
   y = 312,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_0f_door_7_8_low",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -1204,7 +1204,7 @@ door{
   x = 688,
   y = 312,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_0f_door_7_8_low",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -1218,7 +1218,7 @@ destination{
   x = 744,
   y = 381,
   direction = -1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 destructible{
@@ -1227,7 +1227,7 @@ destructible{
   x = 888,
   y = 317,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1238,7 +1238,7 @@ destructible{
   x = 888,
   y = 333,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1249,7 +1249,7 @@ destructible{
   x = 888,
   y = 349,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -1724,7 +1724,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -1734,7 +1734,7 @@ tile{
   width = 24,
   height = 320,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -1744,7 +1744,7 @@ tile{
   width = 24,
   height = 32,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2051,7 +2051,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2061,7 +2061,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2080,7 +2080,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2099,7 +2099,7 @@ tile{
   width = 24,
   height = 96,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2109,7 +2109,7 @@ tile{
   width = 24,
   height = 32,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2128,7 +2128,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2147,7 +2147,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2193,7 +2193,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2203,7 +2203,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2213,7 +2213,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2223,7 +2223,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2350,7 +2350,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2360,7 +2360,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2370,7 +2370,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2380,7 +2380,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2390,7 +2390,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2400,7 +2400,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2410,7 +2410,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2420,7 +2420,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2430,7 +2430,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2503,7 +2503,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2513,7 +2513,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2523,7 +2523,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2533,7 +2533,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2543,7 +2543,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2553,7 +2553,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2563,7 +2563,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2573,7 +2573,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2583,7 +2583,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2593,7 +2593,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2603,7 +2603,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2640,7 +2640,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2650,7 +2650,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2660,7 +2660,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2670,7 +2670,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2680,7 +2680,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2690,7 +2690,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2700,7 +2700,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2710,7 +2710,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2720,7 +2720,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2730,7 +2730,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2740,7 +2740,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2750,7 +2750,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2760,7 +2760,7 @@ tile{
   width = 24,
   height = 32,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2770,7 +2770,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2780,7 +2780,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2790,7 +2790,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2800,7 +2800,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2819,7 +2819,7 @@ tile{
   width = 64,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2829,7 +2829,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2839,7 +2839,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2849,7 +2849,7 @@ tile{
   width = 64,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2859,7 +2859,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2869,7 +2869,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2879,7 +2879,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2889,7 +2889,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2899,7 +2899,7 @@ tile{
   width = 32,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2909,7 +2909,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2919,7 +2919,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2929,7 +2929,7 @@ tile{
   width = 32,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2939,7 +2939,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2949,7 +2949,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2959,7 +2959,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2969,7 +2969,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2979,7 +2979,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2989,7 +2989,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -2999,7 +2999,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3009,7 +3009,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3019,7 +3019,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3029,7 +3029,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3039,7 +3039,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3049,7 +3049,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3059,7 +3059,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3150,7 +3150,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3160,7 +3160,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3170,7 +3170,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3180,7 +3180,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3190,7 +3190,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3200,7 +3200,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3210,7 +3210,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3256,7 +3256,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3266,7 +3266,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3276,7 +3276,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3286,7 +3286,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3296,7 +3296,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3306,7 +3306,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3316,7 +3316,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3326,7 +3326,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3336,7 +3336,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3346,7 +3346,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3356,7 +3356,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3393,7 +3393,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3403,7 +3403,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3413,7 +3413,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3423,7 +3423,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3433,7 +3433,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3443,7 +3443,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3453,7 +3453,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3463,7 +3463,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3473,7 +3473,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3483,7 +3483,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3493,7 +3493,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3503,7 +3503,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3513,7 +3513,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3523,7 +3523,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3533,7 +3533,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3543,7 +3543,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3553,7 +3553,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3563,7 +3563,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3573,7 +3573,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3583,7 +3583,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3593,7 +3593,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3612,7 +3612,7 @@ tile{
   width = 128,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3622,7 +3622,7 @@ tile{
   width = 8,
   height = 48,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3632,7 +3632,7 @@ tile{
   width = 8,
   height = 48,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3642,7 +3642,7 @@ tile{
   width = 128,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3652,7 +3652,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3662,7 +3662,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3672,7 +3672,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3682,7 +3682,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3692,7 +3692,7 @@ tile{
   width = 64,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3702,7 +3702,7 @@ tile{
   width = 24,
   height = 64,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3712,7 +3712,7 @@ tile{
   width = 24,
   height = 32,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3722,7 +3722,7 @@ tile{
   width = 144,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3732,7 +3732,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3742,7 +3742,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3752,7 +3752,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3762,7 +3762,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3781,7 +3781,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3791,7 +3791,7 @@ tile{
   width = 24,
   height = 96,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3801,7 +3801,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3811,7 +3811,7 @@ tile{
   width = 256,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3821,7 +3821,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3831,7 +3831,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3841,7 +3841,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3851,7 +3851,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3870,7 +3870,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3880,7 +3880,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3890,7 +3890,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3900,7 +3900,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3910,7 +3910,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3920,7 +3920,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3930,7 +3930,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3940,7 +3940,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3950,7 +3950,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3960,7 +3960,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3970,7 +3970,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3980,7 +3980,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -3990,7 +3990,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4000,7 +4000,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4010,7 +4010,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4020,7 +4020,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4030,7 +4030,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4040,7 +4040,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4050,7 +4050,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4060,7 +4060,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4070,7 +4070,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4080,7 +4080,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4090,7 +4090,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4100,7 +4100,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4110,7 +4110,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4120,7 +4120,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4130,7 +4130,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4140,7 +4140,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4150,7 +4150,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4160,7 +4160,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4170,7 +4170,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4189,7 +4189,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4199,7 +4199,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4209,7 +4209,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4219,7 +4219,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4229,7 +4229,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4239,7 +4239,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4249,7 +4249,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4259,7 +4259,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4278,7 +4278,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4288,7 +4288,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4298,7 +4298,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4308,7 +4308,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4318,7 +4318,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4328,7 +4328,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4338,7 +4338,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4348,7 +4348,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4358,7 +4358,7 @@ tile{
   width = 240,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4368,7 +4368,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4378,7 +4378,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4388,7 +4388,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4398,7 +4398,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4408,7 +4408,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4418,7 +4418,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4428,7 +4428,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4798,7 +4798,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4808,7 +4808,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -4818,7 +4818,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5251,7 +5251,7 @@ tile{
   width = 64,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5279,7 +5279,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5289,7 +5289,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5299,7 +5299,7 @@ tile{
   width = 8,
   height = 64,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5309,7 +5309,7 @@ tile{
   width = 144,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5319,7 +5319,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5329,7 +5329,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5339,7 +5339,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5349,7 +5349,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5359,7 +5359,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5369,7 +5369,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5379,7 +5379,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5389,7 +5389,7 @@ tile{
   width = 160,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5399,7 +5399,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5409,7 +5409,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5419,7 +5419,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5429,7 +5429,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5439,7 +5439,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5458,7 +5458,7 @@ tile{
   width = 24,
   height = 64,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5468,7 +5468,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner_reverse.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5505,7 +5505,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -5641,7 +5641,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6488,7 +6488,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6498,7 +6498,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6508,7 +6508,7 @@ tile{
   width = 8,
   height = 144,
   pattern = "wall_border.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6518,7 +6518,7 @@ tile{
   width = 224,
   height = 8,
   pattern = "wall_border.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6528,7 +6528,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6538,7 +6538,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6548,7 +6548,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -6558,7 +6558,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7279,7 +7279,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7289,7 +7289,7 @@ tile{
   width = 24,
   height = 160,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7587,7 +7587,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7615,7 +7615,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7625,7 +7625,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7635,7 +7635,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7645,7 +7645,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7655,7 +7655,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7665,7 +7665,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7675,7 +7675,7 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -7685,7 +7685,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9378,7 +9378,7 @@ tile{
   width = 64,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9388,7 +9388,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9398,7 +9398,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9408,7 +9408,7 @@ tile{
   width = 24,
   height = 80,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9418,7 +9418,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9428,7 +9428,7 @@ tile{
   width = 32,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9438,7 +9438,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner_reverse.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9448,7 +9448,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner_reverse.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9458,7 +9458,7 @@ tile{
   width = 64,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9468,7 +9468,7 @@ tile{
   width = 32,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9478,7 +9478,7 @@ tile{
   width = 32,
   height = 24,
   pattern = "wall.1-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9821,7 +9821,7 @@ tile{
   width = 24,
   height = 48,
   pattern = "wall.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9831,7 +9831,7 @@ tile{
   width = 16,
   height = 24,
   pattern = "barrier_big.border.2-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9841,7 +9841,7 @@ tile{
   width = 16,
   height = 16,
   pattern = "barrier_big.border.1-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9851,7 +9851,7 @@ tile{
   width = 16,
   height = 80,
   pattern = "barrier_big.2-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9861,7 +9861,7 @@ tile{
   width = 16,
   height = 24,
   pattern = "barrier_big.border.2-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9871,7 +9871,7 @@ tile{
   width = 16,
   height = 16,
   pattern = "barrier_big.border.1-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -9881,7 +9881,7 @@ tile{
   width = 16,
   height = 80,
   pattern = "barrier_big.2-1",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -10242,7 +10242,7 @@ tile{
   width = 24,
   height = 32,
   pattern = "wall.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -10252,7 +10252,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner_reverse.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -10442,7 +10442,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -10479,7 +10479,7 @@ tile{
   width = 24,
   height = 24,
   pattern = "wall.corner.3-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -12001,7 +12001,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -12011,7 +12011,7 @@ tile{
   width = 112,
   height = 24,
   pattern = "wall.2-2",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
@@ -12875,7 +12875,7 @@ door{
   x = 472,
   y = 1224,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
 }
 
 destination{
@@ -13004,7 +13004,7 @@ chest{
   y = 845,
   treasure_name = "blue_key",
   treasure_savegame_variable = "dungeon_2_blue_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 switch{
@@ -13013,7 +13013,7 @@ switch{
   x = 1536,
   y = 832,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -13025,7 +13025,7 @@ chest{
   y = 1053,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_0f_22_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 block{
@@ -13133,7 +13133,7 @@ door{
   x = 984,
   y = 832,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
 }
 
 door{
@@ -13142,7 +13142,7 @@ door{
   x = 1240,
   y = 832,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
 }
 
 door{
@@ -13151,7 +13151,7 @@ door{
   x = 1112,
   y = 920,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
 }
 
 separator{
@@ -13516,7 +13516,7 @@ door{
   x = 600,
   y = 368,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_blue_key",
+  sprite = "entities/doors/Inside/door_d1_blue_key",
   savegame_variable = "dungeon_2_0f_door_7_8_high",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_blue_key",
@@ -13530,7 +13530,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 4,
   treasure_savegame_variable = "dungeon_1_1f_29_rupees",
-  sprite = "entities/Chests/chest_yellow",
+  sprite = "entities/chests/chest_yellow",
 }
 
 chest{
@@ -13540,7 +13540,7 @@ chest{
   y = 557,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_1f_11_chest_small_key",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 enemy{
@@ -13577,7 +13577,7 @@ switch{
   x = 720,
   y = 568,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   sound = "arrow_hit",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -13683,7 +13683,7 @@ chest{
   y = 1325,
   treasure_name = "compass",
   treasure_savegame_variable = "dungeon_2_compass",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 switch{
@@ -13714,7 +13714,7 @@ switch{
   x = 400,
   y = 1264,
   subtype = "walkable",
-  sprite = "entities/Switches/switch_d1-1",
+  sprite = "entities/switches/switch_d1-1",
   sound = "objects/on_switch",
   needs_block = true,
   inactivate_when_leaving = true,
@@ -13762,7 +13762,7 @@ switch{
   x = 400,
   y = 1360,
   subtype = "walkable",
-  sprite = "entities/Switches/switch_d1-1",
+  sprite = "entities/switches/switch_d1-1",
   sound = "objects/on_switch",
   needs_block = true,
   inactivate_when_leaving = true,
@@ -13774,7 +13774,7 @@ switch{
   x = 544,
   y = 1360,
   subtype = "walkable",
-  sprite = "entities/Switches/switch_d1-1",
+  sprite = "entities/switches/switch_d1-1",
   sound = "objects/on_switch",
   needs_block = true,
   inactivate_when_leaving = true,
@@ -13786,7 +13786,7 @@ switch{
   x = 544,
   y = 1264,
   subtype = "walkable",
-  sprite = "entities/Switches/switch_d1-1",
+  sprite = "entities/switches/switch_d1-1",
   sound = "objects/on_switch",
   needs_block = true,
   inactivate_when_leaving = true,
@@ -14069,7 +14069,7 @@ destructible{
   x = 120,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14079,7 +14079,7 @@ destructible{
   x = 104,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14089,7 +14089,7 @@ destructible{
   x = 104,
   y = 557,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14099,7 +14099,7 @@ destructible{
   x = 56,
   y = 589,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14109,7 +14109,7 @@ destructible{
   x = 56,
   y = 605,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14119,7 +14119,7 @@ destructible{
   x = 56,
   y = 621,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14129,7 +14129,7 @@ destructible{
   x = 104,
   y = 653,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14139,7 +14139,7 @@ destructible{
   x = 104,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14149,7 +14149,7 @@ destructible{
   x = 120,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14159,7 +14159,7 @@ destructible{
   x = 200,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14169,7 +14169,7 @@ destructible{
   x = 216,
   y = 669,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14179,7 +14179,7 @@ destructible{
   x = 216,
   y = 653,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14189,7 +14189,7 @@ destructible{
   x = 216,
   y = 557,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14199,7 +14199,7 @@ destructible{
   x = 216,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14209,7 +14209,7 @@ destructible{
   x = 200,
   y = 541,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14219,7 +14219,7 @@ destructible{
   x = 264,
   y = 589,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14229,7 +14229,7 @@ destructible{
   x = 264,
   y = 605,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14239,7 +14239,7 @@ destructible{
   x = 264,
   y = 621,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14249,7 +14249,7 @@ door{
   x = 1112,
   y = 1224,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/Inside/door_d1_small_key",
   savegame_variable = "dungeon_2_0f_door_24_29",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -14711,7 +14711,7 @@ door{
   x = 664,
   y = 368,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_blue_key",
+  sprite = "entities/doors/Inside/door_d1_blue_key",
   savegame_variable = "dungeon_2_0f_door_7_8_high",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_blue_key",
@@ -14746,7 +14746,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 5,
   treasure_savegame_variable = "dungeon_2_0f_7_rupees",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_LttP",
 }
 
 enemy{
@@ -14837,7 +14837,7 @@ door{
   x = 792,
   y = 264,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_0f_door_3_8",
   opening_condition_consumed = true,
 }
@@ -14848,7 +14848,7 @@ destructible{
   x = 696,
   y = 581,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14859,7 +14859,7 @@ destructible{
   x = 712,
   y = 581,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14871,7 +14871,7 @@ destructible{
   y = 613,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14883,7 +14883,7 @@ destructible{
   y = 613,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14895,7 +14895,7 @@ destructible{
   y = 629,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14907,7 +14907,7 @@ destructible{
   y = 629,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14919,7 +14919,7 @@ destructible{
   y = 645,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14931,7 +14931,7 @@ destructible{
   y = 645,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14943,7 +14943,7 @@ destructible{
   y = 661,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -14955,7 +14955,7 @@ destructible{
   y = 661,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15016,7 +15016,7 @@ door{
   x = 792,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/Inside/door_d1_normal",
   savegame_variable = "dungeon_2_0f_door_3_8",
   opening_condition_consumed = true,
 }
@@ -15045,7 +15045,7 @@ switch{
   x = 720,
   y = 112,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   sound = "objects/on_switch",
   needs_block = false,
   inactivate_when_leaving = false,
@@ -15058,7 +15058,7 @@ destructible{
   y = 125,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15070,7 +15070,7 @@ destructible{
   y = 157,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15082,7 +15082,7 @@ destructible{
   y = 157,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15094,7 +15094,7 @@ destructible{
   y = 125,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15105,7 +15105,7 @@ destructible{
   x = 1352,
   y = 541,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15117,7 +15117,7 @@ destructible{
   y = 381,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15129,7 +15129,7 @@ destructible{
   y = 381,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15139,7 +15139,7 @@ door{
   x = 1080,
   y = 592,
   direction = 3,
-  sprite = "entities/Doors/Inside/castle_lock",
+  sprite = "entities/doors/Inside/castle_lock",
   savegame_variable = "dungeon_2_0f_door_10",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -15252,7 +15252,7 @@ destructible{
   x = 1336,
   y = 541,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15263,7 +15263,7 @@ destructible{
   x = 1336,
   y = 557,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15274,7 +15274,7 @@ destructible{
   x = 1336,
   y = 653,
   treasure_name = "arrow",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15285,7 +15285,7 @@ destructible{
   x = 1336,
   y = 669,
   treasure_name = "arrow",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15296,7 +15296,7 @@ destructible{
   x = 1352,
   y = 669,
   treasure_name = "arrow",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15307,7 +15307,7 @@ destructible{
   x = 1464,
   y = 653,
   treasure_name = "fairy",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15318,7 +15318,7 @@ destructible{
   x = 1464,
   y = 669,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15329,7 +15329,7 @@ destructible{
   x = 1448,
   y = 669,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15340,7 +15340,7 @@ destructible{
   x = 1544,
   y = 557,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15351,7 +15351,7 @@ destructible{
   x = 1528,
   y = 541,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -15362,7 +15362,7 @@ destructible{
   x = 1544,
   y = 541,
   treasure_name = "arrow",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }

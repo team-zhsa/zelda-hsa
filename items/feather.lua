@@ -239,7 +239,7 @@ function item:create_ground_effect(x, y, layer)
   end
 end
 
--- Disable nearby streams and teletransporters during the jump, allowing to jump over them.
+--[[ Disable nearby streams and teletransporters during the jump, allowing to jump over them.
 function item:disable_nearby_entities()
   local map = item:get_map()
   local hero = map:get_hero()
@@ -294,4 +294,4 @@ end
 local stream_meta = sol.main.get_metatable("stream")
 stream_meta:register_event("on_created", entity_to_hide_on_created)
 local teletransporter_meta = sol.main.get_metatable("teletransporter")
-teletransporter_meta:register_event("on_created", entity_to_hide_on_created)
+teletransporter_meta:register_event("on_created", entity_to_hide_on_created)--]]

@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_8",
   floor = 0,
-  tileset = "Absolute Dungeon 20",
+  tileset = "absolute_dungeon_20",
   music = "dungeons/08_jabu",
 }
 
@@ -8132,7 +8132,7 @@ chest{
   layer = 0,
   x = 1048,
   y = 621,
-  sprite = "entities/Chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_LttP",
 }
 
 block{
@@ -8171,7 +8171,7 @@ door{
   x = 920,
   y = 840,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d3_normal",
+  sprite = "entities/doors/Inside/door_d3_normal",
   savegame_variable = "dungeon_8_0f_door_21_22",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_8_big_key",
@@ -8184,7 +8184,7 @@ door{
   x = 984,
   y = 840,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d3_normal",
+  sprite = "entities/doors/Inside/door_d3_normal",
   savegame_variable = "dungeon_8_0f_door_21_22",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_8_big_key",
