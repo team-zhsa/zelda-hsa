@@ -54,11 +54,11 @@ local black_surface = sol.surface.create()
 
 
 -- Map surface
-local map_surface = sol.surface.create("menus/map/pause_hyrule_world_map.png")
+local map_surface = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
 local scale_delta = 0.05
 local scale_max = 8
 local scale_timer = 100
-local scale_x, scale_y = 0.5, 0.5
+local scale_x, scale_y = 0.4, 0.4
 		--[[else
 			phase = phase + 1
 			-- End of phase 1, zoom in the map.
@@ -82,12 +82,16 @@ function next_fresco()
 			print(fresco_index)
 			game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), next_fresco)
 		elseif fresco_index == 7 then
-			phase_2()
+			black_surface:fade_in(40, function()
+				phase_2()
+			end)
 		end
 	end
 end
 
 function map:on_draw(dst_surface)
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
 
 	if phase == 1 then
 		-- Scrolling backgrounds.
@@ -110,43 +114,57 @@ function map:on_draw(dst_surface)
 		frescos_background:draw_region(
 			0, 48 * (fresco_index - 1),
 			168, 48,
-			dst_surface, (dst_surface:get_size()/2) - 84, 48)
+			dst_surface, center_x - 84, 48)
 
 	elseif phase == 2 then
-
-		map_surface:draw(dst_surface)
+		map_surface:draw(dst_surface, center_x - 500, center_y - 400)
+		black_surface:draw(dst_surface)
 	end
 end
 
 function phase_2()
+	-- Map zoom.
 	phase = 2
-
-	black_surface:fade_in(40, function()
-		sol.timer.start(map, 500, function()
-		bg2_img:clear()
-		bg1_img:clear()
-		dialog_background_img:clear()
-		frescos_background:clear()
-		map_surface:set_transformation_origin(120, 90)
-
-			black_surface:fade_out(40, function()
-				sol.timer.start(game, 40, function()
-					scale_x = scale_y + scale_delta
-					scale_y = scale_y + scale_delta
-					map_surface:set_scale(scale_x, scale_y)
-					return scale_x < scale_max
-				end)
-				sol.timer.start(map, 6000, function()
-					black_surface:fade_in(25, function()
-						map_surface:clear()
-						black_surface:fade_out(25, function()
-							next_fresco()
-						end)
-					end)
+	sol.timer.start(map, 500, function()
+	map_surface:set_transformation_origin(512, 380)
+	map_surface:set_opacity(255)
+		black_surface:fade_out(40, function()
+			sol.timer.start(game, 40, function()
+				scale_x = scale_y + scale_delta
+				scale_y = scale_y + scale_delta
+				map_surface:set_scale(scale_x, scale_y)
+				return scale_x < scale_max
+			end)
+			sol.timer.start(map, 6000, function()
+				black_surface:fade_in(25, function()
+					map_surface:clear()
+					phase_3()
 				end)
 			end)
 		end)
 	end)
+end
+
+function phase_3()
+	-- Wizard going towards Aghanim.
+	phase = 3
+	map:get_camera():start_tracking(wizard)
+	aghanim:get_sprite():set_opacity(0)
+	black_surface:fade_out(25, function()
+		map:set_cinematic_mode(true, options)
+		local wizard_movement = sol.movement.create("path")
+		wizard_movement:set_speed(32)
+		wizard_movement:set_ignore_obstacles(true)
+		wizard_movement:set_path{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
+		wizard_movement:start(wizard, function()
+			phase_4()
+		end)
+	end)
+end
+
+function phase_4()
+	-- Wizard invoking Aghanim.
+	--sound
 end
 
 function map:on_started()
@@ -155,10 +173,12 @@ function map:on_started()
 	effect_manager:set_effect(game, nil)
 	game:set_value("mode", "snes")
 	game:get_dialog_box():set_style("empty")
-	game:get_dialog_box():set_position({ x = 32, y = 144})
+	--game:get_dialog_box():set_position(32, 116)
 	sol.audio.play_music("cutscenes/cutscene_introduction")
 	black_surface:fill_color({ 0, 0, 0 })
-	--black_surface:set_opacity(0)
+	black_surface:set_opacity(0)
+	map_surface:set_opacity(0)
+	map_surface:set_scale(scale_x, scale_y)
 	next_fresco()
 end
 
