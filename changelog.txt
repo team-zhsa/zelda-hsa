@@ -346,6 +346,7 @@ Alpha 1.16.2 (23/04/23) "Mackerel Update":
 	ADD: Added treasure items.
 	ADD: Added coloured keys to dungeon informations (#127).
 	ADD: Added coloured keys to the dungeon minimap menu (#127).
+	ADD: Added an inventory page for food.
 	CHG: Renamed NPC sprites (#23).
 	CHG: Splitted the pause menu background in multiple rows (#117).
 	CHG: Drawn pause menu title captions separately to add support for translations (#118).
@@ -368,11 +369,15 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Rewrote the game intro dialogues (#8).
 	CHG: Changed chicken hit values.
 	CHG: Renamed dungeon tilesets (#133).
+	CHG: Remade the introduction cinematic slides (#86).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
 	FIX: Fixed Hyrule's Castle side doors opening sensors missing (#139).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
+	TDO: Fix NPC sprites being at the wrong place in the sprite image (#135).
+	TDO: Fix an "invalid destination side" crash when entering the Hyrule Town library (#136).
+	TDO: Fix missing sound file 'sounds/message_end.ogg' (#137).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
@@ -414,7 +419,6 @@ Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Rename owl entities according to main quest steps (#19).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
-	TDO: Make the introduction cinematic slides (#86).
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).

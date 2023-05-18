@@ -1137,7 +1137,6 @@ sprite{ id = "maps/room_layout", description = "Room layout for dungeons" }
 sprite{ id = "maps/screen_size", description = "Screen size" }
 sprite{ id = "maps/underwater", description = "Underwater" }
 sprite{ id = "menus/arrow", description = "Arrow" }
-sprite{ id = "menus/dialog_cursor", description = "Dialog cursor" }
 sprite{ id = "menus/dungeon_maps/map1", description = "Dungeon 1 minimap" }
 sprite{ id = "menus/dungeon_maps/map_1", description = "Map 1" }
 sprite{ id = "menus/dungeon_maps/map_2", description = "Map 2 " }
@@ -1145,7 +1144,7 @@ sprite{ id = "menus/dungeon_maps/map_3", description = "Map 3" }
 sprite{ id = "menus/map/hero_head", description = "Hero head" }
 sprite{ id = "menus/map/hero_point", description = "Hero point" }
 sprite{ id = "menus/map/map_waypoint", description = "Map waypoint cross" }
-sprite{ id = "menus/options_cursor", description = "Options cursor" }
+sprite{ id = "menus/map/pause_hyrule_world_map", description = "World map sprite (for use in the prologue)" }
 sprite{ id = "menus/parchment/parchment_boss", description = "Parchment to display boss name" }
 sprite{ id = "menus/parchment/parchment_default", description = "Parchment to display info" }
 sprite{ id = "menus/parchment/parchment_shadow", description = "Parchment shadow" }
@@ -1158,10 +1157,6 @@ sprite{ id = "menus/pause/map/world/world_map_cursor", description = "World map 
 sprite{ id = "menus/pause/map/world/world_map_hero", description = "World map hero head" }
 sprite{ id = "menus/pause/options/command_cursor", description = "Command cursor" }
 sprite{ id = "menus/pause/options/cursor", description = "Options cursor" }
-sprite{ id = "menus/pause_cursor", description = "Pause cursor" }
-sprite{ id = "menus/pause_menu_options_command_cursor", description = "Waiting for command input cursor" }
-sprite{ id = "menus/pause_menu_options_cursor", description = "Options menu cursor" }
-sprite{ id = "menus/pause_save_dialog", description = "Pause save dialog" }
 sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
@@ -1534,6 +1529,7 @@ sound{ id = "danger", description = "Danger" }
 sound{ id = "door_closed", description = "Closed Door" }
 sound{ id = "door_open", description = "Open Door" }
 sound{ id = "door_unlocked", description = "Unlocked Door" }
+sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
 sound{ id = "enemies/gold_skulltula_token_spawn", description = "Gold Skulltula Token sapwn" }
