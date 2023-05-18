@@ -270,8 +270,6 @@ function map:set_joypad_commands()
 	game:set_command_joypad_binding("down", "hat 0 down")
 end
 
-
-
 function map:on_finished()
 	game:set_hud_enabled(true)
 end

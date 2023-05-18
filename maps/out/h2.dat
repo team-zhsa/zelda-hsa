@@ -30123,3 +30123,19 @@ sensor{
   height = 16,
 }
 
+npc{
+  name = "npc_soldier_3",
+  layer = 1,
+  x = 80,
+  y = 629,
+  properties = {
+    {
+      key = "face_player",
+      value = "true",
+    },
+  },
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/soldier",
+}
+

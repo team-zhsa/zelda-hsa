@@ -363,6 +363,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added dialogues.
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
 	ADD: Added sea maps (#132).
+	ADD: Added new cutscenes for the prologue (#86).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -374,9 +375,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
 	FIX: Fixed Hyrule's Castle side doors opening sensors missing (#139).
+	FIX: Fixed NPC sprites being at the wrong place in the sprite image (#135).
+	FIX: Fixed an "invalid destination side" crash when entering the Hyrule Town library (#136).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
-	TDO: Fix NPC sprites being at the wrong place in the sprite image (#135).
-	TDO: Fix an "invalid destination side" crash when entering the Hyrule Town library (#136).
 	TDO: Fix missing sound file 'sounds/message_end.ogg' (#137).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
