@@ -2171,8 +2171,8 @@ dialog{
   id = "maps.caves.hyrule_town.lamp_cave.wizard_magic_bar",
   question = "1",
   text = [[
-Bonjour...$0
-Je vois que tu m'as trouvé...$0
+Bonjour...
+Je vois que tu m'as trouvé...
 Pour seulement 50 rubis, je
 peux te laisser passer et
 t'apprendre les secrets de
@@ -6257,10 +6257,12 @@ facilement.
 }
 
 dialog{
-  id = "maps.out.zora_forest.to_village",
+  id = "maps.out.zora_forest.sign_1",
+  skip = "all",
   text = [[
-
-Ouest : Village Gerudo
+Est : Village Zora
+Sud : Village Piaf
+Ouest : Forge
 ]],
 }
 
