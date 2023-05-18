@@ -199,7 +199,8 @@ local function initialise_dialog_box_features(game)
 		local y = top and 32 or (screen_height - 80)
 
 		if self.style == "empty" then
-			y = y + (top and -16 or -16)
+			x = screen_width / 2 - 110
+			y = y + (top and -32 or -32)
 		end
 
 		self.box_dst_position = { x = x, y = y }

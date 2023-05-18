@@ -44,13 +44,20 @@ local frescos_background = sol.surface.create("menus/intro/intro.png")
 local fresco_index = 0  -- Index of the current fresco.
 
 -- Dialog.
-local dialog_background_img = sol.surface.create(256, 176)
-dialog_background_img:set_xy(32, 32)
-dialog_background_img:fill_color({255, 255, 128, 32})
+local dialog_background_top = sol.surface.create(224, 20)
+dialog_background_top:fill_color({255, 255, 128, 32})
+
+local dialog_background_left = sol.surface.create(36, 48)
+dialog_background_left:fill_color({255, 255, 128, 32})
+
+local dialog_background_right = sol.surface.create(20, 48)
+dialog_background_right:fill_color({255, 255, 128, 32})
+
+local dialog_background_bottom = sol.surface.create(224, 76)
+dialog_background_bottom:fill_color({255, 255, 128, 32})
 
 -- Fade to black
 local black_surface = sol.surface.create()
-
 
 -- Map surface
 local map_surface = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
@@ -58,39 +65,12 @@ local scale_delta = 0.05
 local scale_max = 8
 local scale_timer = 100
 local scale_x, scale_y = 0.4, 0.4
-		--[[else
-			phase = phase + 1
-			-- End of phase 1, zoom in the map.
-			phase_2()
-			if phase == 5 then
-			-- Restore usual settings.
-			game:get_dialog_box():set_style("empty")
-			game:get_dialog_box():set_position("bottom")
-			hero:unfreeze()
-
-			-- Go to the first map.
-			hero:teleport("inside/castle/rooms", "start_game")
-			end--]]
-
-function next_fresco()
-	fresco_index = fresco_index + 1
-	if phase == 1 then
-		if fresco_index < 7 then
-			game:get_dialog_box():set_style("empty")
-			game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), next_fresco)
-		elseif fresco_index == 7 then
-			black_surface:fade_in(40, function()
-				phase_2()
-			end)
-		end
-	end
-end
-
+			
 function map:on_draw(dst_surface)
 	local width, height = dst_surface:get_size()
 	local center_x, center_y = width / 2, height / 2
 	
-	if phase == 1 then
+	if phase == 1 or phase == 6 then
 		-- Scrolling backgrounds.
 		for y = -bg2_height, map_height + bg2_height, bg2_height do
 			for x = -bg2_width, map_width + bg2_width, bg2_width do
@@ -104,20 +84,48 @@ function map:on_draw(dst_surface)
 			end
 		end
 		
-		-- Dialog box background.
-		dialog_background_img:draw(dst_surface)
+	-- Dialog box background.
+	dialog_background_top:set_xy(center_x - 112, center_y - 72)
+	dialog_background_top:draw(dst_surface)
+
+	dialog_background_left:set_xy(center_x - 112, center_y - 52)
+	dialog_background_left:draw(dst_surface)
+
+	dialog_background_right:set_xy(center_x + 92, center_y - 52)
+	dialog_background_right:draw(dst_surface)
+
+	dialog_background_bottom:set_xy(center_x - 112, center_y - 4)
+	dialog_background_bottom:draw(dst_surface)
+
+	-- Frescos background.
+	frescos_background:draw_region(
+		0, 48 * (fresco_index - 1),
+		168, 48,
+		dst_surface, center_x - 84, 64)
 		
-		-- Frescos background.
-		frescos_background:draw_region(
-			0, 48 * (fresco_index - 1),
-			168, 48,
-			dst_surface, center_x - 84, 48)
-			
-			
-		elseif phase == 2 then
-			map_surface:draw(dst_surface, center_x - 500, center_y - 400)
-		end
-		black_surface:draw(dst_surface)
+	elseif phase == 2 then
+		map_surface:draw(dst_surface, center_x - 500, center_y - 400)
+	end
+	black_surface:draw(dst_surface)
+end
+
+function phase_1()
+	-- Frescos (part 1).
+	phase = 1
+	fresco_index = fresco_index + 1
+	if fresco_index < 7 then
+		frescos_background:fade_in(20)
+		game:get_dialog_box():set_style("empty")
+		game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), function()
+			frescos_background:fade_out(20, function()
+				phase_1()
+			end)
+		end)
+	elseif fresco_index == 7 then
+		black_surface:fade_in(40, function()
+			phase_2()
+		end)
+	end
 end
 
 function phase_2()
@@ -134,7 +142,7 @@ function phase_2()
 				return scale_x < scale_max
 			end)
 			sol.timer.start(map, 6000, function()
-				black_surface:fade_in(25, function()
+				black_surface:fade_in(40, function()
 					map_surface:clear()
 					phase_3()
 				end)
@@ -148,7 +156,7 @@ function phase_3()
 	phase = 3
 	map:get_camera():start_tracking(wizard)
 	aghanim:get_sprite():set_opacity(0)
-	black_surface:fade_out(25, function()
+	black_surface:fade_out(40, function()
 		map:set_cinematic_mode(true, options)
 		local wizard_movement = sol.movement.create("path")
 		wizard_movement:set_speed(32)
@@ -176,7 +184,7 @@ function phase_4()
 						game:set_hud_enabled(false)
 						game:set_pause_allowed(false)
 						hero:freeze()
-						black_surface:fade_in(25, function()
+						black_surface:fade_in(40, function()
 							map:get_camera():start_manual()
 							phase_5()
 						end)
@@ -191,27 +199,59 @@ function phase_5()
 	-- Earthquake
 	phase = 5
 	map:get_camera():set_position(0, 240)
-	black_surface:fade_out(25, function()
-		map:get_camera():dynamic_shake({count = 500, amplitude = 3, speed = 70, entity=hero})
-
+	black_surface:fade_out(40, function()
+		sol.audio.play_sound("enemies/_miniboss/phantom_ganon/laugh")
+		map:get_camera():dynamic_shake({count = 500, amplitude = 2, speed = 50, entity=world_map}, function()
+			game:start_dialog("scripts.menus.introduction.intro_8", function()
+				black_surface:fade_in(40, function()
+					fresco_index = 8
+					phase_6()
+				end)
+			end)
+		end)
 	end)
 end
 
+function phase_6()
+	-- Frescos (part 2).
+	phase = 6
+	map:get_camera():set_position(0, 0)
+	if black_surface:get_opacity() == 255 then black_surface:fade_out(40) end
+	fresco_index = fresco_index + 1
+	if fresco_index < 11 then
+		frescos_background:fade_in(20)
+		game:get_dialog_box():set_style("empty")
+		game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), function()
+			frescos_background:fade_out(20, function()
+				phase_6()
+			end)
+		end)
+	elseif fresco_index == 11 then
+		black_surface:fade_in(40, function()
+			-- Restore usual settings.
+			game:get_dialog_box():set_style("box")
+			game:get_dialog_box():set_position("bottom")
+			hero:unfreeze()
+
+			-- Go to the first map.
+			hero:teleport("inside/castle/rooms", "start_game")
+		end)
+	end
+end
+
 function map:on_started()
-	phase = 1
 	map:set_joypad_commands()
 	effect_manager:set_effect(game, nil)
 	game:set_value("mode", "snes")
 	game:get_dialog_box():set_style("empty")
 	map:get_camera():set_position(0, 0)
-	game:get_dialog_box():set_position(32, 116)
 	sol.audio.play_music("cutscenes/cutscene_introduction")
 	black_surface:fill_color({ 0, 0, 0 })
 	black_surface:set_opacity(0)
 	map_surface:set_opacity(0)
 	map_surface:set_scale(scale_x, scale_y)
 	game:set_hud_enabled(false)
-	next_fresco()
+	phase_1()
 end
 
 function map:on_opening_transition_finished()

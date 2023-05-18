@@ -372,6 +372,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
+	TDO: Fix NPC sprites being at the wrong place in the sprite image (#135).
+	TDO: Fix an "invalid destination side" crash when entering the Hyrule Town library (#136).
+	TDO: Fix missing sound file 'sounds/message_end.ogg' (#137).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
