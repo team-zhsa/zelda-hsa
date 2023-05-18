@@ -1,171 +1,24 @@
-properties{
-  x = 14080,
-  y = 10080,
-  width = 1280,
-  height = 1440,
-  min_layer = 0,
-  max_layer = 2,
-  world = "outside_world",
-  tileset = "outside_main",
-  music = "outside/sea",
-}
+-- Lua script of map out/l8.
+-- This script is executed every time the hero enters this map.
 
-tile{
-  layer = 0,
-  x = 0,
-  y = 0,
-  width = 1280,
-  height = 1440,
-  pattern = "112",
-}
+-- Feel free to modify the code below.
+-- You can add more events and remove the ones you don't need.
 
-tile{
-  layer = 0,
-  x = 696,
-  y = 592,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
+-- See the Solarus Lua API documentation:
+-- http://www.solarus-games.org/doc/latest
 
-tile{
-  layer = 0,
-  x = 600,
-  y = 928,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
+local map = ...
+local game = map:get_game()
 
-tile{
-  layer = 0,
-  x = 352,
-  y = 536,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
+-- Event called at initialization time, as soon as this map is loaded.
+map:register_event("on_started", function()
+  -- You can initialise the movement and sprites of various
+  
+	map:set_digging_allowed(true)
+end)
 
-tile{
-  layer = 0,
-  x = 648,
-  y = 248,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
+-- Event called after the opening transition effect of the map,
+-- that is, when the player takes control of the hero.
+function map:on_opening_transition_finished()
 
-tile{
-  layer = 0,
-  x = 456,
-  y = 920,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 544,
-  y = 1056,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 552,
-  y = 760,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 304,
-  width = 8,
-  height = 8,
-  pattern = "915",
-}
-
-tile{
-  layer = 0,
-  x = 320,
-  y = 352,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 928,
-  y = 456,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 824,
-  y = 816,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 216,
-  y = 880,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 1240,
-  width = 16,
-  height = 8,
-  pattern = "914",
-}
-
-teletransporter{
-  layer = 0,
-  x = -16,
-  y = 0,
-  width = 16,
-  height = 1440,
-  transition = "scrolling",
-  destination_map = "out/k8",
-  destination = "_side",
-}
-
-teletransporter{
-  layer = 0,
-  x = 0,
-  y = 1440,
-  width = 1280,
-  height = 16,
-  transition = "scrolling",
-  destination_map = "out/l9",
-  destination = "_side",
-}
-
-teletransporter{
-  layer = 0,
-  x = 0,
-  y = -16,
-  width = 1280,
-  height = 16,
-  transition = "scrolling",
-  destination_map = "out/l7",
-  destination = "_side",
-}
-
+end
