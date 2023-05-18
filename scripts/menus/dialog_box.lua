@@ -77,8 +77,6 @@ local function initialise_dialog_box_features(game)
     }
   end
 
-
-
   dialog_box.dialog_surface = sol.surface.create(sol.video.get_quest_size())
   dialog_box.box_img = sol.surface.create("hud/dialog_box_new.png")
   dialog_box.icons_img = sol.surface.create("hud/dialog_icons.png")
@@ -201,7 +199,7 @@ local function initialise_dialog_box_features(game)
 		local y = top and 32 or (screen_height - 80)
 
 		if self.style == "empty" then
-		--	y = y + (top and -24 or 24)
+			y = y + (top and -16 or -16)
 		end
 
 		self.box_dst_position = { x = x, y = y }
