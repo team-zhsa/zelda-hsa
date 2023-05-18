@@ -6,7 +6,6 @@ local fsa = require('scripts/maps/fsa_effect')
 
 -- Intro.
 local map_width, map_height = map:get_size()
-game:set_hud_enabled(false)
 local phase
 
 -- Scrolling backgrounds.
@@ -78,8 +77,6 @@ function next_fresco()
 	if phase == 1 then
 		if fresco_index < 7 then
 			game:get_dialog_box():set_style("empty")
-			print("Phase: "..phase)
-			print(fresco_index)
 			game:start_dialog("scripts.menus.introduction.intro_" .. fresco_index, game:get_player_name(), next_fresco)
 		elseif fresco_index == 7 then
 			black_surface:fade_in(40, function()
@@ -92,7 +89,7 @@ end
 function map:on_draw(dst_surface)
 	local width, height = dst_surface:get_size()
 	local center_x, center_y = width / 2, height / 2
-
+	
 	if phase == 1 then
 		-- Scrolling backgrounds.
 		for y = -bg2_height, map_height + bg2_height, bg2_height do
@@ -106,20 +103,21 @@ function map:on_draw(dst_surface)
 				bg1_img:draw(dst_surface, bg1_xy.x + x, bg1_xy.y + y)
 			end
 		end
-
+		
 		-- Dialog box background.
 		dialog_background_img:draw(dst_surface)
-
+		
 		-- Frescos background.
 		frescos_background:draw_region(
 			0, 48 * (fresco_index - 1),
 			168, 48,
 			dst_surface, center_x - 84, 48)
-
-	elseif phase == 2 then
-		map_surface:draw(dst_surface, center_x - 500, center_y - 400)
+			
+			
+		elseif phase == 2 then
+			map_surface:draw(dst_surface, center_x - 500, center_y - 400)
+		end
 		black_surface:draw(dst_surface)
-	end
 end
 
 function phase_2()
@@ -155,7 +153,7 @@ function phase_3()
 		local wizard_movement = sol.movement.create("path")
 		wizard_movement:set_speed(32)
 		wizard_movement:set_ignore_obstacles(true)
-		wizard_movement:set_path{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
+		wizard_movement:set_path{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
 		wizard_movement:start(wizard, function()
 			phase_4()
 		end)
@@ -164,7 +162,39 @@ end
 
 function phase_4()
 	-- Wizard invoking Aghanim.
-	--sound
+	phase = 4
+	sol.timer.start(map, 1000, function()
+		wizard:get_sprite():set_animation("invoking")
+		sol.timer.start(map, 500, function()
+			wizard:get_sprite():set_animation("stopped")
+			sol.audio.play_sound("boss_charge")
+			aghanim:get_sprite():fade_in(40, function()
+				sol.audio.play_sound("warp")
+				game:start_dialog("scripts.menus.introduction.intro_7", function()
+					sol.timer.start(map, 100, function()
+						map:set_cinematic_mode(false, options)
+						game:set_hud_enabled(false)
+						game:set_pause_allowed(false)
+						hero:freeze()
+						black_surface:fade_in(25, function()
+							map:get_camera():start_manual()
+							phase_5()
+						end)
+					end)
+				end)
+			end)
+		end)
+	end)
+end
+
+function phase_5()
+	-- Earthquake
+	phase = 5
+	map:get_camera():set_position(0, 240)
+	black_surface:fade_out(25, function()
+		map:get_camera():dynamic_shake({count = 500, amplitude = 3, speed = 70, entity=hero})
+
+	end)
 end
 
 function map:on_started()
@@ -173,12 +203,14 @@ function map:on_started()
 	effect_manager:set_effect(game, nil)
 	game:set_value("mode", "snes")
 	game:get_dialog_box():set_style("empty")
-	--game:get_dialog_box():set_position(32, 116)
+	map:get_camera():set_position(0, 0)
+	game:get_dialog_box():set_position(32, 116)
 	sol.audio.play_music("cutscenes/cutscene_introduction")
 	black_surface:fill_color({ 0, 0, 0 })
 	black_surface:set_opacity(0)
 	map_surface:set_opacity(0)
 	map_surface:set_scale(scale_x, scale_y)
+	game:set_hud_enabled(false)
 	next_fresco()
 end
 
