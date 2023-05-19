@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_6",
   floor = -1,
-  tileset = "Absolute Dungeon 19",
+  tileset = "absolute_dungeon_19",
   music = "dungeons/06_water",
 }
 
@@ -9441,7 +9441,7 @@ door{
   x = 440,
   y = 1072,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_6_b1_door_24_30",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_6_big_key",
@@ -9453,7 +9453,7 @@ door{
   x = 440,
   y = 1136,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_6_b1_door_24_30",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_6_big_key",

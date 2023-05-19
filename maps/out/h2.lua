@@ -21,10 +21,12 @@ end)
 map:register_event("on_started", function()
   game:show_map_name("east_castle")
 	map:set_digging_allowed(true)
+	if game:is_step_done("sword_obtained") then
+		npc_soldier_3:set_enabled(false)
+	end
 	if game:is_step_done("sahasrahla_lost_woods_map") then
-		for npc in map:get_entities("npc_soldier_") do
-			npc:set_enabled(false)
-		end
+		npc_soldier_1:set_enabled(false)
+		npc_soldier_2:set_enabled(false)
 	end
 end)
 

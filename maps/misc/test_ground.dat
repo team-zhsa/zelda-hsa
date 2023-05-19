@@ -5,7 +5,7 @@ properties{
   height = 480,
   min_layer = 0,
   max_layer = 2,
-  tileset = "Absolute Dungeon 01",
+  tileset = "absolute_dungeon_01",
 }
 
 tile{
@@ -439,7 +439,7 @@ custom_entity{
   width = 32,
   height = 32,
   direction = 0,
-  sprite = "entities/Rockstacks/rockstack_bg1",
+  sprite = "entities/rockstacks/rockstack_bg1",
   model = "stone_pile",
 }
 
@@ -465,7 +465,7 @@ destination{
   x = 536,
   y = 365,
   direction = 1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 teletransporter{
@@ -475,7 +475,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "inside/castle/0f",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "warp",
 }
 
@@ -488,7 +488,7 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/1/0f",
   destination = "from_below",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 
@@ -498,7 +498,7 @@ switch{
   x = 0,
   y = 256,
   subtype = "walkable",
-  sprite = "entities/Switches/switch",
+  sprite = "entities/switches/switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -517,7 +517,7 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/9/0f",
   destination = "destination",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
 }
 
 switch{
@@ -525,7 +525,7 @@ switch{
   x = 208,
   y = 80,
   subtype = "solid",
-  sprite = "entities/Switches/solid_switch",
+  sprite = "entities/switches/solid_switch",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -547,7 +547,7 @@ teletransporter{
   height = 16,
   destination_map = "out/a2",
   destination = "from_fortune",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 
@@ -618,7 +618,7 @@ teletransporter{
   height = 16,
   destination_map = "misc/test_arena",
   destination = "destination",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "world_warp",
 }
 
@@ -630,7 +630,7 @@ teletransporter{
   height = 16,
   destination_map = "out/b3",
   destination = "destination_maze",
-  sprite = "entities/Warps/teletransporter",
+  sprite = "entities/warps/teletransporter",
   sound = "world_warp",
 }
 
@@ -647,7 +647,7 @@ stream{
   x = 248,
   y = 189,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt4",
+  sprite = "entities/streams/conveyor_belt4",
 }
 
 stream{
@@ -655,7 +655,7 @@ stream{
   x = 216,
   y = 189,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt2",
+  sprite = "entities/streams/conveyor_belt2",
   speed = 25,
 }
 
@@ -664,7 +664,7 @@ stream{
   x = 232,
   y = 189,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt3",
+  sprite = "entities/streams/conveyor_belt3",
   speed = 50,
 }
 
@@ -673,7 +673,7 @@ stream{
   x = 264,
   y = 189,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 100,
 }
 
@@ -682,7 +682,7 @@ stream{
   x = 248,
   y = 173,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt4",
+  sprite = "entities/streams/conveyor_belt4",
 }
 
 stream{
@@ -690,7 +690,7 @@ stream{
   x = 248,
   y = 157,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt4",
+  sprite = "entities/streams/conveyor_belt4",
 }
 
 stream{
@@ -698,7 +698,7 @@ stream{
   x = 248,
   y = 141,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt4",
+  sprite = "entities/streams/conveyor_belt4",
 }
 
 stream{
@@ -706,7 +706,7 @@ stream{
   x = 264,
   y = 205,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 100,
 }
 
@@ -715,7 +715,7 @@ stream{
   x = 264,
   y = 221,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 100,
 }
 
@@ -724,7 +724,7 @@ stream{
   x = 264,
   y = 237,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt1",
+  sprite = "entities/streams/conveyor_belt1",
   speed = 100,
 }
 
@@ -733,7 +733,7 @@ stream{
   x = 232,
   y = 205,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt3",
+  sprite = "entities/streams/conveyor_belt3",
   speed = 50,
 }
 
@@ -742,7 +742,7 @@ stream{
   x = 232,
   y = 221,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt3",
+  sprite = "entities/streams/conveyor_belt3",
   speed = 50,
 }
 
@@ -751,7 +751,7 @@ stream{
   x = 232,
   y = 237,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt3",
+  sprite = "entities/streams/conveyor_belt3",
   speed = 50,
 }
 
@@ -760,7 +760,7 @@ stream{
   x = 216,
   y = 173,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt2",
+  sprite = "entities/streams/conveyor_belt2",
   speed = 25,
 }
 
@@ -769,7 +769,7 @@ stream{
   x = 216,
   y = 157,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt2",
+  sprite = "entities/streams/conveyor_belt2",
   speed = 25,
 }
 
@@ -778,7 +778,7 @@ stream{
   x = 216,
   y = 141,
   direction = 6,
-  sprite = "entities/Streams/conveyor_belt2",
+  sprite = "entities/streams/conveyor_belt2",
   speed = 25,
 }
 
@@ -1034,7 +1034,7 @@ custom_entity{
   width = 32,
   height = 32,
   direction = 0,
-  sprite = "entities/Rockstacks/rockstack_light01",
+  sprite = "entities/rockstacks/rockstack_light01",
   model = "stone_pile",
 }
 
@@ -1052,7 +1052,7 @@ destination{
   x = 24,
   y = 173,
   direction = 1,
-  sprite = "entities/Warps/destination",
+  sprite = "entities/warps/destination",
 }
 
 chest{
@@ -1080,7 +1080,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "inside/caves/gerudo_valley/north_east_desert_cave_1f",
-  sprite = "entities/Warps/teletransporter2",
+  sprite = "entities/warps/teletransporter2",
   sound = "warp",
 }
 
@@ -1275,7 +1275,7 @@ destructible{
   x = 120,
   y = 253,
   treasure_name = "random_central",
-  sprite = "entities/Destructables/bomb_flower",
+  sprite = "entities/destructibles/bomb_flower",
   can_explode = true,
   can_regenerate = true,
 }
@@ -1346,7 +1346,7 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Blocks/block-dungeon1",
+  sprite = "entities/blocks/block-dungeon1",
   model = "block",
 }
 
@@ -1577,7 +1577,7 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Collapsing Tiles/collapse_tile1",
+  sprite = "entities/collapsing_tiles/collapse_tile1",
 }
 
 custom_entity{
@@ -1588,7 +1588,7 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Collapsing Tiles/collapse_tile1",
+  sprite = "entities/collapsing_tiles/collapse_tile1",
 }
 
 custom_entity{
@@ -1599,7 +1599,7 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Collapsing Tiles/collapse_tile1",
+  sprite = "entities/collapsing_tiles/collapse_tile1",
 }
 
 custom_entity{
@@ -1610,7 +1610,7 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Collapsing Tiles/collapse_tile1",
+  sprite = "entities/collapsing_tiles/collapse_tile1",
 }
 
 custom_entity{
@@ -1621,7 +1621,37 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
-  sprite = "entities/Collapsing Tiles/collapse_tile1",
+  sprite = "entities/collapsing_tiles/collapse_tile1",
+}
+
+stream{
+  name = "water_stream_17_1_1",
+  layer = 0,
+  x = 504,
+  y = 381,
+  direction = 2,
+  sprite = "entities/streams/conveyor_belt1",
+  speed = 88,
+}
+
+stream{
+  name = "water_stream_17_1_2",
+  layer = 0,
+  x = 520,
+  y = 381,
+  direction = 2,
+  sprite = "entities/streams/conveyor_belt1",
+  speed = 88,
+}
+
+stream{
+  name = "stream",
+  layer = 0,
+  x = 512,
+  y = 429,
+  direction = 2,
+  sprite = "entities/streams/water_stream",
+  speed = 88,
 }
 
 tile{

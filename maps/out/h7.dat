@@ -8652,6 +8652,17 @@ jumper{
   jump_length = 56,
 }
 
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h8",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 840,

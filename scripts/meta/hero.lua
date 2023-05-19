@@ -29,7 +29,6 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
     end
     
-
     local map = hero:get_map()
     for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
@@ -150,6 +149,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       local ground = hero:get_ground_below()
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
+        sol.audio.play_sound("objects/heart/heart")
       end
     end
   end)
@@ -367,7 +367,7 @@ game_meta:register_event("on_map_changed", function(game, map)
       set_sprite_offset(hero, 0,0)
 --      hero:get_sprite("shadow"):set_animation("big")
       if not hero:get_sprite("shadow_override") then
-        local s=hero:create_sprite("entities/Shadows/shadow", "shadow_override")
+        local s=hero:create_sprite("entities/shadows/shadow", "shadow_override")
         hero:bring_sprite_to_back(s)
       end
     -- Todo Add sprite if charm exist

@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_2",
   floor = 1,
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
   music = "dungeons/02_forest",
 }
 
@@ -6797,7 +6797,7 @@ door{
   x = 792,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_2_1f_door_3_8",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -6875,7 +6875,7 @@ door{
   x = 872,
   y = 504,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b1_door_8_13",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -6888,7 +6888,7 @@ door{
   x = 872,
   y = 440,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_small_key",
+  sprite = "entities/doors/inside/door_d1_small_key",
   savegame_variable = "dungeon_2_b1_door_8_13",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_small_keys",
@@ -6901,7 +6901,7 @@ door{
   x = 792,
   y = 264,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_2_1f_door_3_8",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -7021,7 +7021,7 @@ door{
   x = 504,
   y = 920,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_1f_door_12_17",
   opening_condition_consumed = true,
 }
@@ -7032,7 +7032,7 @@ door{
   x = 504,
   y = 984,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_1f_door_12_17",
   opening_condition_consumed = true,
 }
@@ -7168,7 +7168,7 @@ destructible{
   x = 1032,
   y = 1021,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7178,7 +7178,7 @@ destructible{
   x = 1048,
   y = 1021,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7188,7 +7188,7 @@ destructible{
   x = 1064,
   y = 1021,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7198,7 +7198,7 @@ destructible{
   x = 1064,
   y = 1037,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7208,7 +7208,7 @@ destructible{
   x = 1048,
   y = 1037,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7218,7 +7218,7 @@ destructible{
   x = 1032,
   y = 1037,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7228,7 +7228,7 @@ destructible{
   x = 1224,
   y = 1021,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7238,7 +7238,7 @@ destructible{
   x = 1224,
   y = 1037,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7248,7 +7248,7 @@ destructible{
   x = 1208,
   y = 1021,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7258,7 +7258,7 @@ destructible{
   x = 1208,
   y = 1037,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7268,7 +7268,7 @@ destructible{
   x = 1192,
   y = 1021,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7278,7 +7278,7 @@ destructible{
   x = 1192,
   y = 1037,
   treasure_name = "magic_flask",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7289,7 +7289,7 @@ destructible{
   y = 1149,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7300,7 +7300,7 @@ destructible{
   y = 1133,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7311,7 +7311,7 @@ destructible{
   y = 1133,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7322,7 +7322,7 @@ destructible{
   y = 1149,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7333,7 +7333,7 @@ destructible{
   y = 1149,
   treasure_name = "arrow",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7343,7 +7343,7 @@ destructible{
   x = 1192,
   y = 1133,
   treasure_name = "fairy",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   destruction_sound = "objects/e_pot_shatter",
   can_be_cut = true,
 }
@@ -7556,7 +7556,7 @@ door{
   x = 792,
   y = 1224,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_boss_door",
   opening_condition_consumed = true,
 }
@@ -7588,7 +7588,7 @@ door{
   x = 984,
   y = 1256,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_2_1f_door_28_29",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -7600,7 +7600,7 @@ door{
   x = 920,
   y = 1256,
   direction = 0,
-  sprite = "entities/Doors/Inside/door_d1_big_key",
+  sprite = "entities/doors/inside/door_d1_big_key",
   savegame_variable = "dungeon_2_1f_door_28_29",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_big_key",
@@ -7640,7 +7640,7 @@ door{
   x = 792,
   y = 1160,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_boss_door",
   opening_condition_consumed = true,
 }
@@ -7673,7 +7673,7 @@ door{
   x = 792,
   y = 984,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_boss_door",
   opening_condition_consumed = true,
 }
@@ -7684,7 +7684,7 @@ door{
   x = 792,
   y = 920,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_2_boss_door",
   opening_condition_consumed = true,
 }

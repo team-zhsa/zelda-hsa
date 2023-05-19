@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "dungeon_1",
   floor = -1,
-  tileset = "Absolute Dungeon 04",
+  tileset = "absolute_dungeon_04",
   music = "same",
 }
 
@@ -939,7 +939,7 @@ door{
   x = 152,
   y = 200,
   direction = 3,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_1_boss_door",
   opening_condition_consumed = true,
 }
@@ -950,7 +950,7 @@ door{
   x = 152,
   y = 264,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d1_normal",
+  sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_1_boss_door",
   opening_condition_consumed = true,
 }

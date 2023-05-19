@@ -18,11 +18,54 @@ local fall_manager = require("scripts/maps/ceiling_drop_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
 
 
+local text = sol.text_surface.create{
+	text_key = "version",
+	horizontal_alignment = "center",
+	font = "alttp",
+}
+local t = sol.sprite.create("menus/title_triforce")
+t:set_animation("triforce")
+
+local map_surface = sol.surface.create("menus/map/pause_outside_map.png")
+local ds = 0.1
+local smax = 8
+local timer = 100
+local sx, sy 
+local nsx, nsy = 0.5, 0.5
+
+function map:on_draw(dst_surface)
+	map_surface:set_transformation_origin(120, 90)
+	--map_surface:draw(dst_surface)
+	
+
+	text:draw(dst_surface, 160, 220)
+	t:draw(dst_surface, 88, 88)
+end
+
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
+	
+	sol.timer.start(game, 40, function()
+		nsx = nsx + ds
+		nsy = nsy + ds
+		map_surface:set_scale(nsx, nsy)
+		--print(nsx)
+		return nsx < smax
+	end)
+
+	--for stream in map:get_entities("water_stream_17_1_") do
+		stream:set_direction(0)
+		sol.timer.start(1000, function()
+			local direction = (stream:get_direction() + 2) % 8
+			stream:set_direction(direction)
+			print(direction)
+			return true  -- To call the timer again (with the same delay).
+		end)
+	--end
+
 	fall_manager:create("pickable")
 	treasure_manager:disappear_pickable(map, "pendant")
-
+	
 	sol.timer.start(map, 2000, function()
 		local i = 1
 		for entity in map:get_entities("a_") do -- C.E. for animation
@@ -38,14 +81,14 @@ function map:on_started()
 				sprite:set_animation("destroy")
 			end
 			i = i + 1
-		return true
+			return true
 		end)
 	end)
-
---	house_manager:init(map)
---	hero:fall_from_ceiling(320)
+	
+	--	house_manager:init(map)
+	--	hero:fall_from_ceiling(320)
   --map:set_light(0)
---	sol.menu.start(map, credits, true)
+	--	sol.menu.start(map, credits, true)
 end
 
 
@@ -53,16 +96,4 @@ function tp:on_activated()
 	treasure_manager:appear_pickable(map, "pendant")
 end
 
-local text = sol.text_surface.create{
-	text_key = "version",
-	horizontal_alignment = "center",
-	font = "alttp",
-}
-local t = sol.sprite.create("menus/title_triforce")
-t:set_animation("triforce")
-
-function map:on_draw(dst_surface)
-	text:draw(dst_surface, 160, 220)
-	t:draw(dst_surface, 88, 88)
-end
 

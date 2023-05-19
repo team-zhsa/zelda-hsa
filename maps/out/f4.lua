@@ -34,9 +34,6 @@ map:register_event("on_started", function()
   end
 end)
 
-map:register_event("on_draw", function()
-end)
-
 -- Bridge soldiers
 for npc in map:get_entities("npc_soldier_") do
   npc:register_event("on_interaction", function()
@@ -105,6 +102,22 @@ open_house_door_castle_sensor:register_event("on_activated", function()
   if hero:get_direction() == 1 and door_castle_1:is_enabled() and door_castle_2:is_enabled() then
     door_castle_1:set_enabled(false)
     door_castle_2:set_enabled(false)
+    sol.audio.play_sound("door_open")
+  end
+end)
+
+open_house_door_castle_left_sensor:register_event("on_activated", function()
+  if hero:get_direction() == 1 and door_castle_left_1:is_enabled() and door_castle_left_2:is_enabled() then
+    door_castle_left_1:set_enabled(false)
+    door_castle_left_2:set_enabled(false)
+    sol.audio.play_sound("door_open")
+  end
+end)
+
+open_house_door_castle_right_sensor:register_event("on_activated", function()
+  if hero:get_direction() == 1 and door_castle_right_1:is_enabled() and door_castle_right_2:is_enabled() then
+    door_castle_right_1:set_enabled(false)
+    door_castle_right_2:set_enabled(false)
     sol.audio.play_sound("door_open")
   end
 end)

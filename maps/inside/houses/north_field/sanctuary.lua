@@ -12,37 +12,38 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-  --if game:get_value("priest_kidnapped") == true then
-    --sol.audio.play_music("inside/sanctuary_1")
-    --priest:set_enabled(false)
-  --else ---
-    if game:is_step_last("world_map_obtained") then -- Tells the legend.
+  if game:is_step_last("sword_obtained") then
+    sol.audio.play_music("inside/sanctuary_3")
+    priest:set_enabled(true)
+    door:set_enabled(true)
+    dialog:set_enabled(true)
+    npc_agahnim:set_enabled(false)
+  elseif game:is_step_last("world_map_obtained") then -- Tells the legend.
+    sol.audio.play_music("inside/sanctuary_3")
+    priest:set_enabled(true)
+    door:set_enabled(true)
+    dialog:set_enabled(true)
+    npc_agahnim:set_enabled(false)
+  elseif game:is_step_last("priest_kidnapped") then -- Meet Agahnim
+    sol.audio.play_music("inside/sanctuary_3")
+    priest:set_enabled(false)
+    door:set_enabled(false)
+    dialog:set_enabled(false)
+    npc_agahnim:set_enabled(true)
+  else
+    if game:get_time() >= 7 and game:get_time() < 15 then
       sol.audio.play_music("inside/sanctuary_3")
       priest:set_enabled(true)
       door:set_enabled(true)
       dialog:set_enabled(true)
       npc_agahnim:set_enabled(false)
-    elseif game:is_step_last("priest_kidnapped") then -- Meet Agahnim
-      sol.audio.play_music("inside/sanctuary_3")
+    else -- The priest isn't present.
       priest:set_enabled(false)
       door:set_enabled(false)
       dialog:set_enabled(false)
-      npc_agahnim:set_enabled(true)
-    else
-      if game:get_time() >= 7 and game:get_time() < 15 then
-        sol.audio.play_music("inside/sanctuary_3")
-        priest:set_enabled(true)
-        door:set_enabled(true)
-        dialog:set_enabled(true)
-        npc_agahnim:set_enabled(false)
-      else -- The priest isn't present.
-        priest:set_enabled(false)
-        door:set_enabled(false)
-        dialog:set_enabled(false)
-        npc_agahnim:set_enabled(false)
-      end
+      npc_agahnim:set_enabled(false)
     end
-  --end
+  end
   -- You can initialise the movement and sprites of various
   -- map entities here.
 end

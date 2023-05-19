@@ -328,13 +328,13 @@ function map_submenu:draw_world_map(dst_surface)
 
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
-      self.up_arrow_sprite:draw(dst_surface, center_x - 40, center_y - 87)
-      self.up_arrow_sprite:draw(dst_surface, center_x + 24, center_y - 87)
+      self.up_arrow_sprite:draw(dst_surface, center_x - 40, center_y - 85)
+      self.up_arrow_sprite:draw(dst_surface, center_x + 24, center_y - 85)
     end
     
     if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 134 then
-      self.down_arrow_sprite:draw(dst_surface, center_x - 40, center_y + 79)
-      self.down_arrow_sprite:draw(dst_surface, center_x + 24, center_y + 79)
+      self.down_arrow_sprite:draw(dst_surface, center_x - 40, center_y + 77)
+      self.down_arrow_sprite:draw(dst_surface, center_x + 24, center_y + 77)
     end
 
     if self.world_minimap_visible_xy.x > 0 then
