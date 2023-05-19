@@ -22,7 +22,7 @@ end)
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
 	game:show_map_name("north_field")
-	if game:is_step_done("sahasrahla_lost_woods_map") then
+	if game:is_step_done("aghanim_met") then
 		for npc in map:get_entities("npc_soldier_") do
 			npc:set_enabled(false)
 		end
