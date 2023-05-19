@@ -94,25 +94,24 @@ function condition_manager:initialise(game)
     if hero:is_condition_active('electrocution') then
       return
     end
-	local map = hero:get_map()
-  local camera = map:get_camera()
-  local surface = camera:get_surface()
-  hero:get_sprite():set_ignore_suspend(true)
-  game:set_suspended(true)
-  audio_manager:play_sound("enemies/bari/b_state_e")
-  hero:set_animation("electrocuted")
-  effect_model.start_effect(surface, game, 'in', false)
-  local shake_config = {
-    count = 32,
-    amplitude = 4,
-    speed = 180,
-  }
-  camera:shake(shake_config, function()
-    game:set_suspended(false)
-    hero:unfreeze()
-    hero:start_hurt(damage)
-  end)
-
+    local map = hero:get_map()
+    local camera = map:get_camera()
+    local surface = camera:get_surface()
+    hero:get_sprite():set_ignore_suspend(true)
+    game:set_suspended(true)
+    audio_manager:play_sound("enemies/bari/b_state_e")
+    hero:set_animation("electrocuted")
+    effect_model.start_effect(surface, game, 'in', false)
+    local shake_config = {
+      count = 32,
+      amplitude = 4,
+      speed = 180,
+    }
+    camera:shake(shake_config, function()
+      game:set_suspended(false)
+      hero:unfreeze()
+      hero:start_hurt(damage)
+    end)
   end
 
   function hero:start_poison(damage, delay, max_iteration)

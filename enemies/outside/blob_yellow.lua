@@ -38,11 +38,13 @@ local function electrocute()
 	hero:start_electrocution(2)
 end
 
-
 -- The enemy appears: set its properties.
 enemy:register_event("on_created", function(enemy)
-
   enemy:set_life(1)
+end)
+
+enemy:register_event("on_attacking_hero", function(hero, sprite)
+	electrocute()
 end)
 
 -- The enemy appears: set its properties.
@@ -53,7 +55,7 @@ enemy:register_event("on_restarted", function(enemy)
   	boomerang = 1,
   	explosion = 1,
   	sword = electrocute,
-  	thrown_item = "protected",
+  	thrown_item = 1,
   	fire = 1,
   	jump_on = "ignored",
   	hammer = "protected",
