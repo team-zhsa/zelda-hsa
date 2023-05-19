@@ -188,7 +188,7 @@ Alpha 1.9.1 (18/06/21) "Flatfish Update":
 	REM: Removed some enemies.
 
 Alpha 1.10 (27/07/21) "Goldfish Update":
-	ADD: Added TFT effect.
+	ADD: Added the TFT effect.
 	ADD: Added musics.
 	ADD: Added maps.
 	ADD: Merged TQ maps into Hyrule's Adventure.
@@ -226,7 +226,7 @@ Alpha 1.13 (28/05/22) "Jawfish Update":
 	FIX: Fixed Beamos firing at hero even when in another region (#70).
 	FIX: Fixed nil timer error on first part of title screen (#71).
 	FIX: Fixed ocarina setting music volume to 75 after using it (#72).
-	FIX: Fixed upper-right corner of the scrollable minimap.
+	FIX: Fixed the upper-right corner of the scrollable minimap.
 	FIX: Fixed Helmasaur King being stuck by moving it a few tiles down (#73).
 	FIX: Fixed player being able to run with the gamepad without having the Pegasus Boots (#74).
 	FIX: Fixed some inventory icons.
@@ -300,7 +300,7 @@ Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 	ADD: Added maps.
 	ADD: Added a collapsing ground function in the Dodongo's Cavern.
 	CHG: Moved trees in the Hyrule Field (#96).
-	CHG: Renamed soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	CHG: Renamed some soldier enemies in order to make them appear during the game and not at the beginning (#97).
 	FIX: Fixed Medusa fireballs going through walls (#79).
 
 Alpha 1.16 (29/03/23) "Mackerel Update":
@@ -309,7 +309,7 @@ Alpha 1.16 (29/03/23) "Mackerel Update":
 	ADD: Added issues templates for the GitHub repository.
 	CHG: Replaced "Stalfos" by "Skull Kid" in a dialgoue from Sahasrahla (#94).
 	CHG: Moved trees in the Hyrule Field (#96).
-	CHG: Renamed soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	CHG: Renamed some soldier enemies in order to make them appear during the game and not at the beginning (#97).
 	FIX: Fixed carpet tiles in the Hyrule Castle main room being on the wrong layer (#89).
 	FIX: Fixed wrong tree tiles in the Blacksmith area (#93).
 
@@ -352,7 +352,7 @@ Alpha 1.16.2 (23/04/23) "Mackerel Update":
 	CHG: Drawn pause menu title captions separately to add support for translations (#118).
 	CHG: Moved pause menu sprites to a separate folder.
 	CHG: Renamed collectible treasure items.
-	CHG: Changed sword colour on hero (#21).
+	CHG: Changed the sword colour on hero (#21).
 	CHG: Made the HUD icons semi-transparent when the hero is underneath (#123).
 	FIX: Fixed collectible treasures amount not being updated (#122).
 	FIX: Fixed static items sprites not showing the right variant in the inventory (#125).
@@ -377,8 +377,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed Hyrule's Castle side doors opening sensors missing (#139).
 	FIX: Fixed NPC sprites being at the wrong place in the sprite image (#135).
 	FIX: Fixed an "invalid destination side" crash when entering the Hyrule Town library (#136).
+	FIX: Fixed missing NPC soldiers issues at some quest steps.
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
-	TDO: Fix missing sound file 'sounds/message_end.ogg' (#137).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
@@ -436,6 +436,7 @@ Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Clean up unused musics.
 	TDO: Improve the shovel usability (#26).
 	TDO: Move shovel animation into "/hero/item/shovel/" (#27).
+	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 
 Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add maps.

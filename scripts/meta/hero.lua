@@ -29,7 +29,6 @@ hero_meta:register_event("on_position_changed", function(hero)
       end
     end
     
-
     local map = hero:get_map()
     for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
@@ -150,6 +149,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       local ground = hero:get_ground_below()
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
+        sol.audio.play_sound("objects/heart/heart")
       end
     end
   end)

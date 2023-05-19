@@ -18541,42 +18541,6 @@ teletransporter{
   destination = "_side",
 }
 
-door{
-  layer = 0,
-  x = 128,
-  y = 128,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 408,
-  y = 496,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 744,
-  y = 288,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
-door{
-  layer = 0,
-  x = 248,
-  y = 432,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-  opening_method = "interaction",
-}
-
 destructible{
   layer = 0,
   x = 120,
@@ -19875,15 +19839,6 @@ destructible{
   can_be_cut = true,
   damage_on_enemies = 0,
   ground = "grass",
-}
-
-door{
-  layer = 0,
-  x = 408,
-  y = 320,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-  opening_method = "interaction",
 }
 
 teletransporter{
