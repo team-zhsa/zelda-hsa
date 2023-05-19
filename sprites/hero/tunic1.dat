@@ -316,18 +316,6 @@ animation{
   },
 }
 animation{
-  name = "ladder",
-  src_image = "hero/walking.tunic.png",
-  frame_delay = 50,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 0, y = 0, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29, num_frames = 8 },
-    { x = 0, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29, num_frames = 8 },
-    { x = 0, y = 96, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29, num_frames = 8 },
-    { x = 0, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29, num_frames = 8 },
-  },
-}
-animation{
   name = "lifting",
   src_image = "hero/lifting.png",
   frame_delay = 100,
@@ -487,7 +475,7 @@ animation{
 }
 animation{
   name = "shovel",
-  src_image = "hero/item/shovel/shovel.tunic1.png",
+  src_image = "hero/item/shovel/shovel.tunic.png",
   frame_delay = 150,
   directions = {
     { x = 0, y = 0, frame_width = 40, frame_height = 40, origin_x = 18, origin_y = 35, num_frames = 4 },
@@ -498,7 +486,7 @@ animation{
 }
 animation{
   name = "shovel_fail",
-  src_image = "hero/item/shovel/shovel.tunic1.png",
+  src_image = "hero/item/shovel/shovel.tunic.png",
   frame_delay = 100,
   directions = {
     { x = 0, y = 120, frame_width = 40, frame_height = 40, origin_x = 18, origin_y = 34, num_frames = 6 },
@@ -509,7 +497,7 @@ animation{
 }
 animation{
   name = "spin_attack",
-  src_image = "hero/spin_attack.tunic1.png",
+  src_image = "hero/spin_attack.tunic.png",
   frame_delay = 30,
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 22 },
@@ -530,7 +518,7 @@ animation{
 }
 animation{
   name = "super_spin_attack",
-  src_image = "hero/spin_attack.tunic1.png",
+  src_image = "hero/spin_attack.tunic.png",
   frame_delay = 30,
   frame_to_loop_on = 0,
   directions = {
@@ -577,7 +565,7 @@ animation{
 }
 animation{
   name = "sword",
-  src_image = "hero/sword.tunic1.png",
+  src_image = "hero/sword.tunic.png",
   frame_delay = 22,
   directions = {
     { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 12 },
@@ -588,7 +576,7 @@ animation{
 }
 animation{
   name = "sword_loading_stopped",
-  src_image = "hero/loading.tunic1.png",
+  src_image = "hero/loading.tunic.png",
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
     { x = 0, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
@@ -598,7 +586,7 @@ animation{
 }
 animation{
   name = "sword_loading_walking",
-  src_image = "hero/loading.tunic1.png",
+  src_image = "hero/loading.tunic.png",
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {
@@ -622,7 +610,7 @@ animation{
 }
 animation{
   name = "victory",
-  src_image = "hero/spin_attack.tunic1.png",
+  src_image = "hero/spin_attack.tunic.png",
   frame_delay = 50,
   frame_to_loop_on = 17,
   directions = {
