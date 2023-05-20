@@ -1075,6 +1075,7 @@ sprite{ id = "ground_effects/lava_splash", description = "ground_effects/lava_sp
 sprite{ id = "ground_effects/leaves", description = "ground_effects/leaves" }
 sprite{ id = "ground_effects/water", description = "Water" }
 sprite{ id = "ground_effects/water_splash", description = "ground_effects/water_splash" }
+sprite{ id = "hero/diving", description = "Diving" }
 sprite{ id = "hero/ground1", description = "Grass under hero" }
 sprite{ id = "hero/ground2", description = "Shallow water under hero" }
 sprite{ id = "hero/item/boomerang/boomerang_moving_armed_tunic_1", description = "hero/item/boomerang/boomerang_moving_armed_tunic_1" }
@@ -1114,7 +1115,6 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
-sprite{ id = "hero/tunic4", description = "Hero tunic 4" }
 sprite{ id = "hud/action_icon_flip", description = "Action icon" }
 sprite{ id = "hud/clock", description = "hud/clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
@@ -2366,9 +2366,6 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield1.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield2.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield3.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hud/temperature.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }

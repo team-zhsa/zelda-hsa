@@ -1,0 +1,41 @@
+animation{
+  name = "diving",
+  src_image = "hero/miscellaneous.png",
+  frame_delay = 100,
+  directions = {
+    { x = 96, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 4, num_columns = 1 },
+    { x = 96, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 4, num_columns = 1 },
+    { x = 96, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 4, num_columns = 1 },
+    { x = 96, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 4, num_columns = 1 },
+  },
+}
+animation{
+  name = "swimming_fast",
+  src_image = "hero/miscellaneous.png",
+  directions = {
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+  },
+}
+animation{
+  name = "swimming_slow",
+  src_image = "hero/miscellaneous.png",
+  directions = {
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+  },
+}
+animation{
+  name = "swimming_stopped",
+  src_image = "hero/miscellaneous.png",
+  directions = {
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+  },
+}
