@@ -242,6 +242,9 @@ animation{
   frame_delay = 100,
   directions = {
     { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
   },
 }
 animation{
@@ -431,13 +434,13 @@ animation{
 }
 animation{
   name = "plunging_lava",
-  src_image = "hero/plunging_lava.tunic.png",
+  src_image = "hero/plunging.png",
   frame_delay = 50,
   directions = {
-    { x = 0, y = 0, frame_width = 64, frame_height = 80, origin_x = 30, origin_y = 42, num_frames = 16 },
-    { x = 0, y = 0, frame_width = 64, frame_height = 80, origin_x = 30, origin_y = 42, num_frames = 16 },
-    { x = 0, y = 0, frame_width = 64, frame_height = 80, origin_x = 30, origin_y = 42, num_frames = 16 },
-    { x = 0, y = 0, frame_width = 64, frame_height = 80, origin_x = 30, origin_y = 42, num_frames = 16 },
+    { x = 336, y = 0, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
+    { x = 336, y = 24, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
+    { x = 328, y = 48, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
+    { x = 336, y = 72, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
   },
 }
 animation{
