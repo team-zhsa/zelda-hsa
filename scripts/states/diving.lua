@@ -67,7 +67,7 @@ function state:on_started(previous_state_name, previous_state)
   local sword_sprite = hero:get_sprite("sword")
   -- Change tunic animations during the diving state.é
   if not hero:get_map():is_sideview() then
-    hero:get_sprite("shadow_override"):stop_animation()
+    --hero:get_sprite("shadow_override"):stop_animation()
     function hero_sprite:on_animation_finished(animation)
       if animation == "plunging" then
         hero_sprite:set_animation("diving")
