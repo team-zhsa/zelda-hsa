@@ -1080,6 +1080,12 @@ sprite{ id = "hero/ground1", description = "Grass under hero" }
 sprite{ id = "hero/ground2", description = "Shallow water under hero" }
 sprite{ id = "hero/item/boomerang/boomerang_moving_armed_tunic_1", description = "hero/item/boomerang/boomerang_moving_armed_tunic_1" }
 sprite{ id = "hero/item/boomerang/boomerang_moving_free_tunic1", description = "hero/item/boomerang/boomerang_moving_free_tunic1" }
+sprite{ id = "hero/item/bow/bow_arming_arrow_tunic1", description = "0a" }
+sprite{ id = "hero/item/bow/bow_arming_no_arrow_tunic1", description = "0b" }
+sprite{ id = "hero/item/bow/bow_moving_free_tunic1", description = "1a" }
+sprite{ id = "hero/item/bow/bow_moving_no_arrow_tunic1", description = "2a" }
+sprite{ id = "hero/item/bow/bow_moving_with_arrow_tunic1", description = "2b" }
+sprite{ id = "hero/item/bow/bow_shoot_tunic1", description = "3" }
 sprite{ id = "hero/item/fire_rod/rod", description = "Fire Rod" }
 sprite{ id = "hero/item/fire_rod/rod_moving", description = "hero/item/fire_rod/rod_moving" }
 sprite{ id = "hero/item/fire_rod/rod_moving_tunic_1", description = "hero/item/fire_rod/rod_moving_tunic_1" }
@@ -1094,11 +1100,9 @@ sprite{ id = "hero/item/rods/rod_moving_tunic_1", description = "Moving Rod Tuni
 sprite{ id = "hero/item/rods/wind_rod", description = "Wind Rod" }
 sprite{ id = "hero/item/sword_beam", description = "Sword Beam" }
 sprite{ id = "hero/link_sad", description = "Link sad" }
-sprite{ id = "hero/shield1", description = "Shield 1 above" }
+sprite{ id = "hero/shield1", description = "Hero shield 1" }
 sprite{ id = "hero/shield2", description = "Hero shield 2" }
 sprite{ id = "hero/shield3", description = "Hero shield 3" }
-sprite{ id = "hero/shield_1_above", description = "Shield 1 above" }
-sprite{ id = "hero/shield_collision_mask", description = "Shield Collision Mask" }
 sprite{ id = "hero/sword1", description = "Hero sword 1" }
 sprite{ id = "hero/sword2", description = "Hero sword 2" }
 sprite{ id = "hero/sword3", description = "Hero sword 3" }
@@ -1111,7 +1115,7 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
-sprite{ id = "hero/tunic4", description = "Hero tunic 4" }
+sprite{ id = "hero/tunic4", description = "Tunic 4" }
 sprite{ id = "hud/action_icon_flip", description = "Action icon" }
 sprite{ id = "hud/clock", description = "hud/clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
@@ -2363,9 +2367,6 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield1.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield2.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/loading.shield3.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hud/temperature.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }

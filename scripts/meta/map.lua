@@ -36,6 +36,7 @@ end)
 map_meta:register_event("on_started", function(map)
   local game = map:get_game()
   local hero = map:get_hero()
+  local map_width, map_height = map:get_size()
   hero.respawn_point_saved=nil
   local ground
   if game:get_value("tp_ground") == "hole" then
