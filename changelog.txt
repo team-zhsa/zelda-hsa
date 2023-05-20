@@ -364,6 +364,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
+	ADD: Added all the missing animations for the three tunics (#27).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -372,7 +373,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Renamed dungeon tilesets (#133).
 	CHG: Remade the introduction cinematic slides (#86).
 	CHG: Improved the shovel usability (#26).
-	CHG: Moved the shovel animation into "/hero/item/shovel/" (#27).
+	CHG: Moved hero animations into specific folders (#27).
+	CHG: Grouped hero animations into one file instead of different ones for each tunic (#27).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -385,6 +387,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
 	TDO: Fix Bari enemies animation not being accurate to ALTTP (#143).
+	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
+	TDO: Overhaul the bow & arrow system such as in OOT (#145).
+	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
+	TDO: Fix "Illegal direction for sprite 'hero/diving' in animation 'walking'" (#147).
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
