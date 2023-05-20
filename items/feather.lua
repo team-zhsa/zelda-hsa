@@ -16,10 +16,15 @@ function item:on_created()
   self:set_savegame_variable("possession_feather")
   self:set_sound_when_brandished("treasure_2")
   self:set_assignable(true)
+end
+
+function item:on_used()
+  hero:unfreeze()
+end
   --[[ Redefine event game.on_command_pressed.
   -- Avoids restarting hero animation when feather command is pressed
   -- in the middle of a jump, and using weapons while jumping. --]]
-  local game = self:get_game()
+--[[  local game = self:get_game()
   game:set_ability("jump_over_water", 0) -- Disable auto-jump on water border.
   game:register_event("on_command_pressed", function(self, command)
     local item = game:get_item("feather")
@@ -239,7 +244,7 @@ function item:create_ground_effect(x, y, layer)
   end
 end
 
---[[ Disable nearby streams and teletransporters during the jump, allowing to jump over them.
+ Disable nearby streams and teletransporters during the jump, allowing to jump over them.
 function item:disable_nearby_entities()
   local map = item:get_map()
   local hero = map:get_hero()

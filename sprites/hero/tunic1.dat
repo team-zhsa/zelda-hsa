@@ -322,13 +322,13 @@ animation{
 }
 animation{
   name = "hookshot_intro",
-  src_image = "hero/item/hookshot/hookshot_tunic.png",
+  src_image = "hero/item/hookshot/hookshot.tunic.png",
   frame_delay = 100,
   directions = {
     { x = 252, y = 0, frame_width = 32, frame_height = 24, origin_x = 9, origin_y = 20, num_frames = 2 },
     { x = 240, y = 30, frame_width = 25, frame_height = 25, origin_x = 10, origin_y = 24, num_frames = 2 },
     { x = 103, y = 28, frame_width = 31, frame_height = 24, origin_x = 23, origin_y = 20, num_frames = 2 },
-    { x = 100, y = 0, frame_width = 25, frame_height = 28, origin_x = 13, origin_y = 21, num_frames = 2 },
+    { x = 100, y = 0, frame_width = 24, frame_height = 28, origin_x = 13, origin_y = 21, num_frames = 2 },
   },
 }
 animation{
@@ -345,7 +345,7 @@ animation{
 }
 animation{
   name = "hookshot_tracting",
-  src_image = "hero/hookshot.tracted.tunic.png",
+  src_image = "hero/item/hookshot/hookshot.tracted.tunic.png",
   frame_delay = 60,
   frame_to_loop_on = 0,
   directions = {
