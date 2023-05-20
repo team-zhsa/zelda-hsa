@@ -44,9 +44,9 @@ return function(sign)
   sign:register_event("on_interaction", function()
      
     if sign:get_sprite():get_animation() == "stopped" then
-      local dialog_id = sign:get_property("dialog")
-      if dialog_id ~= nil then
-        game:start_dialog(dialog_id)
+      local dialogue_id = sign:get_property("dialogue_id")
+      if dialogue_id ~= nil then
+        game:start_dialog(dialogue_id)
       end
     end
 

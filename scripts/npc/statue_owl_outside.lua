@@ -8,7 +8,7 @@ return function(statue_owl_outside)
   
   statue_owl_outside:register_event("on_interaction", function(map, destination)
 
-    local dialog = statue_owl_outside:get_property("dialog")
+    local dialog = statue_owl_outside:get_property("dialogue_id")
     local sprite = statue_owl_outside:get_sprite()
     sprite:set_ignore_suspend(true)
     if dialog then

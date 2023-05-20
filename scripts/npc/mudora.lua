@@ -10,7 +10,7 @@ return function(mudora)
     -- NPCs prefixed by "mudora" need the Book of Mudora in order to be read properly.
     if name:match("^npc_mudora") then
       if game:get_value("possession_book_of_mudora", true) then
-        local dialog_id = mudora:get_property("dialog_id")
+        local dialog_id = mudora:get_property("dialogue_id")
         if dialog_id ~= nil then
           game:start_dialog(dialog_id)
         end

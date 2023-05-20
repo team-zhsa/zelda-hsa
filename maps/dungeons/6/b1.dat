@@ -715,6 +715,24 @@ separator{
 
 tile{
   layer = 0,
+  x = 920,
+  y = 1240,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 1240,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-5",
+}
+
+tile{
+  layer = 0,
   x = 872,
   y = 760,
   width = 128,
@@ -7205,9 +7223,9 @@ tile{
 tile{
   layer = 0,
   x = 920,
-  y = 1240,
+  y = 1352,
   width = 24,
-  height = 160,
+  height = 48,
   pattern = "wall.4-5",
 }
 
@@ -7799,9 +7817,9 @@ tile{
 tile{
   layer = 0,
   x = 976,
-  y = 1240,
+  y = 1352,
   width = 24,
-  height = 160,
+  height = 48,
   pattern = "wall.3-5",
 }
 
@@ -9342,6 +9360,60 @@ tile{
   width = 8,
   height = 16,
   pattern = "door.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1280,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 936,
+  y = 1336,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 1336,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.3-5",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 1336,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 1280,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 1280,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.2-5",
 }
 
 crystal_block{

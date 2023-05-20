@@ -11621,6 +11621,26 @@ tile{
   tileset = "outside_buildings",
 }
 
+tile{
+  layer = 0,
+  x = 296,
+  y = 928,
+  width = 8,
+  height = 24,
+  pattern = "6006",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 920,
+  width = 8,
+  height = 8,
+  pattern = "6005",
+  tileset = "outside_buildings",
+}
+
 sensor{
   name = "open_house_door_grey_sensor",
   layer = 0,
@@ -13196,7 +13216,7 @@ npc{
   y = 669,
   properties = {
     {
-      key = "dialog_id",
+      key = "dialog",
       value = "maps.out.hyrule_town.sign_2",
     },
     {
@@ -13456,7 +13476,7 @@ npc{
   y = 861,
   properties = {
     {
-      key = "dialog_id",
+      key = "dialog",
       value = "maps.out.hyrule_town.sign_9",
     },
     {
