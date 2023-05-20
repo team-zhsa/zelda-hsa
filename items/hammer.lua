@@ -15,13 +15,13 @@ function item:on_using()
 
   -- Enable collisions after a few frames.
   item.hammer_active = false
-  sol.timer.start(map, 150, function()
+  sol.timer.start(map, 350, function()
     item.hammer_active = true
   end)
 
   -- Handle stakes.
   item:set_pushed_stake(false)
-  sol.timer.start(map, 200, function()
+  sol.timer.start(map, 400, function()
     if item:has_pushed_stake() then
       sol.audio.play_sound("items/hammer/hammer_stake")  -- Successfully pushed a stake.
     else

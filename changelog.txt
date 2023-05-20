@@ -371,6 +371,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Changed chicken hit values.
 	CHG: Renamed dungeon tilesets (#133).
 	CHG: Remade the introduction cinematic slides (#86).
+	CHG: Improved the shovel usability (#26).
+	CHG: Moved the shovel animation into "/hero/item/shovel/" (#27).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -378,9 +380,11 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed NPC sprites being at the wrong place in the sprite image (#135).
 	FIX: Fixed an "invalid destination side" crash when entering the Hyrule Town library (#136).
 	FIX: Fixed missing NPC soldiers issues at some quest steps.
+	FIX: Fixed the hammer stake being down before Link hits it (#142).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
+	TDO: Fix Bari enemies animation not being accurate to ALTTP (#143).
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
@@ -434,8 +438,6 @@ Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Add Koume and Koutake
 	TDO: Fix music loops (#25).
 	TDO: Clean up unused musics.
-	TDO: Improve the shovel usability (#26).
-	TDO: Move shovel animation into "/hero/item/shovel/" (#27).
 	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 
 Alpha 1.18.1 (//23) "Opah Update":
