@@ -78,41 +78,101 @@ animation{
   src_image = "hero/item/bottle/bottle.swing.tunic.png",
   frame_delay = 40,
   directions = {
-    { x = 0, y = 50, frame_width = 32, frame_height = 23, origin_x = 15, origin_y = 19, num_frames = 8 },
-    { x = 0, y = 23, frame_width = 32, frame_height = 27, origin_x = 16, origin_y = 24, num_frames = 8 },
-    { x = 0, y = 0, frame_width = 32, frame_height = 23, origin_x = 18, origin_y = 19, num_frames = 8 },
-    { x = 0, y = 73, frame_width = 32, frame_height = 29, origin_x = 16, origin_y = 20, num_frames = 8 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 8 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 8 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 8 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 23, num_frames = 8 },
   },
 }
 animation{
   name = "bow",
-  src_image = "hero/item/bow/bow_tunic.png",
+  src_image = "hero/item/bow/bow.tunic.png",
   frame_delay = 100,
   directions = {
-    { x = 225, y = 25, frame_width = 25, frame_height = 25, origin_x = 11, origin_y = 20, num_frames = 2 },
-    { x = 324, y = 50, frame_width = 25, frame_height = 25, origin_x = 14, origin_y = 20, num_frames = 2 },
-    { x = 225, y = 0, frame_width = 25, frame_height = 25, origin_x = 14, origin_y = 20, num_frames = 2 },
-    { x = 100, y = 0, frame_width = 25, frame_height = 25, origin_x = 14, origin_y = 17, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 3 },
   },
 }
 animation{
   name = "bow_arming_arrow",
-  src_image = "hero/item/bow/bow_tunic.png",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 100,
   directions = {
-    { x = 50, y = 50, frame_width = 25, frame_height = 25, origin_x = 11, origin_y = 20 },
-    { x = 25, y = 50, frame_width = 25, frame_height = 25, origin_x = 12, origin_y = 20 },
-    { x = 0, y = 50, frame_width = 25, frame_height = 25, origin_x = 15, origin_y = 20 },
-    { x = 75, y = 50, frame_width = 25, frame_height = 25, origin_x = 15, origin_y = 17 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
   },
 }
 animation{
   name = "bow_arming_no_arrow",
-  src_image = "hero/item/bow/bow_tunic.png",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 100,
   directions = {
-    { x = 125, y = 24, frame_width = 25, frame_height = 25, origin_x = 14, origin_y = 21 },
-    { x = 274, y = 0, frame_width = 25, frame_height = 25, origin_x = 13, origin_y = 20 },
-    { x = 101, y = 24, frame_width = 25, frame_height = 25, origin_x = 12, origin_y = 21 },
-    { x = 0, y = 0, frame_width = 25, frame_height = 25, origin_x = 15, origin_y = 17 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26 },
+  },
+}
+animation{
+  name = "bow_moving_arrow_stopped",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 100,
+  directions = {
+    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 96, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 96, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26 },
+  },
+}
+animation{
+  name = "bow_moving_arrow_walking",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 96, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 96, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 3 },
+  },
+}
+animation{
+  name = "bow_moving_free",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 32, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 32, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 32, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 3 },
+  },
+}
+animation{
+  name = "bow_moving_no_arrow_stopped",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 100,
+  directions = {
+    { x = 128, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 128, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 128, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 128, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26 },
+  },
+}
+animation{
+  name = "bow_moving_no_arrow_walking",
+  src_image = "hero/item/bow/bow.tunic.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 128, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 128, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 128, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 128, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 3 },
   },
 }
 animation{
