@@ -17051,8 +17051,8 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 1336,
-  y = 573,
+  x = 480,
+  y = 1165,
   direction = 1,
 }
 
@@ -17625,6 +17625,7 @@ wall{
 }
 
 chest{
+  name = "chest_23_map",
   layer = 0,
   x = 1544,
   y = 773,
@@ -18107,6 +18108,7 @@ stream{
 }
 
 chest{
+  name = "chest_18_small_key",
   layer = 0,
   x = 1816,
   y = 605,
@@ -18447,7 +18449,7 @@ enemy{
   x = 776,
   y = 1341,
   direction = 0,
-  breed = "dungeons/pike_fixed",
+  breed = "dungeons/pike_auto",
 }
 
 teletransporter{
@@ -19861,6 +19863,15 @@ destructible{
   sprite = "entities/destructibles/vase_skull",
   destruction_sound = "objects/e_skull_shatter",
   can_be_cut = true,
+}
+
+crystal_block{
+  layer = 0,
+  x = 736,
+  y = 1344,
+  width = 16,
+  height = 16,
+  subtype = 1,
 }
 
 tile{
