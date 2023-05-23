@@ -6,7 +6,8 @@ local enemy_manager = require("scripts/maps/enemy_manager")
 local separator_manager = require("scripts/maps/separator_manager")
 local switch_manager = require("scripts/maps/switch_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
-local separator_manager = require("scripts/maps/separator_manager.lua")
+local separator_manager = require("scripts/maps/separator_manager")
+local hole_manager = require("scripts/maps/hole_manager")
 
 map:register_event("on_started", function()
 	separator_manager:manage_map(map)
@@ -14,7 +15,20 @@ map:register_event("on_started", function()
 		sensor:set_enabled(true)
 		appear_tiles_7()
 	end
+	hole_manager:enable_a_tiles(map)
 end)
+
+for sensor in map:get_entities("sensor_20_floor_a_") do
+	sensor:register_event("on_activating", function()
+		hole_manager:enable_b_tiles(map)
+	end)
+end
+
+for sensor in map:get_entities("sensor_20_floor_b_") do
+	sensor:register_event("on_activating", function()
+		hole_manager:enable_a_tiles(map)
+	end)
+end
 
 function collapse_tiles_7()
 	local i = 1

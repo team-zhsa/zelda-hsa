@@ -8,7 +8,7 @@ properties{
   world = "dungeon_5",
   floor = 1,
   tileset = "absolute_dungeon_07",
-  music = "dungeons/05_dodongo",
+  music = "dungeons/13_cavern",
 }
 
 tile{
@@ -16633,15 +16633,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 456,
-  y = 808,
-  width = 48,
-  height = 16,
-  pattern = "floor_star.on-1",
-}
-
-tile{
-  layer = 0,
   x = 496,
   y = 552,
   width = 8,
@@ -25145,6 +25136,16 @@ tile{
   pattern = "floor.16-1",
 }
 
+dynamic_tile{
+  name = "tile_20_switch_b_1",
+  layer = 0,
+  x = 456,
+  y = 808,
+  width = 48,
+  height = 16,
+  pattern = "floor_star.off",
+}
+
 stairs{
   layer = 0,
   x = 376,
@@ -26684,6 +26685,7 @@ door{
   direction = 0,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26695,6 +26697,7 @@ door{
   direction = 2,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26812,6 +26815,7 @@ door{
   direction = 1,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26823,6 +26827,7 @@ door{
   direction = 3,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26905,6 +26910,45 @@ crystal{
   layer = 0,
   x = 1544,
   y = 1117,
+}
+
+dynamic_tile{
+  name = "tile_20_floor_a_1",
+  layer = 0,
+  x = 456,
+  y = 840,
+  width = 48,
+  height = 32,
+  pattern = "floor.7-1",
+}
+
+dynamic_tile{
+  name = "tile_20_floor_b_1",
+  layer = 0,
+  x = 456,
+  y = 776,
+  width = 48,
+  height = 32,
+  pattern = "floor.7-1",
+}
+
+dynamic_tile{
+  name = "tile_20_switch_a_1",
+  layer = 0,
+  x = 456,
+  y = 808,
+  width = 48,
+  height = 16,
+  pattern = "floor_star.on-1",
+}
+
+sensor{
+  name = "sensor_20_floor_a_1",
+  layer = 0,
+  x = 464,
+  y = 821,
+  width = 48,
+  height = 16,
 }
 
 tile{
