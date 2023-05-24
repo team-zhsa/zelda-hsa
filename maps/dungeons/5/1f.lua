@@ -19,16 +19,11 @@ map:register_event("on_started", function()
 end)
 
 for sensor in map:get_entities("sensor_20_floor_a_") do
-	sensor:register_event("on_activating", function()
+	sensor:register_event("on_activated", function()
 		hole_manager:enable_b_tiles(map)
 	end)
 end
 
-for sensor in map:get_entities("sensor_20_floor_b_") do
-	sensor:register_event("on_activating", function()
-		hole_manager:enable_a_tiles(map)
-	end)
-end
 
 function collapse_tiles_7()
 	local i = 1

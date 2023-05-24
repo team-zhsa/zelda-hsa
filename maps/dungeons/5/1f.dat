@@ -8,7 +8,7 @@ properties{
   world = "dungeon_5",
   floor = 1,
   tileset = "absolute_dungeon_07",
-  music = "dungeons/13_cavern",
+  music = "dungeons/temple_sanctum",
 }
 
 tile{
@@ -25136,6 +25136,24 @@ tile{
   pattern = "floor.16-1",
 }
 
+tile{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
 dynamic_tile{
   name = "tile_20_switch_b_1",
   layer = 0,
@@ -26679,23 +26697,13 @@ switch{
 }
 
 door{
+  name = "door_20_e",
   layer = 0,
   x = 600,
   y = 824,
   direction = 0,
   sprite = "entities/doors/inside/door_d2_small_key",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_5_small_keys",
-  opening_condition_consumed = true,
-  cannot_open_dialog = "_cannot_open_without_small_key",
-}
-
-door{
-  layer = 0,
-  x = 664,
-  y = 824,
-  direction = 2,
-  sprite = "entities/doors/inside/door_d2_small_key",
+  savegame_variable = "dungeon_5_1f_door_20_21",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
@@ -26833,9 +26841,11 @@ door{
 }
 
 chest{
+  name = "chest_9_small_key",
   layer = 0,
   x = 816,
   y = 301,
+  treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_5_1f_9_chest_small_key",
   sprite = "entities/chests/chest_LttP",
 }
@@ -26949,6 +26959,72 @@ sensor{
   y = 821,
   width = 48,
   height = 16,
+}
+
+stairs{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  direction = 1,
+  subtype = 0,
+}
+
+destination{
+  name = "from_2f_1",
+  layer = 0,
+  x = 384,
+  y = 1237,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/5/2f",
+  destination = "from_1f_1",
+}
+
+stairs{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  direction = 1,
+  subtype = 0,
+}
+
+destination{
+  name = "from_2f_2",
+  layer = 0,
+  x = 1840,
+  y = 1237,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/5/2f",
+  destination = "from_1f_2",
+}
+
+door{
+  name = "door_21_w",
+  layer = 0,
+  x = 664,
+  y = 824,
+  direction = 2,
+  sprite = "entities/doors/inside/door_d2_small_key",
+  savegame_variable = "dungeon_5_1f_door_20_21",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
 }
 
 tile{
