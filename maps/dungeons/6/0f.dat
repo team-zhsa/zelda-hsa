@@ -16767,6 +16767,15 @@ tile{
   pattern = "door.1.support.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 832,
+  y = 1264,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
 destructible{
   name = "auto_destructible_13",
   layer = 0,
@@ -20730,6 +20739,15 @@ tile{
   width = 32,
   height = 8,
   pattern = "door_top.1-5",
+}
+
+tile{
+  layer = 1,
+  x = 832,
+  y = 1248,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
 }
 
 tile{
