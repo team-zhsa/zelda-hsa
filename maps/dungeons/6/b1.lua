@@ -24,7 +24,5 @@ function map:on_opening_transition_finished()
 end
 
 for npc in map:get_entities("water_level_down_") do
-  function npc:on_interaction_item("bow", true)
-    
-  end
+
 end

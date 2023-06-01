@@ -3638,6 +3638,22 @@ tile{
   pattern = "ceiling.1",
 }
 
+destination{
+  name = "from_b1_1",
+  layer = -1,
+  x = 840,
+  y = 1389,
+  direction = 1,
+}
+
+stairs{
+  layer = -1,
+  x = 832,
+  y = 1376,
+  direction = 3,
+  subtype = 1,
+}
+
 dynamic_tile{
   name = "water_dynamic_0_0_1",
   layer = -1,
@@ -3708,20 +3724,6 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
-}
-
-door{
-  name = "door_33_s",
-  layer = -1,
-  x = 832,
-  y = 1376,
-  direction = 3,
-  sprite = "entities/doors/inside/door_d1_small_key",
-  savegame_variable = "dungeon_6_0f_door_33",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_6_small_keys",
-  opening_condition_consumed = true,
-  cannot_open_dialog = "_cannot_open_without_small_key",
 }
 
 stairs{
@@ -3958,6 +3960,56 @@ enemy{
   direction = 0,
   breed = "dungeons/hover",
   treasure_name = "random_west",
+}
+
+destination{
+  name = "from_b1_2",
+  layer = -1,
+  x = 872,
+  y = 1021,
+  direction = 1,
+}
+
+teletransporter{
+  layer = -1,
+  x = 864,
+  y = 1008,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/6/b1",
+  destination = "from_0f_2",
+}
+
+teletransporter{
+  layer = -1,
+  x = 832,
+  y = 1376,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/6/b1",
+  destination = "from_0f_1",
+}
+
+door{
+  name = "door_33_s",
+  layer = -1,
+  x = 832,
+  y = 1376,
+  direction = 3,
+  sprite = "entities/doors/inside/door_d1_small_key",
+  savegame_variable = "dungeon_6_0f_door_33",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_6_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
+}
+
+stairs{
+  layer = -1,
+  x = 864,
+  y = 1008,
+  direction = 1,
+  subtype = 1,
 }
 
 tile{
@@ -17060,9 +17112,10 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 480,
-  y = 1165,
+  x = 864,
+  y = 1317,
   direction = 1,
+  default = true,
 }
 
 custom_entity{
@@ -19913,6 +19966,15 @@ crystal{
   y = 1277,
 }
 
+sensor{
+  name = "sensor_33_door",
+  layer = 0,
+  x = 840,
+  y = 1253,
+  width = 32,
+  height = 16,
+}
+
 tile{
   layer = 1,
   x = 568,
@@ -21277,7 +21339,7 @@ separator{
   x = 952,
   y = 960,
   width = 16,
-  height = 480,
+  height = 240,
 }
 
 separator{
