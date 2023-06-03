@@ -11,12 +11,34 @@ local hole_manager = require("scripts/maps/hole_manager")
 
 map:register_event("on_started", function()
 	separator_manager:manage_map(map)
+
+	-- Collapsing tiles
 	for sensor in map:get_entities("sensor_7_tile_") do
 		sensor:set_enabled(true)
 		appear_tiles_7()
 	end
 	hole_manager:enable_a_tiles(map)
+
+	-- Treasures
+	if not game:get_value("dungeon_5_1f_30_rupees", true) then
+		treasure_manager:disappear_chest(map, "chest_30_rupees")
+	end
+	treasure_manager:appear_chest_when_enemies_dead(map, "enemy_30_", "chest_30_rupees")
+
+	-- Doors
+	map:set_doors_open("door_30_w", true)
+	map:set_doors_open("door_30_s", true)
+	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_w", sound)
+	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_s", sound)
 end)
+
+for sensor in map:get_entities("sensor_30_door_") do
+	sensor:register_event("on_activated", function()
+		map:close_doors("door_30_w")
+		map:close_doors("door_30_s")
+		sensor:set_enabled(false)
+	end)
+end
 
 for sensor in map:get_entities("sensor_20_floor_a_") do
 	sensor:register_event("on_activated", function()
