@@ -139,7 +139,7 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
     force = 2 * force -- Double force for spin attack.
   end--]]
   local base_life_points = self:get_attack_consequence("sword")
-  local final_damage = final_damage = (base_life_points + 1)^(game:get_ability("sword") - 1)
+  local final_damage = (base_life_points + 1)^(game:get_ability("sword") - 1)
   if hero:get_animation("spin_attack") then
     final_damage = ((base_life_points + 1)^(game:get_ability("sword") - 1)) * 16
   end
