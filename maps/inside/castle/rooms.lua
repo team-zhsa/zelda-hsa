@@ -45,10 +45,10 @@ function map:on_started(destination)
 	end
 	
 	if not game:is_step_done("sword_obtained") then
-		audio_manager:play_music("cutscenes/raining")
+		sol.audio.play_music("cutscenes/raining")
 		npc_zelda:set_enabled(true)
 		npc_zelda:get_sprite():set_animation("sleeping")
-	else audio_manager:play_music("inside/castle")
+	else sol.audio.play_music("inside/castle")
 		npc_zelda:set_enabled(false)
 		bed:get_sprite():set_animation("empty_open")
 	end
