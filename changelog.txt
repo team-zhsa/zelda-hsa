@@ -375,8 +375,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Remade the introduction cinematic slides (#86).
 	CHG: Improved the shovel usability (#26).
 	CHG: Moved hero animations into specific folders (#27).
-	CHG: Grouped hero animations into one file instead of different ones for each tunic (#27).
+	CHG: Grouped hero animations into one file instead of different ones for each tunic (#47).
 	CHG: Unified the "dialogue_id" property for all signs (#34).
+	CHG: Moved small key and clock HUD positions.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -386,9 +387,15 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed missing NPC soldiers issues at some quest steps.
 	FIX: Fixed the hammer stake being down before Link hits it (#142).
 	FIX: Fixed Agahnim being spelled wrong.
+	FIX: Fixed missing animations for other tunics (#47).
+	FIX: Fixed a missing sword shield sprites crash (#154).
+	FIX: Fixed a lava plunging sound playing when entering the ground floor in the Dodongo's Cavern (#157).
+	FIX: Fixed Hyrule Castle music being played at the beginning of the game at the ground floor (#158).
+	FIX: Fixed the player's name not being displayed in one dialogue in the intro cutscene (#156).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
+	REM: Removed unused *.zip tileset files.
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather.
 	TDO: Fix Bari enemies animation not being accurate to ALTTP (#143).
@@ -409,9 +416,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
-	TDO: Fix missing sword shield sprites crash (#154).
-	TDO: Fix a wrong teletransporter in the Hyrule Town (#155).
-	TDO: Fix the player's name not being displayed in one intro dialogue (#156).
+	TDO: Fix a wrong teletransporter linking in the Hyrule Town (#155).
+	TDO: Fix a missing NPC sprite in the Hyrule Town inn (#160).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Remove work *.xcf and *.psd files from the data files.
@@ -424,7 +430,6 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Fix victory animation not being synchronised with Link movement (#10).
 	TDO: Clean up unused files (#98).
 	TDO: Fix Link being invisible after fighting boss (#16).
-	TDO: Fix missing animations for other tunics (#47).
 	TDO: Update the title screen (#50).
 	TDO: Change the Master Sword sprite on the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
