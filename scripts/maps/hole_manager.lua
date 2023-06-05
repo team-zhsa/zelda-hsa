@@ -1,6 +1,6 @@
 local hole_manager = {}
 
-function hole_manager:enable_a_tiles(map)
+function hole_manager:enable_a_tiles(map, sound)
   local game = map:get_game()
   local dungeon_index = game:get_dungeon_index()
   for room = 1, 100 do
@@ -24,10 +24,12 @@ function hole_manager:enable_a_tiles(map)
     end
   end
   game:set_value("dungeon_"..dungeon_index.."_hole_state", a)
-  sol.audio.play_sound("common/secret_discover_minor")
+  if sound ~= nil then
+    sol.audio.play_sound(sound)
+  end
 end
 
-function hole_manager:enable_b_tiles(map)
+function hole_manager:enable_b_tiles(map, sound)
   local game = map:get_game()
   local dungeon_index = game:get_dungeon_index()
   for room = 1, 100 do
@@ -51,7 +53,9 @@ function hole_manager:enable_b_tiles(map)
     end
   end
   game:set_value("dungeon_"..dungeon_index.."_hole_state", b)
-  sol.audio.play_sound("common/secret_discover_minor")
+  if sound ~= nil then
+    sol.audio.play_sound(sound)
+  end
 end
 
 function hole_manager:switch_states(map)

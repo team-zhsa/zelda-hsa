@@ -42,7 +42,7 @@ end
 
 for sensor in map:get_entities("sensor_20_floor_a_") do
 	sensor:register_event("on_activated", function()
-		hole_manager:enable_b_tiles(map)
+		hole_manager:enable_b_tiles(map, "common/secret_discover_minor")
 	end)
 end
 
