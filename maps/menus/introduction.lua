@@ -152,10 +152,10 @@ function phase_2()
 end
 
 function phase_3()
-	-- Wizard going towards Aghanim.
+	-- Wizard going towards Agahnim.
 	phase = 3
 	map:get_camera():start_tracking(wizard)
-	aghanim:get_sprite():set_opacity(0)
+	agahnim:get_sprite():set_opacity(0)
 	black_surface:fade_out(40, function()
 		map:set_cinematic_mode(true, options)
 		local wizard_movement = sol.movement.create("path")
@@ -169,15 +169,15 @@ function phase_3()
 end
 
 function phase_4()
-	-- Wizard invoking Aghanim.
+	-- Wizard invoking Agahnim.
 	phase = 4
 	sol.timer.start(map, 1000, function()
 		wizard:get_sprite():set_animation("invoking")
 		sol.timer.start(map, 1000, function()
 			wizard:get_sprite():set_animation("stopped")
 			sol.audio.play_sound("boss_charge")
-			aghanim:get_sprite():fade_in(40, function()
-				game:start_dialog("scripts.menus.introduction.intro_7", function()
+			agahnim:get_sprite():fade_in(40, function()
+				game:start_dialog("scripts.menus.introduction.intro_7", game:get_player_name(), function()
 					sol.timer.start(map, 100, function()
 						map:set_cinematic_mode(false, options)
 						game:set_hud_enabled(false)

@@ -113,9 +113,11 @@ local function initialise_dungeon_features(game)
     minimap_width = 48,
     minimap_height = 48,
     lowest_floor = 0,
-    highest_floor = 0,
+    highest_floor = 2,
     maps = {
       "dungeons/5/0f",
+      "dungeons/5/1f",
+      "dungeons/5/2f",
     },
     boss = {
       floor = 0,

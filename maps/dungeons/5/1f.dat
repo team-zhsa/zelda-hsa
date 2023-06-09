@@ -8,7 +8,7 @@ properties{
   world = "dungeon_5",
   floor = 1,
   tileset = "absolute_dungeon_07",
-  music = "dungeons/05_dodongo",
+  music = "dungeons/temple_sanctum",
 }
 
 tile{
@@ -7332,7 +7332,7 @@ stairs{
 crystal_block{
   layer = -1,
   x = 1432,
-  y = 1072,
+  y = 1080,
   width = 32,
   height = 16,
   subtype = 1,
@@ -8021,7 +8021,7 @@ custom_entity{
 crystal_block{
   layer = -1,
   x = 1448,
-  y = 1040,
+  y = 1048,
   width = 16,
   height = 32,
   subtype = 1,
@@ -16633,15 +16633,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 456,
-  y = 808,
-  width = 48,
-  height = 16,
-  pattern = "floor_star.on-1",
-}
-
-tile{
-  layer = 0,
   x = 496,
   y = 552,
   width = 8,
@@ -18091,7 +18082,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 392,
+  x = 376,
   y = 1224,
   width = 16,
   height = 16,
@@ -18100,7 +18091,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 368,
   y = 1224,
   width = 8,
   height = 16,
@@ -18109,7 +18100,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 408,
+  x = 392,
   y = 1224,
   width = 8,
   height = 16,
@@ -25145,6 +25136,79 @@ tile{
   pattern = "floor.16-1",
 }
 
+tile{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 1728,
+  y = 1016,
+  width = 8,
+  height = 32,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 1784,
+  y = 1016,
+  width = 8,
+  height = 32,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 1736,
+  y = 1016,
+  width = 48,
+  height = 8,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 1736,
+  y = 1040,
+  width = 48,
+  height = 8,
+  pattern = "floor_border.2",
+}
+
+tile{
+  layer = 0,
+  x = 1736,
+  y = 1024,
+  width = 48,
+  height = 16,
+  pattern = "floor_small.2",
+}
+
+dynamic_tile{
+  name = "tile_20_switch_b_1",
+  layer = 0,
+  x = 456,
+  y = 808,
+  width = 48,
+  height = 16,
+  pattern = "floor_star.off",
+}
+
 stairs{
   layer = 0,
   x = 376,
@@ -26401,8 +26465,8 @@ switch{
 switch{
   name = "switch_15_door_4",
   layer = 0,
-  x = 744,
-  y = 712,
+  x = 752,
+  y = 688,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
   sound = "objects/switch_crystal_hit",
@@ -26659,12 +26723,6 @@ teletransporter{
   destination = "from_1f_4",
 }
 
-crystal{
-  layer = 0,
-  x = 1952,
-  y = 1101,
-}
-
 switch{
   name = "switch_15_door_6",
   layer = 0,
@@ -26678,23 +26736,15 @@ switch{
 }
 
 door{
+  name = "door_20_e",
   layer = 0,
   x = 600,
   y = 824,
   direction = 0,
   sprite = "entities/doors/inside/door_d2_small_key",
+  savegame_variable = "dungeon_5_1f_door_20_21",
   opening_method = "interaction_if_savegame_variable",
-  opening_condition_consumed = true,
-  cannot_open_dialog = "_cannot_open_without_small_key",
-}
-
-door{
-  layer = 0,
-  x = 664,
-  y = 824,
-  direction = 2,
-  sprite = "entities/doors/inside/door_d2_small_key",
-  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26812,6 +26862,7 @@ door{
   direction = 1,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
@@ -26823,14 +26874,17 @@ door{
   direction = 3,
   sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
   opening_condition_consumed = true,
   cannot_open_dialog = "_cannot_open_without_small_key",
 }
 
 chest{
+  name = "chest_9_small_key",
   layer = 0,
   x = 816,
   y = 301,
+  treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_5_1f_9_chest_small_key",
   sprite = "entities/chests/chest_LttP",
 }
@@ -26905,6 +26959,170 @@ crystal{
   layer = 0,
   x = 1544,
   y = 1117,
+}
+
+dynamic_tile{
+  name = "tile_20_floor_a_1",
+  layer = 0,
+  x = 456,
+  y = 840,
+  width = 48,
+  height = 32,
+  pattern = "floor.7-1",
+}
+
+dynamic_tile{
+  name = "tile_20_floor_b_1",
+  layer = 0,
+  x = 456,
+  y = 776,
+  width = 48,
+  height = 32,
+  pattern = "floor.7-1",
+}
+
+dynamic_tile{
+  name = "tile_20_switch_a_1",
+  layer = 0,
+  x = 456,
+  y = 808,
+  width = 48,
+  height = 16,
+  pattern = "floor_star.on-1",
+}
+
+sensor{
+  name = "sensor_20_floor_a_1",
+  layer = 0,
+  x = 464,
+  y = 821,
+  width = 48,
+  height = 16,
+}
+
+stairs{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  direction = 1,
+  subtype = 0,
+}
+
+destination{
+  name = "from_2f_1",
+  layer = 0,
+  x = 384,
+  y = 1237,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 376,
+  y = 1224,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/5/2f",
+  destination = "from_1f_1",
+}
+
+stairs{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  direction = 1,
+  subtype = 0,
+}
+
+destination{
+  name = "from_2f_2",
+  layer = 0,
+  x = 1840,
+  y = 1237,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1832,
+  y = 1224,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/5/2f",
+  destination = "from_1f_2",
+}
+
+door{
+  name = "door_21_w",
+  layer = 0,
+  x = 664,
+  y = 824,
+  direction = 2,
+  sprite = "entities/doors/inside/door_d2_small_key",
+  savegame_variable = "dungeon_5_1f_door_20_21",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_5_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
+}
+
+chest{
+  name = "chest_30_rupees",
+  layer = 0,
+  x = 1760,
+  y = 1037,
+  treasure_name = "rupee",
+  treasure_variant = 4,
+  treasure_savegame_variable = "dungeon_5_1f_30_rupees",
+  sprite = "entities/chests/chest_LttP",
+}
+
+sensor{
+  name = "sensor_30_door_1",
+  layer = 0,
+  x = 1648,
+  y = 1069,
+  width = 16,
+  height = 32,
+}
+
+sensor{
+  name = "sensor_30_door_2",
+  layer = 0,
+  x = 1752,
+  y = 1157,
+  width = 32,
+  height = 16,
+}
+
+enemy{
+  name = "enemy_30_1",
+  layer = 0,
+  x = 1712,
+  y = 1069,
+  direction = 0,
+  breed = "dungeons/gibdo",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "enemy_30_2",
+  layer = 0,
+  x = 1760,
+  y = 1109,
+  direction = 0,
+  breed = "dungeons/gibdo",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "enemy_30_3",
+  layer = 0,
+  x = 1808,
+  y = 1069,
+  direction = 0,
+  breed = "dungeons/gibdo",
+  treasure_name = "random_mountains",
 }
 
 tile{
@@ -27359,7 +27577,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 384,
+  x = 368,
   y = 1216,
   width = 32,
   height = 8,
@@ -27368,7 +27586,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 384,
+  x = 368,
   y = 1216,
   width = 32,
   height = 8,
@@ -27377,7 +27595,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 392,
+  x = 376,
   y = 1216,
   width = 16,
   height = 8,
@@ -27944,15 +28162,6 @@ tile{
 
 tile{
   layer = 2,
-  x = 1760,
-  y = 1048,
-  width = 16,
-  height = 16,
-  pattern = "490",
-}
-
-tile{
-  layer = 2,
   x = 1448,
   y = 672,
   width = 16,
@@ -27985,15 +28194,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "534",
-}
-
-tile{
-  layer = 2,
-  x = 1744,
-  y = 1064,
-  width = 24,
-  height = 24,
-  pattern = "535",
 }
 
 tile{

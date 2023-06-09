@@ -140,6 +140,9 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
   end--]]
   local base_life_points = self:get_attack_consequence("sword")
   local final_damage = (base_life_points + 1)^(game:get_ability("sword") - 1)
+  if hero:get_state() == "sword spin attack" then
+    final_damage = ((base_life_points + 1)^(game:get_ability("sword") - 1)) * 2
+  end
   -- Remove life
   self:remove_life(final_damage)
   print("Damages on enemy: " .. final_damage)

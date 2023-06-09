@@ -256,7 +256,7 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 	FIX: Fixed missing wall tile in room 35 (door 35N) of the Fire Temple (B2).
 	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
 	FIX: Fixed destructibles weights being too high around the Blacksmith.
-	FIX: Fixed teletransporter to Temple of Time linking to a deleted map (#40).
+	FIX: Fixed the teletransporter to the Temple of Time linking to a deleted map (#40).
 	FIX: Fixed door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
 	FIX: Fixed water resetting itself in the room 24 (B2) of the Forest Temple (#4).
 	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
@@ -365,6 +365,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
 	ADD: Added all the missing animations for the three tunics (#27).
+	ADD: Added a star switch manager script to use one function for all hole switchs (#152).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -374,8 +375,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Remade the introduction cinematic slides (#86).
 	CHG: Improved the shovel usability (#26).
 	CHG: Moved hero animations into specific folders (#27).
-	CHG: Grouped hero animations into one file instead of different ones for each tunic (#27).
+	CHG: Grouped hero animations into one file instead of different ones for each tunic (#47).
 	CHG: Unified the "dialogue_id" property for all signs (#34).
+	CHG: Moved small key and clock HUD positions.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -384,14 +386,26 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed an "invalid destination side" crash when entering the Hyrule Town library (#136).
 	FIX: Fixed missing NPC soldiers issues at some quest steps.
 	FIX: Fixed the hammer stake being down before Link hits it (#142).
+	FIX: Fixed Agahnim being spelled wrong.
+	FIX: Fixed missing animations for other tunics (#47).
+	FIX: Fixed a missing sword shield sprites crash (#154).
+	FIX: Fixed a lava plunging sound playing when entering the ground floor in the Dodongo's Cavern (#157).
+	FIX: Fixed Hyrule Castle music being played at the beginning of the game at the ground floor (#158).
+	FIX: Fixed the player's name not being displayed in one dialogue in the intro cutscene (#156).
+	FIX: Fixed a wrong teletransporter linking in the Hyrule Town (#155).
+	FIX: Fixed a missing NPC sprite in the Hyrule Town inn (#160).
+	FIX: Fixed the purple house door being misplaced in the Hyrule Town.
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
+	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
+	REM: Removed the old unused dialogue box script.
+	REM: Removed unused *.zip tileset files.
 	TDO: Setup the quest files for the Solarus launcher.
-	TDO: Rescript the feather.
+	TDO: Rescript the feather (#144).
 	TDO: Fix Bari enemies animation not being accurate to ALTTP (#143).
 	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
-	TDO: Fix "Illegal direction for sprite 'hero/diving' in animation 'walking'" (#147).
+	TDO: Fix the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
@@ -400,10 +414,11 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
-	TDO: Fix not enough memory issues on MacOS (#39).
+	TDO: Fix low memory issues on MacOS (#39).
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
+	TDO: Fix the world map background not being loaded sometimes (#153).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Remove work *.xcf and *.psd files from the data files.
@@ -416,7 +431,6 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Fix victory animation not being synchronised with Link movement (#10).
 	TDO: Clean up unused files (#98).
 	TDO: Fix Link being invisible after fighting boss (#16).
-	TDO: Fix missing animations for other tunics (#47).
 	TDO: Update the title screen (#50).
 	TDO: Change the Master Sword sprite on the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
