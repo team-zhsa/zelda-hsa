@@ -69647,6 +69647,116 @@ tile{
   pattern = "262",
 }
 
+tile{
+  layer = 0,
+  x = 456,
+  y = 384,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 560,
+  width = 8,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 488,
+  y = 560,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 384,
+  width = 8,
+  height = 16,
+  pattern = "3",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 808,
+  y = 568,
+  width = 8,
+  height = 16,
+  pattern = "3",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 624,
+  width = 8,
+  height = 16,
+  pattern = "4",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 648,
+  y = 624,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 560,
+  width = 8,
+  height = 16,
+  pattern = "5",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 424,
+  y = 560,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 776,
+  y = 160,
+  width = 8,
+  height = 16,
+  pattern = "6",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 0,
+  x = 768,
+  y = 160,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
 jumper{
   layer = 0,
   x = 600,
@@ -71481,14 +71591,6 @@ destination{
   direction = 3,
 }
 
-destination{
-  name = "from_fairy",
-  layer = 0,
-  x = 336,
-  y = 581,
-  direction = 3,
-}
-
 npc{
   name = "owl",
   layer = 0,
@@ -71527,7 +71629,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/fairy_cave_1",
+  destination_map = "inside/caves/mountains/to_west_upper_mountains_1f",
   destination = "from_outside",
 }
 
@@ -71539,6 +71641,38 @@ jumper{
   height = 8,
   direction = 6,
   jump_length = 56,
+}
+
+destination{
+  name = "from_cave_to_upper_mountain_3",
+  layer = 0,
+  x = 336,
+  y = 581,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 800,
+  y = 584,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/mountains/fairy_cave_1",
+  destination = "from_outside",
+}
+
+destination{
+  name = "from_fairy",
+  layer = 0,
+  x = 808,
+  y = 613,
+  direction = 3,
 }
 
 tile{
@@ -71593,5 +71727,95 @@ tile{
   width = 16,
   height = 8,
   pattern = "12488",
+}
+
+tile{
+  layer = 2,
+  x = 304,
+  y = 920,
+  width = 8,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 296,
+  y = 920,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 80,
+  y = 520,
+  width = 8,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 72,
+  y = 520,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 360,
+  y = 656,
+  width = 8,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 352,
+  y = 656,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 336,
+  y = 536,
+  width = 8,
+  height = 16,
+  pattern = "2",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 328,
+  y = 536,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
+}
+
+tile{
+  layer = 2,
+  x = 800,
+  y = 568,
+  width = 8,
+  height = 16,
+  pattern = "1",
+  tileset = "outside_special",
 }
 

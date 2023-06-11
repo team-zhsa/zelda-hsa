@@ -1,4 +1,4 @@
--- Lua script of map dungeon_6/1f.
+-- Lua script of map inside/houses/zora_forest/forest_hideout.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -10,19 +10,15 @@
 local map = ...
 local game = map:get_game()
 
--- Event called at initialization time, as soon as this map becomes is loaded.
+-- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
-  -- You can initialise the movement and sprites of various
+  -- You can initialize the movement and sprites of various
   -- map entities here.
 end
 
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
 function map:on_opening_transition_finished()
-
-end
-
-for npc in map:get_entities("water_level_down_") do
 
 end

@@ -3638,6 +3638,22 @@ tile{
   pattern = "ceiling.1",
 }
 
+destination{
+  name = "from_b1_1",
+  layer = -1,
+  x = 840,
+  y = 1389,
+  direction = 1,
+}
+
+stairs{
+  layer = -1,
+  x = 832,
+  y = 1376,
+  direction = 3,
+  subtype = 1,
+}
+
 dynamic_tile{
   name = "water_dynamic_0_0_1",
   layer = -1,
@@ -3708,20 +3724,6 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
-}
-
-door{
-  name = "door_33_s",
-  layer = -1,
-  x = 832,
-  y = 1376,
-  direction = 3,
-  sprite = "entities/doors/inside/door_d1_small_key",
-  savegame_variable = "dungeon_6_0f_door_33",
-  opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_6_small_keys",
-  opening_condition_consumed = true,
-  cannot_open_dialog = "_cannot_open_without_small_key",
 }
 
 stairs{
@@ -3958,6 +3960,56 @@ enemy{
   direction = 0,
   breed = "dungeons/hover",
   treasure_name = "random_west",
+}
+
+destination{
+  name = "from_b1_2",
+  layer = -1,
+  x = 872,
+  y = 1021,
+  direction = 1,
+}
+
+teletransporter{
+  layer = -1,
+  x = 864,
+  y = 1008,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/6/b1",
+  destination = "from_0f_2",
+}
+
+teletransporter{
+  layer = -1,
+  x = 832,
+  y = 1376,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/6/b1",
+  destination = "from_0f_1",
+}
+
+door{
+  name = "door_33_s",
+  layer = -1,
+  x = 832,
+  y = 1376,
+  direction = 3,
+  sprite = "entities/doors/inside/door_d1_small_key",
+  savegame_variable = "dungeon_6_0f_door_33",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_6_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
+}
+
+stairs{
+  layer = -1,
+  x = 864,
+  y = 1008,
+  direction = 1,
+  subtype = 1,
 }
 
 tile{
@@ -15287,14 +15339,14 @@ tile{
   x = 832,
   y = 1240,
   width = 32,
-  height = 32,
+  height = 48,
   pattern = "floor_low.6-1",
 }
 
 tile{
   layer = 0,
   x = 832,
-  y = 1272,
+  y = 1288,
   width = 32,
   height = 8,
   pattern = "hole.1",
@@ -15303,7 +15355,7 @@ tile{
 tile{
   layer = 0,
   x = 864,
-  y = 1272,
+  y = 1288,
   width = 8,
   height = 8,
   pattern = "hole.corner_reverse.1",
@@ -15312,7 +15364,7 @@ tile{
 tile{
   layer = 0,
   x = 824,
-  y = 1272,
+  y = 1288,
   width = 8,
   height = 8,
   pattern = "hole.corner_reverse.2",
@@ -15321,7 +15373,7 @@ tile{
 tile{
   layer = 0,
   x = 824,
-  y = 1264,
+  y = 1280,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
@@ -15339,7 +15391,7 @@ tile{
 tile{
   layer = 0,
   x = 864,
-  y = 1264,
+  y = 1280,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
@@ -15359,7 +15411,7 @@ tile{
   x = 824,
   y = 1248,
   width = 8,
-  height = 16,
+  height = 32,
   pattern = "barrier.2-1",
 }
 
@@ -15368,7 +15420,7 @@ tile{
   x = 864,
   y = 1248,
   width = 8,
-  height = 16,
+  height = 32,
   pattern = "barrier.2-1",
 }
 
@@ -16767,6 +16819,15 @@ tile{
   pattern = "door.1.support.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 832,
+  y = 1264,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
 destructible{
   name = "auto_destructible_13",
   layer = 0,
@@ -17051,9 +17112,10 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 1336,
-  y = 573,
+  x = 864,
+  y = 1317,
   direction = 1,
+  default = true,
 }
 
 custom_entity{
@@ -17625,6 +17687,7 @@ wall{
 }
 
 chest{
+  name = "chest_23_map",
   layer = 0,
   x = 1544,
   y = 773,
@@ -17694,7 +17757,7 @@ stream{
   x = 1400,
   y = 701,
   direction = 2,
-  sprite = "entities/streams/conveyor_belt1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18107,6 +18170,7 @@ stream{
 }
 
 chest{
+  name = "chest_18_small_key",
   layer = 0,
   x = 1816,
   y = 605,
@@ -18199,7 +18263,7 @@ stream{
   x = 1416,
   y = 701,
   direction = 2,
-  sprite = "entities/streams/conveyor_belt1",
+  sprite = "entities/streams/current1",
   speed = 88,
 }
 
@@ -18447,7 +18511,7 @@ enemy{
   x = 776,
   y = 1341,
   direction = 0,
-  breed = "dungeons/pike_fixed",
+  breed = "dungeons/pike_auto",
 }
 
 teletransporter{
@@ -19863,6 +19927,54 @@ destructible{
   can_be_cut = true,
 }
 
+crystal_block{
+  layer = 0,
+  x = 736,
+  y = 1344,
+  width = 16,
+  height = 16,
+  subtype = 1,
+}
+
+door{
+  name = "door_27_s",
+  layer = 0,
+  x = 840,
+  y = 1160,
+  direction = 3,
+  sprite = "entities/doors/inside/door_d1_normal",
+  savegame_variable = "dungeon_6_0f_door_27_33",
+  opening_condition = "dungeon_6_small_keys",
+  opening_condition_consumed = true,
+}
+
+door{
+  name = "door_33_n",
+  layer = 0,
+  x = 840,
+  y = 1224,
+  direction = 1,
+  sprite = "entities/doors/inside/door_d1_normal",
+  savegame_variable = "dungeon_6_0f_door_27_33",
+  opening_condition = "dungeon_6_small_keys",
+  opening_condition_consumed = true,
+}
+
+crystal{
+  layer = 0,
+  x = 856,
+  y = 1277,
+}
+
+sensor{
+  name = "sensor_33_door",
+  layer = 0,
+  x = 840,
+  y = 1253,
+  width = 32,
+  height = 16,
+}
+
 tile{
   layer = 1,
   x = 568,
@@ -20692,6 +20804,15 @@ tile{
 }
 
 tile{
+  layer = 1,
+  x = 832,
+  y = 1248,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
   layer = 2,
   x = 896,
   y = 704,
@@ -21151,14 +21272,6 @@ tile{
 }
 
 separator{
-  layer = 2,
-  x = 952,
-  y = 960,
-  width = 16,
-  height = 480,
-}
-
-separator{
   name = "auto_separator_1",
   layer = 2,
   x = 1272,
@@ -21182,14 +21295,6 @@ separator{
   y = 480,
   width = 16,
   height = 720,
-}
-
-separator{
-  layer = 2,
-  x = 640,
-  y = 232,
-  width = 640,
-  height = 16,
 }
 
 separator{
@@ -21220,22 +21325,7 @@ separator{
 }
 
 separator{
-  layer = 2,
-  x = 0,
-  y = 1192,
-  width = 1280,
-  height = 16,
-}
-
-separator{
-  layer = 2,
-  x = 1280,
-  y = 712,
-  width = 640,
-  height = 16,
-}
-
-separator{
+  name = "auto_separator_3",
   layer = 2,
   x = 952,
   y = 0,
@@ -21244,10 +21334,29 @@ separator{
 }
 
 separator{
+  name = "auto_separator_4",
   layer = 2,
-  x = 1592,
-  y = 480,
+  x = 952,
+  y = 960,
   width = 16,
-  height = 480,
+  height = 240,
+}
+
+separator{
+  name = "auto_separator_8",
+  layer = 2,
+  x = 0,
+  y = 1192,
+  width = 1280,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_9",
+  layer = 2,
+  x = 1280,
+  y = 712,
+  width = 640,
+  height = 16,
 }
 

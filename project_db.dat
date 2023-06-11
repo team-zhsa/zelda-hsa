@@ -115,7 +115,7 @@ map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Bas
 map{ id = "inside/caves/mountains/lost_old_man", description = "Lost old man cave" }
 map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/spectacle_rock_b1", description = "Spectacle Rock (Basement 1)" }
-map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to fire temple" }
+map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to the Fire Temple" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to Spectacle Rock (Ground Floor)" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_1f", description = "Cave to Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_b1", description = "Cave to Spectacle Rock (Basement 1)" }
@@ -131,6 +131,7 @@ map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupee
 map{ id = "inside/caves/south_field/vah_naboris_fairy_cave", description = "Vah'Naboris Fairy Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
+map{ id = "inside/caves/zora_forest/domain_entrance_cave", description = "Domain Entrace Cave" }
 map{ id = "inside/caves/zora_forest/river_cave", description = "River Cave" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia_town/green_hut", description = "Green Hut" }
@@ -175,6 +176,7 @@ map{ id = "inside/houses/south_field/flower_house", description = "Flower House"
 map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost Woods Map House" }
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
 map{ id = "inside/houses/zora_forest/camper_house", description = "Camper's House" }
+map{ id = "inside/houses/zora_forest/forest_hideout", description = "Forest Hideout" }
 map{ id = "inside/houses/zora_forest/red_hut", description = "Red Hut" }
 map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
@@ -350,9 +352,9 @@ tileset{ id = "us", description = "US City" }
 sprite{ id = "console/cursor", description = "Cursor" }
 sprite{ id = "console/icons", description = "Icons" }
 sprite{ id = "enemies/arrow", description = "Arrow" }
-sprite{ id = "enemies/boss/agahnim", description = "Aganhim" }
-sprite{ id = "enemies/boss/agahnim_fake", description = "Aganhim (Fake)" }
-sprite{ id = "enemies/boss/agahnim_lightning", description = "Aganhim lightning" }
+sprite{ id = "enemies/boss/agahnim", description = "Agahnim" }
+sprite{ id = "enemies/boss/agahnim_fake", description = "Agahnim (Fake)" }
+sprite{ id = "enemies/boss/agahnim_lightning", description = "Agahnim lightning" }
 sprite{ id = "enemies/boss/armos_big", description = "Big Armos" }
 sprite{ id = "enemies/boss/armos_knight", description = "Armos knight" }
 sprite{ id = "enemies/boss/desert_lanmola", description = "Desert Lanmola" }
@@ -2168,6 +2170,8 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "The Unkn
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/river_cave.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/river_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Unknown", }
@@ -2198,6 +2202,8 @@ file{ path = "maps/inside/houses/north_west_castle/red_house.dat", author = "The
 file{ path = "maps/inside/houses/north_west_castle/red_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_forest/forest_hideout.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/zora_forest/forest_hideout.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/red_hut.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/red_hut.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/shop.dat", author = "The Unknown", }

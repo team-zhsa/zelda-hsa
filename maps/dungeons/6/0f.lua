@@ -28,6 +28,7 @@ function map:on_started(destination)
 		tile:set_enabled(false)
 	end
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
+	map:set_doors_open("door_33_n")
 end
 
 
@@ -62,6 +63,11 @@ function map:set_water_level(level)
 			tile:set_enabled(false)
 		end
 end
+
+sensor_33_door:register_event("on_activated", function()
+	map:close_doors("door_33_n")
+end)
+
 	--[[ Water level lower than wanted level: raise water level
 	if current_water_level > level then
 		local water_animation_step_index = -1

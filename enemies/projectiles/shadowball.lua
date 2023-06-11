@@ -1,4 +1,4 @@
--- Shadowball projectile, mainly used by the Aghanim enemy.
+-- Shadowball projectile, mainly used by the Agahnim enemy.
 
 local enemy = ...
 local common_action = require("enemies/lib/common_actions")
