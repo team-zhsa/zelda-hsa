@@ -26,10 +26,35 @@ map:register_event("on_started", function()
 	treasure_manager:appear_chest_when_enemies_dead(map, "enemy_30_", "chest_30_rupees")
 
 	-- Doors
+	map:set_doors_open("door_10_n", true)
 	map:set_doors_open("door_30_w", true)
 	map:set_doors_open("door_30_s", true)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_w", sound)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_s", sound)
+end)
+
+sensor_10_door_1:register_event("on_activated", function()
+	map:close_doors("door_10_n")
+end)
+
+sensor_10_door_2:register_event("on_activated", function()
+	map:set_doors_open("door_10_n", false)
+end)
+
+sensor_10_door_3:register_event("on_activated", function()
+	map:set_doors_open("door_10_n", false)
+end)
+
+sensor_10_door_4:register_event("on_activated", function()
+	map:set_doors_open("door_10_n", false)
+end)
+
+sensor_10_door_5:register_event("on_activated", function()
+	map:set_doors_open("door_10_n", true)
+end)
+
+sensor_10_door_6:register_event("on_activated", function()
+	map:set_doors_open("door_10_n", true)
 end)
 
 for sensor in map:get_entities("sensor_30_door_") do
