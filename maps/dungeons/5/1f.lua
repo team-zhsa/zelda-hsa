@@ -71,6 +71,49 @@ for sensor in map:get_entities("sensor_20_floor_a_") do
 	end)
 end
 
+function collapse_tiles_5()
+	local i = 1
+	collapse_timer = sol.timer.start(map, 1000, function() -- real tile
+		local collapsing_tile = map:get_entity("collapsing_tile_5_"..i)
+		local collapsing_entity = map:get_entity("collapsing_entity_5_"..i)
+		collapsing_tile:set_enabled(false)
+		collapsing_entity:set_visible(true)-- C.E. for animation
+		local sprite = collapsing_entity:get_sprite()
+		sprite:set_animation("destroy")
+		i = i + 1
+		if collapsing_tile == nil then return false end
+		return true
+	end)
+end
+
+function appear_tiles_5()
+	if collapse_timer ~= nil then collapse_timer:stop() end
+	for entity in map:get_entities("collapsing_entity_5_") do -- C.E. for animation
+		entity:set_visible(false)
+	end
+	for tile in map:get_entities("collapsing_tile_5_") do
+		tile:set_enabled(true)
+	end
+end
+
+for sensor in map:get_entities("sensor_5_tile_") do
+	sensor:register_event("on_activated", function()
+		sol.timer.start(map, 500, function()
+			collapse_tiles_5()
+		end)
+		sensor_5_tile_1:set_enabled(false)
+	end)
+end
+
+for sensor in map:get_entities("sensor_7_sensor_") do
+  -- Enables the sensors to close the doors
+  sensor:register_event("on_activated", function()
+    for sensor in map:get_entities("sensor_7_tile_") do
+      sensor:set_enabled(true)
+			appear_tiles_7()
+    end
+  end)
+end
 
 function collapse_tiles_7()
 	local i = 1
