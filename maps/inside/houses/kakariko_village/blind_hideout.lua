@@ -17,6 +17,6 @@ function map:on_started()
   -- map entities here.
 end
 
-npc_blind_hideout:register_event("on_interaction", fucntion()
+npc_blind_hideout:register_event("on_interaction", function()
 	
 end)

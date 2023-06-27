@@ -7238,6 +7238,15 @@ tile{
   pattern = "stairs_inner_up.3.border.2-2",
 }
 
+tile{
+  layer = -1,
+  x = 1152,
+  y = 864,
+  width = 16,
+  height = 16,
+  pattern = "pillar.bottom",
+}
+
 teletransporter{
   layer = -1,
   x = 104,
@@ -25433,6 +25442,105 @@ tile{
   pattern = "stairs_inner_up.3.top.border.2-2",
 }
 
+tile{
+  layer = 0,
+  x = 1152,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "pillar.top",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 680,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1168,
+  y = 680,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 680,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 752,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1168,
+  y = 752,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1152,
+  y = 752,
+  width = 16,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 736,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 696,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 688,
+  width = 8,
+  height = 8,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1144,
+  y = 744,
+  width = 8,
+  height = 8,
+  pattern = "barrier.2-1",
+}
+
 dynamic_tile{
   name = "tile_20_switch_b_1",
   layer = 0,
@@ -27441,6 +27549,18 @@ sensor{
   y = 117,
   width = 16,
   height = 16,
+}
+
+switch{
+  name = "switch_15_door_7",
+  layer = 0,
+  x = 1152,
+  y = 848,
+  subtype = "solid",
+  sprite = "entities/switches/solid_switch",
+  sound = "objects/switch_crystal_hit",
+  needs_block = false,
+  inactivate_when_leaving = false,
 }
 
 tile{
