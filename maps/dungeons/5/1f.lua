@@ -52,11 +52,13 @@ for i = 1,7 do
 			and game:get_value("dungeon_5_1f_switch_15_3") and game:get_value("dungeon_5_1f_switch_15_4")
 			and game:get_value("dungeon_5_1f_switch_15_5") and game:get_value("dungeon_5_1f_switch_15_6")
 			and game:get_value("dungeon_5_1f_switch_15_7") then
-				
+				lauch_staircase_15_cutscene()
 			end
 		end)
 	end
 end
+
+
 
 -- Door events
 sensor_10_door_1:register_event("on_activated", function()
