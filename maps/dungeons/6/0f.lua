@@ -68,6 +68,23 @@ sensor_33_door:register_event("on_activated", function()
 	map:close_doors("door_33_n")
 end)
 
+--[[
+
+raise water level
+
+d001 02 03
+d011 12 13
+s021 22 23
+
+lower water level
+s021 22 23
+d011 12 13
+d001 02 03
+
+
+]]
+
+
 	--[[ Water level lower than wanted level: raise water level
 	if current_water_level > level then
 		local water_animation_step_index = -1
