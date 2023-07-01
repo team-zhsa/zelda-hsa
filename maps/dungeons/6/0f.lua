@@ -29,73 +29,72 @@ function map:on_started(destination)
 	end
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
 	map:set_doors_open("door_33_n")
-	map:switch_water_level()
+	map:lower_water_level()
 end
 
-function map:switch_water_level()
+function map:lower_water_level()
 	local water_delay = 500
 	local current_water_level = game:get_value("dungeon_6_water_level")
 	local water_tile_dynamic_id = "water_dynamic_"
-	if game:get_value("dungeon_6_water_level") == "up" then
-		local water_animation_step_index = 3
-		sol.timer.start(water_delay, function()
-			local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
-			local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
-			for tile in map:get_entities(current_tile_id) do
-				if tile ~= nil then
-					tile:set_enabled(false)
-					print("disable curr tile"..current_tile_id)
-				end
+	local water_animation_step_index = 3
+	sol.timer.start(mpa, water_delay, function()
+		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
+		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
+		for tile in map:get_entities(current_tile_id) do
+			if tile ~= nil then
+				tile:set_enabled(false)
+				print("disable curr tile"..current_tile_id)
 			end
-			for tile in map:get_entities(next_tile_id) do
-				if tile ~= nil then
-					tile:set_enabled(true)
-					print("enable next tile"..next_tile_id)
-				end
+		end
+		for tile in map:get_entities(next_tile_id) do
+			if tile ~= nil then
+				tile:set_enabled(true)
+				print("enable next tile"..next_tile_id)
 			end
-			water_animation_step_index = water_animation_step_index + 1
-			game:set_value("dungeon_6_water_level", "down")
-			while water_animation_step_index > -1 do
-				return true
-			end
-		end)
-	elseif game:get_value("dungeon_6_water_level") == "down" then
-		local water_animation_step_index = -1
-		sol.timer.start(water_delay, function()
-			local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
-			local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index + 1).."_"
-			for tile in map:get_entities(current_tile_id) do
-				if tile ~= nil then
-					tile:set_enabled(false)
-					print("disable curr tile"..current_tile_id)
-				end
-			end
-			for tile in map:get_entities(next_tile_id) do
-				if tile ~= nil then
-					tile:set_enabled(true)
-					print("enable next tile"..next_tile_id)
-				end
-			end
-			water_animation_step_index = water_animation_step_index + 1
-			game:set_value("dungeon_6_water_level", "up")
-			while water_animation_step_index < 2 do
-				return true
-			end
-		end)
-	end
+		end
+		water_animation_step_index = water_animation_step_index - 1
+		if water_animation_step_index == -1 then
+			return false
+		end
+		game:set_value("dungeon_6_water_level", "down")
+		return true
+	end)
 end
 
+function map:raise_water_level()
+	local water_delay = 500
+	local current_water_level = game:get_value("dungeon_6_water_level")
+	local water_tile_dynamic_id = "water_dynamic_"
+	local water_animation_step_index = -1
+	sol.timer.start(map, water_delay, function()
+		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
+		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index + 1).."_"
+		for tile in map:get_entities(current_tile_id) do
+			if tile ~= nil then
+				tile:set_enabled(false)
+				print("disable curr tile"..current_tile_id)
+			end
+		end
+		for tile in map:get_entities(next_tile_id) do
+			if tile ~= nil then
+				tile:set_enabled(true)
+				print("enable next tile"..next_tile_id)
+			end
+		end
+		water_animation_step_index = water_animation_step_index + 1
+		if water_animation_step_index == 3 then
+			return false
+		end
+		game:set_value("dungeon_6_water_level", "up")
+		return true
+	end)
+end
 
-
-function map:set_water_level(level)
-
-	--local water_tile_level = level
-	-- Water level lower than wanted level: raise water level
-	print(level)
-	if level == "down" then
-
-	elseif level == "up" then
-
+function map:switch_water_level()
+	if game:get_value("dungeon_6_water_level") == "up" then
+		map:lower_water_level()
+	elseif game:get_value("dungeon_6_water_level") == "down" then
+		map:raise_water_level()
 	end
 end
 
