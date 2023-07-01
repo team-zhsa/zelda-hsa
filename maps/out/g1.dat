@@ -83147,6 +83147,15 @@ tile{
   tileset = "outside_special",
 }
 
+tile{
+  layer = 0,
+  x = 1152,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 jumper{
   layer = 0,
   x = 0,
@@ -84339,6 +84348,25 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/g8",
   destination = "_side",
+}
+
+npc{
+  layer = 0,
+  x = 1160,
+  y = 205,
+  properties = {
+    {
+      key = "dialogue_id",
+      value = "maps.out.east_mountains.sign_3",
+    },
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 tile{
