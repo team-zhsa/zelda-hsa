@@ -20,13 +20,14 @@ local cannonball_manager = require("scripts/maps/cannonball_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
-	if destination:get_name() == "from_outside" then map:set_water_level(1) end
-	for tile in map:get_entities("water_dynamic_") do
+	if destination:get_name() == "from_outside" then map:lower_water_level() end
+	--[[
+		for tile in map:get_entities("water_dynamic_") do
 		tile:set_enabled(false)
 	end
 	for tile in map:get_entities("water_static_") do
 		tile:set_enabled(false)
-	end
+	end--]]
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
 	map:set_doors_open("door_33_n")
 	map:lower_water_level()
@@ -36,7 +37,7 @@ function map:lower_water_level()
 	local water_delay = 500
 	local current_water_level = game:get_value("dungeon_6_water_level")
 	local water_tile_dynamic_id = "water_dynamic_"
-	local water_animation_step_index = 3
+	local water_animation_step_index = 2
 	sol.timer.start(mpa, water_delay, function()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
@@ -82,7 +83,7 @@ function map:raise_water_level()
 			end
 		end
 		water_animation_step_index = water_animation_step_index + 1
-		if water_animation_step_index == 3 then
+		if water_animation_step_index == 2 then
 			return false
 		end
 		game:set_value("dungeon_6_water_level", "up")
@@ -122,6 +123,10 @@ handle_4_water_2:register_event("on_released", function()
 end)
 
 handle_9_water:register_event("on_released", function()
+	map:switch_water_level()
+end)
+
+handle_18_water:register_event("on_released", function()
 	map:switch_water_level()
 end)
 
@@ -169,10 +174,6 @@ handle_17_water_4:register_event("on_released", function()
 	end
 end)
 
-handle_18_water:register_event("on_released", function()
-	if map:get_water_level("up") then map:set_water_level("down")
-	elseif map:get_water_level("down") then map:set_water_level("up") end
-end)
 
 --[[ Water levels info:
 static_water_X_N means that the Nth static water tile is enabled when the water level is at X (0 being the highest).
