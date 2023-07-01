@@ -2203,6 +2203,66 @@ Alors va-t-en !
 }
 
 dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_finished",
+  text = [[
+Aaargh.$0.$0.$0 Maudit sois-tu !$0
+Enfin je me dois de te féliciter,
+ce n'était pas une mince affaire.
+Tu trouveras donc dans le temple
+l'ennemi qui sème la pagaille
+dans tout le village : Mothula.
+Fais bien attention à ses
+terribles pouvoirs de feu et de vent.$0
+La baguette de vent qui s'y cache
+te permettra de le contrer.$0
+Nous avons décidé d’abriter le
+Sage du Vent dans ce temple.
+Sauras-tu le retrouver ?
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_no",
+  text = [[
+Si tu changes d'avis,
+reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_welcome",
+  question = "1",
+  text = [[
+Bonjour $v, je suis Varuna,
+le champion des Piafs.
+
+Au centre de ce village se
+trouve le Temple de l'Air.$0 Il est
+le lieu le plus saint pour les Piafs.
+Pour y rentrer tu dois passer
+un examen dont la rudesse n'a
+d’égale que sa renommée
+pour notre peuple :
+le Tournoi du Plus Fort.
+
+Seule une personne l'a remporté
+depuis sa création et tu l'as
+devant toi !!!
+Souhaites-tu t'y mesurer?
+Oui !
+Non
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_yes",
+  text = [[
+Parfait ! $0
+Débutons alors !
+]],
+}
+
+dialog{
   id = "maps.dungeons.1.boss_welcome",
   text = [[
 Je suis TENTACLOPO, le maître
@@ -4793,6 +4853,14 @@ Vill. des Animaux
 }
 
 dialog{
+  id = "maps.out.death_mountains.sign_2",
+  text = [[
+Est : Enfin !
+Vill. des Animaux
+]],
+}
+
+dialog{
   id = "maps.out.east_castle.master_sword_obtained",
   text = [[
 $2$v...$0 $v...$0 $v...$0
@@ -4915,7 +4983,11 @@ Ouest : Pic César
 dialog{
   id = "maps.out.east_mountains.sign_3",
   text = [[
-Est : Village des Animaux
+Aucune vie n'est possible à
+cette hauteur en temps normal !
+
+Il y a peut être un sage en
+haut de cette tour !
 ]],
 }
 
