@@ -1,7 +1,7 @@
 local water_level_manager = {}
 
 function water_level_manager:switch_water_level(map)
-
+  local game = map:get_game()
 	if game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "up" then
 		water_level_manager:lower_water_level(map)
 	elseif game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "down" then
@@ -13,7 +13,12 @@ function water_level_manager:lower_water_level(map)
 	local water_tile_dynamic_id = "water_dynamic_"
 	local water_animation_step_index = 2
   local water_delay = 500
+  local game = map:get_game()
+  local hero = map:get_hero()
+  sol.audio.play_sound("environment/water_level/start")
+  sol.audio.play_sound("environment/water_level/loop")
 	sol.timer.start(map, water_delay, function()
+    hero:freeze()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
 		for tile in map:get_entities(current_tile_id) do
@@ -30,7 +35,8 @@ function water_level_manager:lower_water_level(map)
 		end
 		water_animation_step_index = water_animation_step_index - 1
 		if water_animation_step_index == -1 then
-			return false
+			hero:unfreeze()
+      return false
 		end
 		game:set_value("dungeon_6_water_level", "down")
 		return true
@@ -41,7 +47,12 @@ function water_level_manager:raise_water_level(map)
 	local water_tile_dynamic_id = "water_dynamic_"
 	local water_animation_step_index = -1
   local water_delay = 500
+  local game = map:get_game()
+  local hero = map:get_hero()
+  sol.audio.play_sound("environment/water_level/start")
+  sol.audio.play_sound("environment/water_level/loop")
 	sol.timer.start(map, water_delay, function()
+    hero:freeze()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index + 1).."_"
 		for tile in map:get_entities(current_tile_id) do
@@ -58,6 +69,7 @@ function water_level_manager:raise_water_level(map)
 		end
 		water_animation_step_index = water_animation_step_index + 1
 		if water_animation_step_index == 2 then
+      hero:unfreeze()
 			return false
 		end
 		game:set_value("dungeon_6_water_level", "up")
