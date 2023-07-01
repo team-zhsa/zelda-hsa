@@ -30,10 +30,6 @@ sensor_33_door:register_event("on_activated", function()
 	map:close_doors("door_33_n")
 end)
 
-function map:get_water_level()
-	return game:get_value("dungeon_6_water_level")
-end
-
 npc_18_hint:register_event("on_interaction", function()
 	game:start_dialog("maps.dungeons.6.hint_1", game:get_player_name())
 end)

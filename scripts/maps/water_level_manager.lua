@@ -77,4 +77,9 @@ function water_level_manager:raise_water_level(map)
 	end)
 end
 
+function water_level_manager:get_water_level(map)
+  local game = map:get_game()
+	return game:get_value("dungeon_6_water_level")
+end
+
 return water_level_manager

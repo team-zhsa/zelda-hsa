@@ -2096,13 +2096,25 @@ redonne de la vie.
 }
 
 dialog{
-  id = "maps.caves.goron.ascii",
+  id = "maps.caves.goron_town.darumaruk_dodongos_cavern",
   text = [[
+Ah, mon p’tit si tu veux sauver
+ce village, rends-toi à la
+Caverne Dodongo.
+Tu y trouveras le monarque
+de nos ennemis jurés, les
+Dodongos.
+Ces saletés détiennent le sage
+du feu.$0 J’ai indiqué l'empla-
+cement de la caverne sur ta
+carte.$0
+Prends garde aux monstres sur
+ton chemin !$0 J’compte sur toi...
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.generic_1",
+  id = "maps.caves.goron_town.generic_1",
   text = [[
 Salut Hylien !
 Je me sens si bien
@@ -2111,14 +2123,14 @@ dans ce rocher !
 }
 
 dialog{
-  id = "maps.caves.goron.generic_2",
+  id = "maps.caves.goron_town.generic_2",
   text = [[
 Salut !
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.generic_3",
+  id = "maps.caves.goron_town.generic_3",
   text = [[
 Un goron, ça mange
 des rochers ! Tu 
@@ -2127,14 +2139,14 @@ le savais, toi ?
 }
 
 dialog{
-  id = "maps.caves.goron.generic_4",
+  id = "maps.caves.goron_town.generic_4",
   text = [[
 Comment vas-tu ?
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.rock_ask",
+  id = "maps.caves.goron_town.rock_ask",
   question = "1",
   text = [[
 Salut ! J'aurais besoin de 
@@ -2147,7 +2159,7 @@ Non.
 }
 
 dialog{
-  id = "maps.caves.goron.rock_no",
+  id = "maps.caves.goron_town.rock_no",
   text = [[
 Bon, tant pis. Une
 autre fois, peut-
@@ -2156,7 +2168,7 @@ autre fois, peut-
 }
 
 dialog{
-  id = "maps.caves.goron.rock_yes",
+  id = "maps.caves.goron_town.rock_yes",
   text = [[
 Super ! Descends au
 dernier sous-sol de
@@ -2187,6 +2199,66 @@ dialog{
   id = "maps.caves.hyrule_town.lamp_cave.wizard_magic_bar_no",
   text = [[
 Alors va-t-en !
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_finished",
+  text = [[
+Aaargh.$0.$0.$0 Maudit sois-tu !$0
+Enfin je me dois de te féliciter,
+ce n'était pas une mince affaire.
+Tu trouveras donc dans le temple
+l'ennemi qui sème la pagaille
+dans tout le village : Mothula.
+Fais bien attention à ses
+terribles pouvoirs de feu et de vent.$0
+La baguette de vent qui s'y cache
+te permettra de le contrer.$0
+Nous avons décidé d’abriter le
+Sage du Vent dans ce temple.
+Sauras-tu le retrouver ?
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_no",
+  text = [[
+Si tu changes d'avis,
+reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_welcome",
+  question = "1",
+  text = [[
+Bonjour $v, je suis Varuna,
+le champion des Piafs.
+
+Au centre de ce village se
+trouve le Temple de l'Air.$0 Il est
+le lieu le plus saint pour les Piafs.
+Pour y rentrer tu dois passer
+un examen dont la rudesse n'a
+d’égale que sa renommée
+pour notre peuple :
+le Tournoi du Plus Fort.
+
+Seule une personne l'a remporté
+depuis sa création et tu l'as
+devant toi !!!
+Souhaites-tu t'y mesurer?
+Oui !
+Non
+]],
+}
+
+dialog{
+  id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_yes",
+  text = [[
+Parfait ! $0
+Débutons alors !
 ]],
 }
 
@@ -3947,23 +4019,21 @@ Non
 dialog{
   id = "maps.houses.kakarico_village.library.book_6.content",
   text = [[
-Sur Cocolint,   
-il y a des      
-trous Warp.     
-Téléporte-toi   
-en sautant      
-dedans.         
-Replonge dans   
-le trou d'où    
-tu sors pour    
-être téléporté  
-en succession.  
-Tu ne peux pas  
-te téléporter   
-vers un trou    
-qui n'est pas   
-encore apparu   
-à l'écran !
+Après de nombreuses recherches,
+j'ai enfin découvert l'emplace-
+ment de la Triforce.
+Il serait gravé sur une stèle du
+Temple de la glace au fin fond
+des Pics des Neiges.
+Il s'agit d'une région hostile au
+nord-est d'Hyrule, je ne pense
+pas qu'il y ait beaucoup de vie
+à une si haute altitude.$0
+Il doit y avoir des ennemis
+particulièrement coriaces.$0
+(Peu importe, j'espère que cet
+ouvrage ne tombera jamais entre
+des mains mal intentionnées)
 ]],
 }
 
@@ -3971,7 +4041,7 @@ dialog{
   id = "maps.houses.kakarico_village.library.book_6.question",
   question = "1",
   text = [[
-TELEPORTATION
+Livre mystérieux
 
 
 Tu veux le lire ?
@@ -4781,7 +4851,29 @@ Vill. des Animaux
 }
 
 dialog{
+  id = "maps.out.death_mountains.sign_2",
+  text = [[
+Est : Enfin !
+Vill. des Animaux
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.master_sword_obtained",
+  text = [[
+$2$v...$0 $v...$0 $v...$0
+Tu as enfin recouvré tes
+pouvoirs.
+Il est temps pour toi de sauver
+le Royaume. $0Rends-toi au
+Château d’Hyrule.
+Je crois en toi !
+]],
+}
+
+dialog{
   id = "maps.out.east_castle.sign_1",
+  skip = "all",
   text = [[
 Est : Forge
 Sud : Château d'Hyrule
@@ -4790,6 +4882,7 @@ Sud : Château d'Hyrule
 
 dialog{
   id = "maps.out.east_castle.sign_2",
+  skip = "all",
   text = [[
 Est : Cordinia
 Sud-Ouest : Ranch Lonlon
@@ -4799,6 +4892,7 @@ Ouest : Caverne
 
 dialog{
   id = "maps.out.east_castle.sign_3",
+  skip = "all",
   text = [[
 Nord : Caverne
 Sud : Ranch Lonlon
@@ -4808,6 +4902,7 @@ Ouest : Château d'Hyrule
 
 dialog{
   id = "maps.out.east_castle.sign_4",
+  skip = "all",
   text = [[
 Nord-est : Domaine Zora
 Est : Forge
@@ -4886,7 +4981,11 @@ Ouest : Pic César
 dialog{
   id = "maps.out.east_mountains.sign_3",
   text = [[
-Est : Village des Animaux
+Aucune vie n'est possible à
+cette hauteur en temps normal !
+
+Il y a peut être un sage en
+haut de cette tour !
 ]],
 }
 
@@ -5646,6 +5745,30 @@ n'avons rien préparé.
 }
 
 dialog{
+  id = "maps.out.lost_woods.deku_tree_welcome",
+  text = [[
+$2$v, te voici enfin face à moi.$0
+Les Kokiris ont caché en moi une
+carte et une boussole pour se
+repérer dans mes nombreuses
+racines.
+
+Fais bien attention aux
+puissants monstres présents
+dans le sous-sol.
+Retrouve ici le Sage de la Forêt.
+Ce temple est occupé par Gohma
+et est extrêmement tortueux.
+Tu y trouveras un superbe trésor.
+Utilise-le pour vaincre ton terrible
+adversaire.
+As-tu tout compris ?
+Non, pas du tout !
+Oui.
+]],
+}
+
+dialog{
   id = "maps.out.lost_woods.kaepora_gaebora",
   question = "1",
   text = [[
@@ -5692,12 +5815,12 @@ téléporter ici.
 }
 
 dialog{
-  id = "maps.out.north_field.kaepora_gaebora",
+  id = "maps.out.north_field.kaepora_gaebora_ruins",
   question = "1",
   text = [[
 $2Hou ! C'est moi Kaepora
-Gaebora !$0
-Tu es devant les Ruines !
+Gaebora !$0 Tu es devant
+les Ruines !
 Des monstres tentacules y errent
 et ils sont très dangereux. Tu y
 trouveras une carte et une
@@ -5710,6 +5833,34 @@ du Courage qui y est caché.
 As-tu tout compris ?
 Non, pas du tout !
 Oui
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.kaepora_gaebora_water_temple",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Temple de l’eau !
+Comme dans les donjons
+précédents, tu trouveras une
+carte et une boussole qui te
+permettront de te repérer.$0
+Fais attention, les monstres
+sont plus coriaces qu'avant et
+il y a beaucoup d’eau où tu
+pourrais nager.$0
+
+Trouve le sage de l'Eau.$0
+Ce temple est habité par le
+terrible Morpha et est très
+tortueux, rempli de pièges !$0
+Tu y trouveras le grappin,
+nécessaire pour le vaincre.$0
+Veux-tu que je répète ?
+Oui !
+Non.
 ]],
 }
 
@@ -5801,6 +5952,7 @@ Faites gaffe
 
 dialog{
   id = "maps.out.north_field.sign_2",
+  skip = "all",
   text = [[
 Le Sanctuaire
 ]],
@@ -5808,6 +5960,7 @@ Le Sanctuaire
 
 dialog{
   id = "maps.out.north_field.sign_3",
+  skip = "all",
   text = [[
 Est : Domaine Zora
 Sud : Château
@@ -5817,6 +5970,7 @@ Ouest : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_4",
+  skip = "all",
   text = [[
 Nord : Forge
 Sud-est : Village Gerudo
@@ -5835,6 +5989,7 @@ Sud : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_6",
+  skip = "all",
   text = [[
 Nord : Cimetière
 Est : Sanctuaire
@@ -5845,6 +6000,7 @@ Sud : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_7",
+  skip = "all",
   text = [[
 Vous êtes ici.
 Là : --> *
@@ -5933,6 +6089,25 @@ dialog{
   text = [[
 Nord : Plaine
 Est : Baie de Parapa
+]],
+}
+
+dialog{
+  id = "maps.out.rito_village.kaeopora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu as réussi
+à sauver tous les Sages !
+La bibliothèque du village
+Cocorico recèle un secret
+qui pourrait t'orienter vers
+ta prochaine destination.$0
+Tu devrais y jeter un oeil !
+
+As-tu tout compris ?
+Non !
+Oui.
 ]],
 }
 
@@ -6277,7 +6452,33 @@ Nord : Domaine Zora
 }
 
 dialog{
+  id = "maps.out.zora_village.jabu_jabu_welcome",
+  question = "1",
+  text = [[
+Mon cher $v, je m’excuse par
+avance, mais si tu veux sauver
+ce village, je vais devoir te
+manger. $0Je protège en moi
+le sage de Poison du terrible
+Aargus.
+Pour le vaincre, tu trouveras en
+moi la puissante tunique bleue
+qui réduit tes dégâts reçus de moitié.
+Retrouve-toi dans mon système
+digestif grâce à la carte et la
+boussole cachée par mes
+chers Zoras.$0 Courage Link...
+
+
+Es-tu prêt pour cette mission ?
+Non...
+Bon appétit !
+]],
+}
+
+dialog{
   id = "maps.out.zora_village.sign_1",
+  skip = "all",
   text = [[
 Est : Cascades Zora
 Sud : Village Zora
@@ -6320,6 +6521,22 @@ arriveras !
 }
 
 dialog{
+  id = "maps.out.zora_village.zora_king.jabu_jabu",
+  question = "1",
+  text = [[
+Sire $v, je vous remercie de
+tant vouloir aider mon peuple.
+Je vous invite à rejoindre notre Dieu,
+le grand Jabu-Jabu.$0Il saura
+ce qu’il faut faire. Celui ci se
+trouve dans le village.
+Avez-vous tout compris ?
+Non, pas du tout !
+Oui.
+]],
+}
+
+dialog{
   id = "maps.out.zora_village.zora_king.welcome_has_flippers",
   text = [[
 Ah ! Ah ! Ah ! $0
@@ -6331,6 +6548,18 @@ dans l'eau ?
 
 dialog{
   id = "maps.out.zora_village.zora_king.welcome_no_flippers",
+  text = [[
+Ah ! Ah ! Ah ! $0 Qu'est-ce que
+tu veux, petit ?
+
+T'as quelque chose à me dire ?
+Je veux les palmes !
+Je ne faisais que passer !
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.welcome_no_flippers_copy",
   text = [[
 Ah ! Ah ! Ah ! $0 Qu'est-ce que
 tu veux, petit ?
@@ -6354,15 +6583,6 @@ d'y aller.
 Comme...$0 toi ?
 Non
 Oui
-]],
-}
-
-dialog{
-  id = "quest.butter.no",
-  text = [[
-Bon, tant pis.
-Une autre fois,
-peut-être ?
 ]],
 }
 
