@@ -4019,23 +4019,21 @@ Non
 dialog{
   id = "maps.houses.kakarico_village.library.book_6.content",
   text = [[
-Sur Cocolint,   
-il y a des      
-trous Warp.     
-Téléporte-toi   
-en sautant      
-dedans.         
-Replonge dans   
-le trou d'où    
-tu sors pour    
-être téléporté  
-en succession.  
-Tu ne peux pas  
-te téléporter   
-vers un trou    
-qui n'est pas   
-encore apparu   
-à l'écran !
+Après de nombreuses recherches,
+j'ai enfin découvert l'emplace-
+ment de la Triforce.
+Il serait gravé sur une stèle du
+Temple de la glace au fin fond
+des Pics des Neiges.
+Il s'agit d'une région hostile au
+nord-est d'Hyrule, je ne pense
+pas qu'il y ait beaucoup de vie
+à une si haute altitude.$0
+Il doit y avoir des ennemis
+particulièrement coriaces.$0
+(Peu importe, j'espère que cet
+ouvrage ne tombera jamais entre
+des mains mal intentionnées)
 ]],
 }
 
@@ -4043,7 +4041,7 @@ dialog{
   id = "maps.houses.kakarico_village.library.book_6.question",
   question = "1",
   text = [[
-TELEPORTATION
+Livre mystérieux
 
 
 Tu veux le lire ?
@@ -6095,6 +6093,25 @@ Est : Baie de Parapa
 }
 
 dialog{
+  id = "maps.out.rito_village.kaeopora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu as réussi
+à sauver tous les Sages !
+La bibliothèque du village
+Cocorico recèle un secret
+qui pourrait t'orienter vers
+ta prochaine destination.$0
+Tu devrais y jeter un oeil !
+
+As-tu tout compris ?
+Non !
+Oui.
+]],
+}
+
+dialog{
   id = "maps.out.snowpeaks.sign_1",
   text = [[
 Nord : Boutique des neiges
@@ -6566,15 +6583,6 @@ d'y aller.
 Comme...$0 toi ?
 Non
 Oui
-]],
-}
-
-dialog{
-  id = "quest.butter.no",
-  text = [[
-Bon, tant pis.
-Une autre fois,
-peut-être ?
 ]],
 }
 
