@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/kakariko_village/blind_hideout.
+-- Lua script of map out/l2.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -13,10 +13,12 @@ local game = map:get_game()
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
-  -- You can initialise the movement and sprites of various
+  -- You can initialize the movement and sprites of various
   -- map entities here.
 end
 
-npc_blind_hideout:register_event("on_interaction", function()
-	
-end)
+-- Event called after the opening transition effect of the map,
+-- that is, when the player takes control of the hero.
+function map:on_opening_transition_finished()
+
+end
