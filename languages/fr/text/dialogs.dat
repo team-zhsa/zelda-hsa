@@ -6406,6 +6406,22 @@ arriveras !
 }
 
 dialog{
+  id = "maps.out.zora_village.zora_king.jabu_jabu",
+  question = "1",
+  text = [[
+Sire $v, je vous remercie de
+tant vouloir aider mon peuple.
+Je vous invite à rejoindre notre Dieu,
+le grand Jabu-Jabu.$0Il saura
+ce qu’il faut faire. Celui ci se
+trouve dans le village.
+Avez-vous tout compris ?
+Non, pas du tout !
+Oui.
+]],
+}
+
+dialog{
   id = "maps.out.zora_village.zora_king.welcome_has_flippers",
   text = [[
 Ah ! Ah ! Ah ! $0
@@ -6417,6 +6433,18 @@ dans l'eau ?
 
 dialog{
   id = "maps.out.zora_village.zora_king.welcome_no_flippers",
+  text = [[
+Ah ! Ah ! Ah ! $0 Qu'est-ce que
+tu veux, petit ?
+
+T'as quelque chose à me dire ?
+Je veux les palmes !
+Je ne faisais que passer !
+]],
+}
+
+dialog{
+  id = "maps.out.zora_village.zora_king.welcome_no_flippers_copy",
   text = [[
 Ah ! Ah ! Ah ! $0 Qu'est-ce que
 tu veux, petit ?
