@@ -1,6 +1,5 @@
 local enemy_manager = {}
 
-
 function enemy_manager:execute_when_vegas_dead(map, enemy_prefix)
 
   local function enemy_on_symbol_fixed(enemy)

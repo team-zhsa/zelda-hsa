@@ -3746,7 +3746,7 @@ dynamic_tile{
   name = "water_dynamic_0_0_2",
   layer = -1,
   x = 128,
-  y = 936,
+  y = 928,
   width = 32,
   height = 208,
   pattern = "water.transparent",
@@ -16828,6 +16828,15 @@ tile{
   pattern = "torch_big.bottom",
 }
 
+tile{
+  layer = 0,
+  x = 56,
+  y = 888,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
 destructible{
   name = "auto_destructible_13",
   layer = 0,
@@ -16879,7 +16888,7 @@ wall{
 }
 
 dynamic_tile{
-  name = "water_static_0_19",
+  name = "water_dynamic_0_2_19",
   layer = 0,
   x = 1152,
   y = 64,
@@ -16889,7 +16898,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_18",
+  name = "water_dynamic_0_2_18",
   layer = 0,
   x = 1104,
   y = 48,
@@ -16899,7 +16908,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_17",
+  name = "water_dynamic_0_2_17",
   layer = 0,
   x = 1104,
   y = 80,
@@ -16909,7 +16918,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_9",
+  name = "water_dynamic_0_2_9",
   layer = 0,
   x = 1104,
   y = 96,
@@ -16919,7 +16928,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_12",
+  name = "water_dynamic_0_2_12",
   layer = 0,
   x = 800,
   y = 128,
@@ -17071,7 +17080,7 @@ crystal{
 }
 
 dynamic_tile{
-  name = "water_static_0_1",
+  name = "water_dynamic_0_2_1",
   layer = 0,
   x = 48,
   y = 1088,
@@ -17081,7 +17090,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_2",
+  name = "water_dynamic_0_2_2",
   layer = 0,
   x = 112,
   y = 944,
@@ -17091,7 +17100,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_3",
+  name = "water_dynamic_0_2_3",
   layer = 0,
   x = 112,
   y = 880,
@@ -17112,8 +17121,8 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 864,
-  y = 1317,
+  x = 472,
+  y = 1149,
   direction = 1,
   default = true,
 }
@@ -17141,7 +17150,7 @@ custom_entity{
 }
 
 dynamic_tile{
-  name = "water_static_0_6",
+  name = "water_dynamic_0_2_6",
   layer = 0,
   x = 1104,
   y = 288,
@@ -17166,7 +17175,7 @@ crystal{
 }
 
 dynamic_tile{
-  name = "water_static_0_7",
+  name = "water_dynamic_0_2_7",
   layer = 0,
   x = 688,
   y = 368,
@@ -17176,7 +17185,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_8",
+  name = "water_dynamic_0_2_8",
   layer = 0,
   x = 1104,
   y = 336,
@@ -17208,7 +17217,7 @@ custom_entity{
 }
 
 dynamic_tile{
-  name = "water_static_0_11",
+  name = "water_dynamic_0_2_11",
   layer = 0,
   x = 800,
   y = 48,
@@ -17554,7 +17563,7 @@ wall{
 }
 
 dynamic_tile{
-  name = "water_static_0_10",
+  name = "water_dynamic_0_2_10",
   layer = 0,
   x = 1008,
   y = 48,
@@ -17573,7 +17582,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_13",
+  name = "water_dynamic_0_2_13",
   layer = 0,
   x = 760,
   y = 568,
@@ -17583,7 +17592,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_14",
+  name = "water_dynamic_0_2_14",
   layer = 0,
   x = 1048,
   y = 680,
@@ -17593,7 +17602,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_15",
+  name = "water_dynamic_0_2_15",
   layer = 0,
   x = 920,
   y = 520,
@@ -17603,7 +17612,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "water_static_0_16",
+  name = "water_dynamic_0_2_16",
   layer = 0,
   x = 808,
   y = 808,
@@ -19838,8 +19847,8 @@ enemy{
 enemy{
   name = "auto_enemy_33",
   layer = 0,
-  x = 120,
-  y = 853,
+  x = 224,
+  y = 973,
   direction = 0,
   breed = "dungeons/bari_blue",
   treasure_name = "random_west",
