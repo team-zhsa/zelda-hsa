@@ -2096,13 +2096,25 @@ redonne de la vie.
 }
 
 dialog{
-  id = "maps.caves.goron.ascii",
+  id = "maps.caves.goron_town.darumaruk_dodongos_cavern",
   text = [[
+Ah, mon p’tit si tu veux sauver
+ce village, rends-toi à la
+Caverne Dodongo.
+Tu y trouveras le monarque
+de nos ennemis jurés, les
+Dodongos.
+Ces saletés détiennent le sage
+du feu.$0 J’ai indiqué l'empla-
+cement de la caverne sur ta
+carte.$0
+Prends garde aux monstres sur
+ton chemin !$0 J’compte sur toi...
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.generic_1",
+  id = "maps.caves.goron_town.generic_1",
   text = [[
 Salut Hylien !
 Je me sens si bien
@@ -2111,14 +2123,14 @@ dans ce rocher !
 }
 
 dialog{
-  id = "maps.caves.goron.generic_2",
+  id = "maps.caves.goron_town.generic_2",
   text = [[
 Salut !
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.generic_3",
+  id = "maps.caves.goron_town.generic_3",
   text = [[
 Un goron, ça mange
 des rochers ! Tu 
@@ -2127,14 +2139,14 @@ le savais, toi ?
 }
 
 dialog{
-  id = "maps.caves.goron.generic_4",
+  id = "maps.caves.goron_town.generic_4",
   text = [[
 Comment vas-tu ?
 ]],
 }
 
 dialog{
-  id = "maps.caves.goron.rock_ask",
+  id = "maps.caves.goron_town.rock_ask",
   question = "1",
   text = [[
 Salut ! J'aurais besoin de 
@@ -2147,7 +2159,7 @@ Non.
 }
 
 dialog{
-  id = "maps.caves.goron.rock_no",
+  id = "maps.caves.goron_town.rock_no",
   text = [[
 Bon, tant pis. Une
 autre fois, peut-
@@ -2156,7 +2168,7 @@ autre fois, peut-
 }
 
 dialog{
-  id = "maps.caves.goron.rock_yes",
+  id = "maps.caves.goron_town.rock_yes",
   text = [[
 Super ! Descends au
 dernier sous-sol de
@@ -5733,12 +5745,12 @@ téléporter ici.
 }
 
 dialog{
-  id = "maps.out.north_field.kaepora_gaebora",
+  id = "maps.out.north_field.kaepora_gaebora_ruins",
   question = "1",
   text = [[
 $2Hou ! C'est moi Kaepora
-Gaebora !$0
-Tu es devant les Ruines !
+Gaebora !$0 Tu es devant
+les Ruines !
 Des monstres tentacules y errent
 et ils sont très dangereux. Tu y
 trouveras une carte et une
@@ -5751,6 +5763,34 @@ du Courage qui y est caché.
 As-tu tout compris ?
 Non, pas du tout !
 Oui
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.kaepora_gaebora_water_temple",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Temple de l’eau !
+Comme dans les donjons
+précédents, tu trouveras une
+carte et une boussole qui te
+permettront de te repérer.$0
+Fais attention, les monstres
+sont plus coriaces qu'avant et
+il y a beaucoup d’eau où tu
+pourrais nager.$0
+
+Trouve le sage de l'Eau.$0
+Ce temple est habité par le
+terrible Morpha et est très
+tortueux, rempli de pièges !$0
+Tu y trouveras le grappin,
+nécessaire pour le vaincre.$0
+Veux-tu que je répète ?
+Oui !
+Non.
 ]],
 }
 
