@@ -4783,7 +4783,7 @@ Vill. des Animaux
 dialog{
   id = "maps.out.east_castle.master_sword_obtained",
   text = [[
-Link...$0 Link...$0 Link...$0
+$2$v...$0 $v...$0 $v...$0
 Tu as enfin recouvré tes
 pouvoirs.
 Il est temps pour toi de sauver
@@ -4795,6 +4795,7 @@ Je crois en toi !
 
 dialog{
   id = "maps.out.east_castle.sign_1",
+  skip = "all",
   text = [[
 Est : Forge
 Sud : Château d'Hyrule
@@ -4803,6 +4804,7 @@ Sud : Château d'Hyrule
 
 dialog{
   id = "maps.out.east_castle.sign_2",
+  skip = "all",
   text = [[
 Est : Cordinia
 Sud-Ouest : Ranch Lonlon
@@ -4812,6 +4814,7 @@ Ouest : Caverne
 
 dialog{
   id = "maps.out.east_castle.sign_3",
+  skip = "all",
   text = [[
 Nord : Caverne
 Sud : Ranch Lonlon
@@ -4821,6 +4824,7 @@ Ouest : Château d'Hyrule
 
 dialog{
   id = "maps.out.east_castle.sign_4",
+  skip = "all",
   text = [[
 Nord-est : Domaine Zora
 Est : Forge
@@ -5659,6 +5663,30 @@ n'avons rien préparé.
 }
 
 dialog{
+  id = "maps.out.lost_woods.deku_tree_welcome",
+  text = [[
+$2$v, te voici enfin face à moi.$0
+Les Kokiris ont caché en moi une
+carte et une boussole pour se
+repérer dans mes nombreuses
+racines.
+
+Fais bien attention aux
+puissants monstres présents
+dans le sous-sol.
+Retrouve ici le Sage de la Forêt.
+Ce temple est occupé par Gohma
+et est extrêmement tortueux.
+Tu y trouveras un superbe trésor.
+Utilise-le pour vaincre ton terrible
+adversaire.
+As-tu tout compris ?
+Non, pas du tout !
+Oui.
+]],
+}
+
+dialog{
   id = "maps.out.lost_woods.kaepora_gaebora",
   question = "1",
   text = [[
@@ -5814,6 +5842,7 @@ Faites gaffe
 
 dialog{
   id = "maps.out.north_field.sign_2",
+  skip = "all",
   text = [[
 Le Sanctuaire
 ]],
@@ -5821,6 +5850,7 @@ Le Sanctuaire
 
 dialog{
   id = "maps.out.north_field.sign_3",
+  skip = "all",
   text = [[
 Est : Domaine Zora
 Sud : Château
@@ -5830,6 +5860,7 @@ Ouest : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_4",
+  skip = "all",
   text = [[
 Nord : Forge
 Sud-est : Village Gerudo
@@ -5848,6 +5879,7 @@ Sud : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_6",
+  skip = "all",
   text = [[
 Nord : Cimetière
 Est : Sanctuaire
@@ -5858,6 +5890,7 @@ Sud : Village Cocorico
 
 dialog{
   id = "maps.out.north_field.sign_7",
+  skip = "all",
   text = [[
 Vous êtes ici.
 Là : --> *
