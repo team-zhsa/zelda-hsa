@@ -1,13 +1,23 @@
 properties{
   x = 8960,
   y = 4320,
-  width = 1280,
-  height = 1440,
-  min_layer = 0,
+  width = 3840,
+  height = 4320,
+  min_layer = -1,
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
   music = "outside/lonlon",
+}
+
+custom_entity{
+  layer = -1,
+  x = 8,
+  y = 13,
+  width = 1280,
+  height = 1440,
+  direction = 0,
+  sprite = "maps/a2",
 }
 
 tile{
