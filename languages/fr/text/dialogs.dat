@@ -6363,7 +6363,33 @@ Nord : Domaine Zora
 }
 
 dialog{
+  id = "maps.out.zora_village.jabu_jabu_welcome",
+  question = "1",
+  text = [[
+Mon cher $v, je m’excuse par
+avance, mais si tu veux sauver
+ce village, je vais devoir te
+manger. $0Je protège en moi
+le sage de Poison du terrible
+Aargus.
+Pour le vaincre, tu trouveras en
+moi la puissante tunique bleue
+qui réduit tes dégâts reçus de moitié.
+Retrouve-toi dans mon système
+digestif grâce à la carte et la
+boussole cachée par mes
+chers Zoras.$0 Courage Link...
+
+
+Es-tu prêt pour cette mission ?
+Non...
+Bon appétit !
+]],
+}
+
+dialog{
   id = "maps.out.zora_village.sign_1",
+  skip = "all",
   text = [[
 Est : Cascades Zora
 Sud : Village Zora
