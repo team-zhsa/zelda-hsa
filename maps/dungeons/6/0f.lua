@@ -37,7 +37,7 @@ function map:switch_water_level()
 	local current_water_level = game:get_value("dungeon_6_water_level")
 	local water_tile_dynamic_id = "water_dynamic_"
 	if game:get_value("dungeon_6_water_level") == "up" then
-		local water_animation_step_index = 2
+		local water_animation_step_index = 3
 		sol.timer.start(water_delay, function()
 			local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 			local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
@@ -55,9 +55,9 @@ function map:switch_water_level()
 			end
 			water_animation_step_index = water_animation_step_index + 1
 			game:set_value("dungeon_6_water_level", "down")
-			if water_animation_step_index > -1 then
+			while water_animation_step_index > -1 do
 				return true
-			else return false end
+			end
 		end)
 	elseif game:get_value("dungeon_6_water_level") == "down" then
 		local water_animation_step_index = -1
@@ -78,9 +78,9 @@ function map:switch_water_level()
 			end
 			water_animation_step_index = water_animation_step_index + 1
 			game:set_value("dungeon_6_water_level", "up")
-			if water_animation_step_index < 2 then
+			while water_animation_step_index < 2 do
 				return true
-			else  return false end
+			end
 		end)
 	end
 end
@@ -103,6 +103,103 @@ end
 sensor_33_door:register_event("on_activated", function()
 	map:close_doors("door_33_n")
 end)
+
+
+function map:get_water_level()
+	return game:get_value("dungeon_6_water_level")
+end
+
+npc_18_hint:register_event("on_interaction", function()
+	game:start_dialog("maps.dungeons.6.hint_1", game:get_player_name())
+end)
+
+
+handle_4_water_1:register_event("on_released", function()
+	map:switch_water_level()
+end)
+
+handle_4_water_2:register_event("on_released", function()
+	map:switch_water_level()
+end)
+
+handle_9_water:register_event("on_released", function()
+	map:switch_water_level()
+end)
+
+handle_17_water_1:register_event("on_released", function()
+	for stream in map:get_entities("water_stream_17_1_") do
+		local sprite = stream:get_sprite()
+		if stream:get_direction() < 4 then
+			stream:set_direction(6)
+		elseif sprite:get_direction() >= 4 then
+			stream:set_direction(2)
+		end
+	end
+end)
+
+handle_17_water_2:register_event("on_released", function()
+	for stream in map:get_entities("water_stream_17_2_") do
+		local sprite = stream:get_sprite()
+		if sprite:get_direction() < 4 then
+			stream:set_direction(4)
+		elseif sprite:get_direction() >= 4 then
+			stream:set_direction(0)
+		end
+	end
+end)
+
+handle_17_water_3:register_event("on_released", function()
+	for stream in map:get_entities("water_stream_17_3_") do
+		local sprite = stream:get_sprite()
+		if stream:get_direction() < 4 then
+			stream:set_direction(6)
+		elseif sprite:get_direction() >= 4 then
+			stream:set_direction(2)
+		end
+	end
+end)
+
+handle_17_water_4:register_event("on_released", function()
+	for stream in map:get_entities("water_stream_17_2_") do
+		local sprite = stream:get_sprite()
+		if sprite:get_direction() < 4 then
+			stream:set_direction(4)
+		elseif sprite:get_direction() >= 4 then
+			stream:set_direction(0)
+		end
+	end
+end)
+
+handle_18_water:register_event("on_released", function()
+	if map:get_water_level("up") then map:set_water_level("down")
+	elseif map:get_water_level("down") then map:set_water_level("up") end
+end)
+
+--[[ Water levels info:
+static_water_X_N means that the Nth static water tile is enabled when the water level is at X (0 being the highest).
+dynamic_water_A_B_K_R means that the Kth water tile (in water_tile index for raising/lowering the water) of the Rth room can be raised from level A to B.
+
+Water levels:
+0: water at -1 of 0F
+1: water at -1 of B1
+2: water at -1 of B2
+3: water at -1 of B3
+4: water at -1 of B4
+5: water at -1 of B5
+
+For handle base sprites :
+Up arrow set to 1
+Down arrow set to 2
+Circle switch stream direction
+Heart switch between water at the current floor and floor below
+
+Triangle set to 3
+Rupee set to 4
+Wave set to 5
+
+
+]]
+
 
 
 --[[
@@ -330,101 +427,6 @@ end ]]
 			end
 		end
 	end ]]
-
-function map:get_water_level()
-	return game:get_value("dungeon_6_water_level")
-end
-
-npc_18_hint:register_event("on_interaction", function()
-	game:start_dialog("maps.dungeons.6.hint_1", game:get_player_name())
-end)
-
-
-handle_4_water_1:register_event("on_released", function()
-	map:switch_water_level()
-end)
-
-handle_4_water_2:register_event("on_released", function()
-	map:switch_water_level()
-end)
-
-handle_9_water:register_event("on_released", function()
-	map:switch_water_level()
-end)
-
-handle_17_water_1:register_event("on_released", function()
-	for stream in map:get_entities("water_stream_17_1_") do
-		local sprite = stream:get_sprite()
-		if stream:get_direction() < 4 then
-			stream:set_direction(6)
-		elseif sprite:get_direction() >= 4 then
-			stream:set_direction(2)
-		end
-	end
-end)
-
-handle_17_water_2:register_event("on_released", function()
-	for stream in map:get_entities("water_stream_17_2_") do
-		local sprite = stream:get_sprite()
-		if sprite:get_direction() < 4 then
-			stream:set_direction(4)
-		elseif sprite:get_direction() >= 4 then
-			stream:set_direction(0)
-		end
-	end
-end)
-
-handle_17_water_3:register_event("on_released", function()
-	for stream in map:get_entities("water_stream_17_3_") do
-		local sprite = stream:get_sprite()
-		if stream:get_direction() < 4 then
-			stream:set_direction(6)
-		elseif sprite:get_direction() >= 4 then
-			stream:set_direction(2)
-		end
-	end
-end)
-
-handle_17_water_4:register_event("on_released", function()
-	for stream in map:get_entities("water_stream_17_2_") do
-		local sprite = stream:get_sprite()
-		if sprite:get_direction() < 4 then
-			stream:set_direction(4)
-		elseif sprite:get_direction() >= 4 then
-			stream:set_direction(0)
-		end
-	end
-end)
-
-handle_18_water:register_event("on_released", function()
-	if map:get_water_level("up") then map:set_water_level("down")
-	elseif map:get_water_level("down") then map:set_water_level("up") end
-end)
-
---[[ Water levels info:
-static_water_X_N means that the Nth static water tile is enabled when the water level is at X (0 being the highest).
-dynamic_water_A_B_K_R means that the Kth water tile (in water_tile index for raising/lowering the water) of the Rth room can be raised from level A to B.
-
-Water levels:
-0: water at -1 of 0F
-1: water at -1 of B1
-2: water at -1 of B2
-3: water at -1 of B3
-4: water at -1 of B4
-5: water at -1 of B5
-
-For handle base sprites :
-Up arrow set to 1
-Down arrow set to 2
-Circle switch stream direction
-Heart switch between water at the current floor and floor below
-
-Triangle set to 3
-Rupee set to 4
-Wave set to 5
-
-
-]]
 
 --[[local water_delay = 500
 -- Event called at initialization time, as soon as this map is loaded.
