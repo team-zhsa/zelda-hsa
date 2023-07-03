@@ -9,6 +9,17 @@ function water_level_manager:switch_water_level(map)
 	end
 end
 
+function water_level_manager:check_water_level()
+	if game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "up" then
+		water_level_manager:set_high_water_level(map)
+	elseif game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "down" then
+		water_level_manager:set_low_water_level(map)
+	end
+end
+
+function water_level_manager:set_high_water_level(map)
+end
+
 function water_level_manager:lower_water_level(map)
 	local water_tile_dynamic_id = "water_dynamic_"
 	local water_animation_step_index = 2
@@ -24,13 +35,13 @@ function water_level_manager:lower_water_level(map)
 		for tile in map:get_entities(current_tile_id) do
 			if tile ~= nil then
 				tile:set_enabled(false)
-				print("disable curr tile"..current_tile_id)
+				--print("disable curr tile"..current_tile_id)
 			end
 		end
 		for tile in map:get_entities(next_tile_id) do
 			if tile ~= nil then
 				tile:set_enabled(true)
-				print("enable next tile"..next_tile_id)
+				--print("enable next tile"..next_tile_id)
 			end
 		end
 		water_animation_step_index = water_animation_step_index - 1
@@ -58,13 +69,13 @@ function water_level_manager:raise_water_level(map)
 		for tile in map:get_entities(current_tile_id) do
 			if tile ~= nil then
 				tile:set_enabled(false)
-				print("disable curr tile"..current_tile_id)
+				--print("disable curr tile"..current_tile_id)
 			end
 		end
 		for tile in map:get_entities(next_tile_id) do
 			if tile ~= nil then
 				tile:set_enabled(true)
-				print("enable next tile"..next_tile_id)
+				--print("enable next tile"..next_tile_id)
 			end
 		end
 		water_animation_step_index = water_animation_step_index + 1
