@@ -361,6 +361,7 @@ Alpha 1.16.2 (23/04/23) "Mackerel Update":
 Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
+	ADD: Added side quests (#95)
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
@@ -378,6 +379,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Grouped hero animations into one file instead of different ones for each tunic (#47).
 	CHG: Unified the "dialogue_id" property for all signs (#34).
 	CHG: Moved small key and clock HUD positions.
+	CHG: Switched the dungeons 10 and 12 (#165).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -395,6 +397,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed a wrong teletransporter linking in the Hyrule Town (#155).
 	FIX: Fixed a missing NPC sprite in the Hyrule Town inn (#160).
 	FIX: Fixed the purple house door being misplaced in the Hyrule Town.
+	FIX: Fixed map:set_doors_open() playing a sound when it shouldn't (#163).
+	FIX: Fixed the water level changing animation in the Water Temple (#56).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -410,7 +414,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
-	TDO: Fix the water level changing animation in the Water Temple (#56).
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
 	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
@@ -419,6 +422,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
+	TDO: Map the missing caves (#151).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Remove work *.xcf and *.psd files from the data files.
