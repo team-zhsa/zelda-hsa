@@ -1,4 +1,8 @@
 local enemy = ...
+local game = enemy:get_game()
+local map = enemy:get_map()
+local hero = map:get_hero()
+local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 
 -- Bari: a flying enemy that follows the hero and tries to electrocute him.
 
@@ -14,7 +18,7 @@ local function hurt_by_sword()
     if shocking == true then
       electrocute()
     else
-      self:hurt(2)
+      enemy:hurt(2)
       enemy:remove_life(2)
     end
   end
@@ -22,9 +26,8 @@ end
 
 -- The enemy appears: set its properties.
 enemy:register_event("on_created", function(enemy)
-  self:set_life(4)
-  self:create_sprite("enemies/dungeons/bari_purple")
-  self:set_size(16, 16); self:set_origin(8, 13)
+  enemy:set_life(4)
+  enemy:set_size(16, 16); enemy:set_origin(8, 13)
 end)
 
 function enemy:shock()
@@ -33,7 +36,7 @@ function enemy:shock()
   sol.timer.start(enemy, math.random(10)*1000, function()
     enemy:get_sprite():set_animation("walking")
     shocking = false
-    sol.timer.start(enemy, math.random(10)*1000, function() enemy:restart() end)
+    sol.timer.start(enemy, math.random(8)*1000, function() enemy:restart() end)
   end)
 end
 
@@ -67,10 +70,10 @@ enemy:register_event("on_restarted", function(enemy)
 
 end)
 
-enemy:register_event("on_attacking_hero", function(hero, enemy_sprite)
+function enemy:on_attacking_hero(hero, enemy_sprite)
   if shocking == true then
     electrocute()
   else
     hero:start_hurt(2)
   end
-end)
+end
