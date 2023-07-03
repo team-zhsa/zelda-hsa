@@ -14159,7 +14159,7 @@ door{
 }
 
 door{
-  name = "door_27_n",
+  name = "door_27_n_1",
   layer = 0,
   x = 888,
   y = 984,
@@ -14373,6 +14373,20 @@ enemy{
   y = 1341,
   direction = 0,
   breed = "dungeons/pike_fixed",
+}
+
+door{
+  name = "door_27_n_2",
+  layer = 0,
+  x = 792,
+  y = 984,
+  direction = 1,
+  sprite = "entities/doors/inside/door_d1_small_key",
+  savegame_variable = "dungeon_6_b1_door_27",
+  opening_method = "interaction_if_savegame_variable",
+  opening_condition = "dungeon_6_small_keys",
+  opening_condition_consumed = true,
+  cannot_open_dialog = "_cannot_open_without_small_key",
 }
 
 tile{
