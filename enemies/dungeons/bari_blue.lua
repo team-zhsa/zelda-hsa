@@ -4,11 +4,26 @@ local enemy = ...
 
 local shocking = false
 
+-- Electrocute the hero.
+local function electrocute()
+	hero:start_electrocution(4)
+end
+
+local function hurt_by_sword()
+  function enemy:on_hurt_by_sword(hero, enemy_sprite)
+    if shocking == true then
+      electrocute()
+    else
+      self:hurt(1)
+      enemy:remove_life(1)
+    end
+  end
+end
+
 function enemy:on_created()
-  self:set_life(3); self:set_damage(6)
+  self:set_life(3)
   self:create_sprite("enemies/dungeons/bari_blue")
   self:set_size(16, 16); self:set_origin(8, 13)
-  self:set_attack_consequence("hookshot", "immobilized")
 end
 
 function enemy:shock()
@@ -21,55 +36,45 @@ function enemy:shock()
   end)
 end
 
-function enemy:on_restarted()
+-- The enemy appears: set its properties.
+enemy:register_event("on_created", function(enemy)
+  enemy:set_life(3)
+end)
+
+-- The enemy appears: set its properties.
+enemy:register_event("on_restarted", function(enemy)
+
   shocking = false
-  local m = sol.movement.create("path_finding")
-  m:set_speed(32)
-  m:start(self)
+  local m = sol.movement.create("random")
+  m:set_speed(12)
+  m:start(enemy)
   if math.random(10) < 5 then
     enemy:shock()
   end
-end
 
-function enemy:on_immobilized()
-  shocking = false
-end
+  enemy:set_hero_weapons_reactions({
+  	arrow = 3,
+  	boomerang = "ignored",
+  	explosion = 3,
+  	sword = hurt_by_sword(),
+  	thrown_item = 3,
+  	fire = 3,
+  	jump_on = "ignored",
+  	hammer = "protected",
+  	hookshot = 3,
+  	shield = "protected",
+  	thrust = hurt_by_sword()
+  })
 
-function enemy:on_hurt_by_sword(hero, enemy_sprite)
-  if shocking == true then
-    hero:start_electrocution(6)
-  else
-    self:hurt(1)
-    enemy:remove_life(1)
-  end
-end
+  -- States.
+  enemy:set_damage(2)
+
+end)
+
 function enemy:on_attacking_hero(hero, enemy_sprite)
   if shocking == true then
-    hero:start_electrocution(6)
+    electrocute()
   else
     hero:start_hurt(2)
   end
-end
-
-local function electrocute()
-
-  local camera = map:get_camera()
-  local surface = camera:get_surface()
-  hero:get_sprite():set_ignore_suspend(true)
-  game:set_suspended(true)
-  sprite:set_animation("shocking")
-  audio_manager:play_sound("ennemies/bari")
-  hero:set_animation("electrocuted")
-  effect_model.start_effect(surface, game, 'in', false)
-  local shake_config = {
-    count = 32,
-    amplitude = 4,
-    speed = 180,
-  }
-  camera:shake(shake_config, function()
-    game:set_suspended(false)
-    sprite:set_animation("walking")
-    hero:unfreeze()
-    hero:start_hurt(enemy:get_damage())
-  end)
 end
