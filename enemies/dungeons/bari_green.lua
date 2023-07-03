@@ -1,46 +1,79 @@
-animation{
-  name = "walking",
-  src_image = "enemies/dungeons/bari.png",
-  frame_delay = 200,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 0, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 0, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 0, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 0, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-  },
-}
-animation{
-  name = "hurt",
-  src_image = "enemies/dungeons/bari.png",
-  frame_delay = 50,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 3 },
-    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 3 },
-    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 3 },
-    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 3 },
-  },
-}
-animation{
-  name = "immobilized",
-  src_image = "enemies/dungeons/bari.png",
-  directions = {
-    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "shaking",
-  src_image = "enemies/dungeons/bari.png",
-  frame_delay = 150,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
-  },
-}
+local enemy = ...
+
+-- Bari: a flying enemy that follows the hero and tries to electrocute him.
+
+local shocking = false
+
+-- Electrocute the hero.
+local function electrocute()
+	hero:start_electrocution(4)
+end
+
+local function hurt_by_sword()
+  function enemy:on_hurt_by_sword(hero, enemy_sprite)
+    if shocking == true then
+      electrocute()
+    else
+      self:hurt(2)
+      enemy:remove_life(2)
+    end
+  end
+end
+
+-- The enemy appears: set its properties.
+enemy:register_event("on_created", function(enemy)
+  self:set_life(4)
+  self:create_sprite("enemies/dungeons/bari_green")
+  self:set_size(16, 16); self:set_origin(8, 13)
+end)
+
+
+function enemy:shock()
+  shocking = true
+  enemy:get_sprite():set_animation("shaking")
+  sol.timer.start(enemy, math.random(10)*1000, function()
+    enemy:get_sprite():set_animation("walking")
+    shocking = false
+    sol.timer.start(enemy, math.random(10)*1000, function() enemy:restart() end)
+  end)
+end
+
+
+
+-- The enemy appears: set its properties.
+enemy:register_event("on_restarted", function(enemy)
+
+  shocking = false
+  local m = sol.movement.create("random")
+  m:set_speed(12)
+  m:start(enemy)
+  if math.random(10) < 5 then
+    enemy:shock()
+  end
+
+  enemy:set_hero_weapons_reactions({
+  	arrow = 4,
+  	boomerang = "ignored",
+  	explosion = 4,
+  	sword = hurt_by_sword(),
+  	thrown_item = 4,
+  	fire = 4,
+  	jump_on = "ignored",
+  	hammer = "protected",
+  	hookshot = 4,
+  	shield = "protected",
+  	thrust = hurt_by_sword()
+  })
+
+  -- States.
+  enemy:set_damage(2)
+
+end)
+
+enemy:register_event("on_attacking_hero", function(hero, enemy_sprite)
+  if shocking == true then
+    electrocute()
+  else
+    hero:start_hurt(2)
+  end
+end)

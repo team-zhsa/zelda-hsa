@@ -14,16 +14,10 @@ local function hurt_by_sword()
     if shocking == true then
       electrocute()
     else
-      self:hurt(1)
-      enemy:remove_life(1)
+      self:hurt(2)
+      enemy:remove_life(2)
     end
   end
-end
-
-function enemy:on_created()
-  self:set_life(3)
-  self:create_sprite("enemies/dungeons/bari_blue")
-  self:set_size(16, 16); self:set_origin(8, 13)
 end
 
 function enemy:shock()
@@ -39,6 +33,8 @@ end
 -- The enemy appears: set its properties.
 enemy:register_event("on_created", function(enemy)
   enemy:set_life(3)
+  self:create_sprite("enemies/dungeons/bari_blue")
+  self:set_size(16, 16); self:set_origin(8, 13)
 end)
 
 -- The enemy appears: set its properties.
@@ -71,10 +67,10 @@ enemy:register_event("on_restarted", function(enemy)
 
 end)
 
-function enemy:on_attacking_hero(hero, enemy_sprite)
+enemy:register_event("on_attacking_hero", function(hero, enemy_sprite)
   if shocking == true then
     electrocute()
   else
     hero:start_hurt(2)
   end
-end
+end)
