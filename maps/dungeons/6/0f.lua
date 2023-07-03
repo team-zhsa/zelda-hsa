@@ -21,7 +21,10 @@ local water_level_manager = require("scripts/maps/water_level_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
-	if destination:get_name() == "from_outside" then water_level_manager:lower_water_level(map) end
+	if destination:get_name() == "from_outside" then
+		water_level_manager:set_low_water_level(map)
+	end
+	water_level_manager:check_water_level(map)
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
 
 end
