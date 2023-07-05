@@ -17054,6 +17054,33 @@ tile{
   pattern = "water_pool_ladder.1",
 }
 
+tile{
+  layer = 0,
+  x = 1200,
+  y = 1048,
+  width = 16,
+  height = 24,
+  pattern = "barrier_big.border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1200,
+  y = 1008,
+  width = 16,
+  height = 16,
+  pattern = "barrier_big.border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1200,
+  y = 1024,
+  width = 16,
+  height = 24,
+  pattern = "barrier_big.2-1",
+}
+
 wall{
   layer = 0,
   x = 856,
@@ -19956,8 +19983,8 @@ enemy{
 enemy{
   name = "auto_enemy_20",
   layer = 0,
-  x = 832,
-  y = 1269,
+  x = 776,
+  y = 1357,
   direction = 2,
   breed = "dungeons/wizzrobe_blue",
   treasure_name = "random_west",
@@ -20530,7 +20557,7 @@ sensor{
 custom_entity{
   layer = 0,
   x = 1208,
-  y = 1053,
+  y = 1085,
   width = 16,
   height = 16,
   direction = 3,
@@ -20541,12 +20568,18 @@ custom_entity{
   name = "handle_28_water",
   layer = 0,
   x = 1208,
-  y = 1069,
+  y = 1101,
   width = 16,
   height = 16,
   direction = 0,
   sprite = "entities/handle_blue",
   model = "pull_handle",
+}
+
+crystal{
+  layer = 0,
+  x = 840,
+  y = 1261,
 }
 
 tile{
