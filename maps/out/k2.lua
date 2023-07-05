@@ -13,12 +13,6 @@ local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
 local field_music_manager = require("scripts/maps/field_music_manager")
 
-map:register_event("on_draw", function(map)
-
-  -- Music
-  field_music_manager:init(map)
-
-end)
 
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)

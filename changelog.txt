@@ -404,6 +404,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed map:set_doors_open() playing a sound when it shouldn't (#163).
 	FIX: Fixed the water level changing animation in the Water Temple (#56).
 	FIX: Fixed Bari enemies animation not being accurate to ALTTP (#143).
+	FIX: Fixed a nil value error in the Hyrule Castle (#171).
+	FIX: Fixed the Zora River caves being unreachable in J2 (#172).
+	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.

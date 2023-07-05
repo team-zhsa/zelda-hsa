@@ -140,7 +140,7 @@ tile{
   layer = 0,
   x = 672,
   y = 480,
-  width = 352,
+  width = 368,
   height = 16,
   pattern = "907",
 }
@@ -149,7 +149,7 @@ tile{
   layer = 0,
   x = 832,
   y = 496,
-  width = 192,
+  width = 208,
   height = 64,
   pattern = "907",
 }
@@ -192,9 +192,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 1024,
+  x = 1040,
   y = 688,
-  width = 192,
+  width = 176,
   height = 160,
   pattern = "907",
 }
@@ -203,7 +203,7 @@ tile{
   layer = 0,
   x = 896,
   y = 640,
-  width = 128,
+  width = 144,
   height = 176,
   pattern = "907",
 }
@@ -212,7 +212,7 @@ tile{
   layer = 0,
   x = 864,
   y = 560,
-  width = 160,
+  width = 176,
   height = 80,
   pattern = "907",
 }
@@ -283,9 +283,9 @@ tile{
 tile{
   layer = 0,
   x = 0,
-  y = 848,
-  width = 320,
-  height = 48,
+  y = 784,
+  width = 272,
+  height = 112,
   pattern = "907",
 }
 
@@ -309,9 +309,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 272,
   y = 640,
-  width = 64,
+  width = 112,
   height = 256,
   pattern = "907",
 }
@@ -327,9 +327,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 272,
   y = 608,
-  width = 128,
+  width = 176,
   height = 32,
   pattern = "907",
 }
@@ -381,9 +381,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 240,
   y = 480,
-  width = 96,
+  width = 176,
   height = 128,
   pattern = "907",
 }
@@ -24447,6 +24447,42 @@ tile{
   tileset = "outside_buildings",
 }
 
+tile{
+  layer = 0,
+  x = 24,
+  y = 280,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = -24,
+  y = 320,
+  width = 48,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = -24,
+  y = 280,
+  width = 48,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = -32,
+  y = 280,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
 npc{
   layer = 0,
   x = 456,
@@ -27099,5 +27135,59 @@ tile{
   height = 16,
   pattern = "8305",
   tileset = "outside_buildings",
+}
+
+tile{
+  layer = 1,
+  x = -24,
+  y = 248,
+  width = 48,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = -24,
+  y = 248,
+  width = 48,
+  height = 48,
+  pattern = "1486",
+}
+
+tile{
+  layer = 1,
+  x = 24,
+  y = 248,
+  width = 8,
+  height = 48,
+  pattern = "1483",
+}
+
+tile{
+  layer = 1,
+  x = -24,
+  y = 296,
+  width = 48,
+  height = 8,
+  pattern = "1485",
+}
+
+tile{
+  layer = 1,
+  x = -24,
+  y = 240,
+  width = 48,
+  height = 8,
+  pattern = "1484",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = 248,
+  width = 8,
+  height = 48,
+  pattern = "1482",
 }
 
