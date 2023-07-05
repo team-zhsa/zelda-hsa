@@ -31960,6 +31960,25 @@ wall{
   stops_projectiles = true,
 }
 
+pickable{
+  layer = 0,
+  x = 1224,
+  y = 1229,
+  treasure_name = "piece_of_heart",
+  treasure_savegame_variable = "outside_zora_river_piece_of_heart",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/l2",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 800,
