@@ -74148,8 +74148,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 1072,
-  y = 512,
+  x = 1056,
+  y = 528,
   width = 8,
   height = 8,
   pattern = "107",
@@ -83156,6 +83156,69 @@ tile{
   pattern = "1038",
 }
 
+tile{
+  layer = 0,
+  x = 1072,
+  y = 512,
+  width = 32,
+  height = 32,
+  pattern = "1377",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 536,
+  width = 32,
+  height = 32,
+  pattern = "1377",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 768,
+  width = 32,
+  height = 32,
+  pattern = "1921",
+}
+
+tile{
+  layer = 0,
+  x = 912,
+  y = 512,
+  width = 32,
+  height = 32,
+  pattern = "1921",
+}
+
+tile{
+  layer = 0,
+  x = 928,
+  y = 560,
+  width = 32,
+  height = 32,
+  pattern = "1921",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 512,
+  width = 32,
+  height = 32,
+  pattern = "1921",
+}
+
+tile{
+  layer = 0,
+  x = 1088,
+  y = 544,
+  width = 16,
+  height = 16,
+  pattern = "1841",
+}
+
 jumper{
   layer = 0,
   x = 0,
@@ -84367,6 +84430,68 @@ npc{
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1080,
+  y = 525,
+  properties = {
+    {
+      key = "lift",
+      value = "2",
+    },
+  },
+  width = 32,
+  height = 32,
+  direction = 0,
+  sprite = "entities/stones/stone_white_large",
+  model = "heavy_object",
+}
+
+custom_entity{
+  layer = 0,
+  x = 1000,
+  y = 549,
+  properties = {
+    {
+      key = "lift",
+      value = "2",
+    },
+  },
+  width = 32,
+  height = 32,
+  direction = 0,
+  sprite = "entities/stones/stone_white_large",
+  model = "heavy_object",
+}
+
+destructible{
+  layer = 0,
+  x = 1096,
+  y = 557,
+  treasure_name = "random_mountains",
+  sprite = "entities/stones/stone_black",
+  destruction_sound = "objects/e_rock_1_lift",
+  weight = 2,
+}
+
+npc{
+  name = "npc_noyubi",
+  layer = 0,
+  x = 1000,
+  y = 765,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/gerudo_hesla",
+}
+
+destination{
+  name = "from_divine_rock_cave",
+  layer = 0,
+  x = 936,
+  y = 485,
+  direction = 3,
 }
 
 tile{
