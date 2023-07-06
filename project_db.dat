@@ -142,6 +142,7 @@ map{ id = "inside/houses/east_castle/garden_house", description = "Garden House"
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
+map{ id = "inside/houses/hyrule_town/bakery", description = "Bakery" }
 map{ id = "inside/houses/hyrule_town/bank", description = "Bank" }
 map{ id = "inside/houses/hyrule_town/fisher_house", description = "Fisher's House" }
 map{ id = "inside/houses/hyrule_town/grey_house", description = "Grey House" }
@@ -282,7 +283,7 @@ map{ id = "out/i8", description = "I8 (Sea)" }
 map{ id = "out/i9", description = "I9 (Sea)" }
 map{ id = "out/j1", description = "J1 (Snowpeaks)" }
 map{ id = "out/j2", description = "J2 (Zora Forest)" }
-map{ id = "out/j3", description = "J3 (Hyrule Field)" }
+map{ id = "out/j3", description = "J3 (Zora Forest)" }
 map{ id = "out/j4", description = "J4 (Hyrule Field)" }
 map{ id = "out/j5", description = "J5 (Faron Woods)" }
 map{ id = "out/j6", description = "J6 (Faron Woods)" }
@@ -300,6 +301,10 @@ map{ id = "out/k8", description = "K8 (Sea)" }
 map{ id = "out/k9", description = "K9 (Sea)" }
 map{ id = "out/l1", description = "L1 (Zora Falls)" }
 map{ id = "out/l2", description = "L2 (Zora River)" }
+map{ id = "out/l3", description = "L3 (Sea)" }
+map{ id = "out/l4", description = "L4 (Sea)" }
+map{ id = "out/l5", description = "L5 (Sea)" }
+map{ id = "out/l6", description = "L6 (Sea)" }
 map{ id = "out/l7", description = "L7 (Sea)" }
 map{ id = "out/l8", description = "L8 (Sea)" }
 map{ id = "out/l9", description = "L9 (Eventide Island, Forgotten Temple)" }
@@ -385,8 +390,11 @@ sprite{ id = "enemies/boss/tentacle_boss", description = "Tentacle Boss" }
 sprite{ id = "enemies/dungeons/arm_mimic", description = "Arm Mimic" }
 sprite{ id = "enemies/dungeons/arrow_target", description = "Arrow Target" }
 sprite{ id = "enemies/dungeons/bari_blue", description = "Blue Bari" }
+sprite{ id = "enemies/dungeons/bari_green", description = "Green Bari" }
 sprite{ id = "enemies/dungeons/bari_mini", description = "Mini Bari" }
+sprite{ id = "enemies/dungeons/bari_purple", description = "Purple Bari" }
 sprite{ id = "enemies/dungeons/bari_red", description = "Red Bari" }
+sprite{ id = "enemies/dungeons/bari_yellow", description = "Yellow Bari" }
 sprite{ id = "enemies/dungeons/beamos", description = "Beamos" }
 sprite{ id = "enemies/dungeons/blue_dogman", description = "Blue Dogman" }
 sprite{ id = "enemies/dungeons/bubble_blue", description = "Blue Bubble" }
@@ -1552,6 +1560,8 @@ sound{ id = "environment/thunder2", description = "Thunder" }
 sound{ id = "environment/thunder3", description = "Thunder" }
 sound{ id = "environment/thunder_double", description = "Thunder double" }
 sound{ id = "environment/thunder_far", description = "Thunder far" }
+sound{ id = "environment/water_level/loop", description = "Water level loop" }
+sound{ id = "environment/water_level/start", description = "Water level start" }
 sound{ id = "explosion", description = "Explosion" }
 sound{ id = "external_stairs_down", description = "External stairs down" }
 sound{ id = "external_stairs_up", description = "External stairs up" }
@@ -1829,8 +1839,11 @@ enemy{ id = "boss/tentacle_boss", description = "Tentacle Boss" }
 enemy{ id = "dungeons/arm_mimic", description = "Goriya" }
 enemy{ id = "dungeons/arrow_target", description = "Arrow Target" }
 enemy{ id = "dungeons/bari_blue", description = "Blue Bari" }
+enemy{ id = "dungeons/bari_green", description = "Green Bari" }
 enemy{ id = "dungeons/bari_mini", description = "Mini Bari" }
+enemy{ id = "dungeons/bari_purple", description = "Purple Bari" }
 enemy{ id = "dungeons/bari_red", description = "Red Bari" }
+enemy{ id = "dungeons/bari_yellow", description = "Yellow Bari" }
 enemy{ id = "dungeons/beamos", description = "Beamos" }
 enemy{ id = "dungeons/bubble", description = "Bubble" }
 enemy{ id = "dungeons/bubble_blue", description = "Blue Bubble" }
@@ -2179,6 +2192,8 @@ file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Un
 file{ path = "maps/inside/houses/cordinia_town/pond_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/bakery.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/bakery.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/fisher_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
@@ -2269,6 +2284,14 @@ file{ path = "maps/out/l1.dat", author = "Linkff", }
 file{ path = "maps/out/l1.lua", author = "Linkff", }
 file{ path = "maps/out/l2.dat", author = "The Unknown", }
 file{ path = "maps/out/l2.lua", author = "The Unknown", }
+file{ path = "maps/out/l3.dat", author = "The Unknown", }
+file{ path = "maps/out/l3.lua", author = "The Unknown", }
+file{ path = "maps/out/l4.dat", author = "The Unknown", }
+file{ path = "maps/out/l4.lua", author = "The Unknown", }
+file{ path = "maps/out/l5.dat", author = "The Unknown", }
+file{ path = "maps/out/l5.lua", author = "The Unknown", }
+file{ path = "maps/out/l6.dat", author = "The Unknown", }
+file{ path = "maps/out/l6.lua", author = "The Unknown", }
 file{ path = "maps/out/l7.dat", author = "The Unknown", }
 file{ path = "maps/out/l8.dat", author = "The Unknown", }
 file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }

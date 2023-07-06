@@ -21,13 +21,25 @@ local water_level_manager = require("scripts/maps/water_level_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
-	if destination:get_name() == "from_outside" then water_level_manager:lower_water_level(map) end
+	if destination:get_name() == "from_outside" then
+		water_level_manager:set_low_water_level(map)
+	end
+	water_level_manager:check_water_level(map)
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
-	map:set_doors_open("door_33_n")
+
 end
 
-sensor_33_door:register_event("on_activated", function()
+sensor_33_door_1:register_event("on_activated", function()
+	map:set_doors_open("door_33_n")
+	map:set_doors_open("door_33_e")
+end)
+
+sensor_33_door_2:register_event("on_activated", function()
 	map:close_doors("door_33_n")
+end)
+
+sensor_33_door_3:register_event("on_activated", function()
+	map:close_doors("door_33_e")
 end)
 
 npc_18_hint:register_event("on_interaction", function()
@@ -47,6 +59,10 @@ handle_9_water:register_event("on_released", function()
 end)
 
 handle_18_water:register_event("on_released", function()
+	water_level_manager:switch_water_level(map)
+end)
+
+handle_28_water:register_event("on_released", function()
 	water_level_manager:switch_water_level(map)
 end)
 

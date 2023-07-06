@@ -99,7 +99,7 @@ function condition_manager:initialise(game)
     local surface = camera:get_surface()
     hero:get_sprite():set_ignore_suspend(true)
     game:set_suspended(true)
-    audio_manager:play_sound("enemies/bari/b_state_e")
+    audio_manager:play_sound("enemies/bari")
     hero:set_animation("electrocuted")
     effect_model.start_effect(surface, game, 'in', false)
     local shake_config = {

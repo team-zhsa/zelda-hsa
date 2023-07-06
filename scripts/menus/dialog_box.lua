@@ -134,10 +134,6 @@ local function initialise_dialog_box_features(game)
 		return dialog_box.vertical_position
 	end
 
-	function dialog_box:get_position()
-		return dialog_box.vertical_position
-	end
-
 	local function repeat_show_character()
 
 		dialog_box:check_full()
@@ -617,4 +613,3 @@ local game_meta = sol.main.get_metatable("game")
 game_meta:register_event("on_started", initialise_dialog_box_features)
 
 return true
---]]

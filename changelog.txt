@@ -141,7 +141,7 @@ Alpha 1.8 (11/05/21) "Eel Update":
 	CHG: Changed title screen background.
 	CHG: Reduced dungeons minimaps sprites to 40x56 instead of 80x112.
 	CHG: Changed random pickables probabilities.
-	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Progressively switched enemies behaviour to ALTTD's.
 	FIX: Fixed game over red screen having the wrong color.
 	FIX: Fixed game crashing when picking pickables with the hookshot.
 	FIX: Fixed game crashing when killing the first boss.
@@ -157,7 +157,7 @@ Alpha 1.9 (25/05/21) "Flatfish Update":
 	CHG: Cleaned up items dialog icons sprites.
 	CHG: Changed values in the feather script.
 	CHG: Changed values in the flickering shader.
-	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Progressively switched enemies behaviour to ALTTD's.
 	CHG: Changed some sound effects.
 	CHG: Changed to a global field music manager instead of defining the music from the maps themselves.
 
@@ -181,7 +181,7 @@ Alpha 1.9.1 (18/06/21) "Flatfish Update":
 	CHG: Changed some graphics.
 	CHG: Changed cacti sprite by making it opaque instead of transparent.
 	CHG: Changed dungeons minimap scale to support multiple dungeon sizes.
-	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Progressively switched enemies behaviour to ALTTD's.
 	FIX: Fixed bombs not being liftable.
 	FIX: Fixed tunics only changing the sprite and not dividing the damage.
 	REM: Removed "maps/houses" folder.
@@ -198,7 +198,7 @@ Alpha 1.10 (27/07/21) "Goldfish Update":
 	CHG: Looped musics.
 	CHG: Reduced some sprites sizes.
 	CHG: Changed entities sprites images to tileset instead of using "entities/Full Hyrule.tiles.png".
-	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Progressively switched enemies behaviour to ALTTD's.
 	FIX: Fixed "tunic 2 stopped" animation being 1 pixel off by changing the sprite's origin.
 	
 Alpha 1.11 (18/01/22) "Haddock Update":
@@ -207,7 +207,7 @@ Alpha 1.11 (18/01/22) "Haddock Update":
 	CHG: Renumbered dungeon floors.
 	CHG: Changed the electrocution system.
 	CHG: Switched signs to ALTTD's.
-	CHG: Progressively switched enemies behaviour to ALTTD'S.
+	CHG: Progressively switched enemies behaviour to ALTTD's.
 	CHG: Changed item sprites on hero.
 	FIX: Fixed flying tiles not working properly when coming back into the room.
 
@@ -361,11 +361,14 @@ Alpha 1.16.2 (23/04/23) "Mackerel Update":
 Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
+	ADD: Added side quests (#95)
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
 	ADD: Added all the missing animations for the three tunics (#27).
-	ADD: Added a star switch manager script to use one function for all hole switchs (#152).
+	ADD: Added a star switch manager script to use one function for all hole switches (#152).
+	ADD: Added item folders.
+	ADD: Added Bari colour variations (#143).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -379,6 +382,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Unified the "dialogue_id" property for all signs (#34).
 	CHG: Moved small key and clock HUD positions.
 	CHG: Switched the dungeons 10 and 12 (#165).
+	CHG: Progressively switch enemies behaviour to ALTTD's.
+	CHG: Moved the piece of heart #15 from L1 to K2.
+	CHG: Restored the graveyard music for the Kakarico Graveyard.
+	CHG: Replaced "Linkff" by "LinkFF" in the project database.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -398,13 +405,18 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the purple house door being misplaced in the Hyrule Town.
 	FIX: Fixed map:set_doors_open() playing a sound when it shouldn't (#163).
 	FIX: Fixed the water level changing animation in the Water Temple (#56).
+	FIX: Fixed Bari enemies animation not being accurate to ALTTP (#143).
+	FIX: Fixed a nil value error in the Hyrule Castle (#171).
+	FIX: Fixed the Zora River caves being unreachable in J2 (#172).
+	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
+	FIX: Fixed a missing electrocution sound.
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
 	REM: Removed unused *.zip tileset files.
+	REM: Removed *.xcf and work files from the data files (#169).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather (#144).
-	TDO: Fix Bari enemies animation not being accurate to ALTTP (#143).
 	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
@@ -414,16 +426,17 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
-	TDO: Progressively switch enemies behaviour to ALTTD'S.
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix low memory issues on MacOS (#39).
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
+	TDO: Map the missing caves (#151).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
-	TDO: Remove work *.xcf and *.psd files from the data files.
+	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
+	TDO: Remove *.xcf and *.psd work files from the data files (#169).
 	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103).
@@ -446,7 +459,7 @@ Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Add food.
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Rename owl entities according to main quest steps (#19).
-	TDO: Progressively switch enemies behaviour to ALTTD'S.
+	TDO: Progressively switch enemies behaviour to ALTTD's.
 	TDO: Fix the Book of Mudora.
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).
@@ -468,7 +481,7 @@ Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add decoration to temples.
 	TDO: Add all the Pokémons.
 	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
-	TDO: Progressively switch enemies behaviour to ALTTD'S.
+	TDO: Progressively switch enemies behaviour to ALTTD's.
 	TDO: Improve the shield usability (#30).
 	TDO: Fix bombs not being liftable when starting the game inside unless going outside (#31).
 	TDO: Fix remaining wrong sprite palettes (#32).

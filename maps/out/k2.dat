@@ -19938,15 +19938,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1264,
-  y = 1312,
-  width = 16,
-  height = 16,
-  pattern = "963",
-}
-
-tile{
-  layer = 0,
   x = 1232,
   y = 1280,
   width = 16,
@@ -31958,6 +31949,25 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
+}
+
+pickable{
+  layer = 0,
+  x = 1224,
+  y = 1229,
+  treasure_name = "piece_of_heart",
+  treasure_savegame_variable = "outside_zora_river_piece_of_heart",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/l2",
+  destination = "_side",
 }
 
 tile{

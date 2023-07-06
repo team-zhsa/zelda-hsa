@@ -20,6 +20,7 @@ game_meta:register_event("on_map_changed", function(game, map)
           local effect_model = require("scripts/gfx_effects/" .. effect)
           game:set_suspended(true)
           game:set_pause_allowed(false)
+          hero:freeze()
           game.teleport_in_progress=true
           -- Execute In effect
           effect_model.start_effect(surface, game, "in", false, function()

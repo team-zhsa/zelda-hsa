@@ -3431,6 +3431,37 @@ de te revoir !
 }
 
 dialog{
+  id = "maps.houses.hyrule_town.bakery.product_bread",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.product_croissant",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.product_pie",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
+]],
+}
+
+dialog{
   id = "maps.houses.hyrule_town.building.sleep",
   question = "1",
   text = [[
@@ -4982,7 +5013,7 @@ dialog{
   id = "maps.out.east_mountains.sign_3",
   text = [[
 Aucune vie n'est possible à
-cette hauteur en temps normal !
+cette altitude en temps normal !
 
 Il y a peut être un sage en
 haut de cette tour !
@@ -6448,6 +6479,24 @@ dialog{
 Est : Cascades Zora
 Ouest : Maison du campeur
 Nord : Domaine Zora
+]],
+}
+
+dialog{
+  id = "maps.out.zora_forest.sign_3",
+  skip = "all",
+  text = [[
+Est : Cascades Zora
+Sud : Forêt Zora
+Ouest : Village Zora
+]],
+}
+
+dialog{
+  id = "maps.out.zora_forest.sign_4",
+  skip = "all",
+  text = [[
+Etable abandonnée
 ]],
 }
 
