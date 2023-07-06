@@ -15674,6 +15674,12 @@ teletransporter{
   layer = 0,
   x = 0,
   y = 1440,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
   width = 1280,
   height = 16,
   transition = "scrolling",
@@ -15696,6 +15702,12 @@ teletransporter{
   layer = 0,
   x = 1280,
   y = 0,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
   width = 16,
   height = 1440,
   transition = "scrolling",
