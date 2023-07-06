@@ -521,6 +521,24 @@ jeune fille !
 }
 
 dialog{
+  id = "_treasure.divine_ore.1",
+  icon = "92",
+  text = [[
+Tu as obtenu un fragment de
+Roche Divine !
+]],
+}
+
+dialog{
+  id = "_treasure.divine_ore.all_ores_obtained",
+  icon = "92",
+  text = [[
+Va à la forge pour améliorer ton
+épée !
+]],
+}
+
+dialog{
   id = "_treasure.face_key.1",
   icon = "44",
   text = [[
@@ -1667,36 +1685,6 @@ dialog{
 Tu as obtenu une perle rare !$0
 Maintenant tu peux aller voir le
 collectionneur de Firone !
-]],
-}
-
-dialog{
-  id = "_treasure.tunic.2",
-  icon = "61",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-rouge !$0 Elle te
-protège de manière
-plus efficace contre
-les ennemis !
-]],
-}
-
-dialog{
-  id = "_treasure.tunic.3",
-  icon = "62",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-bleue !$0
-Elle te protège
-mieux contre les
-ennemis et te permet
-de résister aux
-températures les
-plus glaciales...
-
 ]],
 }
 
@@ -8224,39 +8212,6 @@ dialog{
   text = [[
 La lettre que t'a donnée le
 vieux monsieur.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.1",
-  icon = "60",
-  skip = "all",
-  text = [[
-Une tunique verte 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.2",
-  icon = "61",
-  skip = "all",
-  text = [[
-Une tunique bleue 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.3",
-  icon = "62",
-  skip = "all",
-  text = [[
-Une tunique rouge 
-pour le plus beau
-des héros !
 ]],
 }
 
