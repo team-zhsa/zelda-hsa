@@ -410,11 +410,13 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the Zora River caves being unreachable in J2 (#172).
 	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
 	FIX: Fixed a missing electrocution sound.
+	FIX: Fixed the tunic item not being saved when opening the minimap (#175).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
 	REM: Removed unused *.zip tileset files.
 	REM: Removed *.xcf and work files from the data files (#169).
+	REM: Removed the old tunic item.
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather (#144).
 	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
@@ -433,6 +435,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
 	TDO: Map the missing caves (#151).
+	TDO: Update the hero head sprite with the actual tunic colours.
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).

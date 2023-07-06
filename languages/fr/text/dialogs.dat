@@ -521,6 +521,24 @@ jeune fille !
 }
 
 dialog{
+  id = "_treasure.divine_ore.1",
+  icon = "92",
+  text = [[
+Tu as obtenu un fragment de
+Roche Divine !
+]],
+}
+
+dialog{
+  id = "_treasure.divine_ore.all_ores_obtained",
+  icon = "92",
+  text = [[
+Va à la forge pour améliorer ton
+épée !
+]],
+}
+
+dialog{
   id = "_treasure.face_key.1",
   icon = "44",
   text = [[
@@ -1667,36 +1685,6 @@ dialog{
 Tu as obtenu une perle rare !$0
 Maintenant tu peux aller voir le
 collectionneur de Firone !
-]],
-}
-
-dialog{
-  id = "_treasure.tunic.2",
-  icon = "61",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-rouge !$0 Elle te
-protège de manière
-plus efficace contre
-les ennemis !
-]],
-}
-
-dialog{
-  id = "_treasure.tunic.3",
-  icon = "62",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-bleue !$0
-Elle te protège
-mieux contre les
-ennemis et te permet
-de résister aux
-températures les
-plus glaciales...
-
 ]],
 }
 
@@ -7364,6 +7352,19 @@ la Glace.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.divine_ore_counter.1",
+  icon = "92",
+  skip = "all",
+  text = [[
+Les fragments de Roche Divine
+te permettent d'améliorer ton
+épée.
+Apportes-en huit à la forge pour
+que ton épée soit plus puissante.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.face_key.1",
   icon = "44",
   skip = "all",
@@ -8098,7 +8099,7 @@ la Caverne.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.1",
-  icon = "160",
+  icon = "170",
   skip = "all",
   text = [[
 Une belle épée avec
@@ -8108,7 +8109,7 @@ ton nom écrit dessus.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.2",
-  icon = "161",
+  icon = "171",
   skip = "all",
   text = [[
 L'épée de Légende, maniée par
@@ -8118,7 +8119,7 @@ de véritables héros.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.3",
-  icon = "162",
+  icon = "172",
   skip = "all",
   text = [[
 L'épée de Légende améliorée
@@ -8128,7 +8129,7 @@ par le forgeron.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.4",
-  icon = "163",
+  icon = "173",
   skip = "all",
   text = [[
 L'épée dorée, inflige beaucoup
@@ -8138,7 +8139,7 @@ de dégâts
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.5",
-  icon = "164",
+  icon = "174",
   skip = "all",
   text = [[
 L'épée dorée, inflige
@@ -8224,39 +8225,6 @@ dialog{
   text = [[
 La lettre que t'a donnée le
 vieux monsieur.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.1",
-  icon = "60",
-  skip = "all",
-  text = [[
-Une tunique verte 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.2",
-  icon = "61",
-  skip = "all",
-  text = [[
-Une tunique bleue 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.3",
-  icon = "62",
-  skip = "all",
-  text = [[
-Une tunique rouge 
-pour le plus beau
-des héros !
 ]],
 }
 

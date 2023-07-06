@@ -10,7 +10,7 @@ local item_names_static_top = {
 }
 local item_names_static_left = {
 	"crystal_2",
-	"crystal_2", -- Legend scrolls
+	"crystal_2", -- Triforce
 	"crystal_6",
 	"crystal_3",
 	"crystal_4",
@@ -25,7 +25,7 @@ local item_names_static_right = {
 	"monster_horn_counter",
 	"monster_tail_counter",
 	"goron_amber_counter",
-	"monster_gut_counter",
+	"divine_ore_counter",
 }
 
 local item_names_static_bottom = {
