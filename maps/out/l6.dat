@@ -1,6 +1,6 @@
 properties{
-  x = 14080,
-  y = 8640,
+  x = 0,
+  y = 0,
   width = 1280,
   height = 1440,
   min_layer = 0,
@@ -143,7 +143,7 @@ teletransporter{
   width = 1280,
   height = 16,
   transition = "scrolling",
-  destination_map = "out/l8",
+  destination_map = "out/l7",
   destination = "_side",
 }
 
@@ -154,18 +154,7 @@ teletransporter{
   width = 16,
   height = 1440,
   transition = "scrolling",
-  destination_map = "out/k7",
-  destination = "_side",
-}
-
-teletransporter{
-  layer = 0,
-  x = 1280,
-  y = 0,
-  width = 16,
-  height = 1440,
-  transition = "scrolling",
-  destination_map = "out/l7",
+  destination_map = "out/k6",
   destination = "_side",
 }
 
@@ -175,6 +164,17 @@ teletransporter{
   y = -16,
   width = 1280,
   height = 16,
+  transition = "scrolling",
+  destination_map = "out/l5",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
   transition = "scrolling",
   destination_map = "out/l6",
   destination = "_side",
