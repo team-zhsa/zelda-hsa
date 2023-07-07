@@ -387,6 +387,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Restored the graveyard music for the Kakarico Graveyard.
 	CHG: Replaced "Linkff" by "LinkFF" in the project database.
 	CHG: Updated the hero head sprite with the actual tunic colours.
+	CHG: Lowered the Tektites' damage values (#177).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -412,12 +413,14 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
 	FIX: Fixed a missing electrocution sound.
 	FIX: Fixed the tunic item not being saved when opening the minimap (#175).
+	FIX: Fixed the hero being able to run through some walls when running (#178).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
 	REM: Removed unused *.zip tileset files.
 	REM: Removed *.xcf and work files from the data files (#169).
 	REM: Removed the old tunic item.
+	REM: Removed unused sprite files.
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Rescript the feather (#144).
 	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
@@ -436,8 +439,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
 	TDO: Map the missing caves (#151).
-	TDO: Lower the Tektites' damage value (#177).
-	TDO: Fix the hero being able to run through some walls when running (#178).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
