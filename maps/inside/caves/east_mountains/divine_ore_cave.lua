@@ -23,6 +23,7 @@ switch_floor:register_event("on_activated", function()
 		tile:set_visible(true)
 	end
 	sol.timer.start(map, 5000, function()
+		switch_floor:set_activated(false)
 		for tile in map:get_entities("tile_floor_") do
 			tile:set_visible(false)
 		end
