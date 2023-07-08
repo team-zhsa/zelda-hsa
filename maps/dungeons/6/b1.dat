@@ -1667,9 +1667,9 @@ dynamic_tile{
   name = "water_dynamic_0_0_13",
   layer = -1,
   x = 1712,
-  y = 688,
+  y = 544,
   width = 32,
-  height = 160,
+  height = 304,
   pattern = "water.transparent",
 }
 
@@ -1677,9 +1677,9 @@ dynamic_tile{
   name = "water_dynamic_0_1_13",
   layer = -1,
   x = 1704,
-  y = 680,
+  y = 536,
   width = 48,
-  height = 176,
+  height = 320,
   pattern = "water.transparent",
 }
 
@@ -1703,23 +1703,24 @@ dynamic_tile{
   pattern = "water.transparent",
 }
 
-chest{
-  name = "chest_18_small_key",
+dynamic_tile{
+  name = "water_dynamic_0_0_15",
   layer = -1,
-  x = 1728,
-  y = 565,
-  treasure_name = "small_key",
-  treasure_savegame_variable = "dungeon_6_b1_18_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  x = 1744,
+  y = 624,
+  width = 48,
+  height = 32,
+  pattern = "water.transparent",
 }
 
-tile{
-  layer = 0,
-  x = 1816,
-  y = 600,
-  width = 64,
-  height = 80,
-  pattern = "floor_low.6-1",
+dynamic_tile{
+  name = "water_dynamic_0_1_15",
+  layer = -1,
+  x = 1752,
+  y = 616,
+  width = 48,
+  height = 48,
+  pattern = "water.transparent",
 }
 
 tile{
@@ -1738,6 +1739,51 @@ tile{
   width = 48,
   height = 24,
   pattern = "wall.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 696,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-5",
+}
+
+tile{
+  layer = 0,
+  x = 1448,
+  y = 696,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 1576,
+  y = 808,
+  width = 48,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 1576,
+  y = 848,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 600,
+  width = 64,
+  height = 80,
+  pattern = "floor_low.6-1",
 }
 
 tile{
@@ -14306,24 +14352,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1408,
-  y = 696,
-  width = 24,
-  height = 48,
-  pattern = "wall.3-5",
-}
-
-tile{
-  layer = 0,
-  x = 1448,
-  y = 696,
-  width = 24,
-  height = 48,
-  pattern = "wall.4-5",
-}
-
-tile{
-  layer = 0,
   x = 1432,
   y = 696,
   width = 16,
@@ -14387,24 +14415,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1576,
-  y = 808,
-  width = 48,
-  height = 24,
-  pattern = "wall.1-5",
-}
-
-tile{
-  layer = 0,
-  x = 1576,
-  y = 848,
-  width = 48,
-  height = 24,
-  pattern = "wall.2-5",
-}
-
-tile{
-  layer = 0,
   x = 1560,
   y = 824,
   width = 16,
@@ -14464,6 +14474,78 @@ tile{
   width = 48,
   height = 16,
   pattern = "floor_low.6-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 592,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 672,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 656,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 616,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 600,
+  width = 8,
+  height = 16,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1816,
+  y = 664,
+  width = 8,
+  height = 8,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1776,
+  y = 592,
+  width = 40,
+  height = 8,
+  pattern = "barrier.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1808,
+  y = 624,
+  width = 16,
+  height = 32,
+  pattern = "water_pool_ladder.4",
 }
 
 wall{
@@ -15138,9 +15220,9 @@ dynamic_tile{
   name = "water_dynamic_0_2_6",
   layer = 0,
   x = 1696,
-  y = 608,
+  y = 528,
   width = 64,
-  height = 256,
+  height = 336,
   pattern = "water.transparent",
 }
 
@@ -15256,6 +15338,46 @@ door{
   direction = 2,
   sprite = "entities/doors/inside/door_d1_normal",
   savegame_variable = "dungeon_6_b1_door_17_18",
+}
+
+chest{
+  name = "chest_18_small_key",
+  layer = 0,
+  x = 1784,
+  y = 557,
+  treasure_name = "small_key",
+  treasure_savegame_variable = "dungeon_6_b1_18_chest_small_key",
+  sprite = "entities/chests/chest_LttP",
+}
+
+door{
+  name = "door_23_n",
+  layer = 0,
+  x = 1432,
+  y = 744,
+  direction = 1,
+  sprite = "entities/doors/inside/door_d1_normal",
+  savegame_variable = "dungeon_6_b1_door_17_23",
+}
+
+door{
+  name = "door_17_s",
+  layer = 0,
+  x = 1432,
+  y = 680,
+  direction = 3,
+  sprite = "entities/doors/inside/door_d1_normal",
+  savegame_variable = "dungeon_6_b1_door_17_23",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_2_8",
+  layer = 0,
+  x = 1760,
+  y = 608,
+  width = 48,
+  height = 64,
+  pattern = "water.transparent",
 }
 
 tile{
