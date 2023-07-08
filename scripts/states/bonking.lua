@@ -61,13 +61,13 @@ function state:on_started()
   if shield:is_being_used() then
     shield:stop_using()
   end
-    jump_manager.start_parabola(entity, 3, function()
+    jump_manager.start_parabola(entity, 2, function()
         entity.bonking=nil
         audio_manager:play_sound("hero_lands")
         entity:unfreeze()
         local ground=entity:get_ground_below()
         if not (ground=="hole" or ground=="lava" or ground=="deep_water") then
-          entity:get_sprite():set_animation("hurt")
+          entity:get_sprite():set_animation("stopped")
         end
       end)
   entity:get_sprite():set_animation("hurt")
