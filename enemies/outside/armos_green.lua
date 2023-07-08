@@ -4,8 +4,10 @@
 --
 -- Wait a random time then pounce to the hero, and restarts.
 --
--- Methods : enemy:start_pouncing()
---           enemy:wait()
+-- Methods : enemy:awaken()
+--           enemy:check_hero()
+--           enemy:stop()
+--           enemy:go_hero()
 --
 ----------------------------------
 
@@ -91,46 +93,44 @@ end
 
 function enemy:go_hero()
   enemy:set_can_attack(true)
+  enemy:set_traversable(true)
   sprite:set_animation("jumping")
-  if enemy:get_distance(hero) < triggering_distance then
-    enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
-      if enemy:get_distance(hero) < triggering_distance then
-        enemy:go_hero()
-      end
-    end)
-  else
-    enemy:restart()
-  end
+  enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+    if enemy:get_distance(hero) < triggering_distance then
+      enemy:go_hero()
+    else
+      enemy:restart()
+    end
+  end)
   going_hero = true
 
   enemy:set_hero_weapons_reactions({
-    arrow = 3,
+    arrow = 2,
     boomerang = "immobilized",
-    explosion = 3,
+    explosion = 4,
     sword = 1,
-    thrown_item = 3,
-    fire = 3,
+    thrown_item = 4,
+    fire = 4,
     jump_on = "ignored",
-    hammer = 3,
+    hammer = 4,
     hookshot = "immobilized",
     magic_powder = "protected",
     shield = "protected",
-    thrust = 3
+    thrust = 4
   })
 end
 
--- Initialization.
-enemy:register_event("on_created", function(enemy)
-  enemy:set_life(3); enemy:set_damage(4)
-  enemy:set_size(16, 16); enemy:set_origin(8, 13)
+-- Initialisation.
+enemy:register_event("on_created", function()
+  enemy:set_life(4)
+  enemy:set_size(16, 16); enemy:set_origin(8, 27)
   enemy:set_pushed_back_when_hurt(true)
   enemy:set_push_hero_on_sword(false)
   enemy:set_invincible()
-  enemy:set_traversable(false)
 end)
 
 -- Restart settings.
-enemy:register_event("on_restarted", function(enemy)
+enemy:register_event("on_restarted", function()
 
   enemy:set_hero_weapons_reactions({
     arrow = "protected",
@@ -149,8 +149,9 @@ enemy:register_event("on_restarted", function(enemy)
   -- States.
   sprite:set_xy(0, 0)
   enemy:set_obstacle_behavior("normal")
+  enemy:set_traversable(false)
   enemy:set_can_attack(false)
-  enemy:set_damage(3)
+  enemy:set_damage(4)
   enemy:check_hero()
 end)
 
