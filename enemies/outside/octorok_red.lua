@@ -25,7 +25,7 @@ local walking_angles = {0, quarter, 2.0 * quarter, 3.0 * quarter}
 local walking_speed = 48
 local walking_minimum_distance = 16
 local walking_maximum_distance = 32
-local waiting_duration = 800
+local waiting_duration = 400
 local throwing_duration = 200
 
 local projectile_breed = "projectiles/stone"
