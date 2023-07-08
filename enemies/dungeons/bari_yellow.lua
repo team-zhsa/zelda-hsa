@@ -56,11 +56,11 @@ enemy:register_event("on_restarted", function(enemy)
   	boomerang = "ignored",
   	explosion = 4,
   	sword = hurt_by_sword(),
-  	thrown_item = 4,
+  	thrown_item = 2,
   	fire = 4,
   	jump_on = "ignored",
   	hammer = "protected",
-  	hookshot = 4,
+  	hookshot = 1,
   	shield = "protected",
   	thrust = hurt_by_sword()
   })
