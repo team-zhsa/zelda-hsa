@@ -69,6 +69,8 @@ function state:on_started()
   local map = entity:get_map()
   local hero = map:get_hero()
   local sprite=entity:get_sprite("tunic")
+	local running_speed = 200
+	local ladder_running_speed = 16
   entity:get_sprite("trail"):set_animation("running") 
   sprite:set_animation("walking")
 
@@ -106,11 +108,12 @@ function state:on_started()
       end
 
       local running_movement=sol.movement.create("straight")
-      running_movement:set_speed(192)
-      running_movement:set_angle(sprite:get_direction()*math.pi/2)
+	      running_movement:set_angle(sprite:get_direction()*math.pi/2)
+				running_movement:set_speed(running_speed)
 
       -- Check if there is a collision with any sprite of the hero and an enemy, then hurt it.
       function running_movement:on_position_changed()
+
         for enemy in map:get_entities_by_type("enemy") do
           if hero:overlaps(enemy, "sprite") and enemy:get_life() > 0 and not enemy:is_immobilized() then
             local reaction = enemy:get_thrust_reaction()
