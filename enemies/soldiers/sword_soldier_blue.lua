@@ -29,7 +29,6 @@ function start_charging()
 			enemy:start_target_walking(hero, charging_speed)
 		end)
   sprite:set_animation("walking")
-	enemy:create_symbol_exclamation("hero_seen")
 	sol.audio.play_sound("hero_seen")
 end
 

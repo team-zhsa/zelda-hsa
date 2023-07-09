@@ -335,9 +335,6 @@ function enemy_meta:create_symbol_exclamation(sound)
 
   local map = self:get_map()
   local x, y, layer = self:get_position()
-  if sound then
-    audio_manager:play_sound("menus/menu_select")
-  end
   local symbol = map:create_custom_entity({
       sprite = "entities/symbols/exclamation",
       x = x - 16,
@@ -348,7 +345,7 @@ function enemy_meta:create_symbol_exclamation(sound)
       direction = 0
     })
     
-  sol.timer.start(map, 200, function()
+  sol.timer.start(enemy_meta, 200, function()
     symbol:remove()
   end)
 
