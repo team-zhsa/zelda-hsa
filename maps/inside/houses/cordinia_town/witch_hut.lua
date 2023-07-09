@@ -11,7 +11,9 @@ local map = ...
 local game = map:get_game()
 
 function sensor_shop_welcome:on_activated()
-  game:start_dialog("maps.houses.cordinia_town.potion_shop.merchant_welcome")
+  game:start_dialog("maps.houses.cordinia_town.potion_shop.merchant_welcome", function()
+    game:set_life(game:get_max_life())
+  end)
   sensor_shop_welcome:remove()
 end
 
