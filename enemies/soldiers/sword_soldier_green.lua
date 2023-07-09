@@ -31,9 +31,6 @@ local walking_speed = 32
 local walking_minimum_distance = 16
 local walking_maximum_distance = 96
 local waiting_duration = 1600
-local waking_up_direction = 3
-local waking_up_distance = 16
-local waking_up_duration = 1000
 
 -- Start the enemy charge movement.
 local function start_charging()
@@ -47,15 +44,15 @@ end
 
 -- Start the enemy random movement.
 local function start_walking(direction)
-
+  is_charging = false
   direction = direction or math.random(4)
-  enemy:start_straight_walking(walking_angles[direction], walking_speed, 16, function()--math.random(walking_minimum_distance, walking_maximum_distance), function()
+  enemy:start_straight_walking(walking_angles[direction], walking_speed, math.random(walking_minimum_distance, walking_maximum_distance), function()
     local next_direction = math.random(4)
-    local waiting_animation = "looking_around"--(direction + 1) % 4 == next_direction and "looking_left" or (direction - 1) % 4 == next_direction and "looking_right" or "immobilized"
+    local waiting_animation = "looking_around"
     sprite:set_animation(waiting_animation)
-    print(waiting_animation)
+    --print(waiting_animation)
     sol.timer.start(enemy, waiting_duration, function()
-      print(is_charging)
+      --print(is_charging)
       if not is_charging then
         start_walking(next_direction)
       end
@@ -86,7 +83,7 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_life(2)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
-  enemy:hold_weapon("enemies/"..enemy:get_breed().."_weapon",enemy:get_sprite(), 0, 0)
+  enemy:hold_weapon("enemies/"..enemy:get_breed().."_weapon", enemy:get_sprite(), 0, 0)
 end)
 
 -- Restart settings.
@@ -94,22 +91,22 @@ enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 2,
-  	boomerang = 2,
+  	boomerang = "immobilized",
   	explosion = 2,
   	sword = 1,
   	thrown_item = 2,
   	fire = 2,
   	jump_on = "ignored",
   	hammer = 2,
-  	hookshot = 2,
-  	magic_powder = 2,
+  	hookshot = "immobilized",
+  	magic_powder = "ignored",
   	shield = "protected",
   	thrust = 2
   })
 
   -- States.
   enemy:set_can_attack(true)
-  enemy:set_damage(1)
+  enemy:set_damage(2)
 
 	if is_charging and enemy:is_near(hero, charge_triggering_distance) then
 		start_charging()
