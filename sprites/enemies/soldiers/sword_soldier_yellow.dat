@@ -1,46 +1,79 @@
 animation{
   name = "walking",
-  src_image = "enemies/soldiers/sword_soldier_yellow.png",
+  src_image = "enemies/soldiers/sword_soldier.png",
   frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
-    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
-    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
-    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 48, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 48, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 48, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+  },
+}
+animation{
+  name = "falling",
+  src_image = "enemies/soldiers/sword_soldier.png",
+  frame_delay = 60,
+  directions = {
+    { x = 432, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 432, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 432, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 432, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4, num_columns = 1 },
+  },
+}
+animation{
+  name = "frozen",
+  src_image = "enemies/soldiers/sword_soldier.png",
+  frame_delay = 20,
+  directions = {
+    { x = 0, y = 768, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 0, y = 816, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 0, y = 864, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 0, y = 912, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
   },
 }
 animation{
   name = "hurt",
-  src_image = "enemies/soldiers/sword_soldier_yellow.png",
-  frame_delay = 50,
+  src_image = "enemies/soldiers/sword_soldier.png",
+  frame_delay = 20,
   frame_to_loop_on = 0,
   directions = {
-    { x = 192, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 3 },
-    { x = 192, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 3 },
-    { x = 192, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 3 },
-    { x = 192, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 3 },
+    { x = 0, y = 768, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 816, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 864, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 912, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
   },
 }
 animation{
   name = "immobilized",
-  src_image = "enemies/soldiers/sword_soldier_yellow.png",
+  src_image = "enemies/soldiers/sword_soldier.png",
   directions = {
-    { x = 288, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
-    { x = 288, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
-    { x = 288, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
-    { x = 288, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 48, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 48, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 48, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+    { x = 48, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
+  },
+}
+animation{
+  name = "looking_around",
+  src_image = "enemies/soldiers/sword_soldier.png",
+  frame_delay = 400,
+  directions = {
+    { x = 240, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 240, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 240, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
+    { x = 240, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
   },
 }
 animation{
   name = "shaking",
-  src_image = "enemies/soldiers/sword_soldier_yellow.png",
+  src_image = "enemies/soldiers/sword_soldier.png",
   frame_delay = 50,
   frame_to_loop_on = 0,
   directions = {
-    { x = 288, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
-    { x = 288, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
-    { x = 288, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
-    { x = 288, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 2 },
   },
 }
