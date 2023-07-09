@@ -21,7 +21,7 @@ local hero = map:get_hero()
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local quarter = math.pi * 0.5
 local is_charging = false
-local is_waking_up = false
+local is_waiting = false
 
 -- Configuration variables
 local charge_triggering_distance = 80
@@ -49,52 +49,17 @@ end
 local function start_walking(direction)
 
   direction = direction or math.random(4)
-  enemy:start_straight_walking(walking_angles[direction], walking_speed, math.random(walking_minimum_distance, walking_maximum_distance), function()
+  enemy:start_straight_walking(walking_angles[direction], walking_speed, 16, function()--math.random(walking_minimum_distance, walking_maximum_distance), function()
     local next_direction = math.random(4)
-    local waiting_animation = (direction + 1) % 4 == next_direction and "seek_left" or (direction - 1) % 4 == next_direction and "seek_right" or "immobilized"
-    sprite:set_animation("looking_around")
-
+    local waiting_animation = "looking_around"--(direction + 1) % 4 == next_direction and "looking_left" or (direction - 1) % 4 == next_direction and "looking_right" or "immobilized"
+    sprite:set_animation(waiting_animation)
+    print(waiting_animation)
     sol.timer.start(enemy, waiting_duration, function()
+      print(is_charging)
       if not is_charging then
         start_walking(next_direction)
       end
     end)
-  end)
-end
-
--- Wake the enemy up as invincible, start a little walk to get away from overlapping obstacles then restart.
-function enemy:wake_up()
-
-  is_waking_up = true
-  sol.timer.stop_all(enemy)
-  enemy:stop_movement()
-  enemy:set_enabled(true)
-  enemy:set_drawn_in_y_order(false) -- Draw the enemy below the explosion that woke him up.
-  sprite:set_animation("immobilized")
-  sprite:set_direction(waking_up_direction)
-
-  enemy:set_hero_weapons_reactions({
-  	arrow = "protected",
-  	boomerang = "protected",
-  	explosion = "ignored",
-  	sword = "protected",
-  	thrown_item = "protected",
-  	fire = "protected",
-  	jump_on = "ignored",
-  	hammer = "protected",
-  	hookshot = "protected",
-  	magic_powder = "ignored",
-  	shield = "protected",
-  	thrust = "protected"
-  })
-
-  sol.timer.start(enemy, waking_up_duration, function()
-    local movement = enemy:start_straight_walking(waking_up_direction * quarter, walking_speed, waking_up_distance, function()
-      is_waking_up = false
-      enemy:set_drawn_in_y_order()
-      enemy:restart()
-    end)
-    movement:set_ignore_obstacles()
   end)
 end
 
@@ -108,7 +73,7 @@ function enemy:check_hero()
   -- Start charging if the hero is near enough
   if not is_charging and enemy:is_near(hero, charge_triggering_distance) then
     start_charging()
-	elseif not enemy:is_near(hero, charge_triggering_distance) then
+	elseif is_charging and not enemy:is_near(hero, charge_triggering_distance) then
 		start_walking()
   end
 
@@ -153,3 +118,40 @@ enemy:register_event("on_restarted", function(enemy)
 	end
 	enemy:check_hero()
 end)
+
+
+--[[ Wake the enemy up as invincible, start a little walk to get away from overlapping obstacles then restart.
+  function enemy:wake_up()
+
+    is_waking_up = true
+    sol.timer.stop_all(enemy)
+    enemy:stop_movement()
+    enemy:set_enabled(true)
+    enemy:set_drawn_in_y_order(false) -- Draw the enemy below the explosion that woke him up.
+    sprite:set_animation("immobilized")
+    sprite:set_direction(waking_up_direction)
+  
+    enemy:set_hero_weapons_reactions({
+      arrow = "protected",
+      boomerang = "protected",
+      explosion = "ignored",
+      sword = "protected",
+      thrown_item = "protected",
+      fire = "protected",
+      jump_on = "ignored",
+      hammer = "protected",
+      hookshot = "protected",
+      magic_powder = "ignored",
+      shield = "protected",
+      thrust = "protected"
+    })
+  
+    sol.timer.start(enemy, waking_up_duration, function()
+      local movement = enemy:start_straight_walking(waking_up_direction * quarter, walking_speed, waking_up_distance, function()
+        is_waking_up = false
+        enemy:set_drawn_in_y_order()
+        enemy:restart()
+      end)
+      movement:set_ignore_obstacles()
+    end)
+  end--]]
