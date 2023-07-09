@@ -77,7 +77,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(3)
+  enemy:set_life(4)
   enemy:set_size(16, 16)
   enemy:set_origin(24, 29)
   enemy:hold_weapon("enemies/"..enemy:get_breed().."_weapon",enemy:get_sprite(), 0, 0)
@@ -87,18 +87,18 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 3,
+  	arrow = 4,
   	boomerang = "immobilized",
-  	explosion = 3,
+  	explosion = 4,
   	sword = 1,
-  	thrown_item = 3,
-  	fire = 3,
+  	thrown_item = 4,
+  	fire = 4,
   	jump_on = "ignored",
-  	hammer = 2,
+  	hammer = 4,
   	hookshot = "immobilized",
   	magic_powder = "ignored",
   	shield = "protected",
-  	thrust = 3
+  	thrust = 4
   })
 
   -- States.

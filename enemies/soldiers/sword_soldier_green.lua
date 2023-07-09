@@ -9,7 +9,6 @@ local hero = map:get_hero()
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local quarter = math.pi * 0.5
 local is_charging = false
-local is_waking_up = false
 
 -- Configuration variables
 local charge_triggering_distance = 64
@@ -19,15 +18,19 @@ local walking_speed = 32
 local walking_minimum_distance = 16
 local walking_maximum_distance = 96
 local waiting_duration = 800
-local waiting__ = 50
 
 -- Start the enemy charge movement.
 function start_charging()
 
   is_charging = true
   enemy:stop_movement()
-  enemy:start_target_walking(hero, charging_speed)
+  enemy:start_target_walking(hero, 0)
+		sol.timer.start(enemy, 200, function()
+			enemy:start_target_walking(hero, charging_speed)
+		end)
   sprite:set_animation("walking")
+	enemy:create_symbol_exclamation("hero_seen")
+	sol.audio.play_sound("hero_seen")
 end
 
 function look_around()
@@ -85,15 +88,15 @@ enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 2,
-  	boomerang = 2,
+  	boomerang = "immobilized",
   	explosion = 2,
   	sword = 1,
   	thrown_item = 2,
   	fire = 2,
   	jump_on = "ignored",
   	hammer = 2,
-  	hookshot = 2,
-  	magic_powder = 2,
+  	hookshot = "immobilized",
+  	magic_powder = "ignored",
   	shield = "protected",
   	thrust = 2
   })
@@ -108,94 +111,3 @@ enemy:register_event("on_restarted", function(enemy)
 		start_walking()
 	end
 end)
---[[
-function enemy:on_restarted()
-	if not being_pushed then
-		if going_hero then
-			enemy:go_hero()
-		else
-			enemy:go_random()
-			enemy:check_hero()
-		end
-	end
-end
-
-function enemy:check_hero()
-	local map = enemy:get_map()
-	local hero = map:get_hero()
-	local _, _, layer = enemy:get_position()
-	local _, _, hero_layer = hero:get_position()
-	local near_hero = layer == hero_layer
-			and enemy:get_distance(hero) < detect_distance
-			and enemy:is_in_same_region(hero)
-
-	if near_hero and not going_hero then
-		enemy:go_hero()
-	elseif not near_hero and going_hero then
-		enemy:go_random()
-	end
-	sol.timer.stop_all(self)
-	sol.timer.start(self, 1000, function() enemy:check_hero() end)
-end
-
-function enemy:on_movement_changed(movement)
-	if not being_pushed then
-		local direction4 = movement:get_direction4()
-		main_sprite:set_direction(direction4)
-		sword_sprite:set_direction(direction4)
-	end
-end
-
-function enemy:on_movement_finished(movement)
-	if being_pushed then
-		enemy:go_hero()
-	end
-end
-
-function enemy:on_obstacle_reached(movement)
-	if being_pushed then
-		enemy:go_hero()
-	end
-end
-
-function enemy:on_custom_attack_received(attack, sprite)
-	if attack == "sword" and sprite == sword_sprite then
-		audio_manager:play_sound("sword_tapping")
-		being_pushed = true
-		local map = enemy:get_map()
-		local hero = map:get_hero()
-		local x, y = enemy:get_position()
-		local angle = hero:get_angle(enemy)
-		local movement = sol.movement.create("straight")
-		movement:set_speed(128)
-		movement:set_angle(angle)
-		movement:set_max_distance(26)
-		movement:set_smooth(true)
-		movement:start(enemy)
-	end
-end
-
-function enemy:go_random()
-	local movement = sol.movement.create("random_path")
-	movement:set_speed(normal_speed)
-	movement:start(enemy)
-	being_pushed = false
-	going_hero = false
-end
-
-function enemy:go_hero()
-	local movement = sol.movement.create("target")
-	movement:set_speed(fast_speed)
-	movement:start(enemy)
-	audio_manager:play_sound("hero_seen")
-	being_pushed = false
-	going_hero = true
-end
-
--- Prevent enemies from "piling up" as much, which makes it easy to kill multiple in one hit.
-function enemy:on_collision_enemy(other_enemy, other_sprite, my_sprite)
-	if enemy:is_traversable() then
-		enemy:set_traversable(true) --default false
-		sol.timer.start(200, function() enemy:set_traversable(true) end)
-	end
-end--]]
