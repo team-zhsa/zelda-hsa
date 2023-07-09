@@ -13,6 +13,7 @@ function water_level_manager:switch_water_level(map)
 end
 
 function water_level_manager:check_water_level(map)
+	local game = map:get_game()
 	if game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "high" then
 		water_level_manager:set_high_water_level(map)
 	elseif game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "low" then
@@ -21,6 +22,7 @@ function water_level_manager:check_water_level(map)
 end
 
 function water_level_manager:set_high_water_level(map)
+	local game = map:get_game()
 	local low_tile_id = water_tile_dynamic_id.."0_0_"
 	local intermediate_tile_id = water_tile_dynamic_id.."0_1_"
 	local high_tile_id = water_tile_dynamic_id.."0_2_"
@@ -37,6 +39,7 @@ function water_level_manager:set_high_water_level(map)
 end
 
 function water_level_manager:set_low_water_level(map)
+	local game = map:get_game()
 	local low_tile_id = water_tile_dynamic_id.."0_0_"
 	local intermediate_tile_id = water_tile_dynamic_id.."0_1_"
 	local high_tile_id = water_tile_dynamic_id.."0_2_"

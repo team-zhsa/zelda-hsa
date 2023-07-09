@@ -12,9 +12,7 @@ local black_surface
 map:register_event("on_started", function()
 	if not game:is_step_done("sword_obtained") then
 		sol.audio.play_music("cutscenes/raining")
-	else sol.audio.play_music("inside/castle")
-		bed:get_sprite():set_animation("empty_open")
-	end
+	else sol.audio.play_music("inside/castle")	end
 end)
 
 -- Methods - Functions

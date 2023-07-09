@@ -30,8 +30,6 @@ function item:on_obtained(variant)
 
   local num_pieces_of_heart = item:get_num_pieces_of_heart()
 
-  --game:start_dialog(message_id[num_pieces_of_heart + 1], function()
-  
     game:set_value("num_pieces_of_heart", (num_pieces_of_heart + 1) % 4)
     game:set_value("total_pieces_of_heart", item:get_total_pieces_of_heart() + 1)
     if num_pieces_of_heart == 3 then
@@ -40,7 +38,5 @@ function item:on_obtained(variant)
 				game:add_life(game:get_max_life())
       end)
     end
-    
- -- end)
 
 end

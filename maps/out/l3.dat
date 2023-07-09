@@ -1,0 +1,119 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1280,
+  height = 1440,
+  min_layer = 0,
+  max_layer = 2,
+  world = "outside_world",
+  tileset = "outside_main",
+  music = "outside/sea",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 1280,
+  width = 16,
+  height = 160,
+  pattern = "112",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 512,
+  width = 32,
+  height = 16,
+  pattern = "1071",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 496,
+  width = 32,
+  height = 16,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 488,
+  width = 32,
+  height = 8,
+  pattern = "959",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 480,
+  width = 32,
+  height = 8,
+  pattern = "1008",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 472,
+  width = 32,
+  height = 8,
+  pattern = "1007",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 528,
+  width = 32,
+  height = 16,
+  pattern = "918",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/l4",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/k3",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/l3",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/l2",
+  destination = "_side",
+}
+

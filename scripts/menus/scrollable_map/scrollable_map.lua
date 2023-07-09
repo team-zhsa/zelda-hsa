@@ -12,7 +12,7 @@ function map_submenu:on_started()
   
   -- Common to dungeons and outside areas.
   self.hero_head_sprite = sol.sprite.create("menus/map/hero_head")
-  self.hero_head_sprite:set_animation("tunic" .. self.game:get_item("tunic"):get_variant())
+  self.hero_head_sprite:set_animation("tunic" .. self.game:get_ability("tunic"))
   self.waypoint_sprite = sol.sprite.create("menus/map/map_waypoint")
   self.waypoint_sprite:set_animation("blinking")
   self.up_arrow_sprite = sol.sprite.create("menus/arrow")

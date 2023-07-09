@@ -347,6 +347,10 @@ function enemy_meta:create_symbol_exclamation(sound)
       layer = layer + 1,
       direction = 0
     })
+    
+  sol.timer.start(map, 200, function()
+    symbol:remove()
+  end)
 
   return symbol
 

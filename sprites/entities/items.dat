@@ -9,7 +9,7 @@ animation{
   name = "_placeholder",
   src_image = "entities/items.png",
   directions = {
-    { x = 136, y = 184, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -241,6 +241,20 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 80, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "divine_ore",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 32, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "divine_ore_counter",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 32, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -1001,15 +1015,6 @@ animation{
     { x = 128, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "tunic",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 512, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 512, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 512, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

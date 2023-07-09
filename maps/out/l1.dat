@@ -48092,14 +48092,6 @@ jumper{
   jump_length = 72,
 }
 
-pickable{
-  layer = 0,
-  x = 648,
-  y = 1085,
-  treasure_name = "piece_of_heart",
-  treasure_savegame_variable = "outside_zora_falls_piece_of_heart_2",
-}
-
 destructible{
   layer = 0,
   x = 1048,
@@ -48276,6 +48268,23 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/l2",
+  destination = "_side",
 }
 
 tile{

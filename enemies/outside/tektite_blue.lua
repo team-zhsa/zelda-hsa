@@ -55,7 +55,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(10)
+  enemy:set_life(4)
   enemy:set_size(24, 16)
   enemy:set_origin(12, 13)
   enemy:start_shadow()
@@ -66,23 +66,23 @@ enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 4,
-  	boomerang = 4,
+  	boomerang = "immobilized",
   	explosion = 4,
-  	sword = 1,
-  	thrown_item = 2,
-  	fire = 1,
+  	sword = 2,
+  	thrown_item = 4,
+  	fire = 4,
   	jump_on = "ignored",
   	hammer = 2,
-  	hookshot = 2,
+  	hookshot = "immobilized",
   	magic_powder = 2,
   	shield = "protected",
-  	thrust = 2
+  	thrust = 4
   })
 
   -- States.
   sprite:set_xy(0, 0)
   enemy:set_obstacle_behavior("normal")
   enemy:set_can_attack(true)
-  enemy:set_damage(12)
+  enemy:set_damage(2)
   enemy:wait()
 end)

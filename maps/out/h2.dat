@@ -25942,6 +25942,12 @@ teletransporter{
   layer = 0,
   x = 1280,
   y = 0,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
   width = 16,
   height = 1440,
   transition = "scrolling",
@@ -26027,6 +26033,17 @@ teletransporter{
   height = 16,
   destination_map = "inside/caves/east_mountains/to_east_castle_b1",
   destination = "from_outside_2",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h1",
+  destination = "_side",
 }
 
 tile{

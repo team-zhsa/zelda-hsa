@@ -521,6 +521,24 @@ jeune fille !
 }
 
 dialog{
+  id = "_treasure.divine_ore.1",
+  icon = "92",
+  text = [[
+Tu as obtenu un fragment de
+Roche Divine !
+]],
+}
+
+dialog{
+  id = "_treasure.divine_ore.all_ores_obtained",
+  icon = "92",
+  text = [[
+Va à la forge pour améliorer ton
+épée !
+]],
+}
+
+dialog{
   id = "_treasure.face_key.1",
   icon = "44",
   text = [[
@@ -1671,36 +1689,6 @@ collectionneur de Firone !
 }
 
 dialog{
-  id = "_treasure.tunic.2",
-  icon = "61",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-rouge !$0 Elle te
-protège de manière
-plus efficace contre
-les ennemis !
-]],
-}
-
-dialog{
-  id = "_treasure.tunic.3",
-  icon = "62",
-  text = [[
-Tu as trouvé la
-Cotte de Mailles
-bleue !$0
-Elle te protège
-mieux contre les
-ennemis et te permet
-de résister aux
-températures les
-plus glaciales...
-
-]],
-}
-
-dialog{
   id = "_treasure.wind_rod.1",
   icon = "61",
   text = [[
@@ -2729,6 +2717,15 @@ Reviens dans un moment !
 }
 
 dialog{
+  id = "maps.houses.east_castle.blacksmith.ultimate_sword",
+  text = [[
+Qu'est-il arrivé à ton épée ? Ce tranchant, cette brillance... Je n'arrive pas à y croire, j'ai été battu !
+...
+La vie est pleine de surprises... J'aurais jamais cru que quelqu'un d'aussi talentueux existe... Bien, je vais tout faire opur devenir le meilleur !
+]],
+}
+
+dialog{
   id = "maps.houses.east_castle.blacksmith.welcome",
   text = [[
 Bienvenue à la forge, jeune
@@ -3427,6 +3424,37 @@ dialog{
   text = [[
 Tu es doué vraiment ! Au plaisir
 de te revoir !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.product_bread",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.product_croissant",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.product_pie",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
 ]],
 }
 
@@ -4982,7 +5010,7 @@ dialog{
   id = "maps.out.east_mountains.sign_3",
   text = [[
 Aucune vie n'est possible à
-cette hauteur en temps normal !
+cette altitude en temps normal !
 
 Il y a peut être un sage en
 haut de cette tour !
@@ -6093,25 +6121,6 @@ Est : Baie de Parapa
 }
 
 dialog{
-  id = "maps.out.rito_village.kaeopora_gaebora",
-  question = "1",
-  text = [[
-$2Hou ! C'est moi Kaepora
-Gaebora !$0 Tu as réussi
-à sauver tous les Sages !
-La bibliothèque du village
-Cocorico recèle un secret
-qui pourrait t'orienter vers
-ta prochaine destination.$0
-Tu devrais y jeter un oeil !
-
-As-tu tout compris ?
-Non !
-Oui.
-]],
-}
-
-dialog{
   id = "maps.out.snowpeaks.sign_1",
   text = [[
 Nord : Boutique des neiges
@@ -6432,6 +6441,35 @@ facilement.
 }
 
 dialog{
+  id = "maps.out.woods_coast.kaeopora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu as réussi
+à sauver tous les Sages !
+La bibliothèque du village
+Cocorico recèle un secret
+qui pourrait t'orienter vers
+ta prochaine destination.$0
+Tu devrais y jeter un oeil !
+
+As-tu tout compris ?
+Non !
+Oui.
+]],
+}
+
+dialog{
+  id = "maps.out.woods_coast.sign_1",
+  skip = "all",
+  text = [[
+Sud : Forêt de Firone
+Ouest : Why le Bûcheron
+Nord : Village Piaf
+]],
+}
+
+dialog{
   id = "maps.out.zora_forest.sign_1",
   skip = "all",
   text = [[
@@ -6448,6 +6486,24 @@ dialog{
 Est : Cascades Zora
 Ouest : Maison du campeur
 Nord : Domaine Zora
+]],
+}
+
+dialog{
+  id = "maps.out.zora_forest.sign_3",
+  skip = "all",
+  text = [[
+Est : Cascades Zora
+Sud : Forêt Zora
+Ouest : Village Zora
+]],
+}
+
+dialog{
+  id = "maps.out.zora_forest.sign_4",
+  skip = "all",
+  text = [[
+Etable abandonnée
 ]],
 }
 
@@ -7315,6 +7371,19 @@ la Glace.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.divine_ore_counter.1",
+  icon = "92",
+  skip = "all",
+  text = [[
+Les fragments de Roche Divine
+te permettent d'améliorer ton
+épée.
+Apportes-en huit à la forge pour
+que ton épée soit plus puissante.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.face_key.1",
   icon = "44",
   skip = "all",
@@ -8049,7 +8118,7 @@ la Caverne.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.1",
-  icon = "160",
+  icon = "170",
   skip = "all",
   text = [[
 Une belle épée avec
@@ -8059,7 +8128,7 @@ ton nom écrit dessus.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.2",
-  icon = "161",
+  icon = "171",
   skip = "all",
   text = [[
 L'épée de Légende, maniée par
@@ -8069,7 +8138,7 @@ de véritables héros.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.3",
-  icon = "162",
+  icon = "172",
   skip = "all",
   text = [[
 L'épée de Légende améliorée
@@ -8079,7 +8148,7 @@ par le forgeron.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.4",
-  icon = "163",
+  icon = "173",
   skip = "all",
   text = [[
 L'épée dorée, inflige beaucoup
@@ -8089,7 +8158,7 @@ de dégâts
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.5",
-  icon = "164",
+  icon = "174",
   skip = "all",
   text = [[
 L'épée dorée, inflige
@@ -8175,39 +8244,6 @@ dialog{
   text = [[
 La lettre que t'a donnée le
 vieux monsieur.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.1",
-  icon = "60",
-  skip = "all",
-  text = [[
-Une tunique verte 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.2",
-  icon = "61",
-  skip = "all",
-  text = [[
-Une tunique bleue 
-pour le plus beau
-des héros !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tunic.3",
-  icon = "62",
-  skip = "all",
-  text = [[
-Une tunique rouge 
-pour le plus beau
-des héros !
 ]],
 }
 
@@ -8519,30 +8555,6 @@ Ainsi seulement,
 pourras-tu      
 quitter l'île...
 Hou! !
-]],
-}
-
-dialog{
-  id = "scripts.meta.map.owl_7",
-  text = [[
-Hou! Combien    
-d'Instruments   
-as-tu collectés ?
-Quand tu joueras
-des Instruments 
-face à l'Oeuf,  
-le Poisson-Rêve 
-se réveillera   
-et tu pourras   
-quitter l'île.  
-Va vite vers les
-Dunes de Yarna ! 
-L'horrible      
-monstre noir    
-des sables      
-t'indiquera     
-le chemin !      
-Hou hou !
 ]],
 }
 
