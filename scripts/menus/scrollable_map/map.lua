@@ -64,7 +64,7 @@ local function initialise_map_features(game)
 
   game:register_event("on_key_pressed", function(game, key, modifiers)
 		if key == "w" then
-			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) then
+			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) and not game:is_suspended(true) then
 			-- Prevents from loading map if paused.
     		map_menu:open()
 			elseif sol.menu.is_started(map_menu) == true and not game:is_paused(true) then
@@ -75,7 +75,7 @@ local function initialise_map_features(game)
 
   game:register_event("on_joypad_button_pressed", function(game, button)
 		if button == 8 then
-			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) then
+			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) and not game:is_suspended(true) then
 			-- Prevents from loading map if paused.
     		map_menu:open()
 			elseif sol.menu.is_started(map_menu) == true and not game:is_paused(true) then

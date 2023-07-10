@@ -1,3 +1,15 @@
+----------------------------------
+--
+-- Darknut.
+--
+-- Moves randomly over horizontal and vertical axis, and charge the hero if close enough.
+-- Turn his head to the next direction before starting a new random move.
+-- May start disabled and manually wake_up() from outside this script if initially stuck on a wall, in which case it will get away from overlapping obstacles before walking normally.
+--
+-- Methods : enemy:wake_up()
+--
+----------------------------------
+
 -- Global variables
 local enemy = ...
 require("enemies/lib/common_actions").learn(enemy)
@@ -9,58 +21,47 @@ local hero = map:get_hero()
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local quarter = math.pi * 0.5
 local is_charging = false
+local is_waiting = false
 
 -- Configuration variables
-local charge_triggering_distance = 64
+local charge_triggering_distance = 80
 local charging_speed = 56
 local walking_angles = {0, quarter, 2.0 * quarter, 3.0 * quarter}
 local walking_speed = 32
 local walking_minimum_distance = 16
 local walking_maximum_distance = 96
-local waiting_duration = 800
+local waiting_duration = 1600
 
 -- Start the enemy charge movement.
-function start_charging()
+local function start_charging()
 
   is_charging = true
   enemy:stop_movement()
-  enemy:start_target_walking(hero, 0)
-		sol.timer.start(enemy, 200, function()
-			enemy:start_target_walking(hero, charging_speed)
-		end)
+  enemy:start_target_walking(hero, charging_speed)
   sprite:set_animation("walking")
-	enemy:create_symbol_exclamation("hero_seen")
 	sol.audio.play_sound("hero_seen")
 end
 
-function look_around()
-	local looking_animation = "looking_around"
-	local next_direction = math.random(4)
-	sprite:set_animation(looking_animation)
-	sol.timer.start(enemy, 1600, function()
-		start_walking(next_direction)
-	end)
-end
-
 -- Start the enemy random movement.
-function start_walking(direction)
-	is_charging = false
+local function start_walking(direction)
+  is_charging = false
   direction = direction or math.random(4)
   enemy:start_straight_walking(walking_angles[direction], walking_speed, math.random(walking_minimum_distance, walking_maximum_distance), function()
-		
-		local waiting_animation = "immobilized"
-		sprite:set_animation(waiting_animation)
-		
+    local next_direction = math.random(4)
+    local waiting_animation = "looking_around"
+    sprite:set_animation(waiting_animation)
+    --print(waiting_animation)
     sol.timer.start(enemy, waiting_duration, function()
+      --print(is_charging)
       if not is_charging then
-				look_around()
+        start_walking(next_direction)
       end
     end)
   end)
 end
 
--- Passive behaviours needing constant checking.
-enemy:register_event("on_update", function(enemy)
+-- Passive behaviors needing constant checking.
+function enemy:check_hero()
 
   if enemy:is_immobilized() then
     return
@@ -72,22 +73,24 @@ enemy:register_event("on_update", function(enemy)
 	elseif is_charging and not enemy:is_near(hero, charge_triggering_distance) then
 		start_walking()
   end
-end)
+
+	sol.timer.start(enemy, 1000, function() enemy:check_hero() end)
+end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
   enemy:set_life(3)
   enemy:set_size(16, 16)
-  enemy:set_origin(24, 29)
-  enemy:hold_weapon("enemies/"..enemy:get_breed().."_weapon",enemy:get_sprite(), 0, 0)
+  enemy:set_origin(8, 13)
+  enemy:hold_weapon("enemies/"..enemy:get_breed().."_weapon", enemy:get_sprite(), 0, 0)
 end)
 
 -- Restart settings.
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 2,
+  	arrow = 3,
   	boomerang = "immobilized",
   	explosion = 3,
   	sword = 1,
@@ -104,10 +107,11 @@ enemy:register_event("on_restarted", function(enemy)
   -- States.
   enemy:set_can_attack(true)
   enemy:set_damage(2)
-	enemy:set_drawn_in_y_order()
-	if is_charging then
+
+	if is_charging and enemy:is_near(hero, charge_triggering_distance) then
 		start_charging()
 	else
 		start_walking()
 	end
+	enemy:check_hero()
 end)

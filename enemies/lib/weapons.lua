@@ -111,7 +111,7 @@ function weapons.learn(enemy)
         local direction = sprite:get_direction()
         local x, y, layer = enemy:get_position()
         local projectile = map:create_enemy({
-          breed = "projectiles/" .. projectile_name,
+          breed = projectile_name,
           x = x + x_offset,
           y = y + y_offset,
           layer = layer,
