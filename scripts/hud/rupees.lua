@@ -67,7 +67,7 @@ function rupees_builder:new(game, config)
     rupees.surface:clear()
 
     -- Max money (icon).
-    rupees.rupee_icons_img:draw_region((rupees.rupee_bag_displayed - 1) * 12, 0, 12, 12, rupees.surface)
+    rupees.rupee_icons_img:draw_region((rupees.rupee_bag_displayed - 1) * 12, 0, 17, 12, rupees.surface)
 
     -- Current rupee (counter).
     local max_money = game:get_max_money()
