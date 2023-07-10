@@ -69,7 +69,6 @@ function submenu:on_started()
   self.caption_text_1 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "fixed",
     font = menu_font,
     font_size = menu_font_size,
     color = self.text_color,
@@ -77,7 +76,6 @@ function submenu:on_started()
   self.caption_text_2 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "fixed",
     font = menu_font,
     font_size = menu_font_size,
     color = self.text_color,

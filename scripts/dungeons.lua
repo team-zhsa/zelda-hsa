@@ -192,7 +192,7 @@ local function initialise_dungeon_features(game)
     completing_sequence = "simple",
     },
 
-    [7] = { -- Desert Temple
+    [78] = { -- Desert Temple
     floor_width = 1600,
     floor_height = 1200,
     minimap_width = 48,

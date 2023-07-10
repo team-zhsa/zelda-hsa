@@ -156,7 +156,7 @@ function parchment:initialise()
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     text = parchment.text_line_1,
-    font = menu_font,
+    font = "capital",
     font_size = menu_font_size,
     color = text_line_1_color,
   }
