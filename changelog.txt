@@ -434,6 +434,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed crash on ocarina cinematic because of an invalid animation direction (#63).
 	FIX: Fixed the map menu being openable when a map transition is playing (#127).
 	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
+	FIX: Fixed the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -447,7 +448,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
-	TDO: Fix the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
