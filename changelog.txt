@@ -402,6 +402,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Finished rescripting the Ice Rod.
 	CHG: Rescripted the Fire Rod.
 	CHG: Increased the running speed from 192 to 256.
+	CHG: Rescripted bombs with custom entities.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -432,6 +433,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed Link's animation being frozen after reloading a save with the debug when using the feather (#144).
 	FIX: Fixed crash on ocarina cinematic because of an invalid animation direction (#63).
 	FIX: Fixed the map menu being openable when a map transition is playing (#127).
+	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -441,6 +443,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed unused Tektite sprite files.
 	REM: Removed unused Chuchu sprite files.
 	REM: Removed the orange and brown sword soldier.
+	TDO: Make bombs explode even if Link is carrying them.
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
@@ -505,7 +508,6 @@ Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
 	TDO: Progressively switch enemies behaviour to ALTTD's.
 	TDO: Improve the shield usability (#30).
-	TDO: Fix bombs not being liftable when starting the game inside unless going outside (#31).
 	TDO: Fix remaining wrong sprite palettes (#32).
 	TDO: Fix signs being readable after being cut (#34).
 	TDO: Change Helmasaur reaction to hookshot (#22).
