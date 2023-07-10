@@ -94,7 +94,13 @@ function enemy_meta:on_hurt(attack)
 			audio_manager:play_sound("enemy_hurt")
 		end
 	end
-	print("damage"..attack)
+	local final_damage = self:get_attack_consequence(attack)
+	if self:is_frozen() then
+		final_damage = self:get_life()
+	end
+	-- Remove life
+	self:remove_life(final_damage)
+	print("Damages on enemy: " .. final_damage)
 end
 
 function enemy_meta:on_dying()
@@ -144,7 +150,7 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
 		final_damage = ((base_life_points + 1)^(game:get_ability("sword") - 1)) * 2
 	end
 	if self:is_frozen() then
-		final_damage = 20000
+		final_damage = self:get_life()
 	end
 	-- Remove life
 	self:remove_life(final_damage)

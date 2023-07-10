@@ -104,28 +104,28 @@ ice:add_collision_test("sprite", function(ice, entity, ice_sprite, entity_sprite
     if reaction == "ignored" then
       return
     end
+    if reaction == nil or reaction == 0 then
+      -- Freeze the enemy and make it unable to interact.
+      local reactions = enemy:get_hero_weapons_reactions()
+      sol.timer.stop_all(enemy)
+      enemy:stop_movement()
+      enemy:set_can_attack(false)
 
-    -- Freeze the enemy and make it unable to interact.
-    local reactions = enemy:get_hero_weapons_reactions()
-    sol.timer.stop_all(enemy)
-    enemy:stop_movement()
-    enemy:set_can_attack(false)
-
-    -- Set the enemy's animation to frozen.
-    local enemy_sprite = enemy:get_sprite()
-    if enemy_sprite:has_animation("frozen") then
-      enemy_sprite:set_animation("frozen")
-      enemy:start_jumping(400, 16, math.pi / 2, 88, function()
-        enemy:set_frozen(true)
-      end)
-    else
-      local burning_sprite = enemy:create_sprite("entities/effects/flame", "burning")
-      burning_sprite:set_xy(entity_sprite:get_xy())
-      function burning_sprite:on_animation_finished()
-        enemy:remove_sprite(burning_sprite)
+      -- Set the enemy's animation to frozen.
+      local enemy_sprite = enemy:get_sprite()
+      if enemy_sprite:has_animation("frozen") then
+        enemy_sprite:set_animation("frozen")
+        enemy:start_jumping(400, 8, math.pi / 2, 88, function()
+          enemy:set_frozen(true)
+        end)
+      else
+        local burning_sprite = enemy:create_sprite("entities/effects/flame", "burning")
+        burning_sprite:set_xy(entity_sprite:get_xy())
+        function burning_sprite:on_animation_finished()
+          enemy:remove_sprite(burning_sprite)
+        end
       end
     end
-
     --[[ Directly pass attack consequences if reaction is a function.
     if type(reaction) == "function" then
       ice:extinguish()
