@@ -7,7 +7,8 @@ properties{
   max_layer = 2,
   world = "dungeon_11",
   floor = 0,
-  tileset = "absolute_dungeon_09",
+  tileset = "absolute_dungeon_11",
+  music = "dungeons/11_ice",
 }
 
 tile{
@@ -1002,9 +1003,9 @@ tile{
 
 tile{
   layer = -1,
-  x = 1088,
+  x = 1072,
   y = 688,
-  width = 48,
+  width = 64,
   height = 24,
   pattern = "wall_low.2-1",
 }
@@ -1050,17 +1051,8 @@ tile{
   x = 1056,
   y = 592,
   width = 16,
-  height = 80,
+  height = 64,
   pattern = "wall_hole.3-1",
-}
-
-tile{
-  layer = -1,
-  x = 1056,
-  y = 672,
-  width = 16,
-  height = 16,
-  pattern = "wall_hole.corner_reverse.1-1",
 }
 
 tile{
@@ -1270,6 +1262,87 @@ tile{
   pattern = "wall_hole.corner_reverse.4-1",
 }
 
+tile{
+  layer = -1,
+  x = 1056,
+  y = 704,
+  width = 24,
+  height = 112,
+  pattern = "wall_low.4-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 688,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner_reverse.4-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 808,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner_reverse.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 656,
+  width = 32,
+  height = 32,
+  pattern = "floor.14-2",
+}
+
+tile{
+  layer = -1,
+  x = 1040,
+  y = 688,
+  width = 16,
+  height = 144,
+  pattern = "wall_hole.4-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 832,
+  width = 16,
+  height = 16,
+  pattern = "wall_hole.corner.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 864,
+  width = 16,
+  height = 16,
+  pattern = "wall_hole.corner_reverse.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1040,
+  y = 832,
+  width = 16,
+  height = 16,
+  pattern = "wall_hole.corner_reverse.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1056,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "wall_hole.4-1",
+}
+
 separator{
   name = "auto_separator_1",
   layer = -1,
@@ -1442,7 +1515,7 @@ tile{
   layer = 0,
   x = 1032,
   y = 712,
-  width = 96,
+  width = 48,
   height = 32,
   pattern = "floor.14-1",
 }
@@ -3575,10 +3648,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 1048,
-  y = 776,
-  width = 80,
-  height = 32,
+  x = 1080,
+  y = 712,
+  width = 48,
+  height = 96,
   pattern = "floor.14-1",
 }
 
@@ -6079,15 +6152,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1096,
-  y = 744,
-  width = 32,
-  height = 32,
-  pattern = "floor.14-1",
-}
-
-tile{
-  layer = 0,
   x = 1088,
   y = 600,
   width = 56,
@@ -6097,38 +6161,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 1048,
-  y = 776,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 1096,
-  y = 776,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 1096,
+  x = 1080,
   y = 744,
   width = 8,
-  height = 32,
+  height = 56,
   pattern = "barrier.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 1056,
-  y = 776,
-  width = 40,
-  height = 8,
-  pattern = "barrier.1-1",
 }
 
 tile{
@@ -6196,7 +6233,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1096,
+  x = 1080,
   y = 736,
   width = 8,
   height = 8,
@@ -6306,7 +6343,7 @@ tile{
   layer = 0,
   x = 1032,
   y = 736,
-  width = 64,
+  width = 48,
   height = 8,
   pattern = "barrier.1-1",
 }
@@ -7051,29 +7088,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 1048,
-  y = 800,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
   x = 1080,
   y = 800,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 1056,
-  y = 800,
-  width = 24,
-  height = 8,
-  pattern = "barrier.1-1",
 }
 
 tile{
@@ -7236,15 +7255,6 @@ tile{
   width = 32,
   height = 8,
   pattern = "wall_border.1-4",
-}
-
-tile{
-  layer = 0,
-  x = 1048,
-  y = 784,
-  width = 8,
-  height = 16,
-  pattern = "barrier.2-1",
 }
 
 tile{
@@ -7569,18 +7579,6 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-4",
-}
-
-wall{
-  layer = 0,
-  x = 792,
-  y = 1064,
-  width = 16,
-  height = 16,
-  stops_hero = true,
-  stops_npcs = true,
-  stops_blocks = true,
-  stops_projectiles = true,
 }
 
 crystal{

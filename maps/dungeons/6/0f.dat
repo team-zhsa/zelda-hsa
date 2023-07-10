@@ -17387,8 +17387,8 @@ crystal_block{
 destination{
   name = "from_outside",
   layer = 0,
-  x = 472,
-  y = 1149,
+  x = 480,
+  y = 1165,
   direction = 1,
   default = true,
 }
@@ -20579,7 +20579,17 @@ custom_entity{
 crystal{
   layer = 0,
   x = 840,
-  y = 1261,
+  y = 1277,
+}
+
+jumper{
+  layer = 0,
+  x = 960,
+  y = 1288,
+  width = 32,
+  height = 8,
+  direction = 6,
+  jump_length = 40,
 }
 
 tile{

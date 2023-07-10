@@ -58,7 +58,7 @@ function jump_manager.setup_collision_rules(state, is_running)
         return entity.is_on_crystal_block or anim=="blue_lowered" or anim=="orange_lowered"
       end)
     state:set_can_use_stairs(false)
-    state:set_can_use_teletransporter(false)
+    state:set_can_use_teletransporter(true)
     state:set_can_use_switch(false)
     state:set_can_use_stream(false)
     state:set_can_be_hurt(false)
@@ -204,7 +204,7 @@ function jump_manager.start(entity, initial_vspeed, success_callback, failure_ca
     return
   end
 
-  audio_manager:play_sound("hero/jump")
+  audio_manager:play_sound("jump")
   if entity.is_eaten then -- Only play the sound and don't jump if the hero is currently eaten.
     return
   end

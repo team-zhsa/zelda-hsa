@@ -28,7 +28,7 @@ local walking_maximum_distance = 32
 local waiting_duration = 800
 local throwing_duration = 200
 
-local projectile_breed = "outside/octorok_stone"
+local projectile_breed = "projectiles/stone_light"
 local projectile_offset = {{0, -8}, {0, -8}, {0, -8}, {0, -8}}
 
 -- Start the enemy movement.

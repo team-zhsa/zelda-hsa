@@ -1,4 +1,4 @@
--- Lua script of map dungeons/6/1f.
+-- Lua script of map dungeons/6/0f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -21,18 +21,19 @@ local water_level_manager = require("scripts/maps/water_level_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
+	map:set_doors_open("door_33_n", false)
+	map:set_doors_open("door_33_e", false)
 	if destination:get_name() == "from_outside" then
 		water_level_manager:set_low_water_level(map)
+	elseif destination:get_name() == "from_b1_2" then
+		map:set_doors_open("door_33_n", true)
+		map:set_doors_open("door_33_e", true)
 	end
 	water_level_manager:check_water_level(map)
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
 
 end
 
-sensor_33_door_1:register_event("on_activated", function()
-	map:set_doors_open("door_33_n")
-	map:set_doors_open("door_33_e")
-end)
 
 sensor_33_door_2:register_event("on_activated", function()
 	map:close_doors("door_33_n")

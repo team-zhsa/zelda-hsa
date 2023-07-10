@@ -224,7 +224,7 @@ function hero_meta.play_ground_effect(hero)
         --print "landed in sand"
         hero:show_ground_effect("sand") --TODO make proper sprite for sand landing effect
       end
-      audio_manager:play_sound("hero_lands")
+      --audio_manager:play_sound("hero_lands")
     end
   end
 end

@@ -361,7 +361,9 @@ Alpha 1.16.2 (23/04/23) "Mackerel Update":
 Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
-	ADD: Added side quests (#95)
+	ADD: Added side quests (#95).
+	ADD: Added enemies.
+	ADD: Added musics.
 	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
@@ -369,6 +371,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added a star switch manager script to use one function for all hole switches (#152).
 	ADD: Added item folders.
 	ADD: Added Bari colour variations (#143).
+	ADD: Added soldier colour variations.
+	ADD: Rescripted the feather (#144).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -386,6 +390,12 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Moved the piece of heart #15 from L1 to K2.
 	CHG: Restored the graveyard music for the Kakarico Graveyard.
 	CHG: Replaced "Linkff" by "LinkFF" in the project database.
+	CHG: Updated the hero head sprite with the actual tunic colours.
+	CHG: Lowered the Tektites' damage values (#177).
+	CHG: Changed the Armos sprite palette.
+	CHG: Updated the Octoroks' sprites.
+	CHG: Changed Link's animation to stopped after bonking against a wall.
+	CHG: Updated the enemy weapon script from ALTTD.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -411,23 +421,27 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
 	FIX: Fixed a missing electrocution sound.
 	FIX: Fixed the tunic item not being saved when opening the minimap (#175).
+	FIX: Fixed the hero being able to run through some walls when running (#178).
+	FIX: Fixed the Hyrule Town library teletransporter not having the radial fade out effect.
+	FIX: Fixed Link's animation being frozen after reloading a save with the debug when using the feather (#144).
+	FIX: Fixed crash on ocarina cinematic because of an invalid animation direction (#63).
+	FIX: Fixed the map menu being openable when a map transition is playing (#127).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
 	REM: Removed unused *.zip tileset files.
 	REM: Removed *.xcf and work files from the data files (#169).
 	REM: Removed the old tunic item.
+	REM: Removed unused Tektite sprite files.
+	REM: Removed unused Chuchu sprite files.
+	REM: Removed the orange and brown sword soldier.
 	TDO: Setup the quest files for the Solarus launcher.
-	TDO: Rescript the feather (#144).
-	TDO: Link's animation being frozen after reloading a save with the debug when using the feather (#144).
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
 	TDO: Fix the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
-	TDO: Fix the map menu being openable when a map transition is playing (#128).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
-	TDO: Fix crash on ocarina cinematic because of an invalid animation direction (#63).
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix low memory issues on MacOS (#39).
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
@@ -435,7 +449,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Fix the world map background not being loaded sometimes (#153).
 	TDO: Map the missing caves (#151).
-	TDO: Update the hero head sprite with the actual tunic colours.
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
@@ -473,7 +486,7 @@ Alpha 1.18 (//23) "Opah Update": Musics and sounds
 	TDO: Unify all the electrocution systems.
 	TDO: Replace all the space indenting by tabs (#112).
 	TDO: Loop the remaining musics.
-	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389), add the Hateno Village music for the Zora Forest)
+	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
 	TDO: Add Koume and Koutake
 	TDO: Fix music loops (#25).
 	TDO: Clean up unused musics.

@@ -42,7 +42,7 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   sprite:set_animation("walking")
-  enemy:set_damage(2)
+  enemy:set_damage(4)
   enemy:set_obstacle_behavior("flying")
   enemy:set_invincible()
   enemy:set_hero_weapons_reactions({shield = on_shield_collision})

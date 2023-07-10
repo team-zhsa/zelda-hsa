@@ -18136,6 +18136,24 @@ tile{
   pattern = "933",
 }
 
+tile{
+  layer = 0,
+  x = 304,
+  y = 1024,
+  width = 32,
+  height = 32,
+  pattern = "1085",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 1048,
+  width = 16,
+  height = 16,
+  pattern = "1040",
+}
+
 destructible{
   layer = 0,
   x = 632,
@@ -21229,6 +21247,25 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/k5",
   destination = "_side",
+}
+
+npc{
+  layer = 0,
+  x = 200,
+  y = 877,
+  properties = {
+    {
+      key = "dialogue_id",
+      value = "maps.out.woods_coast.sign_1",
+    },
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
+  direction = 3,
+  subtype = 0,
+  sprite = "entities/sign",
 }
 
 tile{

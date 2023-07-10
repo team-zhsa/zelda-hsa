@@ -2717,6 +2717,15 @@ Reviens dans un moment !
 }
 
 dialog{
+  id = "maps.houses.east_castle.blacksmith.ultimate_sword",
+  text = [[
+Qu'est-il arrivé à ton épée ? Ce tranchant, cette brillance... Je n'arrive pas à y croire, j'ai été battu !
+...
+La vie est pleine de surprises... J'aurais jamais cru que quelqu'un d'aussi talentueux existe... Bien, je vais tout faire opur devenir le meilleur !
+]],
+}
+
+dialog{
   id = "maps.houses.east_castle.blacksmith.welcome",
   text = [[
 Bienvenue à la forge, jeune
@@ -6112,25 +6121,6 @@ Est : Baie de Parapa
 }
 
 dialog{
-  id = "maps.out.rito_village.kaeopora_gaebora",
-  question = "1",
-  text = [[
-$2Hou ! C'est moi Kaepora
-Gaebora !$0 Tu as réussi
-à sauver tous les Sages !
-La bibliothèque du village
-Cocorico recèle un secret
-qui pourrait t'orienter vers
-ta prochaine destination.$0
-Tu devrais y jeter un oeil !
-
-As-tu tout compris ?
-Non !
-Oui.
-]],
-}
-
-dialog{
   id = "maps.out.snowpeaks.sign_1",
   text = [[
 Nord : Boutique des neiges
@@ -6447,6 +6437,35 @@ dialog{
 Voici le Boléro du Feu, qui
 te permettra de revenir ici
 facilement.
+]],
+}
+
+dialog{
+  id = "maps.out.woods_coast.kaeopora_gaebora",
+  question = "1",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu as réussi
+à sauver tous les Sages !
+La bibliothèque du village
+Cocorico recèle un secret
+qui pourrait t'orienter vers
+ta prochaine destination.$0
+Tu devrais y jeter un oeil !
+
+As-tu tout compris ?
+Non !
+Oui.
+]],
+}
+
+dialog{
+  id = "maps.out.woods_coast.sign_1",
+  skip = "all",
+  text = [[
+Sud : Forêt de Firone
+Ouest : Why le Bûcheron
+Nord : Village Piaf
 ]],
 }
 
@@ -8536,30 +8555,6 @@ Ainsi seulement,
 pourras-tu      
 quitter l'île...
 Hou! !
-]],
-}
-
-dialog{
-  id = "scripts.meta.map.owl_7",
-  text = [[
-Hou! Combien    
-d'Instruments   
-as-tu collectés ?
-Quand tu joueras
-des Instruments 
-face à l'Oeuf,  
-le Poisson-Rêve 
-se réveillera   
-et tu pourras   
-quitter l'île.  
-Va vite vers les
-Dunes de Yarna ! 
-L'horrible      
-monstre noir    
-des sables      
-t'indiquera     
-le chemin !      
-Hou hou !
 ]],
 }
 
