@@ -120,7 +120,7 @@ fire:add_collision_test(bush_collision_test, function(fire, entity)
     bush:remove()
 
     local bush_destroyed_sprite = fire:create_sprite(bush_sprite_id)
-    local x, y = fire :get_position()
+    local x, y = fire:get_position()
     bush_destroyed_sprite:set_xy(bush_x - x, bush_y - y)
     bush_destroyed_sprite:set_animation("destroy")
   end

@@ -51,6 +51,9 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
 	if reactions.fire then
 		self:set_fire_reaction(reactions.fire)
 	end
+	if reactions.ice then
+		self:set_ice_reaction(reactions.ice)
+	end
 	if reactions.hammer then
 		self:set_hammer_reaction(reactions.hammer)
 	end
@@ -91,7 +94,7 @@ function enemy_meta:on_hurt(attack)
 			audio_manager:play_sound("enemy_hurt")
 		end
 	end
-
+	print("damage"..attack)
 end
 
 function enemy_meta:on_dying()
@@ -140,10 +143,24 @@ function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
 	if hero:get_state() == "sword spin attack" then
 		final_damage = ((base_life_points + 1)^(game:get_ability("sword") - 1)) * 2
 	end
+	if self:is_frozen() then
+		final_damage = 20000
+	end
 	-- Remove life
 	self:remove_life(final_damage)
 	print("Damages on enemy: " .. final_damage)
 
+end
+
+function enemy_meta:is_frozen(frozen)
+
+	return self.frozen
+end
+
+function enemy_meta:set_frozen(frozen)
+
+	self.frozen = frozen
+	
 end
 
 -- Push the given entity, not using a built-in movement to not stop a possible running movement.
