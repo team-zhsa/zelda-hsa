@@ -40,7 +40,7 @@ hero_meta:register_event("on_position_changed", function(hero)
       elseif x < nx - 16 then-- Hero is at the left of the NPC
         npc:get_sprite():set_direction(2)
       elseif x > nx - 16 and x < nx + 16 then
-        if y > ny + 16 then -- Hero is under the NPC
+        if y > ny + 16 then -- Hero is below the NPC
           npc:get_sprite():set_direction(3)
         elseif y < ny - 16  then -- Hero is above the NPC
           npc:get_sprite():set_direction(1)
