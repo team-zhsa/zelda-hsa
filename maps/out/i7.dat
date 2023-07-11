@@ -7714,6 +7714,15 @@ tile{
   pattern = "128",
 }
 
+tile{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 112,
+  pattern = "1000000",
+}
+
 custom_entity{
   layer = 0,
   x = 840,
@@ -10027,6 +10036,42 @@ tile{
   width = 48,
   height = 8,
   pattern = "3186",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 144,
+  width = 48,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = -80,
+  y = 192,
+  width = 144,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = -56,
+  y = 240,
+  width = 96,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = 288,
+  width = 96,
+  height = 48,
+  pattern = "7155",
 }
 
 tile{
