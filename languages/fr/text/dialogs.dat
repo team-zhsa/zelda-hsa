@@ -2217,6 +2217,24 @@ courir !
 }
 
 dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_intro",
+  text = [[
+Je suis le marathonien errant !$0
+Cours d'ici jusqu'à la ligne
+d'arrivée !
+Tu m'as l'air d'être un bon
+coureur ! Je suis sûr que tu
+peux y arriver !
+Pour participer, c'est 60 rubis !$0
+Si tu franchis la ligne d'arrivée
+dans les temps, tu gagneras un
+super prix.$0 Les ponts vers la
+plaine du Sud sont à nouveau
+ouverts et je cherche un coureur
+]],
+}
+
+dialog{
   id = "maps.caves.north_field.marathon_man.marathon_no",
   text = [[
 Si tu changes d'avis, reviens
@@ -2238,24 +2256,20 @@ nouvelles bottes.
 }
 
 dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_previous_record",
+  text = [[
+digne de faire cette course.
+Le précédent record est de
+$v secondes
+]],
+}
+
+dialog{
   id = "maps.caves.north_field.marathon_man.marathon_question",
   question = "1",
   text = [[
-Je suis le marathonien errant !$0
-Cours d'ici jusqu'à la ligne
-d'arrivée !
-Tu m'as l'air d'être un bon
-coureur ! Je suis sûr que tu
-peux y arriver !
-Pour participer, c'est 60 rubis !$0
-Si tu franchis la ligne d'arrivée
-dans les temps, tu gagneras un
-super prix.$0 Les ponts vers la
-plaine du Sud sont à nouveau
-ouverts et je cherche un coureur
 digne de faire cette course.
-Le précédent record est de
-$v.
+
 
 Tu veux tenter ta chanche ?
 Ouais !
