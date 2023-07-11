@@ -18,6 +18,7 @@ npc_marathon:register_event("on_interaction", function()
         -- Start the game.
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_yes", function()
           minigame_manager:start_minigame(map, "marathon")
+          game:remove_money(60)
         end)
       elseif answer == 1 and game:get_money() < 60 then
         game:start_dialog("_shop.not_enough_money")
@@ -46,7 +47,7 @@ npc_marathon:register_event("on_interaction", function()
         end)
       end
     end
-  else minigame_manager:end_minigame(map, "marathon")
+  else minigame_manager:win_minigame(map, "marathon")
     print(game:get_value("marathon".."_minigame_record_time"))
   end
     
