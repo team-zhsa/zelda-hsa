@@ -1,6 +1,6 @@
 -- A ground of pikes where the hero is hurt when walking on it.
 
-local pike_ground = ...
+local ground_spikes = ...
 
 local allowed_states = {
   ["carrying"] = true,
@@ -15,15 +15,15 @@ local allowed_states = {
   ["sword tapping"] = true,
 }
 
-function pike_ground:on_created()
+function ground_spikes:on_created()
 
-  pike_ground:set_traversable_by(true)
-  pike_ground:set_drawn_in_y_order(false)
-  pike_ground:set_modified_ground("traversable")
+  ground_spikes:set_traversable_by(true)
+  ground_spikes:set_drawn_in_y_order(false)
+  ground_spikes:set_modified_ground("traversable")
 
 end
 
-pike_ground:add_collision_test("center", function(pike_ground, entity)
+ground_spikes:add_collision_test("center", function(ground_spikes, entity)
 
   if entity:get_type() ~= "hero" then
     return

@@ -1056,7 +1056,7 @@ dialog{
 Tu as le Plan ! $0
 Sers-t'en pour voir ta position
 et le reste du donjon. Appuie
-sur le bouton W.
+sur le bouton \[controller_select\].
 ]],
 }
 
@@ -5893,6 +5893,17 @@ Non.
 }
 
 dialog{
+  id = "maps.out.north_field.marathon_man.marathon_already_playing",
+  text = [[
+Au lieu de rester planter là,
+tu ferais mieux de courir jusqu'à
+mon frère dans la forêt
+de Firone !$0
+L'heure tourne !
+]],
+}
+
+dialog{
   id = "maps.out.north_field.marathon_man.marathon_bridge_closed",
   text = [[
 Je suis le marathonien errant !$0
@@ -5908,7 +5919,15 @@ courir !
 }
 
 dialog{
-  id = "maps.out.north_field.marathon_man.marathon_bridge_no_shoes",
+  id = "maps.out.north_field.marathon_man.marathon_no",
+  text = [[
+Si tu changes d'avis, reviens
+me voir ! Je reste ici !
+]],
+}
+
+dialog{
+  id = "maps.out.north_field.marathon_man.marathon_no_shoes",
   text = [[
 Je suis le marathonien errant !$0
 Cours d'ici jusqu'à la ligne
@@ -5921,7 +5940,7 @@ nouvelles bottes.
 }
 
 dialog{
-  id = "maps.out.north_field.marathon_man.marathon_bridge_opened",
+  id = "maps.out.north_field.marathon_man.marathon_question",
   question = "1",
   text = [[
 Je suis le marathonien errant !$0
@@ -5943,14 +5962,6 @@ $v.
 Tu veux tenter ta chanche ?
 Ouais !
 Euh, non...
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_no",
-  text = [[
-Si tu changes d'avis, reviens
-me voir ! Je reste ici !
 ]],
 }
 

@@ -21,6 +21,42 @@ tile{
 
 tile{
   layer = 0,
+  x = -8,
+  y = 904,
+  width = 48,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = -8,
+  y = 864,
+  width = 48,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 856,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 864,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
   x = 176,
   y = 336,
   width = 160,
@@ -23187,10 +23223,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 16,
-  y = 800,
-  width = 48,
-  height = 128,
+  x = 48,
+  y = 896,
+  width = 16,
+  height = 48,
   pattern = "1037",
 }
 
@@ -25019,6 +25055,78 @@ tile{
   width = 8,
   height = 40,
   pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = -48,
+  y = 744,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 800,
+  width = 48,
+  height = 32,
+  pattern = "1037",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 800,
+  width = 16,
+  height = 96,
+  pattern = "1037",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 832,
+  width = 8,
+  height = 8,
+  pattern = "105 (copy)",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 904,
+  width = 8,
+  height = 8,
+  pattern = "102 (copy)",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 920,
+  width = 8,
+  height = 8,
+  pattern = "102 (copy)",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 912,
+  width = 16,
+  height = 32,
+  pattern = "1037",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 928,
+  width = 8,
+  height = 8,
+  pattern = "105 (copy)",
 }
 
 jumper{
@@ -28159,73 +28267,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 24,
-  y = 845,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 24,
-  y = 861,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 24,
-  y = 877,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 24,
-  y = 893,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 24,
-  y = 909,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 24,
-  y = 925,
+  x = 40,
+  y = 941,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -28263,8 +28306,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 40,
-  y = 845,
+  x = 8,
+  y = 813,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -28276,8 +28319,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 40,
-  y = 861,
+  x = 8,
+  y = 829,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -28289,34 +28332,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 40,
-  y = 877,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 40,
-  y = 893,
-  treasure_name = "random_west",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 40,
-  y = 909,
+  x = 56,
+  y = 941,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -28944,6 +28961,60 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/d1",
   destination = "_side",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 832,
+  width = 48,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 880,
+  width = 48,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = -16,
+  y = 832,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 40,
+  y = 832,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 824,
+  width = 48,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 832,
+  width = 48,
+  height = 48,
+  pattern = "7155",
 }
 
 tile{
@@ -32985,5 +33056,23 @@ tile{
   width = 480,
   height = 8,
   pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = -48,
+  y = 712,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = -40,
+  y = 712,
+  width = 144,
+  height = 48,
+  pattern = "7155",
 }
 
