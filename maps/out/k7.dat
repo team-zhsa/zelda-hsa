@@ -13,6 +13,15 @@ properties{
 tile{
   layer = 0,
   x = 0,
+  y = 192,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 0,
   y = 0,
   width = 664,
   height = 488,
@@ -7636,6 +7645,16 @@ destructible{
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
   damage_on_enemies = 2,
+}
+
+tile{
+  layer = 1,
+  x = 0,
+  y = 176,
+  width = 8,
+  height = 40,
+  pattern = "21",
+  tileset = "outside_additions",
 }
 
 tile{
