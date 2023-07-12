@@ -13,6 +13,78 @@ properties{
 tile{
   layer = 0,
   x = 128,
+  y = 232,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 232,
+  width = 24,
+  height = 48,
+  pattern = "wall.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 272,
+  width = 96,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 272,
+  width = 96,
+  height = 24,
+  pattern = "wall.1-2",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 216,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 216,
+  width = 48,
+  height = 24,
+  pattern = "wall.2-2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 216,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 216,
+  width = 8,
+  height = 16,
+  pattern = "door_blast.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
   y = 456,
   width = 24,
   height = 32,
@@ -39,24 +111,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
-  y = 232,
-  width = 24,
-  height = 48,
-  pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 232,
-  width = 24,
-  height = 48,
-  pattern = "wall.4-2",
-}
-
-tile{
-  layer = 0,
   x = 96,
   y = 440,
   width = 24,
@@ -66,29 +120,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 56,
-  y = 272,
-  width = 96,
-  height = 24,
-  pattern = "wall.1-2",
-}
-
-tile{
-  layer = 0,
   x = 200,
   y = 440,
   width = 24,
   height = 24,
   pattern = "wall.corner.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 272,
-  width = 96,
-  height = 24,
-  pattern = "wall.1-2",
 }
 
 tile{
@@ -242,24 +278,6 @@ tile{
   width = 24,
   height = 64,
   pattern = "wall.3-2",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 216,
-  width = 48,
-  height = 24,
-  pattern = "wall.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 216,
-  width = 48,
-  height = 24,
-  pattern = "wall.2-2",
 }
 
 tile{
@@ -685,23 +703,22 @@ tile{
   pattern = "floor_pot",
 }
 
-separator{
+tile{
   layer = 0,
-  x = 0,
-  y = 248,
-  width = 320,
+  x = 144,
+  y = 280,
+  width = 8,
   height = 16,
+  pattern = "door_blast.1.support.1-1",
 }
 
-wall{
+tile{
   layer = 0,
-  x = 152,
-  y = 216,
-  width = 16,
+  x = 168,
+  y = 280,
+  width = 8,
   height = 16,
-  stops_npcs = true,
-  stops_enemies = true,
-  stops_blocks = true,
+  pattern = "door_blast.1.support.2-1",
 }
 
 wall{
@@ -723,6 +740,25 @@ dynamic_tile{
   width = 16,
   height = 24,
   pattern = "wall.1-2",
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 248,
+  width = 320,
+  height = 16,
+}
+
+wall{
+  layer = 0,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
 }
 
 dynamic_tile{
@@ -998,6 +1034,26 @@ dynamic_tile{
   width = 16,
   height = 8,
   pattern = "door_cache.2-2",
+}
+
+dynamic_tile{
+  name = "weak_wall_open_2",
+  layer = 1,
+  x = 144,
+  y = 232,
+  width = 32,
+  height = 8,
+  pattern = "door_top.blast.2-2",
+}
+
+dynamic_tile{
+  name = "weak_wall_open_1",
+  layer = 1,
+  x = 144,
+  y = 272,
+  width = 32,
+  height = 8,
+  pattern = "door_top.blast.1-2",
 }
 
 tile{
