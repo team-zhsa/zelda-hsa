@@ -14,13 +14,13 @@ local minigame_manager = require("scripts/maps/minigame_manager")
 npc_marathon:register_event("on_interaction", function()
   local function play_question()
     game:start_dialog("maps.caves.north_field.marathon_man.marathon_question", function(answer)
-      if answer == 1 and game:get_money() >= 60 then
+      if answer == 1 and game:get_money() >= 90 then
         -- Start the game.
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_yes", function()
           minigame_manager:start_minigame(map, "marathon")
-          game:remove_money(60)
+          game:remove_money(90)
         end)
-      elseif answer == 1 and game:get_money() < 60 then
+      elseif answer == 1 and game:get_money() < 90 then
         game:start_dialog("_shop.not_enough_money")
       elseif answer == 2 then
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_no")
@@ -39,16 +39,22 @@ npc_marathon:register_event("on_interaction", function()
       else
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_intro", function()
           if game:get_value("marathon_minigame_record_time") ~= nil then
+
+            local total_seconds = game:get_value("marathon_minigame_record_time")
+            local seconds = total_seconds % 60
+            local total_minutes = math.floor(total_seconds / 60)
+            local minutes = total_minutes % 60
+            local record_time = string.format("%02d:%02d", minutes, seconds)
+
             game:start_dialog("maps.caves.north_field.marathon_man.marathon_previous_record",
-            game:get_value("marathon_minigame_record_time"), function()
+            record_time, function()
               play_question()
             end)
           else play_question() end
         end)
       end
     end
-  else minigame_manager:win_minigame(map, "marathon")
-    print(game:get_value("marathon".."_minigame_record_time"))
+  else  game:start_dialog("maps.caves.north_field.marathon_man.marathon_already_playing")
   end
     
 end)

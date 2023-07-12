@@ -14,56 +14,52 @@ function minigame_manager:start_minigame(map, minigame)
 	game:set_value(minigame.."_minigame_times_played", minigame_times_played)
 end
 
-function minigame_manager:start_chronometer(map, minigame)
+function minigame_manager:start_chronometer(map, minigame, time_limit)
 	local game = map:get_game()
+	game:set_value(minigame.."_minigame_time_limit", time_limit)
+	time = 0 --game:get_value(minigame.."_minigame_time") or 512000
 	timer = sol.timer.start(game, 1000, function()
-		time = game:get_value(minigame.."_minigame_time") or 0
 		time = time + 1
-		print(time)
+		print(time.." out of "..time_limit)
 		game:set_value(minigame.."_minigame_time", time)
-		print(game:get_value(minigame.."_minigame_time"))
-		if game:get_value(minigame.."_minigame_playing") == true then
+		if time < time_limit then --< game:get_value(minigame.."_minigame_time_limit") * 100 then
 			return true  -- Repeat the timer.
-		else
+		elseif time == time_limit then
 			minigame_manager:on_chronometer_timeout(map, minigame)
 			return false
 		end
+		
 	end)
 	timer:set_suspended_with_map(true)
+
 end
 
 function minigame_manager:on_chronometer_timeout(map, minigame)
 	local game = map:get_game()
 	if minigame == "marathon" then
-
 		-- Set winning value to FALSE = losing.
 		game:set_value(minigame.."_minigame_winning", false)
-		minigame_manager:end_minigame(map, minigame)
+		minigame_manager:stop_minigame(map, minigame)
 		sol.audio.play_sound("enemies/redead")
+		game:start_dialog("maps.caves.north_field.marathon_man.marathon_timeout")
 	end
 end
 
-function minigame_manager:end_minigame(map, minigame)
+function minigame_manager:stop_minigame(map, minigame)
 	local game = map:get_game()
-	
-	local winning_conditions = {
-		marathon = game:get_value("marathon_minigame_time")
-							< game:get_value("marathon_minigame_time_limit")
-	}
+
 	if game:get_value(minigame.."_minigame_winning", true) then
 		print("CONGRULATION OF WINNING GAME.."..minigame)
+		--sol.audio.play_sound("common/prayer")
 	else
 		print("Minigame "..minigame.." has been lost.")
 	end
 
-
-		-- Set the record time.
-		if game:get_value(minigame.."_minigame_record_time") == nil 
-		or game:get_value(minigame.."_minigame_time")
-		< game:get_value(minigame.."_minigame_record_time") then
-			game:set_value(minigame.."_minigame_record_time", time)
+	-- Set the record time.
+		if game:get_value(minigame.."_minigame_record_time") == nil
+		or (game:get_value(minigame.."_minigame_time") < game:get_value(minigame.."_minigame_record_time")) then
+			game:set_value(minigame.."_minigame_record_time", game:get_value(minigame.."_minigame_time"))
 		end
-
 
 	if game:get_value(minigame.."_minigame_playing") then
 		-- Stop playing.
@@ -74,11 +70,11 @@ function minigame_manager:end_minigame(map, minigame)
 	end
 end
 
-function minigame_manager:win_minigame(map, minigame)
+function minigame_manager:end_minigame(map, minigame)
 	local game = map:get_game()
 	game:set_value(minigame.."_minigame_winning", true)
-	minigame_manager:end_minigame(map, minigame)
-	sol.audio.play_sound("common/prayer")
+	time = game:get_value(minigame.."_minigame_time_limit")
+	minigame_manager:stop_minigame(map, minigame)
 end
 
 function minigame_manager:is_playing(map, minigame)
@@ -86,32 +82,10 @@ function minigame_manager:is_playing(map, minigame)
 	return game:get_value(minigame.."_minigame_playing")
 end
 
-function minigame_manager:set_time_limit(map, minigame, time_limit)
-	local game = map:get_game()
-	game:set_value(minigame.."_minigame_time_limit", time_limit)
-	sol.timer.start(game, time_limit * 1000, function()
-		if not game:get_value(minigame.."_minigame_winning", true) then
-			minigame_manager:on_chronometer_timeout(map, minigame)
-		end
-	end)
-	timer:set_suspended_with_map(true)
-end
-
-function minigame_manager:get_time_limit(map, minigame)
-	local game = map:get_game()
-	return game:get_value(minigame.."_minigame_time_limit")
-end
-
-function minigame_manager:has_time_limit(map, minigame)
-	local game = map:get_game()
-	return game:get_value(minigame.."_minigame_time_limit") ~= nil
-end
-
 function minigame_manager:start_marathon(map, minigame)
 	local game = map:get_game()
-	minigame_manager:start_chronometer(map, "marathon")
+	minigame_manager:start_chronometer(map, "marathon", 240)
 	game:set_value(minigame.."_minigame_time", 0)
-	minigame_manager:set_time_limit(map, minigame, 30)
 end
 
 

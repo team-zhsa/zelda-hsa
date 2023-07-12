@@ -2225,12 +2225,13 @@ d'arrivée !
 Tu m'as l'air d'être un bon
 coureur ! Je suis sûr que tu
 peux y arriver !
-Pour participer, c'est 60 rubis !$0
+Pour participer, c'est 90 rubis !$0
 Si tu franchis la ligne d'arrivée
 dans les temps, tu gagneras un
 super prix.$0 Les ponts vers la
 plaine du Sud sont à nouveau
 ouverts et je cherche un coureur
+digne de faire cette course.
 ]],
 }
 
@@ -2258,9 +2259,8 @@ nouvelles bottes.
 dialog{
   id = "maps.caves.north_field.marathon_man.marathon_previous_record",
   text = [[
-digne de faire cette course.
 Le précédent record est de
-$v secondes
+$v minutes.
 ]],
 }
 
@@ -2268,9 +2268,6 @@ dialog{
   id = "maps.caves.north_field.marathon_man.marathon_question",
   question = "1",
   text = [[
-digne de faire cette course.
-
-
 Tu veux tenter ta chanche ?
 Ouais !
 Euh, non...
@@ -2294,7 +2291,7 @@ Je t'ai indiqué l'endroit sur ta
 carte. Une fois là-bas, mon
 frère t'attendra devant la
 maison. Le temps limite est
-de 5 minutes !
+de 4 minutes !
 ]],
 }
 

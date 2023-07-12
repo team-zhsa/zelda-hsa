@@ -1,5 +1,6 @@
 local map = ...
 local game = map:get_game()
+local minigame_manager = require("scripts/maps/minigame_manager")
 -- Variables
 
 map.overlay_angles = {
@@ -40,11 +41,20 @@ end
 
 -- Events
 
-function map:on_started(destination)
+map:register_event("on_started", function(destination)
   map:set_overlay()
   map:set_digging_allowed(true)
-end
+  game:show_map_name("faron_woods")
+  
+  if not minigame_manager:is_playing(map, "marathon") then
+    npc_marathon:set_enabled(false)
+  end
+  
+end)
 
+npc_marathon:register_event("on_interaction", function()
+  minigame_manager:end_minigame(map, "marathon")
+end)
 function map:on_draw(destination_surface)
 
   -- Make the overlay scroll with the camera, but slightly faster to make
