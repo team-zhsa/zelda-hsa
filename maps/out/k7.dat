@@ -7432,10 +7432,11 @@ destructible{
 destructible{
   layer = 0,
   x = 696,
-  y = 237,
-  treasure_name = "random",
+  y = 277,
+  treasure_name = "random_south",
   sprite = "entities/stones/stone_white",
-  damage_on_enemies = 2,
+  destruction_sound = "objects/e_rock_1_lift",
+  weight = 1,
 }
 
 destructible{
@@ -7571,8 +7572,8 @@ teletransporter{
 destination{
   name = "from_cave",
   layer = 0,
-  x = 264,
-  y = 621,
+  x = 696,
+  y = 221,
   direction = 3,
 }
 
@@ -7655,6 +7656,17 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/mini_game_man_green",
+}
+
+destructible{
+  layer = 0,
+  x = 712,
+  y = 277,
+  treasure_name = "random_south",
+  sprite = "entities/stones/stone_white",
+  destruction_sound = "objects/e_rock_1_lift",
+  weight = 1,
+  ground = "low_wall",
 }
 
 tile{

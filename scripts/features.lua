@@ -26,20 +26,20 @@ require("scripts/meta/npc")
 require("scripts/meta/map")
 require("scripts/meta/sensor")
 require("scripts/meta/separator")
+require("scripts/meta/destructible")
+require("scripts/meta/teletransporter")
+require("scripts/meta/block")
 require("scripts/maps/light_manager")
 require("scripts/maps/companion_manager")
 require("scripts/maps/cinematic_manager")
 require("scripts/maps/main_quest_manager")
 require("scripts/maps/teletransporter_manager")
-require("scripts/maps/cinematic_manager")
 require("scripts/maps/ceiling_drop_manager")
 require("scripts/maps/daytime_manager")
 require("scripts/coroutine_helper")
 require("scripts/lib/iter.lua")() --adds iterlua to _G
 require("scripts/tools/debug_utils")
 require("scripts/weather/weather_manager")
-require("scripts/meta/teletransporter")
-require("scripts/meta/block")
 
 
 

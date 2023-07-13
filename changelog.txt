@@ -375,6 +375,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Rescripted the feather (#144).
 	ADD: Added enemy:is_frozen() and enemy:set_frozen() methods.
 	ADD: Added the ability to use jumpers when running.
+	ADD: Added the marathon minigame.
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -437,6 +438,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
 	FIX: Fixed the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	FIX: Fixed the game restarting after completing the marathon minigame (#186).
+	FIX: Fixed bombs not exploding anything but themselves (#185).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -446,7 +448,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed unused Tektite sprite files.
 	REM: Removed unused Chuchu sprite files.
 	REM: Removed orange and brown sword soldiers.
-	TDO: Fix bombs not exploding anything but themselves (#185).
+	TDO: Set destructibles ground as "low wall".
 	TDO: Make bombs explode even if Link is carrying them (#183).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).

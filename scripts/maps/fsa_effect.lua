@@ -249,17 +249,17 @@ local function get_lights_from_map(map)
 		if light_tile_ids[props.pattern] then
 			--tile is considered as a light
 			table.insert(lights,
-									 {
-										 layer = props.layer,
-										 x = props.x + props.width*0.5,
-										 y = props.y + props.height*0.5,
-										 radius = radii[props.pattern] or big,
-										 dir = dirs[props.pattern],
-										 cut = dirs[props.pattern] and win_cut or "0",
-										 aperture = dirs[props.pattern] and win_aperture or "1.5",
-										 color = colors[props.pattern],
-										 distort_angle = distort_angle[props.pattern]
-									 }
+				{
+					layer = props.layer,
+					x = props.x + props.width*0.5,
+					y = props.y + props.height*0.5,
+					radius = radii[props.pattern] or big,
+					dir = dirs[props.pattern],
+					cut = dirs[props.pattern] and win_cut or "0",
+					aperture = dirs[props.pattern] and win_aperture or "1.5",
+					color = colors[props.pattern],
+					distort_angle = distort_angle[props.pattern]
+				}
 			)
 		end
 	end
