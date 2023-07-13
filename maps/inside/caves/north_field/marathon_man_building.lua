@@ -16,12 +16,30 @@ npc_marathon:register_event("on_interaction", function()
     game:start_dialog("maps.caves.north_field.marathon_man.marathon_question", function(answer)
       if answer == 1 and game:get_money() >= 90 then
         -- Start the game.
-        game:start_dialog("maps.caves.north_field.marathon_man.marathon_yes", function()
-          minigame_manager:start_minigame(map, "marathon")
+
+        if not game:get_value("outside_marathon_minigame_piece_of_heart")
+        and not game:get_value("outside_marathon_minigame_rupees") then
+          game:set_value("marathon_minigame_time_limit", 240)
+        elseif not game:get_value("outside_marathon_minigame_rupees") then
+          game:set_value("marathon_minigame_time_limit", 210)
+        else game:set_value("marathon_minigame_time_limit", game:get_value("marathon_minigame_record_time"))
+        end
+
+        local total_seconds = game:get_value("marathon_minigame_time_limit")
+        local seconds = total_seconds % 60
+        local total_minutes = math.floor(total_seconds / 60)
+        local minutes = total_minutes % 60
+        local time_limit_str = string.format("%02d:%02d", minutes, seconds)
+
+        game:start_dialog("maps.caves.north_field.marathon_man.marathon_yes",
+        time_limit_str, function()
+          minigame_manager:start_marathon(map, total_seconds)
           game:remove_money(90)
         end)
+
       elseif answer == 1 and game:get_money() < 90 then
         game:start_dialog("_shop.not_enough_money")
+
       elseif answer == 2 then
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_no")
       end
@@ -36,6 +54,7 @@ npc_marathon:register_event("on_interaction", function()
       if not game:has_item("pegasus_shoes") then
         -- No Pegasus Boots
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_no_shoes")
+      
       else
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_intro", function()
           if game:get_value("marathon_minigame_record_time") ~= nil then

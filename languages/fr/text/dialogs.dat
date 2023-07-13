@@ -1359,7 +1359,7 @@ dialog{
   id = "_treasure.rupee.4",
   icon = "120",
   text = [[
-Tu as trouvé 50 rubis.
+Tu as trouvé cinquante rubis.
 Merveilleux !
 ]],
 }
@@ -1368,7 +1368,7 @@ dialog{
   id = "_treasure.rupee.5",
   icon = "121",
   text = [[
-Tu as trouvé 100 rubis.
+Tu as trouvé cent rubis.
 Fantastique !
 ]],
 }
@@ -1377,7 +1377,7 @@ dialog{
   id = "_treasure.rupee.6",
   icon = "122",
   text = [[
-Tu as trouvé 200 rubis.
+Tu as trouvé deux cents rubis.
 Quelle extase !
 ]],
 }
@@ -1386,7 +1386,7 @@ dialog{
   id = "_treasure.rupee.7",
   icon = "130",
   text = [[
-Tu as trouvé 500 rubis.
+Tu as trouvé cinq cents rubis.
 Quelle extase !
 ]],
 }
@@ -1395,7 +1395,7 @@ dialog{
   id = "_treasure.rupee.8",
   icon = "131",
   text = [[
-Tu as trouvé 1000 rubis.
+Tu as trouvé mille rubis.
 Quelle extase !
 ]],
 }
@@ -1404,7 +1404,7 @@ dialog{
   id = "_treasure.rupee.9",
   icon = "132",
   text = [[
-Tu as trouvé 2000 rubis.      
+Tu as trouvé deux mille rubis.      
 Incroyable !
 ]],
 }
@@ -2291,7 +2291,7 @@ Je t'ai indiqué l'endroit sur ta
 carte. Une fois là-bas, mon
 frère t'attendra devant la
 maison. Le temps limite est
-de 4 minutes !
+de $v minutes !
 ]],
 }
 
@@ -5131,9 +5131,18 @@ Coquillages
 }
 
 dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_already_finished",
+  text = [[
+Le jeu est terminé. Reviens voir
+mon frère aux ruines si tu veux
+rejouer !
+]],
+}
+
+dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_finished_higher",
   text = [[
-Ton temps est de $v.
+Ton temps est de $v.$0
 C'est dommage, tu aurais
 pu faire un peu mieux...
 ]],
@@ -5141,9 +5150,8 @@ pu faire un peu mieux...
 
 dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_finished_lower",
-  question = "1",
   text = [[
-Ton temps est de $v.
+Ton temps est de $v.$0
 Félicitations ! La prochaine
 fois, peut-être que tu pourras
 faire encore mieux !
@@ -5160,24 +5168,9 @@ toi.
 }
 
 dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_previous_record",
-  text = [[
-Le précédent record est de
-$v.
-]],
-}
-
-dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_rupee",
   text = [[
 Tiens, voici des rubis pour toi.
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_timeout",
-  text = [[
-Le temps est écoulé !
 ]],
 }
 
