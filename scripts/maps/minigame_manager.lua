@@ -1,6 +1,4 @@
 local minigame_manager = {}
-local timer
-local time
 
 function minigame_manager:start_minigame(map, minigame)
 	local game = map:get_game()
@@ -16,8 +14,8 @@ function minigame_manager:start_chronometer(map, minigame, time_limit)
 	local game = map:get_game()
 	game:set_value(minigame.."_minigame_time_limit", time_limit)
 	chrono_playing = true
-	time = 0 --game:get_value(minigame.."_minigame_time") or 512000
-	timer = sol.timer.start(game, 1000, function()
+	local time = 0 --game:get_value(minigame.."_minigame_time") or 512000
+	local timer = sol.timer.start(game, 1000, function()
 		game:set_value(minigame.."_minigame_time", time)
 		time = time + 1
 		print(time.." out of "..time_limit)

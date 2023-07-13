@@ -29,7 +29,7 @@ npc_marathon:register_event("on_interaction", function()
         local seconds = total_seconds % 60
         local total_minutes = math.floor(total_seconds / 60)
         local minutes = total_minutes % 60
-        local time_limit_str = string.format("%02d:%02d", minutes, seconds)
+        local time_limit_str = string.format("%02d:%02d", total_minutes, seconds)
 
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_yes",
         time_limit_str, function()

@@ -5,7 +5,7 @@ local minigame_manager = require("scripts/maps/minigame_manager")
 -- Events
 
 map:register_event("on_started", function(destination)
-	map:set_overlay()
+	--map:set_overlay()
 	map:set_digging_allowed(true)
 	game:show_map_name("faron_woods")
 	
@@ -25,22 +25,23 @@ npc_marathon:register_event("on_interaction", function()
 			-- New record
 			game:start_dialog("maps.out.faron_woods.marathon_man.marathon_finished_lower", game:get_value("marathon_minigame_time"), function()
 
-					
-				-- Select the treasure
-				if not game:get_value("outside_marathon_minigame_piece_of_heart")
-				and not game:get_value("outside_marathon_minigame_rupees") then
-					game:start("maps.out.faron_woods.marathon_man.marathon_piece_of_heart", function()
-						hero:start_treasure("piece_of_heart", 1, "outside_marathon_minigame_piece_of_heart")
-					end)
-				elseif not game:get_value("outside_marathon_minigame_rupees") then
-					game:start("maps.out.faron_woods.marathon_man.marathon_rupees", function()
-						hero:start_treasure("rupees", 5, "outside_marathon_minigame_rupees")
-					end)
-				else
-					game:start("maps.out.faron_woods.marathon_man.marathon_rupees", function()
-						hero:start_treasure("rupees", 3, "outside_marathon_minigame_rupees")
-					end)
-				end
+				sol.timer.start(map, 100, function()
+					-- Select the treasure
+					if not game:get_value("outside_marathon_minigame_piece_of_heart")
+					and not game:get_value("outside_marathon_minigame_rupees") then
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_piece_of_heart", function()
+							hero:start_treasure("piece_of_heart", 1, "outside_marathon_minigame_piece_of_heart")
+						end)
+					elseif not game:get_value("outside_marathon_minigame_rupees") then
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_rupees", function()
+							hero:start_treasure("rupee", 5, "outside_marathon_minigame_rupees")
+						end)
+					else
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_rupees", function()
+							hero:start_treasure("rupee", 3)
+						end)
+					end
+				end)
 
 			end)
 		else game:start_dialog("maps.out.faron_woods.marathon_man.marathon_finished_higher")
@@ -48,7 +49,7 @@ npc_marathon:register_event("on_interaction", function()
 	end
 end)
 
--- Variables
+--[[ Variables
 map.overlay_angles = {
 	3 * math.pi / 4,
 	5 * math.pi / 4,
@@ -112,3 +113,4 @@ function map:on_draw(destination_surface)
 	end
 
 end
+--]]
