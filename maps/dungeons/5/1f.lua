@@ -109,6 +109,7 @@ function collapse_tiles_5()
 		collapsing_tile:set_enabled(false)
 		collapsing_entity:set_visible(true)-- C.E. for animation
 		local sprite = collapsing_entity:get_sprite()
+		sol.audio.play_sound("jump")
 		sprite:set_animation("destroy")
 		i = i + 1
 		if collapsing_tile == nil then return false end
@@ -128,10 +129,11 @@ end
 
 for sensor in map:get_entities("sensor_5_tile_") do
 	sensor:register_event("on_activated", function()
-		sol.timer.start(map, 500, function()
+		sol.timer.start(map, 700, function()
 			collapse_tiles_5()
 		end)
 		sensor_5_tile_1:set_enabled(false)
+		sensor_5_tile_2:set_enabled(false)
 	end)
 end
 
@@ -154,6 +156,7 @@ function collapse_tiles_7()
 		collapsing_entity:set_visible(true)-- C.E. for animation
 		local sprite = collapsing_entity:get_sprite()
 		sprite:set_animation("destroy")
+		sol.audio.play_sound("jump")
 		i = i + 1
 		if collapsing_tile == nil then return false end
 		return true

@@ -2441,15 +2441,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 656,
-  y = 120,
-  width = 24,
-  height = 16,
-  pattern = "wall.3-3",
-}
-
-tile{
-  layer = 0,
   x = 680,
   y = 128,
   width = 8,
@@ -6087,18 +6078,9 @@ tile{
 tile{
   layer = 0,
   x = 600,
-  y = 120,
-  width = 24,
-  height = 80,
-  pattern = "wall.4-3",
-}
-
-tile{
-  layer = 0,
-  x = 600,
   y = 40,
   width = 24,
-  height = 64,
+  height = 160,
   pattern = "wall.4-3",
 }
 
@@ -6680,35 +6662,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 376,
-  y = 24,
-  width = 16,
-  height = 16,
-  pattern = "door_stairs.spiral_up.1",
-}
-
-tile{
-  layer = 0,
-  x = 368,
-  y = 24,
-  width = 8,
-  height = 16,
-  pattern = "door.1.support.1-2",
-}
-
-tile{
-  layer = 0,
   x = 392,
   y = 24,
-  width = 8,
-  height = 16,
-  pattern = "door.1.support.2-2",
-}
-
-tile{
-  layer = 0,
-  x = 440,
-  y = 24,
   width = 16,
   height = 16,
   pattern = "door_stairs.spiral_up.1",
@@ -6716,7 +6671,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 384,
   y = 24,
   width = 8,
   height = 16,
@@ -6725,7 +6680,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 456,
+  x = 408,
   y = 24,
   width = 8,
   height = 16,
@@ -6766,15 +6721,6 @@ tile{
   width = 16,
   height = 64,
   pattern = "abyss_bridge",
-}
-
-tile{
-  layer = 0,
-  x = 656,
-  y = 88,
-  width = 24,
-  height = 16,
-  pattern = "wall.3-3",
 }
 
 tile{
@@ -10242,6 +10188,15 @@ tile{
   pattern = "barrier.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 656,
+  y = 88,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-3",
+}
+
 wall{
   layer = 0,
   x = 792,
@@ -11158,7 +11113,7 @@ wall{
 
 stairs{
   layer = 0,
-  x = 376,
+  x = 392,
   y = 24,
   direction = 1,
   subtype = 0,
@@ -11167,45 +11122,19 @@ stairs{
 destination{
   name = "from_1f_2",
   layer = 0,
-  x = 384,
+  x = 400,
   y = 37,
   direction = 3,
 }
 
 teletransporter{
   layer = 0,
-  x = 376,
+  x = 392,
   y = 24,
   width = 16,
   height = 16,
   destination_map = "dungeons/5/1f",
   destination = "from_0f_2",
-}
-
-stairs{
-  layer = 0,
-  x = 440,
-  y = 24,
-  direction = 1,
-  subtype = 0,
-}
-
-destination{
-  name = "from_1f_3",
-  layer = 0,
-  x = 448,
-  y = 37,
-  direction = 3,
-}
-
-teletransporter{
-  layer = 0,
-  x = 440,
-  y = 24,
-  width = 16,
-  height = 16,
-  destination_map = "dungeons/5/1f",
-  destination = "from_0f_3",
 }
 
 stairs{
@@ -11217,7 +11146,7 @@ stairs{
 }
 
 destination{
-  name = "from_1f_4",
+  name = "from_1f_3",
   layer = 0,
   x = 560,
   y = 37,
@@ -11231,7 +11160,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "dungeons/5/1f",
-  destination = "from_0f_4",
+  destination = "from_0f_3",
 }
 
 wall{
@@ -11605,7 +11534,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 368,
+  x = 384,
   y = 16,
   width = 32,
   height = 8,
@@ -11614,7 +11543,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 368,
+  x = 384,
   y = 16,
   width = 32,
   height = 8,
@@ -11623,34 +11552,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 376,
-  y = 16,
-  width = 16,
-  height = 8,
-  pattern = "door_top.stairs_up.1-2",
-}
-
-tile{
-  layer = 1,
-  x = 432,
-  y = 16,
-  width = 32,
-  height = 8,
-  pattern = "door_cache.1-3",
-}
-
-tile{
-  layer = 1,
-  x = 432,
-  y = 16,
-  width = 32,
-  height = 8,
-  pattern = "door_top.1-3",
-}
-
-tile{
-  layer = 1,
-  x = 440,
+  x = 392,
   y = 16,
   width = 16,
   height = 8,

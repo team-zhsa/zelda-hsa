@@ -201,7 +201,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_choice = 0
         self.save_dialog_cursor_pos = "left"
       end
-    elseif command == "action" or command == "attack" then
+--[[    elseif command == "action" or command == "attack" then
       -- Validate a choice.
       if self.save_dialog_state == 1 then
         -- After "Do you want to save?".
@@ -225,7 +225,7 @@ function submenu:on_command_pressed(command)
         if self.save_dialog_choice == 1 then
           sol.main.reset()
         end
-      end
+      end--]]
     end
   end
 
