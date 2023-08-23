@@ -41,7 +41,4 @@ require("scripts/lib/iter.lua")() --adds iterlua to _G
 require("scripts/tools/debug_utils")
 require("scripts/weather/weather_manager")
 
-
-
-
 return true
