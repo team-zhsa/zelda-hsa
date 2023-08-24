@@ -43,7 +43,7 @@ map:register_event("on_started", function()
 end)
 
 -- Room 15 switch puzzle
-for i = 1,7 do
+for i = 1,10 do
 	for switch in map:get_entities("switch_15_door_"..i) do
 		switch:register_event("on_activated", function()
 			audio_manager:play_sound("common/secret_discover_minor")
@@ -51,14 +51,20 @@ for i = 1,7 do
 			if game:get_value("dungeon_5_1f_switch_15_1") and game:get_value("dungeon_5_1f_switch_15_2")
 			and game:get_value("dungeon_5_1f_switch_15_3") and game:get_value("dungeon_5_1f_switch_15_4")
 			and game:get_value("dungeon_5_1f_switch_15_5") and game:get_value("dungeon_5_1f_switch_15_6")
-			and game:get_value("dungeon_5_1f_switch_15_7") then
-				lauch_staircase_15_cutscene()
+			and game:get_value("dungeon_5_1f_switch_15_7") and game:get_value("dungeon_5_1f_switch_15_8")
+			and game:get_value("dungeon_5_1f_switch_15_9") and game:get_value("dungeon_5_1f_switch_15_10") then
+				map:lauch_staircase_15_cutscene()
 			end
 		end)
 	end
 end
 
+-- Room 15 staircase cutscene
+function map:launch_staircase_15_cutscene()
+end
 
+function map:enable_staircase_15()
+end
 
 -- Door events
 sensor_10_door_1:register_event("on_activated", function()
