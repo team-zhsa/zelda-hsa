@@ -20176,24 +20176,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 960,
-  y = 1392,
-  width = 24,
-  height = 32,
-  pattern = "door_main.2.pillar.2-7",
-}
-
-tile{
-  layer = 0,
-  x = 936,
-  y = 1392,
-  width = 24,
-  height = 32,
-  pattern = "door_main.2.pillar.1-7",
-}
-
-tile{
-  layer = 0,
   x = 872,
   y = 1320,
   width = 8,
@@ -26646,6 +26628,26 @@ tile{
 }
 
 dynamic_tile{
+  name = "tile_staircase_30_1",
+  layer = 0,
+  x = 928,
+  y = 1392,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.1-7",
+}
+
+dynamic_tile{
+  name = "tile_staircase_30_2",
+  layer = 0,
+  x = 960,
+  y = 1392,
+  width = 24,
+  height = 32,
+  pattern = "door_main.2.pillar.2-7",
+}
+
+dynamic_tile{
   name = "invisible_tile_1",
   layer = 0,
   x = 1152,
@@ -28795,6 +28797,26 @@ custom_entity{
   width = 16,
   height = 16,
   direction = 0,
+}
+
+switch{
+  name = "s",
+  layer = 0,
+  x = 1008,
+  y = 1360,
+  subtype = "solid",
+  sprite = "entities/switch",
+  needs_block = false,
+  inactivate_when_leaving = false,
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 1024,
+  y = 1349,
+  direction = 1,
+  default = true,
 }
 
 tile{
