@@ -68,7 +68,7 @@ s:register_event("on_activated", function()
 end)
 
 function map:enable_staircase_15()
-	tile_staircase_30_1:set_position(920-8, 1400-8, 1)
+	tile_staircase_30_1:set_position(920 - 8, 1400 - 8, 1)
 end
 
 -- Door events
