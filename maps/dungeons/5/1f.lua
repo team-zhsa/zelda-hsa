@@ -31,7 +31,9 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_30_s", true)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_w", sound)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_s", sound)
-
+	if game:get_value("dungeon_5_1f_staircase_to_2f", true) then
+		map:enable_staircase_15()
+	end
 	-- Switches
 	switch_manager:activate_switch_if_savegame_exist(map, "switch_15_door_1", "dungeon_5_1f_switch_15_1")
 	switch_manager:activate_switch_if_savegame_exist(map, "switch_15_door_2", "dungeon_5_1f_switch_15_2")
