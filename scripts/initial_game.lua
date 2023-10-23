@@ -22,6 +22,9 @@ function initial_game:initialise_new_savegame(game)
   game:set_value("time_of_day", "day")
   game:set_starting_location("menus/introduction", "destination")
   game:set_value("main_quest_step", 0)
+  game:set_value("keyboard_map_menu", "w")
+
 end
+
 
 return initial_game
