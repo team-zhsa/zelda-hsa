@@ -33,7 +33,7 @@ function options_submenu:on_started()
     text_key = "selection_menu.options.video_mode",
     color = self.text_color,
   }
-  self.shader_effect_label_text:set_xy(center_x - 50, center_y - 58)
+  self.shader_effect_label_text:set_xy(center_x - 50, center_y - 55)
 
   self.shader_effect_text = sol.text_surface.create{
     horizontal_alignment = "center",
@@ -43,7 +43,7 @@ function options_submenu:on_started()
     text = sol.video.get_shader(),
     color = self.text_color,
   }
-  self.shader_effect_text:set_xy(center_x + 74, center_y - 58)
+  self.shader_effect_text:set_xy(center_x + 74, center_y - 55)
 
   self:load_video_mode_texts()
 
