@@ -5,6 +5,7 @@ local outside_world_size = {}
 local outside_world_minimap_size = {}
 local map_shown = false
 local waypoint_positions = require("scripts/menus/scrollable_map/waypoint_config")
+local map_areas_config = require("scripts/menus/scrolalble_map/map_areas_config")
 
 function map_submenu:on_started()
   submenu.on_started(self)
@@ -33,6 +34,7 @@ function map_submenu:on_started()
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
     local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
     local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
+
     local map_width, map_height = self.game:get_map():get_size()
     if self.game:is_in_outside_world() then -- What maps are outside?
       local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
@@ -130,8 +132,10 @@ function map_submenu:on_finished()
   sol.menu.stop(self)
 end
 
+-------------------
+-- MAP SCROLLING --
+-------------------
 
--- Map scrolling.
 function map_submenu:on_command_pressed(command)
 
   local handled = submenu.on_command_pressed(self, command)
@@ -158,6 +162,7 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
          function movement:on_position_changed()
+          print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
            if not submenu.game:is_command_pressed("left") then
              self:stop()
              submenu.world_minimap_movement = nil
@@ -171,7 +176,7 @@ function map_submenu:on_command_pressed(command)
           movement:start(self.world_minimap_visible_xy)
           self.world_minimap_movement = movement
 			end
-	end
+	  end
 	end
 
 	elseif command == "right" then
@@ -179,35 +184,35 @@ function map_submenu:on_command_pressed(command)
 		self:next_submenu()
     handled = true
 	elseif map_shown == true then	
-		if not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then
-				
-			if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width + 64 then
-			
-				local angle
-				angle = 0
-				if self.world_minimap_movement ~= nil then
-        	self.world_minimap_movement:stop()
+		if not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then				
+      if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width + 64 then
+        local angle
+        angle = 0
+
+        if self.world_minimap_movement ~= nil then
+          self.world_minimap_movement:stop()
         end
-				local movement = sol.movement.create("straight")
+        local movement = sol.movement.create("straight")
           movement:set_speed(172)
           movement:set_angle(angle)
           local submenu = self
           
-         function movement:on_position_changed()
-           if not submenu.game:is_command_pressed("right") then
-             self:stop()
-             submenu.world_minimap_movement = nil
-           end
+          function movement:on_position_changed()
+            print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
+            if not submenu.game:is_command_pressed("right") then
+              self:stop()
+              submenu.world_minimap_movement = nil
+            end
             
-          if submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 200 + 64 then
-						self:stop()
-	        	submenu.world_minimap_movement = nil
-          end
+            if submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 200 + 64 then
+              self:stop()
+              submenu.world_minimap_movement = nil
+            end
           end
           movement:start(self.world_minimap_visible_xy)
           self.world_minimap_movement = movement
-			end
-		end
+        end
+		  end
 		end
 
   elseif command == "up" or command == "down" then
@@ -233,6 +238,7 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
           function movement:on_position_changed()
+            print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
             if not submenu.game:is_command_pressed("up")
                 and not submenu.game:is_command_pressed("down") then
               self:stop()
@@ -293,6 +299,9 @@ function map_submenu:on_draw(dst_surface)
   self:draw_save_dialog_if_any(dst_surface)
 end
 
+----------------
+-- WORLD MAPS --
+----------------
 
 function map_submenu:draw_world_map(dst_surface)
   local width, height = dst_surface:get_size()
@@ -349,7 +358,18 @@ function map_submenu:draw_world_map(dst_surface)
   else
   	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
   end
+
+  -- Set the caption according to the currently visible area.
+--if z then end
+
 end
+
+function map_submenu:set_area_caption()
+end
+
+------------------
+-- DUNGEON MAPS --
+------------------
 
 function map_submenu:draw_dungeon_map(dst_surface)
   local width, height = dst_surface:get_size()
