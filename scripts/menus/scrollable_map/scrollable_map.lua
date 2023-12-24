@@ -5,7 +5,7 @@ local outside_world_size = {}
 local outside_world_minimap_size = {}
 local map_shown = false
 local waypoint_positions = require("scripts/menus/scrollable_map/waypoint_config")
-local map_areas_config = require("scripts/menus/scrolalble_map/map_areas_config")
+local map_areas_config = require("scripts/menus/scrollable_map/map_areas_config")
 
 function map_submenu:on_started()
   submenu.on_started(self)
@@ -24,11 +24,10 @@ function map_submenu:on_started()
   self.left_arrow_sprite:set_direction(2)
   self.right_arrow_sprite = sol.sprite.create("menus/arrow")
   self.right_arrow_sprite:set_direction(0)
-  
+  self.map_cursor_img = sol.surface.create("menus/map/map_cursor.png")
   self.dungeon = self.game:get_dungeon()
   if self.dungeon == nil then
     -- Not in a dungeon: show a world map.
-    self:set_caption("map.title")
     self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
     
     local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
@@ -51,7 +50,8 @@ function map_submenu:on_started()
       waypoint_absolute_y = waypoint_absolute_y
     end
     self.world_minimap_movement = nil
-    self.world_minimap_visible_xy = {x = 0, y = 0}
+    self.world_minimap_visible_xy = {x = 0, y = 0, product = 0}
+    self.current_map_hovered = {x = 1, y = 1}
     if self.game:get_item("world_map"):get_variant() > 0 then
 			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
 	      map_shown = true      -- If in North Hyrule with World Map, then show the map.
@@ -68,6 +68,7 @@ function map_submenu:on_started()
 	      self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + 28 + 64 + 16
 	      self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width - 200, math.max(0, hero_minimap_x - 60))
 	      self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height - 160, math.max(0, hero_minimap_y - 20))
+
 			end
     else
       -- if World Map not in inventory, show clouds in map screen
@@ -162,7 +163,6 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
          function movement:on_position_changed()
-          print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
            if not submenu.game:is_command_pressed("left") then
              self:stop()
              submenu.world_minimap_movement = nil
@@ -198,7 +198,6 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
           function movement:on_position_changed()
-            print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
             if not submenu.game:is_command_pressed("right") then
               self:stop()
               submenu.world_minimap_movement = nil
@@ -238,7 +237,6 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
           function movement:on_position_changed()
-            print(submenu.world_minimap_visible_xy.x, submenu.world_minimap_visible_xy.y)
             if not submenu.game:is_command_pressed("up")
                 and not submenu.game:is_command_pressed("down") then
               self:stop()
@@ -285,17 +283,18 @@ function map_submenu:on_command_pressed(command)
 
 end
 
+
 function map_submenu:on_draw(dst_surface)
-
+  
   self:draw_background(dst_surface)
-  self:draw_caption(dst_surface)
-
+  
   if not self.game:is_in_dungeon() then
     self:draw_world_map(dst_surface)
   else
     self:draw_dungeon_map(dst_surface)
   end
-
+  self:draw_caption(dst_surface)
+  
   self:draw_save_dialog_if_any(dst_surface)
 end
 
@@ -306,7 +305,7 @@ end
 function map_submenu:draw_world_map(dst_surface)
   local width, height = dst_surface:get_size()
   local center_x, center_y = width / 2, height / 2
-  
+
   -- Draw the minimap.
   self.world_minimap_img:draw_region(self.world_minimap_visible_xy.x,
    self.world_minimap_visible_xy.y,
@@ -360,8 +359,11 @@ function map_submenu:draw_world_map(dst_surface)
   end
 
   -- Set the caption according to the currently visible area.
---if z then end
-
+  self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x + 64 - 48) / 80) + 2
+  self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 64 - 48) / 90) + 1
+  --print(self.current_map_hovered.x, self.current_map_hovered.y)
+  self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+  self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
 end
 
 function map_submenu:set_area_caption()
