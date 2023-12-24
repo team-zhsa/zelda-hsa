@@ -941,7 +941,7 @@ function savegame_menu:add_letter_player_name()
 
   if letter_to_add ~= nil then
     -- A letter was selected.
-    if size < 6 then
+    if size < 8 then
       sol.audio.play_sound("menu/letter_add")
       self.player_name = self.player_name .. letter_to_add
     else
@@ -960,10 +960,25 @@ function savegame_menu:validate_player_name()
   end
 
   sol.audio.play_sound("menu/fileselect_created")
-  if self.player_name:lower() == "zelda" or self.player_name:lower() == "ju" or self.player_name:lower() == "lucifer" or self.player_name:lower() == "linkff" or self.player_name:lower() == "salade verte" or self.player_name:lower() == "prince dedede" or self.player_name:lower() == "vibel" or self.player_name:lower() == "bp" or self.player_name:lower() == "ml"then
+  -- Special music for special names
+  if self.player_name:lower() == "zelda"
+  or self.player_name:lower() == "unknown"
+  or self.player_name:lower() == "dedede"
+  or self.player_name:lower() == "linkff" then
     sol.audio.play_music("cutscenes/end_credits")
   end
-  if self.player_name:lower() == "azer" then
+  -- Prevent from creating a savegame with an offensive name
+  if self.player_name:lower() == "teub"
+  or self.player_name:lower() == "bite"
+  or self.player_name:lower() == "chatte"
+  or self.player_name:lower() == "merde"
+  or self.player_name:lower() == "putain"
+  or self.player_name:lower() == "chiasse"
+  or self.player_name:lower() == "teucha"
+  or self.player_name:lower() == "chier"
+  or self.player_name:lower() == "chiant"
+  or self.player_name:lower() == "couille"
+  then
     sol.audio.play_sound("wrong")
     return false
   end
