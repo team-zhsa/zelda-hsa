@@ -360,7 +360,7 @@ function map_submenu:draw_world_map(dst_surface)
 
   -- Set the caption according to the currently visible area.
   self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x + 64 - 48) / 80) + 2
-  self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 64 - 48) / 90) + 1
+  self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 64 - 32) / 90) + 1
   --print(self.current_map_hovered.x, self.current_map_hovered.y)
   self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
   self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
