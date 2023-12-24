@@ -24,6 +24,7 @@ function submenu:on_started()
   self.save_dialog_cursor_pos = "left"
   self.save_dialog_state = 0
   self.text_color = { 224, 224, 224 }
+	self.text_stroke_color = {52, 52, 140}
 
   -- Dark surface whose goal is to slightly hide the game and better highlight the menu.
   local quest_w, quest_h = sol.video.get_quest_size()
@@ -131,10 +132,13 @@ function submenu:draw_caption(dst_surface)
 
     -- Draw caption text.
     if self.caption_text_2:get_text():len() == 0 then
-      self.caption_text_1:draw(dst_surface, width / 2, height / 2 + 89)
+      self.caption_text_1:set_xy(width / 2, height / 2 + 89)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     else
-      self.caption_text_1:draw(dst_surface, width / 2, height / 2 + 84)
-      self.caption_text_2:draw(dst_surface, width / 2, height / 2 + 94)
+      self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 84)
+      self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 94)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     end
   end
 end
