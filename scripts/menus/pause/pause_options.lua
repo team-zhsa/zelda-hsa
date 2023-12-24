@@ -22,6 +22,9 @@ function options_submenu:on_started()
   self.column_stroke_color = { 55, 55, 25}
   self.text_color = { 224, 224, 224 }
 
+  self.shader_effect_list_str = {"fsa", "snes", "tft"}
+  self.shader_effect_list = {require('scripts/maps/fsa_effect'), nil, require('scripts/maps/tft_effect')}
+
   self.shader_effect_label_text = sol.text_surface.create{
     horizontal_alignment = "left",
     vertical_alignment = "top",
@@ -41,6 +44,8 @@ function options_submenu:on_started()
     color = self.text_color,
   }
   self.shader_effect_text:set_xy(center_x + 74, center_y - 58)
+
+  self:load_video_mode_texts()
 
   self.command_column_text = sol.text_surface.create{
     horizontal_alignment = "center",
@@ -125,6 +130,15 @@ function options_submenu:on_started()
   self.waiting_for_command = false
 
   self.game:set_custom_command_effect("action", "change")
+end
+
+-- Loads the text displayed for each video mode.
+function options_submenu:load_video_mode_texts()
+  if self.game:get_value("mode") == "fsa" then self.current_video_mode_index = 1
+  elseif self.game:get_value("mode") == "snes" then self.current_video_mode_index = 2
+  elseif self.game:get_value("mode") == "tft" then self.current_video_mode_index = 3 end
+  self.current_video_mode_index = (((self.current_video_mode_index - 1) % 3) + 1)
+  self.shader_effect_text:set_text_key("options.shader_effect."..self.shader_effect_list_str[self.current_video_mode_index])
 end
 
 -- Loads the text displayed for each game command, for the
@@ -231,8 +245,7 @@ function options_submenu:on_command_pressed(command)
   local resolution_list_w = {320, 256, 300, 320}
   local resolution_list_h = {240, 224, 240, 180}
   local resolution_list = {"320_240", "256_224", "300_240", "320_180"}
-  local shader_effect_list_str = {"snes", "fsa", "tft"}
-  local shader_effect_list = {nil, require('scripts/maps/fsa_effect'), require('scripts/maps/tft_effect')}
+ 
 
   if not handled then
     if command == "left" then
@@ -250,14 +263,14 @@ function options_submenu:on_command_pressed(command)
       self:set_cursor_position(self.cursor_position % 10 + 1)
       handled = true
     elseif command == "action" then
-      sol.audio.play_sound("danger")
       if self.cursor_position == 1 then
-        --[[ Change the video mode
-          i = 0
-          effect_manager:set_effect(self.game, shader_effect_list[i + 1])
-          self.game:set_value("mode", shader_effect_list_str[i + 1])
-          self.shader_effect_text:set_text_key("options.shader_effect."..shader_effect_list_str[(i + 1)])
-          i = i + 1--]]
+        -- Change the video mode
+        self.current_video_mode_index = (((self.current_video_mode_index + 1) - 1) % 3) + 1
+        effect_manager:set_effect(self.game, self.shader_effect_list[self.current_video_mode_index])
+        self.game:set_value("mode", self.shader_effect_list_str[self.current_video_mode_index])
+        sol.audio.play_sound("menu/option_modify_value")
+        print(self.current_video_mode_index)
+        self:load_video_mode_texts()
       else
         -- Customize a game command.
         self:set_caption_key("options.caption.press_key")
@@ -265,7 +278,7 @@ function options_submenu:on_command_pressed(command)
         local command_to_customize = self.command_names[self.cursor_position - 1]
         self.game:capture_command_binding(command_to_customize, function()
           self.waiting_for_command = false
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menu/option_modify_value")
           self:set_caption_key("options.caption.press_action_customize_key")
           self:load_command_texts()
           -- TODO restore HUD icons.
