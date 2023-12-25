@@ -55,8 +55,8 @@ function map_submenu:on_started()
     if self.game:get_item("world_map"):get_variant() > 0 then
 			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
 	      map_shown = true      -- If in North Hyrule with World Map, then show the map.
-	      self.outside_world_size = { width = 15360, height = 12960 }
-	      self.outside_world_minimap_size = { width = 960, height = 810 }
+	      self.outside_world_size = { width = 15360 + 1280, height = 12960 + 1440}
+	      self.outside_world_minimap_size = { width = 960 + 80, height = 810 + 90}
 	      self.world_minimap_img = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
 	      local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 	      local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)

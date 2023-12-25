@@ -30,7 +30,7 @@ local waypoint_positions = { -- Indicates the coordinates in the entire world of
   -- "dungeon_3_started",
   {x = 01736, y = 00408}, -- Fire Temple (completing)
   -- "dungeon_3_completed",
-  {x = 07824, y = 04660}, -- Fire Temple completed, go to  Temple of Time
+  {x = 08320, y = 05112}, -- Fire Temple completed, go to  Temple of Time
   -- "master_sword_obtained",
   {x = 07040, y = 04424}, -- Hyrule Castle
   -- "zelda_kidnapped",
