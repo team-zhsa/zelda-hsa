@@ -19,7 +19,9 @@ local pendant_1 = sol.sprite.create("entities/items")
 local pendant_2 = sol.sprite.create("entities/items")
 local pendant_3 = sol.sprite.create("entities/items")
 local sword_sprite = sol.sprite.create("entities/sword")
-local center_x, center_y
+local hero_sprite_fg = sol.sprite.create("hero/tunic"..game:get_ability("tunic"))
+hero_sprite_fg:set_animation("stopped")
+hero_sprite_fg:set_direction(3)
 pendant_1:set_animation("pendant_1")
 pendant_2:set_animation("pendant_2")
 pendant_3:set_animation("pendant_3")
@@ -34,12 +36,6 @@ map:register_event("on_started", function()
 		sword:remove()
 		cutscene_trigger:remove()
 	end
-	--[[pendant_1:set_xy(center_x + 40 * math.cos((0 * math.pi / 3) - (math.pi / 2)),
-	center_y + 40 * math.sin((0 * math.pi / 3) - (math.pi / 2)))
-	pendant_2:set_xy(center_x + 40 * math.cos((2 * math.pi / 3) - (math.pi / 2)),
-		center_y + 40 * math.sin((2 * math.pi / 3) - (math.pi / 2)))
-	pendant_3:set_xy(center_x + 40 * math.cos((4 * math.pi / 3) - (math.pi / 2)),
-		center_y + 40 * math.sin((4 * math.pi / 3) - (math.pi / 2)))--]]
 end)
 	
 function map:on_draw(dst_surface)
@@ -48,6 +44,7 @@ function map:on_draw(dst_surface)
 	surface:draw(dst_surface)
 	bloom_surface = dst_surface
 	pendant_surface:clear()
+	hero_sprite_fg:draw(pendant_surface)
 	pendant_1:draw(pendant_surface)
 	pendant_2:draw(pendant_surface)
 	pendant_3:draw(pendant_surface)
@@ -57,7 +54,7 @@ end
 
 function sword:on_position_changed()
 	local sword_x, sword_y = sword:get_position()
-	sword_sprite:set_xy(sword_x, sword_y - 64)
+	sword_sprite:set_xy(sword_x, sword_y - 144)
 end
 
 	-- Event called at initialization time, as soon as this map is loaded.
@@ -68,7 +65,7 @@ end
 		local pendant_movement_1 = sol.movement.create("circle")
 		pendant_movement_1:set_angular_speed(pendant_angular_speed)
 		pendant_movement_1:set_radius(pendant_initial_radius)
-		pendant_movement_1:set_center(sword, 0, -64)
+		pendant_movement_1:set_center(sword, 0, -152)
 		pendant_movement_1:set_ignore_obstacles(true)
 		pendant_movement_1:set_angle_from_center((0 * math.pi / 3) - (math.pi / 2))
 		pendant_movement_1:set_radius_speed(pendant_radius_speed)
@@ -76,7 +73,7 @@ end
 		local pendant_movement_2 = sol.movement.create("circle")
 		pendant_movement_2:set_angular_speed(pendant_angular_speed)
 		pendant_movement_2:set_radius(pendant_initial_radius)
-		pendant_movement_2:set_center(sword, 0, -64)
+		pendant_movement_2:set_center(sword, 0, -152)
 		pendant_movement_2:set_ignore_obstacles(true)
 		pendant_movement_2:set_angle_from_center((2 * math.pi / 3) - (math.pi / 2))
 		pendant_movement_2:set_radius_speed(pendant_radius_speed)
@@ -84,7 +81,7 @@ end
 		local pendant_movement_3 = sol.movement.create("circle")
 		pendant_movement_3:set_angular_speed(pendant_angular_speed)
 		pendant_movement_3:set_radius(pendant_initial_radius)
-		pendant_movement_3:set_center(sword, 0, -64)
+		pendant_movement_3:set_center(sword, 0, -152)
 		pendant_movement_3:set_ignore_obstacles(true)
 		pendant_movement_3:set_angle_from_center((4 * math.pi / 3) - (math.pi / 2))
 		pendant_movement_3:set_radius_speed(pendant_radius_speed)
@@ -97,12 +94,15 @@ end
 
 		map:set_cinematic_mode(true)
 		local hero_sprite = hero:get_sprite()
+		local hero_x, hero_y =  hero:get_position()
 		hero_sprite:set_animation("grabbing")
 		sol.audio.play_sound("characters/link/voice/pulling_heavy_object0")
 		pendant_surface:fade_in()
 		pendant_1:set_opacity(0)
 		pendant_2:set_opacity(0)
 		pendant_3:set_opacity(0)
+		hero_sprite_fg:set_opacity(0)
+		hero_sprite_fg:set_xy(hero_x, hero_y - 144)
 		pendant_movement_1:start(pendant_1)
 		pendant_movement_2:start(pendant_2)
 		pendant_movement_3:start(pendant_3) 
@@ -117,13 +117,12 @@ end
 			hero_sprite:set_animation("pulling")
 			sol.audio.play_sound("items/sword_out_of_pedestal")
 			sword_movement_1:start(sword, function()
-				print("mov1")
 				surface:fade_in(50)
 				white_surface:draw(surface)
 				sol.timer.start(map, 100, function()
 					hero_sprite:set_animation("stopped")
 					sword:set_visible(false)
-					
+					hero_sprite_fg:fade_in()
 					local sword_movement_2 = sol.movement.create("straight")
 					sword_movement_2:set_speed(4)
 					sword_movement_2:set_max_distance(8)
@@ -154,6 +153,7 @@ end
 								sword_movement_5:set_ignore_obstacles(true)
 								sword_movement_5:start(sword, function()
 									bloom_surface:set_shader(sol.shader.create("heavybloom"))
+									hero_sprite_fg:set_shader(nil)
 									surface:fade_in()
 									pendant_movement_1:set_radius(16)
 									pendant_movement_2:set_radius(16)
@@ -168,7 +168,7 @@ end
 										sword_movement_6:set_angle(3 * math.pi/2)
 										sword_movement_6:set_ignore_obstacles(true)
 										sword_movement_6:start(sword, function()
-											sol.timer.start(map, 3000, function()
+											sol.timer.start(map, 2800, function()
 												pendant_movement_1:set_radius(1)
 												pendant_movement_2:set_radius(1)
 												pendant_movement_3:set_radius(1)
@@ -179,6 +179,7 @@ end
 												sol.timer.start(map, 200, function()
 													sword_sprite:fade_out()
 													surface:fade_out()
+													hero_sprite_fg:fade_out()
 													pendant_surface:set_shader(sol.shader.create("heavybloom"))
 													bloom_surface:set_shader(nil)
 												end)
@@ -201,12 +202,10 @@ end
 				cutscene_trigger:remove()
 				surface:fade_out()
 				sword:remove()
-
 				hero:start_treasure("sword", 2)
 				game:set_step_done("master_sword_obtained")
 			end)
 		end)
-
 
 	end
 end)
