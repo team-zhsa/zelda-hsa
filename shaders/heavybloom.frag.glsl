@@ -41,7 +41,7 @@ uniform sampler2D sol_texture;
 COMPAT_VARYING vec2 sol_vtex_coord;
 COMPAT_VARYING vec4 sol_vcolor;
 
-#define glarebasesize 0.42
+#define glarebasesize 1
 #define power 0.35 // 0.50 is good
 
 uniform vec2 sol_input_size;
