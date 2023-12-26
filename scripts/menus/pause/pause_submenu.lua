@@ -36,7 +36,7 @@ function submenu:on_started()
 	-- Dark surface whose goal is to slightly hide the game and better highlight the menu.
 	local quest_w, quest_h = sol.video.get_quest_size()
 	self.dark_surface = sol.surface.create(quest_w, quest_h)
-	self.dark_surface:fill_color({224, 224, 224})
+	self.dark_surface:fill_color({180, 180, 180})
 	self.dark_surface:set_blend_mode("multiply")
 
 	local menu_font, menu_font_size = language_manager:get_menu_font()
