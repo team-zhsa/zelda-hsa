@@ -169,7 +169,7 @@ function options_submenu:set_cursor_position(position)
     if position == 1 then  -- Video mode.
       self:set_caption_key("options.caption.press_action_change_mode")
       self.cursor_sprite.x = width / 2 + 78 - 2
-      self.cursor_sprite.y = height / 2 - 51
+      self.cursor_sprite.y = height / 2 - 51 + 2
     else  -- Customization of a command.
       self:set_caption_key("options.caption.press_action_customize_key")
 

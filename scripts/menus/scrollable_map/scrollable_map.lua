@@ -314,25 +314,25 @@ function map_submenu:draw_world_map(dst_surface)
    center_x - 87, center_y - 70)
 
   if map_shown then
-		-- Draw background image
-  	self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
-
-    -- Draw the hero's position.
-    local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
+    
+    -- Draw the hero's position and the waypoint's position.
+    local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x + 16
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
     local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x
     local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y
-    if (hero_visible_y >= 30 and hero_visible_y + 40 <= center_y + 40 + 40)
-    and (hero_visible_x >= 60 and hero_visible_x <= center_x + 40 + 60) then
+    if (hero_visible_x >= center_x - 100 and hero_visible_x <= center_x + 100 - 24)
+    and (hero_visible_y >= center_y - 80  and hero_visible_y <= center_y + 80 - 16) then
       -- Makes the hero icon invisible when it is out of bounds.
       self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
     end
-    if (waypoint_position_visible_x >= 60 and waypoint_position_visible_y >= 40)
-    and (waypoint_position_visible_x <= center_x + 100
-    and waypoint_position_visible_y <= center_x + 80) then
-      -- Offset
+    if (waypoint_position_visible_x >= center_x - 100 and waypoint_position_visible_x <= center_x + 100 - 24)
+    and (waypoint_position_visible_y >= center_y - 80 and waypoint_position_visible_y <= center_y + 80 - 16) then
+      -- Makes the waypoint icon invisible when it is out of bounds.
       self.waypoint_sprite:draw(dst_surface, waypoint_position_visible_x, waypoint_position_visible_y)
     end
+
+    -- Draw background image
+    self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
 
     -- Draw the arrows.
     if self.world_minimap_visible_xy.y > 0 then
@@ -362,11 +362,10 @@ function map_submenu:draw_world_map(dst_surface)
   self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x + 64 - 48) / 80) + 2
   self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 64 - 32) / 90) + 1
   --print(self.current_map_hovered.x, self.current_map_hovered.y)
-  self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+  if map_shown then
+    self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+  else self:set_caption("map.title") end
   self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
-end
-
-function map_submenu:set_area_caption()
 end
 
 ------------------

@@ -132,11 +132,11 @@ function submenu:draw_caption(dst_surface)
 
     -- Draw caption text.
     if self.caption_text_2:get_text():len() == 0 then
-      self.caption_text_1:set_xy(width / 2, height / 2 + 89)
+      self.caption_text_1:set_xy(width / 2, height / 2 + 94)
       text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     else
-      self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 84)
-      self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 94)
+      self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
+      self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 99)
       text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
       text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     end
