@@ -232,7 +232,7 @@ function quest_submenu:on_draw(dst_surface)
 		pieces_of_heart_x, 0,                 -- region position in image
 		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
 		dst_surface,                          -- destination surface
-		center_x - 14, center_y + 50          -- position in destination surface
+		center_x - 13, center_y + 47          -- position in destination surface
 	)
 	
 -- Game time.
