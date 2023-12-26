@@ -2460,7 +2460,7 @@ dialog{
   text = [[
 Il faut tirer le levier pour
 ouvrir le sol. Appuie sur le
-bouton A ainsi que sur la manette
+bouton \[controller_a\] ainsi que sur la manette
 vers le bas.
 ]],
 }
@@ -3801,14 +3801,6 @@ dialog{
 Seul celui qui possède ces trois
 pendentifs pourra manier l'Epée
 de Légende.
-]],
-}
-
-dialog{
-  id = "maps.houses.hyrule_town.temple_of_time.product_green_potion",
-  text = [[
-Une potion verte qui te restaure
-toute ta magie.
 ]],
 }
 
@@ -5175,6 +5167,15 @@ Coquillages
 }
 
 dialog{
+  id = "maps.out.eventide_island.sign_1",
+  text = [[
+Le pont des singes      
+est prêt !       
+Salut ! Kiki !
+]],
+}
+
+dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_already_finished",
   text = [[
 Le jeu est terminé. Reviens voir
@@ -5225,15 +5226,6 @@ Bananes, bananes !
 Kik i!     
 Les copains, venez !
 On va le remercier !
-]],
-}
-
-dialog{
-  id = "maps.out.finallis_island.sign_1",
-  text = [[
-Le pont des singes      
-est prêt !       
-Salut ! Kiki !
 ]],
 }
 
@@ -5583,6 +5575,20 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.zelda_go_to_castle",
+  text = [[
+$2$v...$0 $v...$0 $v...$0
+C'est Zelda.
+
+Tu as enfin recouvré tes pouvoirs.
+Il est temps pour toi de sauver
+le Royaume.
+Rends-toi au Château d'Hyrule ! $0
+Je crois en toi !
 ]],
 }
 

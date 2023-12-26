@@ -2108,7 +2108,7 @@ shader{ id = "fr_white_filter", description = "fr_white_filter" }
 shader{ id = "gb", description = "GB filter" }
 shader{ id = "grayscale", description = "grayscale" }
 shader{ id = "heat_wave", description = "Heat distorsion" }
-shader{ id = "heavybloom", description = "heavybloom" }
+shader{ id = "heavy_bloom", description = "Heavy bloom" }
 shader{ id = "hq2x", description = "hq2x" }
 shader{ id = "lava_filter", description = "Lava filter" }
 shader{ id = "lcd", description = "LCD filter" }
@@ -2390,8 +2390,8 @@ file{ path = "shaders/edge-detection.frag.glsl", author = "Themaister, Christoph
 file{ path = "shaders/edge-detection.vert.glsl", author = "Themaister, Christopho", license = "Public domain" }
 file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" }
-file{ path = "shaders/heavybloom.dat", author = "Christopho", license = "GPL v3" }
-file{ path = "shaders/heavybloom.frag.glsl", author = "WhateverMan", license = "GPL v3" }
+file{ path = "shaders/heavy_bloom.dat", author = "Christopho", license = "GPL v3" }
+file{ path = "shaders/heavy_bloom.frag.glsl", author = "WhateverMan", license = "GPL v3" }
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/hq2x.frag.glsl", author = "slime73, Vlag", license = "GPL v3" }
 file{ path = "shaders/pixellisation.dat", author = "PhoenixII54", }

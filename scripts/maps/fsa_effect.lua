@@ -47,7 +47,7 @@ distort_map:set_shader(distort_shader)
 tmp:set_shader(shader)
 local ew,eh = effect:get_size()
 
-local clouds_speed = 0.01;
+local clouds_speed = 0.005;
 local crw,crh = clouds:get_size()
 
 
@@ -334,7 +334,7 @@ local function setup_inside_lights(map)
 	light_mgr:init(map,
 		(function()
 			if house then
-				return {180,170,160}
+				return {200,190,180}
 			else
 				return {105,100,95}
 			end
