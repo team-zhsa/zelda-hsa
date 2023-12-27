@@ -1,0 +1,18 @@
+animation{
+  name = "closed",
+  src_image = "menus/title_screen/logo_zeldahsa.png",
+  frame_delay = 25,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 160, frame_height = 32, origin_x = 80, origin_y = 29, num_frames = 2, num_columns = 1 },
+  },
+}
+animation{
+  name = "opening",
+  src_image = "menus/title_screen/logo_zeldahsa.png",
+  frame_delay = 25,
+  frame_to_loop_on = 10,
+  directions = {
+    { x = 0, y = 32, frame_width = 160, frame_height = 32, origin_x = 80, origin_y = 29, num_frames = 11, num_columns = 1 },
+  },
+}

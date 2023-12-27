@@ -7,8 +7,9 @@
 
 local initial_menus = {
   "scripts/initial_menus/solarus_logo",
-  "scripts/initial_menus/language",
+  "scripts/initial_menus/team_logo",
   "scripts/initial_menus/copyright_notice", 
+  "scripts/initial_menus/language",
   "scripts/initial_menus/title", 
   "scripts/initial_menus/savegames",
 }
