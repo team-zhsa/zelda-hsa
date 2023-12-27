@@ -347,7 +347,7 @@ local function setup_inside_lights(map)
 		--create hero light
 		local hl = create_light(map,-64,-64,0,"80","196,128,200")
 		function hl:on_update()
-			if map:get_game():has_item("lamp") and map:get_game():get_magic() > 0 then
+			if map:get_game():has_item("lamp") then
 				hl:set_position(hero:get_position())
 			end
 		end

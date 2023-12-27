@@ -144,6 +144,7 @@ map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/east_castle/garden_house", description = "Garden House" }
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
+map{ id = "inside/houses/gerudo_village/shop", description = "Gerudo shop" }
 map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
 map{ id = "inside/houses/hyrule_town/bakery", description = "Bakery" }
 map{ id = "inside/houses/hyrule_town/bank", description = "Bank" }
@@ -182,15 +183,16 @@ map{ id = "inside/houses/south_coast/lighthouse_1f", description = "Lighthouse (
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
 map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost Woods Map House" }
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
+map{ id = "inside/houses/west_forest/deku_tree", description = "Deku Tree" }
 map{ id = "inside/houses/zora_forest/camper_house", description = "Camper's House" }
 map{ id = "inside/houses/zora_forest/forest_hideout", description = "Forest Hideout" }
 map{ id = "inside/houses/zora_forest/red_hut", description = "Red Hut" }
 map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
-map{ id = "inside/spell_caves/attack", description = "Doomsday map" }
-map{ id = "inside/spell_caves/cure", description = "inside/spell_caves/cure" }
-map{ id = "inside/temple_time_unused", description = "Temple of Time (Unused)" }
+map{ id = "inside/shrines/attack", description = "Doomsday map" }
+map{ id = "inside/shrines/cure", description = "inside/spell_caves/cure" }
+map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (0F)" }
 map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
 map{ id = "memory/00", description = "(Unused)" }
 map{ id = "memory/01", description = "(Unused)" }
@@ -228,7 +230,7 @@ map{ id = "out/c1", description = "C1 (West Mountains)" }
 map{ id = "out/c2", description = "C2 (Hyrule Field)" }
 map{ id = "out/c3", description = "C3 (Hyrule Field)" }
 map{ id = "out/c4", description = "C4 (Gerudo Village)" }
-map{ id = "out/c5", description = "C5 (Desert)" }
+map{ id = "out/c5", description = "C5 (Gerudo Desert)" }
 map{ id = "out/c6", description = "C6 (Gerudo River)" }
 map{ id = "out/c7", description = "C7 (Miracles Coast)" }
 map{ id = "out/c8", description = "C8 (Sea)" }
@@ -2242,6 +2244,8 @@ file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author =
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/south_coast/lighthouse_1f.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/south_coast/lighthouse_1f.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/west_forest/deku_tree.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/west_forest/deku_tree.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/forest_hideout.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/forest_hideout.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/red_hut.dat", author = "The Unknown", }
@@ -2252,6 +2256,8 @@ file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The 
 file{ path = "maps/inside/houses/zora_village/trading_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/zora_king.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/zora_king.lua", author = "The Unknown", }
+file{ path = "maps/inside/shrines/lighthouse/0f.dat", author = "The Unknown", }
+file{ path = "maps/inside/shrines/lighthouse/0f.lua", author = "The Unknown", }
 file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "The Unknown", }
 file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "The Unknown", }
 file{ path = "maps/out/a1.dat", author = "The Unknown", }
