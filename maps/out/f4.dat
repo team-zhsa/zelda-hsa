@@ -14072,7 +14072,7 @@ teletransporter{
 }
 
 dynamic_tile{
-  name = "door_bank_3",
+  name = "door_courtyard_2",
   layer = 0,
   x = 480,
   y = 568,
@@ -14083,7 +14083,7 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "door_bank_4",
+  name = "door_courtyard_1",
   layer = 0,
   x = 480,
   y = 568,
@@ -14102,6 +14102,23 @@ dynamic_tile{
   height = 32,
   pattern = "market_fish_1",
   tileset = "outside_additions",
+}
+
+sensor{
+  name = "open_house_door_bank_sensor_2",
+  layer = 0,
+  x = 488,
+  y = 605,
+  width = 32,
+  height = 16,
+}
+
+destination{
+  name = "from_courtyard",
+  layer = 0,
+  x = 496,
+  y = 605,
+  direction = 3,
 }
 
 tile{
