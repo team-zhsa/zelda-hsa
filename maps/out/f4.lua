@@ -162,6 +162,8 @@ npc_fisher:register_event("on_interaction", function()
     game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_lamp")
   elseif game:is_step_last("lamp_obtained") then
     game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_sword")
+  elseif not game:is_step_last("dungeon_3_completed") then
+    game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_fish")
   else game:start_dialog("maps.out.hyrule_town.fisher.welcome")
   end
 end)

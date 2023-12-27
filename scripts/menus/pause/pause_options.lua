@@ -269,7 +269,6 @@ function options_submenu:on_command_pressed(command)
         effect_manager:set_effect(self.game, self.shader_effect_list[self.current_video_mode_index])
         self.game:set_value("mode", self.shader_effect_list_str[self.current_video_mode_index])
         sol.audio.play_sound("menu/option_modify_value")
-        print(self.current_video_mode_index)
         self:load_video_mode_texts()
       else
         -- Customize a game command.

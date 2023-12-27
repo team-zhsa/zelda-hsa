@@ -5346,17 +5346,29 @@ Il est pas frais mon poisson ?
 }
 
 dialog{
+  id = "maps.out.hyrule_town.fisher.welcome_no_fish",
+  text = [[
+Bienvenue à la meilleure
+poissonnerie d'Hyrule ! $0
+
+J'attends encore ma livraison
+de poissons... 
+Reviens plus tard alors !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.fisher.welcome_no_lamp",
   text = [[
 Bienvenue à la meilleure
 poissonnerie d'Hyrule !
+
 Malheureusement je n'ai pas
-encore reçu de poisson donc
-il n'y en a pas.$0 Par contre, si
-tu vas dans l'égout derrière le
-mur, il y a un magicien qui
-pourra t'aider ! Mais ne le dis
-à personne !
+encore reçu de poisson.$0
+Par contre, si tu vas dans
+l'égout derrière le mur, il y a
+un magicien qui pourra t'aider !
+Mais ne le dis à personne !
 ]],
 }
 
@@ -5365,11 +5377,13 @@ dialog{
   text = [[
 Bienvenue à la meilleure
 poissonnerie d'Hyrule ! $0
+
 J'attends encore ma livraison
 de poissons... $0 Par contre,
-il paraît qu'à la forge au nord-
+si tu dois quitter la ville, il
+paraît qu'à la forge au nord-
 est de la ville, il font de super
-couteaux !
+épées !
 ]],
 }
 
@@ -5436,8 +5450,7 @@ très louche !
 dialog{
   id = "maps.out.hyrule_town.shop.bombs",
   text = [[
-Voici des bombes 
-artisanales pas
+Voici des bombes artisanales pas
 cher !
 ]],
 }

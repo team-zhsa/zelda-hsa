@@ -26,7 +26,7 @@ pendant_1:set_animation("pendant_1")
 pendant_2:set_animation("pendant_2")
 pendant_3:set_animation("pendant_3")
 local pendant_initial_radius = 80
-local pendant_angular_speed = 4
+local pendant_angular_speed = 6
 local pendant_radius_speed = 12
 
 
