@@ -123,8 +123,8 @@ function options_submenu:on_started()
   self.down_arrow_sprite = sol.sprite.create("menus/arrow")
   self.down_arrow_sprite:set_direction(3)
   self.down_arrow_sprite:set_xy(center_x - 64, center_y + 62)
-  self.cursor_sprite = sol.sprite.create("menus/pause/pause_menu_options_cursor")
-  self.command_cursor_sprite = sol.sprite.create("menus/pause/pause_menu_options_command_cursor")
+  self.cursor_sprite = sol.sprite.create("menus/pause/options/cursor")
+  self.command_cursor_sprite = sol.sprite.create("menus/pause/options/command_cursor")
   self.cursor_position = nil
   self:set_cursor_position(1)
   self.waiting_for_command = false
