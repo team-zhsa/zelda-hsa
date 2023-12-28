@@ -5310,6 +5310,46 @@ loin.
 }
 
 dialog{
+  id = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier",
+  next = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier_strike",
+  text = [[
+Ah, te voilà enfin $v...$0
+Je t'attendais depuis tout à
+l'heure.
+Agahnim a enlevé la princesse
+Zelda et l'a enfermé en haut de
+cette tour...$0
+Le seul moyen de briser cette
+barrière est l'épée de Légende
+que tu as entre tes mains.
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier_strike",
+  text = [[
+Frappe cette barrière pour
+pouvoir monter dans la tour...$0
+Le destin du pays est entre tes
+mains !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.castle_seal.zelda_go_to_castle",
+  text = [[
+$2$v...$0 $v...$0 $v...$0
+C'est Zelda...
+
+Tu as enfin recouvré tes pouvoirs.
+Il est temps pour toi de sauver
+le Royaume.
+Rends-toi au Château d'Hyrule ! $0
+Je crois en toi !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.drunk_man.no_lamp",
   text = [[
 Il paraît...$0 Hic ! Qu'il y a...$0
@@ -5604,20 +5644,6 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
-]],
-}
-
-dialog{
-  id = "maps.out.hyrule_town.zelda_go_to_castle",
-  text = [[
-$2$v...$0 $v...$0 $v...$0
-C'est Zelda.
-
-Tu as enfin recouvré tes pouvoirs.
-Il est temps pour toi de sauver
-le Royaume.
-Rends-toi au Château d'Hyrule ! $0
-Je crois en toi !
 ]],
 }
 
