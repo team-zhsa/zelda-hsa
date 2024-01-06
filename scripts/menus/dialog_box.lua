@@ -78,7 +78,7 @@ local function initialise_dialog_box_features(game)
   end
 
   dialog_box.dialog_surface = sol.surface.create(sol.video.get_quest_size())
-  dialog_box.box_img = sol.surface.create("hud/dialog_box_new.png")
+  dialog_box.box_img = sol.surface.create("hud/dialog_box.png")
   dialog_box.icons_img = sol.surface.create("hud/dialog_icons.png")
   dialog_box.end_lines_sprite = sol.sprite.create("hud/dialog_box_message_end")
 	
