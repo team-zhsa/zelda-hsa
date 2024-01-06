@@ -64,7 +64,7 @@ end
 
 -- Starting the menu.
 function title_screen:on_started()
-	sol.audio.play_music("cutscenes/title_screen_new", function()
+	sol.audio.play_music("cutscenes/title_screen", function()
 		sol.audio.stop_music()
 	end)
 	surface:fade_in(100)
