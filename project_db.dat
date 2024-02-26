@@ -179,12 +179,10 @@ map{ id = "inside/houses/north_west_castle/red_house", description = "Red House 
 map{ id = "inside/houses/north_west_castle/treasure_house", description = "Treasure House" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
-map{ id = "inside/houses/south_coast/lighthouse_0f", description = "Lighthouse (0F)" }
-map{ id = "inside/houses/south_coast/lighthouse_1f", description = "Lighthouse (1st Floor)" }
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
 map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost Woods Map House" }
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
-map{ id = "inside/houses/west_forest/deku_tree", description = "Deku Tree" }
+map{ id = "inside/houses/west_forest/deku_tree", description = "Deku Tree Entrance" }
 map{ id = "inside/houses/zora_forest/camper_house", description = "Camper's House" }
 map{ id = "inside/houses/zora_forest/forest_hideout", description = "Forest Hideout" }
 map{ id = "inside/houses/zora_forest/red_hut", description = "Red Hut" }
@@ -193,20 +191,19 @@ map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl 
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
 map{ id = "inside/shrines/attack", description = "Doomsday map" }
 map{ id = "inside/shrines/cure", description = "inside/spell_caves/cure" }
-map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (0F)" }
+map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (Ground Floor)" }
+map{ id = "inside/shrines/lighthouse/1f", description = "Lighthouse (1st Floor)" }
+map{ id = "inside/shrines/shibo_nayru/0f", description = "Shibo Nayru's Shrine (Ground Floor" }
 map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
 map{ id = "memory/00", description = "(Unused)" }
 map{ id = "memory/01", description = "(Unused)" }
 map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
-map{ id = "misc/a", description = "a" }
-map{ id = "misc/e", description = "e" }
 map{ id = "misc/ending", description = "Ending" }
 map{ id = "misc/lost_woods", description = "Lost Woods test" }
 map{ id = "misc/minigame_arrow", description = "Arrow Minigame" }
 map{ id = "misc/pre_mapping", description = "Pre mapping" }
-map{ id = "misc/r", description = "r" }
 map{ id = "misc/test_arena", description = "Testing Arena" }
 map{ id = "misc/test_ground", description = "Testing Ground" }
 map{ id = "out/a1", description = "A1 (Ruins)" }
@@ -318,7 +315,6 @@ map{ id = "out/l7", description = "L7 (Sea)" }
 map{ id = "out/l8", description = "L8 (Sea)" }
 map{ id = "out/l9", description = "L9 (Eventide Island, Forgotten Temple)" }
 map{ id = "out/m1 - n2", description = "M1 - N2 (North Korea)" }
-map{ id = "sanctuaries/shibo_nayru/1f", description = "Shibo'Nayru Sanctuary" }
 map{ id = "trailer/zora", description = "Zora" }
 
 tileset{ id = "Full Hyrule", description = "Full Hyrule" }
@@ -1173,7 +1169,6 @@ sprite{ id = "menus/pause/options/command_cursor", description = "Command cursor
 sprite{ id = "menus/pause/options/cursor", description = "Options cursor" }
 sprite{ id = "menus/pause/pause_cursor", description = "Pause cursor" }
 sprite{ id = "menus/pause/pause_save_dialog", description = "menus/pause/pause_save_dialog" }
-sprite{ id = "menus/selection_menu_cursor", description = "Savegame cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
 sprite{ id = "menus/title_screen/logo_zeldahsa", description = "ZeldaHSA logo" }
@@ -2189,6 +2184,7 @@ file{ path = "maps/dungeons/1/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/12/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/12/0f.lua", author = "The Unknown", }
 file{ path = "maps/dungeons/2/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/3", author = "The Unknown", }
 file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/secret/1f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/secret/1f.lua", author = "The Unknown", }
@@ -2236,8 +2232,6 @@ file{ path = "maps/inside/houses/north_west_castle/red_house.dat", author = "The
 file{ path = "maps/inside/houses/north_west_castle/red_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/north_west_castle/treasure_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/south_coast/lighthouse_1f.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/south_coast/lighthouse_1f.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/forest_hideout.dat", author = "The Unknown", }
@@ -2252,6 +2246,10 @@ file{ path = "maps/inside/houses/zora_village/zora_king.dat", author = "The Unkn
 file{ path = "maps/inside/houses/zora_village/zora_king.lua", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/0f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/0f.lua", author = "The Unknown", }
+file{ path = "maps/inside/shrines/lighthouse/1f.dat", author = "The Unknown", }
+file{ path = "maps/inside/shrines/lighthouse/1f.lua", author = "The Unknown", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "LinkFF", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "LinkFF", }
 file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "The Unknown", }
 file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "The Unknown", }
 file{ path = "maps/out/a1.dat", author = "The Unknown", }
@@ -2320,8 +2318,6 @@ file{ path = "maps/out/l7.dat", author = "The Unknown", }
 file{ path = "maps/out/l8.dat", author = "The Unknown", }
 file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
 file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
-file{ path = "maps/sanctuaries/shibo_nayru/1f.dat", author = "Linkff", }
-file{ path = "maps/sanctuaries/shibo_nayru/1f.lua", author = "Linkff", }
 file{ path = "musics/inside/pop_estrgg.ogg", author = "Francis Mechner", }
 file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
