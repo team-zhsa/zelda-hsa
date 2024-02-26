@@ -1,17 +1,27 @@
 local item = ...
 
-function item:on_obtaining(variant, savegame_variable)
-
-  local pains_au_chocolat_counter = self:get_game():get_item("pains_au_chocolat_counter")
-  if pains_au_chocolat_counter:get_variant() == 0 then
-    pains_au_chocolat_counter:set_variant(1)
-  end
-
-  local amounts = {1, 3}
-  local amount = amounts[variant]
-  if amount == nil then
-    error("Invalid variant '" .. variant .. "' for item 'rupee'")
-  end
-  pains_au_chocolat_counter:add_amount(amount)
+function item:on_created()
+  self:set_savegame_variable("possession_fish")
+  self:set_amount_savegame_variable("amount_fish")
+  self:set_brandish_when_picked(false)
+  self:set_sound_when_picked("common/get_small_item1")
+  self:set_sound_when_brandished("common/chest_minor_item")
+  self:set_assignable(true)
+  self:set_max_amount(256)
 end
 
+function item:on_using()
+
+  if self:get_amount() == 0 then
+    sol.audio.play_sound("wrong")
+  else
+    self:remove_amount(1)
+    self:get_game():add_life(6)
+  end
+  self:set_finished()
+end
+
+function item:on_obtaining(variant, savegame_variable)
+
+  self:add_amount(1)
+end

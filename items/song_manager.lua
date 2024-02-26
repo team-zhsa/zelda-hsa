@@ -42,7 +42,7 @@ function config:create(item, properties)
   					item:set_finished()
 					end
 				end)
-			end			
+			end
   	end)
 	end
 
