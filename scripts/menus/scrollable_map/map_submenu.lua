@@ -175,7 +175,7 @@ function submenu:on_command_pressed(command)
   end
 
   if self.save_dialog_state == 0 then
-    -- The save dialog is not shown
+--[[     -- The save dialog is not shown
     if command == "attack" then
       sol.audio.play_sound("common/dialog/message_end")
       self.save_dialog_state = 1
@@ -188,7 +188,7 @@ function submenu:on_command_pressed(command)
       self.attack_command_effect_saved = self.game:get_custom_command_effect("attack")
       self.game:set_custom_command_effect("attack", "validate")
       handled = true
-    end
+    end ]]
   else
     -- The save dialog is visible.
     if command ~= "pause" then

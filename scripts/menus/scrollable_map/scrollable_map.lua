@@ -477,7 +477,7 @@ function map_submenu:draw_dungeon_floors(dst_surface)
   local width, height = dst_surface:get_size()
   local center_x, center_y = width / 2, height / 2
   local src_x = 96
-  local src_y = (15 - self.highest_floor_displayed) * 12
+  local src_y = (22 - self.highest_floor_displayed) * 12
   local src_width = 32
   local src_height = self.nb_floors_displayed * 12 + 1
   local dst_x = center_x - 84
@@ -489,7 +489,7 @@ function map_submenu:draw_dungeon_floors(dst_surface)
 
   -- Draw the current floor with other colors.
   src_x = 64
-  src_y = (15 - self.selected_floor) * 12
+  src_y = (22 - self.selected_floor) * 12
   src_height = 13
   dst_y = old_dst_y + (self.highest_floor_displayed - self.selected_floor) * 12
   self.dungeon_floors_img:draw_region(src_x, src_y, src_width, src_height,

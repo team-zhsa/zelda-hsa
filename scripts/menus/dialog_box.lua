@@ -175,7 +175,8 @@ local function initialise_dialog_box_features(game)
 		-- Determine the position of the dialog box on the screen.
 		local map = game:get_map()
 		local camera_x, camera_y, camera_width, camera_height = map:get_camera():get_bounding_box()
-
+		local hero = map:get_entity("hero")
+		hero:set_animation("stopped")
 		local top = false
 		if self.vertical_position == "top" then
 			top = true

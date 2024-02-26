@@ -77,7 +77,7 @@ function rupees_builder:new(game, config)
       rupees.digits_text:set_font("white_digits")
     end
     rupees.digits_text:set_text(rupees.money_displayed)
-    rupees.digits_text:draw(rupees.surface, 16, 5)
+    rupees.digits_text:draw(rupees.surface, 16, 6)
   end
 
   function rupees:get_surface()

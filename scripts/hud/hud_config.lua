@@ -30,7 +30,7 @@ local hud_config = {
   -- Rupee counter.
   {
     menu_script = "scripts/hud/rupees",
-    x = 8,
+    x = 6,
     y = -20,
   },
 
@@ -44,14 +44,14 @@ local hud_config = {
   -- Small key counter.
   {
     menu_script = "scripts/hud/small_keys",
-    x = 8,
+    x = 6,
     y = -32,
   },
 
   -- Floor view.
   {
     menu_script = "scripts/hud/floor",
-    x = 5,
+    x = 6,
     y = 70,
   },
 
@@ -88,7 +88,7 @@ local hud_config = {
   -- Action icon.
   {
     menu_script = "scripts/hud/action_icon",
-    x = -145,
+    x = -145 + 24,
     y = 20,
   },
 

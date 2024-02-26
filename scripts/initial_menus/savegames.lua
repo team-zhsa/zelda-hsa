@@ -149,7 +149,7 @@ function savegame_menu:draw_savegame(slot_index)
   local slot = self.slots[slot_index]
   self.save_container_img:draw(self.surface, 57, 53 + slot_index * 27)
   slot.player_name_text:draw(self.surface, 87, 66 + slot_index * 27)
-
+  slot.time_saved_text:draw(self.surface, 136, 77 + slot_index * 27)
   if slot.hearts_view ~= nil then
     slot.hearts_view:set_dst_position(136, 56 + slot_index * 27)
     slot.hearts_view:on_draw(self.surface)
@@ -203,7 +203,10 @@ function savegame_menu:read_savegames()
     slot.file_name = "save" .. i .. ".dat"
     slot.savegame = game_manager:create(slot.file_name)
     slot.number_img = sol.surface.create("menus/savegames/save" .. i .. ".png")
-
+    slot.time_saved_text = sol.text_surface.create{
+      font = "04b03",
+      font_size = font_size,
+    }
     slot.player_name_text = sol.text_surface.create{
       font = font,
       font_size = font_size,
@@ -211,7 +214,7 @@ function savegame_menu:read_savegames()
     if sol.game.exists(slot.file_name) then
       -- Existing file.
       slot.player_name_text:set_text(slot.savegame:get_value("player_name"))
-
+      slot.time_saved_text:set_text(slot.savegame:get_value("time_saved"))
       -- Hearts.
       local hearts_class = require("scripts/hud/hearts")
       slot.hearts_view = hearts_class:new(slot.savegame)
