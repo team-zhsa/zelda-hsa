@@ -156,8 +156,8 @@ function parchment:initialise()
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     text = parchment.text_line_1,
-    font = "capital",
-    font_size = menu_font_size,
+    font = "alttp_ttf",
+    font_size = 8,
     color = text_line_1_color,
   }
   text_line_surface_1:set_xy(parchment.surface_w / 2, 13)
