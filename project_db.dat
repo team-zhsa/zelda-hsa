@@ -254,7 +254,7 @@ map{ id = "out/e9", description = "E9 (Sea)" }
 map{ id = "out/f1", description = "F1 (Death Mountain, Dodongo's Cavern)" }
 map{ id = "out/f2", description = "F2 (Hyrule Field)" }
 map{ id = "out/f3", description = "F3 (North West Castle)" }
-map{ id = "out/f4", description = "F4 (Hyrule Town)" }
+map{ id = "out/f4", description = "F4 (Castle Town)" }
 map{ id = "out/f5", description = "F5 (Hyrule Field)" }
 map{ id = "out/f6", description = "F6 (Hyrule Field)" }
 map{ id = "out/f7", description = "F7 (Great Swamp)" }
@@ -278,7 +278,7 @@ map{ id = "out/h6", description = "H6 (Flower house)" }
 map{ id = "out/h7", description = "H7 (Miracles Coast)" }
 map{ id = "out/h8", description = "H8 (Sea)" }
 map{ id = "out/h9", description = "H9 (Sea)" }
-map{ id = "out/i1", description = "I1 (Snowpeaks, Ice Temple)" }
+map{ id = "out/i1", description = "I1 (Snowpeaks, Ice Temple) tile ladder snow appears after torch lit" }
 map{ id = "out/i2", description = "I2 (Zora Forest)" }
 map{ id = "out/i3", description = "I3 (Cordinia Town)" }
 map{ id = "out/i4", description = "I4 (Haunted Forest)" }
@@ -805,9 +805,9 @@ sprite{ id = "entities/grounds/weak_floor_light_1", description = "Light weak fl
 sprite{ id = "entities/grounds/weak_floor_light_2", description = "Light weak floor 2" }
 sprite{ id = "entities/grounds/weak_floor_light_3", description = "Light weak floor 3" }
 sprite{ id = "entities/grounds/weak_floor_light_4", description = "Light weak floor 4" }
-sprite{ id = "entities/hammer_stake_brown", description = "Hammer stake brown" }
-sprite{ id = "entities/hammer_stake_dark", description = "Hammer stake (dark)" }
-sprite{ id = "entities/hammer_stake_green", description = "Hammer stake green" }
+sprite{ id = "entities/hammer_stake_brown", description = "Hammer stake (Brown)" }
+sprite{ id = "entities/hammer_stake_dark", description = "Hammer stake (Dark World)" }
+sprite{ id = "entities/hammer_stake_green", description = "Hammer stake (Green)" }
 sprite{ id = "entities/hammer_stake_transparent", description = "Hammer Stake (Transparent)" }
 sprite{ id = "entities/handle", description = "Handle" }
 sprite{ id = "entities/handle_base", description = "Handle base" }
@@ -1133,7 +1133,7 @@ sprite{ id = "hud/magic_bar", description = "Magic bar" }
 sprite{ id = "hud/pause_icon_flip", description = "Pause icon" }
 sprite{ id = "hud/piece_of_heart_icon", description = "hud/piece_of_heart_icon" }
 sprite{ id = "hud/sword_icon_flip", description = "Sword icon" }
-sprite{ id = "hud/temperature", description = "Temperature HUD" }
+sprite{ id = "hud/weather", description = "Weather icons" }
 sprite{ id = "maps/a2", description = "Zora" }
 sprite{ id = "maps/a4", description = "Map ALTTP" }
 sprite{ id = "maps/alttp", description = "ALTTP map" }
@@ -1148,18 +1148,20 @@ sprite{ id = "maps/room_layout", description = "Room layout for dungeons" }
 sprite{ id = "maps/screen_size", description = "Screen size" }
 sprite{ id = "maps/underwater", description = "Underwater" }
 sprite{ id = "menus/arrow", description = "Arrow" }
-sprite{ id = "menus/dungeon_maps/map_1", description = "Map 1" }
-sprite{ id = "menus/dungeon_maps/map_2", description = "Map 2 " }
-sprite{ id = "menus/dungeon_maps/map_3", description = "Map 3" }
+sprite{ id = "menus/map/dungeon_maps/map_1", description = "Map 1" }
+sprite{ id = "menus/map/dungeon_maps/map_2", description = "Map 2" }
+sprite{ id = "menus/map/dungeon_maps/map_3", description = "Map 3" }
 sprite{ id = "menus/map/hero_head", description = "Hero head" }
 sprite{ id = "menus/map/hero_point", description = "Hero point" }
 sprite{ id = "menus/map/map_waypoint", description = "Map waypoint cross" }
 sprite{ id = "menus/map/pause_hyrule_world_map", description = "World map sprite (for use in the prologue)" }
 sprite{ id = "menus/parchment/parchment_boss", description = "Parchment to display boss name" }
 sprite{ id = "menus/parchment/parchment_default", description = "Parchment to display info" }
+sprite{ id = "menus/parchment/parchment_quest", description = "Parchment (quest)" }
 sprite{ id = "menus/parchment/parchment_shadow", description = "Parchment shadow" }
 sprite{ id = "menus/pause/arrow", description = "Arrow" }
 sprite{ id = "menus/pause/cursor", description = "Cursor" }
+sprite{ id = "menus/pause/dialog_cursor", description = "menus/pause/dialog_cursor" }
 sprite{ id = "menus/pause/map/dungeon/boss", description = "Boss icon" }
 sprite{ id = "menus/pause/map/dungeon/hero_head", description = "Hero head" }
 sprite{ id = "menus/pause/map/dungeon/hero_point", description = "Hero point" }
@@ -1167,8 +1169,11 @@ sprite{ id = "menus/pause/map/world/world_map_cursor", description = "World map 
 sprite{ id = "menus/pause/map/world/world_map_hero", description = "World map hero head" }
 sprite{ id = "menus/pause/options/command_cursor", description = "Command cursor" }
 sprite{ id = "menus/pause/options/cursor", description = "Options cursor" }
+sprite{ id = "menus/pause/options_cursor", description = "menus/pause/options_cursor" }
 sprite{ id = "menus/pause/pause_cursor", description = "Pause cursor" }
+sprite{ id = "menus/pause/pause_menu_options_command_cursor", description = "menus/pause/pause_menu_options_command_cursor" }
 sprite{ id = "menus/pause/pause_save_dialog", description = "menus/pause/pause_save_dialog" }
+sprite{ id = "menus/savegames/cursor", description = "Cursor" }
 sprite{ id = "menus/solarus_logo", description = "Solarus logo" }
 sprite{ id = "menus/team_logo", description = "Solarus Team logo" }
 sprite{ id = "menus/title_screen/logo_zeldahsa", description = "ZeldaHSA logo" }
@@ -2407,12 +2412,29 @@ file{ path = "shaders/starman.dat", author = "PhoenixII54", }
 file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
+file{ path = "sprites/enemies/outside/armos.png", author = "The Unknown", }
+file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/hinox_blue.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_baby.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_baby_red.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_black.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_black.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_blue.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_platine.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_silver.dat", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/moblin_black.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/moblin_green.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "LinkFF", }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
 file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hud/temperature.dat", author = "The Unknown", }
+file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_default.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
