@@ -283,8 +283,8 @@ function submenu:draw_background(dst_surface)
 
 	-- Draw the menu GUI window and the title (in the correct language)
 	local submenu_index = self.game:get_value("pause_last_submenu")
-	local submenu_background_column = ((submenu_index - 1) % 4)
-	local submenu_background_row = math.ceil(submenu_index / 4) - 1
+	local submenu_background_column = ((submenu_index - 1) % 3)
+	local submenu_background_row = math.ceil(submenu_index / 3) - 1
 
 	self.background_surfaces:draw_region(
 			320 * submenu_background_column, 240 * submenu_background_row,           -- region x, y

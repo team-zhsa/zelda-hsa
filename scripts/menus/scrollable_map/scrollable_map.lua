@@ -7,6 +7,8 @@ local map_shown = false
 local waypoint_positions = require("scripts/menus/scrollable_map/waypoint_config")
 local map_areas_config = require("scripts/menus/scrollable_map/map_areas_config")
 
+-- TODO add a zoom option for the outside map
+
 function map_submenu:on_started()
   submenu.on_started(self)
 	self.game:set_hud_enabled(false)
@@ -122,7 +124,7 @@ function map_submenu:on_started()
     -- Minimap.
     self.dungeon_map_img = sol.surface.create(123, 119)
     self.dungeon_map_spr = sol.sprite.create(
-      "menus/dungeon_maps/map_" .. self.dungeon_index)
+      "menus/map/dungeon_maps/map_" .. self.dungeon_index)
     self:load_dungeon_map_image()
   end
 
@@ -153,7 +155,13 @@ function map_submenu:on_command_pressed(command)
 		if not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then
 			if self.world_minimap_visible_xy.x > 0 then
 				local angle
-				angle = math.pi
+        if self.game:is_command_pressed("up") then
+          angle = 3*math.pi/4
+        elseif self.game:is_command_pressed("down") then
+          angle = 5*math.pi/4
+        else
+          angle = math.pi
+        end
 				if self.world_minimap_movement ~= nil then
         	self.world_minimap_movement:stop()
         end
@@ -163,15 +171,18 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
          function movement:on_position_changed()
+
            if not submenu.game:is_command_pressed("left") then
-             self:stop()
-             submenu.world_minimap_movement = nil
+            self:stop()
+            submenu.world_minimap_movement = nil
            end
             
-          if submenu.world_minimap_visible_xy.x <= 0 then
-						self:stop()
-	        	submenu.world_minimap_movement = nil
-          end
+            if (submenu.world_minimap_visible_xy.y <= 0
+            or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 160 + 64)
+            or submenu.world_minimap_visible_xy.x <= 0 then
+              self:stop()
+              submenu.world_minimap_movement = nil
+            end
           end
           movement:start(self.world_minimap_visible_xy)
           self.world_minimap_movement = movement
@@ -187,8 +198,13 @@ function map_submenu:on_command_pressed(command)
 		if not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then				
       if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width + 64 then
         local angle
-        angle = 0
-
+        if self.game:is_command_pressed("up") then
+          angle = 1*math.pi/4
+        elseif self.game:is_command_pressed("down") then
+          angle = 7*math.pi/4
+        else
+          angle = 0
+        end
         if self.world_minimap_movement ~= nil then
           self.world_minimap_movement:stop()
         end
@@ -198,12 +214,15 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
           function movement:on_position_changed()
+
             if not submenu.game:is_command_pressed("right") then
               self:stop()
               submenu.world_minimap_movement = nil
             end
             
-            if submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 200 + 64 then
+            if (submenu.world_minimap_visible_xy.y <= 0
+            or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 160 + 64) or
+            submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 200 + 64 then
               self:stop()
               submenu.world_minimap_movement = nil
             end
@@ -222,9 +241,21 @@ function map_submenu:on_command_pressed(command)
             (command == "down" and self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height + 64) then
           local angle
           if command == "up" then
-            angle = math.pi / 2
+            if self.game:is_command_pressed("right") then
+              angle = 1*math.pi/4
+            elseif self.game:is_command_pressed("left") then
+              angle = 3*math.pi/4
+            else
+              angle = math.pi / 2
+            end
           else
-            angle = 3 * math.pi / 2
+            if self.game:is_command_pressed("right") then
+              angle = 7*math.pi/4
+            elseif self.game:is_command_pressed("left") then
+              angle = 5*math.pi/4
+            else
+              angle = 3*math.pi / 2
+            end
           end
           
           if self.world_minimap_movement ~= nil then
@@ -237,14 +268,16 @@ function map_submenu:on_command_pressed(command)
           local submenu = self
           
           function movement:on_position_changed()
-            if not submenu.game:is_command_pressed("up")
-                and not submenu.game:is_command_pressed("down") then
+            if (not submenu.game:is_command_pressed("up") and not submenu.game:is_command_pressed("down")
+                and not submenu.game:is_command_pressed("left") and not submenu.game:is_command_pressed("right")) then
               self:stop()
               submenu.world_minimap_movement = nil
             end
             
-            if (command == "up" and submenu.world_minimap_visible_xy.y <= 0) or
-                (command == "down" and submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 160 + 64) then
+            if (submenu.game:is_command_pressed("left") or submenu.game:is_command_pressed("right"))
+            or (submenu.game:is_command_pressed("up") or submenu.game:is_command_pressed("down"))
+            and (submenu.world_minimap_visible_xy.y <= 0
+            or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 160 + 64) then
               self:stop()
               submenu.world_minimap_movement = nil
             end
