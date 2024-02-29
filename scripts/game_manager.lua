@@ -93,17 +93,12 @@ function game_manager:create(file)
     game.magic_decreasing = magic_decreasing
   end
 
-	local alpha_warn = sol.surface.create("hud/version.png")
-
-
   return game
 end
-
 
   -- Show a dialog when the player cannot lift them.
   local destructible_meta = sol.main.get_metatable("destructible")
   -- destructible_meta represents the shared behavior of all destructible objects.
-
 
   function destructible_meta:on_looked()
 
@@ -118,6 +113,5 @@ end
       end
     end
   end
-
 
 return game_manager
