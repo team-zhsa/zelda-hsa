@@ -47,7 +47,7 @@ distort_map:set_shader(distort_shader)
 tmp:set_shader(shader)
 local ew,eh = effect:get_size()
 
-local clouds_speed = 0.005;
+local clouds_speed = 0.007;
 local crw,crh = clouds:get_size()
 
 
@@ -94,7 +94,7 @@ function fsa:render_reflection(map)
 		enemy = true,
 		npc = true
 	}
-	
+
 	-- for each enemy in map
 	for ent in map:get_entities_in_rectangle(cx, cy, cw, ch) do --TODO check if margins are necessary
 		local filter = reflection_filter[ent:get_type()]
