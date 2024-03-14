@@ -23,7 +23,7 @@ local hud_config = {
   {
     menu_script = "scripts/hud/magic_bar",
     x = 6,
-    y = 24,
+    y = 8,
   },
 
 
