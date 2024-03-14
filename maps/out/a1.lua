@@ -21,7 +21,7 @@ map:register_event("on_started", function()
 	game:show_map_name("ruins")
 	map:set_digging_allowed(true)
     -- Music
-  field_music_manager:init(map)
+  --field_music_manager:init(map)
 
 end)
 
@@ -55,7 +55,7 @@ function owl_dialog()
       owl_movement_leave:set_speed(60)
       owl_movement_leave:start(owl_4, function()
         map:set_cinematic_mode(false, options)
-        --field_music_manager:init(map)
+        ----field_music_manager:init(map)
         hero:unfreeze()
       end) 
     end

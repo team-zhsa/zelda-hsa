@@ -40,9 +40,6 @@ function game_manager:create(file)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(1000)
     print("Main quest step start:"..game:get_value("main_quest_step"))
-    if game:get_value("savegame_version") ~= sol.main.get_quest_version() then
-      print("The savegame is outdated!")
-    end
 	end)
 
 	game:register_event("on_finished", function()

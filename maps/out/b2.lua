@@ -15,7 +15,7 @@ local num_dialogue = 0
 
 map:register_event("on_draw", function(map)
 	-- Music
-	field_music_manager:init(map)
+	--field_music_manager:init(map)
 	
 end)
 

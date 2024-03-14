@@ -21,6 +21,6 @@ map:register_event("on_started", function()
 	game:show_map_name("north_west_castle")
 	map:set_digging_allowed(true)
     -- Music
-  field_music_manager:init(map)
+  --field_music_manager:init(map)
 
 end)
