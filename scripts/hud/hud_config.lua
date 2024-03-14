@@ -34,11 +34,17 @@ local hud_config = {
     y = -20,
   },
 
-  -- Clock icon.
+  --[[ Clock icon.
   {
     menu_script = "scripts/hud/clock",
     x = -30,
     y = -30,
+  },--]]
+
+  {
+    menu_script = "scripts/hud/new_clock",
+    x = -30,
+    y = -6,
   },
 
   -- Small key counter.

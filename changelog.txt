@@ -420,6 +420,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Updated the copyright year to 2024 in the dialogues.
 	CHG: Changed the parchment font.
 	CHG: Changed the dungeon parchment dialogues in order to show the dungeon's name as the title.
+	CHG: Moved the magic bar up according to the number of available rows of hearts (#197).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -459,6 +460,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed piece of hearts being misaligned in the quest status menu.
 	FIX: Fixed a typo in the Marathon Man dialogue (#190).
 	FIX: Fixed a typo in a Blacksmith dialogue (#201).
+	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -472,6 +474,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed unused savegames menu sprite files.
 	REM: Removed LA dialogues.
 	REM: Removed unused maps.
+	REM: Removed the map from the inventory menu (#202).
+	REM: Removed unused sprite files.
 	TDO: Make bombs explode even if Link is carrying them (#183).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
@@ -491,11 +495,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Merge countable items into a single item file (#189).
 	TDO: Remove pre-alpha screenshots from the sprites folder (#195).
 	TDO: Add a quick swap feature (#196).
-	TDO: Move the magic bar up if only one row of hearts is available (#197).
 	TDO: Fix enemies not going down one layer when there's no ground (#198).
 	TDO: Overhaul the game over menu (#199).
 	TDO: Create a new clock and weather HUD (#200).
-	TDO: Move the pause menu map to the scrollable map menu (#202).
 	TDO: Fix minimap border glitches when diagonal scrolling.
 
 Alpha 1.17.1 (//23) "Needlefish Update":
