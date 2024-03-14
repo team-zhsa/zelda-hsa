@@ -243,7 +243,7 @@ function submenu:on_command_pressed(command)
 				-- After "Do you want to save?".
 				self.save_dialog_state = 2
 				if self.save_dialog_choice == 0 then
-					self.game:set_value("savegame_version", sol.main.get_quest_version())
+					self.game:set_value("savegame_version", "1.17")
 					self.game:set_value("time_saved", os.date("%d/%m/%Y %H:%M", os.time()))
 					self.game:save()
 					sol.audio.play_sound("ok")
