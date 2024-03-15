@@ -16,7 +16,7 @@ local field_music = require("scripts/maps/hyrule_field")
 local effect_manager = require('scripts/maps/effect_manager')
 local gb = require('scripts/maps/gb_effect')
 local fsa = require('scripts/maps/fsa_effect')
-time_flow = 1000
+time_flow = 500
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
@@ -38,7 +38,7 @@ function game_manager:create(file)
     game:set_value("mode", "fsa")
 		game:set_world_rain_mode("outside_world", nil)
 		game:set_world_snow_mode("outside_world", nil)
-		game:set_time_flow(1000)
+		game:set_time_flow(500)
     print("Main quest step start:"..game:get_value("main_quest_step"))
 	end)
 

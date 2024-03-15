@@ -82,7 +82,7 @@ explosion:add_collision_test("sprite", function(explosion, entity)
     end
 
   elseif type == "door" then
-    if string.find(entity:get_name(), "weak") then -- Workaround : No fucking way to know if the door can be opened with an explosion, hardcode the name.
+    if string.find(entity:get_sprite():get_animation_set(), "weak") or string.find(entity:get_sprite():get_animation_set(), "rock0") then -- Workaround : No fucking way to know if the door can be opened with an explosion, hardcode the name.
       entity:open()
     end
 

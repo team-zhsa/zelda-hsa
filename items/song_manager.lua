@@ -8,7 +8,7 @@ function config:create(item, properties)
   	self:set_assignable(true)
 	end
 
-	function item:playing_song(music)
+	function item:play_song(music)
 		local game = self:get_game()
     local map = self:get_map()
   	local map = game:get_map()
@@ -72,7 +72,7 @@ function config:create(item, properties)
   end
 
 	function item:on_using()
-  	item:playing_song(music)
+  	item:play_song(music)
   	self:set_finished()
 	end
 end

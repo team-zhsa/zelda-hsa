@@ -52,9 +52,13 @@ function tone_manager:create(game)
   end
   
   function game:set_time(hour)  
-    if (hour >= 7 and hour < 17) then
+    if (hour <= 6 and hour < 7) then
+      game:set_value("time_of_day", "dawn")
+    elseif (hour <= 7 and hour < 17) then
       game:set_value("time_of_day", "day")
-    elseif hour >= 20 or hour < 5 then
+    elseif (hour >= 17 and hour < 19) then
+      game:set_value("time_of_day", "sunset")
+    elseif (hour >= 19 and hour < 6) then
       game:set_value("time_of_day", "night")
     end
     
@@ -247,7 +251,7 @@ function tone_manager:create(game)
   	  self:set_new_tone(150, 150, 255)
   	end
     
-    d = 1800
+    d = 200
   end
   
   function tone_menu:on_finished()
