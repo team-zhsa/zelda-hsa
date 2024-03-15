@@ -26,8 +26,12 @@ map:register_event("on_started", function(map, destination)
 	map:set_digging_allowed(true)
 
   npc_impa:set_enabled(false)
-  if game:is_step_done("sahasrahla_lost_woods_map") then
-    town_gate:set_enabled(false)
+  if game:get_time_of_day() == "day" then
+    if game:is_step_done("sahasrahla_lost_woods_map") then
+      day_town_gate:set_enabled(false)
+    else day_town_gate:set_enabled(true)
+    end
+  else day_town_gate:set_enabled(true)
   end
 
   for npc in map:get_entities("npc_soldier_") do
