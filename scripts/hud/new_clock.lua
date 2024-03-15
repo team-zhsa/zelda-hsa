@@ -19,6 +19,11 @@ function new_clock_builder:new(game, config)
 	new_clock.time_of_day_sprite = sol.sprite.create("hud/new_clock")
 	new_clock.time_of_day_sprite:set_animation("time_of_day")
 	new_clock.time_displayed = game:get_value("hour_of_day")
+	if game:get_value("time_of_day") ~= "night" then
+		new_clock.time_of_day_sprite:set_direction(1)
+	else
+		new_clock.time_of_day_sprite:set_direction(3)
+	end
 	new_clock.time_text = sol.text_surface.create({font = "white_digits", horizontal_alignment = "right", text = new_clock.time_displayed})
 	new_clock.max_magic_displayed = 0
 
@@ -40,7 +45,7 @@ function new_clock_builder:new(game, config)
 				
 			end
 			new_clock.time_text:set_text(new_clock.time_displayed)
-			if game:get_value("time_of_day") == "day" then
+			if game:get_value("time_of_day") ~= "night" then
 				new_clock.time_of_day_sprite:set_direction(1)
 			else
 				new_clock.time_of_day_sprite:set_direction(3)
