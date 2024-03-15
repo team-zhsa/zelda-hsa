@@ -20,12 +20,12 @@ local item_names_static_left = {
 	"pendant_3",
 }
 local item_names_static_right = {
-	"monster_gut_counter",
-	"monster_claw_counter",
-	"monster_horn_counter",
-	"monster_tail_counter",
-	"goron_amber_counter",
-	"divine_ore_counter",
+	"monster_gut",
+	"monster_claw",
+	"monster_horn",
+	"monster_tail",
+	"goron_amber",
+	"divine_ore",
 }
 
 local item_names_static_bottom = {

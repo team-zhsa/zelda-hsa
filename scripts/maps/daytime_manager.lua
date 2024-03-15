@@ -344,7 +344,7 @@ function tone_manager:create(game)
           end
         end
         if game:has_item("lamp") and game:get_magic() > 0 then
-          if game:get_time_of_day() == "night" or map:get_id() == "202" then
+          if game:get_time_of_day() == "night" then
             effects.torch_hero:draw(light, x - cam_x - 64, y - cam_y - 68)
           end
       	end

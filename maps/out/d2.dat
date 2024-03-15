@@ -28933,7 +28933,7 @@ teletransporter{
 teletransporter{
   layer = 0,
   x = 0,
-  y = 1456,
+  y = 1440,
   width = 1280,
   height = 16,
   transition = "scrolling",
@@ -28961,6 +28961,45 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/d1",
   destination = "_side",
+}
+
+wall{
+  layer = 0,
+  x = 720,
+  y = 224,
+  width = 32,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 1056,
+  y = 112,
+  width = 16,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 1184,
+  y = 112,
+  width = 16,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
 }
 
 tile{
