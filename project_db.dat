@@ -754,6 +754,7 @@ sprite{ id = "entities/entrance_dungeon_5", description = "Entrance dungeon 5" }
 sprite{ id = "entities/entrance_dungeon_7", description = "Entrance dungeon 7" }
 sprite{ id = "entities/entrance_dungeon_7_door", description = "Entrance dungeon 7 door" }
 sprite{ id = "entities/explosion", description = "Explosion" }
+sprite{ id = "entities/fairy", description = "Fairy" }
 sprite{ id = "entities/fire", description = "Fire" }
 sprite{ id = "entities/fire_mask", description = "Fire mask" }
 sprite{ id = "entities/fish_manbo", description = "Fish Manbo" }
@@ -1158,6 +1159,7 @@ sprite{ id = "menus/map/map_waypoint", description = "Map waypoint cross" }
 sprite{ id = "menus/map/pause_hyrule_world_map", description = "World map sprite (for use in the prologue)" }
 sprite{ id = "menus/parchment/parchment_boss", description = "Parchment to display boss name" }
 sprite{ id = "menus/parchment/parchment_default", description = "Parchment to display info" }
+sprite{ id = "menus/parchment/parchment_grey", description = "Parchment (grey)" }
 sprite{ id = "menus/parchment/parchment_quest", description = "Parchment (quest)" }
 sprite{ id = "menus/parchment/parchment_shadow", description = "Parchment shadow" }
 sprite{ id = "menus/pause/arrow", description = "Arrow" }
@@ -1609,6 +1611,7 @@ sound{ id = "objects/e_bush", description = "Bush" }
 sound{ id = "objects/e_pot_shatter", description = "Shattering Pot" }
 sound{ id = "objects/e_rock_1_lift", description = "Rock" }
 sound{ id = "objects/e_skull_shatter", description = "Shattering Skull" }
+sound{ id = "objects/fairy/interact", description = "Fairy" }
 sound{ id = "objects/heart/heart", description = "Heart" }
 sound{ id = "objects/on_switch", description = "Switch (On/Off)" }
 sound{ id = "objects/rupee/rupee", description = "Rupee" }
@@ -2400,6 +2403,7 @@ file{ path = "sprites/enemies/outside/moblin_green.png", author = "LinkFF", }
 file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "LinkFF", }
 file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "LinkFF", }
 file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "LinkFF", }
+file{ path = "sprites/entities/fairy.dat", author = "ALTTP", }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
 file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }

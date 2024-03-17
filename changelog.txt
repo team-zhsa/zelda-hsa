@@ -385,6 +385,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added the team's logo and a copyright notice in the initial menus (#191).
 	ADD: Added NPC meta functions from Mercuris' Chest.
 	ADD: Added boss names for their parchment.
+	ADD: Added a new clock HUD (#200).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -421,6 +422,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Changed the parchment font.
 	CHG: Changed the dungeon parchment dialogues in order to show the dungeon's name as the title.
 	CHG: Moved the magic bar up according to the number of available rows of hearts (#197).
+	CHG: Moved the radial fading animation when launching a game from "dungeons.lua" to "game_manger.lua".
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -461,6 +463,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed a typo in the Marathon Man dialogue (#190).
 	FIX: Fixed a typo in a Blacksmith dialogue (#201).
 	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
+	FIX: Fixed fairies not reviving the player (#204).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -497,7 +500,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Add a quick swap feature (#196).
 	TDO: Fix enemies not going down one layer when there's no ground (#198).
 	TDO: Overhaul the game over menu (#199).
-	TDO: Create a new clock and weather HUD (#200).
 	TDO: Fix minimap border glitches when diagonal scrolling.
 
 Alpha 1.17.1 (//23) "Needlefish Update":

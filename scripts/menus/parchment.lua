@@ -134,6 +134,16 @@ function parchment:initialise()
     text_line_1_shadow_color = {46, 8, 0}
     text_line_2_color = {124, 57, 30}
     parchment.parchment_sprite = sol.sprite.create("menus/parchment/parchment_boss")
+  elseif parchment.type == "quest" then
+    text_line_1_stroke_color = {133, 96, 30}
+    text_line_1_shadow_color = {85, 20, 0}
+    text_line_2_color = {158, 117, 70}
+    parchment.parchment_sprite = sol.sprite.create("menus/parchment/parchment_quest")
+  elseif parchment.type == "grey" then
+    text_line_1_stroke_color = {133, 96, 30}
+    text_line_1_shadow_color = {85, 20, 0}
+    text_line_2_color = {158, 117, 70}
+    parchment.parchment_sprite = sol.sprite.create("menus/parchment/parchment_grey")
   else
     text_line_1_stroke_color = {133, 96, 30}
     text_line_1_shadow_color = {85, 20, 0}
