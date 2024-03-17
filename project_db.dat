@@ -652,18 +652,18 @@ sprite{ id = "entities/crystal", description = "Crystal" }
 sprite{ id = "entities/crystal_block", description = "Crystal block" }
 sprite{ id = "entities/destination", description = "Destination of teletransporter" }
 sprite{ id = "entities/destructibles/bomb_flower", description = "Bomb Flower" }
-sprite{ id = "entities/destructibles/pot01", description = "Pot 1" }
-sprite{ id = "entities/destructibles/pot02", description = "Pot 2" }
-sprite{ id = "entities/destructibles/pot03", description = "Pot 3" }
-sprite{ id = "entities/destructibles/pot04", description = "Pot 4" }
-sprite{ id = "entities/destructibles/sign01", description = "Sign 1" }
-sprite{ id = "entities/destructibles/sign02", description = "Sign 2" }
-sprite{ id = "entities/destructibles/sign03", description = "Sign 3" }
-sprite{ id = "entities/destructibles/sign04", description = "Sign 4" }
-sprite{ id = "entities/destructibles/skull01", description = "Skull 01" }
-sprite{ id = "entities/destructibles/skull02", description = "Skull 02" }
-sprite{ id = "entities/destructibles/skull03", description = "Skull 03" }
-sprite{ id = "entities/destructibles/skull04", description = "Skull 04" }
+sprite{ id = "entities/destructibles/pot01", description = "Pot 1 (Outside)" }
+sprite{ id = "entities/destructibles/pot02", description = "Pot 2 (Outside)" }
+sprite{ id = "entities/destructibles/pot03", description = "Pot 3 (Outside)" }
+sprite{ id = "entities/destructibles/pot04", description = "Pot 4 (Outside)" }
+sprite{ id = "entities/destructibles/sign01", description = "Sign 1 (Outside)" }
+sprite{ id = "entities/destructibles/sign02", description = "Sign 2 (Outside)" }
+sprite{ id = "entities/destructibles/sign03", description = "Sign 3 (Outside)" }
+sprite{ id = "entities/destructibles/sign04", description = "Sign 4 (Outside)" }
+sprite{ id = "entities/destructibles/skull01", description = "Skull 1 (Outside)" }
+sprite{ id = "entities/destructibles/skull02", description = "Skull 2 (Outside)" }
+sprite{ id = "entities/destructibles/skull03", description = "Skull 3 (Outside)" }
+sprite{ id = "entities/destructibles/skull04", description = "Skull 4 (Outside)" }
 sprite{ id = "entities/destructibles/vase", description = "Vase" }
 sprite{ id = "entities/destructibles/vase_skull", description = "Skull Vase" }
 sprite{ id = "entities/doors/inside/castle_lock", description = "Castle Lock" }
@@ -782,8 +782,8 @@ sprite{ id = "entities/graves/gravestone09", description = "Grave 09" }
 sprite{ id = "entities/graves/gravestone10", description = "Grave 10" }
 sprite{ id = "entities/graves/gravestone11", description = "Grave 11" }
 sprite{ id = "entities/graves/gravestone12", description = "Grave 12" }
-sprite{ id = "entities/gray_block", description = "Grey Block" }
 sprite{ id = "entities/green_cristal", description = "Green cristal" }
+sprite{ id = "entities/grey_block_unused", description = "Grey Block" }
 sprite{ id = "entities/ground_effects/grass", description = "ground_effects/leaves" }
 sprite{ id = "entities/ground_effects/sand", description = "Sand" }
 sprite{ id = "entities/ground_effects/walrus_diving_effect", description = "Walrus diving effect" }
@@ -897,15 +897,10 @@ sprite{ id = "entities/outside_ladder", description = "Outside ladder" }
 sprite{ id = "entities/owl", description = "Owl" }
 sprite{ id = "entities/owl_blue", description = "Owl blue" }
 sprite{ id = "entities/owl_out", description = "Owl out" }
-sprite{ id = "entities/palm", description = "Palm" }
-sprite{ id = "entities/palm_footer_brown", description = "Palm footer brown" }
-sprite{ id = "entities/palm_footer_green", description = "Palm footer green" }
-sprite{ id = "entities/palm_footer_yellow", description = "Palm footer yellow" }
 sprite{ id = "entities/pedestal", description = "Pedestal" }
 sprite{ id = "entities/pillar", description = "Pillar" }
 sprite{ id = "entities/pillar_base", description = "Pillar base" }
 sprite{ id = "entities/platform", description = "Platform" }
-sprite{ id = "entities/pot", description = "Pot" }
 sprite{ id = "entities/raft", description = "Raft" }
 sprite{ id = "entities/rain", description = "Rain" }
 sprite{ id = "entities/rockstacks/rockstack_bg1", description = "Rockstack Background 01" }
@@ -931,7 +926,6 @@ sprite{ id = "entities/shadows/owl", description = "Owl" }
 sprite{ id = "entities/shadows/pickable_flying", description = "Pickable flying" }
 sprite{ id = "entities/shadows/shadow", description = "Shadow" }
 sprite{ id = "entities/shield", description = "Shield" }
-sprite{ id = "entities/shop_office", description = "Shop office" }
 sprite{ id = "entities/shovel", description = "Shovel" }
 sprite{ id = "entities/sign", description = "Sign" }
 sprite{ id = "entities/skull_brown", description = "Skull brown" }
@@ -961,10 +955,6 @@ sprite{ id = "entities/statues/pillar", description = "Pillar" }
 sprite{ id = "entities/statues/statue_darknut", description = "Darknut statue" }
 sprite{ id = "entities/statues/statue_koopa", description = "Koopa statue" }
 sprite{ id = "entities/statues/statue_pig", description = "Pig statue" }
-sprite{ id = "entities/stone_large_white", description = "Large white stone" }
-sprite{ id = "entities/stone_small_black", description = "Small black stone" }
-sprite{ id = "entities/stone_small_brwon", description = "Stone small brown" }
-sprite{ id = "entities/stone_small_white", description = "Small white stone" }
 sprite{ id = "entities/stones/stone_black", description = "Black Stone" }
 sprite{ id = "entities/stones/stone_black_large", description = "Large Black Stone" }
 sprite{ id = "entities/stones/stone_black_skull", description = "Black Skull" }
@@ -1079,7 +1069,7 @@ sprite{ id = "entities/water_tree", description = "Water tree" }
 sprite{ id = "entities/water_tree_junction", description = "Water tree junction" }
 sprite{ id = "entities/whirlwind", description = "Whirlwind" }
 sprite{ id = "fogs/rain", description = "Rain" }
-sprite{ id = "ground_effects/fall_on_hole", description = "ground_effects/fall_on_hole" }
+sprite{ id = "ground_effects/fall_on_hole", description = "Fall in hole" }
 sprite{ id = "ground_effects/lava_splash", description = "ground_effects/lava_splash" }
 sprite{ id = "ground_effects/leaves", description = "ground_effects/leaves" }
 sprite{ id = "ground_effects/water", description = "Water" }
