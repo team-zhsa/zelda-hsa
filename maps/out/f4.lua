@@ -10,7 +10,6 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
-local field_music_manager = require("scripts/maps/field_music_manager")
 local num_dialogue = 0
 local white_surface = sol.surface.create(320, 256)
 white_surface:fill_color{255, 255, 255}
@@ -65,7 +64,9 @@ map:register_event("on_started", function(map, destination)
 
 end)
 
-
+npc_quay:register_event("on_interaction", function()
+--  game:start_quest("quay", true)
+end)
 
 -- Hyrule Castle barrier
 for switch in map:get_entities("switch_castle_barrier_") do

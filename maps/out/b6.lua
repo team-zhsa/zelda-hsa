@@ -9,12 +9,6 @@
 
 local map = ...
 local game = map:get_game()
-local field_music_manager = require("scripts/maps/field_music_manager")
-
-map:register_event("on_draw", function(map)
-  -- Music
-  --field_music_manager:init(map)
-end)
 
 -- Event called at initialization time, as soon as this map becomes is loaded.
 map:register_event("on_started", function()
