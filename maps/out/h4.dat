@@ -1598,6 +1598,23 @@ teletransporter{
   destination_map = "out/g4",
 }
 
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  properties = {
+    {
+      key = "effect",
+      value = "distorsion",
+    },
+  },
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/i4",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 584,

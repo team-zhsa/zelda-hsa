@@ -422,7 +422,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Changed the parchment font.
 	CHG: Changed the dungeon parchment dialogues in order to show the dungeon's name as the title.
 	CHG: Moved the magic bar up according to the number of available rows of hearts (#197).
-	CHG: Moved the radial fading animation when launching a game from "dungeons.lua" to "game_manger.lua".
+	CHG: Modifed "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	CHG: Moved the radial fading animation when launching a game from "dungeons" to "game_manager".
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -462,6 +463,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed piece of hearts being misaligned in the quest status menu.
 	FIX: Fixed a typo in the Marathon Man dialogue (#190).
 	FIX: Fixed a typo in a Blacksmith dialogue (#201).
+	FIX: Fixed the world map background not being loaded sometimes (#153).
 	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
 	FIX: Fixed fairies not reviving the player (#204).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
@@ -491,7 +493,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
-	TDO: Fix the world map background not being loaded sometimes (#153).
 	TDO: Map the missing caves (#151).
 	TDO: Finish realigning trees in the Hyrule Field (#96).
 	TDO: Rename some soldier enemies in order to make them appear during the game and not at the beginning (#97).
@@ -517,7 +518,6 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Change all the enemies in the Hyrule Field (#81).
 	TDO: Add a falling animation for enemies (#84).
 	TDO: Write the game's walkthrough (#85).
-	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
 	TDO: Improve the shield usability (#30).
 	TDO: Fix remaining wrong sprite palettes (#32).
 	TDO: Fix signs being readable after being cut (#34).
