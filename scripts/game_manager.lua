@@ -30,6 +30,7 @@ function game_manager:create(file)
   end
 
 	game:register_event("on_started", function()
+
 		tone = tone_manager:create(game)
 		condition_manager:initialise(game)
 		map_name:initialise(game)
@@ -40,6 +41,7 @@ function game_manager:create(file)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(500)
     print("Main quest step start:"..game:get_value("main_quest_step"))
+
 	end)
 
 	game:register_event("on_finished", function()
@@ -50,6 +52,21 @@ function game_manager:create(file)
 	game:register_event("on_map_changed", function()
 		tone:on_map_changed()
 	end)
+
+  game:register_event("on_world_changed", function()
+    local map = game:get_map()
+
+    if not game.teleport_in_progress then -- play custom transition at game startup
+      game:set_suspended(true)
+      local opening_transition = require("scripts/gfx_effects/radial_fade_out")
+      opening_transition.start_effect(map:get_camera():get_surface(), game, "out", nil, function()
+          game:set_suspended(false)
+          if map.do_after_transition then
+            map.do_after_transition()
+          end
+        end)
+    end
+  end)
 
   function game:get_player_name()
 
