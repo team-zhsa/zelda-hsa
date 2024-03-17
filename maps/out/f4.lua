@@ -23,7 +23,6 @@ end
 map:register_event("on_started", function(map, destination)
 	game:show_map_name("hyrule_town")
 	map:set_digging_allowed(true)
-
   npc_impa:set_enabled(false)
   if game:get_time_of_day() == "day" then
     if game:is_step_done("sahasrahla_lost_woods_map") then
