@@ -39,6 +39,8 @@ local function explode()
       {key = "explosive_type_5", value = "sensor"}
     }
   })
+  map:get_hero():unfreeze()
+  map:get_hero():set_animation("stopped")
   bomb:remove()
   audio_manager:play_sound("explosion")
 end
@@ -57,16 +59,16 @@ end
 
 -- Stop the exploding timer on carrying.
 bomb:register_event("on_carrying", function(bomb)
-  exploding_timer:stop()
+  --exploding_timer:stop()
   if blinking_timer then
-    blinking_timer:stop()
+  --  blinking_timer:stop()
   end
 end)
 
 -- Restart the bomb timer before exploding on thrown.
 bomb:register_event("on_thrown", function(bomb, direction)
 
-  start_countdown()
+  --start_countdown()
 end)
 
 -- Setup traversable rules and start the bomb timer before exploding.

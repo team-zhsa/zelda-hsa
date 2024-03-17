@@ -15,7 +15,7 @@ local audio_manager = require("scripts/audio_manager")
 
 -- Configuration variables.
 local explosed_entities = {}
-local damage_on_hero = tonumber(explosion:get_property("damage_on_hero")) or 2
+local damage_on_hero = 4 --tonumber(explosion:get_property("damage_on_hero")) or 2
 local explosive_types = {}
 for i = 1, 10 do
   local type = explosion:get_property("explosive_type_" .. i)
@@ -89,9 +89,9 @@ explosion:add_collision_test("sprite", function(explosion, entity)
   elseif type == "enemy" then
     entity:receive_attack_consequence("explosion", entity:get_attack_consequence("explosion"))
 
-  elseif type == "hero" and not entity:is_invincible() and not entity:is_blinking() then
+  elseif type == "hero" then--and not entity:is_invincible() and not entity:is_blinking() then
     entity:start_hurt(explosion, damage_on_hero)
-
+    print("a")
   else -- Else interact with any other type of entity if the on_explosion() method is registered.
     if entity.on_explosion then
       entity:on_explosion()
