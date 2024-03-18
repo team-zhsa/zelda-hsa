@@ -7581,6 +7581,132 @@ tile{
   pattern = "wall_border.corner.3-4",
 }
 
+tile{
+  layer = 0,
+  x = 1328,
+  y = 976,
+  width = 192,
+  height = 192,
+  pattern = "hole_parallax.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 1360,
+  y = 1008,
+  width = 128,
+  height = 128,
+  pattern = "ice_solid",
+}
+
+tile{
+  layer = 0,
+  x = 1376,
+  y = 1104,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 1104,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 1024,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1376,
+  y = 1024,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1376,
+  y = 1040,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1376,
+  y = 1088,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 1088,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1440,
+  y = 1104,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1392,
+  y = 1104,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 1040,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1440,
+  y = 1024,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
+tile{
+  layer = 0,
+  x = 1392,
+  y = 1024,
+  width = 16,
+  height = 16,
+  pattern = "spike_trap",
+}
+
 crystal{
   layer = 0,
   x = 1088,
@@ -8477,6 +8603,118 @@ teletransporter{
   destination = "from_temple",
 }
 
+stream{
+  layer = 0,
+  x = 1368,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1384,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1400,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1416,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1432,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1448,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1464,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1480,
+  y = 1133,
+  direction = 6,
+}
+
+stream{
+  layer = 0,
+  x = 1368,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1384,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1400,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1416,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1432,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1448,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1464,
+  y = 1021,
+  direction = 2,
+}
+
+stream{
+  layer = 0,
+  x = 1480,
+  y = 1021,
+  direction = 2,
+}
+
 tile{
   layer = 1,
   x = 784,
@@ -9231,5 +9469,14 @@ tile{
   width = 256,
   height = 32,
   pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 1416,
+  y = 1064,
+  width = 8,
+  height = 16,
+  pattern = "83",
 }
 

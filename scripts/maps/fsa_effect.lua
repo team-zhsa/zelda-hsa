@@ -15,26 +15,27 @@ half_screen:set_blend_mode("add")
 local glow_acc = sol.surface.create(quest_w, quest_h)
 glow_acc:set_blend_mode("add")
 
-local blur_shader = sol.shader.create"blur"
-local lava_filter = sol.shader.create"lava_filter"
+local blur_shader = sol.shader.create("blur")
+local lava_filter = sol.shader.create("lava_filter")
 
 half_screen:set_shader(blur_shader)
 
 local distort_map = sol.surface.create(sol.video.get_quest_size())
 
-local clouds = sol.surface.create("work/clouds_reflection.png")
-local clouds_shadow = sol.surface.create("work/clouds_shadow.png")
+local clouds = sol.surface.create("fogs/clouds_reflection.png")
+local clouds_shadow = sol.surface.create("fogs/clouds_shadow.png")
+clouds_shadow:set_opacity(120)
 clouds_shadow:set_blend_mode("multiply")
 
-local effect = sol.surface.create"work/fsaeffect.png"
+local effect = sol.surface.create("fogs/fsa_background.png")
 effect:set_blend_mode("blend")
-local shader = sol.shader.create"water_effect"
+local shader = sol.shader.create("water_effect")
 
 shader:set_uniform("reflection", reflection)
 shader:set_uniform("fsa_texture", fsa_texture)
 
-local heat_wave = sol.shader.create"heat_wave"
-local distort_shader = sol.shader.create"distort"
+local heat_wave = sol.shader.create("heat_wave")
+local distort_shader = sol.shader.create("distort")
 
 heat_wave:set_uniform("distort_factor", 1.0/64.0)
 heat_wave:set_uniform("wave_factor", 0.3)
@@ -47,7 +48,7 @@ distort_map:set_shader(distort_shader)
 tmp:set_shader(shader)
 local ew,eh = effect:get_size()
 
-local clouds_speed = 0.01;
+local clouds_speed = 0.007;
 local crw,crh = clouds:get_size()
 
 
@@ -94,7 +95,7 @@ function fsa:render_reflection(map)
 		enemy = true,
 		npc = true
 	}
-	
+
 	-- for each enemy in map
 	for ent in map:get_entities_in_rectangle(cx, cy, cw, ch) do --TODO check if margins are necessary
 		local filter = reflection_filter[ent:get_type()]
@@ -249,17 +250,17 @@ local function get_lights_from_map(map)
 		if light_tile_ids[props.pattern] then
 			--tile is considered as a light
 			table.insert(lights,
-									 {
-										 layer = props.layer,
-										 x = props.x + props.width*0.5,
-										 y = props.y + props.height*0.5,
-										 radius = radii[props.pattern] or big,
-										 dir = dirs[props.pattern],
-										 cut = dirs[props.pattern] and win_cut or "0",
-										 aperture = dirs[props.pattern] and win_aperture or "1.5",
-										 color = colors[props.pattern],
-										 distort_angle = distort_angle[props.pattern]
-									 }
+				{
+					layer = props.layer,
+					x = props.x + props.width*0.5,
+					y = props.y + props.height*0.5,
+					radius = radii[props.pattern] or big,
+					dir = dirs[props.pattern],
+					cut = dirs[props.pattern] and win_cut or "0",
+					aperture = dirs[props.pattern] and win_aperture or "1.5",
+					color = colors[props.pattern],
+					distort_angle = distort_angle[props.pattern]
+				}
 			)
 		end
 	end
@@ -334,7 +335,7 @@ local function setup_inside_lights(map)
 	light_mgr:init(map,
 		(function()
 			if house then
-				return {180,170,160}
+				return {200,190,180}
 			else
 				return {105,100,95}
 			end

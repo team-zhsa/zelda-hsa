@@ -55,8 +55,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
-  y = 88,
+  x = 352,
+  y = 160,
   width = 32,
   height = 144,
   pattern = "steps.1",
@@ -462,8 +462,8 @@ chest{
 destination{
   name = "destination",
   layer = 0,
-  x = 536,
-  y = 365,
+  x = 88,
+  y = 45,
   direction = 1,
   sprite = "entities/warps/destination",
 }
@@ -553,8 +553,8 @@ teletransporter{
 
 custom_entity{
   layer = 0,
-  x = 88,
-  y = 109,
+  x = 312,
+  y = 181,
   width = 16,
   height = 16,
   direction = 0,
@@ -1272,8 +1272,8 @@ chest{
 
 destructible{
   layer = 0,
-  x = 120,
-  y = 253,
+  x = 344,
+  y = 325,
   treasure_name = "random_central",
   sprite = "entities/destructibles/bomb_flower",
   can_explode = true,
@@ -1317,14 +1317,14 @@ enemy{
 
 crystal{
   layer = 0,
-  x = 88,
-  y = 149,
+  x = 312,
+  y = 221,
 }
 
 crystal_block{
   layer = 0,
-  x = 96,
-  y = 80,
+  x = 320,
+  y = 152,
   width = 16,
   height = 64,
   subtype = 0,
@@ -1332,8 +1332,8 @@ crystal_block{
 
 crystal_block{
   layer = 0,
-  x = 96,
-  y = 144,
+  x = 320,
+  y = 216,
   width = 16,
   height = 64,
   subtype = 1,
@@ -1352,13 +1352,14 @@ custom_entity{
 
 custom_entity{
   layer = 0,
-  x = -8,
-  y = 133,
-  width = 16,
-  height = 16,
+  x = 112,
+  y = 157,
+  width = 72,
+  height = 80,
   direction = 0,
-  sprite = "npc/hylian_isan",
-  model = "bowwow_follow",
+  sprite = "entities/destination",
+  tiled = true,
+  model = "ground_spikes",
 }
 
 teletransporter{

@@ -20,7 +20,7 @@ COMPAT_VARYING vec2 sol_vtex_coord;
 COMPAT_VARYING vec4 sol_vcolor;
 
 uniform int sol_time;
-uniform float magnitude = .1; // Magnitude of the waving effect ~ [0.01 -> 0.1]
+uniform float magnitude = 0.1; // Magnitude of the waving effect ~ [0.01 -> 0.1]
 uniform bool separated; // Set this to true to enable image `scanlines` duplication
 
 void main() {

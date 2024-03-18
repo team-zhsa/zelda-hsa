@@ -17,12 +17,6 @@ local house_manager = require("scripts/maps/house_manager")
 local fall_manager = require("scripts/maps/ceiling_drop_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
 
-
-local text = sol.text_surface.create{
-	text_key = "version",
-	horizontal_alignment = "center",
-	font = "alttp",
-}
 local t = sol.sprite.create("menus/title_triforce")
 t:set_animation("triforce")
 
@@ -37,8 +31,6 @@ function map:on_draw(dst_surface)
 	map_surface:set_transformation_origin(120, 90)
 	--map_surface:draw(dst_surface)
 	
-
-	text:draw(dst_surface, 160, 220)
 	t:draw(dst_surface, 88, 88)
 end
 

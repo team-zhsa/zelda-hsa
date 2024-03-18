@@ -7934,7 +7934,7 @@ tile{
   layer = 0,
   x = 912,
   y = 40,
-  width = 80,
+  width = 48,
   height = 8,
   pattern = "959",
 }
@@ -7943,7 +7943,7 @@ tile{
   layer = 0,
   x = 912,
   y = 48,
-  width = 80,
+  width = 48,
   height = 16,
   pattern = "958",
 }
@@ -7952,7 +7952,7 @@ tile{
   layer = 0,
   x = 912,
   y = 32,
-  width = 80,
+  width = 48,
   height = 8,
   pattern = "1030",
 }
@@ -9652,15 +9652,6 @@ tile{
 tile{
   layer = 0,
   x = 992,
-  y = 40,
-  width = 8,
-  height = 8,
-  pattern = "1028",
-}
-
-tile{
-  layer = 0,
-  x = 992,
   y = 96,
   width = 16,
   height = 16,
@@ -9692,24 +9683,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "1081",
-}
-
-tile{
-  layer = 0,
-  x = 1000,
-  y = 40,
-  width = 8,
-  height = 8,
-  pattern = "1036",
-}
-
-tile{
-  layer = 0,
-  x = 992,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "1036",
 }
 
 tile{
@@ -23029,25 +23002,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1008,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "963",
-}
-
-tile{
-  layer = 0,
-  x = 1008,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "960",
-}
-
-tile{
-  layer = 0,
-  x = 992,
+  x = 912,
   y = 0,
   width = 16,
   height = 16,
@@ -25169,6 +25124,123 @@ tile{
   height = 16,
   pattern = "5998",
   tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 928,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "963",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "963",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 0,
+  width = 32,
+  height = 64,
+  pattern = "1058",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "957",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "962",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "961",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "954",
+}
+
+tile{
+  layer = 0,
+  x = 928,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "960",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "960",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "952",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 0,
+  width = 32,
+  height = 144,
+  pattern = "941",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 144,
+  width = 32,
+  height = 16,
+  pattern = "942",
 }
 
 teletransporter{
@@ -27582,16 +27654,6 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 944,
-  y = 40,
-  width = 48,
-  height = 8,
-  direction = 6,
-  jump_length = 136,
-}
-
-jumper{
-  layer = 0,
   x = 1024,
   y = 72,
   width = 32,
@@ -27742,10 +27804,10 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 992,
-  y = 40,
-  width = 32,
-  height = 32,
+  x = 1000,
+  y = 48,
+  width = 24,
+  height = 24,
   direction = 5,
   jump_length = 136,
 }
@@ -27872,8 +27934,8 @@ jumper{
 
 enemy{
   layer = 0,
-  x = 984,
-  y = 189,
+  x = 920,
+  y = 253,
   direction = 0,
   breed = "outside/zora",
   treasure_name = "random_east",
@@ -28271,6 +28333,27 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/i1",
   destination = "_side",
+}
+
+wall{
+  layer = 0,
+  x = 960,
+  y = 128,
+  width = 32,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+destination{
+  name = "from_snowpeaks_waterfall",
+  layer = 0,
+  x = 976,
+  y = 13,
+  direction = 3,
 }
 
 tile{

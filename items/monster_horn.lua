@@ -1,7 +1,10 @@
 local item = ...
 
 function item:on_created()
-
+  self:set_savegame_variable("possession_monster_horn")
+  self:set_amount_savegame_variable("amount_monster_horn")
+  self:set_max_amount(20)
+  self:set_assignable(false)
   self:set_shadow("small")
   self:set_can_disappear(true)
   self:set_brandish_when_picked(false)
@@ -9,9 +12,7 @@ function item:on_created()
 end
 
 function item:on_obtaining(variant, savegame_variable)
-  if self:get_game():get_item("monster_horn_counter"):get_variant() == 0 then
-    self:get_game():get_item("monster_horn_counter"):set_variant(1)
-  end
-  self:get_game():get_item("monster_horn_counter"):add_amount(1)
+
+  self:add_amount(1)
 
 end

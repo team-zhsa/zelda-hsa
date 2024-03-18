@@ -31,7 +31,9 @@ map:register_event("on_started", function()
 	map:set_doors_open("door_30_s", true)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_w", sound)
 	door_manager:open_when_enemies_dead(map, "enemy_30_", "door_30_s", sound)
-
+	if game:get_value("dungeon_5_1f_staircase_to_2f", true) then
+		map:enable_staircase_15()
+	end
 	-- Switches
 	switch_manager:activate_switch_if_savegame_exist(map, "switch_15_door_1", "dungeon_5_1f_switch_15_1")
 	switch_manager:activate_switch_if_savegame_exist(map, "switch_15_door_2", "dungeon_5_1f_switch_15_2")
@@ -43,7 +45,7 @@ map:register_event("on_started", function()
 end)
 
 -- Room 15 switch puzzle
-for i = 1,7 do
+for i = 1,10 do
 	for switch in map:get_entities("switch_15_door_"..i) do
 		switch:register_event("on_activated", function()
 			audio_manager:play_sound("common/secret_discover_minor")
@@ -51,14 +53,25 @@ for i = 1,7 do
 			if game:get_value("dungeon_5_1f_switch_15_1") and game:get_value("dungeon_5_1f_switch_15_2")
 			and game:get_value("dungeon_5_1f_switch_15_3") and game:get_value("dungeon_5_1f_switch_15_4")
 			and game:get_value("dungeon_5_1f_switch_15_5") and game:get_value("dungeon_5_1f_switch_15_6")
-			and game:get_value("dungeon_5_1f_switch_15_7") then
-				lauch_staircase_15_cutscene()
+			and game:get_value("dungeon_5_1f_switch_15_7") and game:get_value("dungeon_5_1f_switch_15_8")
+			and game:get_value("dungeon_5_1f_switch_15_9") and game:get_value("dungeon_5_1f_switch_15_10") then
+				map:lauch_staircase_15_cutscene()
 			end
 		end)
 	end
 end
 
+-- Room 15 staircase cutscene
+function map:launch_staircase_15_cutscene()
+end
 
+s:register_event("on_activated", function()
+	map:enable_staircase_15()
+end)
+
+function map:enable_staircase_15()
+	tile_staircase_30_1:set_position(920 - 8, 1400 - 8, 1)
+end
 
 -- Door events
 sensor_10_door_1:register_event("on_activated", function()
@@ -109,6 +122,7 @@ function collapse_tiles_5()
 		collapsing_tile:set_enabled(false)
 		collapsing_entity:set_visible(true)-- C.E. for animation
 		local sprite = collapsing_entity:get_sprite()
+		sol.audio.play_sound("jump")
 		sprite:set_animation("destroy")
 		i = i + 1
 		if collapsing_tile == nil then return false end
@@ -128,10 +142,11 @@ end
 
 for sensor in map:get_entities("sensor_5_tile_") do
 	sensor:register_event("on_activated", function()
-		sol.timer.start(map, 500, function()
+		sol.timer.start(map, 700, function()
 			collapse_tiles_5()
 		end)
 		sensor_5_tile_1:set_enabled(false)
+		sensor_5_tile_2:set_enabled(false)
 	end)
 end
 
@@ -154,6 +169,7 @@ function collapse_tiles_7()
 		collapsing_entity:set_visible(true)-- C.E. for animation
 		local sprite = collapsing_entity:get_sprite()
 		sprite:set_animation("destroy")
+		sol.audio.play_sound("jump")
 		i = i + 1
 		if collapsing_tile == nil then return false end
 		return true

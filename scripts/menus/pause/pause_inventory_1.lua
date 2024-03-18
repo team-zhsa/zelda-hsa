@@ -1,28 +1,28 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "wine", -- Row 1
-	"lamp",
-  "boomerang",
-  "bow",
+  "hero_shield", -- Row 1
+	"hylia_shield",
+  "mirror_shield",
+  "bottle_1",
 	"bow",
   "bow",
-  "bomb_counter", -- Row 2
-	"shovel",
-  "hookshot",
+  "lamp", -- Row 2
+	"boomerang",
+  "bomb_counter",
+	"bottle_2",
 	"bow",
 	"bow",
-	"bow",
-	"hammer", -- Row 3
+	"shovel", -- Row 3
+	"hookshot",
 	"feather",
-	"_placeholder", -- Iron boots
-	"magic_powder_counter",
+	"bottle_3",
 	"green_tunic",
 	"blue_tunic",
-	"_placeholder", -- Row 4 -- Magic Cape
-	"magic_mirror", -- Magic mirror
-	"lens_of_truth",
+	"hammer", -- Row 4 -- Magic Cape
+	"_placeholder", -- Magic mirror
 	"_placeholder",
+	"bottle_4",
 	"red_tunic",
 	"time_tunic",
 
@@ -47,7 +47,7 @@ function inventory_submenu:on_started()
   self.menu_ocarina = true
 
   -- Set the title.
-  self:set_title(sol.language.get_string("inventory.title_inventory"))
+  self:set_title(sol.language.get_string("inventory.title_inventory_1"))
 
   -- Initialise the cursor
   local index = self.game:get_value("pause_inventory_last_item_index") or 0

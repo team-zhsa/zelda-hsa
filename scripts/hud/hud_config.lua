@@ -23,35 +23,41 @@ local hud_config = {
   {
     menu_script = "scripts/hud/magic_bar",
     x = 6,
-    y = 24,
+    y = 8,
   },
 
 
   -- Rupee counter.
   {
     menu_script = "scripts/hud/rupees",
-    x = 8,
+    x = 6,
     y = -20,
   },
 
-  -- Clock icon.
+  --[[ Clock icon.
   {
     menu_script = "scripts/hud/clock",
     x = -30,
     y = -30,
+  },--]]
+
+  {
+    menu_script = "scripts/hud/new_clock",
+    x = -30,
+    y = -6,
   },
 
   -- Small key counter.
   {
     menu_script = "scripts/hud/small_keys",
-    x = 8,
+    x = 6,
     y = -32,
   },
 
   -- Floor view.
   {
     menu_script = "scripts/hud/floor",
-    x = 5,
+    x = 6,
     y = 70,
   },
 
@@ -88,7 +94,7 @@ local hud_config = {
   -- Action icon.
   {
     menu_script = "scripts/hud/action_icon",
-    x = -145,
+    x = -145 + 24,
     y = 20,
   },
 

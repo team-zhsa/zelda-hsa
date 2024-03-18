@@ -10,10 +10,10 @@ function savegame_menu:on_started()
   -- Create all graphic objects.
   self.surface = sol.surface.create(320, 240)
   self.background_color = { 104, 144, 240 }
-  self.background_img = sol.surface.create("menus/selection_menu_background.png")
-  self.background_title_img = sol.surface.create("menus/selection_menu_background_title.png")
-  self.save_container_img = sol.surface.create("menus/selection_menu_save_container.png")
-  self.option_container_img = sol.surface.create("menus/selection_menu_option_container.png")
+  self.background_img = sol.surface.create("menus/savegames/background.png")
+  self.background_title_img = sol.surface.create("menus/savegames/background_title.png")
+  self.save_container_img = sol.surface.create("menus/savegames/save_container.png")
+  self.option_container_img = sol.surface.create("menus/savegames/option_container.png")
   local dialog_font, dialog_font_size = language_manager:get_dialog_font()
   local menu_font, menu_font_size = language_manager:get_menu_font()
   self.option1_text = sol.text_surface.create{
@@ -30,7 +30,7 @@ function savegame_menu:on_started()
     font_size = menu_font_size,
   }
   self.cursor_position = 1
-  self.cursor_sprite = sol.sprite.create("menus/selection_menu_cursor")
+  self.cursor_sprite = sol.sprite.create("menus/savegames/cursor")
   self.allow_cursor_move = true
   self.finished = false
   self.phase = 1
@@ -149,7 +149,7 @@ function savegame_menu:draw_savegame(slot_index)
   local slot = self.slots[slot_index]
   self.save_container_img:draw(self.surface, 57, 53 + slot_index * 27)
   slot.player_name_text:draw(self.surface, 87, 66 + slot_index * 27)
-
+  slot.time_saved_text:draw(self.surface, 136, 77 + slot_index * 27)
   if slot.hearts_view ~= nil then
     slot.hearts_view:set_dst_position(136, 56 + slot_index * 27)
     slot.hearts_view:on_draw(self.surface)
@@ -202,8 +202,11 @@ function savegame_menu:read_savegames()
     local slot = {}
     slot.file_name = "save" .. i .. ".dat"
     slot.savegame = game_manager:create(slot.file_name)
-    slot.number_img = sol.surface.create("menus/selection_menu_save" .. i .. ".png")
-
+    slot.number_img = sol.surface.create("menus/savegames/save" .. i .. ".png")
+    slot.time_saved_text = sol.text_surface.create{
+      font = "04b03",
+      font_size = font_size,
+    }
     slot.player_name_text = sol.text_surface.create{
       font = font,
       font_size = font_size,
@@ -211,7 +214,7 @@ function savegame_menu:read_savegames()
     if sol.game.exists(slot.file_name) then
       -- Existing file.
       slot.player_name_text:set_text(slot.savegame:get_value("player_name"))
-
+      slot.time_saved_text:set_text(slot.savegame:get_value("time_saved"))
       -- Hearts.
       local hearts_class = require("scripts/hud/hearts")
       slot.hearts_view = hearts_class:new(slot.savegame)
@@ -816,7 +819,7 @@ function savegame_menu:init_phase_choose_name()
     font_size = font_size,
   }
   self.letter_cursor = { x = 0, y = 0 }
-  self.letters_img = sol.surface.create("menus/selection_menu_letters.png")
+  self.letters_img = sol.surface.create("menus/savegames/letters.png")
   self.name_arrow_sprite = sol.sprite.create("menus/arrow")
   self.name_arrow_sprite:set_direction(0)
   self.can_add_letter_player_name = true
@@ -941,7 +944,7 @@ function savegame_menu:add_letter_player_name()
 
   if letter_to_add ~= nil then
     -- A letter was selected.
-    if size < 6 then
+    if size < 8 then
       sol.audio.play_sound("menu/letter_add")
       self.player_name = self.player_name .. letter_to_add
     else
@@ -960,10 +963,25 @@ function savegame_menu:validate_player_name()
   end
 
   sol.audio.play_sound("menu/fileselect_created")
-  if self.player_name:lower() == "zelda" or self.player_name:lower() == "ju" or self.player_name:lower() == "lucifer" or self.player_name:lower() == "linkff" or self.player_name:lower() == "salade verte" or self.player_name:lower() == "prince dedede" or self.player_name:lower() == "vibel" or self.player_name:lower() == "bp" or self.player_name:lower() == "ml"then
+  -- Special music for special names
+  if self.player_name:lower() == "zelda"
+  or self.player_name:lower() == "unknown"
+  or self.player_name:lower() == "dedede"
+  or self.player_name:lower() == "linkff" then
     sol.audio.play_music("cutscenes/end_credits")
   end
-  if self.player_name:lower() == "azer" then
+  -- Prevent from creating a savegame with an offensive name
+  if self.player_name:lower() == "teub"
+  or self.player_name:lower() == "bite"
+  or self.player_name:lower() == "chatte"
+  or self.player_name:lower() == "merde"
+  or self.player_name:lower() == "putain"
+  or self.player_name:lower() == "chiasse"
+  or self.player_name:lower() == "teucha"
+  or self.player_name:lower() == "chier"
+  or self.player_name:lower() == "chiant"
+  or self.player_name:lower() == "couille"
+  then
     sol.audio.play_sound("wrong")
     return false
   end

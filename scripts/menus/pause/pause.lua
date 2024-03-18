@@ -20,6 +20,7 @@ local function initialise_pause_features(game)
 	local map_builder = require("scripts/menus/pause/pause_map")
 	local quest_builder = require("scripts/menus/pause/pause_quest")
 	local options_builder = require("scripts/menus/pause/pause_options")
+  local joy_avoid_repeat = {-2, -2}
 
 	local pause_menu = {}
 	game.pause_menu = pause_menu
@@ -33,7 +34,6 @@ local function initialise_pause_features(game)
 			inventory_builder_2:new(game),
 			ocarina_builder:new(game),
 			food_builder:new(game),
-			map_builder:new(game),
 			quest_builder:new(game),
 			options_builder:new(game),
 		}
@@ -80,8 +80,15 @@ local function initialise_pause_features(game)
 	game:register_event("on_paused", function(game)
 		pause_menu:open()
 	end)
+
 	game:register_event("on_unpaused", function(game)
 		pause_menu:close()
+	end)
+
+	game:register_event("on_joypad_axis_moved", function(game, axis, state)	
+    local handled = joy_avoid_repeat[axis % 2] == state
+    joy_avoid_repeat[axis % 2] = state
+    return handled
 	end)
 
 end

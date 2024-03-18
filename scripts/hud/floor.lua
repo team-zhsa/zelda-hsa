@@ -46,7 +46,7 @@ function floor_view_builder:new(game, config)
     local dungeon = game:get_dungeon()
 
     if dungeon ~= nil and floor_view.floor ~= nil then
-      -- We are in a dungeon: show the neighboor floors before the current one.
+      -- We are in a dungeon: show the neighbour floors before the current one.
       local nb_floors = dungeon.highest_floor - dungeon.lowest_floor + 1
       local nb_floors_displayed = math.min(7, nb_floors)
 
@@ -62,7 +62,7 @@ function floor_view_builder:new(game, config)
         highest_floor_displayed = floor_view.floor + 3
       end
 
-      local src_y = (15 - highest_floor_displayed) * 12
+      local src_y = (22 - highest_floor_displayed) * 12
       local src_height = nb_floors_displayed * 12 + 1
 
       floor_view.floors_img:draw_region(32, src_y, 32, src_height, floor_view.surface)
@@ -76,10 +76,10 @@ function floor_view_builder:new(game, config)
 
     if floor_view.floor == nil and dungeon ~= nil then
       -- Special case of the unknown floor in a dungeon.
-      src_y = 32 * 12
+      src_y = 39 * 12
       dst_y = 0
     else
-      src_y = (15 - floor_view.floor) * 12
+      src_y = (22 - floor_view.floor) * 12
       dst_y = (highest_floor_displayed - floor_view.floor) * 12
     end
 

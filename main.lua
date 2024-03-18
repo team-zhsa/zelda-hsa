@@ -55,6 +55,9 @@ end
 function sol.main:on_key_pressed(key, modifiers)
   local game = sol.main.get_game()
   local handled = false
+  --[[  local key_table = {}
+  table.insert(key_table, key)
+  print(table.concat(key_table))--]]
   if key == "f11" or
     (key == "return" and (modifiers.alt or modifiers.control)) then
     -- F11 or Ctrl + return or Alt + Return: switch fullscreen.

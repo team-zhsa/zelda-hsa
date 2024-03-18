@@ -53,15 +53,15 @@ function carrying_state.start(hero, carriable, carriable_sprite) -- Pass the car
   movement:set_ignore_obstacles(true)
   movement:set_delay(100)
   movement:start(carriable_sprite)
-
+  sol.audio.play_sound("lift")
   -- Start a custom carrying state when the lifting animation finished.
   hero:set_animation("lifting", function()
 
-    local carrying_state = sol.state.create()
+    local carrying_state = sol.state.create("carrying")
     carrying_state:set_can_interact(false)
     carrying_state:set_can_grab(false)
     carrying_state:set_can_push(false)
-
+    
     -- Initilize carrying object and animations.
     function carrying_state:on_started()
       if game:is_command_pressed("right") or game:is_command_pressed("left") or game:is_command_pressed("up") or game:is_command_pressed("down") then
@@ -86,6 +86,7 @@ function carrying_state.start(hero, carriable, carriable_sprite) -- Pass the car
       local x, y, layer = hero:get_position()
       carriable:set_position(x, y, layer)
       carriable:throw(hero:get_direction())
+      sol.audio.play_sound("throw")
     end
 
     function carrying_state:on_command_pressed(command)

@@ -1,48 +1,53 @@
+-- Lua script of item "magic powders counter".
+-- This script is executed only once for the whole game.
+
+-- Variables
 local item = ...
 local game = item:get_game()
 
+-- Include scripts
+local audio_manager = require("scripts/audio_manager")
 
+-- Event called when the game is initialized.
 function item:on_created()
 
   self:set_savegame_variable("possession_magic_powder_counter")
   self:set_amount_savegame_variable("amount_magic_powder_counter")
   self:set_assignable(true)
-end
-
-function item:on_obtaining(variant, savegame_variable)
-
-  self:set_amount(20)
-  --local item = game:get_item("mushroom")
-  --item:set_savegame_variable(nil)
 
 end
 
+-- Event called when the hero is using this item.
 function item:on_using()
-
-   local amount =   self:get_amount()
-   amount = amount - 1
+  if item:get_map():is_sideview() and item:get_game():get_hero().vspeed~=nil then
+    return
+  end
+  local amount =   self:get_amount()
+  amount = amount - 1
   if amount < 0 then
-    self:set_variant(0)
-    sol.audio.play_sound("wrong")
+    audio_manager:play_sound("misc/error")
   else
-    sol.audio.play_sound("magic_powder")
-   local map = game:get_map()
-   local hero = map:get_hero()
-   local x,y,layer = hero:get_position()
-   hero:freeze()
-   hero:set_animation("magic_powder")
-   self:set_amount(amount)
-    item:create_fire()
+    audio_manager:play_sound("items/magic_powder")
+    local map = game:get_map()
+    local hero = map:get_hero()
+    local x,y,layer = hero:get_position()
+    hero:freeze()
+    hero:set_animation("magic_powder")
+    self:set_amount(amount)
+    item:create_powder()
     sol.timer.start(item, 400, function()
-      hero:unfreeze()
-    end)
+        if amount == 0 then
+          self:set_variant(0)
+        end
+        hero:unfreeze()
+      end)
   end
   self:set_finished()
 
 end
 
 -- Creates some fire on the map.
-function item:create_fire()
+function item:create_powder()
 
   local map = item:get_map()
   local hero = map:get_hero()
@@ -59,13 +64,17 @@ function item:create_fire()
   end
 
   local x, y, layer = hero:get_position()
-  map:create_custom_entity{
-    model = "fire",
-    x = x + dx,
-    y = y + dy,
+  local ox, oy=hero:get_sprite("tunic"):get_xy()
+  local powder = map:create_custom_entity{
+    model = "powder",
+    x = x + dx + ox,
+    y = y + dy + oy,
     layer = layer,
     width = 16,
     height = 16,
     direction = 0,
   }
+  local powder_sprite = powder:get_sprite()
+  powder_sprite:set_ignore_suspend(true)
+
 end

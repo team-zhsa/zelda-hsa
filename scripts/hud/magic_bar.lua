@@ -8,8 +8,8 @@ function magic_bar_builder:new(game, config)
 
   local magic_bar = {}
 
-  magic_bar.dst_x, magic_bar.dst_y = config.x, config.y
-
+  magic_bar.dst_x = config.x
+  magic_bar.dst_y = config.y
   magic_bar.surface = sol.surface.create(45, 10)
   magic_bar.magic_bar_img = sol.surface.create("hud/magic_bar.png")
   magic_bar.container_sprite = sol.sprite.create("hud/magic_bar")
@@ -78,6 +78,7 @@ function magic_bar_builder:new(game, config)
     if magic_bar.max_magic_displayed > 0 then
       local x, y = magic_bar.dst_x, magic_bar.dst_y
       local width, height = dst_surface:get_size()
+      y = magic_bar.dst_y + 8 * math.ceil(game:get_max_life()/60)
       if x < 0 then
         x = width + x
       end

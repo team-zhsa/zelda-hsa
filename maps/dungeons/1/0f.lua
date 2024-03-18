@@ -21,7 +21,7 @@ function door_28_e_sensor:on_collision_explosion()
   door_28_e_top:set_enabled(true)
   door_28_e_tile:set_enabled(false)
   sol.audio.play_sound("common/secret_discover_minor")
-  game:set_value("dungeon_1_0f_door_28_29")
+  game:set_value("dungeon_1_0f_door_28_29", true)
 end
 
 function sensor_e_22_rsp:on_activated()

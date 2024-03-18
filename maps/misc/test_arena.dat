@@ -1406,8 +1406,8 @@ tile{
 destination{
   name = "destination",
   layer = 0,
-  x = 424,
-  y = 389,
+  x = 184,
+  y = 189,
   direction = 1,
 }
 
@@ -1453,6 +1453,15 @@ enemy{
   y = 501,
   direction = 0,
   breed = "soldiers/sword_soldier_green",
+}
+
+enemy{
+  name = "aaaaaaaaaaaaaaaaa",
+  layer = 0,
+  x = 168,
+  y = 69,
+  direction = 3,
+  breed = "outside/octorok_red",
 }
 
 tile{
