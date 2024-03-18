@@ -1,7 +1,7 @@
 local item = ...
 local game = item:get_game()
 
-local magic_needed = 5  -- Number of magic points required.
+local magic_needed = 5 -- Number of magic points required.
 
 function item:on_created()
 
@@ -17,8 +17,8 @@ function item:shoot()
   local direction = hero:get_direction()
 
   local x, y, layer = hero:get_center_position()
-  local ice_beam = map:create_custom_entity({
-    model = "rod_ice",
+  local ice = map:create_custom_entity({
+    model = "ice",
     x = x,
     y = y + 3,
     layer = layer,
@@ -27,12 +27,18 @@ function item:shoot()
     direction = direction,
   })
 
-  sol.audio.play_sound("items/ice_rod/shoot")
+ -- local ice_sprite = entity:get_sprite("ice")
+  --ice_sprite:set_animation("flying")
+	sol.audio.play_sound("items/ice_rod/shoot")
   local angle = direction * math.pi / 2
-  ice_beam:go(angle)
+  local movement = sol.movement.create("straight")
+  movement:set_speed(192)
+  movement:set_angle(angle)
+  movement:set_smooth(false)
+  movement:start(ice)
 end
 
-function item:on_using()
+function item:start_using()
 
   local map = item:get_map()
   local hero = map:get_hero()
@@ -53,6 +59,7 @@ function item:on_using()
 
   -- Shoot ice if there is enough magic.
   if game:get_magic() >= magic_needed then
+    --sol.audio.play_sound("lamp")
     game:remove_magic(magic_needed)
     item:shoot()
   end
@@ -72,7 +79,7 @@ function item:on_using()
   end)
 end
 
--- initialise the metatable of appropriate entities to work with the ice.
+-- Initialise the metatable of appropriate entities to work with the ice.
 local function initialise_meta()
 
   -- Add Lua ice properties to enemies.
@@ -81,8 +88,7 @@ local function initialise_meta()
     -- Already done.
     return
   end
-
-  enemy_meta.ice_reaction = "immobilized"  -- 3 life points by default.
+  enemy_meta.ice_reaction = 3  -- 3 life points by default.
   enemy_meta.ice_reaction_sprite = {}
   function enemy_meta:get_ice_reaction(sprite)
 
@@ -92,28 +98,40 @@ local function initialise_meta()
     return self.ice_reaction
   end
 
-  function enemy_meta:set_ice_reaction(reaction, sprite)
+  function enemy_meta:set_ice_reaction(reaction)
 
     self.ice_reaction = reaction
+    
   end
 
   function enemy_meta:set_ice_reaction_sprite(sprite, reaction)
 
     self.ice_reaction_sprite[sprite] = reaction
+    
   end
 
   -- Change the default enemy:set_invincible() to also
   -- take into account the ice.
   local previous_set_invincible = enemy_meta.set_invincible
   function enemy_meta:set_invincible()
+    
     previous_set_invincible(self)
     self:set_ice_reaction("ignored")
+    
   end
   local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
   function enemy_meta:set_invincible_sprite(sprite)
+    
     previous_set_invincible_sprite(self, sprite)
     self:set_ice_reaction_sprite(sprite, "ignored")
+    
   end
 
 end
+
+function item:on_using()
+  item:start_using()
+  item:set_finished()
+end
+
 initialise_meta()

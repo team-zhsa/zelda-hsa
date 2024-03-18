@@ -141,7 +141,7 @@ Alpha 1.8 (11/05/21) "Eel Update":
 	CHG: Changed title screen background.
 	CHG: Reduced dungeons minimaps sprites to 40x56 instead of 80x112.
 	CHG: Changed random pickables probabilities.
-	CHG: Progressively switched enemies behaviour to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
 	FIX: Fixed game over red screen having the wrong color.
 	FIX: Fixed game crashing when picking pickables with the hookshot.
 	FIX: Fixed game crashing when killing the first boss.
@@ -157,7 +157,7 @@ Alpha 1.9 (25/05/21) "Flatfish Update":
 	CHG: Cleaned up items dialog icons sprites.
 	CHG: Changed values in the feather script.
 	CHG: Changed values in the flickering shader.
-	CHG: Progressively switched enemies behaviour to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
 	CHG: Changed some sound effects.
 	CHG: Changed to a global field music manager instead of defining the music from the maps themselves.
 
@@ -181,7 +181,8 @@ Alpha 1.9.1 (18/06/21) "Flatfish Update":
 	CHG: Changed some graphics.
 	CHG: Changed cacti sprite by making it opaque instead of transparent.
 	CHG: Changed dungeons minimap scale to support multiple dungeon sizes.
-	CHG: Progressively switched enemies behaviour to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	CHG: Moved pause menus to "languages" directory (#1).
 	FIX: Fixed bombs not being liftable.
 	FIX: Fixed tunics only changing the sprite and not dividing the damage.
 	REM: Removed "maps/houses" folder.
@@ -198,7 +199,7 @@ Alpha 1.10 (27/07/21) "Goldfish Update":
 	CHG: Looped musics.
 	CHG: Reduced some sprites sizes.
 	CHG: Changed entities sprites images to tileset instead of using "entities/Full Hyrule.tiles.png".
-	CHG: Progressively switched enemies behaviour to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
 	FIX: Fixed "tunic 2 stopped" animation being 1 pixel off by changing the sprite's origin.
 	
 Alpha 1.11 (18/01/22) "Haddock Update":
@@ -207,7 +208,7 @@ Alpha 1.11 (18/01/22) "Haddock Update":
 	CHG: Renumbered dungeon floors.
 	CHG: Changed the electrocution system.
 	CHG: Switched signs to ALTTD's.
-	CHG: Progressively switched enemies behaviour to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
 	CHG: Changed item sprites on hero.
 	FIX: Fixed flying tiles not working properly when coming back into the room.
 
@@ -262,6 +263,7 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
 	FIX: Fixed "yellow_key" not saved in the Forest Temple (#5).
 	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
+	FIX: Fixed Link being invisible after fighting boss (#16).
 
 Alpha 1.15.1 (31/01/23) "Ladyfish Update":
 	ADD: Added maps.
@@ -307,7 +309,7 @@ Alpha 1.16 (29/03/23) "Mackerel Update":
 	ADD: Added maps.
 	ADD: Added dialogues.
 	ADD: Added issues templates for the GitHub repository.
-	CHG: Replaced "Stalfos" by "Skull Kid" in a dialgoue from Sahasrahla (#94).
+	CHG: Replaced "Stalfos" by "Skull Kid" in a dialogue from Sahasrahla (#94).
 	CHG: Moved trees in the Hyrule Field (#96).
 	CHG: Renamed some soldier enemies in order to make them appear during the game and not at the beginning (#97).
 	FIX: Fixed carpet tiles in the Hyrule Castle main room being on the wrong layer (#89).
@@ -325,6 +327,7 @@ Alpha 1.16.1 (11/04/23) "Mackerel Update":
 	CHG: Renamed unused files.
 	CHG: Replaced the pause world map background by rescaling the scrollable one (#24).
 	CHG: Replaced "initialize" by "initialise" to keep UK spelling.
+	CHG: Lowered the Red Lizalfos' speed (#99).
 	FIX: Fixed pot weights in the Forest Temple (#3).
 	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
 	FIX: Fixed a carpet border tile being resizable in both directions (#108).
@@ -373,6 +376,16 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added Bari colour variations (#143).
 	ADD: Added soldier colour variations.
 	ADD: Rescripted the feather (#144).
+	ADD: Added enemy:is_frozen() and enemy:set_frozen() methods.
+	ADD: Added the ability to use jumpers when running.
+	ADD: Added the marathon minigame.
+	ADD: Added the ability to switch shaders through the options menu (#119).
+	ADD: Added a world map caption depending on the currently visible area (#192).
+	ADD: Added the Master Sword cutscene.
+	ADD: Added the team's logo and a copyright notice in the initial menus (#191).
+	ADD: Added NPC meta functions from Mercuris' Chest.
+	ADD: Added boss names for their parchment.
+	ADD: Added a new clock HUD (#200).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -386,7 +399,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Unified the "dialogue_id" property for all signs (#34).
 	CHG: Moved small key and clock HUD positions.
 	CHG: Switched the dungeons 10 and 12 (#165).
-	CHG: Progressively switch enemies behaviour to ALTTD's.
+	CHG: Progressively switch enemies behaviour to ALTTD's (#15).
 	CHG: Moved the piece of heart #15 from L1 to K2.
 	CHG: Restored the graveyard music for the Kakarico Graveyard.
 	CHG: Replaced "Linkff" by "LinkFF" in the project database.
@@ -396,6 +409,23 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Updated the Octoroks' sprites.
 	CHG: Changed Link's animation to stopped after bonking against a wall.
 	CHG: Updated the enemy weapon script from ALTTD.
+	CHG: Renamed the castle as dungeon 16.
+	CHG: Finished rescripting the Ice Rod.
+	CHG: Rescripted the Fire Rod.
+	CHG: Increased the running speed from 192 to 256.
+	CHG: Rescripted bombs with custom entities.
+	CHG: Replaced the parchment font by "capital" (#184).
+	CHG: Player names can now have up to 8 characters.
+	CHG: Allowed the scrollable map to be panned farther.
+	CHG: Changed the colour of the options menu cursor to match the other submenus.
+	CHG: Updated the copyright year to 2024 in the dialogues.
+	CHG: Changed the parchment font.
+	CHG: Changed the dungeon parchment dialogues in order to show the dungeon's name as the title.
+	CHG: Moved the magic bar up according to the number of available rows of hearts (#197).
+	CHG: Modifed "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	CHG: Moved the radial fading animation when launching a game from "dungeons" to "game_manager".
+	CHG: Renamed the Zora Forest to the Lanayru Forest.
+	CHG: Adjusted the sunset map tone.
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -426,6 +456,18 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed Link's animation being frozen after reloading a save with the debug when using the feather (#144).
 	FIX: Fixed crash on ocarina cinematic because of an invalid animation direction (#63).
 	FIX: Fixed the map menu being openable when a map transition is playing (#127).
+	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
+	FIX: Fixed the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
+	FIX: Fixed the game restarting after completing the marathon minigame (#186).
+	FIX: Fixed bombs not exploding anything but themselves (#185).
+	FIX: Fixed forest talus tiles missing a border (#187).
+	FIX: Fixed the cursor moving too fast with analog controller in menus (#82).
+	FIX: Fixed piece of hearts being misaligned in the quest status menu.
+	FIX: Fixed a typo in the Marathon Man dialogue (#190).
+	FIX: Fixed a typo in a Blacksmith dialogue (#201).
+	FIX: Fixed the world map background not being loaded sometimes (#153).
+	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
+	FIX: Fixed fairies not reviving the player (#204).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -434,11 +476,17 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed the old tunic item.
 	REM: Removed unused Tektite sprite files.
 	REM: Removed unused Chuchu sprite files.
-	REM: Removed the orange and brown sword soldier.
+	REM: Removed orange and brown sword soldiers.
+	REM: Removed old member names from the savegame menu easter eggs.
+	REM: Removed unused savegames menu sprite files.
+	REM: Removed LA dialogues.
+	REM: Removed unused maps.
+	REM: Removed the map from the inventory menu (#202).
+	REM: Removed unused sprite files.
+	TDO: Make bombs explode even if Link is carrying them (#183).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
-	TDO: Fix the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
@@ -447,65 +495,70 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
 	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
-	TDO: Fix the world map background not being loaded sometimes (#153).
 	TDO: Map the missing caves (#151).
+	TDO: Finish realigning trees in the Hyrule Field (#96).
+	TDO: Rename some soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	TDO: Merge countable items into a single item file (#189).
+	TDO: Remove pre-alpha screenshots from the sprites folder (#195).
+	TDO: Add a quick swap feature (#196).
+	TDO: Fix enemies not going down one layer when there's no ground (#198).
+	TDO: Overhaul the game over menu (#199).
+	TDO: Fix minimap border glitches when diagonal scrolling.
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
 	TDO: Remove *.xcf and *.psd work files from the data files (#169).
-	TDO: Add the ability to switch shaders through the options menu (#119).
 	TDO: Add night entities to maps (#67).
-	TDO: Add hook entities to trees (#103).
+	TDO: Add hook entities to trees (#103). 
 	TDO: Finish the remaining houses (#104).
 	TDO: Add remaining inside maps coordinates (#105).
 	TDO: Add items treasure and inventory missing dialogues (#9).
 	TDO: Fix victory animation not being synchronised with Link movement (#10).
 	TDO: Clean up unused files (#98).
-	TDO: Fix Link being invisible after fighting boss (#16).
 	TDO: Update the title screen (#50).
 	TDO: Change the Master Sword sprite on the title screen (#50).
 	TDO: Change all the enemies in the Hyrule Field (#81).
-	TDO: Fix cursor moving too fast with analog controller in menus (#82).
 	TDO: Add a falling animation for enemies (#84).
 	TDO: Write the game's walkthrough (#85).
-	TDO: Modify "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	TDO: Improve the shield usability (#30).
+	TDO: Fix remaining wrong sprite palettes (#32).
+	TDO: Fix signs being readable after being cut (#34).
+	TDO: Change Helmasaur reaction to hookshot (#22).
+	TDO: Fix the Book of Mudora not working as intended (#12).
+	TDO: Unify all the caves' darkness system (#13).
+	TDO: Unify all the electrocution system (#14).
+	TDO: Finish the outside map (#33).
+	TDO: Add side quests (#95).
 
 Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Add maps.
-	TDO: Add food.
+	TDO: Add food (#20).
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
 	TDO: Rename owl entities according to main quest steps (#19).
-	TDO: Progressively switch enemies behaviour to ALTTD's.
-	TDO: Fix the Book of Mudora.
+	TDO: Progressively switch enemies behaviour to ALTTD's (#15).
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).
 	TDO: Add a HUD version for timers (#36).
+	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
+	TDO: Add the Tournament of the Strongest (#180).
+	TDO: Remove the tofu character at the end of the lines in the enter_command_mono font (#184).
+	TDO: Add a climbing state (#188).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
-	TDO: Unify all the caves' darkness system.
-	TDO: Unify all the electrocution systems.
-	TDO: Replace all the space indenting by tabs (#112).
-	TDO: Loop the remaining musics.
-	TDO: Add musics (Temple of Fire, Hidden village, Lost Woods (https://youtu.be/sIiEi96USlo?t=7389))
-	TDO: Add Koume and Koutake
+	TDO: Replace musics by better versions (#35).
+	TDO: Add Koume and Koutake.
 	TDO: Fix music loops (#25).
 	TDO: Clean up unused musics.
-	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 
 Alpha 1.18.1 (//23) "Opah Update":
 	TDO: Add maps.
 	TDO: Add decoration to temples.
 	TDO: Add all the Pokémons.
-	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
-	TDO: Progressively switch enemies behaviour to ALTTD's.
-	TDO: Improve the shield usability (#30).
-	TDO: Fix bombs not being liftable when starting the game inside unless going outside (#31).
-	TDO: Fix remaining wrong sprite palettes (#32).
-	TDO: Fix signs being readable after being cut (#34).
-	TDO: Change Helmasaur reaction to hookshot (#22).
 
 Alpha 1.19 (//23) "Perch Update":
-	TDO: Add support for multiple aspect ratios (#123).
+	TDO: Add support for multiple aspect ratios (#124).
+	TDO: Set destructibles ground as "low wall" (#158).
+	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.

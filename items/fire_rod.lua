@@ -38,7 +38,7 @@ function item:shoot()
   movement:start(fire)
 end
 
-function item:on_using()
+function item:start_using()
 
   local map = item:get_map()
   local hero = map:get_hero()
@@ -79,7 +79,7 @@ function item:on_using()
   end)
 end
 
--- initialise the metatable of appropriate entities to work with the fire.
+-- Initialise the metatable of appropriate entities to work with the fire.
 local function initialise_meta()
 
   -- Add Lua fire properties to enemies.
@@ -128,4 +128,11 @@ local function initialise_meta()
   end
 
 end
+
+function item:on_using()
+  item:start_using()
+  item:set_finished()
+end
+
 initialise_meta()
+

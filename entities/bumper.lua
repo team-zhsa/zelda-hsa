@@ -1,10 +1,10 @@
 -- Bumper entity from xavius
 
-local entities = ...
+local bumper = ...
 local boingIsReady = true
 
 --TODO: Make it compatible with separator manager script
-function entities:on_created()
+function bumper:on_created()
  
   -- Call a function every 22 milliseconds.
 	sol.timer.start(22, function()

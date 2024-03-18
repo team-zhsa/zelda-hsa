@@ -39,11 +39,13 @@ local function initialise_map_features(game)
 
   function map_menu:open()
     sol.menu.start(game, map_menu, true)
+    map_menu_open = true
 		game:set_suspended(true)
   end
 
   function map_menu:close()
     sol.menu.stop(map_menu)
+    map_menu_open = false
 		game:set_suspended(false)
   end
 
@@ -63,7 +65,7 @@ local function initialise_map_features(game)
   end
 
   game:register_event("on_key_pressed", function(game, key, modifiers)
-		if key == "w" then
+		if key == "w" then --== game:get_value("keyboard_map_menu") then
 			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) and not game:is_suspended(true) then
 			-- Prevents from loading map if paused.
     		map_menu:open()

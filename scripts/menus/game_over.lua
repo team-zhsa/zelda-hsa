@@ -57,8 +57,10 @@ local function initialise_game_over_features(game)
     hero_dead_sprite:set_direction(hero:get_direction())
     hero_dead_sprite:set_paused(true)
     fade_sprite = sol.sprite.create("hud/gameover_fade")
-    fairy_sprite = sol.sprite.create("entities/items")
+    fairy_sprite = sol.sprite.create("entities/fairy")
     fairy_sprite:set_animation("fairy")
+    powder_sprite = sol.sprite.create("entities/fairy")
+    powder_sprite:set_animation("powder")
     state = "waiting_start"
 
     local map = game:get_map()
@@ -83,27 +85,51 @@ local function initialise_game_over_features(game)
             fade_sprite:set_animation("open")
           end)
         elseif state == "opening_menu" then
-          --local bottle_with_fairy = game:get_first_bottle_with(6)
-          if false then
-            -- Has a fairy.
+          local bottle_with_fairy = game:get_first_bottle_with(6)
+          if bottle_with_fairy ~= nil then            -- Has a fairy.
             state = "saved_by_fairy"
 
             -- Make the bottle empty.
             bottle_with_fairy:set_variant(1)
-            fairy_sprite:set_xy(hero_dead_x + 12, hero_dead_y + 21)
-            local movement = sol.movement.create("target")
-            movement:set_target(240, 22)
-            movement:set_speed(96)
-
-            movement:start(fairy_sprite, function()
-              state = "waiting_end"
-              game:add_life(7 * 4)  -- Restore 7 hearts.
-              sol.timer.start(self, 1000, function()
-                state = "resume_game"
-                sol.audio.play_music(music)
-                game:stop_game_over()
-                sol.menu.stop(self)
+            powder_sprite:set_xy(hero_dead_x, hero_dead_y)
+            powder_sprite:set_opacity(0)
+            fairy_sprite:set_xy(hero_dead_x - 200, hero_dead_y - 64)
+            local movement_1 = sol.movement.create("target")
+            movement_1:set_target(hero_dead_x, hero_dead_y - 24)
+            movement_1:set_speed(156)
+            movement_1:start(fairy_sprite, function()
+              fairy_sprite:set_animation("wand")
+              sol.audio.play_sound("objects/fairy/interact")
+              powder_sprite:fade_in()
+              sol.timer.start(self, 1200, function()
+                powder_sprite:fade_out()
+                fairy_sprite:set_animation("fairy")
+                local movement_2 = sol.movement.create("target")
+                movement_2:set_target(hero_dead_x + 200, hero_dead_y - 64)
+                movement_2:set_speed(156)
+                movement_2:start(fairy_sprite, function()
+                  state = "waiting_end"
+                  game:add_life(6 * 4)  -- Restore 7 hearts.
+                  sol.timer.start(self, 1000, function()
+                    state = "resume_game"
+                    sol.audio.play_music(music)
+                    game:stop_game_over()
+                    sol.menu.stop(self)
+                    local map = game:get_map()
+                    if not game.teleport_in_progress then -- play custom transition at game startup
+                      game:set_suspended(true)
+                      local opening_transition = require("scripts/gfx_effects/radial_fade_out")
+                      opening_transition.start_effect(map:get_camera():get_surface(), game, "out", nil, function()
+                          game:set_suspended(false)
+                          if map.do_after_transition then
+                            map.do_after_transition()
+                          end
+                        end)
+                    end
+                  end)
+                end)
               end)
+
             end)
           else
             -- No fairy: game over.
@@ -160,6 +186,7 @@ local function initialise_game_over_features(game)
       hero_dead_sprite:draw(dst_surface, hero_dead_x, hero_dead_y)
       if state == "saved_by_fairy" then
         fairy_sprite:draw(dst_surface)
+        powder_sprite:draw(dst_surface)
       end
     end
   end
@@ -188,7 +215,7 @@ local function initialise_game_over_features(game)
       state = "finished"
       sol.audio.play_sound("danger")
       game:set_hud_enabled(false)
-      game:add_life(7 * 4)  -- Restore 7 hearts.
+      game:add_life(6 * 4)  -- Restore 7 hearts.
 
       if cursor_position == 0 then
         -- Save and continue.

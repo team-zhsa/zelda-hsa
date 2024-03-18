@@ -9,19 +9,12 @@
 
 local map = ...
 local game = map:get_game()
-local field_music_manager = require("scripts/maps/field_music_manager")
-
-map:register_event("on_draw", function(map)
-
-
-end)
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	game:show_map_name("ruins")
 	map:set_digging_allowed(true)
     -- Music
-  field_music_manager:init(map)
 
 end)
 
@@ -55,7 +48,6 @@ function owl_dialog()
       owl_movement_leave:set_speed(60)
       owl_movement_leave:start(owl_4, function()
         map:set_cinematic_mode(false, options)
-        --field_music_manager:init(map)
         hero:unfreeze()
       end) 
     end

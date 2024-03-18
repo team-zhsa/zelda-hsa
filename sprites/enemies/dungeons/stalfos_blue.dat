@@ -1,76 +1,30 @@
 animation{
   name = "walking",
-  src_image = "enemies/dungeons/stalfos_blue.png",
+  src_image = "enemies/dungeons/stalfos.png",
   frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
-    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 64, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 64, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 64, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-  },
-}
-animation{
-  name = "attack_landing",
-  src_image = "enemies/dungeons/stalfos_blue.png",
-  frame_delay = 50,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
   },
 }
 animation{
   name = "hurt",
-  src_image = "enemies/dungeons/stalfos_blue.png",
-  frame_delay = 50,
+  src_image = "enemies/dungeons/stalfos.png",
+  frame_delay = 20,
   frame_to_loop_on = 0,
   directions = {
-    { x = 160, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 256, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 256, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 256, y = 256, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4, num_columns = 1 },
+    { x = 256, y = 384, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4, num_columns = 1 },
   },
 }
 animation{
   name = "immobilized",
-  src_image = "enemies/dungeons/stalfos_blue.png",
-  directions = {
-    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 96, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-  },
-}
-animation{
-  name = "jumping",
-  src_image = "enemies/dungeons/stalfos_blue.png",
-  frame_delay = 50,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 160, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 160, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-  },
-}
-animation{
-  name = "shaking",
-  src_image = "enemies/dungeons/stalfos_blue.png",
-  frame_delay = 50,
-  frame_to_loop_on = 0,
-  directions = {
-    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 96, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-  },
-}
-animation{
-  name = "stopped_watching_left",
-  src_image = "enemies/dungeons/stalfos_blue.png",
+  src_image = "enemies/dungeons/stalfos.png",
   directions = {
     { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
     { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
@@ -79,12 +33,35 @@ animation{
   },
 }
 animation{
-  name = "stopped_watching_right",
-  src_image = "enemies/dungeons/stalfos_blue.png",
+  name = "jumping",
+  src_image = "enemies/dungeons/stalfos.png",
   directions = {
-    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 32, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 32, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 32, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 224, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 224, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 224, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 224, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+  },
+}
+animation{
+  name = "looking_around",
+  src_image = "enemies/dungeons/stalfos.png",
+  frame_delay = 400,
+  directions = {
+    { x = 96, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4 },
+    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4 },
+    { x = 96, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4 },
+    { x = 96, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 4 },
+  },
+}
+animation{
+  name = "shaking",
+  src_image = "enemies/dungeons/stalfos.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 32, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 32, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 32, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
   },
 }

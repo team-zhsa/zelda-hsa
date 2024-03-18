@@ -24,6 +24,7 @@ function submenu:on_started()
   self.save_dialog_cursor_pos = "left"
   self.save_dialog_state = 0
   self.text_color = { 224, 224, 224 }
+	self.text_stroke_color = {52, 52, 140}
 
   -- Dark surface whose goal is to slightly hide the game and better highlight the menu.
   local quest_w, quest_h = sol.video.get_quest_size()
@@ -69,7 +70,6 @@ function submenu:on_started()
   self.caption_text_1 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "fixed",
     font = menu_font,
     font_size = menu_font_size,
     color = self.text_color,
@@ -77,7 +77,6 @@ function submenu:on_started()
   self.caption_text_2 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "fixed",
     font = menu_font,
     font_size = menu_font_size,
     color = self.text_color,
@@ -133,10 +132,13 @@ function submenu:draw_caption(dst_surface)
 
     -- Draw caption text.
     if self.caption_text_2:get_text():len() == 0 then
-      self.caption_text_1:draw(dst_surface, width / 2, height / 2 + 89)
+      self.caption_text_1:set_xy(width / 2, height / 2 + 94)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     else
-      self.caption_text_1:draw(dst_surface, width / 2, height / 2 + 84)
-      self.caption_text_2:draw(dst_surface, width / 2, height / 2 + 94)
+      self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
+      self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 99)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
+      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
     end
   end
 end
@@ -173,7 +175,7 @@ function submenu:on_command_pressed(command)
   end
 
   if self.save_dialog_state == 0 then
-    -- The save dialog is not shown
+--[[     -- The save dialog is not shown
     if command == "attack" then
       sol.audio.play_sound("common/dialog/message_end")
       self.save_dialog_state = 1
@@ -186,7 +188,7 @@ function submenu:on_command_pressed(command)
       self.attack_command_effect_saved = self.game:get_custom_command_effect("attack")
       self.game:set_custom_command_effect("attack", "validate")
       handled = true
-    end
+    end ]]
   else
     -- The save dialog is visible.
     if command ~= "pause" then
@@ -203,7 +205,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_choice = 0
         self.save_dialog_cursor_pos = "left"
       end
-    elseif command == "action" or command == "attack" then
+--[[    elseif command == "action" or command == "attack" then
       -- Validate a choice.
       if self.save_dialog_state == 1 then
         -- After "Do you want to save?".
@@ -227,7 +229,7 @@ function submenu:on_command_pressed(command)
         if self.save_dialog_choice == 1 then
           sol.main.reset()
         end
-      end
+      end--]]
     end
   end
 

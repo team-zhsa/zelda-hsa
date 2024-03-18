@@ -40,7 +40,7 @@ hero_meta:register_event("on_position_changed", function(hero)
       elseif x < nx - 16 then-- Hero is at the left of the NPC
         npc:get_sprite():set_direction(2)
       elseif x > nx - 16 and x < nx + 16 then
-        if y > ny + 16 then -- Hero is under the NPC
+        if y > ny + 16 then -- Hero is below the NPC
           npc:get_sprite():set_direction(3)
         elseif y < ny - 16  then -- Hero is above the NPC
           npc:get_sprite():set_direction(1)
@@ -149,8 +149,8 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       local ground = hero:get_ground_below()
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
-        sol.audio.play_sound("objects/heart/heart")
       end
+      sol.audio.play_sound("menu/dialogue_end")
     end
   end)
 
@@ -162,6 +162,7 @@ end
 function hero_meta.get_previous_state(hero)
   return hero.prev_state, hero.prev_cstate_name
 end
+
 function hero_meta.show_ground_effect(hero, id)
 
   local map = hero:get_map()

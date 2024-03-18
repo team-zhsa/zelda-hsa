@@ -1,7 +1,7 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "_placeholder", -- Row 1 -- Ether Medallion
+  "food/fish", -- Row 1 -- Ether Medallion
 	"_placeholder", -- Bug catching net
   "_placeholder", -- Light rod
   "_placeholder", -- Thunder rod

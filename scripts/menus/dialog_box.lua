@@ -78,7 +78,7 @@ local function initialise_dialog_box_features(game)
   end
 
   dialog_box.dialog_surface = sol.surface.create(sol.video.get_quest_size())
-  dialog_box.box_img = sol.surface.create("hud/dialog_box_new.png")
+  dialog_box.box_img = sol.surface.create("hud/dialog_box.png")
   dialog_box.icons_img = sol.surface.create("hud/dialog_icons.png")
   dialog_box.end_lines_sprite = sol.sprite.create("hud/dialog_box_message_end")
 	
@@ -175,7 +175,8 @@ local function initialise_dialog_box_features(game)
 		-- Determine the position of the dialog box on the screen.
 		local map = game:get_map()
 		local camera_x, camera_y, camera_width, camera_height = map:get_camera():get_bounding_box()
-
+		local hero = map:get_entity("hero")
+		hero:set_animation("stopped")
 		local top = false
 		if self.vertical_position == "top" then
 			top = true

@@ -54,10 +54,10 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-
-  enemy:set_life(1)
+  enemy:set_life(10)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
+  --enemy:set_fire_reaction_sprite(sprite, reaction)
 end)
 
 -- Restart settings.
@@ -65,11 +65,12 @@ enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 1,
-  	boomerang = 1,
+  	boomerang = "immobilized",
   	explosion = 1,
   	sword = 1,
   	thrown_item = 1,
-  	fire = 1,
+    fire = "immobilized",
+    ice = 0,
   	jump_on = "ignored",
   	hammer = 1,
   	hookshot = 1,

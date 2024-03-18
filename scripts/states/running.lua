@@ -14,7 +14,9 @@ local map_tools=require("scripts/maps/map_tools")
 state:set_can_use_item(false)
 state:set_can_use_item("feather", true)
 state:set_can_traverse("crystal_block", false)
-state:set_can_traverse("jumper", true)
+state:set_can_use_jumper(true)
+state:set_jumper_delay(0)
+
 local directions = {
   {
     key="right",
@@ -69,7 +71,7 @@ function state:on_started()
   local map = entity:get_map()
   local hero = map:get_hero()
   local sprite=entity:get_sprite("tunic")
-	local running_speed = 200
+	local running_speed = 256
 	local ladder_running_speed = 16
   entity:get_sprite("trail"):set_animation("running") 
   sprite:set_animation("walking")

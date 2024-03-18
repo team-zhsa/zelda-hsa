@@ -20,7 +20,6 @@ end
 -- Event called at initialization time, as soon as this map becomes is loaded.
 map:register_event("on_started", function() 
 	guard_walk()
-	print(num_dialogue)
 	game:show_map_name("kakarico_village")
 	map:set_digging_allowed(true)
 	if game:is_step_done("lost_woods_mapper_met") then

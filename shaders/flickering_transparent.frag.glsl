@@ -43,7 +43,7 @@ void main() {
 
     const vec3 black = vec3(0.0,0.0,0.00)/255.0;
     const vec3 white = vec3(255.0,198.0,57.0)/0.0;
-    if(mod(float(sol_time),250.0) > 225.0)
+    if(mod(float(sol_time),80.0) > 40.0)
       FragColor.rgb = (lum < 0.5) ? white : black;
     else
       FragColor.rgb = (lum < 0.5) ? black : white;

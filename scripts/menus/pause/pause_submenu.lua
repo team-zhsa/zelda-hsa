@@ -36,7 +36,7 @@ function submenu:on_started()
 	-- Dark surface whose goal is to slightly hide the game and better highlight the menu.
 	local quest_w, quest_h = sol.video.get_quest_size()
 	self.dark_surface = sol.surface.create(quest_w, quest_h)
-	self.dark_surface:fill_color({224, 224, 224})
+	self.dark_surface:fill_color({180, 180, 180})
 	self.dark_surface:set_blend_mode("multiply")
 
 	local menu_font, menu_font_size = language_manager:get_menu_font()
@@ -243,6 +243,8 @@ function submenu:on_command_pressed(command)
 				-- After "Do you want to save?".
 				self.save_dialog_state = 2
 				if self.save_dialog_choice == 0 then
+					self.game:set_value("savegame_version", "1.17")
+					self.game:set_value("time_saved", os.date("%d/%m/%Y %H:%M", os.time()))
 					self.game:save()
 					sol.audio.play_sound("ok")
 				else
@@ -281,8 +283,8 @@ function submenu:draw_background(dst_surface)
 
 	-- Draw the menu GUI window and the title (in the correct language)
 	local submenu_index = self.game:get_value("pause_last_submenu")
-	local submenu_background_column = ((submenu_index - 1) % 4)
-	local submenu_background_row = math.ceil(submenu_index / 4) - 1
+	local submenu_background_column = ((submenu_index - 1) % 3)
+	local submenu_background_row = math.ceil(submenu_index / 3) - 1
 
 	self.background_surfaces:draw_region(
 			320 * submenu_background_column, 240 * submenu_background_row,           -- region x, y

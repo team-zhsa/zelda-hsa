@@ -38,8 +38,8 @@ COMPAT_VARYING vec4 sol_vcolor;
 
 void main() {
     vec3 texel = COMPAT_TEXTURE(sol_texture, sol_vtex_coord).rgb;
-    FragColor = vec4(texel.x,texel.y,texel.z, 1);
-    float lum = dot(texel,vec3(1, 1, 1));
+    FragColor = vec4(texel.x,texel.y,texel.z, 1.0);
+    float lum = dot(texel,vec3(1.0, 1.0, 1.0));
 
     const vec3 black = vec3(0.0,0.0,0.00)/255.0;
     const vec3 white = vec3(223.0,223.0,223.0)/255.0;

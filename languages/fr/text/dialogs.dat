@@ -46,8 +46,8 @@ dialog{
   id = "_cannot_open_without_big_key",
   text = [[
 Tu ne peux sûrement pas ouvrir
-cette porte avec les petites clés
-que tu as !
+cette serrure avec les petites
+clés que tu as !
 Essaie d'en trouver une plus
 grande.
 ]],
@@ -1056,7 +1056,7 @@ dialog{
 Tu as le Plan ! $0
 Sers-t'en pour voir ta position
 et le reste du donjon. Appuie
-sur le bouton W.
+sur le bouton \[controller_select\].
 ]],
 }
 
@@ -1342,7 +1342,7 @@ dialog{
   icon = "111",
   text = [[
 Tu as trouvé cinq rubis.
-O joie !
+Fantastique !
 ]],
 }
 
@@ -1351,7 +1351,7 @@ dialog{
   icon = "112",
   text = [[
 Tu as trouvé vingt rubis.
-O joie !
+Ô joie !
 ]],
 }
 
@@ -1359,7 +1359,7 @@ dialog{
   id = "_treasure.rupee.4",
   icon = "120",
   text = [[
-Tu as trouvé 50 rubis.
+Tu as trouvé cinquante rubis.
 Merveilleux !
 ]],
 }
@@ -1368,8 +1368,8 @@ dialog{
   id = "_treasure.rupee.5",
   icon = "121",
   text = [[
-Tu as trouvé 100 rubis.
-Fantastique !
+Tu as trouvé cent rubis.
+Incroyable !
 ]],
 }
 
@@ -1377,8 +1377,8 @@ dialog{
   id = "_treasure.rupee.6",
   icon = "122",
   text = [[
-Tu as trouvé 200 rubis.
-Quelle extase !
+Tu as trouvé deux cents rubis.
+Magnifique !
 ]],
 }
 
@@ -1386,8 +1386,8 @@ dialog{
   id = "_treasure.rupee.7",
   icon = "130",
   text = [[
-Tu as trouvé 500 rubis.
-Quelle extase !
+Tu as trouvé cinq cents rubis.
+C'est exceptionnel !
 ]],
 }
 
@@ -1395,7 +1395,7 @@ dialog{
   id = "_treasure.rupee.8",
   icon = "131",
   text = [[
-Tu as trouvé 1000 rubis.
+Tu as trouvé mille rubis.
 Quelle extase !
 ]],
 }
@@ -1404,8 +1404,8 @@ dialog{
   id = "_treasure.rupee.9",
   icon = "132",
   text = [[
-Tu as trouvé 2000 rubis.      
-Incroyable !
+Tu as trouvé deux mille rubis.      
+Sublime !
 ]],
 }
 
@@ -1876,50 +1876,6 @@ de te revoir!
 }
 
 dialog{
-  id = "codes.1",
-  text = [[
-Le mot demandé est :
-Page 5, Ligne 4, Mot 3
-]],
-}
-
-dialog{
-  id = "codes.2",
-  text = [[
-Le mot demandé est :
-Page 8, Ligne 10, Mot 5
-]],
-}
-
-dialog{
-  id = "codes.3",
-  text = [[
-Le mot demandé est :
-Page 2, Ligne 7, Mot 10
-]],
-}
-
-dialog{
-  id = "codes.4",
-  text = [[
-Le mot demandé est :
-Page 8, Ligne 6, Mot 9
-]],
-}
-
-dialog{
-  id = "codes.question",
-  text = [[
-Ceci est une protection
-anti-copie. Merci de 
-consulter votre manuel.
-Appuyez sur les 
-interrupteurs correspondant
-au mot demandé.
-]],
-}
-
-dialog{
   id = "items.mushroom.1",
   skip = "all",
   text = [[
@@ -2191,6 +2147,111 @@ Alors va-t-en !
 }
 
 dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_already_playing",
+  text = [[
+Au lieu de rester planter là,
+tu ferais mieux de courir jusqu'à
+mon frère dans la forêt
+de Firone !$0
+L'heure tourne !
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_bridge_closed",
+  text = [[
+Je suis le marathonien errant !$0
+Je cherche un coureur à l'esprit
+du guerrier sanguinaire !
+Mon frère est dans la forêt de
+Firone, mais les soldats ont
+bloqué l'accès à la plaine du
+Sud, donc je suis coincé ici.$0
+Reviens plus tard si tu veux
+courir !
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_intro",
+  text = [[
+Je suis le marathonien errant !$0
+Cours d'ici jusqu'à la ligne
+d'arrivée !
+Tu m'as l'air d'être un bon
+coureur ! Je suis sûr que tu
+peux y arriver !
+Pour participer, c'est 90 rubis !$0
+Si tu franchis la ligne d'arrivée
+dans les temps, tu gagneras un
+super prix.$0 Les ponts vers la
+plaine du Sud sont à nouveau
+ouverts et je cherche un coureur
+digne de faire cette course.
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_no",
+  text = [[
+Si tu changes d'avis, reviens
+me voir ! Je reste ici !
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_no_shoes",
+  text = [[
+Je suis le marathonien errant !$0
+Cours d'ici jusqu'à la ligne
+d'arrivée !
+Mais tu comptes quand même pas
+courir avec des bottes comme ça ?
+Reviens quand tu auras de
+nouvelles bottes.
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_previous_record",
+  text = [[
+Le précédent record est de
+$v minutes.
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_question",
+  question = "1",
+  text = [[
+Tu veux tenter ta chance ?
+Ouais !
+Euh, non...
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_timeout",
+  text = [[
+Le temps est écoulé !
+]],
+}
+
+dialog{
+  id = "maps.caves.north_field.marathon_man.marathon_yes",
+  text = [[
+L'arrivée se trouve à côté de
+la chaumière du cartographe
+de la forêt de Firone.
+Je t'ai indiqué l'endroit sur ta
+carte. Une fois là-bas, mon
+frère t'attendra devant la
+maison. Le temps limite est
+de $v minutes !
+]],
+}
+
+dialog{
   id = "maps.caves.rito_village.varuna.tournament_of_the_strongest_finished",
   text = [[
 Aaargh.$0.$0.$0 Maudit sois-tu !$0
@@ -2251,20 +2312,16 @@ Débutons alors !
 }
 
 dialog{
-  id = "maps.dungeons.1.boss_welcome",
+  id = "maps.dungeons.1.boss_description",
   text = [[
-Je suis TENTACLOPO, le maître
-de ce donjon !!!
-
-Je vais te corriger !!!
+Tentacule des profondeurs
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.1.door_timer",
+  id = "maps.dungeons.1.boss_name",
   text = [[
-La porte qui tu as ouverte se
-ferme dans 15 secondes !
+Tentaclopo
 ]],
 }
 
@@ -2287,7 +2344,7 @@ prochain temple.
 dialog{
   id = "maps.dungeons.1.welcome_description",
   text = [[
-Ruines
+Donjon 1
 ]],
 }
 
@@ -2295,37 +2352,259 @@ dialog{
   id = "maps.dungeons.1.welcome_name",
   skip = "current",
   text = [[
-Donjon 1
+Ruines du Nord
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.10.treasure.need_keys",
+  id = "maps.dungeons.10.boss_description",
   text = [[
-Pour accéder au coffre, il te faut
-déverrouiller quatre blocs avec
-les clés suivantes :
-- Rouge
-- Vert
-- Jaune
-- Bleu
+<<<
+]],
+}
 
-Elles sont aux quatre coins du
-donjon, à toi de les trouver !
+dialog{
+  id = "maps.dungeons.10.boss_name",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.10.welcome_description",
+  text = [[
+Donjon 10
+]],
+}
+
+dialog{
+  id = "maps.dungeons.10.welcome_name",
+  text = [[
+Tour des Vents
+]],
+}
+
+dialog{
+  id = "maps.dungeons.11.boss_description",
+  text = [[
+Regard givrant
+]],
+}
+
+dialog{
+  id = "maps.dungeons.11.boss_name",
+  text = [[
+Kholdstare
 ]],
 }
 
 dialog{
   id = "maps.dungeons.11.welcome_description",
   text = [[
-Temple de la Glace
+Donjon 11
 ]],
 }
 
 dialog{
   id = "maps.dungeons.11.welcome_name",
   text = [[
-Donjon 11
+Temple des Glaces
+
+]],
+}
+
+dialog{
+  id = "maps.dungeons.12.boss_description",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.12.boss_name",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.12.welcome_description",
+  skip = "current",
+  text = [[
+Donjon 12
+]],
+}
+
+dialog{
+  id = "maps.dungeons.12.welcome_name",
+  skip = "current",
+  text = [[
+Temple Oublié
+]],
+}
+
+dialog{
+  id = "maps.dungeons.13.boss_description",
+  text = [[
+Oculaire aqueux
+]],
+}
+
+dialog{
+  id = "maps.dungeons.13.boss_name",
+  text = [[
+Vitreux
+]],
+}
+
+dialog{
+  id = "maps.dungeons.13.welcome_description",
+  skip = "current",
+  text = [[
+Donjon 13
+]],
+}
+
+dialog{
+  id = "maps.dungeons.13.welcome_name",
+  skip = "current",
+  text = [[
+Caverne
+]],
+}
+
+dialog{
+  id = "maps.dungeons.14.boss_description",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.14.boss_name",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.14.welcome_description",
+  skip = "current",
+  text = [[
+Donjon 14
+]],
+}
+
+dialog{
+  id = "maps.dungeons.14.welcome_name",
+  skip = "current",
+  text = [[
+Puits de Cocorico
+]],
+}
+
+dialog{
+  id = "maps.dungeons.15.boss_description",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.15.boss_name",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.dungeons.15.welcome_description",
+  skip = "current",
+  text = [[
+Donjon 15
+]],
+}
+
+dialog{
+  id = "maps.dungeons.15.welcome_name",
+  skip = "current",
+  text = [[
+Vah' Naboris
+]],
+}
+
+dialog{
+  id = "maps.dungeons.16.boss_description",
+  text = [[
+Sorcier des ténèbres
+]],
+}
+
+dialog{
+  id = "maps.dungeons.16.boss_name",
+  text = [[
+Aganhim
+]],
+}
+
+dialog{
+  id = "maps.dungeons.16.welcome_description",
+  skip = "current",
+  text = [[
+
+]],
+}
+
+dialog{
+  id = "maps.dungeons.16.welcome_name",
+  skip = "current",
+  text = [[
+Château d'Hyrule
+]],
+}
+
+dialog{
+  id = "maps.dungeons.17.boss_description",
+  text = [[
+]],
+}
+
+dialog{
+  id = "maps.dungeons.17.boss_name",
+  text = [[
+Ganon
+]],
+}
+
+dialog{
+  id = "maps.dungeons.17.welcome_description",
+  skip = "current",
+  text = [[
+Donjon final
+]],
+}
+
+dialog{
+  id = "maps.dungeons.17.welcome_name",
+  skip = "current",
+  text = [[
+Tour de Ganon
+]],
+}
+
+dialog{
+  id = "maps.dungeons.18.welcome_description",
+  skip = "current",
+  text = [[
+Quelque part
+]],
+}
+
+dialog{
+  id = "maps.dungeons.18.welcome_name",
+  skip = "current",
+  text = [[
+Donjon secret
 ]],
 }
 
@@ -2335,6 +2614,20 @@ dialog{
 Réfléchis un peu...
 Le coffre bleu s'ouvre avec la
 clé BLEUE.
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.boss_description",
+  text = [[
+Spectre de l'au-delà
+]],
+}
+
+dialog{
+  id = "maps.dungeons.2.boss_name",
+  text = [[
+Ganon Spectral
 ]],
 }
 
@@ -2355,7 +2648,7 @@ dialog{
   text = [[
 Il faut tirer le levier pour
 ouvrir le sol. Appuie sur le
-bouton A ainsi que sur la manette
+bouton \[controller_a\] ainsi que sur la manette
 vers le bas.
 ]],
 }
@@ -2363,28 +2656,21 @@ vers le bas.
 dialog{
   id = "maps.dungeons.2.indication",
   text = [[
-...PRAIRIE...   
-...PRAIRIE...   
-Elle t'attend.
+<<<
 ]],
 }
 
 dialog{
   id = "maps.dungeons.2.owl_2",
   text = [[
-Si les blocs se 
-ressemblent, un 
-nouveau chemin  
-s'ouvrira.
+<<<
 ]],
 }
 
 dialog{
   id = "maps.dungeons.2.owl_3",
   text = [[
-Une partie du sol 
-s'élève. Actionne le     
-cristal bleu.
+<<<
 ]],
 }
 
@@ -2392,7 +2678,7 @@ dialog{
   id = "maps.dungeons.2.welcome_description",
   skip = "current",
   text = [[
-Temple de la forêt
+Donjon 2
 ]],
 }
 
@@ -2400,7 +2686,37 @@ dialog{
   id = "maps.dungeons.2.welcome_name",
   skip = "current",
   text = [[
-Donjon 2
+Temple de la forêt
+]],
+}
+
+dialog{
+  id = "maps.dungeons.20.welcome_description",
+  skip = "current",
+  text = [[
+
+]],
+}
+
+dialog{
+  id = "maps.dungeons.20.welcome_name",
+  skip = "current",
+  text = [[
+Phare Ancien
+]],
+}
+
+dialog{
+  id = "maps.dungeons.3.boss_description",
+  text = [[
+Reptile de feu
+]],
+}
+
+dialog{
+  id = "maps.dungeons.3.boss_name",
+  text = [[
+Roi Helmasaur
 ]],
 }
 
@@ -2419,7 +2735,7 @@ dialog{
   id = "maps.dungeons.3.welcome_description",
   skip = "current",
   text = [[
-Temple du Feu
+Donjon 3
 ]],
 }
 
@@ -2427,38 +2743,77 @@ dialog{
   id = "maps.dungeons.3.welcome_name",
   skip = "current",
   text = [[
-Donjon 3
+Temple du Feu
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.4.indication",
+  id = "maps.dungeons.4.boss_description",
   text = [[
-...BAIE...      
-Ta route passe  
-par la baie.
+Gohma
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.4.welcome",
+  id = "maps.dungeons.4.boss_name",
   text = [[
-        Niveau 4       
-   Abîme du poisson
+Monstre insectoïde géant
+]],
+}
+
+dialog{
+  id = "maps.dungeons.4.welcome_description",
+  text = [[
+Donjon 4
+]],
+}
+
+dialog{
+  id = "maps.dungeons.4.welcome_name",
+  text = [[
+Intérieur de l'Arbre Mojo
+]],
+}
+
+dialog{
+  id = "maps.dungeons.5.boss_description",
+  text = [[
+Dinosaure infernal
+]],
+}
+
+dialog{
+  id = "maps.dungeons.5.boss_name",
+  text = [[
+Roi Dodongo
 ]],
 }
 
 dialog{
   id = "maps.dungeons.5.welcome_description",
   text = [[
-Caverne Dodongo
+Donjon 5
 ]],
 }
 
 dialog{
   id = "maps.dungeons.5.welcome_name",
   text = [[
-Donjon 5
+Caverne Dodongo
+]],
+}
+
+dialog{
+  id = "maps.dungeons.6.boss_description",
+  text = [[
+Amibe aquatique géante
+]],
+}
+
+dialog{
+  id = "maps.dungeons.6.boss_name",
+  text = [[
+Morpha
 ]],
 }
 
@@ -2476,53 +2831,98 @@ niveau de l'eau.
 dialog{
   id = "maps.dungeons.6.welcome_description",
   text = [[
-Temple de l'eau
+Donjon 6
 ]],
 }
 
 dialog{
   id = "maps.dungeons.6.welcome_name",
   text = [[
-Donjon 6
+Temple de l'Eau
+]],
+}
+
+dialog{
+  id = "maps.dungeons.7.boss_description",
+  text = [[
+Lamnolas Géants
+]],
+}
+
+dialog{
+  id = "maps.dungeons.7.boss_name",
+  text = [[
+Mille-pattes de sable
 ]],
 }
 
 dialog{
   id = "maps.dungeons.7.welcome_description",
   text = [[
-Palais du désert
+Donjon 7
 ]],
 }
 
 dialog{
   id = "maps.dungeons.7.welcome_name",
   text = [[
-Donjon 7
+Palais du Désert
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.8.indication",
+  id = "maps.dungeons.8.boss_description",
   text = [[
-L'heure a sonné.
-L'Oeuf Sacré    
-te réclame.
+Anémone parasite
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.8.welcome",
+  id = "maps.dungeons.8.boss_name",
   text = [[
-        Niveau 8      
-   Roc de la tortue
+Arrghus
 ]],
 }
 
 dialog{
-  id = "maps.dungeons.9.welcome",
+  id = "maps.dungeons.8.welcome_description",
   text = [[
-        Niveau secret       
-  Temple des couleurs
+Donjon 8
+]],
+}
+
+dialog{
+  id = "maps.dungeons.8.welcome_name",
+  text = [[
+Ventre de Jabu-Jabu
+]],
+}
+
+dialog{
+  id = "maps.dungeons.9.boss_description",
+  text = [[
+Lion cracheur de feu
+]],
+}
+
+dialog{
+  id = "maps.dungeons.9.boss_name",
+  text = [[
+Lynelium
+]],
+}
+
+dialog{
+  id = "maps.dungeons.9.welcome_description",
+  text = [[
+Donjon 9
+]],
+}
+
+dialog{
+  id = "maps.dungeons.9.welcome_name",
+  text = [[
+Pic César
 ]],
 }
 
@@ -2719,9 +3119,17 @@ Reviens dans un moment !
 dialog{
   id = "maps.houses.east_castle.blacksmith.ultimate_sword",
   text = [[
-Qu'est-il arrivé à ton épée ? Ce tranchant, cette brillance... Je n'arrive pas à y croire, j'ai été battu !
-...
-La vie est pleine de surprises... J'aurais jamais cru que quelqu'un d'aussi talentueux existe... Bien, je vais tout faire opur devenir le meilleur !
+
+Qu'est-il arrivé à ton épée ?
+
+Ce tranchant, cette brillance...
+Je n'arrive pas à y croire, j'ai
+été battu ! $0...$0
+La vie est pleine de surprises...
+J'aurais jamais cru que quelqu'un
+d'aussi talentueux existe...
+Bien, je vais tout faire pour
+devenir le meilleur !
 ]],
 }
 
@@ -2751,7 +3159,7 @@ dialog{
   id = "maps.houses.east_castle.shop.merchant_welcome",
   text = [[
 Bonjour. Choisis ce que tu
-aimes. Appuie sur A.
+aimes. Appuie sur \[controller_a\].
 ]],
 }
 
@@ -2799,6 +3207,7 @@ dialog{
   id = "maps.houses.faron_woods.collector_house.has_rare_pearl",
   text = [[
 Tu savais qu'en allant
+<<<
 ]],
 }
 
@@ -2841,173 +3250,70 @@ Cocorico.
 dialog{
   id = "maps.houses.fortune_teller.10",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Apparemment,    
-dans les        
-Dunes de Yarna, 
-au Sud-Est      
-de l'île,       
-se trouve la    
-Clé-Poisson.    
-Ecoute, je ne   
-peux pas être   
-plus explicite  
-que cela...     
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.11",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tu es hanté     
-par un fantôme ? 
-Je te conseille 
-de l'amener là  
-où il veut.     
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.12",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Dans la Baie,   
-un Poisson-Chat 
-ouvre sa gueule.
-Va donc y nager.
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.13",
   text = [[
-DRING DRING!!   
-Pépé le Ramollo 
-à l'appareil... 
-Es-tu allé au   
-Temple du Masque
-situé au Nord   
-du Village      
-des Animaux ?    
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.14",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Connais-tu      
-le Coq Volant   
-du Village      
-des Mouettes ?   
-Autrefois,      
-je m'agrippais  
-à ses pattes    
-et je volais !   
-Hélas...        
-Il est mort et  
-gît désormais   
-sous la         
-Girouette.      
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.15",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-La tête de la   
-tortue te gêne ? 
-Donne-lui       
-de la vie pour  
-la déplacer...  
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.16",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil ... 
-D'après Mamie   
-Youpi, quelque  
-chose est caché 
-derrière        
-la Cascade de   
-la Cordillère.  
-Ce renseignement
-t'est utile ?    
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.17",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-De mon temps,   
-il y avait      
-une Tour dans   
-la partie est de
-la Cordillère.  
-Tu devrais aller
-y faire un tour !
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.18",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Dirige-toi vers 
-l'Oeuf Sacré,   
-niché en haut   
-du Mt Tamaranch.
-Link ,          
-sois prudent.   
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.19",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tu t'es perdu   
-dans l'Oeuf ?    
-Désolé, mais    
-je ne peux pas  
-t'aider !        
-Va donc te      
-renseigner à    
-la Bibliothèque.
-Désolé hein !    
-Salut ! CLIC !
+<<<
 ]],
 }
 
@@ -3023,84 +3329,35 @@ quelque chose d'important.
 dialog{
   id = "maps.houses.fortune_teller.20",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tu devrais      
-ramener Toutou à
-Mme Miaou Miaou.
-Elle sera folle 
-de joie.        
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.21",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tu aimerais     
-chanter ?        
-Va voir Wart    
-la Grenouille.  
-Il habite dans  
-le Dédale       
-des Panneaux.   
-Il est bon mais 
-un peu cher...  
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.22",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tu te défends   
-très bien !      
-As-tu visité    
-le Poulailler,  
-en haut de      
-la montagne ?    
-A côté, il y a  
-une cave qui    
-renferme un     
-objet important.
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.23",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Tes ennemis     
-sont coriaces ?  
-Collecte        
-donc tous       
-les Coquillages.
-Sois confiant !  
-Bonne chance !   
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.24",
   text = [[
-DRING DRING !!   
-Oui c'est Pépé ! 
-Courage, encore 
-un effort...    
-Je suis de tout 
-coeur avec toi. 
-Vas-y mon gars !
+<<<
 ]],
 }
 
@@ -3134,65 +3391,28 @@ village.
 dialog{
   id = "maps.houses.fortune_teller.6",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Il y a une      
-bibliothèque    
-dans le village.
-Peut-être       
-apportera-t'elle
-une réponse à   
-tes questions ?  
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.7",
   text = [[
-DRRING! DRRING ! 
-C'est moi ! Pépé !
-Tu n'as pas     
-trouvé les cinq 
-feuilles d'Or ?  
-Va parler au    
-corbeau du      
-château. Il peut
-sûrement aider  
-un p'tit gars   
-comme toi !      
-CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.8",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-As-tu acheté    
-une Pelle ?      
-Creuse le sol,  
-peut-être       
-auras-tu        
-de la chance ?   
-Salut ! CLIC !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.fortune_teller.9",
   text = [[
-DRING DRING !!   
-Pépé le Ramollo 
-à l'appareil... 
-Va vite à la    
-Cave aux Clés,  
-située dans     
-La Prairie.     
-Salut ! CLIC !
+<<<
 ]],
 }
 
@@ -3424,6 +3644,14 @@ dialog{
   text = [[
 Tu es doué vraiment ! Au plaisir
 de te revoir !
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.bakery.merchant_welcome",
+  text = [[
+Bonjour jeune héros !
+Choisis ce que tu aimes.
 ]],
 }
 
@@ -3680,6 +3908,34 @@ d'accord ?
 }
 
 dialog{
+  id = "maps.houses.hyrule_town.temple_of_time.need_pendants",
+  text = [[
+---------------------------------
+--- Courage, Sagesse, Pouvoir ---
+---------------------------------
+Seul celui qui possède ces trois
+pendentifs pourra manier l'Epée
+de Légende.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.temple_of_time.product_heart",
+  text = [[
+Un coeur pour te régénérer si tu es
+mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.hyrule_town.temple_of_time.product_milk",
+  text = [[
+Du lait Meuh-Meuh venu tout
+droit du Pic Eliott.
+]],
+}
+
+dialog{
   id = "maps.houses.hyrule_town.vase_house.soldier_gate_closed",
   text = [[
 Les portes de la ville sont
@@ -3725,62 +3981,35 @@ qu'il détestait la lumière.
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_2",
   text = [[
-Au secours !     
-Quelle horreur ! 
-Toutou a été chien-nappé 
-par des Moblins !    
-OHH ! AHH !       
-Je t'en prie, va secourir
-mon Toutou !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_3",
   text = [[
-Ah! Tu m'as ramené 
-mon Toutou adoré !   
-Quelle joie !    
-Et en plus, tu veux 
-aller le promener ?    
-Cela m'arrange ! 
-Du fond de mon coeur,
-merci !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_4",
   text = [[
-Je te suis vraiment 
-reconnaissante ! 
-C'est si gentil d'avoir 
-ramené mon Toutou !     
-Comment te prouver      
-ma gratitude??  
-BISOU BISOU...  
-Tu as eu la récompense 
-de Mme Miaou Miaou.
-Petit veinard...
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_1_1",
   text = [[
-Ouaf Ouaf !      
-Ouaf Ouaf !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_1",
   text = [[
-Ouaf Ouaf ! 
-Je suis un 
-chien très branché !
-J'aimerais avoir des 
-accessoires à la mode !
+<<<
 ]],
 }
 
@@ -3788,36 +4017,21 @@ dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_2",
   question = "1",
   text = [[
-Ouaf Ouaf ! 
-Je suis un 
-chien très branché !
-Ce ruban, c'est d'un
-chic ! Il me le faut 
-absolument... Tu 
-l'échanges contre
-ma pâtée ? 
-
-
-Oui
-Non   
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_3",
   text = [[
-Je n'arrive pas à 
-y croire...   
-Tu es nul !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_4",
   text = [[
-Génial, merci !  
-En échange,     
-voici ma patée ...
+<<<
 ]],
 }
 
@@ -4357,6 +4571,7 @@ dialog{
   id = "maps.houses.north_field.sanctuary.altar_paper_left",
   text = [[
 Pentagone de gauche
+<<<
 ]],
 }
 
@@ -4364,6 +4579,7 @@ dialog{
   id = "maps.houses.north_field.sanctuary.altar_paper_right",
   text = [[
 Pentagone de droite
+<<<
 ]],
 }
 
@@ -4607,6 +4823,7 @@ dialog{
   text = [[
 Salut petit ! Tu veux bien nous
 aider à couper tous ces
+<<<
 ]],
 }
 
@@ -4788,21 +5005,6 @@ attaques des ennemis.
 }
 
 dialog{
-  id = "maps.kaepora_gaebora.owl_1",
-  text = [[
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
-Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
-Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla.
-Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat.
-Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique.
-Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-]],
-}
-
-dialog{
   id = "maps.out.cordinia_town.shop.bombs",
   text = [[
 Trois bombes, pour tout démolir !
@@ -4873,16 +5075,14 @@ Garde-là pour toi, alors !
 dialog{
   id = "maps.out.death_mountains.sign_1",
   text = [[
-Est : Enfin !
-Vill. des Animaux
+<<<
 ]],
 }
 
 dialog{
   id = "maps.out.death_mountains.sign_2",
   text = [[
-Est : Enfin !
-Vill. des Animaux
+<<<
 ]],
 }
 
@@ -4963,7 +5163,7 @@ dialog{
 T'as l'air plutôt costaud pour
 un enfant. Combien tu peux
 soulever ? Appuie sur le
-bouton A en touchant un
+bouton \[controller_a\] en touchant un
 objet pour le soulever.
 
 ]],
@@ -4984,7 +5184,7 @@ dialog{
 Je parie que tu meurs d'envie
 de te servir d'une épée !
 Quand tu en auras une,
-appuie sur le bouton B
+appuie sur le bouton \[controller_B\]
 pour t'en servir.
 ]],
 }
@@ -5020,15 +5220,30 @@ haut de cette tour !
 dialog{
   id = "maps.out.east_mountains.sign_4",
   text = [[
-Maison aux      
-Coquillages
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.eventide_island.sign_1",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_already_finished",
+  text = [[
+Le jeu est terminé. Reviens voir
+mon frère aux ruines si tu veux
+rejouer !
 ]],
 }
 
 dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_finished_higher",
   text = [[
-Ton temps est de $v.
+Ton temps est de $v.$0
 C'est dommage, tu aurais
 pu faire un peu mieux...
 ]],
@@ -5036,9 +5251,8 @@ pu faire un peu mieux...
 
 dialog{
   id = "maps.out.faron_woods.marathon_man.marathon_finished_lower",
-  question = "1",
   text = [[
-Ton temps est de $v.
+Ton temps est de $v.$0
 Félicitations ! La prochaine
 fois, peut-être que tu pourras
 faire encore mieux !
@@ -5055,43 +5269,16 @@ toi.
 }
 
 dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_previous_record",
-  text = [[
-Le précédent record est de
-$v.
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_rupee",
+  id = "maps.out.faron_woods.marathon_man.marathon_rupees",
   text = [[
 Tiens, voici des rubis pour toi.
 ]],
 }
 
 dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_timeout",
-  text = [[
-Le temps est écoulé !
-]],
-}
-
-dialog{
   id = "maps.out.faron_woods.sign_1",
   text = [[
-Bananes, bananes ! 
-Kik i!     
-Les copains, venez !
-On va le remercier !
-]],
-}
-
-dialog{
-  id = "maps.out.finallis_island.sign_1",
-  text = [[
-Le pont des singes      
-est prêt !       
-Salut ! Kiki !
+<<<
 ]],
 }
 
@@ -5154,8 +5341,47 @@ téléporter ici.
 dialog{
   id = "maps.out.haunted_forest.sign_1",
   text = [[
-Vous ne pouvez pas aller plus
-loin.
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier",
+  next = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier_strike",
+  text = [[
+Ah, te voilà enfin $v...$0
+Je t'attendais depuis tout à
+l'heure.
+Agahnim a enlevé la princesse
+Zelda et l'a enfermé en haut de
+cette tour...$0
+Le seul moyen de briser cette
+barrière est l'épée de Légende
+que tu as entre tes mains.
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.castle_seal.sahasrahla_barrier_strike",
+  text = [[
+Frappe cette barrière pour
+pouvoir monter dans la tour...$0
+Le destin du pays est entre tes
+mains !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.castle_seal.zelda_go_to_castle",
+  text = [[
+$2$v...$0 $v...$0 $v...$0
+C'est Zelda...
+
+Tu as enfin recouvré tes pouvoirs.
+Il est temps pour toi de sauver
+le Royaume.
+Rends-toi au Château d'Hyrule ! $0
+Je crois en toi !
 ]],
 }
 
@@ -5196,17 +5422,29 @@ Il est pas frais mon poisson ?
 }
 
 dialog{
+  id = "maps.out.hyrule_town.fisher.welcome_no_fish",
+  text = [[
+Bienvenue à la meilleure
+poissonnerie d'Hyrule ! $0
+
+J'attends encore ma livraison
+de poissons... 
+Reviens plus tard alors !
+]],
+}
+
+dialog{
   id = "maps.out.hyrule_town.fisher.welcome_no_lamp",
   text = [[
 Bienvenue à la meilleure
 poissonnerie d'Hyrule !
+
 Malheureusement je n'ai pas
-encore reçu de poisson donc
-il n'y en a pas.$0 Par contre, si
-tu vas dans l'égout derrière le
-mur, il y a un magicien qui
-pourra t'aider ! Mais ne le dis
-à personne !
+encore reçu de poisson.$0
+Par contre, si tu vas dans
+l'égout derrière le mur, il y a
+un magicien qui pourra t'aider !
+Mais ne le dis à personne !
 ]],
 }
 
@@ -5215,11 +5453,13 @@ dialog{
   text = [[
 Bienvenue à la meilleure
 poissonnerie d'Hyrule ! $0
+
 J'attends encore ma livraison
 de poissons... $0 Par contre,
-il paraît qu'à la forge au nord-
+si tu dois quitter la ville, il
+paraît qu'à la forge au nord-
 est de la ville, il font de super
-couteaux !
+épées !
 ]],
 }
 
@@ -5286,8 +5526,7 @@ très louche !
 dialog{
   id = "maps.out.hyrule_town.shop.bombs",
   text = [[
-Voici des bombes 
-artisanales pas
+Voici des bombes artisanales pas
 cher !
 ]],
 }
@@ -5421,7 +5660,7 @@ dialog{
   text = [[
 Si tu as un objet dans ton
 inventaire, sélectionne-le
-et appuie sur X ou V
+et appuie sur \[controller_x\] ou \[controller_y\]
 pour l'équiper !
 ]],
 }
@@ -5430,8 +5669,8 @@ dialog{
   id = "maps.out.hyrule_town.soldiers.tip_pause",
   text = [[
 Pour sauvegarder ton jeu,
-appuie sur START puis sur
-le bouton B !
+appuie sur \[controller_start\] puis sur
+le bouton \[controller_b\] !
 ]],
 }
 
@@ -5515,8 +5754,7 @@ dialog{
   id = "maps.out.kakarico_village.fishman_3",
   skip = "all",
   text = [[
-Vis ta vie !     
-Sois un peu plus motivé !
+<<<
 ]],
 }
 
@@ -5533,13 +5771,7 @@ dialog{
   id = "maps.out.kakarico_village.marine_1",
   skip = "all",
   text = [[
-Bonjour $v !  
-Tarkin est parti dans
-la forêt chercher des    
-champignons.    
-Moi,je préfère chanter.        
-Ecoute ceci : c'est la 
-Ballade du Poisson-Rêve.
+<<<
 ]],
 }
 
@@ -5547,12 +5779,7 @@ dialog{
   id = "maps.out.kakarico_village.marine_2",
   skip = "all",
   text = [[
-$v, Tarkin   
-fait la sieste à la 
-maison. Je préfère      
-chanter. Oui ! Pourquoi
-pas la Ballade du 
-Poisson-Rêve ?
+<<<
 ]],
 }
 
@@ -5560,9 +5787,7 @@ dialog{
   id = "maps.out.kakarico_village.marine_3",
   skip = "all",
   text = [[
-J'adore chanter!
-Et toi $v , qu'est-ce 
-que tu aimes ?
+<<<
 ]],
 }
 
@@ -5658,9 +5883,7 @@ Ouest: Le cimetière
 dialog{
   id = "maps.out.kakarico_village.sign_3",
   text = [[
-Est : Pont de Cocorico Nord
-Sud-est : Pont de Cocorico Sud
-
+Est : Pont de Cocorico
 ]],
 }
 
@@ -5697,7 +5920,7 @@ dialog{
   id = "maps.out.kakarico_village.soldiers.tip_map",
   text = [[
 Si tu te perds, appuie sur le
-bouton W pour visualiser le
+bouton \[controller_select\] pour visualiser le
 plan.$0 Cette marque lumineuse
 indique ta destination.
 ]],
@@ -5710,7 +5933,7 @@ Des boutiques situées un peu
 partout dans le pays vendent
 de l'équipement. $0Si tu as
 envie d'acheter quelque chose,
-appuie sur le bouton A face à
+appuie sur le bouton \[controller_a\] face à
 l'objet que tu veux.
 ]],
 }
@@ -5743,32 +5966,21 @@ Ci-gît le Coq Volant.
 dialog{
   id = "maps.out.kokiri_village.sign_1",
   text = [[
-Attention au plancher        
-fissuré.        
-Rondouillards : 
-abstenez-vous !
+<<<
 ]],
 }
 
 dialog{
   id = "maps.out.lonlon_ranch.sign_2",
   text = [[
-> Cimetière     
-v La Prairie
+<<<
 ]],
 }
 
 dialog{
   id = "maps.out.lonlon_ranch.welcome.first",
   text = [[
-MALON : Oh ! c'est le
-Roi ! Nous ne savions
-pas qu'il allait venir !
-Que vais-je faire ?!
-TALON : Ne t'inquiète pas,
-Malon. Je vais l'accueillir
-et lui dire que nous
-n'avons rien préparé.
+<<<
 ]],
 }
 
@@ -5829,7 +6041,7 @@ dialog{
   text = [[
 $2A l'aide !$0 $v !
 Le prêtre du sanctuaire s'est
-fait kidnapper ! $0Viens vite !
+fait enlever ! $0Viens vite !
 ]],
 }
 
@@ -5889,82 +6101,6 @@ nécessaire pour le vaincre.$0
 Veux-tu que je répète ?
 Oui !
 Non.
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_bridge_closed",
-  text = [[
-Je suis le marathonien errant !$0
-Je cherche un coureur à l'esprit
-du guerrier sanguinaire !
-Mon frère est dans la forêt de
-Firone, mais les soldats ont
-bloqué l'accès à la plaine du
-Sud, donc je suis coincé ici.$0
-Reviens plus tard si tu veux
-courir !
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_bridge_no_shoes",
-  text = [[
-Je suis le marathonien errant !$0
-Cours d'ici jusqu'à la ligne
-d'arrivée !
-Mais tu comptes quand même pas
-courir avec des bottes comme ça ?
-Reviens quand tu auras de
-nouvelles bottes.
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_bridge_opened",
-  question = "1",
-  text = [[
-Je suis le marathonien errant !$0
-Cours d'ici jusqu'à la ligne
-d'arrivée !
-Tu m'as l'air d'être un bon
-coureur ! Je suis sûr que tu
-peux y arriver !
-Pour participer, c'est 60 rubis !$0
-Si tu franchis la ligne d'arrivée
-dans les temps, tu gagneras un
-super prix.$0 Les ponts vers la
-plaine du Sud sont à nouveau
-ouverts et je cherche un coureur
-digne de faire cette course.
-Le précédent record est de
-$v.
-
-Tu veux tenter ta chanche ?
-Ouais !
-Euh, non...
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_no",
-  text = [[
-Si tu changes d'avis, reviens
-me voir ! Je reste ici !
-]],
-}
-
-dialog{
-  id = "maps.out.north_field.marathon_man.marathon_yes",
-  text = [[
-L'arrivée se trouve à côté de
-la chaumière du cartographe
-de la forêt de Firone.
-Je t'ai indiqué l'endroit sur ta
-carte. Une fois là-bas, mon
-frère t'attendra devant la
-maison. Le temps limite est
-de 5 minutes !
 ]],
 }
 
@@ -6059,7 +6195,7 @@ dialog{
 On trouve souvent des objets
 précieux dans les coffres.$0
 Quand tu es devant le coffre,
-appuie sur le bouton A
+appuie sur le bouton \[controller_a\]
 pour l'ouvrir.
 ]],
 }
@@ -6070,7 +6206,7 @@ dialog{
 Souvent, tu verras des panneaux.$0
 Si tu veux savoir ce qu'il y
 a écrit dessus, appuie sur le
-bouton A devant le panneau !
+bouton \[controller_a\] devant le panneau !
 ]],
 }
 
@@ -6140,9 +6276,7 @@ Montez à vos risques et périls
 dialog{
   id = "maps.out.south_castle.dungeon_3_lock",
   text = [[
-Une serrure ici?
-Hum, voyons :   
-Serrure Cyclope
+<<<
 ]],
 }
 
@@ -6152,7 +6286,7 @@ dialog{
   text = [[
 Nord : La ville d'Hyrule
 Sud : La plaine
-Plus au Sud : Le marais boueux
+Plus au Sud : Le grand marais
 ]],
 }
 
@@ -6160,9 +6294,7 @@ dialog{
   id = "maps.out.south_castle.sign_2",
   skip = "all",
   text = [[
-Château Canulet 
-10 min. Vers l'Est,
-puis vers le Nord.
+<<<
 ]],
 }
 
@@ -6597,7 +6729,7 @@ dialog{
   text = [[
 Ah ! Ah ! Ah ! $0
 Savais-tu que tu pouvais nager
-plus vite en appuyant sur A
+plus vite en appuyant sur \[controller_a\]
 dans l'eau ?
 ]],
 }
@@ -6623,33 +6755,6 @@ tu veux, petit ?
 T'as quelque chose à me dire ?
 Je veux les palmes !
 Je ne faisais que passer !
-]],
-}
-
-dialog{
-  id = "quest.butter.need_butter",
-  question = "1",
-  text = [[
-Bien le bonjour !
-Il n'y a plus de
-beurre.
-Je cherche une
-personne capable
-d'y aller.
-Comme...$0 toi ?
-Non
-Oui
-]],
-}
-
-dialog{
-  id = "quest.butter.yes",
-  text = [[
-Merci beaucoup !
-Va au ranch, et
-si tu reviens,
-tu auras une
-récompense!
 ]],
 }
 
@@ -6686,10 +6791,12 @@ Binbin,
 Christopho,
 Diarandor,
 Matt Wright,
+Max,
 Metallizer,
 MetalZelda,
 Olivier Cléro,
 PhoenixII54,
+Razdarac;
 Rekinenko,
 Equipe Solarus,
 The Unknown
@@ -6844,8 +6951,8 @@ Nintendo
 
 The Legend of Zelda :
 Hyrule's Adventure
-(C) Team ZeldaHSA 2017 - 2023
-(C) Nintendo 1985 - 2023
+(C) Team ZeldaHSA 2017 - 2024
+(C) Nintendo 1985 - 2024
 
 - THE END -
 ]],
@@ -7371,7 +7478,7 @@ la Glace.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.divine_ore_counter.1",
+  id = "scripts.menus.pause_inventory.divine_ore.1",
   icon = "92",
   skip = "all",
   text = [[
@@ -7425,7 +7532,7 @@ dans l'eau profonde.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.golden_leaves_counter.1",
+  id = "scripts.menus.pause_inventory.golden_leaves.1",
   icon = "115",
   skip = "all",
   text = [[
@@ -7437,7 +7544,7 @@ apportez-les
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.goron_amber_counter.1",
+  id = "scripts.menus.pause_inventory.goron_amber.1",
   icon = "184",
   skip = "all",
   text = [[
@@ -7747,7 +7854,7 @@ les rayons lasers.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.monster_claw_counter.1",
+  id = "scripts.menus.pause_inventory.monster_claw.1",
   icon = "182",
   skip = "all",
   text = [[
@@ -7758,7 +7865,7 @@ vendues.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.monster_gut_counter.1",
+  id = "scripts.menus.pause_inventory.monster_gut.1",
   icon = "180",
   skip = "all",
   text = [[
@@ -7769,7 +7876,7 @@ vendus.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.monster_horn_counter.1",
+  id = "scripts.menus.pause_inventory.monster_horn.1",
   icon = "181",
   skip = "all",
   text = [[
@@ -7780,7 +7887,7 @@ vendues.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.monster_tail_counter.1",
+  id = "scripts.menus.pause_inventory.monster_tail.1",
   icon = "183",
   skip = "all",
   text = [[
@@ -8315,278 +8422,98 @@ Coeurs !
 dialog{
   id = "scripts.meta.map.owl_1",
   text = [[
-Hou hou ! Cette épée      
-est donc à toi ! 
-... Je comprends
-pourquoi les monstres    
-s'agitent tant :
-celui qui doit réveiller
-le Poisson-Rêve    
-est arrivé !     
-On dit que pour 
-quitter l'île, cette 
-personne doit d'abord
-le réveiller... 
-Viens me voir dans la
-Forêt Enchantée, au   
-Nord du village.
-Je t'y attends. 
-Hou hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_10",
   text = [[
-Hou ! Je vois que
-tu as lu ce     
-Marbre ancien.  
-Il dit que l'île
-est issue       
-des songes      
-du Poisson-Rêve,
-mais personne   
-n'en est sûr... 
-Qui peut savoir 
-ce que contient 
-un coffre tant  
-qu'il n'a pas   
-été ouvert ?     
-Qui peut deviner
-s'il rêve tant  
-qu'il ne s'est  
-pas réveillé ?   
-Le Poisson-Rêve 
-est le seul qui 
-sait... Suis ton
-instinct. Ainsi,
-tu sauras...    
-Hou hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_11",
   text = [[
-Hou ! Les        
-monstres de     
-cette île ont   
-peur que le     
-Poisson-Rêve    
-ne s'éveille.   
-Leur pouvoir    
-est bien réel !  
-Ils pourraient  
-conquérir l'île 
-et anéantir     
-leurs ennemis.  
-Va à la tour    
-de la montagne  
-en volant comme 
-un oiseau! Hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_12",
   text = [[
-Hou hou !        
-Ton périple est 
-ardu mais tu y  
-es presque...   
-Va vers l'Est.  
-Le Poisson du   
-Vent a besoin de
-sommeil. 
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_13",
   text = [[
-Hou ! Cela       
-fait longtemps  
-qu'on ne s'est  
-rencontrés !     
-Plonge dans la  
-Baie de Martha  
-et entre        
-dans la gueule  
-du Poisson-Chat.
-Plus tu es près 
-du Poisson-Rêve,
-plus son sommeil
-est agité...    
-Tu es dans la   
-bonne voie. Hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_14",
   text = [[
-Hou ! Cette fille
-a chanté en face
-de l'Oeuf sa    
-"Ballade du     
-Poisson-Rêve".  
-Mais c'est la   
-Chanson d'Eveil !
-Désirait-elle   
-vraiment        
-le réveiller?   
-Le prochain     
-Instrument est  
-dans le Roc     
-de la Tortue.   
-Anime ces rocs. 
-Sois brave !     
-Le Poisson-Rêve 
-attend...       
-Hou hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_15",
   text = [[
-Hou hou !        
-Le Poisson-Rêve 
-t'attend. Entre 
-dans l'Oeuf...  
-Hou hou!
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_2",
   text = [[
-Hou ! Bienvenue  
-à la Forêt Enchantée,
-mon brave garçon !   
-L'île Cocolint abonde
-en mystères et     
-n'existe sur aucune
-carte. Son règlement   
-est unique ! Tu ne
-pourras pas la quitter  
-tant que le 
-Poisson-Rêve dormira.        
-A propos, as-tu visité
-la Cave Flagello,  
-située au Sud   
-du village ? Vas-y 
-avec la Clé cachée      
-dans la Forêt.
-Le Poisson-Rêve te
-regarde. Hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_3",
   text = [[
-Hou !            
-Avec cette clé, 
-va à la Cave Flagello.       
-Prends l'Instrument
-qui y est dissimulé.
-Dépêche-toi !    
-Le Poisson-Rêve 
-attend! Hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_4",
   text = [[
-Hou ! C'est un   
-des Instruments 
-des Sirènes !    
-Tu es brave et  
-je t'avais      
-sous-estimé...  
-Cet Instrument  
-- utilisé avec  
-les 7 autres -  
-a le pouvoir    
-de réveiller    
-le Poisson-Rêve.
-Collecte ces    
-8 Instruments !  
-Je suis ici pour
-t'indiquer le   
-chemin...       
-Maintenant,     
-va au Marais    
-des Anémones,   
-situé au Nord !  
-Hou !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_5",
   text = [[
-Hou ! Ton        
-compagnon       
-a l'air féroce ! 
-N'oublie pas,le 
-2ème Instrument 
-se trouve dans  
-le Marais !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_6",
   text = [[
-Hou !            
-Le Poisson-Rêve 
-sommeille dans  
-l'Oeuf, là haut.
-Il rêve, rêve !  
-Il se réveillera
-si tu te tiens  
-face à I'Oeuf et
-que tu joues des
-8 Instruments.  
-Ainsi seulement,
-pourras-tu      
-quitter l'île...
-Hou! !
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_8",
   text = [[
-Hou ! Cette clé  
-évoque          
-un poisson      
-remontant       
-une cascade. Va 
-à cette cascade,
-fais disparaître
-l'eau et        
-saute du sommet.
+<<<
 ]],
 }
 
 dialog{
   id = "scripts.meta.map.owl_9",
   text = [[
-Hou ! Au Sud     
-et au Nord,     
-se trouvent     
-deux temples.   
-Va d'abord au   
-Sud, là où des  
-Ruines antiques 
-parlent         
-du Poisson-Rêve.
-Tu en sauras    
-sûrement plus...
+<<<
 ]],
 }
 
