@@ -17,7 +17,6 @@ local function initialise_pause_features(game)
 	local inventory_builder_2 = require("scripts/menus/pause/pause_inventory_2")
 	local ocarina_builder = require("scripts/menus/pause/pause_ocarina")
 	local food_builder = require("scripts/menus/pause/pause_food")
-	local map_builder = require("scripts/menus/pause/pause_map")
 	local quest_builder = require("scripts/menus/pause/pause_quest")
 	local options_builder = require("scripts/menus/pause/pause_options")
   local joy_avoid_repeat = {-2, -2}

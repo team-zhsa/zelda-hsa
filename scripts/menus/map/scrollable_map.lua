@@ -1,11 +1,11 @@
-local submenu = require("scripts/menus/scrollable_map/map_submenu")
+local submenu = require("scripts/menus/map/map_submenu")
 local map_submenu = submenu:new()
 local max_floors_displayed = 6
 local outside_world_size = {}
 local outside_world_minimap_size = {}
 local map_shown = false
-local waypoint_positions = require("scripts/menus/scrollable_map/waypoint_config")
-local map_areas_config = require("scripts/menus/scrollable_map/map_areas_config")
+local waypoint_positions = require("scripts/menus/map/waypoint_config")
+local map_areas_config = require("scripts/menus/map/map_areas_config")
 
 -- TODO add a zoom option for the outside map
 
@@ -63,7 +63,7 @@ function map_submenu:on_started()
 				map_shown = true      -- If in North Hyrule with World Map, then show the map.
 				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
 				self.outside_world_minimap_size = {width = 960 + 88, height = 810 + 70}
-				self.world_minimap_img = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
+				self.world_minimap_img = sol.surface.create("menus/map/full_hyrule_world_map.png")
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
 				local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 				local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
@@ -178,12 +178,12 @@ function map_submenu:on_command_pressed(command)
 					print(submenu.world_minimap_visible_xy.x)
 					print(submenu.world_minimap_visible_xy.y)
 					-- Stop the movement when map borders reached.
-					if submenu.world_minimap_visible_xy.x <= 0
+					if submenu.world_minimap_visible_xy.x <= 4
 					or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
 					or submenu.world_minimap_visible_xy.y <= 15
 					or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-						if submenu.world_minimap_visible_xy.x == 0 then submenu.world_minimap_visible_xy.x = 1 end
-						if submenu.world_minimap_visible_xy.y == 15 then submenu.world_minimap_visible_xy.y = 16 end
+						if submenu.world_minimap_visible_xy.x == 4 then submenu.world_minimap_visible_xy.x = 5 end
+						if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
 						self:stop()
 						submenu.world_minimap_movement = nil
 					end
@@ -219,9 +219,9 @@ function map_submenu:on_command_pressed(command)
 						print(submenu.world_minimap_visible_xy.x)
 						print(submenu.world_minimap_visible_xy.y)
 						-- Stop the movement when map borders reached.
-						if submenu.world_minimap_visible_xy.x <= 0
+						if submenu.world_minimap_visible_xy.x <= 4
 						or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-						or submenu.world_minimap_visible_xy.y <= 15
+						or submenu.world_minimap_visible_xy.y <= 18
 						or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
 							if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 86 then submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 86 - 1 end
 							if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
@@ -258,12 +258,12 @@ function map_submenu:on_command_pressed(command)
 							submenu.world_minimap_movement = nil
 						end
 						
-						if submenu.world_minimap_visible_xy.x <= 0
+						if submenu.world_minimap_visible_xy.x <= 4
 						or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-						or submenu.world_minimap_visible_xy.y <= 15
+						or submenu.world_minimap_visible_xy.y <= 18
 						or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-							if submenu.world_minimap_visible_xy.x == 0 then submenu.world_minimap_visible_xy.x = 1 end
-							if submenu.world_minimap_visible_xy.y == 15 then submenu.world_minimap_visible_xy.y = 16 end
+							if submenu.world_minimap_visible_xy.x == 4 then submenu.world_minimap_visible_xy.x = 5 end
+							if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
 							self:stop()
 							submenu.world_minimap_movement = nil
 						end
@@ -318,9 +318,9 @@ function map_submenu:on_command_pressed(command)
 							submenu.world_minimap_movement = nil
 						end
 						
-						if submenu.world_minimap_visible_xy.x <= 0
+						if submenu.world_minimap_visible_xy.x <= 4 -- In order not to go into negative map names.
 						or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-						or submenu.world_minimap_visible_xy.y <= 15
+						or submenu.world_minimap_visible_xy.y <= 18
 						or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
 							if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 86 then submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 86 - 1 end
 							if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
@@ -439,11 +439,10 @@ function map_submenu:draw_world_map(dst_surface)
 	end
 
 	-- Set the caption according to the currently visible area.
-	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x) / 80) + 2
-	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 10) / 90) + 1
-	--print(self.current_map_hovered.x, self.current_map_hovered.y)
+	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x - 1) / 80) + 2
+	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 12) / 90) + 1
 	if map_shown then
- --   self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+   self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
 	else self:set_caption("map.title") end
 	self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
 end

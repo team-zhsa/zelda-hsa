@@ -1,4 +1,4 @@
-local submenu = require("scripts/menus/pause/pause_submenu")
+--[[ local submenu = require("scripts/menus/pause/pause_submenu")
 local map_submenu = submenu:new()
 local max_floors_displayed = 6
 local outside_world_size = { width = 15360, height = 12960 }
@@ -547,4 +547,4 @@ function map_submenu:load_chests()
   -- Cleanup temporary value.
 end
 
-return map_submenu
+return map_submenu --]]
