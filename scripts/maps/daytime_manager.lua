@@ -23,11 +23,11 @@ function tone_manager:create(game)
 	effects.torch_hero:set_blend_mode("blend")
   
   -- Shadow surface -> Draw tones
-  shadow = sol.surface.create(320, 240)
+  shadow = sol.surface.create(384, 240)
   shadow:set_blend_mode("multiply")
 	
 	-- Light surface -> Draw light effects
-	light = sol.surface.create(320, 240)
+	light = sol.surface.create(384, 240)
   light:set_blend_mode("add")
   
   function game:restart_tone_system()
@@ -229,7 +229,7 @@ function tone_manager:create(game)
   	  self:set_new_tone(180, 140, 120)
   	elseif hour == 18 and minute >= 30 then
   	  game:set_value("time_of_day", "twilight")
-  	  self:set_new_tone(150, 110, 100)
+  	  self:set_new_tone(150, 110, 120)
   	elseif hour == 19 and minute < 30 then
       game:set_value("time_of_day","night")
   	  self:set_new_tone(110, 105, 190)	 
@@ -251,7 +251,7 @@ function tone_manager:create(game)
   	  self:set_new_tone(150, 150, 255)
   	end
     
-    d = 200
+    d = 400 -- Transition time between each colour
   end
   
   function tone_menu:on_finished()
