@@ -336,19 +336,27 @@ end
 
 -- Check if the enemy should fall in hole on switching to normal obstacle behavior mode.
 enemy_meta:register_event("set_obstacle_behavior", function(enemy)
+	if enemy:get_ground_below() == "hole" or "lava" and enemy:get_obstacle_behavior() == "normal" then
+		entity_manager:create_falling_entity(enemy)
+	end
+end, false)
 
-		if enemy:get_ground_below() == "hole" and enemy:get_obstacle_behavior() == "normal" then
-			entity_manager:create_falling_entity(enemy)
-		end
-	end, false)
+enemy_meta:register_event("on_position_changed", function(enemy, x, y, layer)
+	local _,_,layer = enemy:get_position()
+	if enemy:get_ground_below() == "empty" and layer ~= enemy:get_map():get_min_layer() and enemy:get_obstacle_behavior() == "normal" then
+		entity_manager:create_falling_entity(enemy)
+		sol.timer.start(enemy, 200, function()
+			enemy:set_position(_,_, layer - 1)
+		end)
+	end
+end)
 
 -- Check if the enemy should fall in hole on removed.
 enemy_meta:register_event("on_removed", function(enemy)
-
-		if enemy:get_ground_below() == "hole" and enemy:get_obstacle_behavior() == "normal" then
-			entity_manager:create_falling_entity(enemy)
-		end
-	end)
+	if enemy:get_ground_below() == "hole" and enemy:get_obstacle_behavior() == "normal" then
+		entity_manager:create_falling_entity(enemy)
+	end
+end)
 
 -- Create an exclamation symbol near enemy
 function enemy_meta:create_symbol_exclamation(sound)

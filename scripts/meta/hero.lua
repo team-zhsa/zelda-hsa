@@ -162,6 +162,7 @@ end
 function hero_meta.get_previous_state(hero)
   return hero.prev_state, hero.prev_cstate_name
 end
+
 function hero_meta.show_ground_effect(hero, id)
 
   local map = hero:get_map()

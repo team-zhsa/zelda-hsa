@@ -12,7 +12,6 @@ local game = map:get_game()
 local camera = map:get_camera()
 local outside_kakarico_playing_maze
 local outside_kakarico_won_maze
-local field_music_manager = require("scripts/maps/field_music_manager")
 local num_dialogue = 0
 
 -- Event called at initialization time, as soon as this map is loaded.

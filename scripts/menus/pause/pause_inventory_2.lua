@@ -2,29 +2,33 @@ local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
   "_placeholder", -- Row 1 -- Ether Medallion
-	"_placeholder", -- Bug catching net
-  "_placeholder", -- Light rod
+	"_placeholder", -- Fire rod
+  "_placeholder", -- Healing rod
   "_placeholder", -- Thunder rod
-  "wind_rod",
-	"fire_rod",
+  "wind_rod", -- Light rod
+	"fire_rod", --  rod?
+	"fire_rod", --  rod?
   "_placeholder", -- Row 2 -- Flames Medallion
-  "sword_skill_beam", 
-	"hero_shield",
+  "sword_skill_beam", -- Ice rod Hero Shield
+	"hero_shield", -- Wind Rod
   "_placeholder", -- Darkness rod
-	"_placeholder", -- Doom rod
-	"ice_rod",
+	"_placeholder", -- Somaria Cane
+	"ice_rod", -- Doom rod?
+	"ice_rod", -- Doom rod?
 	"_placeholder", -- Row 3 -- Quake Medallion
 	"trading_1", 
-	"hylia_shield",
-	"healing_wand",
-	"bottle_1",
-	"bottle_2",
+	"trading_1", 
+	"hylia_shield", -- Hylia Shield
+	"healing_wand", -- Healing Wand
+	"bottle_1", -- Bottle
+	"bottle_2", -- Bottle
 	"book_of_mudora", -- Row 4 -- Book of Mudora
-	"mushroom", 
-	"mirror_shield", 
-	"somaria_cane",
-	"bottle_3", -- Deku stick
-	"bottle_4",
+	"mushroom",  -- Deku Stick
+	"mushroom",  -- Deku Stick
+	"mirror_shield",  -- Mirror Shield
+	"somaria_cane", --
+	"bottle_3", -- Bottle
+	"bottle_4", -- Bottle
 
 }
 local item_names_static = {
@@ -47,7 +51,7 @@ function inventory_submenu:on_started()
   self.menu_ocarina = true
 
   -- Set the title.
-  self:set_title(sol.language.get_string("inventory.title_inventory"))
+  self:set_title(sol.language.get_string("inventory.title_inventory_2"))
   
   -- initialise the cursor
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
@@ -97,7 +101,7 @@ function inventory_submenu:on_draw(dst_surface)
   -- Draw the cursor caption.
   self:draw_caption(dst_surface)
 
-  -- Draw each inventory static item.
+  --[[ Draw each inventory static item.
   local y = center_y - 30
   local k = 0
   local x = center_x - 96
@@ -111,15 +115,15 @@ function inventory_submenu:on_draw(dst_surface)
     end
     -- Next item position (they are on the same column).
     y = y + cell_size + cell_spacing
-  end
+  end--]]
 
   -- Draw each inventory assignable item.
   local y = center_y - 30
   local k = 0
 
   for i = 0, 3 do
-    local x = center_x - 65
-    for j = 0, 5 do
+    local x = center_x - 96
+    for j = 0, 6 do
       k = k + 1
       if item_names_assignable[k] ~= nil then
         local item = self.game:get_item(item_names_assignable[k])
@@ -262,11 +266,11 @@ end
 function inventory_submenu:get_item_name(row, column)
 
    if column > 0 and column < 7 then
-      index = row * 6 + column - 1
-      item_name = item_names_assignable[index + 1]
+      index = row * 7 + column - 1
+      item_name = item_names_assignable[index + 2]
    else
-      index = row 
-      item_name = item_names_static[index + 1]
+      index = row * 7 + column 
+      item_name = item_names_assignable[index + 1]
   end
 
   return item_name

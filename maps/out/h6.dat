@@ -9927,7 +9927,7 @@ tile{
 tile{
   layer = 0,
   x = 960,
-  y = 1184,
+  y = 1168,
   width = 8,
   height = 8,
   pattern = "14793",
@@ -27204,9 +27204,9 @@ tile{
 tile{
   layer = 0,
   x = 1232,
-  y = 464,
+  y = 480,
   width = 48,
-  height = 240,
+  height = 224,
   pattern = "1037",
 }
 
@@ -27223,7 +27223,7 @@ tile{
   layer = 0,
   x = 1200,
   y = 448,
-  width = 32,
+  width = 16,
   height = 16,
   pattern = "1037",
 }
@@ -27527,7 +27527,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1232,
+  x = 1216,
   y = 456,
   width = 8,
   height = 8,
@@ -31701,6 +31701,15 @@ tile{
   pattern = "97",
 }
 
+tile{
+  layer = 0,
+  x = 1232,
+  y = 472,
+  width = 8,
+  height = 8,
+  pattern = "103 (copy)",
+}
+
 jumper{
   layer = 0,
   x = 752,
@@ -33363,45 +33372,6 @@ destructible{
 destructible{
   layer = 0,
   x = 1272,
-  y = 477,
-  treasure_name = "random_central",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 1256,
-  y = 477,
-  treasure_name = "random_central",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 1240,
-  y = 477,
-  treasure_name = "random_central",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 1272,
   y = 493,
   treasure_name = "random_central",
   sprite = "entities/grass/grass01",
@@ -33936,19 +33906,6 @@ destructible{
   layer = 0,
   x = 1240,
   y = 701,
-  treasure_name = "random_central",
-  sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
-  weight = -1,
-  can_be_cut = true,
-  damage_on_enemies = 0,
-  ground = "grass",
-}
-
-destructible{
-  layer = 0,
-  x = 1224,
-  y = 461,
   treasure_name = "random_central",
   sprite = "entities/grass/grass01",
   destruction_sound = "objects/e_bush",
@@ -36463,7 +36420,7 @@ tile{
 tile{
   layer = 1,
   x = 1064,
-  y = 1160,
+  y = 1176,
   width = 240,
   height = 8,
   pattern = "1487",

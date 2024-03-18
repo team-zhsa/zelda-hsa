@@ -10,29 +10,85 @@
 local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
-local field_music_manager = require("scripts/maps/field_music_manager")
 local num_dialogue = 0
+local white_surface = sol.surface.create(320, 256)
+white_surface:fill_color{255, 255, 255}
 
+function map:on_draw(dst_surface)
+  if game:is_step_last("zelda_kidnapped") then
+    white_surface:draw(dst_surface)
+  end
+end
 
-map:register_event("on_started", function()
+map:register_event("on_started", function(map, destination)
 	game:show_map_name("hyrule_town")
 	map:set_digging_allowed(true)
   npc_impa:set_enabled(false)
-  if game:is_step_done("sahasrahla_lost_woods_map") then
-    town_gate:set_enabled(false)
+  if game:get_time_of_day() == "day" then
+    if game:is_step_done("sahasrahla_lost_woods_map") then
+      day_town_gate:set_enabled(false)
+    else day_town_gate:set_enabled(true)
+    end
+  else day_town_gate:set_enabled(true)
   end
+
   for npc in map:get_entities("npc_soldier_") do
     if game:is_step_done("lamp_obtained") then
       npc:set_enabled(false)
     else npc:set_enabled(true)
     end
   end
+
   if game:is_step_last("game_started") then
     npc_impa:set_enabled(true)
     npc_impa:set_visible(false)
   else npc_impa:set_enabled(false)
   end
+
+  for switch in map:get_entities("switch_castle_barrier_") do
+    if not game:is_step_last("zelda_kidnapped") then
+      switch:set_enabled(false)
+    else switch:set_visible(false)
+    end
+  end
+
+  if not game:is_step_last("zelda_kidnapped") then
+    entity_castle_barrier:set_enabled(false)
+  end
+  white_surface:set_opacity(0)
+
+  if destination == from_castle_2 and game:is_step_last("zelda_kidnapped") then
+    sol.audio.play_music("cutscenes/castle_sealed")
+  end
+
 end)
+
+npc_quay:register_event("on_interaction", function()
+--  game:start_quest("quay", true)
+end)
+
+-- Hyrule Castle barrier
+for switch in map:get_entities("switch_castle_barrier_") do
+  switch:register_event("on_activated", function()
+    switch_castle_barrier_1:remove()
+    switch_castle_barrier_2:remove()
+    switch_castle_barrier_3:remove()
+    map:start_castle_seal_cutscene()
+  end)
+end
+
+function map:start_castle_seal_cutscene()
+  map:set_cinematic_mode(true)
+  sol.timer.start(map, 1000, function()
+    white_surface:fade_in()
+    sol.audio.play_sound("items/farore_wind/cast")
+    sol.timer.start(map, 200, function()
+      entity_castle_barrier:get_sprite():fade_out(400) -- set_enabled(false)
+      white_surface:fade_out()
+      map:set_cinematic_mode(false)
+    end)
+  end)
+end
 
 -- Bridge soldiers
 for npc in map:get_entities("npc_soldier_") do
@@ -68,34 +124,30 @@ sensor_ocarina_cutscene:register_event("on_activated", function()
     impa_movement_to_position:set_ignore_suspend(true)
     impa_movement_to_position:set_speed(100)
     impa_movement_to_position:start(npc_impa, function()
-      ocarina_dialog()
+      game:start_dialog("maps.out.hyrule_town.impa.sahasrahla", game:get_player_name(), function(answer)
+        if answer == 1 then
+          ocarina_dialog()
+        elseif answer == 2 then
+          game:start_dialog("maps.out.hyrule_town.impa.song_learnt", function()
+            hero:start_treasure("song_10_zelda")
+            game:set_step_done("ocarina_obtained")
+            local impa_movement_leave = sol.movement.create("target")
+            impa_movement_leave:set_target(640, 208)
+            impa_movement_leave:set_ignore_obstacles(true)
+            impa_movement_leave:set_ignore_suspend(true)
+            impa_movement_leave:set_speed(100)
+            impa_movement_leave:start(npc_impa, function()
+              map:set_cinematic_mode(false, options)
+              npc_impa:set_enabled(false)
+              audio_manager:play_music_fade(map, map:get_music())
+              hero:unfreeze()
+            end)
+          end) 
+        end
+      end)
     end)
   end
 end)
-
-function ocarina_dialog()
-  game:start_dialog("maps.out.hyrule_town.impa.sahasrahla", game:get_player_name(), function(answer)
-    if answer == 1 then
-      ocarina_dialog()
-    elseif answer == 2 then
-      game:start_dialog("maps.out.hyrule_town.impa.song_learnt", function()
-        hero:start_treasure("song_10_zelda")
-        game:set_step_done("ocarina_obtained")
-        local impa_movement_leave = sol.movement.create("target")
-        impa_movement_leave:set_target(640, 208)
-        impa_movement_leave:set_ignore_obstacles(true)
-        impa_movement_leave:set_ignore_suspend(true)
-        impa_movement_leave:set_speed(100)
-        impa_movement_leave:start(npc_impa, function()
-          map:set_cinematic_mode(false, options)
-          npc_impa:set_enabled(false)
-          audio_manager:play_music_fade(map, map:get_music())
-          hero:unfreeze()
-        end)
-      end) 
-    end
-  end)
-end
 
 -- Door events
 open_house_door_castle_sensor:register_event("on_activated", function()
@@ -138,6 +190,7 @@ open_house_door_bank_sensor:register_event("on_activated", function()
   end
 end)
 
+-- NPC events
 for npc in map:get_entities("npc_laundry_") do
   npc:register_event("on_interaction", function()
     if game:is_step_last("ocarina_obtained") then
@@ -162,6 +215,8 @@ npc_fisher:register_event("on_interaction", function()
     game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_lamp")
   elseif game:is_step_last("lamp_obtained") then
     game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_sword")
+  elseif not game:is_step_last("dungeon_3_completed") then
+    game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_fish")
   else game:start_dialog("maps.out.hyrule_town.fisher.welcome")
   end
 end)

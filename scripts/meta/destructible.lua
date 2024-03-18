@@ -39,6 +39,7 @@ function destructible_meta:on_looked()
 
 end
 
+
 function destructible_meta:is_hookable()
 
   local ground = self:get_modified_ground()

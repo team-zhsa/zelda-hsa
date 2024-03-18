@@ -7,16 +7,14 @@
 require("scripts/multi_events")
 local initial_game = require("scripts/initial_game")
 local game_manager = {}
-local destructible_meta = sol.main.get_metatable("destructible")
-local boundaries = sol.main.get_metatable("sensor")
 local tone_manager = require("scripts/maps/daytime_manager")
 local condition_manager = require("scripts/hero_condition")
 local map_name = require("scripts/hud/map_name")
-local field_music = require("scripts/maps/hyrule_field")
+--local field_music = require("scripts/maps/hyrule_field")
 local effect_manager = require('scripts/maps/effect_manager')
 local gb = require('scripts/maps/gb_effect')
 local fsa = require('scripts/maps/fsa_effect')
-time_flow = 1000
+time_flow = 500
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
@@ -30,19 +28,17 @@ function game_manager:create(file)
   end
 
 	game:register_event("on_started", function()
+
 		tone = tone_manager:create(game)
 		condition_manager:initialise(game)
 		map_name:initialise(game)
-		field_music(game)
     effect_manager:set_effect(game, fsa)
     game:set_value("mode", "fsa")
 		game:set_world_rain_mode("outside_world", nil)
 		game:set_world_snow_mode("outside_world", nil)
-		game:set_time_flow(1000)
+		game:set_time_flow(time_flow)
     print("Main quest step start:"..game:get_value("main_quest_step"))
-    if game:get_value("savegame_version") ~= sol.main.get_quest_version() then
-      print("The savegame is outdated!")
-    end
+
 	end)
 
 	game:register_event("on_finished", function()
@@ -53,6 +49,21 @@ function game_manager:create(file)
 	game:register_event("on_map_changed", function()
 		tone:on_map_changed()
 	end)
+
+  game:register_event("on_world_changed", function()
+    local map = game:get_map()
+
+    if not game.teleport_in_progress then -- play custom transition at game startup
+      game:set_suspended(true)
+      local opening_transition = require("scripts/gfx_effects/radial_fade_out")
+      opening_transition.start_effect(map:get_camera():get_surface(), game, "out", nil, function()
+          game:set_suspended(false)
+          if map.do_after_transition then
+            map.do_after_transition()
+          end
+        end)
+    end
+  end)
 
   function game:get_player_name()
 
@@ -93,31 +104,7 @@ function game_manager:create(file)
     game.magic_decreasing = magic_decreasing
   end
 
-	local alpha_warn = sol.surface.create("hud/version.png")
-
-
   return game
 end
-
-
-  -- Show a dialog when the player cannot lift them.
-  local destructible_meta = sol.main.get_metatable("destructible")
-  -- destructible_meta represents the shared behavior of all destructible objects.
-
-
-  function destructible_meta:on_looked()
-
-    -- Here, self is the destructible object.
-    local game = self:get_game()
-    local sprite = self:get_sprite()
-    if self:get_can_be_cut() == false then
-      if not game:has_ability("lift") then
-        game:start_dialog("_cannot_lift_too_heavy");
-      else
-        game:start_dialog("_cannot_lift_still_too_heavy");
-      end
-    end
-  end
-
 
 return game_manager

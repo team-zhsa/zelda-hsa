@@ -21701,6 +21701,12 @@ teletransporter{
   layer = 0,
   x = 1280,
   y = 0,
+  properties = {
+    {
+      key = "effect",
+      value = "distorsion",
+    },
+  },
   width = 16,
   height = 1440,
   transition = "scrolling",
@@ -24157,17 +24163,6 @@ sensor{
   height = 16,
 }
 
-teletransporter{
-  layer = 0,
-  x = 0,
-  y = -16,
-  width = 1280,
-  height = 16,
-  transition = "scrolling",
-  destination_map = "out/i2",
-  destination = "_side",
-}
-
 dynamic_tile{
   name = "door_witch",
   layer = 0,
@@ -24380,6 +24375,23 @@ destructible{
   sprite = "entities/bushes/bush_d_05",
   destruction_sound = "objects/e_bush",
   can_be_cut = true,
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  properties = {
+    {
+      key = "effect",
+      value = "distorsion",
+    },
+  },
+  width = 1280,
+  height = 16,
+  destination_map = "out/i2",
+  destination = "_side",
+  sound = "world_warp",
 }
 
 tile{

@@ -34,7 +34,6 @@ local function initialise_pause_features(game)
 			inventory_builder_2:new(game),
 			ocarina_builder:new(game),
 			food_builder:new(game),
-			map_builder:new(game),
 			quest_builder:new(game),
 			options_builder:new(game),
 		}

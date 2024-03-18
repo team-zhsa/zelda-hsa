@@ -15,7 +15,7 @@ local can_skip_menu = false
 local gpl_logo
 local gpl_logo_width, gpl_logo_height
 
-local top_margin = 52
+local top_margin = 32
 local item_margin = 8
 local line_spacing = 6
 local can_skip_menu = false

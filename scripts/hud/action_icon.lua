@@ -1,135 +1,84 @@
 -- The icon that shows what the action command does.
 
+local hud_icon_builder = require("scripts/hud/hud_icon")
+
 local action_icon_builder = {}
 
 function action_icon_builder:new(game, config)
 
   local action_icon = {}
 
-  local dst_x, dst_y = config.x, config.y
+  -- Creates the hud icon delegate.
+  action_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.x, config.y)
+  action_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/action_icon_flip"))
+  
+  -- Initializes the icon.
+  action_icon.effect_displayed = nil
+  
+  -- Draws the icon surface.
+  function action_icon:on_draw(dst_surface)
+    action_icon.hud_icon:on_draw(dst_surface)
+  end
 
-  action_icon.game = game
-  action_icon.surface = sol.surface.create(72, 24)
-  action_icon.icons_img = sol.surface.create("action_icon.png", true)
-  action_icon.icon_region_y = nil
-  action_icon.icon_flip_sprite = sol.sprite.create("hud/action_icon_flip")
-  action_icon.is_flipping = false
-  action_icon.effect_displayed = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
-
-  function action_icon.icon_flip_sprite:on_animation_finished()
-    if action_icon.is_flipping then
-      action_icon.is_flipping = false
-      action_icon:compute_icon_region_y()
-      action_icon:rebuild_surface()
+  -- Rebuild the foreground (called only when needed).
+  function action_icon:rebuild_foreground()
+    if action_icon.effect_displayed == nil or action_icon.effect_displayed == "" then
+      -- No foreground if no effect.
+      action_icon.hud_icon:set_enabled(false)
+      --action_icon.hud_icon:set_foreground(nil)
+    else
+      local text = sol.language.get_string("hud."..action_icon.effect_displayed)
+      action_icon.hud_icon:set_enabled(true)
+      action_icon.hud_icon:set_foreground_text(text)
     end
   end
-
-  function action_icon.icon_flip_sprite:on_frame_changed()
-    action_icon:rebuild_surface()
-  end
-
-  function action_icon:compute_icon_region_y()
-
-    local y
-    if action_icon.effect_displayed ~= nil then
-      -- Create an icon with the name of the current effect.
-      local effects_indexes = {
-        ["validate"] = 1,
-        ["next"] = 2,
-        ["info"] = 3,
-        ["return"] = 4,
-        ["look"] = 5,
-        ["open"] = 6,
-        ["action"] = 7,
-        ["lift"] = 8,
-        ["throw"] = 9,
-        ["grab"] = 10,
-        ["stop"] = 11,
-        ["speak"] = 12,
-        ["change"] = 13,
-        ["swim"] = 14,
-        ["none"] = 15,
-      }
-      action_icon.icon_region_y = 24 * effects_indexes[action_icon.effect_displayed]
-    end
-  end
-
-  function action_icon:check()
-
-    local need_rebuild = false
-
-    if not action_icon.flipping then
-      local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
-      if effect ~= action_icon.effect_displayed then
-        if action_icon.effect_displayed ~= nil then
-          if effect ~= nil and effect  ~= "none" then
-            action_icon.icon_flip_sprite:set_animation("flip")
-          else
-            action_icon.icon_flip_sprite:set_animation("disappearing")
-          end
-        else
-          action_icon.icon_flip_sprite:set_animation("appearing")
-        end
-        action_icon.effect_displayed = effect
-        action_icon.icon_region_y = nil
-        action_icon.is_flipping = true
-        need_rebuild = true
-      end
-    end
-
-    -- Redraw the surface only if something has changed.
-    if need_rebuild then
-      action_icon:rebuild_surface()
-    end
-
-    -- Schedule the next check.
-    sol.timer.start(action_icon, 50, function()
-      action_icon:check()
-    end)
-  end
-
-  function action_icon:rebuild_surface()
-
-    action_icon.surface:clear()
-
-    if action_icon.icon_region_y ~= nil then
-      -- Draw the static image of the icon.
-      action_icon.icons_img:draw_region(0, action_icon.icon_region_y, 72, 24, action_icon.surface)
-    elseif action_icon.is_flipping then
-      -- Draw the flipping sprite
-      action_icon.icon_flip_sprite:draw(action_icon.surface, 24, 0)
-    end
-  end
-
-  function action_icon:get_surface()
-    return action_icon.surface
-  end
-
+    
   function action_icon:set_dst_position(x, y)
     dst_x = x
     dst_y = y
   end
 
-  function action_icon:on_draw(dst_surface)
-
-    local x, y = dst_x, dst_y
-    local width, height = dst_surface:get_size()
-    if x < 0 then
-      x = width + x
+  -- Checks if the icon needs a refresh.
+  function action_icon:update_effect_displayed(flip_icon)
+    if not action_icon.hud_icon.animating then
+      local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
+      action_icon:set_effect_displayed(effect, flip_icon)
     end
-    if y < 0 then
-      y = height + y
-    end
-
-    action_icon.surface:draw(dst_surface, x, y)
   end
 
+  -- Sets the effect to be displayed on the icon.
+  function action_icon:set_effect_displayed(effect, flip_icon)
+    if effect ~= action_icon.effect_displayed then
+      -- Store the current command.
+      action_icon.effect_displayed = effect
+        
+      -- Update the icon foreground.
+      action_icon:rebuild_foreground()
+      
+      -- Flip the icon.
+      if flip_icon then
+        action_icon.hud_icon:flip_icon()
+      end
+
+      -- Update the icon visibility.
+      if action_icon.on_command_effect_changed then
+        action_icon:on_command_effect_changed(effect)
+      end
+    end
+  end
+
+  -- Called when the menu is started.
   function action_icon:on_started()
-    action_icon:compute_icon_region_y()
-    action_icon:check()
-    action_icon:rebuild_surface()
+    action_icon:update_effect_displayed(false)
+
+    -- Check every 50ms if the icon needs a refresh.
+    sol.timer.start(action_icon, 50, function()
+      action_icon:update_effect_displayed(true)
+      return true
+    end)
   end
 
+  -- Returns the menu.
   return action_icon
 end
 
