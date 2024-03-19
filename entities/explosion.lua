@@ -89,9 +89,8 @@ explosion:add_collision_test("sprite", function(explosion, entity)
   elseif type == "enemy" then
     entity:receive_attack_consequence("explosion", entity:get_attack_consequence("explosion"))
 
-  elseif type == "hero" then--and not entity:is_invincible() and not entity:is_blinking() then
-    entity:start_hurt(explosion, damage_on_hero)
-    print("a")
+  elseif type == "hero" and not entity:is_invincible() and not entity:is_blinking() then
+    explosion:get_map():get_hero():start_hurt(explosion, 4)
   else -- Else interact with any other type of entity if the on_explosion() method is registered.
     if entity.on_explosion then
       entity:on_explosion()

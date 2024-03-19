@@ -13,7 +13,7 @@ local function initialise_map_features(game)
     return
   end
 
-  local scrollable_map = require("scripts/menus/scrollable_map/scrollable_map")
+  local scrollable_map = require("scripts/menus/map/scrollable_map")
 
   local map_menu = {}
   game.map_menu = map_menu
