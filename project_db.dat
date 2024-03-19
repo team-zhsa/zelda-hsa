@@ -1029,8 +1029,6 @@ sprite{ id = "entities/symbols/notes", description = "Notes" }
 sprite{ id = "entities/symbols/oh", description = "Oh" }
 sprite{ id = "entities/symbols/prices", description = "Prices" }
 sprite{ id = "entities/symbols/snores", description = "Snores" }
-sprite{ id = "entities/teletransporter", description = "Teletransporter" }
-sprite{ id = "entities/teletransporter_dungeon", description = "Teletransporter dungeon" }
 sprite{ id = "entities/tent_bazaar", description = "Bazaar Tent" }
 sprite{ id = "entities/tent_small", description = "Small Tent" }
 sprite{ id = "entities/torch", description = "Torch" }
@@ -1049,6 +1047,7 @@ sprite{ id = "entities/vacuum_cleaner_ground", description = "Vacuum cleaner gro
 sprite{ id = "entities/warps/destination", description = "Destination" }
 sprite{ id = "entities/warps/teletransporter", description = "Teletransporter (Yellow)" }
 sprite{ id = "entities/warps/teletransporter2", description = "Teletransporter (Blue)" }
+sprite{ id = "entities/warps/teletransporter_dungeon", description = "Dungeon teletransporter" }
 sprite{ id = "entities/water_tree", description = "Water tree" }
 sprite{ id = "entities/water_tree_junction", description = "Water tree junction" }
 sprite{ id = "entities/whirlwind", description = "Whirlwind" }
@@ -2379,6 +2378,7 @@ file{ path = "sprites/entities/fairy.dat", author = "ALTTP", }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
 file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/warps/teletransporter_dungeon.dat", author = "Olivier Cléro", }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hud/new_clock.dat", author = "The Unknown", license = "CC-BY-SA" }
