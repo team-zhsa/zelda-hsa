@@ -145,7 +145,7 @@ end
 
 function submenu:next_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -156,7 +156,7 @@ end
 
 function submenu:previous_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")

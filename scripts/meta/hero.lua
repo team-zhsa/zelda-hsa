@@ -60,15 +60,15 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       audio_manager:play_sound("lift") 
     elseif current_state == "sword loading" or state_desc=="sword_loading" then
       timer_sword_loading = sol.timer.start(hero, 1000, function()
-          audio_manager:play_sound("sword_spin_attack_load") 
+          audio_manager:play_sound("hero/sword_spin_attack_load") 
         end)
     elseif current_state == "sword spin attack" or state_desc=="sword_spin_attack" then
       -- Sword spin attack
       audio_manager:play_sound("sword_spin_attack_release") 
     elseif current_state == "sword swinging" or state_desc=="sword" then
       -- Sword swinging
-      local index = game:get_ability("sword")
-      audio_manager:play_sound("sword" .. index) 
+      --local index = game:get_ability("sword")
+      audio_manager:play_sound("hero/sword" .. math.random(1,4)) 
     elseif current_state == "sword tapping" or state_desc=="sword_tapping" then
       if timer_sword_tapping == nil then
         timer_sword_tapping = sol.timer.start(hero, 250, function()
@@ -78,20 +78,20 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
               sound_sword = entity:get_property("sound_sword")          
             end
             if sound_sword then
-              audio_manager:play_sound("sword_tapping_weak_wall")
+              audio_manager:play_sound("hero/sword_tapping_weak_wall")
             else
-              audio_manager:play_sound("sword_tapping") 
+              audio_manager:play_sound("hero/sword_tapping") 
             end
             return true
           end)
       end
     elseif current_state == "hurt" then
       -- Hurt
-      audio_manager:play_sound("hero_hurt") 
+      audio_manager:play_sound("hero/hero_hurt") 
     elseif current_state == "falling" then
       -- Falling
       hero:stop_movement()
-      audio_manager:play_sound("hero_falls") 
+      audio_manager:play_sound("hero/hero_falls") 
     elseif current_state == "jumping" then
       --audio_manager:play_sound("hero/cliff_jump")
     elseif current_state == "stairs" then
@@ -106,7 +106,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       -- Frozen
       local entity = hero:get_facing_entity()
       if entity ~= nil and entity:get_type() == "chest" and game:is_command_pressed("action") then
-        audio_manager:play_sound("chest_open")
+        audio_manager:play_sound("common/chest_open")
       end
 
     end
@@ -150,7 +150,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
       end
-      sol.audio.play_sound("menu/dialogue_end")
+      sol.audio.play_sound("menus/dialogue_end")
     end
   end)
 

@@ -177,7 +177,7 @@ end
 
 function submenu:next_submenu()
 
-	sol.audio.play_sound("menu/dir_right")
+	sol.audio.play_sound("menus/dir_right")
 	sol.menu.stop(self)
 	local submenus = self.game.pause_submenus
 	local submenu_index = self.game:get_value("pause_last_submenu")
@@ -188,7 +188,7 @@ end
 
 function submenu:previous_submenu()
 
-	sol.audio.play_sound("menu/dir_left")
+	sol.audio.play_sound("menus/dir_left")
 	sol.menu.stop(self)
 	local submenus = self.game.pause_submenus
 	local submenu_index = self.game:get_value("pause_last_submenu")

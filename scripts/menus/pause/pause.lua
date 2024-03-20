@@ -46,7 +46,7 @@ local function initialise_pause_features(game)
 		game:set_value("pause_last_submenu", submenu_index)
 
 		-- Play the sound of pausing the game.
-		sol.audio.play_sound("menu/pause_open")
+		sol.audio.play_sound("menus/pause_open")
 
 		-- Start the selected submenu.
 		sol.menu.start(pause_menu, game.pause_submenus[submenu_index])
@@ -63,7 +63,7 @@ local function initialise_pause_features(game)
 	function pause_menu:on_finished()
 
 		-- Play the sound of unpausing the game.
-		sol.audio.play_sound("menu/pause_close")
+		sol.audio.play_sound("menus/pause_close")
 
 		game.pause_submenus = {}
 		-- Restore opacity
