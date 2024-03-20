@@ -128,7 +128,7 @@ function savegame_menu:add_letter_player_name()
         if size == 0 then
           sol.audio.play_sound("common/wrong")
         else
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menus/danger")
           self.player_name = self.player_name:sub(1, size - 1)
         end
 
@@ -136,7 +136,7 @@ function savegame_menu:add_letter_player_name()
         finished = self:validate_player_name()
 
       elseif letter_cursor.x == 12 then  -- Cancel.
-        sol.audio.play_sound("danger")
+        sol.audio.play_sound("menus/danger")
         finished = true
       end
     end
@@ -145,7 +145,7 @@ function savegame_menu:add_letter_player_name()
   if letter_to_add ~= nil then
     -- A letter was selected.
     if size < 6 then
-      sol.audio.play_sound("danger")
+      sol.audio.play_sound("menus/danger")
       self.player_name = self.player_name .. letter_to_add
     else
       sol.audio.play_sound("common/wrong")

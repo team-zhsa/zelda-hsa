@@ -41,7 +41,7 @@ function timer_manager:start_timer(context, duration, hud_type, callback)
 	end)
 
 	sol.timer.start(context, 1000, function()
-    sol.audio.play_sound("danger")
+    sol.audio.play_sound("menus/danger")
     timer_calls = timer_calls + 1
 		-- Update the chronometer value
 		if hud_type == "countdown" then

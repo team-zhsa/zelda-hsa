@@ -86,7 +86,7 @@ function npc_maze_game:on_interaction()
 					end)
 					local num_calls = 0 --Timer for timer sound
 					sol.timer.start(map, 1000, function()
-			  		sol.audio.play_sound("danger")
+			  		sol.audio.play_sound("menus/danger")
 			  		num_calls = num_calls + 1
 			  		return num_calls < 15	
 					end)

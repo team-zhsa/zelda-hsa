@@ -213,7 +213,7 @@ local function initialise_game_over_features(game)
     elseif command == "action" or command == "attack" then
 
       state = "finished"
-      sol.audio.play_sound("danger")
+      sol.audio.play_sound("menus/danger")
       game:set_hud_enabled(false)
       game:add_life(6 * 4)  -- Restore 7 hearts.
 

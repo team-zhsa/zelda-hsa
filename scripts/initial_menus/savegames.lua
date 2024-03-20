@@ -619,7 +619,7 @@ function savegame_menu:key_pressed_phase_options(key)
 	self.title_text:set_text_key("selection_menu.phase.options.changing")
 	self.modifying_option = true
       else
-	sol.audio.play_sound("danger")
+	sol.audio.play_sound("menus/danger")
 	option.label_text:set_color{255, 255, 0}
 	option.value_text:set_color{255, 255, 255}
 	self.left_arrow_sprite:set_frame(0)
@@ -936,7 +936,7 @@ function savegame_menu:add_letter_player_name()
         finished = self:validate_player_name()
 
       elseif letter_cursor.x == 12 then  -- Cancel.
-        sol.audio.play_sound("danger")
+        sol.audio.play_sound("menus/danger")
         finished = true
       end
     end

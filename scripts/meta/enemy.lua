@@ -110,7 +110,7 @@ function enemy_meta:on_dying()
 		if self:get_hurt_style() == "boss" then
 			audio_manager:play_sound("boss_killed")
 			sol.timer.start(self, 200, function()
-					audio_manager:play_sound("explosion")
+					audio_manager:play_sound("environment/explosion")
 				end)
 		else
 			audio_manager:play_sound("enemy_killed")

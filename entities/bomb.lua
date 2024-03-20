@@ -43,7 +43,7 @@ local function explode()
   map:get_hero():unfreeze()
   map:get_hero():set_animation("stopped")
   bomb:remove()
-  audio_manager:play_sound("explosion")
+  audio_manager:play_sound("environment/explosion")
 end
 
 -- Start the countdown before explosion.

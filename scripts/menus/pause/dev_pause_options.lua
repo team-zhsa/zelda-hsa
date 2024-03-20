@@ -326,7 +326,7 @@ function options_submenu:on_command_pressed(command)
 			self:set_cursor_position(self.cursor_position % 10 + 1)
 			handled = true
 		elseif command == "action" then
-			sol.audio.play_sound("danger")
+			sol.audio.play_sound("menus/danger")
 			if self.cursor_position == 1 then
 				--[[ Change the video mode
 					i = 0
@@ -361,7 +361,7 @@ end
 local function stop_customizing()
 
 	self.waiting_for_command = false
-	sol.audio.play_sound("danger")
+	sol.audio.play_sound("menus/danger")
 	self:set_caption_key("options.caption.press_action_customize_key")
 	self:load_command_texts()
 end

@@ -79,7 +79,7 @@ function item:create_bomb()
   function sprite:on_animation_changed(animation)
     if animation == "stopped_explosion_soon" then
       sol.timer.start(item, 1500, function()
-          audio_manager:play_sound("explosion")
+          audio_manager:play_sound("environment/explosion")
         end)
     end
   end

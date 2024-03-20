@@ -1448,10 +1448,10 @@ music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
-sound{ id = "bomb", description = "Bomb" }
-sound{ id = "boomerang", description = "Boomerang" }
-sound{ id = "commoon/bounce", description = "Bounce" }
-sound{ id = "bow", description = "Bow" }
+sound{ id = "items/bomb", description = "Bomb" }
+sound{ id = "items/boomerang", description = "Boomerang" }
+sound{ id = "common/bounce", description = "Bounce" }
+sound{ id = "items/bow", description = "Bow" }
 sound{ id = "common/cannonball", description = "Cannonball" }
 sound{ id = "common/chest_open", description = "Chest Open" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
@@ -1476,9 +1476,8 @@ sound{ id = "common/secret_discover_minor", description = "Secret discover minor
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/switch_crystal", description = "Switch crystal hit" }
 sound{ id = "common/switch_walkable", description = "Switch (On/Off)" }
-sound{ id = "crystal", description = "Crystal" }
-sound{ id = "cucco", description = "cucco" }
-sound{ id = "danger", description = "Danger" }
+sound{ id = "enemies/cucco", description = "cucco" }
+sound{ id = "menus/danger", description = "Danger" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
@@ -1497,7 +1496,7 @@ sound{ id = "environment/thunder_double", description = "Thunder double" }
 sound{ id = "environment/thunder_far", description = "Thunder far" }
 sound{ id = "environment/water_level/loop", description = "Water level loop" }
 sound{ id = "environment/water_level/start", description = "Water level start" }
-sound{ id = "explosion", description = "Explosion" }
+sound{ id = "environment/explosion", description = "Explosion" }
 sound{ id = "external_stairs_down", description = "External stairs down" }
 sound{ id = "external_stairs_up", description = "External stairs up" }
 sound{ id = "freeze", description = "Freeze" }
@@ -1573,13 +1572,14 @@ sound{ id = "stairs_down_start", description = "stairs_down_start" }
 sound{ id = "stairs_indicator", description = "stairs_indicator" }
 sound{ id = "stairs_up_end", description = "stairs_up_end" }
 sound{ id = "stairs_up_start", description = "stairs_up_start" }
-sound{ id = "stone", description = "Stone" }
 sound{ id = "swim", description = "swim" }
-sound{ id = "switch", description = "switch" }
-sound{ id = "timer", description = "Empty sound" }
-sound{ id = "timer/countdown_hud/1", description = "Timer sound" }
-sound{ id = "timer_hurry", description = "Empty sound" }
-sound{ id = "treasure", description = "Treasure" }
+sound{ id = "menus/timer", description = "Timer" }
+sound{ id = "menus/timer_almost_end", description = "Timer almost end" }
+sound{ id = "menus/timer_hurry", description = "Timer hurry" }
+sound{ id = "menus/timer_switch", description = "Timer" }
+sound{ id = "menus/timer_almost_end_switch", description = "Timer almost end" }
+sound{ id = "menus/timer_hurry_switch", description = "Timer hurry" }
+sound{ id = "treasure", description = "Empty sound" }
 sound{ id = "common/warp", description = "common/warp" }
 sound{ id = "water_drain", description = "water_drain" }
 sound{ id = "water_drain_begin", description = "water_drain_begin" }

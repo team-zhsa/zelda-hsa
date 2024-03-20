@@ -248,7 +248,7 @@ function submenu:on_command_pressed(command)
 					self.game:save()
 					sol.audio.play_sound("menus/select")
 				else
-					sol.audio.play_sound("danger")
+					sol.audio.play_sound("menus/danger")
 				end
 				self.question_text_1:set_text_key("save_dialog.continue_question_0")
 				self.question_text_2:set_text_key("save_dialog.continue_question_1")
