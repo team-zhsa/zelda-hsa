@@ -45,7 +45,7 @@ function map:process_switch(name)
     	end
   	else
     	--if the player hits one out of order:
-    	sol.audio.play_sound("wrong")
+    	sol.audio.play_sound("common/wrong")
     	switch_index = 0
   	end
 	end

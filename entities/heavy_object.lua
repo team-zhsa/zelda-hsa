@@ -44,7 +44,7 @@ function entity:on_interaction()
       sprite = entity:get_sprite():get_animation_set(),
       weight = 1,
       ground = "wall",
-      destruction_sound = "stone",
+      destruction_sound = "environment/rock_shatter",
       damage_on_enemies = 4
     }
     hero:set_shield_sprite_id(shieldid)

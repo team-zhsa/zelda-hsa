@@ -53,7 +53,7 @@ function item:on_using()
       sol.audio.play_sound("cane")
       self.somaria_block:set_position(-100, 0)
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
   self:set_finished()

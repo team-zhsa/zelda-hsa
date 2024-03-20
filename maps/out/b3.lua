@@ -132,7 +132,7 @@ function switch_maze_game:on_activated()
 			outside_kakarico_playing_maze = true
 		end)
 	elseif not outside_kakarico_playing_maze then
-		sol.audio.play_sound("wrong")
+		sol.audio.play_sound("common/wrong")
 		switch_maze_game:set_activated(false)
 	end
 end

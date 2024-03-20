@@ -33,7 +33,7 @@ function item:on_using()
     local destination_name = dungeon_infos["main_entrance"]["destination_name"]
     hero:teleport(map_id, destination_name, "fade")
 	else
-		audio_manager:play_sound("wrong")
+		audio_manager:play_sound("common/wrong")
 	end
 
   -- Define here what happens when using this item

@@ -126,7 +126,7 @@ function savegame_menu:add_letter_player_name()
 
       if letter_cursor.x == 10 then  -- Remove the last letter.
         if size == 0 then
-          sol.audio.play_sound("wrong")
+          sol.audio.play_sound("common/wrong")
         else
           sol.audio.play_sound("danger")
           self.player_name = self.player_name:sub(1, size - 1)
@@ -148,7 +148,7 @@ function savegame_menu:add_letter_player_name()
       sol.audio.play_sound("danger")
       self.player_name = self.player_name .. letter_to_add
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
 
@@ -158,7 +158,7 @@ end
 function savegame_menu:validate_player_name()
 
   if self.player_name:len() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 

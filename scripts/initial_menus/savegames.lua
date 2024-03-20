@@ -410,7 +410,7 @@ function savegame_menu:key_pressed_phase_erase_file(key)
       local slot = self.slots[self.cursor_position]
       if not sol.game.exists(slot.file_name) then
         -- The savegame doesn't exist: error sound.
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
       else
         -- The savegame exists: confirm deletion.
         sol.audio.play_sound("menus/select")
@@ -948,7 +948,7 @@ function savegame_menu:add_letter_player_name()
       sol.audio.play_sound("menus/letter_add")
       self.player_name = self.player_name .. letter_to_add
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
 
@@ -958,7 +958,7 @@ end
 function savegame_menu:validate_player_name()
 
   if self.player_name:len() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 
@@ -982,7 +982,7 @@ function savegame_menu:validate_player_name()
   or self.player_name:lower() == "chiant"
   or self.player_name:lower() == "couille"
   then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 

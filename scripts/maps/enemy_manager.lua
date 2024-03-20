@@ -22,7 +22,7 @@ function enemy_manager:execute_when_vegas_dead(map, enemy_prefix)
 
     sol.timer.start(map, 500, function()
       if not all_same_direction then
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
         for vegas in map:get_entities(enemy_prefix) do
           vegas:set_symbol_fixed(false)
         end

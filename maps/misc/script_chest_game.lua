@@ -49,7 +49,7 @@ local function play_question_dialog_finished(answer)
         game:start_dialog("chests_game_cave.start_game")
       end
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
       game:start_dialog("chests_game_cave.not_enough_money")
     end
   end
@@ -87,7 +87,7 @@ local function chest_empty(chest)
     hero:start_treasure(rewards[index].item_name, rewards[index].variant, rewards[index].savegame_variable)
     playing = false
   else
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     chest:set_open(false)
   end
 end

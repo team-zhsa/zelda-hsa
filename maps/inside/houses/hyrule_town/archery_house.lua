@@ -134,7 +134,7 @@ function manager:on_interaction()
               end)
             end)
           else
-            sol.audio.play_sound("wrong")
+            sol.audio.play_sound("common/wrong")
             game:start_dialog("maps.houses.hyrule_town.archery_house.not_enough_money")
           end
         else

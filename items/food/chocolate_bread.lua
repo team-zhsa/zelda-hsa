@@ -13,7 +13,7 @@ end
 function item:on_using()
 
   if self:get_amount() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
   else
     self:remove_amount(1)
     self:get_game():add_life(6)
