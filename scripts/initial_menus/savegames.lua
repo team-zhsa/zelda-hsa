@@ -403,7 +403,7 @@ function savegame_menu:key_pressed_phase_erase_file(key)
   if key == "space" or key == "return" then
     if self.cursor_position == 4 then
       -- The user chooses "Cancel".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     elseif self.cursor_position > 0 and self.cursor_position <= 3 then
       -- The user chooses a savegame to delete.
@@ -413,7 +413,7 @@ function savegame_menu:key_pressed_phase_erase_file(key)
         sol.audio.play_sound("wrong")
       else
         -- The savegame exists: confirm deletion.
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self:init_phase_confirm_erase()
       end
     end
@@ -486,7 +486,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
       self:init_phase_select_file()
     elseif self.cursor_position == 4 then
       -- The user chooses "no".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     end
   else
@@ -605,7 +605,7 @@ function savegame_menu:key_pressed_phase_options(key)
   if key == "space" or key == "return" then
     if self.options_cursor_position > #self.options then
       -- Back.
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     else
       -- Set an option.

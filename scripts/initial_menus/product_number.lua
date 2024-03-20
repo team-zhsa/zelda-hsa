@@ -162,7 +162,7 @@ function savegame_menu:validate_player_name()
     return false
   end
 
-  sol.audio.play_sound("ok")
+  sol.audio.play_sound("menus/select")
   if self.player_name:lower() == "zelda" or self.player_name:lower() == "ju" or self.player_name:lower() == "lucifer" or self.player_name:lower() == "linkff" or self.player_name:lower() == "salade verte" then
     sol.audio.play_music("cutscenes/credits")
   end

@@ -339,7 +339,7 @@ function options_submenu:on_command_pressed(command)
 				self:set_caption_key("options.caption.press_key")
 				local command_to_customize = self.command_names[self.cursor_position - 1]
 				if not self.waiting_for_command and commands_items[cursor_index].customizable then  -- Customizing a game command.
-					sol.audio.play_sound("ok")
+					sol.audio.play_sound("menus/select")
 					self.waiting_for_command = true
 					handled = true
 				end

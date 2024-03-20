@@ -212,7 +212,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_state = 2
         if self.save_dialog_choice == 0 then
           self.game:save()
-          sol.audio.play_sound("ok")
+          sol.audio.play_sound("menus/select")
         else
           sol.audio.play_sound("danger")
         end
@@ -222,7 +222,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_cursor_pos = "left"
       else
         -- After "Do you want to continue?".
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self.save_dialog_state = 0
         self.game:set_custom_command_effect("action", self.action_command_effect_saved)
         self.game:set_custom_command_effect("attack", self.attack_command_effect_saved)
