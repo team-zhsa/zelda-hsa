@@ -1448,16 +1448,13 @@ music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
-sound{ id = "items/bomb", description = "Bomb" }
-sound{ id = "items/boomerang", description = "Boomerang" }
-sound{ id = "common/bounce", description = "Bounce" }
-sound{ id = "items/bow", description = "Bow" }
-sound{ id = "common/cannonball", description = "Cannonball" }
-sound{ id = "common/chest_open", description = "Chest Open" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
 sound{ id = "common/bars_npc_dialog", description = "NPC Dialog Bars" }
 sound{ id = "common/bombers_notification", description = "Bombers notebook notification" }
+sound{ id = "common/bounce", description = "Bounce" }
+sound{ id = "common/cannonball", description = "Cannonball" }
 sound{ id = "common/chest_appear", description = "Chest appearing" }
+sound{ id = "common/chest_open", description = "Chest Open" }
 sound{ id = "common/door/boss_door_unlock", description = "Boss door unlock" }
 sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
 sound{ id = "common/door/stone_close", description = "Stone close" }
@@ -1476,16 +1473,22 @@ sound{ id = "common/secret_discover_minor", description = "Secret discover minor
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
 sound{ id = "common/switch_crystal", description = "Switch crystal hit" }
 sound{ id = "common/switch_walkable", description = "Switch (On/Off)" }
-sound{ id = "enemies/cucco", description = "cucco" }
-sound{ id = "menus/danger", description = "Danger" }
+sound{ id = "common/warp", description = "common/warp" }
+sound{ id = "common/world_warp", description = "common/world_warp" }
+sound{ id = "common/wrong", description = "common/wrong" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
+sound{ id = "enemies/cucco", description = "cucco" }
 sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
 sound{ id = "environment/bush", description = "Bush" }
+sound{ id = "environment/explosion", description = "Explosion" }
+sound{ id = "environment/freeze", description = "Freeze" }
+sound{ id = "environment/ice_melt", description = "Ice melt" }
+sound{ id = "environment/ice_shatter", description = "ice_shatter" }
 sound{ id = "environment/pot_shatter", description = "Shattering Pot" }
 sound{ id = "environment/rock_shatter", description = "Rock" }
 sound{ id = "environment/skull_shatter", description = "Shattering Skull" }
@@ -1494,16 +1497,24 @@ sound{ id = "environment/thunder2", description = "Thunder" }
 sound{ id = "environment/thunder3", description = "Thunder" }
 sound{ id = "environment/thunder_double", description = "Thunder double" }
 sound{ id = "environment/thunder_far", description = "Thunder far" }
+sound{ id = "environment/water_drain", description = "water_drain" }
+sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
+sound{ id = "environment/water_fill", description = "water_fill" }
+sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
 sound{ id = "environment/water_level/loop", description = "Water level loop" }
 sound{ id = "environment/water_level/start", description = "Water level start" }
-sound{ id = "environment/explosion", description = "Explosion" }
+sound{ id = "environment/wind", description = "wind" }
 sound{ id = "external_stairs_down", description = "External stairs down" }
 sound{ id = "external_stairs_up", description = "External stairs up" }
-sound{ id = "environment/freeze", description = "Freeze" }
-sound{ id = "environment/ice_melt", description = "Ice melt" }
-sound{ id = "environment/ice_shatter", description = "ice_shatter" }
+sound{ id = "hero/hero_jump", description = "Jump" }
+sound{ id = "hero/hero_lift", description = "lift" }
+sound{ id = "hero/splash", description = "Splash" }
+sound{ id = "hero/swim", description = "swim" }
 sound{ id = "internal_stairs_down", description = "internal_stairs_down" }
 sound{ id = "internal_stairs_up", description = "internal_stairs_up" }
+sound{ id = "items/bomb", description = "Bomb" }
+sound{ id = "items/boomerang", description = "Boomerang" }
+sound{ id = "items/bow", description = "Bow" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
 sound{ id = "items/fire_rod/shoot", description = "Shoot" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
@@ -1518,6 +1529,7 @@ sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
 sound{ id = "items/lens_of_truth/lens_end", description = "Lens of Truth End" }
 sound{ id = "items/lens_of_truth/lens_start", description = "Lens of Truth Start" }
+sound{ id = "items/no_arrows_shoot", description = "No arrows shoot" }
 sound{ id = "items/ocarina/song/10_zelda", description = "10 Zelda' Lullaby" }
 sound{ id = "items/ocarina/song/11_time", description = "11 Song of Time" }
 sound{ id = "items/ocarina/song/12_secret", description = "12 Secret Song" }
@@ -1531,12 +1543,12 @@ sound{ id = "items/ocarina/song/3_water", description = "3 Serenade of Water" }
 sound{ id = "items/ocarina/song/4_spirit", description = "4 Requiem of Spirit" }
 sound{ id = "items/ocarina/song/5_lorule", description = "5 Song of Lorule" }
 sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" }
+sound{ id = "items/shield", description = "Shield" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
-sound{ id = "hero/hero_jump", description = "Jump" }
-sound{ id = "hero/hero_lift", description = "lift" }
 sound{ id = "menus/cursor", description = "Cursor" }
+sound{ id = "menus/danger", description = "Danger" }
 sound{ id = "menus/dir_left", description = "Left" }
 sound{ id = "menus/dir_right", description = "Right" }
 sound{ id = "menus/fileselect_created", description = "Fileselect created" }
@@ -1551,42 +1563,30 @@ sound{ id = "menus/message_letter", description = "Message letter" }
 sound{ id = "menus/message_no", description = "Message no" }
 sound{ id = "menus/minimap_off", description = "Minimap off" }
 sound{ id = "menus/minimap_on", description = "Minimap on" }
+sound{ id = "menus/ok", description = "ok" }
 sound{ id = "menus/option_modify_value", description = "Option" }
 sound{ id = "menus/pause_close", description = "Pause close" }
 sound{ id = "menus/pause_open", description = "Pause open" }
 sound{ id = "menus/select", description = "Select" }
 sound{ id = "menus/solarus_logo", description = "Solarus Logo" }
+sound{ id = "menus/stairs_indicator", description = "stairs_indicator" }
+sound{ id = "menus/timer", description = "Timer" }
+sound{ id = "menus/timer_almost_end", description = "Timer almost end" }
+sound{ id = "menus/timer_almost_end_switch", description = "Timer almost end" }
+sound{ id = "menus/timer_hurry", description = "Timer hurry" }
+sound{ id = "menus/timer_hurry_switch", description = "Timer hurry" }
+sound{ id = "menus/timer_switch", description = "Timer" }
 sound{ id = "menus/title/presented_by", description = "Presented by" }
-sound{ id = "items/no_arrows_shoot", description = "No arrows shoot" }
 sound{ id = "objects/heart/heart", description = "Heart" }
 sound{ id = "objects/rupee/rupee", description = "Rupee" }
 sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
-sound{ id = "menus/ok", description = "ok" }
 sound{ id = "running", description = "running" }
 sound{ id = "running_obstacle", description = "running_obstacle" }
-sound{ id = "items/shield", description = "Shield" }
-sound{ id = "hero/splash", description = "Splash" }
 sound{ id = "stairs_down_end", description = "stairs_down_end" }
 sound{ id = "stairs_down_start", description = "stairs_down_start" }
-sound{ id = "menus/stairs_indicator", description = "stairs_indicator" }
 sound{ id = "stairs_up_end", description = "stairs_up_end" }
 sound{ id = "stairs_up_start", description = "stairs_up_start" }
-sound{ id = "hero/swim", description = "swim" }
-sound{ id = "menus/timer", description = "Timer" }
-sound{ id = "menus/timer_almost_end", description = "Timer almost end" }
-sound{ id = "menus/timer_hurry", description = "Timer hurry" }
-sound{ id = "menus/timer_switch", description = "Timer" }
-sound{ id = "menus/timer_almost_end_switch", description = "Timer almost end" }
-sound{ id = "menus/timer_hurry_switch", description = "Timer hurry" }
 sound{ id = "treasure", description = "Empty sound" }
-sound{ id = "common/warp", description = "common/warp" }
-sound{ id = "environment/water_drain", description = "water_drain" }
-sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
-sound{ id = "environment/water_fill", description = "water_fill" }
-sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
-sound{ id = "environment/wind", description = "wind" }
-sound{ id = "common/world_warp", description = "common/world_warp" }
-sound{ id = "common/wrong", description = "common/wrong" }
 
 item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
@@ -2310,8 +2310,6 @@ file{ path = "shaders/power_effect.dat", author = "PhoenixII54", }
 file{ path = "shaders/radial_fade_out.dat", author = "PhoenixII54", }
 file{ path = "shaders/radial_fade_out.frag.glsl", author = "PhoenixII54", }
 file{ path = "shaders/starman.dat", author = "PhoenixII54", }
-file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
-file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
 file{ path = "sprites/enemies/outside/armos.png", author = "The Unknown", }
 file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "LinkFF", }
