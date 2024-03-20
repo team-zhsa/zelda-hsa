@@ -94,7 +94,7 @@ function enemy:on_custom_attack_received(attack, sprite)
     freeze_timer = sol.timer.start(self, 4000, function() freeze_timer = nil end)
   elseif attack == "explosion" then
     freezing = false
-    sol.audio.play_sound("ice_shatter")
+    sol.audio.play_sound("environment/ice_shatter")
     self:get_sprite():set_animation("walking")
     self:set_attack_consequence("sword", 1)
     self:check_hero()

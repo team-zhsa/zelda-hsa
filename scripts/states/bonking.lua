@@ -31,7 +31,7 @@ function state:on_started()
   end
   entity.bonking=true
   --state:set_can_control_movement(false)
-  audio_manager:play_sound("running_obstacle")
+  audio_manager:play_sound("hero/running_obstacle")
 
   local map=entity:get_map()
 

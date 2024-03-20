@@ -1403,6 +1403,15 @@ tile{
   pattern = "wall.2-2",
 }
 
+tile{
+  layer = 0,
+  x = 208,
+  y = 88,
+  width = 24,
+  height = 96,
+  pattern = "hole",
+}
+
 destination{
   name = "destination",
   layer = 0,
@@ -1420,7 +1429,7 @@ teletransporter{
   destination_map = "misc/test_ground",
   destination = "destination",
   sprite = "entities/warps/teletransporter",
-  sound = "world_warp",
+  sound = "common/world_warp",
 }
 
 enemy{
@@ -1462,6 +1471,70 @@ enemy{
   y = 69,
   direction = 3,
   breed = "outside/octorok_red",
+}
+
+enemy{
+  layer = 0,
+  x = 104,
+  y = 109,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 136,
+  y = 117,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 144,
+  y = 117,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 168,
+  y = 133,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 144,
+  y = 149,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  layer = 0,
+  x = 112,
+  y = 149,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
+}
+
+enemy{
+  name = "aaa",
+  layer = 0,
+  x = 96,
+  y = 117,
+  direction = 0,
+  breed = "outside/armos_yellow",
+  treasure_name = "random_mountains",
 }
 
 tile{

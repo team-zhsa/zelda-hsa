@@ -9,7 +9,7 @@ function item:on_created()
 
   self:set_savegame_variable("possession_rupee_bag")
   self:set_brandish_when_picked(true)
-  self:set_sound_when_brandished("common/big_item")
+  self:set_sound_when_brandished("common/major_item")
   
 end
 

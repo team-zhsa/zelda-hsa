@@ -22,7 +22,7 @@ function enemy_manager:execute_when_vegas_dead(map, enemy_prefix)
 
     sol.timer.start(map, 500, function()
       if not all_same_direction then
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
         for vegas in map:get_entities(enemy_prefix) do
           vegas:set_symbol_fixed(false)
         end
@@ -55,7 +55,7 @@ function enemy_manager:create_teletransporter_if_small_boss_dead(map, sound)
         y = teletransporter_A_y - 16,
         width = 16,
         height = 16,
-        sprite = "entities/teletransporter_dungeon",
+        sprite = "entities/warps/teletransporter_dungeon",
         layer = teletransporter_A_layer,
         destination = "teletransporter_destination_B",
         destination_map = map:get_id(),
@@ -66,7 +66,7 @@ function enemy_manager:create_teletransporter_if_small_boss_dead(map, sound)
         y = teletransporter_B_y - 16,
         width = 16,
         height = 16,
-        sprite = "entities/teletransporter_dungeon",
+        sprite = "entities/warps/teletransporter_dungeon",
         layer = teletransporter_B_layer,
         destination = "teletransporter_destination_A",
         destination_map = map:get_id(),

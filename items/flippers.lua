@@ -27,7 +27,7 @@ end
 
 function item:on_obtaining()
 
-  audio_manager:play_sound("common/big_item")
+  audio_manager:play_sound("common/major_item")
 
 end
 

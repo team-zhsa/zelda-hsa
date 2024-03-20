@@ -78,7 +78,7 @@ function minigame_manager()
     end
     if map:get_entity("target"):get_sprite():get_animation() == "hurt" then
       hits = hits + 1
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       map:set_entities_enabled("display_counter",false)
       map:set_entities_enabled("display_counter_"..hits,true)
       if hits == 10 then map:set_entities_enabled("display_counter_perfect",true) end
@@ -141,7 +141,7 @@ function manager:on_interaction()
               end)
             end)
           else
-            sol.audio.play_sound("wrong")
+            sol.audio.play_sound("common/wrong")
             game:start_dialog("cocorico.arrow_minigame.not_enough_money")
           end
         else

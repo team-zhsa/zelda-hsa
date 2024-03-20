@@ -279,7 +279,7 @@ function quest_submenu:on_command_pressed(command)
 			if self.cursor_column == 0 then
 				self:previous_submenu()
 			else
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				if self.cursor_column == 2 and self.cursor_row == 0 then
 					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
 				elseif self.cursor_column == 5 and self.cursor_row == 0 then
@@ -301,7 +301,7 @@ function quest_submenu:on_command_pressed(command)
 					or self.cursor_column == 6 and  self.cursor_row == 3  then
 				self:next_submenu()
 			else
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				if self.cursor_column == 0 and self.cursor_row == 0 then
 					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
 				elseif self.cursor_column == 2 and self.cursor_row == 0 then
@@ -318,7 +318,7 @@ function quest_submenu:on_command_pressed(command)
 
 		elseif command == "up" then
 			if self.cursor_column ~= 3 then
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				if self.cursor_column == 1 and self.cursor_row == 1
 					or self.cursor_column == 4 and self.cursor_row == 1
 					or self.cursor_column == 6 and self.cursor_row == 1 then
@@ -331,7 +331,7 @@ function quest_submenu:on_command_pressed(command)
 
 		elseif command == "down" then
 			if self.cursor_column ~= 3 then
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				if self.cursor_column == 1 and self.cursor_row == 3
 					or self.cursor_column == 4 and self.cursor_row == 3
 					or self.cursor_column == 6 and self.cursor_row == 3 then

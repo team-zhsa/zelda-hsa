@@ -318,15 +318,15 @@ function options_submenu:on_command_pressed(command)
 			self:next_submenu()
 			handled = true
 		elseif command == "up" then
-			sol.audio.play_sound("cursor")
+			sol.audio.play_sound("menus/cursor")
 			self:set_cursor_position((self.cursor_position + 8) % 10 + 1)
 			handled = true
 		elseif command == "down" then
-			sol.audio.play_sound("cursor")
+			sol.audio.play_sound("menus/cursor")
 			self:set_cursor_position(self.cursor_position % 10 + 1)
 			handled = true
 		elseif command == "action" then
-			sol.audio.play_sound("danger")
+			sol.audio.play_sound("menus/danger")
 			if self.cursor_position == 1 then
 				--[[ Change the video mode
 					i = 0
@@ -339,7 +339,7 @@ function options_submenu:on_command_pressed(command)
 				self:set_caption_key("options.caption.press_key")
 				local command_to_customize = self.command_names[self.cursor_position - 1]
 				if not self.waiting_for_command and commands_items[cursor_index].customizable then  -- Customizing a game command.
-					sol.audio.play_sound("ok")
+					sol.audio.play_sound("menus/select")
 					self.waiting_for_command = true
 					handled = true
 				end
@@ -361,7 +361,7 @@ end
 local function stop_customizing()
 
 	self.waiting_for_command = false
-	sol.audio.play_sound("danger")
+	sol.audio.play_sound("menus/danger")
 	self:set_caption_key("options.caption.press_action_customize_key")
 	self:load_command_texts()
 end

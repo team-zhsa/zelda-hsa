@@ -23,3 +23,7 @@ end
 function map:on_opening_transition_finished()
 
 end
+
+map:register_event("on_update", function()
+if aaa ~= nil then print(aaa:get_position()) else print("NO ARMOS" ) end
+end)

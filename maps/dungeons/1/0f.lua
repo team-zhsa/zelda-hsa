@@ -1,7 +1,7 @@
 local map = ...
 local game = map:get_game()
 local separator_manager = require("scripts/maps/separator_manager.lua")
-
+local timer_manager = require("scripts/maps/timer_manager")
 function map:on_started()
 	separator_manager:manage_map(map)
 	map:close_doors("door_23_n1")
@@ -30,16 +30,8 @@ end
 
 function switch_door_23_n1:on_activated()
   map:open_doors("door_23_n1")
-  sol.timer.start(map, 15000, function() --Timer for 15 seconds
+  timer_manager:start_timer(map, 15000, "countdown", function() --Timer for 15 seconds
     map:close_doors("door_23_n1")
     switch_door_23_n1:set_activated(false)
   end)
-  local num_calls = 0 --Timer for timer sound
-  sol.timer.start(game, 1000, function()
-    sol.audio.play_sound("danger")
-    num_calls = num_calls + 1
-    return num_calls < 15	
-  end)
 end
-
-

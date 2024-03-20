@@ -2,7 +2,7 @@ local item = ...
 local game = item:get_game()
 
 function item:on_created()
-	item:set_sound_when_brandished("common/big_item")
+	item:set_sound_when_brandished("common/major_item")
   item:set_savegame_variable("possession_hammer")
   item:set_assignable(true)
   item:set_pushed_stake(false)

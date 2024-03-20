@@ -84,7 +84,7 @@ function team_logo_menu:expand_logo()
 	phase = 3
 	team_logo_sprite:set_frame(0)
 	team_logo_sprite:set_animation("opening")
-	sol.audio.play_sound("menu/title/presented_by")
+	sol.audio.play_sound("menus/title/presented_by")
   sol.timer.start(team_logo_menu, 2000, function()
     can_skip_menu = true
     -- Quit menu

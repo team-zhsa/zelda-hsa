@@ -245,7 +245,7 @@ end
 
 function savegame_menu:move_cursor_up()
 
-  sol.audio.play_sound("menu/cursor")
+  sol.audio.play_sound("menus/cursor")
   local cursor_position = self.cursor_position - 1
   if cursor_position == 0 then
     cursor_position = 4
@@ -257,7 +257,7 @@ end
 
 function savegame_menu:move_cursor_down()
 
-  sol.audio.play_sound("menu/cursor")
+  sol.audio.play_sound("menus/cursor")
   local cursor_position = self.cursor_position + 1
   if cursor_position >= 5 then
     cursor_position = 1
@@ -268,10 +268,10 @@ end
 function savegame_menu:move_cursor_left_or_right()
 
   if self.cursor_position == 4 then
-    sol.audio.play_sound("menu/dir_left")
+    sol.audio.play_sound("menus/dir_left")
     self:set_cursor_position(5)
   elseif self.cursor_position == 5 then
-    sol.audio.play_sound("menu/dir_right")
+    sol.audio.play_sound("menus/dir_right")
     self:set_cursor_position(4)
   end
 end
@@ -318,7 +318,7 @@ function savegame_menu:key_pressed_phase_select_file(key)
 
   local handled = false
   if key == "space" or key == "return" then
-    sol.audio.play_sound("menu/fileselect_start")
+    sol.audio.play_sound("menus/fileselect_start")
     if self.cursor_position == 5 then
       -- The user chooses "Options".
       self:init_phase_options()
@@ -403,17 +403,17 @@ function savegame_menu:key_pressed_phase_erase_file(key)
   if key == "space" or key == "return" then
     if self.cursor_position == 4 then
       -- The user chooses "Cancel".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     elseif self.cursor_position > 0 and self.cursor_position <= 3 then
       -- The user chooses a savegame to delete.
       local slot = self.slots[self.cursor_position]
       if not sol.game.exists(slot.file_name) then
         -- The savegame doesn't exist: error sound.
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
       else
         -- The savegame exists: confirm deletion.
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self:init_phase_confirm_erase()
       end
     end
@@ -478,7 +478,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
   if key == "space" or key == "return" then
    if self.cursor_position == 5 then
       -- The user chooses "yes".
-      sol.audio.play_sound("menu/fileselect_erase0")
+      sol.audio.play_sound("menus/fileselect_erase0")
       local slot = self.slots[self.save_number_to_erase]
       sol.game.delete(slot.file_name)
       self.cursor_position = self.save_number_to_erase
@@ -486,7 +486,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
       self:init_phase_select_file()
     elseif self.cursor_position == 4 then
       -- The user chooses "no".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     end
   else
@@ -605,13 +605,13 @@ function savegame_menu:key_pressed_phase_options(key)
   if key == "space" or key == "return" then
     if self.options_cursor_position > #self.options then
       -- Back.
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     else
       -- Set an option.
       local option = self.options[self.options_cursor_position]
       if not self.modifying_option then
-	sol.audio.play_sound("menu/option_modifyvalue")
+	sol.audio.play_sound("menus/option_modifyvalue")
 	self.left_arrow_sprite:set_frame(0)
 	self.right_arrow_sprite:set_frame(0)
 	option.label_text:set_color{255, 255, 255}
@@ -619,7 +619,7 @@ function savegame_menu:key_pressed_phase_options(key)
 	self.title_text:set_text_key("selection_menu.phase.options.changing")
 	self.modifying_option = true
       else
-	sol.audio.play_sound("danger")
+	sol.audio.play_sound("menus/danger")
 	option.label_text:set_color{255, 255, 0}
 	option.value_text:set_color{255, 255, 255}
 	self.left_arrow_sprite:set_frame(0)
@@ -645,7 +645,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
     -- Just moving the options cursor (not modifying any option).
 
     if direction8 == 2 then  -- Up.
-      sol.audio.play_sound("menu/cursor")
+      sol.audio.play_sound("menus/cursor")
       self.left_arrow_sprite:set_frame(0)
       local position = self.options_cursor_position - 1
       if position == 0 then
@@ -655,7 +655,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       handled = true
 
     elseif direction8 == 6 then  -- Down.
-      sol.audio.play_sound("menu/cursor")
+      sol.audio.play_sound("menus/cursor")
       self.left_arrow_sprite:set_frame(0)
       local position = self.options_cursor_position + 1
       if position > #self.options + 1 then
@@ -672,7 +672,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index % #option.values) + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menu/option_modifyvalue")
+      sol.audio.play_sound("menus/option_modifyvalue")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true
@@ -681,7 +681,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index + #option.values - 2) % #option.values + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menu/option_modifyvalue")
+      sol.audio.play_sound("menus/option_modifyvalue")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true
@@ -864,19 +864,19 @@ function savegame_menu:direction_pressed_phase_choose_name(direction8)
 
   local handled = true
   if direction8 == 0 then  -- Right.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 1) % 13
 
   elseif direction8 == 2 then  -- Up.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 4) % 5
 
   elseif direction8 == 4 then  -- Left.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 12) % 13
 
   elseif direction8 == 6 then  -- Down.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 1) % 5
 
   else
@@ -926,9 +926,9 @@ function savegame_menu:add_letter_player_name()
 
       if letter_cursor.x == 10 then  -- Remove the last letter.
         if size == 0 then
-          sol.audio.play_sound("menu/letter_back")
+          sol.audio.play_sound("menus/letter_back")
         else
-          sol.audio.play_sound("menu/letter_back")
+          sol.audio.play_sound("menus/letter_back")
           self.player_name = self.player_name:sub(1, size - 1)
         end
 
@@ -936,7 +936,7 @@ function savegame_menu:add_letter_player_name()
         finished = self:validate_player_name()
 
       elseif letter_cursor.x == 12 then  -- Cancel.
-        sol.audio.play_sound("danger")
+        sol.audio.play_sound("menus/danger")
         finished = true
       end
     end
@@ -945,10 +945,10 @@ function savegame_menu:add_letter_player_name()
   if letter_to_add ~= nil then
     -- A letter was selected.
     if size < 8 then
-      sol.audio.play_sound("menu/letter_add")
+      sol.audio.play_sound("menus/letter_add")
       self.player_name = self.player_name .. letter_to_add
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
 
@@ -958,11 +958,11 @@ end
 function savegame_menu:validate_player_name()
 
   if self.player_name:len() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 
-  sol.audio.play_sound("menu/fileselect_created")
+  sol.audio.play_sound("menus/fileselect_created")
   -- Special music for special names
   if self.player_name:lower() == "zelda"
   or self.player_name:lower() == "unknown"
@@ -982,7 +982,7 @@ function savegame_menu:validate_player_name()
   or self.player_name:lower() == "chiant"
   or self.player_name:lower() == "couille"
   then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 

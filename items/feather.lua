@@ -50,7 +50,7 @@ end
 
 -- Play fanfare sound on obtaining.
 function item:on_obtaining()
-  audio_manager:play_sound("common/big_item")
+  audio_manager:play_sound("common/major_item")
 end
 
 -- Initialize the metatable of appropriate entities to be able to set a reaction on jumped on.

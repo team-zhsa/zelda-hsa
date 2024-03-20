@@ -32,7 +32,7 @@ local function initialise_map_features(game)
     game:set_value("map_last_submenu", submenu_index)
 
     -- Play the sound of pausing the game.
-    sol.audio.play_sound("menu/minimap_on")
+    sol.audio.play_sound("menus/minimap_on")
     -- Start the selected submenu.
     sol.menu.start(map_menu, game.map_submenus[submenu_index])
   end
@@ -52,7 +52,7 @@ local function initialise_map_features(game)
   function map_menu:on_finished()
 
     -- Play the sound of unpausing the game.
-    sol.audio.play_sound("menu/minimap_off")
+    sol.audio.play_sound("menus/minimap_off")
     game.map_submenus = {}
     -- Restore opacity
     game:get_hud():set_item_icon_opacity(1, 255)

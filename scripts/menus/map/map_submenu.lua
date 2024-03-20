@@ -145,7 +145,7 @@ end
 
 function submenu:next_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -156,7 +156,7 @@ end
 
 function submenu:previous_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -197,7 +197,7 @@ function submenu:on_command_pressed(command)
 
     if command == "left" or command == "right" then
       -- Move the cursor.
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       if self.save_dialog_choice == 0 then
         self.save_dialog_choice = 1
         self.save_dialog_cursor_pos = "right"
@@ -212,9 +212,9 @@ function submenu:on_command_pressed(command)
         self.save_dialog_state = 2
         if self.save_dialog_choice == 0 then
           self.game:save()
-          sol.audio.play_sound("ok")
+          sol.audio.play_sound("menus/select")
         else
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menus/danger")
         end
         self.question_text_1:set_text_key("save_dialog.continue_question_0")
         self.question_text_2:set_text_key("save_dialog.continue_question_1")
@@ -222,7 +222,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_cursor_pos = "left"
       else
         -- After "Do you want to continue?".
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self.save_dialog_state = 0
         self.game:set_custom_command_effect("action", self.action_command_effect_saved)
         self.game:set_custom_command_effect("attack", self.attack_command_effect_saved)

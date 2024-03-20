@@ -148,7 +148,7 @@ local function initialise_dialog_box_features(game)
 		if not dialog_box:is_full() then
 			dialog_box:add_character()
 		else
-			sol.audio.play_sound("menu/dialogue_end")
+			sol.audio.play_sound("menus/message_end")
 			if dialog_box:has_more_lines()
 				or dialog_box.dialog.next ~= nil
 				or dialog_box.selected_answer ~= nil then
@@ -464,7 +464,7 @@ local function initialise_dialog_box_features(game)
 
     if not special and current_char ~= nil and self.need_letter_sound then
       -- Play a letter sound sometimes.
-      audio_manager:play_sound("menu/dialogue_letter")
+      audio_manager:play_sound("menus/message_letter")
       self.need_letter_sound = false
       sol.timer.start(self, letter_sound_delay, function()
         self.need_letter_sound = true
@@ -533,7 +533,7 @@ local function initialise_dialog_box_features(game)
 			if self.selected_answer ~= nil
 					and not self:has_more_lines()
 					and self:is_full() then
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				self.selected_answer = 3 - self.selected_answer  -- Switch between 1 and 2.
 			end
 		end
