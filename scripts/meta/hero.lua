@@ -64,7 +64,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
         end)
     elseif current_state == "sword spin attack" or state_desc=="sword_spin_attack" then
       -- Sword spin attack
-      audio_manager:play_sound("sword_spin_attack_release") 
+      audio_manager:play_sound("hero/sword_spin_attack_release") 
     elseif current_state == "sword swinging" or state_desc=="sword" then
       -- Sword swinging
       --local index = game:get_ability("sword")
@@ -150,7 +150,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
       end
-      sol.audio.play_sound("menus/dialogue_end")
+      sol.audio.play_sound("menus/message_end")
     end
   end)
 

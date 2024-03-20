@@ -1448,6 +1448,14 @@ music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
+sound{ id = "arrow_hit", description = "Empty sound" }
+sound{ id = "boomerang", description = "Empty sound" }
+sound{ id = "boss_hurt", description = "Empty sound" }
+sound{ id = "boss_killed", description = "Empty sound" }
+sound{ id = "bow", description = "Empty sound" }
+sound{ id = "cane", description = "Empty sound" }
+sound{ id = "chest", description = "Empty sound" }
+sound{ id = "chest_open", description = "Empty sound" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
 sound{ id = "common/bars_npc_dialog", description = "NPC Dialog Bars" }
 sound{ id = "common/bombers_notification", description = "Bombers notebook notification" }
@@ -1476,14 +1484,24 @@ sound{ id = "common/switch_walkable", description = "Switch (On/Off)" }
 sound{ id = "common/warp", description = "common/warp" }
 sound{ id = "common/world_warp", description = "common/world_warp" }
 sound{ id = "common/wrong", description = "common/wrong" }
+sound{ id = "door_closed", description = "Empty sound" }
+sound{ id = "door_open", description = "Empty sound" }
+sound{ id = "door_unlocked", description = "Empty sound" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
+sound{ id = "enemies/boss_hurt", description = "Boss hurt" }
+sound{ id = "enemies/boss_killed", description = "Boss killed" }
 sound{ id = "enemies/cucco", description = "cucco" }
+sound{ id = "enemies/enemy_hurt", description = "Enemy hurt" }
+sound{ id = "enemies/enemy_killed", description = "Enemy killed" }
+sound{ id = "enemies/monster_hurt", description = "Monster hurt" }
 sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
+sound{ id = "enemy_hurt", description = "Empty sound" }
+sound{ id = "enemy_killed", description = "Empty sound" }
 sound{ id = "environment/bush", description = "Bush" }
 sound{ id = "environment/explosion", description = "Explosion" }
 sound{ id = "environment/freeze", description = "Freeze" }
@@ -1504,14 +1522,15 @@ sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
 sound{ id = "environment/water_level/loop", description = "Water level loop" }
 sound{ id = "environment/water_level/start", description = "Water level start" }
 sound{ id = "environment/wind", description = "wind" }
-sound{ id = "external_stairs_down", description = "External stairs down" }
-sound{ id = "external_stairs_up", description = "External stairs up" }
-sound{ id = "hero/hero_jump", description = "Jump" }
+sound{ id = "explosion", description = "Empty sound" }
 sound{ id = "hero/hero_lift", description = "lift" }
 sound{ id = "hero/splash", description = "Splash" }
 sound{ id = "hero/swim", description = "swim" }
-sound{ id = "internal_stairs_down", description = "internal_stairs_down" }
-sound{ id = "internal_stairs_up", description = "internal_stairs_up" }
+sound{ id = "hero_falls", description = "Empty sound" }
+sound{ id = "hero_hurt", description = "Empty sound" }
+sound{ id = "hero_lands", description = "Empty sound" }
+sound{ id = "hero_pushes", description = "Empty sound" }
+sound{ id = "hookshot", description = "Empty sound" }
 sound{ id = "items/bomb", description = "Bomb" }
 sound{ id = "items/boomerang", description = "Boomerang" }
 sound{ id = "items/bow", description = "Bow" }
@@ -1547,6 +1566,8 @@ sound{ id = "items/shield", description = "Shield" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
+sound{ id = "jump", description = "Empty sound" }
+sound{ id = "lift", description = "Empty sound" }
 sound{ id = "menus/cursor", description = "Cursor" }
 sound{ id = "menus/danger", description = "Danger" }
 sound{ id = "menus/dir_left", description = "Left" }
@@ -1577,16 +1598,36 @@ sound{ id = "menus/timer_hurry", description = "Timer hurry" }
 sound{ id = "menus/timer_hurry_switch", description = "Timer hurry" }
 sound{ id = "menus/timer_switch", description = "Timer" }
 sound{ id = "menus/title/presented_by", description = "Presented by" }
+sound{ id = "message_end", description = "Empty sound" }
+sound{ id = "monster_hurt", description = "Empty sound" }
 sound{ id = "objects/heart/heart", description = "Heart" }
 sound{ id = "objects/rupee/rupee", description = "Rupee" }
 sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
-sound{ id = "running", description = "running" }
-sound{ id = "running_obstacle", description = "running_obstacle" }
-sound{ id = "stairs_down_end", description = "stairs_down_end" }
-sound{ id = "stairs_down_start", description = "stairs_down_start" }
-sound{ id = "stairs_up_end", description = "stairs_up_end" }
-sound{ id = "stairs_up_start", description = "stairs_up_start" }
+sound{ id = "picked_item", description = "Empty sound" }
+sound{ id = "running", description = "Empty sound" }
+sound{ id = "running_obstacle", description = "Empty sound" }
+sound{ id = "shield", description = "Empty sound" }
+sound{ id = "splash", description = "Empty sound" }
+sound{ id = "stairs_down_end", description = "Empty sound" }
+sound{ id = "stairs_down_start", description = "Empty sound" }
+sound{ id = "stairs_up_end", description = "Empty sound" }
+sound{ id = "stairs_up_start", description = "Empty sound" }
+sound{ id = "stone", description = "Empty sound" }
+sound{ id = "swim", description = "Empty sound" }
+sound{ id = "switch", description = "Empty sound" }
+sound{ id = "sword1", description = "Empty sound" }
+sound{ id = "sword_spin_attack_load", description = "Empty sound" }
+sound{ id = "sword_spin_attack_release", description = "Empty sound" }
+sound{ id = "sword_tapping", description = "Empty sound" }
+sound{ id = "sword_tapping_weak_wall", description = "Empty sound" }
+sound{ id = "throw", description = "Empty sound" }
+sound{ id = "timer", description = "Empty sound" }
+sound{ id = "timer_hurry", description = "Empty sound" }
 sound{ id = "treasure", description = "Empty sound" }
+sound{ id = "victory", description = "Empty sound" }
+sound{ id = "walk_on_grass", description = "Empty sound" }
+sound{ id = "walk_on_water", description = "Empty sound" }
+sound{ id = "wrong", description = "Empty sound" }
 
 item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }

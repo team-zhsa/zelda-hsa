@@ -2305,17 +2305,6 @@ teletransporter{
   destination = "_side",
 }
 
-teletransporter{
-  layer = -1,
-  x = 1024,
-  y = 64,
-  width = 192,
-  height = 112,
-  transition = "scrolling",
-  destination_map = "dungeons/1/0f",
-  destination = "_same",
-}
-
 tile{
   layer = 0,
   x = 392,
@@ -7412,19 +7401,6 @@ enemy{
   direction = 0,
   breed = "dungeons/tentacle_purple",
   treasure_name = "random",
-}
-
-teletransporter{
-  name = "boss_tp",
-  layer = 0,
-  x = 1112,
-  y = 80,
-  width = 16,
-  height = 16,
-  destination_map = "out/a1",
-  destination = "from_dungeon",
-  sprite = "entities/warps/teletransporter",
-  sound = "common/warp",
 }
 
 destination{

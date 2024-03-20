@@ -90,7 +90,7 @@ function item:on_using()
 end
 
 function item:on_obtaining()
-  audio_manager:play_sound("items/fanfare_item_extended")
+  audio_manager:play_sound("items/major_item")
 end
 
 -- initialise the metatable of appropriate entities to work with pegasus shoes.

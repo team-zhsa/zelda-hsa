@@ -48,7 +48,7 @@ function item:start_using()
         width = 16,
         height = 16
       })
-      audio_manager:play_sound("bomb")
+      audio_manager:play_sound("items/bomb")
     end
   end
   item:set_finished()
