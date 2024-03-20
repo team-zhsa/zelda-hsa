@@ -336,7 +336,7 @@ end
 
 -- Check if the enemy should fall in hole on switching to normal obstacle behavior mode.
 enemy_meta:register_event("set_obstacle_behavior", function(enemy)
-	if enemy:get_ground_below() == "hole" or enemy:get_ground_below() == "lava" and enemy:get_obstacle_behavior() == "normal" then
+	if (enemy:get_ground_below() == "hole" or enemy:get_ground_below() == "lava") and (enemy:get_obstacle_behavior() == "normal") then
 		entity_manager:create_falling_entity(enemy)
 	end
 end, false)
