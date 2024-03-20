@@ -23,7 +23,7 @@ end
 function item:on_created()
 
   self:set_sound_when_picked(nil)
-  self:set_sound_when_brandished("common/get_piece_of_heart")
+  self:set_sound_when_brandished("items/piece_of_heart")
 end
 
 function item:on_obtained(variant)
