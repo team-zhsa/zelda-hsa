@@ -229,7 +229,7 @@ function submenu:on_command_pressed(command)
 
 		if command == "left" or command == "right" then
 			-- Move the cursor.
-			sol.audio.play_sound("cursor")
+			sol.audio.play_sound("menus/cursor")
 			if self.save_dialog_choice == 0 then
 				self.save_dialog_choice = 1
 				self.save_dialog_cursor_pos = "right"

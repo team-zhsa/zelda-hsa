@@ -255,11 +255,11 @@ function options_submenu:on_command_pressed(command)
       self:next_submenu()
       handled = true
     elseif command == "up" then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_position + 8) % 10 + 1)
       handled = true
     elseif command == "down" then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position(self.cursor_position % 10 + 1)
       handled = true
     elseif command == "action" then

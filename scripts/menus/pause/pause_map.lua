@@ -197,7 +197,7 @@ function map_submenu:on_command_pressed(command)
       if new_selected_floor >= self.dungeon.lowest_floor
           and new_selected_floor <= self.dungeon.highest_floor then
         -- The new floor is valid.
-        sol.audio.play_sound("cursor")
+        sol.audio.play_sound("menus/cursor")
         self.hero_head_sprite:set_frame(0)
         self.selected_floor = new_selected_floor
         self:load_dungeon_map_image()

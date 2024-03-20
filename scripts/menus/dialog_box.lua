@@ -533,7 +533,7 @@ local function initialise_dialog_box_features(game)
 			if self.selected_answer ~= nil
 					and not self:has_more_lines()
 					and self:is_full() then
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				self.selected_answer = 3 - self.selected_answer  -- Switch between 1 and 2.
 			end
 		end

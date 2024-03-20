@@ -138,11 +138,11 @@ function language_menu:direction_pressed(direction8)
 
     local n = #self.languages
     if direction8 == 2 then  -- Up.
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_position + n - 2) % n + 1)
       handled = true
     elseif direction8 == 6 then  -- Down.
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position(self.cursor_position % n + 1)
       handled = true
     end

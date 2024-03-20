@@ -64,19 +64,19 @@ function savegame_menu:direction_pressed_phase_choose_name(direction8)
 
   local handled = true
   if direction8 == 0 then  -- Right.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 1) % 13
 
   elseif direction8 == 2 then  -- Up.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 4) % 5
 
   elseif direction8 == 4 then  -- Left.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 12) % 13
 
   elseif direction8 == 6 then  -- Down.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 1) % 5
 
   else
