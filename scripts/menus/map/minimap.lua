@@ -62,7 +62,7 @@ function map_submenu:on_started()
 			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
 				map_shown = true      -- If in North Hyrule with World Map, then show the map.
 				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
-				self.outside_world_minimap_size = {width = 960 + 88, height = 810 + 70}
+				self.outside_world_minimap_size = {width = 960 + 88 - 16, height = 810 + 70}
 				self.world_minimap_img = sol.surface.create("menus/map/full_hyrule_world_map.png")
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
 				local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
@@ -76,7 +76,6 @@ function map_submenu:on_started()
 				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + 50 + 88-- + 28 + 64 + 16
 				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width, math.max(0, hero_minimap_x + 88 - 87)) 
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height, math.max(0, hero_minimap_y  + 88 - 72))
-				print("hero_x".. self.hero_x )
 			end
 		else
 			-- if World Map not in inventory, show clouds in map screen
@@ -266,8 +265,6 @@ function map_submenu:world_on_command_pressed(command)
 					self:stop()
 					submenu.world_minimap_movement = nil
 				end
-				print(submenu.world_minimap_visible_xy.x)
-				print(submenu.world_minimap_visible_xy.y)
 				-- Stop the movement when map borders reached.
 				if submenu.world_minimap_visible_xy.x <= 4
 				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86

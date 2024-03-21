@@ -13,7 +13,7 @@ local function initialise_map_features(game)
     return
   end
 
-  local scrollable_map = require("scripts/menus/map/scrollable_map")
+  local minimap = require("scripts/menus/map/minimap")
 
   local map_menu = {}
   game.map_menu = map_menu
@@ -21,7 +21,7 @@ local function initialise_map_features(game)
   function map_menu:on_started()
     -- Define the available submenus.
     	game.map_submenus = {  -- Array of submenus (inventory, map, etc.).
-      	scrollable_map:new(game),
+      	minimap:new(game),
     	}
     -- Select the submenu that was saved if any.
     local submenu_index = game:get_value("map_last_submenu") or 1
@@ -65,7 +65,7 @@ local function initialise_map_features(game)
   end
 
   game:register_event("on_key_pressed", function(game, key, modifiers)
-		if key == "w" then --== game:get_value("keyboard_map_menu") then
+		if key == "tab" then --== game:get_value("keyboard_map_menu") then
 			if not sol.menu.is_started(map_menu) == true and not game:is_paused(true) and not game:is_suspended(true) then
 			-- Prevents from loading map if paused.
     		map_menu:open()

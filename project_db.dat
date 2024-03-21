@@ -193,7 +193,7 @@ map{ id = "inside/shrines/attack", description = "Doomsday map" }
 map{ id = "inside/shrines/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (Ground Floor)" }
 map{ id = "inside/shrines/lighthouse/1f", description = "Lighthouse (1st Floor)" }
-map{ id = "inside/shrines/shibo_nayru/0f", description = "Shibo Nayru's Shrine (Ground Floor" }
+map{ id = "inside/shrines/shibo_nayru/0f", description = "Shibo Nayru's Shrine (Ground Floor)" }
 map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
 map{ id = "memory/00", description = "(Unused)" }
 map{ id = "memory/01", description = "(Unused)" }
@@ -1420,80 +1420,92 @@ music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
-sound{ id = "arrow_hit", description = "Arrow hit" }
-sound{ id = "boomerang", description = "Boomerang" }
-sound{ id = "boss_hurt", description = "Boss Hurt" }
-sound{ id = "boss_killed", description = "Boss Killed" }
-sound{ id = "bow", description = "Bow" }
-sound{ id = "cane", description = "Cane" }
-sound{ id = "characters/link/voice/pulling_heavy_object0", description = "Pulling heavy object 0" }
+sound{ id = "arrow_hit", description = "Empty sound" }
+sound{ id = "boomerang", description = "Empty sound" }
+sound{ id = "boss_hurt", description = "Empty sound" }
+sound{ id = "boss_killed", description = "Empty sound" }
+sound{ id = "bow", description = "Empty sound" }
+sound{ id = "cane", description = "Empty sound" }
 sound{ id = "chest", description = "Empty sound" }
-sound{ id = "chest_open", description = "Chest Open" }
+sound{ id = "chest_open", description = "Empty sound" }
 sound{ id = "common/bars_dungeon", description = "Dungeon Bars" }
 sound{ id = "common/bars_npc_dialog", description = "NPC Dialog Bars" }
-sound{ id = "common/big_item", description = "Big Item" }
 sound{ id = "common/bombers_notification", description = "Bombers notebook notification" }
+sound{ id = "common/bounce", description = "Bounce" }
+sound{ id = "common/cannonball", description = "Cannonball" }
 sound{ id = "common/chest_appear", description = "Chest appearing" }
-sound{ id = "common/chest_creak", description = "Chest creaking" }
-sound{ id = "common/chest_minor_item", description = "Chest minor item" }
-sound{ id = "common/chest_opening", description = "Chest opening" }
-sound{ id = "common/dialog/done", description = "Done" }
-sound{ id = "common/dialog/message_end", description = "Message end" }
-sound{ id = "common/dialog/message_letter", description = "Message letter" }
-sound{ id = "common/dialog/no", description = "No" }
+sound{ id = "common/chest_open", description = "Chest Open" }
 sound{ id = "common/door/boss_door_unlock", description = "Boss door unlock" }
 sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
 sound{ id = "common/door/stone_close", description = "Stone close" }
 sound{ id = "common/door/stone_open", description = "Stone open" }
 sound{ id = "common/door/stone_slam", description = "Stone door slam" }
 sound{ id = "common/door/unlock_small_key", description = "Unlock small key" }
-sound{ id = "common/get_heart_container", description = "Get heart container" }
-sound{ id = "common/get_piece_of_heart", description = "Get piece of heart" }
-sound{ id = "common/get_small_item0", description = "Get small item 0" }
-sound{ id = "common/get_small_item1", description = "Get small item 1" }
 sound{ id = "common/gong", description = "Gong" }
 sound{ id = "common/hint_notification", description = "Hint notification" }
 sound{ id = "common/item_away", description = "Item away" }
-sound{ id = "common/item_in_deep_water", description = "Item in deep water" }
 sound{ id = "common/item_in_hole", description = "Item in hole" }
 sound{ id = "common/item_in_lava", description = "Item in lava" }
-sound{ id = "common/item_letter", description = "Get letter" }
 sound{ id = "common/item_show", description = "Showing item" }
-sound{ id = "common/magic_bar/6", description = "6" }
 sound{ id = "common/medallion/medallion_appear", description = "Medallion appears" }
 sound{ id = "common/medallion/medallion_falling", description = "Medallion falls" }
-sound{ id = "common/minor_item", description = "Minor Item" }
-sound{ id = "common/prayer", description = "Prayer" }
 sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
-sound{ id = "common/sidequest_major_item", description = "Major Item (Sidequest)" }
-sound{ id = "common/sidequest_minor_item", description = "Minor Item (Sidequest)" }
-sound{ id = "door_closed", description = "Closed Door" }
-sound{ id = "door_open", description = "Open Door" }
-sound{ id = "door_unlocked", description = "Unlocked Door" }
+sound{ id = "common/switch_crystal", description = "Switch crystal hit" }
+sound{ id = "common/switch_walkable", description = "Switch (On/Off)" }
+sound{ id = "common/warp", description = "common/warp" }
+sound{ id = "common/world_warp", description = "common/world_warp" }
+sound{ id = "common/wrong", description = "common/wrong" }
+sound{ id = "door_closed", description = "Empty sound" }
+sound{ id = "door_open", description = "Empty sound" }
+sound{ id = "door_unlocked", description = "Empty sound" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
-sound{ id = "enemies/gold_skulltula_token_spawn", description = "Gold Skulltula Token sapwn" }
+sound{ id = "enemies/boss_hurt", description = "Boss hurt" }
+sound{ id = "enemies/boss_killed", description = "Boss killed" }
+sound{ id = "enemies/cucco", description = "cucco" }
+sound{ id = "enemies/enemy_hurt", description = "Enemy hurt" }
+sound{ id = "enemies/enemy_killed", description = "Enemy killed" }
+sound{ id = "enemies/monster_hurt", description = "Monster hurt" }
 sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
-sound{ id = "enemy_hurt", description = "Enemy hurt" }
-sound{ id = "enemy_killed", description = "Enemy killed" }
+sound{ id = "enemy_hurt", description = "Empty sound" }
+sound{ id = "enemy_killed", description = "Empty sound" }
+sound{ id = "environment/bush", description = "Bush" }
+sound{ id = "environment/explosion", description = "Explosion" }
+sound{ id = "environment/freeze", description = "Freeze" }
+sound{ id = "environment/ice_melt", description = "Ice melt" }
+sound{ id = "environment/ice_shatter", description = "ice_shatter" }
+sound{ id = "environment/pot_shatter", description = "Shattering Pot" }
+sound{ id = "environment/rock_shatter", description = "Rock" }
+sound{ id = "environment/skull_shatter", description = "Shattering Skull" }
 sound{ id = "environment/thunder1", description = "Thunder" }
 sound{ id = "environment/thunder2", description = "Thunder" }
 sound{ id = "environment/thunder3", description = "Thunder" }
 sound{ id = "environment/thunder_double", description = "Thunder double" }
 sound{ id = "environment/thunder_far", description = "Thunder far" }
+sound{ id = "environment/water_drain", description = "water_drain" }
+sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
+sound{ id = "environment/water_fill", description = "water_fill" }
+sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
 sound{ id = "environment/water_level/loop", description = "Water level loop" }
 sound{ id = "environment/water_level/start", description = "Water level start" }
-sound{ id = "explosion", description = "Explosion" }
-sound{ id = "hero_falls", description = "hero_falls" }
-sound{ id = "hero_hurt", description = "hero_hurt" }
-sound{ id = "hero_lands", description = "hero_lands" }
-sound{ id = "hero_pushes", description = "hero_pushes" }
+sound{ id = "environment/wind", description = "wind" }
+sound{ id = "explosion", description = "Empty sound" }
+sound{ id = "hero/hero_lift", description = "lift" }
+sound{ id = "hero/splash", description = "Splash" }
+sound{ id = "hero/swim", description = "swim" }
+sound{ id = "hero_falls", description = "Empty sound" }
+sound{ id = "hero_hurt", description = "Empty sound" }
+sound{ id = "hero_lands", description = "Empty sound" }
+sound{ id = "hero_pushes", description = "Empty sound" }
 sound{ id = "hookshot", description = "Empty sound" }
+sound{ id = "items/bomb", description = "Bomb" }
+sound{ id = "items/boomerang", description = "Boomerang" }
+sound{ id = "items/bow", description = "Bow" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
 sound{ id = "items/fire_rod/shoot", description = "Shoot" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
@@ -1508,6 +1520,7 @@ sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
 sound{ id = "items/lens_of_truth/lens_end", description = "Lens of Truth End" }
 sound{ id = "items/lens_of_truth/lens_start", description = "Lens of Truth Start" }
+sound{ id = "items/no_arrows_shoot", description = "No arrows shoot" }
 sound{ id = "items/ocarina/song/10_zelda", description = "10 Zelda' Lullaby" }
 sound{ id = "items/ocarina/song/11_time", description = "11 Song of Time" }
 sound{ id = "items/ocarina/song/12_secret", description = "12 Secret Song" }
@@ -1520,70 +1533,73 @@ sound{ id = "items/ocarina/song/2_fire", description = "2 Bolero of Fire" }
 sound{ id = "items/ocarina/song/3_water", description = "3 Serenade of Water" }
 sound{ id = "items/ocarina/song/4_spirit", description = "4 Requiem of Spirit" }
 sound{ id = "items/ocarina/song/5_lorule", description = "5 Song of Lorule" }
-sound{ id = "items/ocarina/song/7", description = "7 Song of Time" }
 sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" }
+sound{ id = "items/shield", description = "Shield" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
-sound{ id = "jump", description = "Jump" }
-sound{ id = "lift", description = "lift" }
-sound{ id = "menu/cursor", description = "Cursor" }
-sound{ id = "menu/dialogue_end", description = "Dialogue end" }
-sound{ id = "menu/dialogue_letter", description = "Dialogue letter" }
-sound{ id = "menu/dir_left", description = "Left" }
-sound{ id = "menu/dir_right", description = "Right" }
-sound{ id = "menu/fileselect_created", description = "Fileselect created" }
-sound{ id = "menu/fileselect_erase0", description = "Fileselect erase" }
-sound{ id = "menu/fileselect_start", description = "Fileselect start" }
-sound{ id = "menu/letter_add", description = "Letter add" }
-sound{ id = "menu/letter_back", description = "Letter back" }
-sound{ id = "menu/minimap_off", description = "Minimap off" }
-sound{ id = "menu/minimap_on", description = "Minimap on" }
-sound{ id = "menu/option_modify_value", description = "Option" }
-sound{ id = "menu/pause_close", description = "Pause close" }
-sound{ id = "menu/pause_open", description = "Pause open" }
-sound{ id = "menu/select", description = "Select" }
-sound{ id = "menu/solarus_logo", description = "Solarus Logo" }
-sound{ id = "menu/title/presented_by", description = "Presented by" }
+sound{ id = "jump", description = "Empty sound" }
+sound{ id = "lift", description = "Empty sound" }
+sound{ id = "menus/cursor", description = "Cursor" }
+sound{ id = "menus/danger", description = "Danger" }
+sound{ id = "menus/dir_left", description = "Left" }
+sound{ id = "menus/dir_right", description = "Right" }
+sound{ id = "menus/fileselect_created", description = "Fileselect created" }
+sound{ id = "menus/fileselect_erase", description = "Fileselect erase" }
+sound{ id = "menus/fileselect_start", description = "Fileselect start" }
+sound{ id = "menus/letter_add", description = "Letter add" }
+sound{ id = "menus/letter_back", description = "Letter back" }
+sound{ id = "menus/magic_bar", description = "Magic bar" }
+sound{ id = "menus/message_done", description = "Message done" }
+sound{ id = "menus/message_end", description = "Message end" }
+sound{ id = "menus/message_letter", description = "Message letter" }
+sound{ id = "menus/message_no", description = "Message no" }
+sound{ id = "menus/minimap_off", description = "Minimap off" }
+sound{ id = "menus/minimap_on", description = "Minimap on" }
+sound{ id = "menus/modify_value", description = "Modify value" }
+sound{ id = "menus/ok", description = "ok" }
+sound{ id = "menus/pause_close", description = "Pause close" }
+sound{ id = "menus/pause_open", description = "Pause open" }
+sound{ id = "menus/select", description = "Select" }
+sound{ id = "menus/solarus_logo", description = "Solarus Logo" }
+sound{ id = "menus/stairs_indicator", description = "stairs_indicator" }
+sound{ id = "menus/timer", description = "Timer" }
+sound{ id = "menus/timer_almost_end", description = "Timer almost end" }
+sound{ id = "menus/timer_almost_end_switch", description = "Timer almost end" }
+sound{ id = "menus/timer_hurry", description = "Timer hurry" }
+sound{ id = "menus/timer_hurry_switch", description = "Timer hurry" }
+sound{ id = "menus/timer_switch", description = "Timer" }
+sound{ id = "menus/title/presented_by", description = "Presented by" }
 sound{ id = "message_end", description = "Empty sound" }
-sound{ id = "monster_hurt", description = "monster_hurt" }
-sound{ id = "objects/e_bush", description = "Bush" }
-sound{ id = "objects/e_pot_shatter", description = "Shattering Pot" }
-sound{ id = "objects/e_rock_1_lift", description = "Rock" }
-sound{ id = "objects/e_skull_shatter", description = "Shattering Skull" }
-sound{ id = "objects/fairy/interact", description = "Fairy" }
+sound{ id = "monster_hurt", description = "Empty sound" }
 sound{ id = "objects/heart/heart", description = "Heart" }
-sound{ id = "objects/on_switch", description = "Switch (On/Off)" }
 sound{ id = "objects/rupee/rupee", description = "Rupee" }
 sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
-sound{ id = "objects/switch_crystal_hit", description = "Switch crystal hit" }
-sound{ id = "picked_item", description = "picked_item" }
-sound{ id = "running", description = "running" }
-sound{ id = "running_obstacle", description = "running_obstacle" }
-sound{ id = "shield", description = "Shield" }
-sound{ id = "splash", description = "Splash" }
-sound{ id = "stairs_down_end", description = "stairs_down_end" }
-sound{ id = "stairs_down_start", description = "stairs_down_start" }
-sound{ id = "stairs_up_end", description = "stairs_up_end" }
-sound{ id = "stairs_up_start", description = "stairs_up_start" }
-sound{ id = "stone", description = "Stone" }
-sound{ id = "swim", description = "swim" }
-sound{ id = "switch", description = "switch" }
-sound{ id = "sword1", description = "sword1" }
-sound{ id = "sword2", description = "sword2" }
-sound{ id = "sword_spin_attack_load", description = "sword_spin_attack_load" }
-sound{ id = "sword_spin_attack_release", description = "sword_spin_attack_release" }
-sound{ id = "sword_tapping", description = "sword_tapping" }
-sound{ id = "sword_tapping_weak_wall", description = "sword_tapping_weak_wall" }
-sound{ id = "throw", description = "Throw" }
+sound{ id = "picked_item", description = "Empty sound" }
+sound{ id = "running", description = "Empty sound" }
+sound{ id = "running_obstacle", description = "Empty sound" }
+sound{ id = "shield", description = "Empty sound" }
+sound{ id = "splash", description = "Empty sound" }
+sound{ id = "stairs_down_end", description = "Empty sound" }
+sound{ id = "stairs_down_start", description = "Empty sound" }
+sound{ id = "stairs_up_end", description = "Empty sound" }
+sound{ id = "stairs_up_start", description = "Empty sound" }
+sound{ id = "stone", description = "Empty sound" }
+sound{ id = "swim", description = "Empty sound" }
+sound{ id = "switch", description = "Empty sound" }
+sound{ id = "sword1", description = "Empty sound" }
+sound{ id = "sword_spin_attack_load", description = "Empty sound" }
+sound{ id = "sword_spin_attack_release", description = "Empty sound" }
+sound{ id = "sword_tapping", description = "Empty sound" }
+sound{ id = "sword_tapping_weak_wall", description = "Empty sound" }
+sound{ id = "throw", description = "Empty sound" }
 sound{ id = "timer", description = "Empty sound" }
-sound{ id = "timer/countdown_hud/1", description = "Timer sound" }
 sound{ id = "timer_hurry", description = "Empty sound" }
-sound{ id = "treasure", description = "Treasure" }
-sound{ id = "victory", description = "Victory" }
-sound{ id = "walk_on_grass", description = "Walk on grass" }
-sound{ id = "walk_on_water", description = "Walk on water" }
-sound{ id = "wrong", description = "Wrong" }
+sound{ id = "treasure", description = "Empty sound" }
+sound{ id = "victory", description = "Empty sound" }
+sound{ id = "walk_on_grass", description = "Empty sound" }
+sound{ id = "walk_on_water", description = "Empty sound" }
+sound{ id = "wrong", description = "Empty sound" }
 
 item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
@@ -2355,13 +2371,3 @@ file{ path = "sprites/menus/title_screen/triforce.dat", author = "Olivier Cléro
 file{ path = "sprites/menus/title_screen/triforce.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/npc/fisher_blue.dat", author = "The Unknown", }
 file{ path = "sprites/npc/fisher_green.dat", author = "The Unknown", }
-file{ path = "tilesets/oh_cave.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_cave.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_indoors_cabin.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_indoors_cabin.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_indoors_stone.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_indoors_stone.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_outdoors.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_outdoors.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_temple.dat", author = "Max Mraz", license = "CC BY-SA 4.0" }
-file{ path = "tilesets/oh_temple.tiles.png", author = "Max Mraz", license = "CC BY-SA 4.0" }

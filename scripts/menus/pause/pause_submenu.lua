@@ -209,7 +209,7 @@ function submenu:on_command_pressed(command)
 	if self.save_dialog_state == 0 then
 		-- The save dialog is not shown
 		if command == "attack" then
-			sol.audio.play_sound("common/dialog/message_end")
+			sol.audio.play_sound("menus/message_end")
 			self.save_dialog_state = 1
 			self.save_dialog_choice = 0
 			self.save_dialog_cursor_pos = "left"
