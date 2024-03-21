@@ -12,7 +12,7 @@ local fsa = require('scripts/maps/fsa_effect')
 function sol.main:on_started()
   sol.main.load_settings()
   math.randomseed(os.time())
-  --sol.video.set_fullscreen(true)
+  sol.video.set_window_size(320,240)
 
   -- Show the initial menus.
   if #initial_menus_config == 0 then
