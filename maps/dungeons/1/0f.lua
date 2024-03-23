@@ -2,6 +2,7 @@ local map = ...
 local game = map:get_game()
 local separator_manager = require("scripts/maps/separator_manager.lua")
 local timer_manager = require("scripts/maps/timer_manager")
+
 function map:on_started()
 	separator_manager:manage_map(map)
 	map:close_doors("door_23_n1")

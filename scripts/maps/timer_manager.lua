@@ -41,7 +41,7 @@ function timer_manager:start_timer(context, duration, hud_type, callback)
 	end)
 
 	sol.timer.start(context, 1000, function()
-    sol.audio.play_sound("danger")
+    sol.audio.play_sound("menus/danger")
     timer_calls = timer_calls + 1
 		-- Update the chronometer value
 		if hud_type == "countdown" then
@@ -59,7 +59,7 @@ end
 
 function chronometer_menu:on_draw(dst_surface)
 	local screen_width, screen_height = dst_surface:get_size()
-	chronometer_surface:set_xy(screen_width / 2, screen_height - 10)
+	chronometer_surface:set_xy(screen_width / 2, screen_height - 20)
 	chronometer_surface:draw(dst_surface)
 end
 

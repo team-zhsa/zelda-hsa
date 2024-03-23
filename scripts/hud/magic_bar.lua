@@ -47,7 +47,7 @@ function magic_bar_builder:new(game, config)
 
         -- Play the magic bar sound.
         if (magic - magic_bar.magic_displayed) % 10 == 1 then
-          audio_manager:play_sound("common/magic_bar/6")
+          audio_manager:play_sound("menus/magic_bar")
         end
       end
     end

@@ -357,7 +357,7 @@ local function setup_inside_lights(map)
 
 	--add a static light for each torch pattern in the map
 	local map_lights = get_lights_from_map(map)
-	local default_radius = "160"
+	local default_radius = "160"            
 	local default_color = "193,185,80"
 
 	for _,l in ipairs(map_lights) do
@@ -383,10 +383,10 @@ local function setup_inside_lights(map)
 			local yoff = -8
 			local light = create_light(map,tx+tw*0.5,ty+th*0.5+yoff,tl,default_radius,default_color)
 			en:register_event("on_unlit",function()
-													light:set_enabled(false)
+				light:set_enabled(false)
 			end)
 			en:register_event("on_lit",function()
-													light:set_enabled(true)
+				  light:set_enabled(true)
 			end)
 			light:set_enabled(en:is_lit())
 		end

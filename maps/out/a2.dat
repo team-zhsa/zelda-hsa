@@ -14107,22 +14107,6 @@ enemy{
   treasure_name = "random_west",
 }
 
-teletransporter{
-  layer = 0,
-  x = 1080,
-  y = 176,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 112,
-  destination_map = "inside/under_bridges/hylia_lake",
-  destination = "from_west",
-}
-
 destination{
   name = "from_dungeon",
   layer = 0,
@@ -14161,7 +14145,7 @@ destructible{
   y = 701,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14171,7 +14155,7 @@ destructible{
   y = 701,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14181,7 +14165,7 @@ destructible{
   y = 717,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14191,7 +14175,7 @@ destructible{
   y = 717,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14201,7 +14185,7 @@ destructible{
   y = 733,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14211,7 +14195,7 @@ destructible{
   y = 733,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14221,7 +14205,7 @@ destructible{
   y = 749,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14231,7 +14215,7 @@ destructible{
   y = 541,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14241,7 +14225,7 @@ destructible{
   y = 557,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14251,7 +14235,7 @@ destructible{
   y = 573,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14261,7 +14245,7 @@ destructible{
   y = 589,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14271,7 +14255,7 @@ destructible{
   y = 461,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14281,7 +14265,7 @@ destructible{
   y = 445,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14291,7 +14275,7 @@ destructible{
   y = 429,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14301,7 +14285,7 @@ destructible{
   y = 445,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14311,7 +14295,7 @@ destructible{
   y = 461,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14321,7 +14305,7 @@ destructible{
   y = 461,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14331,7 +14315,7 @@ destructible{
   y = 477,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14341,7 +14325,7 @@ destructible{
   y = 477,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14351,7 +14335,7 @@ destructible{
   y = 493,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14361,7 +14345,7 @@ destructible{
   y = 493,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14371,7 +14355,7 @@ destructible{
   y = 493,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14381,7 +14365,7 @@ destructible{
   y = 509,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14391,7 +14375,7 @@ destructible{
   y = 509,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14401,7 +14385,7 @@ destructible{
   y = 509,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14411,7 +14395,7 @@ destructible{
   y = 525,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14421,7 +14405,7 @@ destructible{
   y = 525,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14431,7 +14415,7 @@ destructible{
   y = 525,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
 }
 
@@ -14441,7 +14425,7 @@ destructible{
   y = 541,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14454,7 +14438,7 @@ destructible{
   y = 541,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14467,7 +14451,7 @@ destructible{
   y = 557,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14480,7 +14464,7 @@ destructible{
   y = 557,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14493,7 +14477,7 @@ destructible{
   y = 573,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14506,7 +14490,7 @@ destructible{
   y = 573,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14519,7 +14503,7 @@ destructible{
   y = 589,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14532,7 +14516,7 @@ destructible{
   y = 589,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14545,7 +14529,7 @@ destructible{
   y = 605,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14558,7 +14542,7 @@ destructible{
   y = 605,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14571,7 +14555,7 @@ destructible{
   y = 605,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14584,7 +14568,7 @@ destructible{
   y = 637,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14597,7 +14581,7 @@ destructible{
   y = 637,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14610,7 +14594,7 @@ destructible{
   y = 621,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14623,7 +14607,7 @@ destructible{
   y = 621,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14636,7 +14620,7 @@ destructible{
   y = 621,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14649,7 +14633,7 @@ destructible{
   y = 621,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14662,7 +14646,7 @@ destructible{
   y = 637,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14675,7 +14659,7 @@ destructible{
   y = 653,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14688,7 +14672,7 @@ destructible{
   y = 669,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14701,7 +14685,7 @@ destructible{
   y = 669,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14714,7 +14698,7 @@ destructible{
   y = 669,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14727,7 +14711,7 @@ destructible{
   y = 669,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14740,7 +14724,7 @@ destructible{
   y = 653,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14753,7 +14737,7 @@ destructible{
   y = 685,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14766,7 +14750,7 @@ destructible{
   y = 685,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14779,7 +14763,7 @@ destructible{
   y = 685,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14792,7 +14776,7 @@ destructible{
   y = 685,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14805,7 +14789,7 @@ destructible{
   y = 701,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14818,7 +14802,7 @@ destructible{
   y = 701,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14831,7 +14815,7 @@ destructible{
   y = 717,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14844,7 +14828,7 @@ destructible{
   y = 717,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14857,7 +14841,7 @@ destructible{
   y = 733,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14870,7 +14854,7 @@ destructible{
   y = 749,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14883,7 +14867,7 @@ destructible{
   y = 765,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14896,7 +14880,7 @@ destructible{
   y = 765,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -14909,7 +14893,7 @@ destructible{
   y = 749,
   treasure_name = "random_west",
   sprite = "entities/grass/grass01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   weight = -1,
   can_be_cut = true,
   damage_on_enemies = 0,
@@ -15042,7 +15026,7 @@ destructible{
   y = 637,
   treasure_name = "random_west",
   sprite = "entities/bushes/bush_l_01",
-  destruction_sound = "objects/e_bush",
+  destruction_sound = "environment/bush",
   can_be_cut = true,
   damage_on_enemies = 0,
 }
@@ -15074,7 +15058,7 @@ destructible{
   y = 821,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15084,7 +15068,7 @@ destructible{
   y = 837,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15094,7 +15078,7 @@ destructible{
   y = 853,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15104,7 +15088,7 @@ destructible{
   y = 45,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15114,7 +15098,7 @@ destructible{
   y = 45,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15124,7 +15108,7 @@ destructible{
   y = 45,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15134,7 +15118,7 @@ destructible{
   y = 37,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15144,7 +15128,7 @@ destructible{
   y = 1389,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15154,7 +15138,7 @@ destructible{
   y = 1237,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15164,7 +15148,7 @@ destructible{
   y = 1381,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15174,7 +15158,7 @@ destructible{
   y = 1381,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15184,7 +15168,7 @@ destructible{
   y = 989,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15194,7 +15178,7 @@ destructible{
   y = 1005,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15204,7 +15188,7 @@ destructible{
   y = 1021,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15214,7 +15198,7 @@ destructible{
   y = 733,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15224,7 +15208,7 @@ destructible{
   y = 749,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15234,7 +15218,7 @@ destructible{
   y = 749,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -15254,38 +15238,6 @@ sensor{
   y = 269,
   width = 80,
   height = 16,
-}
-
-destination{
-  name = "from_bridge_west",
-  layer = 0,
-  x = 1072,
-  y = 229,
-  direction = -1,
-}
-
-destination{
-  name = "from_bridge_east",
-  layer = 0,
-  x = 1200,
-  y = 229,
-  direction = -1,
-}
-
-teletransporter{
-  layer = 0,
-  x = 1176,
-  y = 176,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 112,
-  destination_map = "inside/under_bridges/hylia_lake",
-  destination = "from_east",
 }
 
 teletransporter{
@@ -15318,6 +15270,32 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/soldier",
+}
+
+wall{
+  layer = 0,
+  x = 1080,
+  y = 176,
+  width = 112,
+  height = 8,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 1080,
+  y = 248,
+  width = 112,
+  height = 8,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
 }
 
 tile{

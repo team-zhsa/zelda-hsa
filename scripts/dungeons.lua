@@ -192,7 +192,7 @@ local function initialise_dungeon_features(game)
     completing_sequence = "simple",
     },
 
-    [78] = { -- Desert Temple
+    [11] = { -- Ice Temple
     floor_width = 1600,
     floor_height = 1200,
     minimap_width = 48,
@@ -349,8 +349,6 @@ local function initialise_dungeon_features(game)
 
       local map = game:get_map()
       local dungeon_index = game:get_dungeon_index()
-
-
 
       if dungeon_index ~= nil then
 

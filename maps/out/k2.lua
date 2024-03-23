@@ -15,6 +15,6 @@ local fog_manager = require("scripts/maps/fog_manager")
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
   game:show_map_name("zora_river")
-	fog_manager:set_overlay("forest_fog")
+	fog_manager:set_overlay(map, "forest_fog")
 end)
 

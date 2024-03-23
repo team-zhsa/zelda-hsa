@@ -476,7 +476,7 @@ teletransporter{
   height = 16,
   destination_map = "inside/castle/0f",
   sprite = "entities/warps/teletransporter",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 teletransporter{
@@ -489,7 +489,7 @@ teletransporter{
   destination_map = "dungeons/1/0f",
   destination = "from_below",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 switch{
@@ -548,7 +548,7 @@ teletransporter{
   destination_map = "out/a2",
   destination = "from_fortune",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 custom_entity{
@@ -619,7 +619,7 @@ teletransporter{
   destination_map = "misc/test_arena",
   destination = "destination",
   sprite = "entities/warps/teletransporter",
-  sound = "world_warp",
+  sound = "common/world_warp",
 }
 
 teletransporter{
@@ -631,7 +631,7 @@ teletransporter{
   destination_map = "out/b3",
   destination = "destination_maze",
   sprite = "entities/warps/teletransporter",
-  sound = "world_warp",
+  sound = "common/world_warp",
 }
 
 chest{
@@ -1081,7 +1081,7 @@ teletransporter{
   height = 16,
   destination_map = "inside/caves/gerudo_valley/north_east_desert_cave_1f",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 sensor{

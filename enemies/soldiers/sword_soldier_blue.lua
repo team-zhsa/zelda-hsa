@@ -39,7 +39,7 @@ local function start_charging()
   enemy:stop_movement()
   enemy:start_target_walking(hero, charging_speed)
   sprite:set_animation("walking")
-	sol.audio.play_sound("hero_seen")
+	sol.audio.play_sound("hero/hero_seen")
 end
 
 -- Start the enemy random movement.

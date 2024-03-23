@@ -2,7 +2,7 @@ local item = ...
 item.somaria_block = nil  -- The block created if any.
 
 function item:on_created()
-	item:set_sound_when_brandished("common/big_item")
+	item:set_sound_when_brandished("items/major_item")
   item:set_savegame_variable("possession_cane")
   item:set_assignable(true)
 end
@@ -53,7 +53,7 @@ function item:on_using()
       sol.audio.play_sound("cane")
       self.somaria_block:set_position(-100, 0)
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
   self:set_finished()

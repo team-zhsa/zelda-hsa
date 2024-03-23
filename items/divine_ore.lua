@@ -6,7 +6,7 @@ function item:on_created()
   self:set_max_amount(8)
   self:set_assignable(false)
   self:set_brandish_when_picked(true)
-  self:set_sound_when_brandished("common/sidequest_major_item")
+  self:set_sound_when_brandished("items/sidequest_major_item")
 end
 
 function item:on_obtaining(variant, savegame_variable)

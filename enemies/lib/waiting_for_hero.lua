@@ -25,7 +25,7 @@ local behavior = {}
 --   normal_animation = "walking",
 --   ignore_obstacles = false,
 --   obstacle_behavior = "flying",
---   awakening_sound  = "stone",
+--   awakening_sound  = "environment/rock_shatter",
 --   waking_distance = 100,
 -- }
 -- behavior:create(enemy, properties)

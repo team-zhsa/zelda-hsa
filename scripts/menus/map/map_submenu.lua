@@ -70,15 +70,15 @@ function submenu:on_started()
   self.caption_text_1 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = menu_font,
-    font_size = menu_font_size,
+    font = "alttp_ttf",
+    font_size = 8,
     color = self.text_color,
   }
   self.caption_text_2 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = menu_font,
-    font_size = menu_font_size,
+    font = "alttp_ttf",
+    font_size = 8,
     color = self.text_color,
   }
   
@@ -127,25 +127,37 @@ function submenu:draw_caption(dst_surface)
   if self.save_dialog_state == 0 then
     local width, height = dst_surface:get_size()
 
-    -- Draw caption frame.
-    --self.caption_background:draw(dst_surface, width / 2 - 79, height / 2 + 74)
-
-    -- Draw caption text.
-    if self.caption_text_2:get_text():len() == 0 then
-      self.caption_text_1:set_xy(width / 2, height / 2 + 94)
-      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+    -- Set caption position
+    self.dungeon = self.game:get_dungeon()
+    if self.dungeon ~= nil then
+        -- Draw caption text.
+        if self.caption_text_2:get_text():len() == 0 then
+          self.caption_text_1:set_xy(width / 2 + 48, height / 2 + 70)
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+        else
+          self.caption_text_1:set_xy(dst_surface, width / 2 + 48, height / 2 + 62)
+          self.caption_text_2:set_xy(dst_surface, width / 2 + 48, height / 2 + 87)
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+        end
     else
-      self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
-      self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 99)
-      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
-      text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+      -- Draw caption text.
+      if self.caption_text_2:get_text():len() == 0 then
+        self.caption_text_1:set_xy(width / 2, height / 2 + 94)
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+      else
+        self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
+        self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 99)
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+      end
     end
   end
 end
 
 function submenu:next_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -156,7 +168,7 @@ end
 
 function submenu:previous_submenu()
 
---  sol.audio.play_sound("menu/pause_close")
+--  sol.audio.play_sound("menus/pause_close")
   sol.menu.stop(self)
   local submenus = self.game.map_submenus
   local submenu_index = self.game:get_value("map_last_submenu")
@@ -197,7 +209,7 @@ function submenu:on_command_pressed(command)
 
     if command == "left" or command == "right" then
       -- Move the cursor.
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       if self.save_dialog_choice == 0 then
         self.save_dialog_choice = 1
         self.save_dialog_cursor_pos = "right"
@@ -212,9 +224,9 @@ function submenu:on_command_pressed(command)
         self.save_dialog_state = 2
         if self.save_dialog_choice == 0 then
           self.game:save()
-          sol.audio.play_sound("ok")
+          sol.audio.play_sound("menus/select")
         else
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menus/danger")
         end
         self.question_text_1:set_text_key("save_dialog.continue_question_0")
         self.question_text_2:set_text_key("save_dialog.continue_question_1")
@@ -222,7 +234,7 @@ function submenu:on_command_pressed(command)
         self.save_dialog_cursor_pos = "left"
       else
         -- After "Do you want to continue?".
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self.save_dialog_state = 0
         self.game:set_custom_command_effect("action", self.action_command_effect_saved)
         self.game:set_custom_command_effect("attack", self.attack_command_effect_saved)

@@ -89,9 +89,11 @@ function enemy_meta:on_hurt(attack)
 
 	if not self.is_hurt_silently then
 		if self:get_hurt_style() == "boss" then
-			audio_manager:play_sound("boss_hurt")
+			audio_manager:play_sound("enemies/boss_hurt")
+		elseif self:get_hurt_style() == "monster" then
+			audio_manager:play_sound("enemies/monster_hurt")
 		else
-			audio_manager:play_sound("enemy_hurt")
+			audio_manager:play_sound("enemies/enemy_hurt")
 		end
 	end
 	local final_damage = self:get_attack_consequence(attack)
@@ -108,12 +110,12 @@ function enemy_meta:on_dying()
 	local game = self:get_game()
 	if not self.is_hurt_silently then
 		if self:get_hurt_style() == "boss" then
-			audio_manager:play_sound("boss_killed")
+			audio_manager:play_sound("enemies/boss_killed")
 			sol.timer.start(self, 200, function()
-					audio_manager:play_sound("explosion")
+					audio_manager:play_sound("environment/explosion")
 				end)
 		else
-			audio_manager:play_sound("enemy_killed")
+			audio_manager:play_sound("enemies/enemy_killed")
 		end
 	end
 	local death_count = game:get_value("stats_enemy_death_count") or 0

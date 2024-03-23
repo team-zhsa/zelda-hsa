@@ -58,7 +58,7 @@ local function attach_to_obstacle()
 
   flying = false
   sprite:set_animation("reached_obstacle")
-  audio_manager.play_sound("items/arrow_hit")
+  sol.audio.play_sound("items/arrow_hit")
   arrow:stop_movement()
 
   -- Remove the arrow after a delay.

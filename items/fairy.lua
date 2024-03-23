@@ -65,11 +65,11 @@ function item:on_obtaining(variant, savegame_variable)
             self:get_game():start_dialog("_found_fairy.no_empty_bottle", function()
             self:get_game():add_life(15 * 4)
           end)
-          sol.audio.play_sound("wrong")
+          sol.audio.play_sound("common/wrong")
         else
           -- Okay, empty bottle.
           first_empty_bottle:set_variant(6)
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menus/danger")
         end
       end
     end)
