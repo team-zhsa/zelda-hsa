@@ -2,7 +2,7 @@ local item = ...
 item.somaria_block = nil  -- The block created if any.
 
 function item:on_created()
-	item:set_sound_when_brandished("common/major_item")
+	item:set_sound_when_brandished("items/major_item")
   item:set_savegame_variable("possession_cane")
   item:set_assignable(true)
 end

@@ -194,7 +194,6 @@ map{ id = "inside/shrines/cure", description = "inside/spell_caves/cure" }
 map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (Ground Floor)" }
 map{ id = "inside/shrines/lighthouse/1f", description = "Lighthouse (1st Floor)" }
 map{ id = "inside/shrines/shibo_nayru/0f", description = "Shibo Nayru's Shrine (Ground Floor)" }
-map{ id = "inside/under_bridges/hylia_lake", description = "Hylia Lake Bridge" }
 map{ id = "memory/00", description = "(Unused)" }
 map{ id = "memory/01", description = "(Unused)" }
 map{ id = "menus/credits", description = "Credits" }
@@ -1119,6 +1118,7 @@ sprite{ id = "menus/arrow", description = "Arrow" }
 sprite{ id = "menus/map/dungeon_maps/map_1", description = "Map 1" }
 sprite{ id = "menus/map/dungeon_maps/map_2", description = "Map 2" }
 sprite{ id = "menus/map/dungeon_maps/map_3", description = "Map 3" }
+sprite{ id = "menus/map/dungeon_maps/map_6", description = "Map 6" }
 sprite{ id = "menus/map/hero_head", description = "Hero head" }
 sprite{ id = "menus/map/hero_point", description = "Hero point" }
 sprite{ id = "menus/map/map_waypoint", description = "Map waypoint cross" }
@@ -1462,6 +1462,7 @@ sound{ id = "door_unlocked", description = "Empty sound" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
 sound{ id = "enemies/bari", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
+sound{ id = "enemies/boss_charge", description = "enemies/boss_charge" }
 sound{ id = "enemies/boss_hurt", description = "Boss hurt" }
 sound{ id = "enemies/boss_killed", description = "Boss killed" }
 sound{ id = "enemies/cucco", description = "cucco" }
@@ -1535,6 +1536,7 @@ sound{ id = "items/ocarina/song/4_spirit", description = "4 Requiem of Spirit" }
 sound{ id = "items/ocarina/song/5_lorule", description = "5 Song of Lorule" }
 sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" }
 sound{ id = "items/shield", description = "Shield" }
+sound{ id = "items/sidequest_major_item", description = "Sidequest major item" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
@@ -2169,8 +2171,6 @@ file{ path = "maps/inside/shrines/lighthouse/1f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.lua", author = "The Unknown", }
 file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "LinkFF", }
 file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "LinkFF", }
-file{ path = "maps/inside/under_bridges/hylia_lake.dat", author = "The Unknown", }
-file{ path = "maps/inside/under_bridges/hylia_lake.lua", author = "The Unknown", }
 file{ path = "maps/out/a1.dat", author = "The Unknown", }
 file{ path = "maps/out/a2.dat", author = "The Unknown", }
 file{ path = "maps/out/a3.dat", author = "Nintendo, The Unknown", }
