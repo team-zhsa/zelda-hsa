@@ -3979,63 +3979,6 @@ qu'il détestait la lumière.
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_2",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_3",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_4",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_1_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_2",
-  question = "1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_3",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_4",
-  text = [[
-<<<
-]],
-}
-
-dialog{
   id = "maps.houses.kakarico_village.chest_house.minigame_already_playing",
   text = [[
 Très bien ! Ouvre le coffre que
@@ -5680,6 +5623,60 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.buy_map",
+  question = "1",
+  text = [[
+En attendant d'avoir une fée, je
+vends des cartes pour aider mon
+père...
+Rien que pour toi, je t'en vendrai
+une à prix d'ami pour 40 rubis !
+
+Alors qu'en penses-tu ?
+Oui !
+Une autre fois
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.first_time",
+  next = "maps.out.hyrule_town.tingle.buy_map",
+  text = [[
+Salut ! Moi, c'est Tingle !$0
+Je suis la réincarnation d'une
+magique fée des bois !
+Cela fait 35 ans que j'attends
+qu'une fée vienne me voir$0.$0.$0.
+Mais aucune n'est venue...
+Mon père me dit de grandir et
+d'agir en adulte responsable.$0
+Mais pourquoi donc ?
+J'aimerais bien avoir une fée,
+moi...$0
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.map_no",
+  text = [[
+Pas de problème !
+Je suis toujours là quand tu en
+as envie !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.map_yes",
+  text = [[
+Youpi !
+Tingle, Tingle !
+Kooloo-Limpah !
+Ce sont mes mots magiques.
+Ne les vole pas !
 ]],
 }
 

@@ -5,18 +5,14 @@ local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
 local fog_manager = require("scripts/maps/fog_manager")
 
-function squirrel_walk()
+function map:on_started(destination)
+	game:show_map_name("east_lost_woods")
+	fog_manager:set_overlay(map, "forest_fog")
 	for custom_entity in map:get_entities("squirrel") do
 		local movement = sol.movement.create("random")
 		movement:set_speed(100)
 		movement:start(custom_entity)
 	end
-end
-
-function map:on_started(destination)
-	game:show_map_name("east_lost_woods")
-	fog_manager:set_overlay(map, "forest_fog")
-	squirrel_walk()
   for custom_entity in map:get_entities("butterfly") do
 		local movement = sol.movement.create("random")
 		movement:set_speed(100)
@@ -74,7 +70,6 @@ function owl_dialog()
     end
   end)
 end
-     
 
 sensor_priest_kidnapped:register_event("on_activated", function()
   if game:is_step_last("dungeon_2_completed") then

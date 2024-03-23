@@ -16722,15 +16722,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
-  y = 64,
-  width = 8,
-  height = 8,
-  pattern = "84",
-}
-
-tile{
-  layer = 0,
   x = 944,
   y = 1152,
   width = 48,
@@ -18893,42 +18884,6 @@ tile{
   layer = 0,
   x = 352,
   y = 72,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 288,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 280,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 16,
-  width = 8,
-  height = 8,
-  pattern = "101",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 16,
   width = 8,
   height = 8,
   pattern = "100",
@@ -21728,6 +21683,150 @@ tile{
   tileset = "outside_buildings",
 }
 
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = -8,
+  y = 16,
+  width = 48,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = -8,
+  y = 56,
+  width = 48,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = -16,
+  y = 16,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = -32,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = -32,
+  width = 240,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 8,
+  width = 240,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = -32,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 16,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 16,
+  width = 192,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 56,
+  width = 192,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 16,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = -32,
+  width = 8,
+  height = 40,
+  pattern = "2205",
+}
+
+tile{
+  layer = 0,
+  x = -32,
+  y = -32,
+  width = 96,
+  height = 40,
+  pattern = "2202",
+}
+
+tile{
+  layer = 0,
+  x = -32,
+  y = 8,
+  width = 96,
+  height = 8,
+  pattern = "2203",
+}
+
+tile{
+  layer = 0,
+  x = -40,
+  y = -32,
+  width = 8,
+  height = 40,
+  pattern = "2204",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -23764,6 +23863,33 @@ custom_entity{
   height = 32,
   direction = 0,
   model = "hookable",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = -64,
+  width = 96,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = -64,
+  width = 96,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = -16,
+  width = 96,
+  height = 8,
+  pattern = "1490",
 }
 
 tile{
@@ -28024,6 +28150,195 @@ tile{
   width = 48,
   height = 8,
   pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = -16,
+  width = 48,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = -24,
+  width = 48,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = -16,
+  y = -16,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = 32,
+  width = 48,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 40,
+  y = -16,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = -8,
+  y = -16,
+  width = 48,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = -64,
+  width = 240,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = -72,
+  width = 240,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = -64,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = -16,
+  width = 240,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 400,
+  y = -64,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 160,
+  y = -64,
+  width = 240,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = -16,
+  width = 192,
+  height = 32,
+  pattern = "2210",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = -24,
+  width = 192,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = 128,
+  y = -16,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = 32,
+  width = 192,
+  height = 8,
+  pattern = "1490",
+}
+
+tile{
+  layer = 1,
+  x = 328,
+  y = -16,
+  width = 8,
+  height = 48,
+  pattern = "1489",
+}
+
+tile{
+  layer = 1,
+  x = 136,
+  y = -16,
+  width = 192,
+  height = 48,
+  pattern = "7155",
+}
+
+tile{
+  layer = 1,
+  x = -32,
+  y = -72,
+  width = 96,
+  height = 8,
+  pattern = "1487",
+}
+
+tile{
+  layer = 1,
+  x = -40,
+  y = -64,
+  width = 8,
+  height = 48,
+  pattern = "1488",
+}
+
+tile{
+  layer = 1,
+  x = 64,
+  y = -64,
+  width = 8,
+  height = 48,
+  pattern = "1489",
 }
 
 sensor{
