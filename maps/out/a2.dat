@@ -14107,22 +14107,6 @@ enemy{
   treasure_name = "random_west",
 }
 
-teletransporter{
-  layer = 0,
-  x = 1080,
-  y = 176,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 112,
-  destination_map = "inside/under_bridges/hylia_lake",
-  destination = "from_west",
-}
-
 destination{
   name = "from_dungeon",
   layer = 0,
@@ -15256,38 +15240,6 @@ sensor{
   height = 16,
 }
 
-destination{
-  name = "from_bridge_west",
-  layer = 0,
-  x = 1072,
-  y = 229,
-  direction = -1,
-}
-
-destination{
-  name = "from_bridge_east",
-  layer = 0,
-  x = 1200,
-  y = 229,
-  direction = -1,
-}
-
-teletransporter{
-  layer = 0,
-  x = 1176,
-  y = 176,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 112,
-  destination_map = "inside/under_bridges/hylia_lake",
-  destination = "from_east",
-}
-
 teletransporter{
   layer = 0,
   x = 584,
@@ -15318,6 +15270,32 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/soldier",
+}
+
+wall{
+  layer = 0,
+  x = 1080,
+  y = 176,
+  width = 112,
+  height = 8,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 1080,
+  y = 248,
+  width = 112,
+  height = 8,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
 }
 
 tile{

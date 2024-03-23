@@ -15,7 +15,7 @@ end
 
 function map:on_started(destination)
 	game:show_map_name("east_lost_woods")
-	fog_manager:set_overlay("forest_fog")
+	fog_manager:set_overlay(map, "forest_fog")
 	squirrel_walk()
   for custom_entity in map:get_entities("butterfly") do
 		local movement = sol.movement.create("random")

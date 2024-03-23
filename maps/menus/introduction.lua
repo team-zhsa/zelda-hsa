@@ -60,7 +60,7 @@ dialog_background_bottom:fill_color({255, 255, 128, 32})
 local black_surface = sol.surface.create()
 
 -- Map surface
-local map_surface = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
+local map_surface = sol.surface.create("menus/map/full_hyrule_world_map.png")
 local scale_delta = 0.05
 local scale_max = 8
 local scale_timer = 100
@@ -175,7 +175,7 @@ function phase_4()
 		wizard:get_sprite():set_animation("invoking")
 		sol.timer.start(map, 1000, function()
 			wizard:get_sprite():set_animation("stopped")
-			sol.audio.play_sound("boss_charge")
+			sol.audio.play_sound("enemies/boss_charge")
 			agahnim:get_sprite():fade_in(40, function()
 				game:start_dialog("scripts.menus.introduction.intro_7", game:get_player_name(), function()
 					sol.timer.start(map, 100, function()
