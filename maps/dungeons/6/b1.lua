@@ -22,6 +22,6 @@ local water_level_manager = require("scripts/maps/water_level_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started(destination)
 	water_level_manager:check_water_level(map)
-
+	separator_manager:manage_map(map)
 
 end

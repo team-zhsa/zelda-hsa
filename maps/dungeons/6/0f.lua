@@ -31,7 +31,7 @@ function map:on_started(destination)
 	end
 	water_level_manager:check_water_level(map)
 	door_manager:open_when_switch_activated(map, "switch_26_door", "door_26_n_1")
-
+	separator_manager:manage_map(map)
 end
 
 

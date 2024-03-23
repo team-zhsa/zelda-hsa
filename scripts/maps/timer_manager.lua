@@ -59,7 +59,7 @@ end
 
 function chronometer_menu:on_draw(dst_surface)
 	local screen_width, screen_height = dst_surface:get_size()
-	chronometer_surface:set_xy(screen_width / 2, screen_height - 10)
+	chronometer_surface:set_xy(screen_width / 2, screen_height - 20)
 	chronometer_surface:draw(dst_surface)
 end
 

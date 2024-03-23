@@ -294,8 +294,8 @@ hero_meta:register_event("on_position_changed", function(hero)
       local row = math.floor(y / room_height)
       local room = row * num_columns + column + 1
       local room_old = game:get_value("room")
-      game:set_value("room", room)
-      game:set_explored_dungeon_room(nil, nil, room)
+     -- game:set_value("room", room)
+    --  game:set_explored_dungeon_room(nil, nil, room)
     end
 
   end)
