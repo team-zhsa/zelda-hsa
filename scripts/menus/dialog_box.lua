@@ -49,7 +49,7 @@ local function initialise_dialog_box_features(game)
 		box_dst_position = nil,      -- Destination coordinates of the dialog box.
 		question_dst_position = nil, -- Destination coordinates of the question icon.
 		icon_dst_position = nil,     -- Destination coordinates of the icon.
-		text_color = { 224, 224, 224 } -- Text color.
+		text_color = { 255, 255, 255 } -- Text color.
 
 	}
 

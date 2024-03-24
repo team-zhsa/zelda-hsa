@@ -3,25 +3,27 @@ local fog_menu = {}
 local map_meta = sol.main.get_metatable("map")
 require("scripts/multi_events")
 
-fog_menu.overlay_angles = {
-  3 * math.pi / 4,
-  7 * math.pi / 4,
-  math.pi / 4,
-  5 * math.pi / 4
-}
-fog_menu.overlay_step = 1
+
 
 function fog_manager:set_overlay(map, overlay)
   fog_menu.overlay = sol.surface.create("fogs/"..overlay..".png")
-  fog_menu.overlay:set_opacity(96)
-  fog_menu.overlay_offset_x = 0  -- Used to keep continuity when getting lost.
-  fog_menu.overlay_offset_y = 0
-  fog_menu.overlay_m = sol.movement.create("straight")
   sol.menu.start(map, fog_menu, false)
   print("fogs/"..overlay..".png")
 end
 
 function fog_menu:on_started()
+  fog_menu.overlay_angles = {
+    3 * math.pi / 4,
+    7 * math.pi / 4,
+    math.pi / 4,
+    5 * math.pi / 4
+  }
+  fog_menu.overlay_step = 1
+
+  fog_menu.overlay:set_opacity(96)
+  fog_menu.overlay_offset_x = 0  -- Used to keep continuity when getting lost.
+  fog_menu.overlay_offset_y = 0
+  fog_menu.overlay_m = sol.movement.create("straight")
   print("fog menu started")
   fog_menu:restart_overlay_movement()
 end

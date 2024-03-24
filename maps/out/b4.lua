@@ -5,7 +5,8 @@ local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
 local fog_manager = require("scripts/maps/fog_manager")
 
-function map:on_started(destination)
+map:register_event("on_started", function()
+
 	game:show_map_name("east_lost_woods")
 	fog_manager:set_overlay(map, "forest_fog")
 	for custom_entity in map:get_entities("squirrel") do
@@ -29,7 +30,7 @@ function map:on_started(destination)
     npc_villager_2:set_enabled(true)
     npc_villager_3:set_enabled(true)
   end
-end
+end)
 
 sensor_cutscene:register_event("on_activated", function()
 	if game:is_step_last("lost_woods_mapper_met") then

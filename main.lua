@@ -38,11 +38,6 @@ function sol.main:on_started()
     end
   end
 
-	local ceiling_drop_manager = require("scripts/maps/ceiling_drop_manager")
-  for _, entity_type in pairs({"hero", "pickable", "block"}) do
-    ceiling_drop_manager:create(entity_type)
-  end
-
 end
 
 -- Event called when the program stops.

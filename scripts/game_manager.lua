@@ -39,6 +39,11 @@ function game_manager:create(file)
 		game:set_time_flow(time_flow)
     print("Main quest step start:"..game:get_value("main_quest_step"))
 
+    local ceiling_drop_manager = require("scripts/maps/ceiling_drop_manager")
+    for _, entity_type in pairs({"hero", "pickable", "block"}) do
+      ceiling_drop_manager:create(entity_type)
+    end
+
 	end)
 
 	game:register_event("on_finished", function()

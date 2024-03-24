@@ -17,11 +17,11 @@ local field_id = {"out/a1", "out/a6",
 "out/j4", "out/k3", "out/k4"}
 
 local function map_is_field(id)
-    for index = 1, #field_id do
-        if field_id[index] == id then
-            return true
-        end
-    end
+	for index = 1, #field_id do
+		if field_id[index] == id then
+			return true
+		end
+	end
 end
 
 map_meta:register_event("on_started", function(map)

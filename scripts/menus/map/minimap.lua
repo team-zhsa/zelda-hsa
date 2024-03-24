@@ -1,8 +1,6 @@
 local submenu = require("scripts/menus/map/map_submenu")
 local map_submenu = submenu:new()
 local max_floors_displayed = 7
-local outside_world_size = {}
-local outside_world_minimap_size = {}
 local map_shown = false
 local waypoint_positions = require("scripts/menus/map/waypoint_config")
 local map_areas_config = require("scripts/menus/map/map_areas_config")
@@ -33,58 +31,90 @@ function map_submenu:on_started()
 		-- Not in a dungeon: show a world map.
 		self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
 
-		-- Absolute coordinates (relative to the real world): we set the hero position to the map's coordinates.
-		local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
-		local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
-		local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
+	-- Absolute coordinates (relative to the real world): we set the hero position to the map's coordinates.
+	local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
+	local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
+	local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
+	local map_width, map_height = self.game:get_map():get_size()
 
-		local map_width, map_height = self.game:get_map():get_size()
-		if self.game:is_in_outside_world() then -- What maps are outside? Set the hero's position to his actual position.
-			local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
-			hero_absolute_x = hero_absolute_x + hero_map_x
-			hero_absolute_y = hero_absolute_y + hero_map_y
-			waypoint_absolute_x = waypoint_absolute_x
-			waypoint_absolute_y = waypoint_absolute_y
-		end
-		if self.game:is_in_inside_world() then -- What maps are inside? Keep the hero's position to the map's position.
-			local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
-			hero_absolute_x = hero_absolute_x
-			hero_absolute_y = hero_absolute_y
-			waypoint_absolute_x = waypoint_absolute_x
-			waypoint_absolute_y = waypoint_absolute_y
-		end
+	if self.game:is_in_outside_world() then -- What maps are outside? Set the hero's position to his actual position.
+		local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
+		hero_absolute_x = hero_absolute_x + hero_map_x
+		hero_absolute_y = hero_absolute_y + hero_map_y
+		waypoint_absolute_x = waypoint_absolute_x
+		waypoint_absolute_y = waypoint_absolute_y
+	end
+	if self.game:is_in_inside_world() then -- What maps are inside? Keep the hero's position to the map's position.
+		local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
+		hero_absolute_x = hero_absolute_x
+		hero_absolute_y = hero_absolute_y
+		waypoint_absolute_x = waypoint_absolute_x
+		waypoint_absolute_y = waypoint_absolute_y
+	end
 
-		self.world_minimap_movement = nil
-		self.world_minimap_visible_xy = {x = 0, y = 0, product = 0}
-		self.current_map_hovered = {x = 1, y = 1}
+	self.world_minimap_movement = nil
+	self.world_minimap_visible_xy = {x = 0, y = 0, product = 0}
+	self.current_map_hovered = {x = 1, y = 1}
 
-		if self.game:get_item("world_map"):get_variant() > 0 then
-			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
-				map_shown = true      -- If in North Hyrule with World Map, then show the map.
+	local size = "full"
+	self.world_minimap_img = sol.surface.create("menus/map/"..size.."_hyrule_world_map.png")
+	local box_x, box_y = self.world_map_background_img:get_size()
+	box_x, box_y = ((box_x - 16) / 2) + 8, ((box_y - 16) / 2) + 8
+
+	if self.game:get_item("world_map"):get_variant() > 0 then
+		if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
+			if size ~= "small" then
+				map_shown = true
+				-- Add room for scrolling on the lower right edge.
+				self.outside_world_size = {width = 15360 + 1536, height = 12960 + 1536}
+				self.outside_world_minimap_size = {width = 960 + 96, height = 810 + 96}
+				local offset_x, offset_y = 96, 96--57 + 88, 50 + 88
+				local visible_offset_x, visible_offset_y = 88, 88
+				local scale_x, scale_y = self.outside_world_minimap_size.width / self.outside_world_size.width,  self.outside_world_minimap_size.height / self.outside_world_size.height
+				-- Set the apparent position by multiplying the real position by the map/world size ratio
+				local hero_minimap_x = math.floor(hero_absolute_x * scale_x)
+				local hero_minimap_y = math.floor(hero_absolute_y * scale_y)
+				local waypoint_minimap_x = math.floor(waypoint_absolute_x * scale_x)
+				local waypoint_minimap_y = math.floor(waypoint_absolute_y * scale_y)
+				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
+				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x
+				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
+				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
+				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
+				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
+				math.max(0, hero_minimap_x - box_x)) 
+				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
+				math.max(0, hero_minimap_y - box_y))
+			else
+				map_shown = true      -- If in Hyrule with World Map, then show the map.
 				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
-				self.outside_world_minimap_size = {width = 960 + 88 - 16, height = 810 + 70}
-				self.world_minimap_img = sol.surface.create("menus/map/full_hyrule_world_map.png")
+				self.outside_world_minimap_size = {width = 272, height = 240}
+				local offset_x, offset_y = 16, 16
+				local visible_offset_x, visible_offset_y = 16, 16
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
 				local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 				local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
 				local waypoint_minimap_x = math.floor(waypoint_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
 				local waypoint_minimap_y = math.floor(waypoint_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-				-- Offset the position because the map is offsetted from the world (clouds)
-				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 57 + 88 -- 64 is the real map's offset with the sprite image
-				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 50 + 88
-				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + 57 + 88 --+ 45 + 64 + 16 -- 64 is the real map's offset with the sprite image
-				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + 50 + 88-- + 28 + 64 + 16
-				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width, math.max(0, hero_minimap_x + 88 - 87)) 
-				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height, math.max(0, hero_minimap_y  + 88 - 72))
+				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
+				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x
+				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
+				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
+				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
+				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
+				math.max(0, hero_minimap_x + visible_offset_x - box_x)) 
+				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
+				math.max(0, hero_minimap_y + visible_offset_y - box_y))
 			end
-		else
-			-- if World Map not in inventory, show clouds in map screen
-			map_shown = false
-			self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
-			self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
-			self.world_minimap_visible_xy.y = 0
-			self.world_minimap_visible_xy.x = 0
 		end
+	else
+		-- if World Map not in inventory, show clouds in map screen
+		map_shown = false
+		self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
+		self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
+		self.world_minimap_visible_xy.y = 0
+		self.world_minimap_visible_xy.x = 0
+	end
 
 	else
 		-- In a dungeon.
@@ -145,6 +175,11 @@ end
 -- MAP MOVEMENT --
 ------------------
 
+function map_submenu:compute_coordinates(size, world_map_background_img)
+	self.game = sol.main:get_game()
+
+end
+
 function map_submenu:on_command_pressed(command)
   local handled = submenu.on_command_pressed(self, command)
   if not handled then
@@ -193,18 +228,19 @@ function map_submenu:draw_world_map(dst_surface)
 		center_x - 87, center_y - 70)
 
 	if map_shown then
+
 		-- Draw the hero's position and the waypoint's position.
-		local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x + 16
+		local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
 		local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x
 		local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y
-		if (hero_visible_x >= center_x - 100 and hero_visible_x <= center_x + 100 - 24)
-		and (hero_visible_y >= center_y - 80  and hero_visible_y <= center_y + 80 - 16) then
+		if (hero_visible_x >= center_x - 87 and hero_visible_x <= center_x + 87)
+		and (hero_visible_y >= center_y - 70  and hero_visible_y <= center_y + 70) then
 			-- Makes the hero icon invisible when it is out of bounds.
 			self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
 		end
-		if (waypoint_position_visible_x >= center_x - 100 and waypoint_position_visible_x <= center_x + 100 - 24)
-		and (waypoint_position_visible_y >= center_y - 80 and waypoint_position_visible_y <= center_y + 80 - 16) then
+		if (waypoint_position_visible_x >= center_x - 87 and waypoint_position_visible_x <= center_x + 87)
+		and (waypoint_position_visible_y >= center_y - 70 and waypoint_position_visible_y <= center_y + 70) then
 			-- Makes the waypoint icon invisible when it is out of bounds.
 			self.waypoint_sprite:draw(dst_surface, waypoint_position_visible_x, waypoint_position_visible_y)
 		end
@@ -237,10 +273,11 @@ function map_submenu:draw_world_map(dst_surface)
 	end
 
 	-- Set the caption according to the currently visible area.
-	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x - 1) / 80) + 2
-	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 12) / 90) + 1
+	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + center_x - 8))
+	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + center_y - 8))
+	print(self.current_map_hovered.x, self.current_map_hovered.y)
 	if map_shown then
-   self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+   --self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
 	else self:set_caption("map.title") end
 	self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
 end
@@ -252,7 +289,7 @@ function map_submenu:world_on_command_pressed(command)
 		if self.world_minimap_visible_xy.x > 0 then
 			local angle = math.pi
 			if self.world_minimap_movement ~= nil then
-				self.world_minimap_movement:stop()
+				self.world_minimap_movement:stop()	
 			end
 			local movement = sol.movement.create("straight")
 				movement:set_speed(172)
@@ -265,7 +302,7 @@ function map_submenu:world_on_command_pressed(command)
 					self:stop()
 					submenu.world_minimap_movement = nil
 				end
-				-- Stop the movement when map borders reached.
+				--[[ Stop the movement when map borders reached.
 				if submenu.world_minimap_visible_xy.x <= 4
 				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
 				or submenu.world_minimap_visible_xy.y <= 15
@@ -274,7 +311,7 @@ function map_submenu:world_on_command_pressed(command)
 					if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
 					self:stop()
 					submenu.world_minimap_movement = nil
-				end
+				end--]]
 			end
 			movement:start(self.world_minimap_visible_xy)
 			self.world_minimap_movement = movement
@@ -299,7 +336,7 @@ function map_submenu:world_on_command_pressed(command)
 				submenu.world_minimap_movement = nil
 				end
 
-				-- Stop the movement when map borders reached.
+				--[[ Stop the movement when map borders reached.
 				if submenu.world_minimap_visible_xy.x <= 4
 				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
 				or submenu.world_minimap_visible_xy.y <= 18
@@ -308,7 +345,7 @@ function map_submenu:world_on_command_pressed(command)
 					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
 					self:stop()
 					submenu.world_minimap_movement = nil
-				end
+				end--]]
 			end
 			movement:start(self.world_minimap_visible_xy)
 			self.world_minimap_movement = movement
@@ -332,7 +369,7 @@ function map_submenu:world_on_command_pressed(command)
 					submenu.world_minimap_movement = nil
 				end
 
-				-- Stop the movement when map borders reached.
+				--[[ Stop the movement when map borders reached.
 				if submenu.world_minimap_visible_xy.x <= 4
 				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
 				or submenu.world_minimap_visible_xy.y <= 18
@@ -341,7 +378,7 @@ function map_submenu:world_on_command_pressed(command)
 					if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
 					self:stop()
 					submenu.world_minimap_movement = nil
-				end
+				end--]]
 			end
 
 			movement:start(self.world_minimap_visible_xy)
