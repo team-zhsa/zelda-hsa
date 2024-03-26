@@ -72,39 +72,41 @@ function map_submenu:on_started()
 				local visible_offset_x, visible_offset_y = 88, 88
 				local scale_x, scale_y = self.outside_world_minimap_size.width / self.outside_world_size.width,  self.outside_world_minimap_size.height / self.outside_world_size.height
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
-				local hero_minimap_x = math.floor(hero_absolute_x * scale_x)
-				local hero_minimap_y = math.floor(hero_absolute_y * scale_y)
-				local waypoint_minimap_x = math.floor(waypoint_absolute_x * scale_x)
-				local waypoint_minimap_y = math.floor(waypoint_absolute_y * scale_y)
+				local hero_minimap_x = math.floor((hero_absolute_x + 1280) * scale_x)
+				local hero_minimap_y = math.floor((hero_absolute_y + 720) * scale_y)
+				local waypoint_minimap_x = math.floor((waypoint_absolute_x + 1280) * scale_x)
+				local waypoint_minimap_y = math.floor((waypoint_absolute_y + 720) * scale_y)
 				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
-				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x
+				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x - 8
 				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
-				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
+				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x - 8
 				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
-				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
-				math.max(0, hero_minimap_x - box_x)) 
+				self.world_minimap_visible_xy.x = 0 - offset_x
+				self.world_minimap_visible_xy.y = 0 - offset_y--[[math.min(self.outside_world_minimap_size.width,
+				math.max(0, self.hero_x - box_x + 64)) 
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
-				math.max(0, hero_minimap_y - box_y))
+				math.max(0, self.hero_y - box_y + 48))--]]
 			else
 				map_shown = true      -- If in Hyrule with World Map, then show the map.
 				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
 				self.outside_world_minimap_size = {width = 272, height = 240}
 				local offset_x, offset_y = 16, 16
 				local visible_offset_x, visible_offset_y = 16, 16
+				local scale_x, scale_y = self.outside_world_minimap_size.width / self.outside_world_size.width,  self.outside_world_minimap_size.height / self.outside_world_size.height
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
-				local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-				local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-				local waypoint_minimap_x = math.floor(waypoint_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-				local waypoint_minimap_y = math.floor(waypoint_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
+				local hero_minimap_x = math.floor((hero_absolute_x + 1280) * scale_x)
+				local hero_minimap_y = math.floor((hero_absolute_y + 720) * scale_y)
+				local waypoint_minimap_x = math.floor((waypoint_absolute_x + 1280) * scale_x)
+				local waypoint_minimap_y = math.floor((waypoint_absolute_y + 720) * scale_y)
 				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
-				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x
+				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x - 8
 				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
-				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
+				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x - 8
 				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
 				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
-				math.max(0, hero_minimap_x + visible_offset_x - box_x)) 
+				math.max(0, hero_minimap_x - box_x)) 
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
-				math.max(0, hero_minimap_y + visible_offset_y - box_y))
+				math.max(0, hero_minimap_y - box_y))
 			end
 		end
 	else
@@ -273,9 +275,12 @@ function map_submenu:draw_world_map(dst_surface)
 	end
 
 	-- Set the caption according to the currently visible area.
-	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + center_x - 8))
-	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + center_y - 8))
-	print(self.current_map_hovered.x, self.current_map_hovered.y)
+	local box_x, box_y = self.world_map_background_img:get_size()
+	box_x, box_y = ((box_x - 16) / 2) + 8, ((box_y - 16) / 2) + 8
+	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + box_x))
+	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + box_y))
+	print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
+	print("HOVER"..self.current_map_hovered.x.. " ".. self.current_map_hovered.y)
 	if map_shown then
    --self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
 	else self:set_caption("map.title") end
@@ -404,7 +409,7 @@ function map_submenu:world_on_command_pressed(command)
 					submenu.world_minimap_movement = nil
 				end
 
-				-- Stop the movement when map borders reached.
+				--[[ Stop the movement when map borders reached.
 				if submenu.world_minimap_visible_xy.x <= 4
 				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
 				or submenu.world_minimap_visible_xy.y <= 18
@@ -413,7 +418,7 @@ function map_submenu:world_on_command_pressed(command)
 					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
 					self:stop()
 					submenu.world_minimap_movement = nil
-				end
+				end--]]
 			end
 			
 			movement:start(self.world_minimap_visible_xy)
