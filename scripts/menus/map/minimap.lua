@@ -59,7 +59,7 @@ function map_submenu:on_started()
 	local size = "full"
 	self.world_minimap_img = sol.surface.create("menus/map/"..size.."_hyrule_world_map.png")
 	local box_x, box_y = self.world_map_background_img:get_size()
-	box_x, box_y = ((box_x - 16) / 2) + 8, ((box_y - 16) / 2) + 8
+	box_x, box_y = ((box_x - 16) / 2) + 8 - 30, ((box_y - 16) / 2) + 8 - 54
 
 	if self.game:get_item("world_map"):get_variant() > 0 then
 		if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
@@ -81,8 +81,11 @@ function map_submenu:on_started()
 				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
 				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x - 8
 				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
-				self.world_minimap_visible_xy.x = 0 - offset_x
-				self.world_minimap_visible_xy.y = 0 - offset_y--[[math.min(self.outside_world_minimap_size.width,
+				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
+																					math.max(0, self.hero_x - offset_x - box_x))
+				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
+																					math.max(0, self.hero_y - offset_y - box_y))
+				--[[- offset_y[[math.min(self.outside_world_minimap_size.width,
 				math.max(0, self.hero_x - box_x + 64)) 
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
 				math.max(0, self.hero_y - box_y + 48))--]]
@@ -276,7 +279,7 @@ function map_submenu:draw_world_map(dst_surface)
 
 	-- Set the caption according to the currently visible area.
 	local box_x, box_y = self.world_map_background_img:get_size()
-	box_x, box_y = ((box_x - 16) / 2) + 8, ((box_y - 16) / 2) + 8
+	box_x, box_y = ((box_x - 16) / 2) + 8 - 30 - 73, ((box_y - 16) / 2) + 8 - 54 - 51
 	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + box_x))
 	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + box_y))
 	print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
