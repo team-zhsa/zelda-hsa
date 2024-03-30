@@ -243,7 +243,7 @@ map{ id = "out/f7", description = "F7 (Great Swamp)" }
 map{ id = "out/f8", description = "F8 (Miracles Coast)" }
 map{ id = "out/f9", description = "F9 (Sea)" }
 map{ id = "out/g1", description = "G1 (East Mountains, Cesar's Peak)" }
-map{ id = "out/g2", description = "G2 (Zora River)" }
+map{ id = "out/g2", description = "G2 (East of the Castle)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
 map{ id = "out/g4", description = "G4 (Hyrule Field, Temple of Time)" }
 map{ id = "out/g5", description = "G5 (Hyrule Field)" }
@@ -858,9 +858,6 @@ sprite{ id = "entities/non_diggable", description = "Diggable" }
 sprite{ id = "entities/notes", description = "Notes" }
 sprite{ id = "entities/outside_door", description = "Outside closed door" }
 sprite{ id = "entities/outside_ladder", description = "Outside ladder" }
-sprite{ id = "entities/owl", description = "Owl" }
-sprite{ id = "entities/owl_blue", description = "Owl blue" }
-sprite{ id = "entities/owl_out", description = "Owl out" }
 sprite{ id = "entities/pedestal", description = "Pedestal" }
 sprite{ id = "entities/pillar", description = "Pillar" }
 sprite{ id = "entities/pillar_base", description = "Pillar base" }
@@ -959,6 +956,7 @@ sprite{ id = "entities/switch", description = "Switch" }
 sprite{ id = "entities/switches/crystal", description = "Crystal switch" }
 sprite{ id = "entities/switches/crystal_block", description = "Crystal block" }
 sprite{ id = "entities/switches/lever", description = "Lever" }
+sprite{ id = "entities/switches/owl_statue", description = "Owl statue" }
 sprite{ id = "entities/switches/solid_switch", description = "Solid switch" }
 sprite{ id = "entities/switches/star", description = "Star switch" }
 sprite{ id = "entities/switches/switch", description = "Switch" }
@@ -1925,7 +1923,6 @@ entity{ id = "dice", description = "Dice" }
 entity{ id = "explosion", description = "Explosion" }
 entity{ id = "eye_switch", description = "Eye switch" }
 entity{ id = "fire", description = "Fire" }
-entity{ id = "fire_old", description = "Fire old" }
 entity{ id = "follower", description = "Follower" }
 entity{ id = "frog", description = "Frog" }
 entity{ id = "green_crystal", description = "Green crystal" }
@@ -2332,6 +2329,7 @@ file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "LinkFF", }
 file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "LinkFF", }
 file{ path = "sprites/entities/fairy.dat", author = "ALTTP", }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
+file{ path = "sprites/entities/switches/owl_statue.dat", author = "Olivier Cléro, The Unknown", license = "CC-BY-SA" }
 file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }

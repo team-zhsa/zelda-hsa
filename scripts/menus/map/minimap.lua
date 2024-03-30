@@ -596,8 +596,6 @@ function map_submenu:on_command_pressed(command)
   return handled
 end
 
-
-
 function map_submenu:world_on_command_pressed(command)
 
 	local border_reached
@@ -649,7 +647,6 @@ function map_submenu:world_on_command_pressed(command)
 			end
 			movement:start(self.world_minimap_visible_xy)
 			self.world_minimap_movement = movement
-
 		end
 	elseif command == "right" then
 		handled = true
@@ -722,7 +719,6 @@ function map_submenu:world_on_command_pressed(command)
 					submenu.world_minimap_movement = nil
 				end
 			end
-
 			movement:start(self.world_minimap_visible_xy)
 			self.world_minimap_movement = movement
 		end
