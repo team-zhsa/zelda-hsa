@@ -10,6 +10,7 @@
 -- If you prefer, you can also enable it automatically on all maps from game:on_map_changed().
 
 local separator_manager = {}
+require("scripts/multi_events")
 
 function separator_manager:manage_map(map)
 
@@ -48,7 +49,10 @@ function separator_manager:manage_map(map)
           name = enemy_place.name,
         })
         enemy:set_treasure(unpack(enemy_place.treasure))
-        enemy.on_dead = old_enemy.on_dead  -- For door_manager.
+        enemy:register_event("on_dead", function()
+          old_enemy:on_dead()
+        end)
+        --enemy.on_dead = old_enemy.on_dead --  For door_manager.
         enemy_place.enemy = enemy
       end
     end

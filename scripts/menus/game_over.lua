@@ -76,7 +76,7 @@ local function initialise_game_over_features(game)
       fade_sprite.on_animation_finished = function()
         if state == "closing_game" then
           state = "red_screen"
-          sol.audio.play_sound("hero_dying")
+          sol.audio.play_sound("hero/hero_dying")
           hero_dead_sprite:set_paused(false)
           hero_dead_sprite:set_direction(0)
           hero_dead_sprite:set_animation("dying")

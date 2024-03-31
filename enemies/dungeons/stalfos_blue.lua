@@ -25,7 +25,7 @@ local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local quarter = math.pi * 0.5
 
 -- Configuration variables
-local is_unarmed = enemy:get_property("is_unarmed") == "true"
+local is_unarmed = true--enemy:get_property("is_unarmed") == "true"
 local walking_angles = {0, quarter, 2.0 * quarter, 3.0 * quarter}
 local walking_speed = 32
 local walking_minimum_distance = 16

@@ -3182,8 +3182,8 @@ enemy{
 enemy{
   name = "auto_enemy_34",
   layer = -1,
-  x = 888,
-  y = 1245,
+  x = 880,
+  y = 1301,
   direction = 0,
   breed = "dungeons/tentacle",
   treasure_name = "random_central",
@@ -13593,8 +13593,8 @@ enemy{
 enemy{
   name = "auto_enemy_10",
   layer = 0,
-  x = 736,
-  y = 1293,
+  x = 776,
+  y = 1373,
   direction = 0,
   breed = "dungeons/bari_red",
   treasure_name = "random_central",
@@ -13642,8 +13642,8 @@ wall{
 enemy{
   name = "auto_enemy_11",
   layer = 0,
-  x = 800,
-  y = 1325,
+  x = 728,
+  y = 1309,
   direction = 0,
   breed = "dungeons/stalfos_blue",
   treasure_name = "random_central",
@@ -13652,8 +13652,8 @@ enemy{
 enemy{
   name = "auto_enemy_12",
   layer = 0,
-  x = 704,
-  y = 1277,
+  x = 776,
+  y = 1317,
   direction = 0,
   breed = "dungeons/stalfos_blue",
   treasure_name = "random_central",
@@ -13662,8 +13662,8 @@ enemy{
 enemy{
   name = "auto_enemy_13",
   layer = 0,
-  x = 792,
-  y = 1101,
+  x = 864,
+  y = 901,
   direction = 0,
   breed = "dungeons/stalfos_blue",
   treasure_name = "random_central",
@@ -13672,8 +13672,8 @@ enemy{
 enemy{
   name = "auto_enemy_14",
   layer = 0,
-  x = 744,
-  y = 1053,
+  x = 776,
+  y = 901,
   direction = 0,
   breed = "dungeons/stalfos_blue",
   treasure_name = "random_central",
@@ -14673,11 +14673,11 @@ door{
   x = 152,
   y = 200,
   direction = 3,
-  sprite = "entities/doors/inside/door_d1_yellow_key",
+  sprite = "entities/doors/inside/door_d1_silver_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
   opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_yellow_key",
-  cannot_open_dialog = "_cannot_open_without_yellow_key",
+  opening_condition = "dungeon_2_silver_key",
+  cannot_open_dialog = "_cannot_open_without_silver_key",
 }
 
 enemy{
@@ -14860,11 +14860,11 @@ door{
   x = 152,
   y = 264,
   direction = 1,
-  sprite = "entities/doors/inside/door_d1_yellow_key",
+  sprite = "entities/doors/inside/door_d1_silver_key",
   savegame_variable = "dungeon_2_b2_door_1_6",
   opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_yellow_key",
-  cannot_open_dialog = "_cannot_open_without_yellow_key",
+  opening_condition = "dungeon_2_silver_key",
+  cannot_open_dialog = "_cannot_open_without_silver_key",
 }
 
 door{
@@ -14872,11 +14872,11 @@ door{
   x = 472,
   y = 200,
   direction = 3,
-  sprite = "entities/doors/inside/door_d1_yellow_key",
+  sprite = "entities/doors/inside/door_d1_silver_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
   opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_yellow_key",
-  cannot_open_dialog = "_cannot_open_without_yellow_key",
+  opening_condition = "dungeon_2_silver_key",
+  cannot_open_dialog = "_cannot_open_without_silver_key",
 }
 
 door{
@@ -14884,11 +14884,11 @@ door{
   x = 472,
   y = 264,
   direction = 1,
-  sprite = "entities/doors/inside/door_d1_yellow_key",
+  sprite = "entities/doors/inside/door_d1_silver_key",
   savegame_variable = "dungeon_2_b2_door_2_7",
   opening_method = "interaction_if_savegame_variable",
-  opening_condition = "dungeon_2_yellow_key",
-  cannot_open_dialog = "_cannot_open_without_yellow_key",
+  opening_condition = "dungeon_2_silver_key",
+  cannot_open_dialog = "_cannot_open_without_silver_key",
 }
 
 tile{

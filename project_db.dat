@@ -548,10 +548,6 @@ sprite{ id = "enemies/soldiers/tarosu_red_weapon", description = "Red Tarosu Wea
 sprite{ id = "entities/arrow", description = "Arrow" }
 sprite{ id = "entities/ball", description = "Ball" }
 sprite{ id = "entities/ball_shadow", description = "Ball shadow" }
-sprite{ id = "entities/beach_debris_1", description = "Beach debris 1" }
-sprite{ id = "entities/beach_debris_2", description = "Beach debris 2" }
-sprite{ id = "entities/beach_debris_3", description = "Beach debris 3" }
-sprite{ id = "entities/beach_debris_4", description = "Beach debris 4" }
 sprite{ id = "entities/bed", description = "Hero's bed" }
 sprite{ id = "entities/big_chest", description = "Chest (big)" }
 sprite{ id = "entities/block", description = "Block" }
@@ -639,44 +635,44 @@ sprite{ id = "entities/destructibles/skull04", description = "Skull 4 (Outside)"
 sprite{ id = "entities/destructibles/vase", description = "Vase" }
 sprite{ id = "entities/destructibles/vase_skull", description = "Skull Vase" }
 sprite{ id = "entities/doors/inside/castle_lock", description = "Castle Lock" }
-sprite{ id = "entities/doors/inside/door_blue_key_block1", description = "Blue Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_blue_key", description = "Blue Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_green_key", description = "Green Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_red_key", description = "Red Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_silver_key", description = "Yellow Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_small_key", description = "Small Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_weak", description = "Weak Block" }
 sprite{ id = "entities/doors/inside/door_d1_big_key", description = "Big Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_blue_key", description = "Blue Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_boss_key1", description = "Boss Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_green_key", description = "Green Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_normal", description = "Normal (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_red_key", description = "Red Key (Type 1)" }
+sprite{ id = "entities/doors/inside/door_d1_silver_key", description = "Yellow Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_small_key", description = "Small Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_very_weak_wall", description = "Very Weak Wall (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_weak_wall", description = "Weak Wall (Type 1)" }
-sprite{ id = "entities/doors/inside/door_d1_yellow_key", description = "Yellow Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d2_big_key", description = "Big Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_blue_key", description = "Blue Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_boss_key", description = "Boss Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_green_key", description = "Green Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_normal", description = "Normal (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_red_key", description = "Red Key (Type 2)" }
+sprite{ id = "entities/doors/inside/door_d2_silver_key", description = "Yellow Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_small_key", description = "Small Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_very_weak_wall", description = "Very Weak Wall (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_weak_wall", description = "Weak Wall (Type 2)" }
-sprite{ id = "entities/doors/inside/door_d2_yellow_key", description = "Yellow Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d3_big_key", description = "Big Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_blue_key", description = "Blue Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_boss_key", description = "Boss Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_green_key", description = "Green Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_normal", description = "Normal (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_red_key", description = "Red Key (Type 3)" }
+sprite{ id = "entities/doors/inside/door_d3_silver_key", description = "Yellow Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_small_key", description = "Small Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_very_weak_wall", description = "Very Weak Wall (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_weak_wall", description = "Weak Wall (Type 3)" }
-sprite{ id = "entities/doors/inside/door_d3_yellow_key", description = "Yellow Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d4_very_weak_wall", description = "Very Weak Wall (Transparent)" }
 sprite{ id = "entities/doors/inside/door_d4_weak_wall", description = "Weak Wall (Transparent)" }
-sprite{ id = "entities/doors/inside/door_green_key_block1", description = "Green Key (Block)" }
-sprite{ id = "entities/doors/inside/door_red_key_block1", description = "Red Key (Block)" }
-sprite{ id = "entities/doors/inside/door_small_key_block1", description = "Small Key (Block)" }
-sprite{ id = "entities/doors/inside/door_weak_block", description = "Weak Block" }
-sprite{ id = "entities/doors/inside/door_yellow_key_block1", description = "Yellow Key (Block)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock01", description = "DW Weak Wall (White)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock02", description = "DW Weak Wall (Grey)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock03", description = "DW Weak Wall (Pink)" }
@@ -1479,10 +1475,34 @@ sound{ id = "environment/water_level/loop", description = "Water level loop" }
 sound{ id = "environment/water_level/start", description = "Water level start" }
 sound{ id = "environment/wind", description = "wind" }
 sound{ id = "explosion", description = "Empty sound" }
+sound{ id = "hero/hero_dying", description = "hero/hero_dying" }
+sound{ id = "hero/hero_falls", description = "hero/hero_falls" }
+sound{ id = "hero/hero_hurt1", description = "hero/hero_hurt1" }
+sound{ id = "hero/hero_hurt2", description = "hero/hero_hurt2" }
+sound{ id = "hero/hero_hurt3", description = "hero/hero_hurt3" }
+sound{ id = "hero/hero_lands", description = "hero/hero_lands" }
 sound{ id = "hero/hero_lift", description = "lift" }
+sound{ id = "hero/hero_pushes", description = "hero/hero_pushes" }
+sound{ id = "hero/hero_seen", description = "hero/hero_seen" }
+sound{ id = "hero/jump", description = "hero/jump" }
+sound{ id = "hero/running", description = "hero/running" }
+sound{ id = "hero/running_obstacle", description = "hero/running_obstacle" }
 sound{ id = "hero/splash", description = "Splash" }
 sound{ id = "hero/swim", description = "swim" }
+sound{ id = "hero/sword1", description = "hero/sword1" }
+sound{ id = "hero/sword2", description = "hero/sword2" }
+sound{ id = "hero/sword3", description = "hero/sword3" }
+sound{ id = "hero/sword4", description = "hero/sword4" }
+sound{ id = "hero/sword_spin_attack_load", description = "hero/sword_spin_attack_load" }
+sound{ id = "hero/sword_spin_attack_load_double", description = "hero/sword_spin_attack_load_double" }
+sound{ id = "hero/sword_spin_attack_release", description = "hero/sword_spin_attack_release" }
+sound{ id = "hero/sword_tapping", description = "hero/sword_tapping" }
+sound{ id = "hero/sword_tapping_weak_wall", description = "hero/sword_tapping_weak_wall" }
+sound{ id = "hero/throw", description = "hero/throw" }
+sound{ id = "hero/victory", description = "hero/victory" }
 sound{ id = "hero/voice/pulling_heavy_object0", description = "Pulling heavy object" }
+sound{ id = "hero/walk_on_grass", description = "hero/walk_on_grass" }
+sound{ id = "hero/walk_on_water", description = "hero/walk_on_water" }
 sound{ id = "hero_falls", description = "Empty sound" }
 sound{ id = "hero_hurt", description = "Empty sound" }
 sound{ id = "hero_lands", description = "Empty sound" }

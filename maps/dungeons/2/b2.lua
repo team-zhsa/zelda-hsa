@@ -19,6 +19,7 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 local cannonball_manager = require("scripts/maps/cannonball_manager")
 cannonball_manager:create_cannons(map, "cannon_")
 local water_delay = 500
+
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	if game:get_value("dungeon_2_b2_24_pool_full") == false then
@@ -45,8 +46,6 @@ map:register_event("on_started", function()
 	door_manager:open_when_switch_activated(map, "switch_27_door", "door_27_n")
 	door_manager:open_when_switch_activated(map, "switch_24_door", "door_29_n")
 	door_manager:open_when_switch_activated(map, "switch_34_door", "door_29_n")
-  -- You can initialise the movement and sprites of various
-  -- map entities here.
 end)
 
 -- Pool fill switch mechanism

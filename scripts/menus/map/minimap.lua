@@ -599,17 +599,17 @@ end
 function map_submenu:world_on_command_pressed(command)
 
 	local border_reached
-	if self.zoom_mode ~= "small" then
-		border_reached = (submenu.world_minimap_visible_xy.x == 9
-		or submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87
-		or submenu.world_minimap_visible_xy.y == 26
-		or submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70)
+	--[[if self.zoom_mode ~= "small" then
+		border_reached = (self.world_minimap_visible_xy.x == 9
+		or self.world_minimap_visible_xy.x == self.outside_world_minimap_size.width - 87
+		or self.world_minimap_visible_xy.y == 26
+		or self.world_minimap_visible_xy.y == self.outside_world_minimap_size.height - 70)
 	else
 		border_reached = (self.world_minimap_visible_xy.x <= 24
 		or self.world_minimap_visible_xy.x >= self.outside_world_minimap_size.width - 25 + 24
 		or self.world_minimap_visible_xy.y <= 24
 		or self.world_minimap_visible_xy.y >= self.outside_world_minimap_size.height - 25 + 24)
-	end
+	end--]]
 
 	local handled = false
 	if command == "left" then
