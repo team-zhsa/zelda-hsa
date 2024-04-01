@@ -1282,8 +1282,6 @@ music{ id = "cutscenes/castle_sealed", description = "Castle sealed" }
 music{ id = "cutscenes/credits", description = "Credits & Alternate Savegame Music" }
 music{ id = "cutscenes/crystal_get", description = "Get crystal" }
 music{ id = "cutscenes/cutscene_danger", description = "Danger Cutscence (Bridge on Fire TP)" }
-music{ id = "cutscenes/cutscene_introduction", description = "Introduction" }
-music{ id = "cutscenes/cutscene_introduction_loop", description = "Introduction (looped)" }
 music{ id = "cutscenes/cutscene_zelda", description = "Zelda" }
 music{ id = "cutscenes/end_credits", description = "End credits" }
 music{ id = "cutscenes/end_credits_alttp", description = "End credits" }
@@ -1291,6 +1289,7 @@ music{ id = "cutscenes/fanfare", description = "Fanfare" }
 music{ id = "cutscenes/game_over", description = "Game Over" }
 music{ id = "cutscenes/kaepora_gaebora", description = "Kaepora Gaebora" }
 music{ id = "cutscenes/master_sword", description = "Master sword" }
+music{ id = "cutscenes/prologue", description = "Prologue" }
 music{ id = "cutscenes/raining", description = "Beginning" }
 music{ id = "cutscenes/savegames", description = "Savegames" }
 music{ id = "cutscenes/song_learned", description = "Song learned" }
@@ -1340,7 +1339,6 @@ music{ id = "inside/library", description = "Library" }
 music{ id = "inside/mask_salesman", description = "Masks Shop" }
 music{ id = "inside/minigame_1", description = "Minigames" }
 music{ id = "inside/minigame_alttp", description = "Minigames (ALTTP)" }
-music{ id = "inside/minigame_estrgg", description = "Minigames (SMB)" }
 music{ id = "inside/minigame_mm", description = "Minigames (MM)" }
 music{ id = "inside/minigame_oot", description = "Minigames (OOT)" }
 music{ id = "inside/observatory", description = "Observatory" }
@@ -1361,15 +1359,14 @@ music{ id = "outside/clock_town", description = "Clock Town" }
 music{ id = "outside/dark_world", description = "Dark World" }
 music{ id = "outside/east_lost_woods", description = "East Lost Woods" }
 music{ id = "outside/faron_woods", description = "Faron Woods" }
-music{ id = "outside/field_2", description = "Hyrule Field (2)" }
 music{ id = "outside/field_4", description = "Hyrule Field (Rock)" }
-music{ id = "outside/field_oot", description = "Hyrule Field (Day)" }
 music{ id = "outside/field_tp", description = "Hyrule Field (TP)" }
 music{ id = "outside/gerudo", description = "Gerudo Desert" }
 music{ id = "outside/graveyard", description = "Graveyard" }
 music{ id = "outside/hylia_lake", description = "Hylia Lake" }
-music{ id = "outside/hyrule_field_beginning", description = "Hyrule Field (ALBW)" }
 music{ id = "outside/hyrule_field_day", description = "Hyrule Field (Day)" }
+music{ id = "outside/hyrule_field_intro_day", description = "Hyrule Field (Intro, day)" }
+music{ id = "outside/hyrule_field_intro_night", description = "Hyrule Field (Intro, night)" }
 music{ id = "outside/hyrule_field_night", description = "Hyrule Field (Night)" }
 music{ id = "outside/hyrule_town", description = "Hyrule Town" }
 music{ id = "outside/kakarico", description = "Kakarico Village" }
@@ -1379,7 +1376,6 @@ music{ id = "outside/lost_woods", description = "Lost Woods" }
 music{ id = "outside/mountains", description = "Death Mountains" }
 music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
-music{ id = "outside/owl_theme", description = "Owl Theme" }
 music{ id = "outside/parapa_town", description = "Parapa Town" }
 music{ id = "outside/rito_village", description = "Rito Village" }
 music{ id = "outside/sea", description = "Great Sea" }
@@ -1389,6 +1385,7 @@ music{ id = "outside/subrosia", description = "Underworld" }
 music{ id = "outside/swamp", description = "Swamp" }
 music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
 music{ id = "outside/town_ruto", description = "(Outset Island)" }
+music{ id = "outside/west_mountains", description = "West Mountains" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
@@ -2099,12 +2096,29 @@ file{ path = "fonts/enter_command_mono.ttf", author = "Nintendo, Yuji Oshimoto",
 file{ path = "items/bomb_bag.lua", license = "GPL v3" }
 file{ path = "items/rupee_bag.lua", license = "GPL v3" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "maps/dungeons/1", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/1/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/10", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/11", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/12", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/12/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/12/0f.lua", author = "The Unknown", }
+file{ path = "maps/dungeons/13", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/14", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/15", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/16", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/17", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/2", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/2/0f.dat", author = "The Unknown", }
-file{ path = "maps/dungeons/3", author = "The Unknown", }
+file{ path = "maps/dungeons/3", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/4", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/5", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/6", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/7", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/8", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/secret", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/secret/1f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/secret/1f.lua", author = "The Unknown", }
 file{ path = "maps/extensions/east_continent/a1.dat", author = "The Unknown", }
@@ -2202,25 +2216,25 @@ file{ path = "maps/out/f7.dat", author = "The Unknown", }
 file{ path = "maps/out/g4.dat", author = "The Unknown", }
 file{ path = "maps/out/g4.lua", author = "The Unknown", }
 file{ path = "maps/out/g7.dat", author = "The Unknown", }
-file{ path = "maps/out/h4.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/i3.dat", author = "Linkff", }
-file{ path = "maps/out/i4.dat", author = "Linkff", }
-file{ path = "maps/out/i4.lua", author = "Linkff", }
-file{ path = "maps/out/i5.dat", author = "Linkff", }
-file{ path = "maps/out/i5.lua", author = "Linkff", }
+file{ path = "maps/out/h4.dat", author = "LinkFF, The Unknown", }
+file{ path = "maps/out/i3.dat", author = "LinkFF", }
+file{ path = "maps/out/i4.dat", author = "LinkFF", }
+file{ path = "maps/out/i4.lua", author = "LinkFF", }
+file{ path = "maps/out/i5.dat", author = "LinkFF", }
+file{ path = "maps/out/i5.lua", author = "LinkFF", }
 file{ path = "maps/out/j1.dat", author = "The Unknown", }
 file{ path = "maps/out/j1.lua", author = "The Unknown", }
-file{ path = "maps/out/j5.dat", author = "Linkff", }
-file{ path = "maps/out/j5.lua", author = "Linkff", }
-file{ path = "maps/out/j6.dat", author = "Linkff", }
-file{ path = "maps/out/j6.lua", author = "Linkff", }
-file{ path = "maps/out/j7.dat", author = "Linkff", }
+file{ path = "maps/out/j5.dat", author = "LinkFF", }
+file{ path = "maps/out/j5.lua", author = "LinkFF", }
+file{ path = "maps/out/j6.dat", author = "LinkFF", }
+file{ path = "maps/out/j6.lua", author = "LinkFF", }
+file{ path = "maps/out/j7.dat", author = "LinkFF", }
 file{ path = "maps/out/k1.dat", author = "The Unknown", }
-file{ path = "maps/out/k7.dat", author = "Linkff", }
+file{ path = "maps/out/k7.dat", author = "LinkFF", }
 file{ path = "maps/out/k8.dat", author = "The Unknown", }
 file{ path = "maps/out/k9.dat", author = "The Unknown", }
-file{ path = "maps/out/l1.dat", author = "Linkff", }
-file{ path = "maps/out/l1.lua", author = "Linkff", }
+file{ path = "maps/out/l1.dat", author = "LinkFF", }
+file{ path = "maps/out/l1.lua", author = "LinkFF", }
 file{ path = "maps/out/l2.dat", author = "The Unknown", }
 file{ path = "maps/out/l2.lua", author = "The Unknown", }
 file{ path = "maps/out/l3.dat", author = "The Unknown", }
@@ -2233,11 +2247,31 @@ file{ path = "maps/out/l6.dat", author = "The Unknown", }
 file{ path = "maps/out/l6.lua", author = "The Unknown", }
 file{ path = "maps/out/l7.dat", author = "The Unknown", }
 file{ path = "maps/out/l8.dat", author = "The Unknown", }
-file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
-file{ path = "musics/cutscenes/cutscene_introduction_loop.ogg", author = "MIDI by Luiishu", }
-file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", }
-file{ path = "musics/cutscenes/savegames.ogg", author = "MIDI by Luiishu", }
+file{ path = "maps/out/l9.dat", author = "LinkFF, The Unknown", }
+file{ path = "maps/out/l9.lua", author = "LinkFF, The Unknown", }
+file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/cutscenes/kaepora_gaebora.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/cutscenes/prologue.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/cutscenes/savegames.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/dungeons/07_desert.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/inside/castle.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/inside/cave.ogg", license = "Proprietary" }
+file{ path = "musics/inside/goron.ogg", license = "Proprietary" }
+file{ path = "musics/inside/house.ogg", license = "Proprietary" }
+file{ path = "musics/inside/library.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_1.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_alttp.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_mm.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_oot.ogg", license = "Proprietary" }
+file{ path = "musics/inside/observatory.ogg", license = "Proprietary" }
+file{ path = "musics/inside/potion.ogg", license = "Proprietary" }
+file{ path = "musics/inside/ravio.ogg", license = "Proprietary" }
+file{ path = "musics/inside/shop.ogg", license = "Proprietary" }
+file{ path = "musics/inside/temple_time.ogg", license = "Proprietary" }
+file{ path = "musics/inside/windmill.ogg", license = "Proprietary" }
+file{ path = "musics/outside/hyrule_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/hyrule_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamastu", license = "Proprietary" }
 file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
 file{ path = "scripts/automation", author = "Olivier Cl�ro", license = "BSD, GPL v3" }

@@ -28,7 +28,11 @@ map_meta:register_event("on_started", function(map)
   local game = map:get_game()
 	if map_is_field(map:get_id()) then
 		if not game:is_step_done("dungeon_1_started") then
-			audio_manager:play_music("outside/hyrule_field_beginning")
+			if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
+				audio_manager:play_music("outside/hyrule_field_intro_day")
+			elseif game:get_value("time_of_day") == "night" then
+				audio_manager:play_music("outside/hyrule_field_intro_night")
+			end
 		elseif game:is_step_last("priest_kidnapped") then
 			audio_manager:play_music("cutscenes/cutscene_danger")
 		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))

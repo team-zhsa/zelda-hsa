@@ -93,7 +93,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       hero:stop_movement()
       audio_manager:play_sound("hero/hero_falls") 
     elseif current_state == "jumping" then
-      --audio_manager:play_sound("hero/cliff_jump")
+      audio_manager:play_sound("hero/jump")
     elseif current_state == "stairs" then
       if timer_stairs == nil then
         timer_stairs = sol.timer.start(hero, 0, function()
