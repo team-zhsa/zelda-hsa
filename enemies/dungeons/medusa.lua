@@ -53,7 +53,7 @@ enemy:register_event("on_restarted", function(enemy)
         name = (enemy:get_name() or enemy:get_breed()) .. "_fireball",
         breed = "projectiles/fireball"
       })
-      sol.audio.play_sound("zora")
+      sol.audio.play_sound("enemies/zora")
       enemy:restart()
     end
     return true  -- Repeat the timer.

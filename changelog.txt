@@ -415,7 +415,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Rescripted the Fire Rod.
 	CHG: Increased the running speed from 192 to 256.
 	CHG: Rescripted bombs with custom entities.
-	CHG: Replaced the parchment font by "capital" (#184).
 	CHG: Player names can now have up to 8 characters.
 	CHG: Allowed the scrollable map to be panned farther.
 	CHG: Changed the colour of the options menu cursor to match the other submenus.
@@ -428,6 +427,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Renamed the Zora Forest to the Lanayru Forest.
 	CHG: Adjusted the sunset map tone.
 	CHG: Replaced disabled tiles by invisible tiles in the in the room 5 (B2) of the Fire Temple.
+	CHG: Improve the dungeon map menu (#211).
+	CHG: Replaced the Yellow Key by the Silver Key (#215).
+	CHG: Merged countable items into a single item file (#189).
+	CHG: Replaced hardcoded sounds by empty ones (#137).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -471,6 +474,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed fairies not reviving the player (#204).
 	FIX: Made bombs explode even if Link is carrying them (#183).
 	FIX: Fixed bombs not exploding anything but themselves (#185).
+	FIX: Fixed the fog not appearing when leaving and reentering a map (#212).
+	FIX: Fixed a separator overriding error in the Forest Temple (B2) (#218).
+	FIX: Fixed Armos not appearing (#209).
+	FIX: Fixed enemies not going down one layer when there's no ground (#198).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -500,11 +507,11 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Map the missing caves (#151).
 	TDO: Finish realigning trees in the Hyrule Field (#96).
 	TDO: Rename some soldier enemies in order to make them appear during the game and not at the beginning (#97).
-	TDO: Merge countable items into a single item file (#189).
 	TDO: Remove pre-alpha screenshots from the sprites folder (#195).
 	TDO: Add a quick swap feature (#196).
-	TDO: Fix enemies not going down one layer when there's no ground (#198).
 	TDO: Overhaul the game over menu (#199).
+	TDO: Remove the tofu character at the end of lines in the enter_command_mono font (#184).
+	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
@@ -542,7 +549,6 @@ Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Add a HUD version for timers (#36).
 	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
 	TDO: Add the Tournament of the Strongest (#180).
-	TDO: Remove the tofu character at the end of the lines in the enter_command_mono font (#184).
 	TDO: Add a climbing state (#188).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
@@ -559,7 +565,6 @@ Alpha 1.18.1 (//23) "Opah Update":
 Alpha 1.19 (//23) "Perch Update":
 	TDO: Add support for multiple aspect ratios (#124).
 	TDO: Set destructibles ground as "low wall" (#158).
-	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.
