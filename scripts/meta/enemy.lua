@@ -85,6 +85,10 @@ function enemy_meta:on_created()
 	end
 end
 
+function enemy_meta:on_restarted()
+	self.is_hurt_by_sword = false
+end
+
 function enemy_meta:on_hurt(attack)
 
 	if not self.is_hurt_silently then
@@ -101,8 +105,10 @@ function enemy_meta:on_hurt(attack)
 		final_damage = self:get_life()
 	end
 	-- Remove life
-	self:remove_life(final_damage)
-	print("Damages on enemy: " .. final_damage)
+	if self.is_hurt_by_sword ~= true then
+		self:remove_life(final_damage)
+		print("Damages on enemy: " .. final_damage)
+	end
 end
 
 function enemy_meta:on_dying()
@@ -134,7 +140,7 @@ end
 
 -- Redefine how to calculate the damage inflicted by the sword.
 function enemy_meta:on_hurt_by_sword(hero, enemy_sprite)
-
+	self.is_hurt_by_sword = true
 	local game = self:get_game()
 	local hero = game:get_hero()
 	-- Calculate force. Check tunic, sword, spin attack and powerups.
@@ -338,14 +344,16 @@ end
 
 -- Check if the enemy should fall in hole on switching to normal obstacle behavior mode.
 enemy_meta:register_event("set_obstacle_behavior", function(enemy)
-	if (enemy:get_ground_below() == "hole" or enemy:get_ground_below() == "lava") and (enemy:get_obstacle_behavior() == "normal") then
+	if (enemy:get_ground_below() == "hole" or enemy:get_ground_below() == "lava")
+	and (enemy:get_obstacle_behavior() == "normal") then
 		entity_manager:create_falling_entity(enemy)
 	end
 end, false)
 
 enemy_meta:register_event("on_position_changed", function(enemy, x, y, layer)
 	local _,_,layer = enemy:get_position()
-	if enemy:get_ground_below() == "empty" and layer ~= enemy:get_map():get_min_layer() and enemy:get_obstacle_behavior() == "normal" then
+	if enemy:get_ground_below() == "empty" and layer ~= enemy:get_map():get_min_layer()
+	and enemy:get_obstacle_behavior() == "normal" then
 		entity_manager:create_falling_entity(enemy)
 		sol.timer.start(enemy, 200, function()
 			enemy:set_position(_,_, layer - 1)

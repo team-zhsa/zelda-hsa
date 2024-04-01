@@ -4,6 +4,7 @@
 local hero_meta = sol.main.get_metatable("hero")
 
 -- Include scripts
+require("scripts/multi_events")
 local audio_manager = require("scripts/audio_manager")
 local timer_sword_loading = nil
 local timer_sword_tapping = nil
@@ -16,7 +17,7 @@ function hero_meta:is_custom_state_started(state_name)
   return state=="custom" and object:get_description()==state_name
 end
 
-require("scripts/multi_events")
+
 hero_meta:register_event("on_position_changed", function(hero)
   local map = hero:get_map()
   

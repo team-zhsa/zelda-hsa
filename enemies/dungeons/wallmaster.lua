@@ -73,7 +73,7 @@ function enemy:on_restarted()
     shadow_sprite:set_animation("shadow")
 
     sol.timer.start(enemy, 500, function()
-      sol.audio.play_sound("jump")
+      sol.audio.play_sound("hero/jump")
     end)
 
     -- Go back.

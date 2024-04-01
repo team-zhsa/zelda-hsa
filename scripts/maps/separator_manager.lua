@@ -25,7 +25,9 @@ function separator_manager:manage_map(map)
     local hero = map:get_hero()
     local d = hero:get_direction() * 2
     if game:is_in_dungeon() then
-	    hero:walk(d..d..d..d..d..d)
+      local _, _, z = hero:get_position()
+      if z == -1 then hero:walk(d..d..d..d..d..d..d..d..d)
+      else hero:walk(d..d..d..d..d..d) end
     end
 
     -- Enemies.
@@ -68,14 +70,13 @@ function separator_manager:manage_map(map)
 
     local hero = map:get_hero()
     hero.respawn_point_saved=nil
-    local directions={
-      {48,0},
-      {0,-48},
-      {-48,0},
-      {0,48}
-    }
+    local directions={{48,0}, {0,-48}, {-48,0}, {0,48}}
+    local directions_low={{56,0}, {0,-56}, {-56,0}, {0,56}}
     local x,y,layer=hero:get_position()
-    local offset_x, offset_y=unpack(directions[hero:get_direction()+1])
+    local offset_x, offset_y
+    if layer ~= -1 then
+      offset_x, offset_y = unpack(directions[hero:get_direction()+1])
+    else offset_x, offset_y = unpack(directions_low[hero:get_direction()+1]) end
 
     hero:save_solid_ground(x+offset_x, y+offset_y, layer)
     hero.last_solid_ground={

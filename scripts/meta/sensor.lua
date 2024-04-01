@@ -46,6 +46,7 @@ function sensor_meta:on_activated()
   if room ~= nil then
     game:set_explored_dungeon_room(nil, nil, tonumber(room))
     self:remove()
+    print("SENSOR")
     return
   end
 
