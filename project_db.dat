@@ -596,16 +596,16 @@ sprite{ id = "entities/cannonball", description = "Cannon ball" }
 sprite{ id = "entities/castle_seal", description = "Castle Seal" }
 sprite{ id = "entities/chest", description = "Chest (normal)" }
 sprite{ id = "entities/chests/chest", description = "Chest" }
-sprite{ id = "entities/chests/chest_LttP", description = "ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big", description = "Big Wooden Chest" }
-sprite{ id = "entities/chests/chest_big_LttP", description = "Big ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big_blue", description = "Big Blue Chest" }
 sprite{ id = "entities/chests/chest_big_green", description = "Big Green Chest" }
+sprite{ id = "entities/chests/chest_big_normal", description = "Big ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big_red", description = "Big Red Chest" }
 sprite{ id = "entities/chests/chest_big_yellow", description = "Big Yellow Chest" }
 sprite{ id = "entities/chests/chest_blue", description = "Blue Chest" }
 sprite{ id = "entities/chests/chest_boss", description = "Boss Chest" }
 sprite{ id = "entities/chests/chest_green", description = "Green Chest" }
+sprite{ id = "entities/chests/chest_normal", description = "ALTTP Chest" }
 sprite{ id = "entities/chests/chest_red", description = "Red Chest" }
 sprite{ id = "entities/chests/chest_yellow", description = "Yellow Chest" }
 sprite{ id = "entities/collapsing_tiles/collapse_tile1", description = "Collapsing Tile 1" }
@@ -851,7 +851,6 @@ sprite{ id = "entities/moving_platform_dg_5_chain", description = "Moving platfo
 sprite{ id = "entities/non_diggable", description = "Diggable" }
 sprite{ id = "entities/notes", description = "Notes" }
 sprite{ id = "entities/outside_ladder", description = "Outside ladder" }
-sprite{ id = "entities/pedestal", description = "Pedestal" }
 sprite{ id = "entities/pillar", description = "Pillar" }
 sprite{ id = "entities/pillar_base", description = "Pillar base" }
 sprite{ id = "entities/platform", description = "Platform" }
@@ -2237,6 +2236,7 @@ file{ path = "maps/out/l8.dat", author = "The Unknown", }
 file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
 file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
 file{ path = "musics/cutscenes/cutscene_introduction_loop.ogg", author = "MIDI by Luiishu", }
+file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", }
 file{ path = "musics/cutscenes/savegames.ogg", author = "MIDI by Luiishu", }
 file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }

@@ -9884,7 +9884,7 @@ chest{
   y = 1141,
   treasure_name = "big_key",
   treasure_savegame_variable = "dungeon_5_big_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 wall{
@@ -10104,7 +10104,7 @@ chest{
   y = 685,
   treasure_name = "ice_rod",
   treasure_savegame_variable = "dungeon_5_treasure",
-  sprite = "entities/chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_normal",
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungepn_5_big_key",
   cannot_open_dialog = "_cannot_open_without_big_key",
@@ -10458,7 +10458,7 @@ chest{
   treasure_name = "bomb",
   treasure_variant = 4,
   treasure_savegame_variable = "dungeon_5_0f_13_bombs",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 jumper{

@@ -78,6 +78,14 @@ ouvrir la serrure !
 }
 
 dialog{
+  id = "_cannot_open_without_silver_key",
+  text = [[
+Il te faut une clé d'argent pour
+ouvrir la serrure !
+]],
+}
+
+dialog{
   id = "_cannot_open_without_small_key",
   text = [[
 Rien à faire, cette porte semble
@@ -85,14 +93,6 @@ bloquée...
 
 Essaie de trouver une clé qui
 pourrait l'ouvrir.
-]],
-}
-
-dialog{
-  id = "_cannot_open_without_silver_key",
-  text = [[
-Il te faut une clé jaune pour
-ouvrir la serrure !
 ]],
 }
 
@@ -255,9 +255,10 @@ dialog{
   id = "_treasure.blue_key.1",
   icon = "125",
   text = [[
-Tu as obtenu une clé bleue.
+Tu as obtenu une clé bleue ! $0
 Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
+pourrait bien servir...$0 Une idée ?
+
 ]],
 }
 
@@ -656,9 +657,10 @@ dialog{
   id = "_treasure.green_key.1",
   icon = "124",
   text = [[
-Tu as obtenu une clé verte.
+Tu as obtenu une clé verte ! $0
 Je me demande bien à quoi elle
 pourrait bien servir...$0 Une idée ?
+
 ]],
 }
 
@@ -1306,9 +1308,9 @@ dialog{
   id = "_treasure.red_key.1",
   icon = "126",
   text = [[
-Tu as obtenu une clé rouge.
+Tu as obtenu une clé rouge ! $0
 Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
+pourrait bien servir...$0 Une idée ?
 ]],
 }
 
@@ -1466,6 +1468,16 @@ Tu as obtenu une pelle !$0
 Tu peux creuser à beaucoup
 d'endroits. Qui sait ce que tu
 trouveras !
+]],
+}
+
+dialog{
+  id = "_treasure.silver_key.1",
+  icon = "127",
+  text = [[
+Tu as obtenu une clé d'argent ! $0
+Je me demande bien à quoi elle
+pourrait bien servir...$0 Une idée ?
 ]],
 }
 
@@ -1718,16 +1730,6 @@ plus facilement tous ces chemins
 et partir à la conquête des
 recoins les plus reculés !
 Appuie sur \[controller_select\].
-]],
-}
-
-dialog{
-  id = "_treasure.silver_key.1",
-  icon = "127",
-  text = [[
-Tu as obtenu une clé jaune.
-Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
 ]],
 }
 
@@ -2609,15 +2611,6 @@ Donjon secret
 }
 
 dialog{
-  id = "maps.dungeons.2.blue_chest_wrong",
-  text = [[
-Réfléchis un peu...
-Le coffre bleu s'ouvre avec la
-clé BLEUE.
-]],
-}
-
-dialog{
   id = "maps.dungeons.2.boss_description",
   text = [[
 Spectre de l'au-delà
@@ -2648,29 +2641,8 @@ dialog{
   text = [[
 Il faut tirer le levier pour
 ouvrir le sol. Appuie sur le
-bouton \[controller_a\] ainsi que sur la manette
-vers le bas.
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.indication",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.owl_2",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.owl_3",
-  text = [[
-<<<
+bouton \[controller_a\] ainsi que sur la
+manette vers le bas.
 ]],
 }
 

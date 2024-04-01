@@ -1785,7 +1785,7 @@ chest{
   y = 1061,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_2_map",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 switch{
@@ -1885,8 +1885,8 @@ enemy{
 enemy{
   name = "auto_enemy_17",
   layer = -1,
-  x = 760,
-  y = 573,
+  x = 648,
+  y = 613,
   direction = 0,
   breed = "dungeons/mini_moldorm",
   treasure_name = "random_central",
@@ -1896,7 +1896,7 @@ enemy{
   name = "auto_enemy_18",
   layer = -1,
   x = 520,
-  y = 549,
+  y = 573,
   direction = 0,
   breed = "dungeons/mini_moldorm",
   treasure_name = "random_central",
@@ -1965,8 +1965,8 @@ enemy{
 enemy{
   name = "auto_enemy_34",
   layer = -1,
-  x = 464,
-  y = 1005,
+  x = 488,
+  y = 1037,
   direction = 0,
   breed = "dungeons/tentacle",
   treasure_name = "random_central",
@@ -2037,33 +2037,6 @@ jumper{
   height = 88,
   direction = 0,
   jump_length = 56,
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 784,
-  width = 88,
-  height = 136,
-  pattern = "hole",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 904,
-  width = 80,
-  height = 16,
-  pattern = "wall_hole.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 264,
-  y = 776,
-  width = 16,
-  height = 128,
-  pattern = "wall_hole.4-1",
 }
 
 tile{
@@ -2311,11 +2284,47 @@ tile{
 
 tile{
   layer = 0,
+  x = 192,
+  y = 784,
+  width = 32,
+  height = 80,
+  pattern = "hole",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 784,
+  width = 56,
+  height = 32,
+  pattern = "hole",
+}
+
+tile{
+  layer = 0,
   x = 200,
   y = 784,
   width = 80,
   height = 8,
   pattern = "hole.1",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 864,
+  width = 88,
+  height = 32,
+  pattern = "hole",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 784,
+  width = 16,
+  height = 112,
+  pattern = "wall_hole.4-1",
 }
 
 tile{
@@ -7798,7 +7807,7 @@ tile{
   layer = 0,
   x = 48,
   y = 912,
-  width = 144,
+  width = 224,
   height = 8,
   pattern = "wall_border.2-2",
   tileset = "absolute_dungeon_07",
@@ -7821,6 +7830,16 @@ tile{
   width = 8,
   height = 8,
   pattern = "wall_border.corner.3-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "wall_border.corner.4-2",
   tileset = "absolute_dungeon_07",
 }
 
@@ -9511,6 +9530,15 @@ tile{
 
 tile{
   layer = 0,
+  x = 200,
+  y = 888,
+  width = 80,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
   x = 192,
   y = 784,
   width = 8,
@@ -9539,7 +9567,25 @@ tile{
 tile{
   layer = 0,
   x = 192,
+  y = 888,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.3",
+}
+
+tile{
+  layer = 0,
+  x = 192,
   y = 768,
+  width = 80,
+  height = 16,
+  pattern = "floor.12-1",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 896,
   width = 80,
   height = 16,
   pattern = "floor.12-1",
@@ -9560,6 +9606,16 @@ tile{
   y = 816,
   width = 8,
   height = 48,
+  pattern = "wall_border.4-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 896,
+  width = 8,
+  height = 16,
   pattern = "wall_border.4-2",
   tileset = "absolute_dungeon_07",
 }
@@ -10352,7 +10408,7 @@ tile{
   x = 192,
   y = 792,
   width = 8,
-  height = 128,
+  height = 96,
   pattern = "hole.3",
 }
 
@@ -10435,6 +10491,60 @@ tile{
   width = 8,
   height = 24,
   pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 816,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 816,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 816,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 848,
+  width = 16,
+  height = 16,
+  pattern = "torch",
 }
 
 tile{
@@ -12719,94 +12829,6 @@ tile{
   pattern = "floor.12-1",
 }
 
-tile{
-  layer = 0,
-  x = 264,
-  y = 904,
-  width = 16,
-  height = 16,
-  pattern = "wall_hole.corner.4-1",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 840,
-  width = 16,
-  height = 24,
-  pattern = "barrier_big.border.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 1072,
-  y = 560,
-  width = 16,
-  height = 24,
-  pattern = "wall.1-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1072,
-  y = 616,
-  width = 16,
-  height = 24,
-  pattern = "wall.2-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1048,
-  y = 616,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.3-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1048,
-  y = 584,
-  width = 24,
-  height = 32,
-  pattern = "wall.3-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1048,
-  y = 560,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner.1-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1080,
-  y = 560,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner_reverse.1-2",
-  tileset = "absolute_dungeon_07",
-}
-
-tile{
-  layer = 0,
-  x = 1080,
-  y = 616,
-  width = 24,
-  height = 24,
-  pattern = "wall.corner_reverse.3-2",
-  tileset = "absolute_dungeon_07",
-}
-
 sensor{
   name = "dungeon_room_15_3",
   layer = 0,
@@ -13348,7 +13370,7 @@ switch{
   y = 416,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "common/switch_crystal_hit",
+  sound = "common/switch_crystal",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -13426,7 +13448,7 @@ enemy{
 enemy{
   name = "auto_enemy_9",
   layer = 0,
-  x = 200,
+  x = 232,
   y = 1293,
   direction = 0,
   breed = "dungeons/tentacle_yellow",
@@ -13908,7 +13930,7 @@ chest{
   y = 1141,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_b1_22_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 crystal_block{
@@ -14180,8 +14202,8 @@ crystal{
 enemy{
   name = "auto_enemy_22",
   layer = 0,
-  x = 896,
-  y = 501,
+  x = 888,
+  y = 485,
   direction = 0,
   breed = "dungeons/tentacle",
   treasure_name = "random_central",
@@ -14250,8 +14272,8 @@ enemy{
 enemy{
   name = "auto_enemy_30",
   layer = 0,
-  x = 904,
-  y = 1021,
+  x = 768,
+  y = 1149,
   direction = 0,
   breed = "dungeons/tentacle",
   treasure_name = "random_central",
@@ -14546,7 +14568,7 @@ crystal_block{
 crystal{
   layer = 0,
   x = 232,
-  y = 837,
+  y = 845,
 }
 
 crystal_block{
@@ -15312,7 +15334,7 @@ chest{
   y = 893,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_b1_18_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 block{
@@ -16134,7 +16156,7 @@ enemy{
   name = "auto_enemy_41",
   layer = 0,
   x = 792,
-  y = 1309,
+  y = 1277,
   direction = 0,
   breed = "dungeons/tentacle",
   treasure_name = "random_west",
@@ -16339,15 +16361,6 @@ sensor{
   y = 733,
   width = 16,
   height = 16,
-}
-
-crystal_block{
-  layer = 0,
-  x = 176,
-  y = 896,
-  width = 16,
-  height = 16,
-  subtype = 1,
 }
 
 tile{
@@ -18070,6 +18083,76 @@ tile{
   width = 288,
   height = 16,
   pattern = "ceiling.1",
+}
+
+tile{
+  layer = 2,
+  x = 1072,
+  y = 560,
+  width = 16,
+  height = 24,
+  pattern = "wall.1-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1072,
+  y = 616,
+  width = 16,
+  height = 24,
+  pattern = "wall.2-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1048,
+  y = 616,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1048,
+  y = 584,
+  width = 24,
+  height = 32,
+  pattern = "wall.3-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1048,
+  y = 560,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1080,
+  y = 560,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.1-2",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 2,
+  x = 1080,
+  y = 616,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.3-2",
+  tileset = "absolute_dungeon_07",
 }
 
 tile{
