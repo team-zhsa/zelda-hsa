@@ -14,7 +14,8 @@ end
 
 function water_level_manager:check_water_level(map)
 	local game = map:get_game()
-	if game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "high" then
+	if game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "high"
+	or game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == nil then
 		water_level_manager:set_high_water_level(map)
 	elseif game:get_value("dungeon_"..game:get_dungeon_index().."_water_level") == "low" then
 		water_level_manager:set_low_water_level(map)
@@ -59,10 +60,10 @@ function water_level_manager:lower_water_level(map)
 	water_animation_step_index = 2
   local game = map:get_game()
   local hero = map:get_hero()
-  sol.audio.play_sound("environment/water_level/start")
-  sol.audio.play_sound("environment/water_level/loop")
+  sol.audio.play_sound("environment/water_drain_begin")
+  sol.audio.play_sound("environment/water_drain")
+	hero:freeze()
 	sol.timer.start(map, water_delay, function()
-    hero:freeze()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
 		for tile in map:get_entities(current_tile_id) do
@@ -82,7 +83,7 @@ function water_level_manager:lower_water_level(map)
 			hero:unfreeze()
       return false
 		end
-		game:set_value("dungeon_6_water_level", "low")
+		game:set_value("dungeon_"..game:get_dungeon_index().."_water_level", "low")
 		return true
 	end)
 end
@@ -91,10 +92,10 @@ function water_level_manager:raise_water_level(map)
 	water_animation_step_index = -1
   local game = map:get_game()
   local hero = map:get_hero()
-  sol.audio.play_sound("environment/water_level/start")
-  sol.audio.play_sound("environment/water_level/loop")
+  sol.audio.play_sound("environment/water_fill_begin")
+  sol.audio.play_sound("environment/water_fill")
+	hero:freeze()
 	sol.timer.start(map, water_delay, function()
-    hero:freeze()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index + 1).."_"
 		for tile in map:get_entities(current_tile_id) do
@@ -114,14 +115,14 @@ function water_level_manager:raise_water_level(map)
       hero:unfreeze()
 			return false
 		end
-		game:set_value("dungeon_6_water_level", "high")
+		game:set_value("dungeon_"..game:get_dungeon_index().."_water_level", "high")
 		return true
 	end)
 end
 
 function water_level_manager:get_water_level(map)
   local game = map:get_game()
-	return game:get_value("dungeon_6_water_level")
+	return game:get_value("dungeon_"..game:get_dungeon_index().."_water_level")
 end
 
 return water_level_manager

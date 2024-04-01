@@ -49,10 +49,6 @@ function separator_manager:manage_map(map)
           name = enemy_place.name,
         })
         enemy:set_treasure(unpack(enemy_place.treasure))
-        enemy:register_event("on_dead", function()
-          old_enemy:on_dead()
-        end)
-        --enemy.on_dead = old_enemy.on_dead --  For door_manager.
         enemy_place.enemy = enemy
       end
     end

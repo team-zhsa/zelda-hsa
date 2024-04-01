@@ -3119,26 +3119,6 @@ block{
   max_moves = 1,
 }
 
-dynamic_tile{
-  name = "dynamic_water_3",
-  layer = -1,
-  x = 1016,
-  y = 1096,
-  width = 496,
-  height = 48,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
-  name = "dynamic_water_4",
-  layer = -1,
-  x = 1024,
-  y = 1104,
-  width = 480,
-  height = 32,
-  pattern = "water.transparent",
-}
-
 stairs{
   layer = -1,
   x = 1376,
@@ -3408,6 +3388,86 @@ sensor{
   y = 1453,
   width = 32,
   height = 16,
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_4",
+  layer = -1,
+  x = 1024,
+  y = 1104,
+  width = 480,
+  height = 32,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_4",
+  layer = -1,
+  x = 1016,
+  y = 1096,
+  width = 496,
+  height = 48,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_5",
+  layer = -1,
+  x = 1472,
+  y = 1136,
+  width = 32,
+  height = 128,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_6",
+  layer = -1,
+  x = 1392,
+  y = 1264,
+  width = 32,
+  height = 112,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_0_7",
+  layer = -1,
+  x = 1424,
+  y = 1264,
+  width = 80,
+  height = 80,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_5",
+  layer = -1,
+  x = 1464,
+  y = 1144,
+  width = 48,
+  height = 208,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_6",
+  layer = -1,
+  x = 1384,
+  y = 1256,
+  width = 48,
+  height = 128,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_1_7",
+  layer = -1,
+  x = 1432,
+  y = 1256,
+  width = 32,
+  height = 96,
+  pattern = "water.transparent",
 }
 
 tile{
@@ -13012,6 +13072,16 @@ tile{
   pattern = "door_stairs.spiral_up.1",
 }
 
+dynamic_tile{
+  name = "water_dynamic_0_2_7",
+  layer = 0,
+  x = 1008,
+  y = 1088,
+  width = 512,
+  height = 64,
+  pattern = "water.transparent",
+}
+
 stairs{
   layer = 0,
   x = 256,
@@ -13036,26 +13106,6 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/2/b3",
   destination = "from_b2_3",
-}
-
-dynamic_tile{
-  name = "dynamic_water_1",
-  layer = 0,
-  x = 1000,
-  y = 1080,
-  width = 288,
-  height = 80,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
-  name = "dynamic_water_2",
-  layer = 0,
-  x = 1008,
-  y = 1088,
-  width = 512,
-  height = 64,
-  pattern = "water.transparent",
 }
 
 teletransporter{
@@ -14017,36 +14067,6 @@ dynamic_tile{
 }
 
 dynamic_tile{
-  name = "static_water_1",
-  layer = 0,
-  x = 1288,
-  y = 1080,
-  width = 240,
-  height = 80,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
-  name = "static_water_2",
-  layer = 0,
-  x = 1448,
-  y = 1160,
-  width = 80,
-  height = 80,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
-  name = "static_water_4",
-  layer = 0,
-  x = 1368,
-  y = 1368,
-  width = 80,
-  height = 32,
-  pattern = "water.transparent",
-}
-
-dynamic_tile{
   layer = 0,
   x = 1328,
   y = 1080,
@@ -14142,16 +14162,6 @@ wall{
   stops_npcs = true,
   stops_enemies = true,
   stops_blocks = true,
-}
-
-dynamic_tile{
-  name = "static_water_3",
-  layer = 0,
-  x = 1368,
-  y = 1240,
-  width = 160,
-  height = 128,
-  pattern = "water.transparent",
 }
 
 chest{
@@ -14257,7 +14267,7 @@ sensor{
   name = "dungeon_room_3_1",
   layer = 0,
   x = 800,
-  y = 61,
+  y = 37,
   width = 16,
   height = 16,
 }
@@ -14889,6 +14899,36 @@ door{
   opening_method = "interaction_if_savegame_variable",
   opening_condition = "dungeon_2_silver_key",
   cannot_open_dialog = "_cannot_open_without_silver_key",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_2_8",
+  layer = 0,
+  x = 1456,
+  y = 1152,
+  width = 64,
+  height = 96,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_2_9",
+  layer = 0,
+  x = 1376,
+  y = 1248,
+  width = 144,
+  height = 112,
+  pattern = "water.transparent",
+}
+
+dynamic_tile{
+  name = "water_dynamic_0_2_10",
+  layer = 0,
+  x = 1376,
+  y = 1360,
+  width = 64,
+  height = 32,
+  pattern = "water.transparent",
 }
 
 tile{

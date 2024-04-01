@@ -1466,8 +1466,6 @@ sound{ id = "environment/water_drain", description = "water_drain" }
 sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
 sound{ id = "environment/water_fill", description = "water_fill" }
 sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
-sound{ id = "environment/water_level/loop", description = "Water level loop" }
-sound{ id = "environment/water_level/start", description = "Water level start" }
 sound{ id = "environment/wind", description = "wind" }
 sound{ id = "explosion", description = "Empty sound" }
 sound{ id = "hero/hero_dying", description = "hero/hero_dying" }
@@ -1581,14 +1579,17 @@ sound{ id = "running", description = "Empty sound" }
 sound{ id = "running_obstacle", description = "Empty sound" }
 sound{ id = "shield", description = "Empty sound" }
 sound{ id = "splash", description = "Empty sound" }
-sound{ id = "stairs_down_end", description = "Empty sound" }
-sound{ id = "stairs_down_start", description = "Empty sound" }
-sound{ id = "stairs_up_end", description = "Empty sound" }
-sound{ id = "stairs_up_start", description = "Empty sound" }
+sound{ id = "stairs_down_end", description = "Stair down" }
+sound{ id = "stairs_down_start", description = "Stair down" }
+sound{ id = "stairs_up_end", description = "Stair up" }
+sound{ id = "stairs_up_start", description = "Stair up" }
 sound{ id = "stone", description = "Empty sound" }
 sound{ id = "swim", description = "Empty sound" }
 sound{ id = "switch", description = "Empty sound" }
 sound{ id = "sword1", description = "Empty sound" }
+sound{ id = "sword2", description = "Empty sound" }
+sound{ id = "sword3", description = "Empty sound" }
+sound{ id = "sword4", description = "Empty sound" }
 sound{ id = "sword_spin_attack_load", description = "Empty sound" }
 sound{ id = "sword_spin_attack_release", description = "Empty sound" }
 sound{ id = "sword_tapping", description = "Empty sound" }
@@ -2349,7 +2350,6 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hud/new_clock.dat", author = "The Unknown", license = "CC-BY-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
