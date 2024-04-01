@@ -62,7 +62,9 @@ function water_level_manager:lower_water_level(map)
   local hero = map:get_hero()
   sol.audio.play_sound("environment/water_drain_begin")
   sol.audio.play_sound("environment/water_drain")
-	hero:freeze()
+	sol.timer.start(map, 10, function()
+		hero:freeze()
+	end)
 	sol.timer.start(map, water_delay, function()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index - 1).."_"
@@ -94,7 +96,9 @@ function water_level_manager:raise_water_level(map)
   local hero = map:get_hero()
   sol.audio.play_sound("environment/water_fill_begin")
   sol.audio.play_sound("environment/water_fill")
-	hero:freeze()
+	sol.timer.start(map, 10, function()
+		hero:freeze()
+	end)
 	sol.timer.start(map, water_delay, function()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
 		local next_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index + 1).."_"

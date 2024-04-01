@@ -21172,6 +21172,26 @@ sensor{
   height = 16,
 }
 
+jumper{
+  layer = 0,
+  x = 224,
+  y = 944,
+  width = 16,
+  height = 8,
+  direction = 2,
+  jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 1184,
+  y = 304,
+  width = 8,
+  height = 16,
+  direction = 4,
+  jump_length = 40,
+}
+
 tile{
   layer = 1,
   x = 872,
@@ -22589,6 +22609,15 @@ separator{
   layer = 2,
   x = 1280,
   y = 712,
+  width = 640,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_10",
+  layer = 2,
+  x = 640,
+  y = 232,
   width = 640,
   height = 16,
 }

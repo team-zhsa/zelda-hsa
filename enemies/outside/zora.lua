@@ -42,7 +42,7 @@ function enemy:appear()
         breed = "projectiles/fireball"
       })
       sprite:set_animation("firing")
-      sol.audio.play_sound("zora")
+      sol.audio.play_sound("enemies/zora")
       sol.timer.start(enemy, before_disappearing_delay, function()
         sprite:set_animation("disappearing", function()
           enemy:restart()

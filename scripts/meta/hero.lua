@@ -18,6 +18,8 @@ end
 
 require("scripts/multi_events")
 hero_meta:register_event("on_position_changed", function(hero)
+  local map = hero:get_map()
+  
   if not hero.walking_sound_timer then
     hero.walking_sound_timer=sol.timer.start(hero, 300, function()
         hero.walking_sound_timer = nil
@@ -28,8 +30,12 @@ hero_meta:register_event("on_position_changed", function(hero)
       audio_manager:play_sound("hero/walk_on_grass")
     end
   end
-
-  local map = hero:get_map()
+  local x, y, z = hero:get_position()
+  if z <= map:get_max_layer() - 1 then
+    if map:get_ground(x, y, z + 1) == "deep_water" then
+      hero:set_position(x, y, z + 1)
+    end
+  end
   for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
     local x, y, z = hero:get_position()
@@ -75,13 +81,13 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
             local sound_sword = false
             local entity = hero:get_facing_entity()
             if entity ~= nil then
-              sound_sword = entity:get_property("sound_sword")          
+              if entity:get_type() == "door" and (string.find(entity:get_sprite():get_animation_set(), "weak")
+              or string.find(entity:get_sprite():get_animation_set(), "rock0")) then
+                sound_sword = true
+              end 
             end
-            if sound_sword then
-              audio_manager:play_sound("hero/sword_tapping_weak_wall")
-            else
-              audio_manager:play_sound("hero/sword_tapping") 
-            end
+            if sound_sword then audio_manager:play_sound("hero/sword_tapping_weak_wall")
+            else audio_manager:play_sound("hero/sword_tapping") end
             return true
           end)
       end

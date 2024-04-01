@@ -85,9 +85,9 @@ function map_submenu:on_started()
 				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x - 8
 				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
 				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
-																					math.max(0, self.hero_x - offset_x - box_x + self.box_offset_x)) - 5
+																					math.max(0, self.hero_x - offset_x - box_x + self.box_offset_x))
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,
-																					math.max(0, self.hero_y - offset_y - box_y + self.box_offset_y)) - 5
+																					math.max(0, self.hero_y - offset_y - box_y + self.box_offset_y))
 			else
 				map_shown = true      -- If in Hyrule with World Map, then show the map.
 				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
@@ -293,8 +293,8 @@ function map_submenu:draw_dungeon_map(dst_surface)
 		self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
 	end
 	self.dungeon_map_img:draw(dst_surface,
-	map_box_x + 19,-- dungeon_map_center_x,
-	map_box_y + 29)-- dungeon_map_center_y)
+	map_box_x + 20,-- dungeon_map_center_x,
+	map_box_y + 28)-- dungeon_map_center_y)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
