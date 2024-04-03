@@ -12955,6 +12955,12 @@ teletransporter{
   layer = 0,
   x = 528,
   y = 928,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
   width = 16,
   height = 16,
   destination_map = "inside/houses/hyrule_town/grey_house",
@@ -14391,8 +14397,8 @@ dynamic_tile{
 dynamic_tile{
   name = "door_shop",
   layer = 0,
-  x = 528,
-  y = 928,
+  x = 552,
+  y = 968,
   width = 16,
   height = 16,
   pattern = "6020",

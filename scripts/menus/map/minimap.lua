@@ -81,9 +81,9 @@ function map_submenu:on_started()
 				local waypoint_minimap_y = math.floor((waypoint_absolute_y + 720) * scale_y)
 				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
 				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + offset_x - 8
-				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y
+				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + offset_y - 16
 				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x - 8
-				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
+				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y - 16
 				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,
 																					math.max(0, self.hero_x - offset_x - box_x + self.box_offset_x))
 				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,

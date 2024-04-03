@@ -334,26 +334,40 @@ local function setup_inside_lights(map)
 	local house = map:get_id():match("^inside/houses/") ~= nil
 	light_mgr:init(map,
 		(function()
-			if house then
-				return {200,190,180}
+			if map.fsa_dark then
+				return {8,8,8}
 			else
-				return {105,100,95}
+				if house then
+					return {200,190,180}
+				else
+					return {105,100,95}
+				end
 			end
 		end)())
 	light_mgr:add_occluder(map:get_hero())
 
-
-	if not house then
-		local hero = map:get_hero()
-		--create hero light
-		local hl = create_light(map,-64,-64,0,"80","196,128,200")
-		function hl:on_update()
-			if map:get_game():has_item("lamp") then
-				hl:set_position(hero:get_position())
+-- HERE FOR DARKNESS SYSTEM
+local hero = map:get_hero()
+--create hero light
+		if map.fsa_dark then
+			local hl = create_light(map,-64,-64,0,"32","196,128,200")
+			function hl:on_update()
+				if map:get_game():has_item("lamp") then
+					hl:set_position(hero:get_position())
+				end
+			end
+			hl.excluded_occs = {[hero]=true}
+		else
+			if not house then
+				local hl = create_light(map,-64,-64,0,"80","196,128,200")
+				function hl:on_update()
+					if map:get_game():has_item("lamp") then
+						hl:set_position(hero:get_position())
+					end
+				end
+				hl.excluded_occs = {[hero]=true}
 			end
 		end
-		hl.excluded_occs = {[hero]=true}
-	end
 
 	--add a static light for each torch pattern in the map
 	local map_lights = get_lights_from_map(map)
