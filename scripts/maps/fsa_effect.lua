@@ -335,11 +335,15 @@ local function setup_inside_lights(map)
 	light_mgr:init(map,
 		(function()
 			if map.fsa_dark then
-				return {8,8,8}
+				if map.lit_torches ~= nil then
+					return {0,0,0} -- Ambient darkness
+				end
 			else
 				if house then
+					-- House ambient light
 					return {200,190,180}
 				else
+					-- Cave/other light
 					return {105,100,95}
 				end
 			end
@@ -350,7 +354,8 @@ local function setup_inside_lights(map)
 local hero = map:get_hero()
 --create hero light
 		if map.fsa_dark then
-			local hl = create_light(map,-64,-64,0,"32","196,128,200")
+			-- Create a smaller hero light
+			local hl = create_light(map,-16,-16,0,"32","193,185,80")
 			function hl:on_update()
 				if map:get_game():has_item("lamp") then
 					hl:set_position(hero:get_position())
@@ -359,7 +364,8 @@ local hero = map:get_hero()
 			hl.excluded_occs = {[hero]=true}
 		else
 			if not house then
-				local hl = create_light(map,-64,-64,0,"80","196,128,200")
+				-- Create a normal hero light
+				local hl = create_light(map,-48,-48,0,"64","196,128,200")
 				function hl:on_update()
 					if map:get_game():has_item("lamp") then
 						hl:set_position(hero:get_position())
@@ -371,7 +377,7 @@ local hero = map:get_hero()
 
 	--add a static light for each torch pattern in the map
 	local map_lights = get_lights_from_map(map)
-	local default_radius = "160"            
+	local default_radius = "80"   
 	local default_color = "193,185,80"
 
 	for _,l in ipairs(map_lights) do

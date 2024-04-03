@@ -28,6 +28,10 @@ function torch:on_created()
   if name ~= nil and name:match("^auto_torch") then
     torch:set_duration(10000)
   end
+
+  if torch:get_property("duration") ~= nil then
+    torch:set_duration(torch:get_property("duration"))
+  end
 end
 
 function torch:is_lit()
@@ -80,7 +84,7 @@ local function on_collision(torch, other, torch_sprite, other_sprite)
 
       end
 
-    elseif other_model == "ice_beam" then
+    elseif other_model == "ice" then
       if torch:is_lit() then
         torch:set_lit(false)
         if torch.on_unlit ~= nil then
