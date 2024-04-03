@@ -1011,17 +1011,11 @@ sprite{ id = "hero/item/bow/bow_moving_free_tunic1", description = "1a" }
 sprite{ id = "hero/item/bow/bow_moving_no_arrow_tunic1", description = "2a" }
 sprite{ id = "hero/item/bow/bow_moving_with_arrow_tunic1", description = "2b" }
 sprite{ id = "hero/item/bow/bow_shoot_tunic1", description = "3" }
-sprite{ id = "hero/item/fire_rod/rod", description = "Fire Rod" }
-sprite{ id = "hero/item/fire_rod/rod_moving", description = "hero/item/fire_rod/rod_moving" }
-sprite{ id = "hero/item/fire_rod/rod_moving_tunic_1", description = "hero/item/fire_rod/rod_moving_tunic_1" }
-sprite{ id = "hero/item/ice_rod/rod_moving", description = "hero/item/ice_rod/rod_moving" }
 sprite{ id = "hero/item/ocarina/learned.tunic_1", description = "Learned song" }
 sprite{ id = "hero/item/ocarina/ocarina.tunic_1", description = "Ocarina" }
 sprite{ id = "hero/item/rods/fire_rod", description = "Fire Rod" }
 sprite{ id = "hero/item/rods/healing_wand", description = "Healing Wand" }
 sprite{ id = "hero/item/rods/ice_rod", description = "Ice Rod" }
-sprite{ id = "hero/item/rods/rod_moving", description = "Moving rod" }
-sprite{ id = "hero/item/rods/rod_moving_tunic_1", description = "Moving Rod Tunic 1" }
 sprite{ id = "hero/item/rods/wind_rod", description = "Wind Rod" }
 sprite{ id = "hero/item/sword_beam", description = "Sword Beam" }
 sprite{ id = "hero/link_sad", description = "Link sad" }
@@ -1040,7 +1034,7 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
-sprite{ id = "hero/tunic4", description = "Tunic 4" }
+sprite{ id = "hero/tunic4", description = "Hero tunic 4" }
 sprite{ id = "hud/action_icon_flip", description = "Action icon" }
 sprite{ id = "hud/clock", description = "Clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
@@ -1445,7 +1439,6 @@ sound{ id = "environment/water_drain", description = "water_drain" }
 sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
 sound{ id = "environment/water_fill", description = "water_fill" }
 sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
-sound{ id = "environment/wind", description = "wind" }
 sound{ id = "explosion", description = "Empty sound" }
 sound{ id = "hero/hero_dying", description = "hero/hero_dying" }
 sound{ id = "hero/hero_falls", description = "hero/hero_falls" }
@@ -1484,14 +1477,14 @@ sound{ id = "items/bomb", description = "Bomb" }
 sound{ id = "items/boomerang", description = "Boomerang" }
 sound{ id = "items/bow", description = "Bow" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
-sound{ id = "items/fire_rod/shoot", description = "Shoot" }
+sound{ id = "items/fire_rod", description = "Shoot" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
 sound{ id = "items/hammer/hit", description = "Hammer hit" }
 sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
 sound{ id = "items/hookshot/firing_start", description = "Firing start" }
 sound{ id = "items/hookshot/hit_valid_target", description = "Hit valid target" }
 sound{ id = "items/hookshot/link_tracted", description = "Link tracted" }
-sound{ id = "items/ice_rod/shoot", description = "Shoot" }
+sound{ id = "items/ice_rod", description = "Shoot" }
 sound{ id = "items/item_metal_collision_wall", description = "Item metal collision" }
 sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
@@ -1516,6 +1509,7 @@ sound{ id = "items/sidequest_major_item", description = "Sidequest major item" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
+sound{ id = "items/wind_rod", description = "wind" }
 sound{ id = "jump", description = "Empty sound" }
 sound{ id = "lift", description = "Empty sound" }
 sound{ id = "menus/cursor", description = "Cursor" }
