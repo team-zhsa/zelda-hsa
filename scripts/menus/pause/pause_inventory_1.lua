@@ -29,8 +29,8 @@ local item_names_assignable = {
 	"bottle_4",														-- Bottle
 	"red_tunic",													-- Tunic 3
 	"time_tunic",													-- Tunic 4
-
 }
+
 local item_names_static = {
 	"sword",
 	"power_gloves",
