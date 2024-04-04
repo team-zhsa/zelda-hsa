@@ -1,0 +1,12 @@
+animation{
+  name = "normal",
+  src_image = "hero/item/rods/rod.png",
+  frame_delay = 50,
+  frame_to_loop_on = 2,
+  directions = {
+    { x = 192, y = 160, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 3 },
+    { x = 192, y = 200, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 3 },
+    { x = 192, y = 240, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 3 },
+    { x = 192, y = 280, frame_width = 64, frame_height = 40, origin_x = 32, origin_y = 29, num_frames = 3 },
+  },
+}

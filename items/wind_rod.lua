@@ -20,10 +20,10 @@ function item:shoot()
   local wind = map:create_custom_entity({
     model = "wind",
     x = x,
-    y = y + 3,
+    y = y - 8,
     layer = layer,
-    width = 8,
-    height = 8,
+    width = 16,
+    height = 16,
     direction = direction,
   })
 

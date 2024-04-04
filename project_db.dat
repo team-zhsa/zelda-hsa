@@ -1013,9 +1013,14 @@ sprite{ id = "hero/item/bow/bow_moving_with_arrow_tunic1", description = "2b" }
 sprite{ id = "hero/item/bow/bow_shoot_tunic1", description = "3" }
 sprite{ id = "hero/item/ocarina/learned.tunic_1", description = "Learned song" }
 sprite{ id = "hero/item/ocarina/ocarina.tunic_1", description = "Ocarina" }
+sprite{ id = "hero/item/rods/dark_rod", description = "Darkness rod" }
+sprite{ id = "hero/item/rods/doom_rod", description = "Doom rod" }
 sprite{ id = "hero/item/rods/fire_rod", description = "Fire Rod" }
 sprite{ id = "hero/item/rods/healing_wand", description = "Healing Wand" }
 sprite{ id = "hero/item/rods/ice_rod", description = "Ice Rod" }
+sprite{ id = "hero/item/rods/light_rod", description = "Light rod" }
+sprite{ id = "hero/item/rods/somaria_cane", description = "Somaria Cane" }
+sprite{ id = "hero/item/rods/thunder_rod", description = "Thunder rod" }
 sprite{ id = "hero/item/rods/wind_rod", description = "Wind Rod" }
 sprite{ id = "hero/item/sword_beam", description = "Sword Beam" }
 sprite{ id = "hero/link_sad", description = "Link sad" }
@@ -1584,9 +1589,6 @@ item{ id = "_13", description = "Photo" }
 item{ id = "_14", description = "Seashell" }
 item{ id = "_15", description = "Seashell counter" }
 item{ id = "_16", description = "Slim key" }
-item{ id = "_17", description = "Tail key" }
-item{ id = "_18", description = "Wings" }
-item{ id = "_19", description = "Divine ore counter" }
 item{ id = "_2", description = "Quest (Butter)" }
 item{ id = "_3", description = "Face key" }
 item{ id = "_4", description = "Golden leaf" }
@@ -1621,7 +1623,6 @@ item{ id = "crystal_6", description = "Crystal 6" }
 item{ id = "crystal_7", description = "Crystal 7" }
 item{ id = "divine_ore", description = "Divine Ore" }
 item{ id = "doom_rod", description = "Bird key" }
-item{ id = "drug", description = "Drug" }
 item{ id = "fairy", description = "Fairy" }
 item{ id = "feather", description = "Feather" }
 item{ id = "fire_rod", description = "Fire rod" }
@@ -2382,6 +2383,18 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
+file{ path = "sprites/hero/item/rods/dark_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/doom_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/fire_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/healing_wand.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/ice_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/light_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/reverse_rod.png", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.moving.entity.png", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.png", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/somaria_cane.dat", author = "Nintendo, Mister Man", license = "Proprietary" }
+file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/wind_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
