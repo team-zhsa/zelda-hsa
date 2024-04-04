@@ -241,6 +241,13 @@ animation{
   },
 }
 animation{
+  name = "din_flame",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 288, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "divine_ore",
   src_image = "entities/items.png",
   directions = {
@@ -262,6 +269,13 @@ animation{
   directions = {
     { x = 304, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
     { x = 304, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 2 },
+  },
+}
+animation{
+  name = "farore_quake",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 256, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -506,6 +520,13 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 176, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "nayru_ether",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 272, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

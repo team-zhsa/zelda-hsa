@@ -495,6 +495,16 @@ ennemis !
 }
 
 dialog{
+  id = "_treasure.din_flame.1",
+  icon = "48",
+  text = [[
+Tu as obtenu la Flamme de Din !$0
+Elle te permet de revenir à
+l'éntrée du donjon !
+]],
+}
+
+dialog{
   id = "_treasure.divine_ore.1",
   icon = "95",
   text = [[
@@ -544,6 +554,17 @@ dialog{
 Tu n'as pas de flacon vide.
 Tu n'as pas le choix,
 relâche-la !
+]],
+}
+
+dialog{
+  id = "_treasure.farore_quake.1",
+  icon = "46",
+  text = [[
+Tu as obtenu la Secousse de
+Farore !$0
+Envoie un tremblement de terre
+dévastateur sur tes environs !
 ]],
 }
 
@@ -1070,6 +1091,16 @@ douceâtre d'un fruit pourri.$0
 Tu peux le donner à qui veut.
 Sélectionne-le et appuie sur le
 bouton X.
+]],
+}
+
+dialog{
+  id = "_treasure.nayru_ether.1",
+  icon = "47",
+  text = [[
+Tu as obtenu l'Ether de Nayru !$0
+Envoie un éclair foudroyant sur
+tes ennemis !
 ]],
 }
 
@@ -7704,6 +7735,16 @@ une force sombre sur tes ennemis.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.din_flame.1",
+  icon = "48",
+  skip = "all",
+  text = [[
+Le Feu de Din te permet de
+retourner à l'entrée du donjon.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.divine_ore.1",
   icon = "95",
   skip = "all",
@@ -7724,6 +7765,16 @@ dialog{
 Le Sceptre du Jugement Dernier
 appelle tous les sorts !$0
 Mais surveille ta barre de magie !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.farore_quake.1",
+  icon = "46",
+  skip = "all",
+  text = [[
+La Secousse de Farore envoie un
+tremblement de terre destructeur.
 ]],
 }
 
@@ -8142,6 +8193,16 @@ dialog{
   text = [[
 Si tu brandis le Champignon,
 un arôme subtil se répandra !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.nayru_ether.1",
+  icon = "47",
+  skip = "all",
+  text = [[
+L'éther de Nayru envoir un éclair
+saissant autour de toi.
 ]],
 }
 
