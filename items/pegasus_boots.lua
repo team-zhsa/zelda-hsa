@@ -22,7 +22,7 @@ require("scripts/states/running")
 
 -- Event called when the game is initialised.
 function item:on_created()
-  self:set_savegame_variable("possession_pegasus_shoes")
+  self:set_savegame_variable("possession_pegasus_boots")
   self:set_sound_when_brandished(nil)
   self:set_assignable(false)
   local game = self:get_game()
@@ -35,7 +35,7 @@ game_meta:register_event("on_started", function(game)
     -- Note : there is no "item_X" command check here, since this item has been integrated into the new global command override system.
     if not game:is_suspended() then
       if command == "action" then
-        if game:get_command_effect("action") == nil and game:has_item("pegasus_shoes") then
+        if game:get_command_effect("action") == nil and game:has_item("pegasus_boots") then
           local hero=game:get_hero()
           local entity=hero:get_facing_entity()
 
@@ -45,7 +45,7 @@ game_meta:register_event("on_started", function(game)
 
           local offsets = { {1, 0}, {0, -1}, {-1, 0}, {0, 1} }
           local state = hero:get_state()
-          if hero:test_obstacles(unpack(offsets[hero:get_direction() + 1])) or state == "frozen" or state == "swimming" or state == "custom" and not hero:get_state_object():get_can_use_item("pegasus_shoes") then
+          if hero:test_obstacles(unpack(offsets[hero:get_direction() + 1])) or state == "frozen" or state == "swimming" or state == "custom" and not hero:get_state_object():get_can_use_item("pegasus_boots") then
             return
           end
           -- Call custom run script.
@@ -59,7 +59,7 @@ game_meta:register_event("on_started", function(game)
   game:register_event("on_joypad_button_pressed", function(game, button)
     -- Note : there is no "item_X" command check here, since this item has been integrated into the new global command override system.
     if not game:is_suspended() then
-      if button == 5 or button == 7 and game:has_item("pegasus_shoes") then
+      if button == 5 or button == 7 and game:has_item("pegasus_boots") then
           local hero=game:get_hero()
           local entity=hero:get_facing_entity()
 
@@ -69,7 +69,7 @@ game_meta:register_event("on_started", function(game)
 
           local offsets = { {1, 0}, {0, -1}, {-1, 0}, {0, 1} }
           local state = hero:get_state()
-          if hero:test_obstacles(unpack(offsets[hero:get_direction() + 1])) or state == "frozen" or state == "swimming" or state == "custom" and not hero:get_state_object():get_can_use_item("pegasus_shoes") then
+          if hero:test_obstacles(unpack(offsets[hero:get_direction() + 1])) or state == "frozen" or state == "swimming" or state == "custom" and not hero:get_state_object():get_can_use_item("pegasus_boots") then
             return
           end
           -- Call custom run script.

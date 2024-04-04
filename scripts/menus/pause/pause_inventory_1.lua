@@ -1,9 +1,9 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "hero_shield", -- Row 1
-	"hylia_shield",
-  "mirror_shield",
+  "shield_hero", -- Row 1
+	"shield_hylia",
+  "shield_mirror",
   "bottle_1",
 	"bow",
   "bow",
@@ -31,7 +31,7 @@ local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"pegasus_boots"
 }
 
 local cell_size = 28

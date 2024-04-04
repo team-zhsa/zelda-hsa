@@ -10,7 +10,7 @@ local item_names_assignable = {
 	"fire_rod", --  rod?
   "_placeholder", -- Row 2 -- Flames Medallion
   "sword_skill_beam", -- Ice rod Hero Shield
-	"hero_shield", -- Wind Rod
+	"_placeholder", -- Wind Rod
   "_placeholder", -- Darkness rod
 	"_placeholder", -- Somaria Cane
 	"ice_rod", -- Doom rod?
@@ -18,14 +18,14 @@ local item_names_assignable = {
 	"_placeholder", -- Row 3 -- Quake Medallion
 	"trading_1", 
 	"trading_1", 
-	"hylia_shield", -- Hylia Shield
+	"_placeholder", -- Hylia Shield
 	"healing_wand", -- Healing Wand
 	"bottle_1", -- Bottle
 	"bottle_2", -- Bottle
 	"book_of_mudora", -- Row 4 -- Book of Mudora
 	"mushroom",  -- Deku Stick
 	"mushroom",  -- Deku Stick
-	"mirror_shield",  -- Mirror Shield
+	"_placeholder",  -- Mirror Shield
 	"somaria_cane", --
 	"bottle_3", -- Bottle
 	"bottle_4", -- Bottle
@@ -35,7 +35,7 @@ local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"pegasus_boots"
 }
 
 local cell_size = 28

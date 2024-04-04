@@ -31,7 +31,7 @@ local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"pegasus_boots"
 }
 
 local cell_size = 28
