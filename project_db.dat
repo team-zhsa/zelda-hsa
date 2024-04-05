@@ -416,6 +416,7 @@ sprite{ id = "enemies/dungeons/leever_green", description = "Green Leever" }
 sprite{ id = "enemies/dungeons/leever_purple", description = "Purple Leever" }
 sprite{ id = "enemies/dungeons/lizalfos", description = "Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_blue", description = "Blue Lizalfos" }
+sprite{ id = "enemies/dungeons/lizalfos_purple", description = "Purple Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_red", description = "Red Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_spear", description = "Lizalfos Spear" }
 sprite{ id = "enemies/dungeons/lizalfos_sword", description = "Lizalfos Sword" }
@@ -444,6 +445,7 @@ sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_blue", description = "Blue Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_green", description = "Green Tentacle" }
+sprite{ id = "enemies/dungeons/tentacle_ice", description = "Ice Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_orange", description = "Orange Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_purple", description = "Purple Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_yellow", description = "Yellow Tentacle" }
@@ -1782,6 +1784,7 @@ enemy{ id = "dungeons/leever_green", description = "Green Leever" }
 enemy{ id = "dungeons/leever_purple", description = "Purple Leever" }
 enemy{ id = "dungeons/lizalfos", description = "Lizalfos" }
 enemy{ id = "dungeons/lizalfos_blue", description = "Blue Lizalfos" }
+enemy{ id = "dungeons/lizalfos_purple", description = "Purple Lizalfos" }
 enemy{ id = "dungeons/lizalfos_red", description = "Red Lizalfos" }
 enemy{ id = "dungeons/lizalfos_yellow", description = "Yellow Lizalfos" }
 enemy{ id = "dungeons/maskass", description = "Maskass" }
@@ -2019,6 +2022,11 @@ shader{ id = "tft", description = "TFT" }
 shader{ id = "toon", description = "toon" }
 shader{ id = "water_effect", description = "water_effect" }
 
+file{ path = "enemies/dungeons/lizalfos.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_blue.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_purple.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_red.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_yellow.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/flying_tile.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/lib/common_actions.lua", author = "Vlag", license = "GPL v3" }
 file{ path = "enemies/lib/fire_breathing_statue.lua", author = "Christopho", license = "GPL v3" }
@@ -2355,6 +2363,15 @@ file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
 file{ path = "sprites/enemies/dungeons/lizalfos.png", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_blue.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_purple.dat", author = "The Unknown", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_red.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_spear.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_sword.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_yellow.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/medusa.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/medusa.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/tentacle_ice.dat", author = "The Unknown", license = "CC-BY-NC-SA" }
 file{ path = "sprites/enemies/outside/armos.png", author = "The Unknown", }
 file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "LinkFF", }
 file{ path = "sprites/enemies/outside/hinox_blue.png", author = "LinkFF", }

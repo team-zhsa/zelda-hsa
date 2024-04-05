@@ -11,15 +11,36 @@ animation{
   },
 }
 animation{
+  name = "falling",
+  src_image = "enemies/dungeons/tentacle.png",
+  frame_delay = 40,
+  directions = {
+    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 3 },
+    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 3 },
+    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 3 },
+    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 3 },
+  },
+}
+animation{
+  name = "frozen",
+  src_image = "enemies/dungeons/tentacle.png",
+  directions = {
+    { x = 0, y = 168, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
+    { x = 0, y = 168, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
+    { x = 0, y = 168, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
+    { x = 0, y = 168, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
+  },
+}
+animation{
   name = "hurt",
   src_image = "enemies/dungeons/tentacle.png",
   frame_delay = 20,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 8, num_columns = 1 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 8, num_columns = 1 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 8, num_columns = 1 },
-    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 8, num_columns = 1 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 7, num_columns = 1 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 7, num_columns = 1 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 7, num_columns = 1 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 7, num_columns = 1 },
   },
 }
 animation{

@@ -77,7 +77,7 @@ function enemy:on_restarted()
     end)
 
     -- Go back.
-    sol.timer.start(enemy, 3000, function()
+    sol.timer.start(enemy, 8000, function()
       if not grabbed_hero then
         movement:set_angle(math.pi / 2)
         movement:set_speed(192)

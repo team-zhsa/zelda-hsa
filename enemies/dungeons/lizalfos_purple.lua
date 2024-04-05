@@ -62,7 +62,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(6)
+  enemy:set_life(8)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
   enemy:hold_weapon("enemies/dungeons/lizalfos_sword", enemy:get_sprite(), 0, 0)
@@ -72,24 +72,24 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 1,
+  	arrow = 2,
   	boomerang = "immobilized",
-  	explosion = 6,
+  	explosion = 4,
   	sword = 1,
-  	thrown_item = 6,
-  	fire = 6,
+  	thrown_item = 8,
+  	fire = 4,
   	jump_on = "ignored",
-    ice = "ignored",
-  	hammer = 2,
+    ice = 0,
+  	hammer = 8,
   	hookshot = "immobilized",
   	magic_powder = "ignored",
   	shield = "protected",
-  	thrust = 6
+  	thrust = 8
   })
 
   -- States.
   enemy:set_can_attack(true)
-  enemy:set_damage(6)
+  enemy:set_damage(8)
 
 	if is_charging and enemy:is_near(hero, charge_triggering_distance) then
 		start_charging()
