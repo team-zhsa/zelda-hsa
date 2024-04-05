@@ -3385,6 +3385,15 @@ tile{
   pattern = "914",
 }
 
+tile{
+  layer = 0,
+  x = 400,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "925",
+}
+
 destructible{
   layer = 0,
   x = 264,
@@ -3797,11 +3806,14 @@ npc{
       key = "model",
       value = "sign",
     },
+    {
+      key = "dialogue_id",
+      value = "maps.out.south_coast.path_sign_7",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.south_coast.path_sign_7",
 }
 
 enemy{
