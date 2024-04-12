@@ -10,16 +10,16 @@
 --           enemy:start_attacking()
 --
 ----------------------------------
--- TODO Don't move on restart by hurt and currently attacking or aiming.
 
 -- Global variables
 local enemy = ...
+local audio_manager = require("scripts/audio_manager")
 require("enemies/lib/common_actions").learn(enemy)
 
 local game = enemy:get_game()
 local map = enemy:get_map()
 local hero = map:get_hero()
-local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
+local sprite = enemy:create_sprite("enemies/soldiers/knight_yellow")
 local quarter = math.pi * 0.5
 local flail
 local is_attacking = false
@@ -27,12 +27,12 @@ local is_attacking = false
 -- Configuration variables
 local right_hand_offset_x = -8
 local right_hand_offset_y = -19
-local throwed_chain_origin_offset_x = 1
-local throwed_chain_origin_offset_y = 17
+local thrown_chain_origin_offset_x = 1
+local thrown_chain_origin_offset_y = 17
 local walking_speed = 16
 local attack_triggering_distance = 80
-local aiming_minimum_duration = 1500
-local throwed_ball_speed = 200
+local aiming_minimum_duration = 1300
+local thrown_ball_speed = 256
 
 -- Start the enemy movement.
 function enemy:start_walking()
@@ -58,16 +58,18 @@ function enemy:start_attacking()
   is_attacking = true
 
   enemy:stop_movement()
-  sprite:set_animation("aiming")
+  sprite:set_animation("looking_around")
   flail:start_aiming(hero, aiming_minimum_duration, function()
 
-    sprite:set_animation("throwing")
-    flail:set_chain_origin_offset(throwed_chain_origin_offset_x, throwed_chain_origin_offset_y)
-    flail:start_throwing_out(hero, throwed_ball_speed, function()
+    sprite:set_animation("immobilized")
+    flail:bring_to_front()
+    flail:set_chain_origin_offset(thrown_chain_origin_offset_x, thrown_chain_origin_offset_y)
+    sol.audio.play_sound("enemies/beamos")
+    flail:start_throwing_out(hero, thrown_ball_speed, function()
 
-      sprite:set_animation("aiming")
-      flail:set_chain_origin_offset(0, 0)
-      flail:start_pulling_in(throwed_ball_speed, function()
+      sprite:set_animation("looking_around")
+      flail:set_chain_origin_offset(4, 4)
+      flail:start_pulling_in(thrown_ball_speed, function()
         is_attacking = false
         enemy:restart()
       end)
@@ -90,20 +92,20 @@ enemy:register_event("on_created", function(enemy)
   -- Create the flail.
   flail = enemy:create_enemy({
     name = (enemy:get_name() or enemy:get_breed()) .. "_flail",
-    breed = "boss/projectiles/flail",
+    breed = "projectiles/ball_chain",
     direction = 2,
     x = right_hand_offset_x,
     y = right_hand_offset_y,
-    layer = enemy:get_layer() + 1
+    layer = enemy:get_layer()
   })
-  enemy:start_welding(flail, right_hand_offset_x, right_hand_offset_y)
+  enemy:start_welding(flail, right_hand_offset_x, right_hand_offset_y, 1)
+end)
 
-  -- Make flail disappear when the enemy became invisible on dying.
-  enemy:register_event("on_dying", function(enemy)
-    flail:start_death(function()
-      sol.timer.start(flail, 300, function() -- No event when the enemy became invisible, hardcode a timer.
-        finish_death()
-      end)
+-- Make flail disappear when the enemy became invisible on dying.
+enemy:register_event("on_dying", function(enemy)
+  flail:start_death(function()
+    sol.timer.start(flail, 300, function() -- No event when the enemy became invisible, hardcode a timer.
+      finish_death()
     end)
   end)
 end)
@@ -118,6 +120,7 @@ enemy:register_event("on_restarted", function(enemy)
   	sword = 1,
   	thrown_item = 4,
   	fire = 4,
+    ice = 0,
   	jump_on = "ignored",
   	hammer = 4,
   	hookshot = 4,
@@ -130,5 +133,9 @@ enemy:register_event("on_restarted", function(enemy)
   flail:set_chain_origin_offset(0, 0)
   enemy:set_can_attack(true)
   enemy:set_damage(2)
-  enemy:start_walking()
+  if not is_attacking then
+    enemy:start_walking()
+  else
+    sprite:set_animation(flail:get_state() == "immobilized" and "immobilized" or "looking_around")
+  end
 end)

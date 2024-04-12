@@ -1071,8 +1071,8 @@ enemy{
   layer = -1,
   x = 160,
   y = 133,
-  direction = 0,
-  breed = "soldiers/soldier_green",
+  direction = 3,
+  breed = "soldiers/soldier_myrtle",
   treasure_name = "random_central",
 }
 
@@ -1082,7 +1082,7 @@ enemy{
   x = 128,
   y = 181,
   direction = 0,
-  breed = "soldiers/soldier_green",
+  breed = "soldiers/knight_blue",
   treasure_name = "random_central",
 }
 
@@ -1091,8 +1091,8 @@ enemy{
   layer = -1,
   x = 192,
   y = 181,
-  direction = 0,
-  breed = "soldiers/soldier_green",
+  direction = 2,
+  breed = "soldiers/knight_blue",
   treasure_name = "random_central",
 }
 
@@ -1100,7 +1100,7 @@ enemy{
   name = "auto_enemy_4",
   layer = -1,
   x = 160,
-  y = 421,
+  y = 477,
   direction = 3,
   breed = "soldiers/soldier_green",
   treasure_name = "random_central",
@@ -1110,9 +1110,39 @@ enemy{
   name = "auto_enemy_5",
   layer = -1,
   x = 160,
-  y = 485,
-  direction = 0,
+  y = 413,
+  direction = 3,
   breed = "soldiers/soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_6",
+  layer = -1,
+  x = 432,
+  y = 277,
+  direction = 1,
+  breed = "soldiers/knight_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_7",
+  layer = -1,
+  x = 464,
+  y = 277,
+  direction = 1,
+  breed = "soldiers/knight_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "auto_enemy_8",
+  layer = -1,
+  x = 448,
+  y = 253,
+  direction = 1,
+  breed = "soldiers/knight_blue",
   treasure_name = "random_central",
 }
 

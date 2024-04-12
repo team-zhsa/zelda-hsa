@@ -519,6 +519,8 @@ sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
 sprite{ id = "enemies/projectiles/axe", description = "Axe" }
+sprite{ id = "enemies/projectiles/ballchain_ball", description = "Ballchain ball" }
+sprite{ id = "enemies/projectiles/ballchain_chain", description = "Ballchain chain" }
 sprite{ id = "enemies/projectiles/bat", description = "Bat" }
 sprite{ id = "enemies/projectiles/beam", description = "Wizzrobe Beam" }
 sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
@@ -530,6 +532,7 @@ sprite{ id = "enemies/projectiles/shadowball", description = "Shadowball" }
 sprite{ id = "enemies/projectiles/spear", description = "Spear" }
 sprite{ id = "enemies/projectiles/stone", description = "Stone" }
 sprite{ id = "enemies/projectiles/stone_light", description = "Light stone" }
+sprite{ id = "enemies/projectiles/sword", description = "Sword" }
 sprite{ id = "enemies/soldiers/knight_black", description = "Black Knight" }
 sprite{ id = "enemies/soldiers/knight_black_sword", description = "Black Knight Sword" }
 sprite{ id = "enemies/soldiers/knight_blue", description = "Blue Knight" }
@@ -540,6 +543,7 @@ sprite{ id = "enemies/soldiers/knight_myrtle", description = "Myrtle Knight" }
 sprite{ id = "enemies/soldiers/knight_myrtle_sword", description = "Myrtle Knight Sword" }
 sprite{ id = "enemies/soldiers/knight_red", description = "Red Knight" }
 sprite{ id = "enemies/soldiers/knight_red_sword", description = "Red Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_spear", description = "Knight Spear" }
 sprite{ id = "enemies/soldiers/knight_yellow", description = "Yelow Knight" }
 sprite{ id = "enemies/soldiers/knight_yellow_sword", description = "Yellow Knight Sword" }
 sprite{ id = "enemies/soldiers/soldier_blue", description = "Blue Soldier" }
@@ -553,6 +557,7 @@ sprite{ id = "enemies/soldiers/soldier_myrtle", description = "Myrtle Soldier" }
 sprite{ id = "enemies/soldiers/soldier_myrtle_sword", description = "Myrtle Soldier Sword" }
 sprite{ id = "enemies/soldiers/soldier_red", description = "Red Soldier" }
 sprite{ id = "enemies/soldiers/soldier_red_sword", description = "Red Soldier Sword" }
+sprite{ id = "enemies/soldiers/soldier_spear", description = "Soldier Spear" }
 sprite{ id = "enemies/soldiers/soldier_yellow", description = "Yellow Soldier" }
 sprite{ id = "enemies/soldiers/soldier_yellow_sword", description = "Yellow Soldier Sword" }
 sprite{ id = "enemies/soldiers/tarosu_blue", description = "Blue Tarosu" }
@@ -1884,7 +1889,14 @@ enemy{ id = "projectiles/shadowball", description = "Shadowball" }
 enemy{ id = "projectiles/spear", description = "Spear" }
 enemy{ id = "projectiles/stone", description = "Octorok Stone" }
 enemy{ id = "projectiles/stone_light", description = "Green Octorok Stone" }
+enemy{ id = "soldiers/knight_black", description = "Black Knight" }
+enemy{ id = "soldiers/knight_black_ballchain", description = "Black ballchain knight" }
+enemy{ id = "soldiers/knight_blue", description = "Blue Knight" }
+enemy{ id = "soldiers/knight_ice", description = "Ice Knight" }
+enemy{ id = "soldiers/knight_myrtle", description = "Myrtle Knight" }
 enemy{ id = "soldiers/knight_red", description = "Red Knight" }
+enemy{ id = "soldiers/knight_yellow", description = "Yellow Knight" }
+enemy{ id = "soldiers/knight_yellow_ballchain", description = "Yellow ballchain Knight" }
 enemy{ id = "soldiers/soldier_blue", description = "Blue Sword Soldier" }
 enemy{ id = "soldiers/soldier_green", description = "Green Sword Soldier" }
 enemy{ id = "soldiers/soldier_myrtle", description = "Myrtle Sword Soldier" }
@@ -2199,7 +2211,7 @@ file{ path = "maps/out/b3.dat", author = "The Unknown", }
 file{ path = "maps/out/b4.dat", author = "The Unknown", }
 file{ path = "maps/out/b5.dat", author = "The Unknown", }
 file{ path = "maps/out/b6.dat", author = "The Unknown", }
-file{ path = "maps/out/c1.dat", author = "Nintendo, The Unknown", }
+file{ path = "maps/out/c1.dat", author = "The Unknown", }
 file{ path = "maps/out/c4.dat", author = "The Unknown", }
 file{ path = "maps/out/c5.dat", author = "The Unknown", }
 file{ path = "maps/out/c7.dat", author = "The Unknown", }
@@ -2413,6 +2425,7 @@ file{ path = "sprites/enemies/soldiers/knight_myrtle.dat", author = "The Unknown
 file{ path = "sprites/enemies/soldiers/knight_myrtle_sword.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/knight_red.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/knight_red_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_spear.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/knight_sword.png", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/soldiers/knight_yellow.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/knight_yellow_sword.dat", author = "The Unknown", license = "GPL v3" }
@@ -2429,17 +2442,10 @@ file{ path = "sprites/enemies/soldiers/soldier_myrtle.dat", author = "The Unknow
 file{ path = "sprites/enemies/soldiers/soldier_myrtle_sword.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/soldier_red.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/soldier_red_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_spear.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/soldier_sword.png", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/soldiers/soldier_yellow.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/soldier_yellow_sword.dat", author = "The Unknown", license = "GPL v3" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_black_weapon.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_blue.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_blue_weapon.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_green.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_green_weapon.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/spear_soldier_red.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/sword_knight_blue.dat", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/soldiers/sword_knight_blue_weapon.dat", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/soldiers/tarosu_blue.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/soldiers/tarosu_blue.png", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/soldiers/tarosu_blue_weapon.dat", author = "The Unknown", license = "GPL v3" }

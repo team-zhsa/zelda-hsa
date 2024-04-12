@@ -4,7 +4,8 @@
 --
 -- Weapon of the ballchain soldier.
 --
--- Methods : enemy:set_chain_origin_offset(x, y)
+-- Methods : enemy:get_state()
+--           enemy:set_chain_origin_offset(x, y)
 --           enemy:start_orbitting(angle)
 --           enemy:start_aiming(entity, minimum_duration, on_finished_callback)
 --           enemy:start_throwing_out(on_finished_callback)
@@ -26,6 +27,7 @@ local quarter = math.pi * 0.5
 local circle = math.pi * 2.0
 local orbit_rotation_step, orbit_timer
 local chain_origin_offset_x, chain_origin_offset_y
+local state = "orbitting"
 
 -- Configuration variables
 local orbit_initial_angle = 5 * eighth
@@ -53,6 +55,12 @@ local function set_orbit_position(angle)
   update_chain()
 end
 
+-- Get the enemy state.
+function enemy:get_state()
+
+  return state
+end
+
 -- Set an offset to the chain origin.
 function enemy:set_chain_origin_offset(x, y)
 
@@ -63,6 +71,7 @@ end
 -- Make the ball start orbitting around its origin, anti clockwise.
 function enemy:start_orbitting(angle)
 
+  state = "orbitting"
   orbit_rotation_step = orbit_rotation_speed / 100.0
 
   set_orbit_position(angle)
@@ -76,6 +85,7 @@ end
 -- Make the ball start orbitting faster then call the on_finished() callback when the orbit angle is a quarter less than the angle to the entity.
 function enemy:start_aiming(entity, minimum_duration, on_finished_callback)
 
+  state = "aiming"
   orbit_rotation_step = orbit_attacking_rotation_speed / 100.0
   sol.timer.start(enemy, minimum_duration, function()
 
@@ -98,6 +108,7 @@ function enemy:start_throwing_out(entity, ball_speed, on_finished_callback)
   local offset_x, offset_y = ball_sprite:get_xy()
   local entity_x, entity_y, _ = entity:get_position()
   local angle = sol.main.get_angle(x + offset_x, y + offset_y, entity_x, entity_y)
+  state = "throwing"
 
   local movement = sol.movement.create("straight")
   movement:set_speed(ball_speed)
@@ -124,6 +135,7 @@ function enemy:start_pulling_in(ball_speed, on_finished_callback)
   local angle = sol.main.get_angle(0, 0, ball_sprite:get_xy()) - quarter + orbit_rotation_step
   local target_x = math.cos(angle) * orbit_radius
   local target_y = -math.sin(angle) * orbit_radius
+  state = "pulling"
 
   local movement = sol.movement.create("target")
   movement:set_speed(ball_speed)
@@ -152,9 +164,9 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_origin(8, 13)
 
   for i = 3, 1, -1 do
-    chain_sprites[i] = enemy:create_sprite("enemies/boss/ballchain_soldier/chain")
+    chain_sprites[i] = enemy:create_sprite("enemies/projectiles/ballchain_chain")
   end
-  ball_sprite = enemy:create_sprite("enemies/boss/ballchain_soldier/ball")
+  ball_sprite = enemy:create_sprite("enemies/projectiles/ballchain_ball")
 end)
 
 -- Restart settings.
