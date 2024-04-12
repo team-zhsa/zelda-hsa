@@ -19,16 +19,6 @@ animation{
   },
 }
 animation{
-  name = "frozen",
-  src_image = "enemies/outside/armos.png",
-  directions = {
-    { x = 24, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29 },
-    { x = 24, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29 },
-    { x = 24, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29 },
-    { x = 24, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 29 },
-  },
-}
-animation{
   name = "hurt",
   src_image = "enemies/outside/armos.png",
   frame_delay = 20,

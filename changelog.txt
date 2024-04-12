@@ -27,9 +27,9 @@ Pre-Alpha 1.0.1 (21/10/19):
 	FIX: Fixed hero freezing on using bow.
 	
 Alpha 1.1 (01/01/20):
-	CHG: Changed save menu.
-	CHG: Changed screen length to 320 instead of 248.
-	CHG: Changed dungeon savegames syntax.
+	CHG: Changed the save menu.
+	CHG: Changed the screen length to 320 instead of 248.
+	CHG: Changed the dungeon savegames syntax.
 
 Alpha 1.2 (10/02/20):
 	CHG: Made the first boss easier by setting his life's points to 40 instead of 120.
@@ -42,17 +42,17 @@ Alpha 1.3 (25/03/20):
 	FIX: Fixed hero freezing on using boomerang.
 	
 Alpha 1.3.1 (02/04/20):
-	FIX: Fixed boomerang sound missing.
-	FIX: Fixed inventory wrong items movement.
+	FIX: Fixed the boomerang sound missing.
+	FIX: Fixed the inventory wrong items movement.
 
 Alpha 1.3.2 (11/04/20):
-	ADD: Added weather script from Diarandor.
+	ADD: Added the weather script from Diarandor.
 	ADD: Added a few shaders.
 	
 Alpha 1.4 (19/01/21) "Angler Update":
-	ADD: Added ceiling dropping function.
-	ADD: Added anticopy (password) script from Max.
-	ADD: Added credits script.
+	ADD: Added a ceiling dropping function.
+	ADD: Added an anticopy (password) script from Max.
+	ADD: Added the credits script.
 	CHG: Cleaned up musics.
 	CHG: Cleaned up sprites.
 	FIX: Fixed wrong sprite for shield 1 when going right.
@@ -84,10 +84,10 @@ Alpha 1.7 (11/04/21) "Dorado Update":
 	CHG: Started switching enemies' behaviours to ALTTD's.
 	CHG: Started switching to audio_manager.lua.
 	FIX: Fixed soldiers slowing down hero.
-	FIX: Fixed moldorm not working.
-	FIX: Fixed dark room sensor not working.
-	FIX: Fixed dungeon minimap system.
-	FIX: Fixed shield item not working for ALTTD's ennemies.
+	FIX: Fixed Moldorms not working.
+	FIX: Fixed the dark room sensor not working.
+	FIX: Fixed the dungeon minimap system.
+	FIX: Fixed the shield item not working for ALTTD's ennemies.
 	
 Alpha 1.7.1 (16/04/21) "Dorado Update":
 	ADD: Added entities sprites.
@@ -258,10 +258,10 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
 	FIX: Fixed destructibles weights being too high around the Blacksmith.
 	FIX: Fixed the teletransporter to the Temple of Time linking to a deleted map (#40).
-	FIX: Fixed door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
+	FIX: Fixed the door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
 	FIX: Fixed water resetting itself in the room 24 (B2) of the Forest Temple (#4).
 	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
-	FIX: Fixed "yellow_key" not saved in the Forest Temple (#5).
+	FIX: Fixed the "yellow_key" not saved in the Forest Temple (#5).
 	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
 	FIX: Fixed Link being invisible after fighting boss (#16).
 
@@ -287,8 +287,8 @@ Alpha 1.15.1 (31/01/23) "Ladyfish Update":
 	FIX: Fixed Link being able to walk on wall edges when there is water (#54).
 	REM: Removed debug printing when dropping from a ceiling.
 	REM: Removed map discovering values being saved because not needed.
-	REM: Removed Kokiri Village layout in the minimap (#57).
-	REM: Removed red, green and blue potions item (replaced by potion variants) (#62).
+	REM: Removed the Kokiri Village layout in the minimap (#57).
+	REM: Removed the red, green and blue potion items (replaced by potion variants) (#62).
 
 Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 	ADD: Added maps.
@@ -296,7 +296,7 @@ Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 	FIX: Fixed cave entrance support being traversable (#76).
 	FIX: Fixed firebar rotation centre being off-centered (#77).
 	FIX: Fixed a wrong cave border pattern (#78).
-	REM: Removed "la" font.
+	REM: Removed the "la" font.
 
 Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 	ADD: Added maps.
@@ -390,6 +390,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added healing wand variants (#194).
 	ADD: Added animations for all the rods (#220).
 	ADD: Added the missing items treasure and inventory dialogues (#9).
+	ADD: Added new Hinox sprites (#28).
+	ADD: Added new soldiers and knight colour variations.
+	ADD: Added new Lynel colour variations (#221).
+	ADD: Added Cukeman enemies.
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -435,6 +439,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Merged countable items into a single item file (#189).
 	CHG: Replaced hardcoded sounds by empty ones (#137).
 	CHG: Made the hero automatically float when there is water above.
+	CHG: Merged Popos and Blobs colour variations into one sprite sheet (#221).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -483,6 +488,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed Armos not appearing (#209).
 	FIX: Fixed enemies not going down one layer when there's no ground (#198).
 	FIX: Fixed the brandish animation not being displayed (#219).
+	FIX: Fixed Deadrocks playing the hero hurting animation when immobilised (#222).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -551,7 +557,6 @@ Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).
 	TDO: Add a HUD version for timers (#36).
-	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
 	TDO: Add the Tournament of the Strongest (#180).
 	TDO: Add a climbing state (#188).
 

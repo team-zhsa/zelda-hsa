@@ -120,8 +120,8 @@ local function initialise_hud_features(game)
       local x, y = hero_x - camera_x, hero_y - camera_y
       local opacity_l = nil
       local opacity_r = nil
-      top_left_transparent = x < 128 and y < 50
-      top_right_transparent = x > 166 and y < 64
+      top_left_transparent = x < 128 and y < 64
+      top_right_transparent = x > 166 and y < 100
 
 			if top_left_transparent then
         opacity_l = 128

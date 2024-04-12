@@ -18001,6 +18001,24 @@ tile{
   pattern = "stairs_inner_up.2.top.border.2-1",
 }
 
+tile{
+  layer = 0,
+  x = 560,
+  y = 528,
+  width = 32,
+  height = 32,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 560,
+  y = 384,
+  width = 32,
+  height = 16,
+  pattern = "floor_pot",
+}
+
 sensor{
   name = "dungeon_room_26_2",
   layer = 0,
@@ -21930,6 +21948,74 @@ npc{
   behavior = "dialog#maps.dungeons.3.hint_1",
 }
 
+destructible{
+  name = "auto_destructible_57",
+  layer = 0,
+  x = 568,
+  y = 397,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_58",
+  layer = 0,
+  x = 584,
+  y = 397,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_59",
+  layer = 0,
+  x = 568,
+  y = 541,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_60",
+  layer = 0,
+  x = 584,
+  y = 557,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_61",
+  layer = 0,
+  x = 568,
+  y = 557,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  name = "auto_destructible_62",
+  layer = 0,
+  x = 584,
+  y = 541,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
 tile{
   layer = 1,
   x = 392,
@@ -23858,9 +23944,9 @@ separator{
   name = "auto_separator_2",
   layer = 2,
   x = 1592,
-  y = 720,
+  y = 480,
   width = 16,
-  height = 720,
+  height = 960,
 }
 
 separator{
