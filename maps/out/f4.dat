@@ -14295,8 +14295,8 @@ teletransporter{
   },
   width = 32,
   height = 16,
-  destination_map = "inside/castle/0f",
-  destination = "from_outside_2",
+  destination_map = "dungeons/16/2f",
+  destination = "from_outside",
 }
 
 dynamic_tile{
@@ -14685,6 +14685,14 @@ switch{
   sprite = "entities/switches/owl_statue",
   needs_block = false,
   inactivate_when_leaving = false,
+}
+
+destination{
+  name = "from_tower",
+  layer = 0,
+  x = 600,
+  y = 189,
+  direction = 3,
 }
 
 tile{

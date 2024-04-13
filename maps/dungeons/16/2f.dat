@@ -2010,6 +2010,30 @@ sensor{
   height = 16,
 }
 
+destination{
+  name = "from_outside",
+  layer = 0,
+  x = 160,
+  y = 613,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 624,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "out/f4",
+  destination = "from_tower",
+}
+
 tile{
   layer = 1,
   x = 536,
