@@ -55,6 +55,7 @@ enemy:register_event("on_restarted", function(enemy)
   	sword = electrocute,
   	thrown_item = "protected",
   	fire = 1,
+		ice = "ignored",
   	jump_on = "ignored",
   	hammer = "protected",
   	hookshot = "immobilized",

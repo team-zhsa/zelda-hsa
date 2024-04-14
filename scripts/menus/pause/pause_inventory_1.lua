@@ -6,7 +6,7 @@ local item_names_assignable = {
 	"shield_hylia",												-- Hylia shield
 	"shield_mirror",											-- Mirror shield
 	"bottle_1",														-- Bottle
-	"bow",																-- Bow / Great bow / light bow
+	"bow",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
 	"bow",																-- Fire / ice bow
 	-- Row 2                                      
 	"lamp",																-- Lamp      
