@@ -82,8 +82,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
             local sound_sword = false
             local entity = hero:get_facing_entity()
             if entity ~= nil then
-              if entity:get_type() == "door" and (string.find(entity:get_sprite():get_animation_set(), "weak")
-              or string.find(entity:get_sprite():get_animation_set(), "rock0")) then
+              if entity:get_type() == "door" and entity:get_property("opening_method") == "explosion" then
                 sound_sword = true
               end 
             end

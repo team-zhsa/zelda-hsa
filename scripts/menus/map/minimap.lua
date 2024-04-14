@@ -258,13 +258,13 @@ function map_submenu:draw_world_map(dst_surface)
 	box_x, box_y = ((box_x - 16) / 2) + 8 , ((box_y - 16) / 2) + 8
 	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + box_x - 100))
 	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + box_y - 100))
-	print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
-	print("HOVER"..self.current_map_hovered.x.. " ".. self.current_map_hovered.y)
+	--print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
+	--print("HOVER"..self.current_map_hovered.x.. " ".. self.current_map_hovered.y)
 	self.current_map_index.x = math.floor(self.current_map_hovered.x / 80) + 1
 	if self.current_map_index.x == -1 then self.current_map_index.x = 0 end
 		self.current_map_index.y = math.floor(self.current_map_hovered.y / 90) + 1
 	if self.current_map_index.y == -1 then self.current_map_index.y = 0 end
-	print(self.current_map_index.x, self.current_map_index.y)
+	--print(self.current_map_index.x, self.current_map_index.y)
 	if map_shown then
 		self:set_caption(map_areas_config[self.current_map_index.x][self.current_map_index.y].key)
 	else self:set_caption("map.title") end
