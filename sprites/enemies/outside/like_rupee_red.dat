@@ -1,0 +1,102 @@
+animation{
+  name = "rupee",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 96, y = 64, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 8, num_columns = 4 },
+    { x = 96, y = 64, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 8, num_columns = 4 },
+    { x = 96, y = 64, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 8, num_columns = 4 },
+    { x = 96, y = 64, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 8, num_columns = 4 },
+  },
+}
+animation{
+  name = "appearing",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 80,
+  directions = {
+    { x = 120, y = 96, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 96, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 96, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 96, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+  },
+}
+animation{
+  name = "disappearing",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 80,
+  directions = {
+    { x = 120, y = 112, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 112, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 112, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+    { x = 120, y = 112, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3 },
+  },
+}
+animation{
+  name = "escape",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 80,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+  },
+}
+animation{
+  name = "frozen",
+  src_image = "enemies/outside/like_like.png",
+  directions = {
+    { x = 24, y = 32, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 32, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 32, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 32, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 20,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 24, y = 48, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3, num_columns = 1 },
+    { x = 24, y = 48, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3, num_columns = 1 },
+    { x = 24, y = 48, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3, num_columns = 1 },
+    { x = 24, y = 48, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 3, num_columns = 1 },
+  },
+}
+animation{
+  name = "immobilized",
+  src_image = "enemies/outside/like_like.png",
+  directions = {
+    { x = 24, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+    { x = 24, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13 },
+  },
+}
+animation{
+  name = "shaking",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 40,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 48, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 48, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 48, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 48, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "enemies/outside/like_like.png",
+  frame_delay = 160,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+    { x = 0, y = 80, frame_width = 24, frame_height = 16, origin_x = 12, origin_y = 13, num_frames = 2 },
+  },
+}
