@@ -84,7 +84,7 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-	enemy:hold_weapon("enemies/soldiers/knight_sword", enemy:get_sprite(), 0, 0)
+	enemy:hold_weapon("enemies/" .. enemy:get_breed() .. "_sword", enemy:get_sprite(), 0, 0)
 	enemy:set_life(4)
 	enemy:set_size(16, 16)
 	enemy:set_origin(8, 13)

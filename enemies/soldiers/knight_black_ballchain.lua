@@ -19,13 +19,13 @@ require("enemies/lib/common_actions").learn(enemy)
 local game = enemy:get_game()
 local map = enemy:get_map()
 local hero = map:get_hero()
-local sprite = enemy:create_sprite("enemies/soldiers/knight_black")
+local sprite = enemy:create_sprite("enemies/".. enemy:get_breed())
 local quarter = math.pi * 0.5
 local flail
 local is_attacking = false
 
 -- Configuration variables
-local right_hand_offset_x = -8
+local right_hand_offset_x = -0
 local right_hand_offset_y = -19
 local thrown_chain_origin_offset_x = 1
 local thrown_chain_origin_offset_y = 17
@@ -91,7 +91,7 @@ enemy:register_event("on_created", function(enemy)
 
   -- Create the flail.
   flail = enemy:create_enemy({
-    name = (enemy:get_name() or enemy:get_breed()) .. "_flail",
+    name = (enemy:get_name()) .. "_flail",
     breed = "projectiles/ball_chain",
     direction = 2,
     x = right_hand_offset_x,
@@ -104,7 +104,7 @@ end)
 -- Make flail disappear when the enemy became invisible on dying.
 enemy:register_event("on_dying", function(enemy)
   flail:start_death(function()
-    sol.timer.start(flail, 300, function() -- No event when the enemy became invisible, hardcode a timer.
+    sol.timer.start(flail, 10, function() -- No event when the enemy became invisible, hardcode a timer.
       finish_death()
     end)
   end)

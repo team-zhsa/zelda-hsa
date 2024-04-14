@@ -26,8 +26,23 @@ function separator_manager:manage_map(map)
     local d = hero:get_direction() * 2
     if game:is_in_dungeon() then
       local _, _, z = hero:get_position()
-      if z == -1 then hero:walk(d..d..d..d..d..d..d..d..d)
-      else hero:walk(d..d..d..d..d..d) end
+      if z == -1 then
+        hero:freeze()
+        local movement = sol.movement.create("path")
+        movement:set_path({d,d,d,d,d,d,d,d,d}) -- NOT WORKING TO DO
+        movement:set_speed(88)
+        movement:start(hero, function()
+          hero:unfreeze()
+        end)
+      else
+        hero:freeze()
+        local movement = sol.movement.create("path")
+        movement:set_path({d,d,d,d,d,d})
+        movement:set_speed(88)
+        movement:start(hero, function()
+          hero:unfreeze()
+        end)
+      end
     end
 
     -- Enemies.

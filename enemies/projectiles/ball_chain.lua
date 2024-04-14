@@ -175,6 +175,7 @@ enemy:register_event("on_restarted", function(enemy)
   enemy:set_invincible(true)
   enemy:set_damage(2)
   enemy:set_layer_independent_collisions(true)
+  enemy:set_obstacle_behavior("flying")
 
   chain_origin_offset_x = 0
   chain_origin_offset_y = 0

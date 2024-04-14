@@ -967,24 +967,6 @@ tile{
 
 tile{
   layer = -1,
-  x = 120,
-  y = 120,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = -1,
-  x = 120,
-  y = 184,
-  width = 16,
-  height = 16,
-  pattern = "torch",
-}
-
-tile{
-  layer = -1,
   x = 184,
   y = 120,
   width = 16,
@@ -999,6 +981,33 @@ tile{
   width = 96,
   height = 16,
   pattern = "floor.2-2",
+}
+
+tile{
+  layer = -1,
+  x = 104,
+  y = 104,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = -1,
+  x = 104,
+  y = 208,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = -1,
+  x = 104,
+  y = 112,
+  width = 8,
+  height = 96,
+  pattern = "barrier.2-1",
 }
 
 wall{
@@ -1144,6 +1153,140 @@ enemy{
   direction = 1,
   breed = "soldiers/knight_blue",
   treasure_name = "random_central",
+}
+
+block{
+  layer = -1,
+  x = 512,
+  y = 293,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 488,
+  y = 293,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 488,
+  y = 245,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 488,
+  y = 197,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 488,
+  y = 149,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 408,
+  y = 213,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 408,
+  y = 261,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 408,
+  y = 309,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+block{
+  layer = -1,
+  x = 408,
+  y = 357,
+  sprite = "entities/statue",
+  pushable = false,
+  pullable = false,
+  max_moves = 0,
+}
+
+wall{
+  layer = -1,
+  x = 256,
+  y = 152,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = -1,
+  x = 368,
+  y = 152,
+  width = 16,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = -1,
+  x = 144,
+  y = 256,
+  width = 32,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = -1,
+  x = 144,
+  y = 368,
+  width = 32,
+  height = 16,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
 }
 
 tile{
@@ -1500,7 +1643,7 @@ tile{
 tile{
   layer = 0,
   x = 16,
-  y = 56,
+  y = 64,
   width = 24,
   height = 32,
   pattern = "window.3-1",
@@ -1509,25 +1652,7 @@ tile{
 tile{
   layer = 0,
   x = 16,
-  y = 152,
-  width = 24,
-  height = 32,
-  pattern = "window.3-1",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 456,
-  width = 24,
-  height = 32,
-  pattern = "window.3-1",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 552,
+  y = 144,
   width = 24,
   height = 32,
   pattern = "window.3-1",
@@ -1536,7 +1661,7 @@ tile{
 tile{
   layer = 0,
   x = 600,
-  y = 56,
+  y = 64,
   width = 24,
   height = 32,
   pattern = "window.4-1",
@@ -1545,7 +1670,7 @@ tile{
 tile{
   layer = 0,
   x = 600,
-  y = 152,
+  y = 224,
   width = 24,
   height = 32,
   pattern = "window.4-1",
@@ -1554,7 +1679,7 @@ tile{
 tile{
   layer = 0,
   x = 600,
-  y = 296,
+  y = 304,
   width = 24,
   height = 32,
   pattern = "window.4-1",
@@ -1563,7 +1688,7 @@ tile{
 tile{
   layer = 0,
   x = 600,
-  y = 392,
+  y = 384,
   width = 24,
   height = 32,
   pattern = "window.4-1",
@@ -1992,12 +2117,156 @@ tile{
   pattern = "torch_big.top",
 }
 
+tile{
+  layer = 0,
+  x = 16,
+  y = 224,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 384,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 464,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 544,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 384,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 464,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 544,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 64,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 144,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 224,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 64,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 144,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 224,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 304,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 384,
+  width = 24,
+  height = 32,
+  pattern = "window.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 144,
+  width = 24,
+  height = 32,
+  pattern = "window.4-1",
+}
+
 sensor{
   name = "dungeon_room_2_2",
   layer = 0,
-  x = 552,
-  y = 37,
-  width = 16,
+  x = 544,
+  y = 53,
+  width = 32,
   height = 16,
 }
 
@@ -2032,6 +2301,32 @@ teletransporter{
   height = 16,
   destination_map = "out/f4",
   destination = "from_tower",
+}
+
+teletransporter{
+  layer = 0,
+  x = 544,
+  y = 24,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/16/3f",
+  destination = "from_2f",
+}
+
+destination{
+  name = "from_3f",
+  layer = 0,
+  x = 552,
+  y = 37,
+  direction = 3,
+}
+
+stairs{
+  layer = 0,
+  x = 544,
+  y = 24,
+  direction = 1,
+  subtype = 0,
 }
 
 tile{
@@ -2134,18 +2429,20 @@ tile{
 }
 
 separator{
-  layer = 2,
-  x = 312,
-  y = 0,
-  width = 16,
-  height = 640,
-}
-
-separator{
+  name = "auto_separator_1",
   layer = 2,
   x = 0,
   y = 312,
   width = 320,
   height = 16,
+}
+
+separator{
+  name = "auto_separator_2",
+  layer = 2,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 640,
 }
 
