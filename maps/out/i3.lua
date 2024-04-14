@@ -29,7 +29,7 @@ function setup_guard_paths()
 			else
 				local movement = sol.movement.create("target")
 				movement:set_target(map:get_entity(next_step))
-				movement:set_speed(48)
+				movement:set_speed(32)
 				guard:get_sprite():set_direction(guard:get_direction4_to(map:get_entity(next_step)))
 				movement:start(guard, function()
 					guard_path_step = guard_path_step + 1

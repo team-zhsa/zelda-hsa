@@ -190,8 +190,8 @@ enemy:register_event("on_dying", function(enemy)
         rupees_created = rupees_created + 1
       elseif math.random(1, 5) == 5 then -- Create five rupees
         enemy:get_map():create_pickable({
-          x = x + math.random(1, 64),
-          y = y + math.random(1, 64),
+          x = x + math.random(-64, 64),
+          y = y + math.random(-64, 64),
           layer = z,
           treasure_name = "rupee",
           treasure_variant = 2

@@ -84,6 +84,7 @@ map{ id = "extensions/southern_hyrule/out/map_20", description = "Map 20" }
 map{ id = "extensions/southern_hyrule/out/map_26", description = "Map 26" }
 map{ id = "inside/castle/0f", description = "Castle (Ground Floor)" }
 map{ id = "inside/castle/rooms", description = "Castle (Bedrooms)" }
+map{ id = "inside/caves/cordinia_town/fairy_cave", description = "Fairy Cave" }
 map{ id = "inside/caves/death_mountains/unused_cave", description = "Unused Cave" }
 map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith Cave" }
 map{ id = "inside/caves/east_castle/east_swamp_cave", description = "East Swamp Cave" }
@@ -2123,7 +2124,7 @@ file{ path = "maps/dungeons/12/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/12/0f.lua", author = "The Unknown", }
 file{ path = "maps/dungeons/13", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/14", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/dungeons/15", author = "LinkFF", license = "GPL v3" }
+file{ path = "maps/dungeons/15", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/16", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/17", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/2", author = "The Unknown", license = "GPL v3" }
@@ -2133,7 +2134,7 @@ file{ path = "maps/dungeons/4", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/5", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/6", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/7", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/dungeons/8", author = "LinkFF", license = "GPL v3" }
+file{ path = "maps/dungeons/8", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/9", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/9/0f.lua", author = "The Unknown", license = "GPL v3" }
@@ -2152,6 +2153,8 @@ file{ path = "maps/dungeons/secret/1f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/secret/1f.lua", author = "The Unknown", }
 file{ path = "maps/extensions/east_continent/a1.dat", author = "The Unknown", }
 file{ path = "maps/extensions/east_continent/a1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/cordinia_town/fairy_cave.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/caves/cordinia_town/fairy_cave.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/death_mountains/unused_cave.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/death_mountains/unused_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/east_mountains/divine_ore_cave.dat", author = "The Unknown", }
@@ -2212,8 +2215,8 @@ file{ path = "maps/inside/shrines/lighthouse/0f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/0f.lua", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.lua", author = "The Unknown", }
-file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "LinkFF", }
-file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "LinkFF", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "Linkff", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "Linkff", }
 file{ path = "maps/out/a1.dat", author = "The Unknown", }
 file{ path = "maps/out/a2.dat", author = "The Unknown", }
 file{ path = "maps/out/a3.dat", author = "Nintendo, The Unknown", }
@@ -2247,25 +2250,25 @@ file{ path = "maps/out/f7.dat", author = "The Unknown", }
 file{ path = "maps/out/g4.dat", author = "The Unknown", }
 file{ path = "maps/out/g4.lua", author = "The Unknown", }
 file{ path = "maps/out/g7.dat", author = "The Unknown", }
-file{ path = "maps/out/h4.dat", author = "LinkFF, The Unknown", }
-file{ path = "maps/out/i3.dat", author = "LinkFF", }
-file{ path = "maps/out/i4.dat", author = "LinkFF", }
-file{ path = "maps/out/i4.lua", author = "LinkFF", }
-file{ path = "maps/out/i5.dat", author = "LinkFF", }
-file{ path = "maps/out/i5.lua", author = "LinkFF", }
+file{ path = "maps/out/h4.dat", author = "Linkff, The Unknown", }
+file{ path = "maps/out/i3.dat", author = "Linkff", }
+file{ path = "maps/out/i4.dat", author = "Linkff", }
+file{ path = "maps/out/i4.lua", author = "Linkff", }
+file{ path = "maps/out/i5.dat", author = "Linkff", }
+file{ path = "maps/out/i5.lua", author = "Linkff", }
 file{ path = "maps/out/j1.dat", author = "The Unknown", }
 file{ path = "maps/out/j1.lua", author = "The Unknown", }
-file{ path = "maps/out/j5.dat", author = "LinkFF", }
-file{ path = "maps/out/j5.lua", author = "LinkFF", }
-file{ path = "maps/out/j6.dat", author = "LinkFF", }
-file{ path = "maps/out/j6.lua", author = "LinkFF", }
-file{ path = "maps/out/j7.dat", author = "LinkFF", }
+file{ path = "maps/out/j5.dat", author = "Linkff", }
+file{ path = "maps/out/j5.lua", author = "Linkff", }
+file{ path = "maps/out/j6.dat", author = "Linkff", }
+file{ path = "maps/out/j6.lua", author = "Linkff", }
+file{ path = "maps/out/j7.dat", author = "Linkff", }
 file{ path = "maps/out/k1.dat", author = "The Unknown", }
-file{ path = "maps/out/k7.dat", author = "LinkFF", }
+file{ path = "maps/out/k7.dat", author = "Linkff", }
 file{ path = "maps/out/k8.dat", author = "The Unknown", }
 file{ path = "maps/out/k9.dat", author = "The Unknown", }
-file{ path = "maps/out/l1.dat", author = "LinkFF", }
-file{ path = "maps/out/l1.lua", author = "LinkFF", }
+file{ path = "maps/out/l1.dat", author = "Linkff", }
+file{ path = "maps/out/l1.lua", author = "Linkff", }
 file{ path = "maps/out/l2.dat", author = "The Unknown", }
 file{ path = "maps/out/l2.lua", author = "The Unknown", }
 file{ path = "maps/out/l3.dat", author = "The Unknown", }
@@ -2278,8 +2281,8 @@ file{ path = "maps/out/l6.dat", author = "The Unknown", }
 file{ path = "maps/out/l6.lua", author = "The Unknown", }
 file{ path = "maps/out/l7.dat", author = "The Unknown", }
 file{ path = "maps/out/l8.dat", author = "The Unknown", }
-file{ path = "maps/out/l9.dat", author = "LinkFF, The Unknown", }
-file{ path = "maps/out/l9.lua", author = "LinkFF, The Unknown", }
+file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
+file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
 file{ path = "musics/boss/boss_albw.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/boss/cryobraz.ogg", author = "boss dungeon 9", }
 file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
@@ -2425,9 +2428,9 @@ file{ path = "sprites/enemies/outside/cukeman_red.dat", author = "The Unknown", 
 file{ path = "sprites/enemies/outside/cukeman_yellow.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/hinox.dat", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/outside/hinox.png", author = "Nintendo", license = "Proprietary" }
-file{ path = "sprites/enemies/outside/hinox_black.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/enemies/outside/hinox_green.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/hinox_black.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/hinox_green.dat", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/enemies/outside/like_like.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/like_like.png", author = "Nintendo, The Unknown", license = "Proprietary, CC-BY-NC-SA" }
 file{ path = "sprites/enemies/outside/like_like_ice.dat", author = "The Unknown", license = "GPL v3" }
@@ -2435,19 +2438,19 @@ file{ path = "sprites/enemies/outside/like_like_purple.dat", author = "The Unkno
 file{ path = "sprites/enemies/outside/like_rupee_blue.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/like_rupee_green.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/like_rupee_red.dat", author = "The Unknown", license = "GPL v3" }
-file{ path = "sprites/enemies/outside/lynel.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_baby.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_black.dat", author = "LinkFF", license = "GPL v3" }
-file{ path = "sprites/enemies/outside/lynel_blue.dat", author = "LinkFF", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel.dat", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel_baby.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel_black.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_blue.dat", author = "Linkff", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/lynel_fire.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/lynel_green.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/lynel_ice.dat", author = "The Unknown", license = "GPL v3" }
-file{ path = "sprites/enemies/outside/lynel_silver.dat", author = "LinkFF", license = "GPL v3" }
-file{ path = "sprites/enemies/outside/moblin_black.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "LinkFF", }
+file{ path = "sprites/enemies/outside/lynel_silver.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/moblin_black.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "Linkff", }
 file{ path = "sprites/enemies/outside/octorok_blue.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/octorok_green.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "sprites/enemies/outside/octorok_red.dat", author = "The Unknown", license = "GPL v3" }
@@ -2503,16 +2506,16 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/item/rods/darkness_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/doom_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/fire_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/healing_wand.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/ice_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/light_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/rod.moving.entity.png", author = "LinkFF", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/rod.png", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/darkness_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/doom_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/fire_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/healing_wand.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/ice_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/light_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.moving.entity.png", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.png", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/somaria_cane.dat", author = "Nintendo, Mister Man", license = "Proprietary" }
-file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/wind_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
