@@ -9,6 +9,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.parapa_town"}, -- A7 (Parapa Town)
 		{key = "map.names.out.great_sea"}, -- A8 (Sea)
 		{key = "map.names.out.great_sea"}, -- A9 (Sea)
+		{key = "map.names.out.great_sea"}, -- A9 (Sea)
 		},
 	[2] = {-- B Row
 		{key = "map.names.out.west_mountains"}, -- B1 (West Mountains)
@@ -19,6 +20,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.parapa_valley"}, -- B6 (Parapa Valley)
 		{key = "map.names.out.parapa_bay"}, -- B7 (Parapa Bay)
 		{key = "map.names.out.great_sea"}, -- B8 (Sea)
+		{key = "map.names.out.great_sea"}, -- B9 (Sea)
 		{key = "map.names.out.great_sea"}, -- B9 (Sea)
 		},
 	[3] = {-- C Row
@@ -31,6 +33,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.miracles_coast"}, -- C7 (Miracles Coast)
 		{key = "map.names.out.great_sea"}, -- C8 (Sea)
 		{key = "map.names.out.great_sea"}, -- C9 (Sea)
+		{key = "map.names.out.great_sea"}, -- C9 (Sea)
 		},
 	[4] = {-- D Row
 		{key = "map.names.out.death_mountains"}, -- D1 (Death Mountains)
@@ -41,6 +44,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.south_field"}, -- D6 (Hyrule Field)
 		{key = "map.names.out.miracles_coast"}, -- D7 (Miracles Coast)
 		{key = "map.names.out.great_sea"}, -- D8 (Sea)
+		{key = "map.names.out.great_sea"}, -- D9 (Sea)
 		{key = "map.names.out.great_sea"}, -- D9 (Sea)
 	},
 	[5] = {-- E Row
@@ -53,6 +57,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.miracles_coast"}, -- E7 (Miracles Coast)
 		{key = "map.names.out.miracles_coast"}, -- E8 (Miracles Coast)
 		{key = "map.names.out.great_sea"}, -- E9 (Sea)
+		{key = "map.names.out.great_sea"}, -- E9 (Sea)
 		},
 	[6] = {-- F Row
 		{key = "map.names.out.death_mountains"}, -- F1 (Death Mountain, Dodongo's Cavern)
@@ -63,6 +68,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.south_field"}, -- F6 (Hyrule Field)
 		{key = "map.names.out.swamp"}, -- F7 (Great Swamp)
 		{key = "map.names.out.miracles_coast"}, -- F8 (Miracles Coast)
+		{key = "map.names.out.great_sea"}, -- F9 (Sea)
 		{key = "map.names.out.great_sea"}, -- F9 (Sea)
 		},
 	[7] = {-- G Row
@@ -75,6 +81,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.miracles_coast"}, -- G7 (Garnet Coast)
 		{key = "map.names.out.miracles_coast"}, -- G8 (Garnet Coast)
 		{key = "map.names.out.great_sea"}, -- G9 (Sea)
+		{key = "map.names.out.great_sea"}, -- G9 (Sea)
 		},
 	[8] = {-- H Row
 		{key = "map.names.out.east_mountains"}, -- H1 (East Mountains)
@@ -85,6 +92,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.south_field"}, -- H6 (Flower house)
 		{key = "map.names.out.miracles_coast"}, -- H7 (Miracles Coast)
 		{key = "map.names.out.great_sea"}, -- H8 (Sea)
+		{key = "map.names.out.great_sea"}, -- H9 (Sea)
 		{key = "map.names.out.great_sea"}, -- H9 (Sea)
 		},
 	[9] = {-- I Row
@@ -97,6 +105,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.cliffs_coast"}, -- I7 (Forests Coast)
 		{key = "map.names.out.great_sea"}, -- I8 (Sea)
 		{key = "map.names.out.great_sea"}, -- I9 (Sea)
+		{key = "map.names.out.great_sea"}, -- I9 (Sea)
 	 },
 	[10] = {-- J Row
 		{key = "map.names.out.snowpeaks"}, -- J1 (Snowpeaks)
@@ -107,6 +116,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.faron_woods"}, -- J6 (Faron Woods)
 		{key = "map.names.out.faron_woods"}, -- J7 (Faron Woods)
 		{key = "map.names.out.great_sea"}, -- J8 (Sea)
+		{key = "map.names.out.great_sea"}, -- J9 (Sea)
 		{key = "map.names.out.great_sea"}, -- J9 (Sea)
 	 },
 	[11] = {-- K Row
@@ -119,6 +129,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.faron_woods"}, -- K7 (Faron Woods)
 		{key = "map.names.out.great_sea"}, -- K8 (Sea)
 		{key = "map.names.out.great_sea"}, -- K9 (Sea)
+		{key = "map.names.out.great_sea"}, -- K9 (Sea)
 	 },
 	[12] = {-- L Row
 		{key = "map.names.out.zora_falls"}, -- L1 (Zora Falls)
@@ -130,6 +141,19 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{key = "map.names.out.great_sea"}, -- L7 (Sea)
 		{key = "map.names.out.great_sea"}, -- L8 (Sea)
 		{key = "map.names.out.eventide_island"}, -- L9 (Eventide Island, Forgotten Temple)
+		{key = "map.names.out.great_sea"}, -- L8 (Sea)
+	 },
+	[13] = {-- L Row
+	{key = "map.names.out.great_sea"}, -- L3 (Sea)
+	{key = "map.names.out.great_sea"}, -- L4 (Sea)
+	{key = "map.names.out.great_sea"}, -- L5 (Sea)
+	{key = "map.names.out.great_sea"}, -- L6 (Sea)
+	{key = "map.names.out.great_sea"}, -- L7 (Sea)
+	{key = "map.names.out.great_sea"}, -- L8 (Sea)		{key = "map.names.out.great_sea"}, -- L3 (Sea)
+	{key = "map.names.out.great_sea"}, -- L4 (Sea)
+	{key = "map.names.out.great_sea"}, -- L5 (Sea)
+	{key = "map.names.out.great_sea"}, -- L6 (Sea)
+	{key = "map.names.out.great_sea"}, -- L6 (Sea)
 	 },
 	
 }

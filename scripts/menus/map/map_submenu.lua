@@ -18,7 +18,7 @@ function submenu:on_started()
 	sol.menu.bring_to_front(submenu)
   self.title_arrows = sol.surface.create("menus/pause/submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
-	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png") 
+	self.caption_background = sol.surface.create("menus/map/world_map_caption.png") 
   self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
   self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
   self.save_dialog_cursor_pos = "left"
@@ -140,10 +140,13 @@ function submenu:draw_caption(dst_surface)
           text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
           text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
         end
-    else
+    else 
+      local caption_w, caption_h = self.caption_background:get_size()
+      self.caption_background:set_xy((width / 2) - (caption_w / 2), (height / 2) + 70)
+      self.caption_background:draw(dst_surface)
       -- Draw caption text.
       if self.caption_text_2:get_text():len() == 0 then
-        self.caption_text_1:set_xy(width / 2, height / 2 + 94)
+        self.caption_text_1:set_xy(width / 2, height / 2 + 88)
         text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
       else
         self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
