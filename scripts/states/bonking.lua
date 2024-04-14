@@ -18,7 +18,7 @@ function state:on_started()
   local movement=sol.movement.create("straight")
 
   local entity=state:get_entity()
-  movement:set_speed(88)
+  movement:set_speed(128)
   movement:set_angle((entity:get_direction()+2)*math.pi/2)
   function movement:on_position_changed()
     if entity:is_running() then
