@@ -3,11 +3,20 @@ properties{
   y = 3008,
   width = 320,
   height = 240,
-  min_layer = -1,
+  min_layer = 0,
   max_layer = 2,
   world = "inside_world",
   tileset = "absolute_dungeon_07",
   music = "inside/fairy",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  pattern = "ceiling.2",
 }
 
 tile{
@@ -537,5 +546,14 @@ tile{
   width = 32,
   height = 8,
   pattern = "cave_entry_top.1",
+}
+
+tile{
+  layer = 2,
+  x = 128,
+  y = 224,
+  width = 64,
+  height = 16,
+  pattern = "ceiling.2",
 }
 

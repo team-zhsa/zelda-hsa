@@ -1,7 +1,7 @@
 properties{
   x = 0,
   y = 0,
-  width = 1600,
+  width = 1280,
   height = 960,
   min_layer = -1,
   max_layer = 2,
@@ -15,16 +15,16 @@ separator{
   layer = -1,
   x = 0,
   y = 712,
-  width = 640,
+  width = 1280,
   height = 16,
 }
 
 separator{
   layer = -1,
   x = 632,
-  y = 720,
+  y = 0,
   width = 16,
-  height = 240,
+  height = 960,
 }
 
 tile{
@@ -797,7 +797,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "out/i3",
-  destination = "from_temple",
+  destination = "from_dungeon",
 }
 
 tile{

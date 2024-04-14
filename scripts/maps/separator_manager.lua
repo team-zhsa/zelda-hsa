@@ -28,6 +28,7 @@ function separator_manager:manage_map(map)
       local _, _, z = hero:get_position()
       if z == -1 then
         hero:freeze()
+        hero:set_animation("walking")
         local movement = sol.movement.create("path")
         movement:set_path({d,d,d,d,d,d,d,d,d}) -- NOT WORKING TO DO
         movement:set_speed(88)
@@ -36,6 +37,7 @@ function separator_manager:manage_map(map)
         end)
       else
         hero:freeze()
+        hero:set_animation("walking")
         local movement = sol.movement.create("path")
         movement:set_path({d,d,d,d,d,d})
         movement:set_speed(88)

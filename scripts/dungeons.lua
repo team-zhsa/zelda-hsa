@@ -108,7 +108,7 @@ local function initialise_dungeon_features(game)
     },
 
     [5] = { -- Dodongo's Cavern
-    floor_width = 1600,
+    floor_width = 1920,
     floor_height = 1440,
     minimap_width = 48,
     minimap_height = 48,
@@ -130,7 +130,7 @@ local function initialise_dungeon_features(game)
       destination_name = "from_outside"
     },
     main_exit = {
-      map_id = "out/b2",
+      map_id = "out/f1",
       destination_name = "from_temple"
     },
     completing_sequence = "simple",
@@ -167,8 +167,8 @@ local function initialise_dungeon_features(game)
     [7] = { -- Desert Temple
     floor_width = 1600,
     floor_height = 1200,
-    minimap_width = 48,
-    minimap_height = 48,
+    minimap_width = 40,
+    minimap_height = 40,
     lowest_floor = 0,
     highest_floor = 1,
     maps = {
@@ -186,8 +186,68 @@ local function initialise_dungeon_features(game)
       destination_name = "from_outside"
     },
     main_exit = {
-      map_id = "out/b2",
-      destination_name = "from_temple"
+      map_id = "out/b5",
+      destination_name = "from_dungeon"
+    },
+    completing_sequence = "simple",
+    },
+
+    [8] = { -- Jabu Jabu's Belly
+    floor_width = 1920,
+    floor_height = 1440,
+    minimap_width = 48,
+    minimap_height = 48,
+    lowest_floor = -1,
+    highest_floor = 0,
+    maps = {
+      "dungeons/8/0f",
+      "dungeons/8/b1",
+    },
+    boss = {
+      floor = -1,
+      savegame_variable = "dungeon_8_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/8/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/l1",
+      destination_name = "from_dungeon"
+    },
+    completing_sequence = "simple",
+    },
+
+    [9] = { -- Caesar's Peak
+    floor_width = 1280,
+    floor_height = 960,
+    minimap_width = 32,
+    minimap_height = 32,
+    lowest_floor = 0,
+    highest_floor = 5,
+    maps = {
+      "dungeons/9/0f",
+      "dungeons/9/1f",
+      "dungeons/9/2f",
+      "dungeons/9/3f",
+      "dungeons/9/4f",
+      "dungeons/9/5f",
+    },
+    boss = {
+      floor = 1,
+      savegame_variable = "dungeon_9_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/9/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/g1",
+      destination_name = "from_dungeon"
     },
     completing_sequence = "simple",
     },
@@ -195,8 +255,8 @@ local function initialise_dungeon_features(game)
     [11] = { -- Ice Temple
     floor_width = 1600,
     floor_height = 1200,
-    minimap_width = 48,
-    minimap_height = 48,
+    minimap_width = 40,
+    minimap_height = 40,
     lowest_floor = -1,
     highest_floor = 0,
     maps = {
@@ -216,6 +276,91 @@ local function initialise_dungeon_features(game)
     main_exit = {
       map_id = "out/i1",
       destination_name = "from_temple"
+    },
+    completing_sequence = "simple",
+    },
+    
+    [13] = { -- Cavern
+    floor_width = 1280,
+    floor_height = 960,
+    minimap_width = 32,
+    minimap_height = 32,
+    lowest_floor = 0,
+    highest_floor = 0,
+    maps = {
+      "dungeons/13/0f",
+    },
+    boss = {
+      floor = 0,
+      savegame_variable = "dungeon_13_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/13/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/i3",
+      destination_name = "from_dungeon"
+    },
+    completing_sequence = "simple",
+    },
+        
+    [14] = { -- Kakarico Well
+    floor_width = 1600,
+    floor_height = 1680,
+    minimap_width = 40,
+    minimap_height = 56,
+    lowest_floor = -2,
+    highest_floor = 0,
+    maps = {
+      "dungeons/14/0f",
+      "dungeons/14/b1",
+      "dungeons/14/b2",
+    },
+    boss = {
+      floor = 0,
+      savegame_variable = "dungeon_14_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/14/0f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/a3",
+      destination_name = "from_dungeon"
+    },
+    completing_sequence = "simple",
+    },
+            
+    [16] = { -- Hyrule Castle
+    floor_width = 640,
+    floor_height = 640,
+    minimap_width = 16,
+    minimap_height = 16,
+    lowest_floor = 2,
+    highest_floor = 4,
+    maps = {
+      "dungeons/16/2f",
+      "dungeons/16/3f",
+      "dungeons/16/4f",
+    },
+    boss = {
+      floor = 4,
+      savegame_variable = "dungeon_16_boss",
+      x = 1448,
+      y = 320,
+    },
+    main_entrance = {
+      map_id = "dungeons/16/2f",
+      destination_name = "from_outside"
+    },
+    main_exit = {
+      map_id = "out/f4",
+      destination_name = "from_tower"
     },
     completing_sequence = "simple",
     },

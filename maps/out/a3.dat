@@ -27512,6 +27512,32 @@ custom_entity{
   model = "hookable",
 }
 
+teletransporter{
+  layer = 0,
+  x = 88,
+  y = 184,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/14/0f",
+  destination = "from_outside",
+}
+
+destination{
+  name = "from_dungeon",
+  layer = 0,
+  x = 96,
+  y = 197,
+  direction = 1,
+}
+
+stairs{
+  layer = 0,
+  x = 88,
+  y = 184,
+  direction = 3,
+  subtype = 3,
+}
+
 tile{
   layer = 1,
   x = 1272,
