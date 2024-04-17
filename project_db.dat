@@ -1289,7 +1289,6 @@ music{ id = "boss/ganondorf", description = "Ganondorf" }
 music{ id = "boss/mallard", description = "Mallard" }
 music{ id = "boss/miniboss", description = "Miniboss" }
 music{ id = "cutscenes/castle_sealed", description = "Castle sealed" }
-music{ id = "cutscenes/credits", description = "Credits & Alternate Savegame Music" }
 music{ id = "cutscenes/crystal_get", description = "Get crystal" }
 music{ id = "cutscenes/cutscene_danger", description = "Danger Cutscence (Bridge on Fire TP)" }
 music{ id = "cutscenes/cutscene_zelda", description = "Zelda" }
@@ -2218,72 +2217,222 @@ file{ path = "maps/inside/shrines/lighthouse/1f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.lua", author = "The Unknown", }
 file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "Linkff", }
 file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "Linkff", }
-file{ path = "maps/out/a1.dat", author = "The Unknown", }
-file{ path = "maps/out/a2.dat", author = "The Unknown", }
-file{ path = "maps/out/a3.dat", author = "Nintendo, The Unknown", }
-file{ path = "maps/out/a4.dat", author = "The Unknown", }
-file{ path = "maps/out/a5.dat", author = "The Unknown", }
-file{ path = "maps/out/a6.dat", author = "The Unknown", }
-file{ path = "maps/out/a7.dat", author = "The Unknown", }
-file{ path = "maps/out/a8.dat", author = "The Unknown", }
-file{ path = "maps/out/a8.lua", author = "The Unknown", }
-file{ path = "maps/out/a9.dat", author = "The Unknown", }
-file{ path = "maps/out/a9.lua", author = "The Unknown", }
-file{ path = "maps/out/b1.dat", author = "Nintendo, The Unknown", }
-file{ path = "maps/out/b2.dat", author = "The Unknown", }
-file{ path = "maps/out/b3.dat", author = "The Unknown", }
-file{ path = "maps/out/b4.dat", author = "The Unknown", }
-file{ path = "maps/out/b5.dat", author = "The Unknown", }
-file{ path = "maps/out/b6.dat", author = "The Unknown", }
-file{ path = "maps/out/c1.dat", author = "The Unknown", }
-file{ path = "maps/out/c4.dat", author = "The Unknown", }
-file{ path = "maps/out/c5.dat", author = "The Unknown", }
-file{ path = "maps/out/c7.dat", author = "The Unknown", }
-file{ path = "maps/out/d1.dat", author = "The Unknown", }
-file{ path = "maps/out/d4.dat", author = "The Unknown", }
-file{ path = "maps/out/d6.dat", author = "The Unknown", }
-file{ path = "maps/out/e4.dat", author = "The Unknown", }
-file{ path = "maps/out/e6.dat", author = "The Unknown", }
-file{ path = "maps/out/f4.dat", author = "The Unknown", }
-file{ path = "maps/out/f5.dat", author = "The Unknown", }
-file{ path = "maps/out/f6.dat", author = "The Unknown", }
-file{ path = "maps/out/f7.dat", author = "The Unknown", }
-file{ path = "maps/out/g4.dat", author = "The Unknown", }
-file{ path = "maps/out/g4.lua", author = "The Unknown", }
-file{ path = "maps/out/g7.dat", author = "The Unknown", }
-file{ path = "maps/out/h4.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/i3.dat", author = "Linkff", }
-file{ path = "maps/out/i4.dat", author = "Linkff", }
-file{ path = "maps/out/i4.lua", author = "Linkff", }
-file{ path = "maps/out/i5.dat", author = "Linkff", }
-file{ path = "maps/out/i5.lua", author = "Linkff", }
-file{ path = "maps/out/j1.dat", author = "The Unknown", }
-file{ path = "maps/out/j1.lua", author = "The Unknown", }
-file{ path = "maps/out/j5.dat", author = "Linkff", }
-file{ path = "maps/out/j5.lua", author = "Linkff", }
-file{ path = "maps/out/j6.dat", author = "Linkff", }
-file{ path = "maps/out/j6.lua", author = "Linkff", }
-file{ path = "maps/out/j7.dat", author = "Linkff", }
-file{ path = "maps/out/k1.dat", author = "The Unknown", }
-file{ path = "maps/out/k7.dat", author = "Linkff", }
-file{ path = "maps/out/k8.dat", author = "The Unknown", }
-file{ path = "maps/out/k9.dat", author = "The Unknown", }
-file{ path = "maps/out/l1.dat", author = "Linkff", }
-file{ path = "maps/out/l1.lua", author = "Linkff", }
-file{ path = "maps/out/l2.dat", author = "The Unknown", }
-file{ path = "maps/out/l2.lua", author = "The Unknown", }
-file{ path = "maps/out/l3.dat", author = "The Unknown", }
-file{ path = "maps/out/l3.lua", author = "The Unknown", }
-file{ path = "maps/out/l4.dat", author = "The Unknown", }
-file{ path = "maps/out/l4.lua", author = "The Unknown", }
-file{ path = "maps/out/l5.dat", author = "The Unknown", }
-file{ path = "maps/out/l5.lua", author = "The Unknown", }
-file{ path = "maps/out/l6.dat", author = "The Unknown", }
-file{ path = "maps/out/l6.lua", author = "The Unknown", }
-file{ path = "maps/out/l7.dat", author = "The Unknown", }
-file{ path = "maps/out/l8.dat", author = "The Unknown", }
-file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
+file{ path = "maps/out/a1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h4.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/h4.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/h5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i3.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i3.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i4.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i4.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j5.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j5.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j6.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j6.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j7.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k3.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k3.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k7.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k7.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l8.lua", author = "The Unknown", license = "GPL V3" }
+file{ path = "maps/out/l9.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/l9.lua", author = "Linkff", license = "GPL v3" }
 file{ path = "musics/boss/boss_albw.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/boss/cryobraz.ogg", author = "boss dungeon 9", }
 file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
@@ -2306,6 +2455,8 @@ file{ path = "musics/inside/ravio.ogg", license = "Proprietary" }
 file{ path = "musics/inside/shop.ogg", license = "Proprietary" }
 file{ path = "musics/inside/temple_time.ogg", license = "Proprietary" }
 file{ path = "musics/inside/windmill.ogg", license = "Proprietary" }
+file{ path = "musics/outside/dark_world.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/east_lost_woods.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/hyrule_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/hyrule_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
 file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamastu", license = "Proprietary" }
