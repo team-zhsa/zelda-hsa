@@ -1,8 +1,8 @@
 -- Add new features to the teletransporters metatable.
-local tele_meta = sol.main.get_metatable("teletransporter")
-
+local teletransporter_meta = sol.main.get_metatable("teletransporter")
+local audio_manager = require("scripts/audio_manager")
 -- Get direction of a scrolling teleporter.
-function tele_meta:get_scrolling_direction()
+function teletransporter_meta:get_scrolling_direction()
   if self:get_transition() ~= "scrolling" then return nil end
   local x, y, w, h = self:get_bounding_box()
   if h == 16 and w > 16 then -- Vertical direction.
@@ -21,25 +21,25 @@ function tele_meta:get_scrolling_direction()
   return
 end
 
-tele_meta:register_event("on_activated", function(teletransporter)
-    local game=teletransporter:get_game()
-    local hero=game:get_hero()
-    local ground=hero:get_ground_below()
-    game:set_value("tp_destination", teletransporter:get_destination_name())
-    game:set_value("tp_ground", ground) --save last ground for the ceiling drop manager
+teletransporter_meta:register_event("on_activated", function(teletransporter)
+	local game=teletransporter:get_game()
+	local hero=game:get_hero()
+	local ground=hero:get_ground_below()
+	game:set_value("tp_destination", teletransporter:get_destination_name())
+	game:set_value("tp_ground", ground) --save last ground for the ceiling drop manager
+	if teletransporter:get_sound() ~= nil then
+		--sol.audio.play_sound(teletransporter:get_sound())
+	end
 
-
-		if teletransporter:get_transition() == "scrolling" then
-			if teletransporter:get_scrolling_direction() == 1 then
-				game:set_value("tp_scroll_direction", 2)
-			elseif teletransporter:get_scrolling_direction() == 2 then
-				game:set_value("tp_scroll_direction", 4)
-			elseif teletransporter:get_scrolling_direction() == 3 then
-				game:set_value("tp_scroll_direction", 6)
-			elseif teletransporter:get_scrolling_direction() == 0 then
-				game:set_value("tp_scroll_direction", 0)
-			end
+	if teletransporter:get_transition() == "scrolling" then
+		if teletransporter:get_scrolling_direction() == 1 then
+			game:set_value("tp_scroll_direction", 2)
+		elseif teletransporter:get_scrolling_direction() == 2 then
+			game:set_value("tp_scroll_direction", 4)
+		elseif teletransporter:get_scrolling_direction() == 3 then
+			game:set_value("tp_scroll_direction", 6)
+		elseif teletransporter:get_scrolling_direction() == 0 then
+			game:set_value("tp_scroll_direction", 0)
 		end
-
-
-  end)
+	end
+end)

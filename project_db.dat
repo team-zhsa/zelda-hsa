@@ -2124,14 +2124,14 @@ file{ path = "maps/dungeons/13", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/14", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/15", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/16", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/dungeons/17", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/17", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/2", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/2/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/3", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/4", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/5", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/6", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/dungeons/7", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/7", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/8", author = "Linkff", license = "GPL v3" }
 file{ path = "maps/dungeons/9", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", license = "GPL v3" }
@@ -2457,7 +2457,7 @@ file{ path = "musics/outside/dark_world.ogg", author = "Ryo Nagamatsu", license 
 file{ path = "musics/outside/east_lost_woods.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/hyrule_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/hyrule_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
-file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamastu", license = "Proprietary" }
+file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
 file{ path = "scripts/automation", author = "Olivier Cl�ro", license = "BSD, GPL v3" }
@@ -2479,8 +2479,8 @@ file{ path = "scripts/maps/ceiling_drop_manager.lua", author = "MetalZelda, adap
 file{ path = "scripts/maps/cinematic_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/effect_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/flying_tile_manager.lua", license = "GPL v3" }
-file{ path = "scripts/maps/fsa_effect.lua", license = "GPL v3" }
-file{ path = "scripts/maps/gb_effect.lua", license = "GPL v3" }
+file{ path = "scripts/maps/fsa_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
+file{ path = "scripts/maps/gb_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/house_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/jump_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/laser_manager.lua", license = "GPL v3" }
@@ -2491,9 +2491,12 @@ file{ path = "scripts/maps/lib/windfish_maze_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/light_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/main_quest_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/map_tools.lua", license = "GPL v3" }
+file{ path = "scripts/maps/minigame_manager.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/pushing_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/sideview_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/teletransporter_manager.lua", license = "GPL v3" }
+file{ path = "scripts/maps/tft_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
+file{ path = "scripts/maps/timer_manager.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/travel_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/trial_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/unstable_floor_manager.lua", license = "GPL v3" }
@@ -2525,6 +2528,11 @@ file{ path = "scripts/tools", license = "GPL v3" }
 file{ path = "scripts/tools/debug_utils.lua", license = "GPL v3" }
 file{ path = "scripts/tools/math_utils.lua", license = "GPL v3" }
 file{ path = "scripts/tools/string_utils.lua", license = "GPL v3" }
+file{ path = "scripts/weather/fall_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/hail_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/rain_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/snow_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/weather_manager.lua", author = "Diarando", license = "GPL v3" }
 file{ path = "shaders/default.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/default.frag.glsl", author = "std::gregwar", license = "GPL v3" }
 file{ path = "shaders/default.vert.glsl", author = "std::gregwar", license = "GPL v3" }

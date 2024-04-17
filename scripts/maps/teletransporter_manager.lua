@@ -23,7 +23,7 @@ game_meta:register_event("on_map_changed", function(game, map)
           hero:freeze()
           game.teleport_in_progress=true
           -- Execute In effect
-          effect_model.start_effect(surface, game, "in", false, function()
+          effect_model.start_effect(surface, game, "in", teletransporter:get_sound(), function()
             if destination_name == "_side" then
               local w_map, h_map = map:get_size()
               -- We calculate the direction according to the position of the teletransporter on the map
