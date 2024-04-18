@@ -396,6 +396,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added Cukeman enemies.
 	ADD: Added Like Like and Rupee Like enemies.
 	ADD: Added a custom property for bombable doors.
+	ADD: Added new glyphs to the ALTTP font (#228).
+	ADD: Added colour variations to the ALTTP font (#228).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -492,6 +494,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the brandish animation not being displayed (#219).
 	FIX: Fixed Deadrocks playing the hero hurting animation when immobilised (#222).
 	FIX: Fixed the victory animation not being synchronised with Link movement (#10).
+	FIX: Fixed teletransporter sounds not playing (#226).
+	FIX: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -510,10 +514,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed the dungeon exploring room variable changing based on the hero position (need to activate sensor instead).
 	REM: Removed the fog manager script (#212).
 	REM: Removed pre-alpha screenshots from the sprites folder (#195).
+	REM: Removed the ALTTP bitmap font blue outline (#228).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
-	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix low memory issues on MacOS (#39).
@@ -527,10 +531,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Remove the tofu character at the end of lines in the enter_command_mono font (#184).
 	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
 	TDO: Fix Ballchain Knights being incompatible with the separator manager (#223).
-
- !"#$%&'()*+,-./
-0123456789:;<=>?
-@ABCDEFGHIJKLMNO
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Add version conversion scripts in order to keep savegames up to date (#170).

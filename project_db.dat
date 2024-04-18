@@ -1996,11 +1996,14 @@ language{ id = "fr", description = "Français" }
 
 font{ id = "04b03", description = "04b03" }
 font{ id = "alttp", description = "alttp" }
+font{ id = "alttp_black", description = "alttp_black" }
+font{ id = "alttp_blue", description = "alttp_blue" }
 font{ id = "alttp_floors", description = "Alttp Floors" }
 font{ id = "alttp_ttf", description = "alttp_ttf" }
 font{ id = "capital", description = "Capital" }
 font{ id = "default", description = "default" }
 font{ id = "ega", description = "Px437_IBM_EGA_8x14" }
+font{ id = "ega_png", description = "ega_png" }
 font{ id = "enter_command_mono", description = "Enter Command Mono" }
 font{ id = "green_digits", description = "Green digits" }
 font{ id = "map_name", description = "map_name" }
@@ -2475,9 +2478,6 @@ file{ path = "scripts/gfx_effects/fade_to_white.lua", author = "PhoenixII54", li
 file{ path = "scripts/gfx_effects/pixellisation.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/gfx_effects/radial_fade_out.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/hud/hud.lua", license = "GPL v3" }
-file{ path = "scripts/lib", license = "GPL v3" }
-file{ path = "scripts/lib/iter.lua", license = "GPL v3" }
-file{ path = "scripts/lib/text_utils.lua", license = "GPL v3" }
 file{ path = "scripts/maps/block_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/ceiling_drop_manager.lua", author = "MetalZelda, adapted by PhoenixII54", }
 file{ path = "scripts/maps/cinematic_manager.lua", license = "GPL v3" }

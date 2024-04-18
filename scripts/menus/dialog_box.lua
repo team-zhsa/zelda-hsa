@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 local language_manager = require("scripts/language_manager")
 local audio_manager = require("scripts/audio_manager")
-local text_utils = require("scripts/lib/text_utils")
+local text_utils = require("scripts/tools/text_utils")
 local text_fx_helper = require("scripts/text_fx_helper")
 -- Creates and sets up a dialog box for the specified game.
 local function initialise_dialog_box_features(game)
@@ -49,7 +49,8 @@ local function initialise_dialog_box_features(game)
 		box_dst_position = nil,      -- Destination coordinates of the dialog box.
 		question_dst_position = nil, -- Destination coordinates of the question icon.
 		icon_dst_position = nil,     -- Destination coordinates of the icon.
-		text_color = { 255, 255, 255 } -- Text color.
+		text_color = { 255, 255, 255 }, -- Text colour.
+		stroke_colour = { 55, 55, 25}
 
 	}
 
@@ -573,7 +574,10 @@ local function initialise_dialog_box_features(game)
         -- The last two lines are the answer to a question.
         text_x = text_x + 24
       end
-			self.line_surfaces[i]:draw(self.dialog_surface, text_x, text_y)
+
+			text_fx_helper:draw_text_stroke(dialog_box.dialog_surface, dialog_box.line_surfaces[i], 
+				dialog_box.stroke_colour, text_x, text_y, "dialogue")
+			dialog_box.line_surfaces[i]:draw(dialog_box.dialog_surface, text_x, text_y)
 
     end
 

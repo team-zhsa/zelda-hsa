@@ -128,12 +128,33 @@ end
 function text_surface_mt:get_text()
   return self.text
 end
+function text_surface_mt:get_horizontal_alignment()
+  return self.horizontal_alignment
+end
+function text_surface_mt:get_vertical_alignment()
+  return self.vertical_alignment
+end
+function text_surface_mt:get_font()
+  return self.font
+end
+function text_surface_mt:get_font_size()
+  return self.font_size
+end
+function text_surface_mt:get_color()
+  return self.color
+end
 
 function text_surface_mt:draw(dst, x,y)
   self.inner_text_surface:draw(dst, x, y)
+  self.inner_text_surface_x = x
+  self.inner_text_surface_y = y
   for _, icon in ipairs(self.icons) do
     icon.surface:draw(dst, x+icon.x, y)
   end
+end
+
+function text_surface_mt:get_xy()
+  return self.inner_text_surface_x, self.inner_text_surface_y
 end
 
 function tu.create_icon_text_surface(params)

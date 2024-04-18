@@ -1,6 +1,6 @@
 local fsa = {}
 
-local light_mgr = require("scripts/lights/light_manager")
+local light_mgr = require("scripts/maps/light_manager")
 
 local quest_w, quest_h = sol.video.get_quest_size()
 
