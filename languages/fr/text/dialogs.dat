@@ -11,16 +11,6 @@ en fonçant dedans.
 }
 
 dialog{
-  id = "_cannot_lift_should_cut",
-  skip = "all",
-  text = [[
-Il te faudrait quelque
-chose de tranchant pour
-couper ces buissons...
-]],
-}
-
-dialog{
   id = "_cannot_lift_still_too_heavy",
   skip = "all",
   text = [[
@@ -8719,6 +8709,25 @@ dialog{
 Voici un petit bonus.    
 Je restaure tous tes
 Coeurs !
+]],
+}
+
+dialog{
+  id = "test",
+  skip = "all",
+  text = [[
+ !"#$%&'()*+,-./
+0123456789:;<=>?
+@ABCDEFGHIJKLMNO
+PQRSTUVWXYZ ^_
+`abcdefghijklmno
+pqrstuvwxyz{|}~
+¡¢£¤¥¦§¨©ª«¬­®¯
+°±²³´µ¶·¸¹º»¼½¾¿
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ
+ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
+àáâãäåæçèéêëìíîï
+ðñòóôõö÷øùúûüýþÿ
 ]],
 }
 

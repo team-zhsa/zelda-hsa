@@ -12,7 +12,7 @@ local effects = {
 function tone_manager:create(game)
   local tone_menu = {}
   
-  local mr, mg, mb, ma = nil, nil, nil, nil
+  local mr, mg, mb, ma = nil, nil, nil, nil -- Create the map tone
   local cr, cg, cb = nil, nil, nil  -- Create the current tone
   local tr, tg, tb = nil, nil, nil  -- Create the target tone
   local minute = 0

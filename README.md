@@ -1,6 +1,6 @@
 # The Legend of Zelda : Hyrule's Adventure
 
-![logo](logos/banner.png)
+![logo](logos/thumbnail.png)
 
 ## About
 

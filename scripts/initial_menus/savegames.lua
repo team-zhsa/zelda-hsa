@@ -214,7 +214,7 @@ function savegame_menu:read_savegames()
     if sol.game.exists(slot.file_name) then
       -- Existing file.
       slot.player_name_text:set_text(slot.savegame:get_value("player_name"))
-      slot.time_saved_text:set_text(slot.savegame:get_value("time_saved"))
+      slot.time_saved_text:set_text(os.date("%d/%m/%Y %H:%M", tonumber(slot.savegame:get_value("time_saved"))))
       -- Hearts.
       local hearts_class = require("scripts/hud/hearts")
       slot.hearts_view = hearts_class:new(slot.savegame)

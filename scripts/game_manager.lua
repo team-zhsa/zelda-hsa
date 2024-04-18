@@ -57,16 +57,15 @@ function game_manager:create(file)
 
   game:register_event("on_world_changed", function()
     local map = game:get_map()
-
     if not game.teleport_in_progress then -- play custom transition at game startup
       game:set_suspended(true)
       local opening_transition = require("scripts/gfx_effects/radial_fade_out")
       opening_transition.start_effect(map:get_camera():get_surface(), game, "out", nil, function()
-          game:set_suspended(false)
-          if map.do_after_transition then
-            map.do_after_transition()
-          end
-        end)
+        game:set_suspended(false)
+        if map.do_after_transition then
+          map.do_after_transition()
+        end
+      end)
     end
   end)
 

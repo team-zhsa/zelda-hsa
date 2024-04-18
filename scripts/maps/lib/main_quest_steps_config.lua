@@ -20,6 +20,8 @@ local steps={
   "castle_unlocked",
   "castle_completed",
   -- ...
+  "dungeon_4_started",
+  "dungeon_4_completed",
   "dungeon_5_started",
   "dungeon_5_completed",
   "zora_flippers_obtained",
@@ -30,7 +32,25 @@ local steps={
   "lighthouse_unlocked",
   "book_of_mudora_obtained",
   "dungeon_7_started",
-  "dungeon_7_completed"
+  "dungeon_7_completed",
+  "dungeon_8_started",
+  "dungeon_8_completed",
+  "dungeon_9_started",
+  "dungeon_9_completed",
+  "dungeon_10_started",
+  "dungeon_10_completed",
+  "dungeon_11_started",
+  "dungeon_11_completed",
+  "dungeon_12_started",
+  "dungeon_12_completed",
+  "dungeon_13_started",
+  "dungeon_13_completed",
+  "dungeon_14_started",
+  "dungeon_14_completed",
+  "dungeon_15_started",
+  "dungeon_15_completed",
+  "dungeon_17_started",
+  "dungeon_17_completed",
 }
 
 local index={}
