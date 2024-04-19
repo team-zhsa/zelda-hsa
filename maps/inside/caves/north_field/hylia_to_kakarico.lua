@@ -10,13 +10,12 @@
 local map = ...
 local game = map:get_game()
 local separator_manager = require("scripts/maps/separator_manager.lua")
-require("scripts/maps/light_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 --	separator_manager:manage_map(map)
 
-	map:set_light(0)
+	map.fsa_dark = true
   -- You can initialise the movement and sprites of various
   -- map entities here.
 end)

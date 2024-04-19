@@ -25,7 +25,6 @@ text{ key = "hud.swim", value = "Nager" }
 text{ key = "hud.throw", value = "Jeter" }
 text{ key = "hud.validate", value = "Valider" }
 text{ key = "inventory.caption.item._placeholder.1", value = "Item$" }
-text{ key = "inventory.caption.item.bird_key.1", value = "Clé vautour$" }
 text{ key = "inventory.caption.item.blue_tunic.1", value = "Cotte de Mailles$bleue" }
 text{ key = "inventory.caption.item.bomb_counter.1", value = "Bombes$" }
 text{ key = "inventory.caption.item.book_of_mudora.1", value = "Livre de Mudora$" }
@@ -56,7 +55,6 @@ text{ key = "inventory.caption.item.bottle_4.5", value = "Potion bleue$" }
 text{ key = "inventory.caption.item.bottle_4.6", value = "Fée$" }
 text{ key = "inventory.caption.item.bow.1", value = "Arc$" }
 text{ key = "inventory.caption.item.bow.2", value = "Arc et Flèches$" }
-text{ key = "inventory.caption.item.carte.1", value = "Carte d'Hyrule$" }
 text{ key = "inventory.caption.item.crystal_1.1", value = "Cristal" }
 text{ key = "inventory.caption.item.crystal_2.1", value = "Cristal" }
 text{ key = "inventory.caption.item.crystal_3.1", value = "Cristal" }
@@ -64,9 +62,10 @@ text{ key = "inventory.caption.item.crystal_4.1", value = "Cristal" }
 text{ key = "inventory.caption.item.crystal_5.1", value = "Cristal" }
 text{ key = "inventory.caption.item.crystal_6.1", value = "Cristal" }
 text{ key = "inventory.caption.item.crystal_7.1", value = "Cristal" }
+text{ key = "inventory.caption.item.din_flame.1", value = "Flamme de Din$" }
 text{ key = "inventory.caption.item.divine_ore.1", value = "Roche Divine" }
-text{ key = "inventory.caption.item.drug.1", value = "Médicament secret$" }
 text{ key = "inventory.caption.item.face_key.1", value = "Clé du masque$" }
+text{ key = "inventory.caption.item.farore_quake.1", value = "Secousse de Farore$" }
 text{ key = "inventory.caption.item.feather.1", value = "Plume$" }
 text{ key = "inventory.caption.item.fire_rod.1", value = "Bâton de feu$" }
 text{ key = "inventory.caption.item.flippers.1", value = "Palmes$" }
@@ -78,9 +77,7 @@ text{ key = "inventory.caption.item.hammer.1", value = "Marteau$" }
 text{ key = "inventory.caption.item.healing_wand.1", value = "Sceptre de soin$" }
 text{ key = "inventory.caption.item.healing_wand.2", value = "Sceptre de soin$" }
 text{ key = "inventory.caption.item.healing_wand.3", value = "Sceptre de soin$" }
-text{ key = "inventory.caption.item.hero_shield.1", value = "Bouclier du héros$" }
 text{ key = "inventory.caption.item.hookshot.1", value = "Grappin$" }
-text{ key = "inventory.caption.item.hylia_shield.1", value = "Bouclier d'Hylia$" }
 text{ key = "inventory.caption.item.ice_rod.1", value = "Baguette de glace$" }
 text{ key = "inventory.caption.item.lamp.1", value = "Lanterne$" }
 text{ key = "inventory.caption.item.lens_of_truth.1", value = "Monocle de Vérité$" }
@@ -100,14 +97,14 @@ text{ key = "inventory.caption.item.magnifying_lens.6", value = "Miel$" }
 text{ key = "inventory.caption.item.magnifying_lens.7", value = "Ananas$" }
 text{ key = "inventory.caption.item.magnifying_lens.8", value = "Hibiscus$" }
 text{ key = "inventory.caption.item.magnifying_lens.9", value = "Lettre$" }
-text{ key = "inventory.caption.item.mirror_shield.1", value = "Bouclier miroir$" }
 text{ key = "inventory.caption.item.monster_claw.1", value = "Griffe de monstre" }
 text{ key = "inventory.caption.item.monster_gut.1", value = "Foie de monstre" }
 text{ key = "inventory.caption.item.monster_horn.1", value = "Corne de monstre" }
 text{ key = "inventory.caption.item.monster_tail.1", value = "Queue de monstre" }
 text{ key = "inventory.caption.item.mushroom.1", value = "Champignon$" }
+text{ key = "inventory.caption.item.nayru_ether.1", value = "Ether de Nayru$" }
 text{ key = "inventory.caption.item.ocarina.1", value = "Ocarina$" }
-text{ key = "inventory.caption.item.pegasus_shoes.1", value = "Bottes de Pégase$" }
+text{ key = "inventory.caption.item.pegasus_boots.1", value = "Bottes de Pégase$" }
 text{ key = "inventory.caption.item.pendant_1.1", value = "Pendentif du Courage" }
 text{ key = "inventory.caption.item.pendant_2.1", value = "Pendentif du Pouvoir" }
 text{ key = "inventory.caption.item.pendant_3.1", value = "Pendentif de la Sagesse" }
@@ -121,6 +118,9 @@ text{ key = "inventory.caption.item.power_gloves.2", value = "Moufle du Titan" }
 text{ key = "inventory.caption.item.red_tunic.1", value = "Cotte de Mailles$rouge" }
 text{ key = "inventory.caption.item.seas_map.1", value = "Carte des Mers$" }
 text{ key = "inventory.caption.item.seashell_counter.1", value = "Coquillages$" }
+text{ key = "inventory.caption.item.shield_hero.1", value = "Bouclier du héros$" }
+text{ key = "inventory.caption.item.shield_hylia.1", value = "Bouclier d'Hylia$" }
+text{ key = "inventory.caption.item.shield_mirror.1", value = "Bouclier miroir$" }
 text{ key = "inventory.caption.item.shovel.1", value = "Pelle$" }
 text{ key = "inventory.caption.item.slim_key.1", value = "Clé cyclope$" }
 text{ key = "inventory.caption.item.somaria_cane.1", value = "Canne de Somaria$" }
@@ -200,7 +200,7 @@ text{ key = "map.names.out.kokiri_village", value = "Village Kokiri$" }
 text{ key = "map.names.out.lonlon_ranch", value = "Ranch Lon Lon$" }
 text{ key = "map.names.out.lost_woods", value = "Bois Perdus$" }
 text{ key = "map.names.out.miracles_coast", value = "Côte des miracles$" }
-text{ key = "map.names.out.north_field", value = "Plaine d'Hyrule du Nord$" }
+text{ key = "map.names.out.north_field", value = "Plaine du Nord$" }
 text{ key = "map.names.out.north_west_castle", value = "Autour du Château$" }
 text{ key = "map.names.out.parapa_bay", value = "Baie de Parapa$" }
 text{ key = "map.names.out.parapa_town", value = "Village de Parapa$" }
@@ -208,7 +208,7 @@ text{ key = "map.names.out.parapa_valley", value = "Vallée de Parapa$" }
 text{ key = "map.names.out.rito_village", value = "Village Piaf$" }
 text{ key = "map.names.out.ruins", value = "Ruines du Nord$" }
 text{ key = "map.names.out.snowpeaks", value = "Pics des Neiges$" }
-text{ key = "map.names.out.south_field", value = "Plaine d'Hyrule du Sud$" }
+text{ key = "map.names.out.south_field", value = "Plaine du Sud$" }
 text{ key = "map.names.out.swamp", value = "Marais du Sud$" }
 text{ key = "map.names.out.west_mountains", value = "Montagnes de l'Ouest$" }
 text{ key = "map.names.out.zora_falls", value = "Cascades Zora$" }

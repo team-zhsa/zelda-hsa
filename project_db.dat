@@ -36,7 +36,6 @@ map{ id = "dungeons/17/b1", description = "Ganon's Tower (Basement 1)" }
 map{ id = "dungeons/17/b2", description = "Ganon's Tower (Basement 2)" }
 map{ id = "dungeons/2/0f", description = "Forest Temple (Ground Floor)" }
 map{ id = "dungeons/2/1f", description = "Forest Temple (1st Floor)" }
-map{ id = "dungeons/2/2f", description = "Forest Temple (Unused, 2nd Floor)" }
 map{ id = "dungeons/2/b1", description = "Forest Temple (Basement 1)" }
 map{ id = "dungeons/2/b2", description = "Forest Temple (Basement 2)" }
 map{ id = "dungeons/2/b3", description = "Forest Temple (Basement 3)" }
@@ -46,40 +45,28 @@ map{ id = "dungeons/3/b1", description = "Fire Temple (Basement 1)" }
 map{ id = "dungeons/3/b2", description = "Fire Temple (Basement 2)" }
 map{ id = "dungeons/3/b3", description = "Fire Temple (Basement 3)" }
 map{ id = "dungeons/3/b4", description = "Fire Temple (Basement 4)" }
-map{ id = "dungeons/3v/1f", description = "Fire Temple (Unused)" }
-map{ id = "dungeons/3v/b1", description = "Fire Temple (Unused)" }
 map{ id = "dungeons/4/0f", description = "Deku Tree (Ground Floor)" }
 map{ id = "dungeons/5/0f", description = "Dodongo's Cavern (Ground Floor)" }
 map{ id = "dungeons/5/1f", description = "Dodongo's Cavern (1st Floor)" }
 map{ id = "dungeons/5/2f", description = "Dodongo's Cavern (2nd Floor)" }
 map{ id = "dungeons/6/0f", description = "Water Temple (Ground Floor)" }
 map{ id = "dungeons/6/b1", description = "Water Temple (Basement 1)" }
+map{ id = "dungeons/6/b2", description = "Water Temple (Basement 2)" }
+map{ id = "dungeons/6/b3", description = "Water Temple (Basement 3)" }
 map{ id = "dungeons/7/0f", description = "Desert Palace (Ground Floor)" }
 map{ id = "dungeons/7/1f", description = "Desert Palace (1st Floor)" }
 map{ id = "dungeons/7/b1", description = "Desert Palace (Basement 1)" }
 map{ id = "dungeons/8/0f", description = "Jabu Jabu's Belly (Ground Floor)" }
 map{ id = "dungeons/8/b1", description = "Jabu Jabu's Belly (Basement 1)" }
-map{ id = "dungeons/9/0f", description = "César's Mountain (Ground Floor)" }
-map{ id = "dungeons/9/2f", description = "César's Mountain (2nd Floor)" }
-map{ id = "dungeons/9/4f", description = "César's Mountain (4th Floor)" }
+map{ id = "dungeons/9/0f", description = "César's Peak (Ground Floor)" }
+map{ id = "dungeons/9/1f", description = "César's Peak (1st Floor)" }
+map{ id = "dungeons/9/2f", description = "César's Peak (2nd Floor)" }
+map{ id = "dungeons/9/3f", description = "César's Peak (3rd Floor)" }
+map{ id = "dungeons/9/4f", description = "César's Peak (4th Floor)" }
+map{ id = "dungeons/9/5f", description = "César's Peak (5th Floor)" }
 map{ id = "dungeons/secret/1f", description = "Secret Dungeon (1st Floor)" }
-map{ id = "examples/beach_store", description = "Beach Store" }
-map{ id = "examples/c1_flood_only", description = "Outside C1 (only flooded parts)" }
-map{ id = "examples/cave_store", description = "Cave Store" }
-map{ id = "examples/eastern_palace", description = "Eastern Palace" }
-map{ id = "examples/entrance_to_death_mountain", description = "Entrance to Death Mountain" }
-map{ id = "examples/entrance_to_zoras_river", description = "examples/entrance_to_zoras_river" }
-map{ id = "examples/fortune_teller", description = "examples/fortune_teller" }
-map{ id = "examples/hyrule_castle", description = "ALTTP Hyrule Castle outside" }
 map{ id = "examples/inside_store", description = "Inside Store" }
-map{ id = "examples/island", description = "island" }
-map{ id = "examples/kakariko_village", description = "ALTTP Kakariko Village" }
-map{ id = "examples/links_yard", description = "examples/links_yard" }
-map{ id = "examples/lost_woods", description = "Lost Woods" }
-map{ id = "examples/lumberjacks_house", description = "examples/lumberjacks_house" }
-map{ id = "examples/others", description = "Others" }
 map{ id = "examples/outside_store", description = "Outside Store" }
-map{ id = "examples/sw_entry_to_lost_woods", description = "examples/sw_entry_to_lost_woods" }
 map{ id = "extensions/east_continent/a1", description = "A1 (West Coast)" }
 map{ id = "extensions/east_continent/out", description = "Outside" }
 map{ id = "extensions/southern_hyrule/out/map_00", description = "Map 00" }
@@ -97,6 +84,7 @@ map{ id = "extensions/southern_hyrule/out/map_20", description = "Map 20" }
 map{ id = "extensions/southern_hyrule/out/map_26", description = "Map 26" }
 map{ id = "inside/castle/0f", description = "Castle (Ground Floor)" }
 map{ id = "inside/castle/rooms", description = "Castle (Bedrooms)" }
+map{ id = "inside/caves/cordinia_town/fairy_cave", description = "Fairy Cave" }
 map{ id = "inside/caves/death_mountains/unused_cave", description = "Unused Cave" }
 map{ id = "inside/caves/east_castle/blacksmith_cave", description = "Blacksmith Cave" }
 map{ id = "inside/caves/east_castle/east_swamp_cave", description = "East Swamp Cave" }
@@ -112,10 +100,10 @@ map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = 
 map{ id = "inside/caves/hyrule_town/lamp_cave", description = "Lamp Cave" }
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
 map{ id = "inside/caves/mountains/fairy_cave_1", description = "West Fairy Cave" }
-map{ id = "inside/caves/mountains/goron_town_1f", description = "Goron Town (1st Floor)" }
+map{ id = "inside/caves/mountains/goron_town_0f", description = "Goron Town (1st Floor)" }
 map{ id = "inside/caves/mountains/goron_town_b1", description = "Goron Town (Basement 1)" }
 map{ id = "inside/caves/mountains/lost_old_man", description = "Lost old man cave" }
-map{ id = "inside/caves/mountains/spectacle_rock_1f", description = "Spectacle Rock (1st Floor)" }
+map{ id = "inside/caves/mountains/spectacle_rock_0f", description = "Spectacle Rock (1st Floor)" }
 map{ id = "inside/caves/mountains/spectacle_rock_b1", description = "Spectacle Rock (Basement 1)" }
 map{ id = "inside/caves/mountains/to_fire_temple", description = "Cave to the Fire Temple" }
 map{ id = "inside/caves/mountains/to_west_upper_mountains_0f", description = "Cave to Spectacle Rock (Ground Floor)" }
@@ -145,6 +133,7 @@ map{ id = "inside/houses/east_castle/garden_house", description = "Garden House"
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/gerudo_village/shop", description = "Gerudo shop" }
+map{ id = "inside/houses/gerudo_village/training_grounds", description = "Gerudo training grounds" }
 map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
 map{ id = "inside/houses/hyrule_town/bakery", description = "Bakery" }
 map{ id = "inside/houses/hyrule_town/bank", description = "Bank" }
@@ -154,6 +143,7 @@ map{ id = "inside/houses/hyrule_town/grey_house", description = "Grey House" }
 map{ id = "inside/houses/hyrule_town/inn", description = "Hyrule Town Inn" }
 map{ id = "inside/houses/hyrule_town/laundry_house", description = "Laundry House" }
 map{ id = "inside/houses/hyrule_town/library", description = "Library" }
+map{ id = "inside/houses/hyrule_town/pink_house", description = "Pink shop" }
 map{ id = "inside/houses/hyrule_town/purple_house", description = "Purple House" }
 map{ id = "inside/houses/hyrule_town/shop", description = "Shop" }
 map{ id = "inside/houses/hyrule_town/temple_of_time", description = "Temple of Time" }
@@ -190,18 +180,16 @@ map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
 map{ id = "inside/shrines/attack", description = "Doomsday map" }
-map{ id = "inside/shrines/cure", description = "inside/spell_caves/cure" }
+map{ id = "inside/shrines/golden_lynel/0f", description = "inside/shrines/golden_lynel/0f" }
 map{ id = "inside/shrines/lighthouse/0f", description = "Lighthouse (Ground Floor)" }
 map{ id = "inside/shrines/lighthouse/1f", description = "Lighthouse (1st Floor)" }
 map{ id = "inside/shrines/shibo_nayru/0f", description = "Shibo Nayru's Shrine (Ground Floor)" }
 map{ id = "memory/00", description = "(Unused)" }
-map{ id = "memory/01", description = "(Unused)" }
 map{ id = "menus/credits", description = "Credits" }
 map{ id = "menus/introduction", description = "Introduction" }
 map{ id = "menus/outside_map", description = "Outside map" }
 map{ id = "misc/lost_woods", description = "Lost Woods test" }
 map{ id = "misc/minigame_arrow", description = "Arrow Minigame" }
-map{ id = "misc/pre_mapping", description = "Pre mapping" }
 map{ id = "misc/test_arena", description = "Testing Arena" }
 map{ id = "misc/test_ground", description = "Testing Ground" }
 map{ id = "out/a1", description = "A1 (Ruins)" }
@@ -259,7 +247,7 @@ map{ id = "out/f7", description = "F7 (Great Swamp)" }
 map{ id = "out/f8", description = "F8 (Miracles Coast)" }
 map{ id = "out/f9", description = "F9 (Sea)" }
 map{ id = "out/g1", description = "G1 (East Mountains, Cesar's Peak)" }
-map{ id = "out/g2", description = "G2 (Zora River)" }
+map{ id = "out/g2", description = "G2 (East of the Castle)" }
 map{ id = "out/g3", description = "G3 (Hyrule Field)" }
 map{ id = "out/g4", description = "G4 (Hyrule Field, Temple of Time)" }
 map{ id = "out/g5", description = "G5 (Hyrule Field)" }
@@ -339,7 +327,7 @@ tileset{ id = "absolute_dungeon_21", description = "Blue Purple" }
 tileset{ id = "absolute_dungeon_22", description = "Turquoise" }
 tileset{ id = "absolute_dungeon_23", description = "Light Yellow" }
 tileset{ id = "desert", description = "Gerudo Desert" }
-tileset{ id = "dungeon-minimap", description = "Dungeon minimap" }
+tileset{ id = "dungeon_minimap", description = "Dungeon minimap" }
 tileset{ id = "outside_additions", description = "Outside Additions" }
 tileset{ id = "outside_buildings", description = "Outside Buildings" }
 tileset{ id = "outside_main", description = "Outside Main" }
@@ -431,6 +419,7 @@ sprite{ id = "enemies/dungeons/leever_green", description = "Green Leever" }
 sprite{ id = "enemies/dungeons/leever_purple", description = "Purple Leever" }
 sprite{ id = "enemies/dungeons/lizalfos", description = "Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_blue", description = "Blue Lizalfos" }
+sprite{ id = "enemies/dungeons/lizalfos_purple", description = "Purple Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_red", description = "Red Lizalfos" }
 sprite{ id = "enemies/dungeons/lizalfos_spear", description = "Lizalfos Spear" }
 sprite{ id = "enemies/dungeons/lizalfos_sword", description = "Lizalfos Sword" }
@@ -459,6 +448,7 @@ sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_blue", description = "Blue Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_green", description = "Green Tentacle" }
+sprite{ id = "enemies/dungeons/tentacle_ice", description = "Ice Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_orange", description = "Orange Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_purple", description = "Purple Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_yellow", description = "Yellow Tentacle" }
@@ -482,25 +472,40 @@ sprite{ id = "enemies/outside/armos_green", description = "Green Armos" }
 sprite{ id = "enemies/outside/armos_ice", description = "Ice Armos" }
 sprite{ id = "enemies/outside/armos_yellow", description = "Yellow Armos" }
 sprite{ id = "enemies/outside/blob_blue", description = "Blue Blob" }
-sprite{ id = "enemies/outside/blob_cyan", description = "Cyan Blob" }
 sprite{ id = "enemies/outside/blob_green", description = "Green Blob" }
+sprite{ id = "enemies/outside/blob_grey", description = "Grey Blob" }
+sprite{ id = "enemies/outside/blob_ice", description = "Ice Blob" }
 sprite{ id = "enemies/outside/blob_red", description = "Red Blob" }
 sprite{ id = "enemies/outside/blob_yellow", description = "Yellow Blob" }
 sprite{ id = "enemies/outside/bomber", description = "Bomber" }
 sprite{ id = "enemies/outside/boulder", description = "Boulder" }
 sprite{ id = "enemies/outside/chicken", description = "Chicken" }
-sprite{ id = "enemies/outside/chicken_mortal", description = "Mortal Chicken" }
 sprite{ id = "enemies/outside/crab", description = "Crab" }
 sprite{ id = "enemies/outside/crow", description = "Crow" }
+sprite{ id = "enemies/outside/cukeman_blue", description = "Blue Cukeman" }
+sprite{ id = "enemies/outside/cukeman_green", description = "Green Cukeman" }
+sprite{ id = "enemies/outside/cukeman_grey", description = "Grey Cukeman" }
+sprite{ id = "enemies/outside/cukeman_ice", description = "Ice Cukeman" }
+sprite{ id = "enemies/outside/cukeman_red", description = "Red Cukeman" }
+sprite{ id = "enemies/outside/cukeman_yellow", description = "Yellow Cukeman" }
 sprite{ id = "enemies/outside/deadrock", description = "Deadrock" }
 sprite{ id = "enemies/outside/geldman", description = "Geldman" }
 sprite{ id = "enemies/outside/hinox", description = "Hinox" }
+sprite{ id = "enemies/outside/hinox_black", description = "Black Hinox" }
 sprite{ id = "enemies/outside/hinox_blue", description = "Blue Hinox" }
+sprite{ id = "enemies/outside/hinox_green", description = "Green Hinox" }
+sprite{ id = "enemies/outside/like_like", description = "Like Like" }
+sprite{ id = "enemies/outside/like_like_ice", description = "Ice Like Like" }
+sprite{ id = "enemies/outside/like_like_purple", description = "Purple Like Like" }
+sprite{ id = "enemies/outside/like_rupee_blue", description = "Blue Rupee Like" }
+sprite{ id = "enemies/outside/like_rupee_green", description = "Green Rupee Like" }
+sprite{ id = "enemies/outside/like_rupee_red", description = "Red Rupee Like" }
 sprite{ id = "enemies/outside/lynel", description = "Lynel" }
-sprite{ id = "enemies/outside/lynel_baby_red", description = "Red Baby Lynel" }
 sprite{ id = "enemies/outside/lynel_black", description = "Black Lynel" }
 sprite{ id = "enemies/outside/lynel_blue", description = "Blue Lynel" }
-sprite{ id = "enemies/outside/lynel_platine", description = "Platine Lynel" }
+sprite{ id = "enemies/outside/lynel_gold", description = "Golden Lynel" }
+sprite{ id = "enemies/outside/lynel_green", description = "Green Lynel" }
+sprite{ id = "enemies/outside/lynel_ice", description = "Ice Lynel" }
 sprite{ id = "enemies/outside/lynel_silver", description = "Silver Lynel" }
 sprite{ id = "enemies/outside/moblin", description = "Moblin" }
 sprite{ id = "enemies/outside/moblin_red", description = "Red Moblin" }
@@ -523,6 +528,8 @@ sprite{ id = "enemies/outside/whirlwind", description = "Whirlwind" }
 sprite{ id = "enemies/outside/zola", description = "Zola" }
 sprite{ id = "enemies/outside/zora", description = "Zora" }
 sprite{ id = "enemies/projectiles/axe", description = "Axe" }
+sprite{ id = "enemies/projectiles/ballchain_ball", description = "Ballchain ball" }
+sprite{ id = "enemies/projectiles/ballchain_chain", description = "Ballchain chain" }
 sprite{ id = "enemies/projectiles/bat", description = "Bat" }
 sprite{ id = "enemies/projectiles/beam", description = "Wizzrobe Beam" }
 sprite{ id = "enemies/projectiles/bomb", description = "Bomb" }
@@ -534,29 +541,36 @@ sprite{ id = "enemies/projectiles/shadowball", description = "Shadowball" }
 sprite{ id = "enemies/projectiles/spear", description = "Spear" }
 sprite{ id = "enemies/projectiles/stone", description = "Stone" }
 sprite{ id = "enemies/projectiles/stone_light", description = "Light stone" }
+sprite{ id = "enemies/projectiles/sword", description = "Sword" }
+sprite{ id = "enemies/soldiers/knight_black", description = "Black Knight" }
+sprite{ id = "enemies/soldiers/knight_black_ballchain", description = "Black ballchain knight" }
+sprite{ id = "enemies/soldiers/knight_black_sword", description = "Black Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_blue", description = "Blue Knight" }
+sprite{ id = "enemies/soldiers/knight_blue_sword", description = "Blue Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_ice", description = "Ice Knight" }
+sprite{ id = "enemies/soldiers/knight_ice_sword", description = "Ice Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_myrtle", description = "Myrtle Knight" }
+sprite{ id = "enemies/soldiers/knight_myrtle_sword", description = "Myrtle Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_red", description = "Red Knight" }
+sprite{ id = "enemies/soldiers/knight_red_sword", description = "Red Knight Sword" }
+sprite{ id = "enemies/soldiers/knight_spear", description = "Knight Spear" }
+sprite{ id = "enemies/soldiers/knight_yellow", description = "Yellow Knight" }
+sprite{ id = "enemies/soldiers/knight_yellow_ballchain", description = "Yellow ballchain knight" }
+sprite{ id = "enemies/soldiers/knight_yellow_sword", description = "Yellow Knight Sword" }
+sprite{ id = "enemies/soldiers/soldier_blue", description = "Blue Soldier" }
+sprite{ id = "enemies/soldiers/soldier_blue_sword", description = "Blue Soldier Sword" }
 sprite{ id = "enemies/soldiers/soldier_cannon", description = "Cannon Soldier" }
-sprite{ id = "enemies/soldiers/spear_knight_blue", description = "Blue Spear Knight" }
-sprite{ id = "enemies/soldiers/spear_knight_blue_weapon", description = "Blue Spear Knight Weapon" }
-sprite{ id = "enemies/soldiers/spear_knight_red", description = "Red Spear Knight" }
-sprite{ id = "enemies/soldiers/spear_knight_red_weapon", description = "Red Spear Knight Weapon" }
-sprite{ id = "enemies/soldiers/spear_soldier_black", description = "Black Spear Soldier" }
-sprite{ id = "enemies/soldiers/spear_soldier_black_weapon", description = "Black Spear Soldier Weapon" }
-sprite{ id = "enemies/soldiers/spear_soldier_blue", description = "Blue Spear Soldier" }
-sprite{ id = "enemies/soldiers/spear_soldier_blue_weapon", description = "Blue Spear Soldier Weapon" }
-sprite{ id = "enemies/soldiers/spear_soldier_green", description = "Green Spear Soldier" }
-sprite{ id = "enemies/soldiers/spear_soldier_green_weapon", description = "Green Spear Soldier Weapon" }
-sprite{ id = "enemies/soldiers/spear_soldier_red", description = "Red Spear Soldier" }
-sprite{ id = "enemies/soldiers/spear_soldier_red_weapon", description = "Red Spear Soldier Wp." }
-sprite{ id = "enemies/soldiers/sword_knight_blue", description = "Blue Sword Knight" }
-sprite{ id = "enemies/soldiers/sword_knight_blue_weapon", description = "Blue Sword Knight Weapon" }
-sprite{ id = "enemies/soldiers/sword_soldier_blue", description = "Blue Sword Soldier" }
-sprite{ id = "enemies/soldiers/sword_soldier_blue_weapon", description = "Blue Sword Soldier Wp." }
-sprite{ id = "enemies/soldiers/sword_soldier_dark_green", description = "Myrtle Sword Soldier" }
-sprite{ id = "enemies/soldiers/sword_soldier_dark_green_weapon", description = "Dark Myrtle Sword Soldier Wp." }
-sprite{ id = "enemies/soldiers/sword_soldier_green", description = "Green Sword Soldier" }
-sprite{ id = "enemies/soldiers/sword_soldier_green_weapon", description = "Green Sword Soldier Wp." }
-sprite{ id = "enemies/soldiers/sword_soldier_yellow", description = "Yellow Sword Soldier" }
-sprite{ id = "enemies/soldiers/sword_soldier_yellow_weapon", description = "Yellow Sword SoldierWp." }
+sprite{ id = "enemies/soldiers/soldier_green", description = "Green Soldier" }
+sprite{ id = "enemies/soldiers/soldier_green_sword", description = "Green Soldier Sword" }
+sprite{ id = "enemies/soldiers/soldier_ice", description = "Ice Soldier" }
+sprite{ id = "enemies/soldiers/soldier_ice_sword", description = "Ice Soldier Sword" }
+sprite{ id = "enemies/soldiers/soldier_myrtle", description = "Myrtle Soldier" }
+sprite{ id = "enemies/soldiers/soldier_myrtle_sword", description = "Myrtle Soldier Sword" }
+sprite{ id = "enemies/soldiers/soldier_red", description = "Red Soldier" }
+sprite{ id = "enemies/soldiers/soldier_red_sword", description = "Red Soldier Sword" }
+sprite{ id = "enemies/soldiers/soldier_spear", description = "Soldier Spear" }
+sprite{ id = "enemies/soldiers/soldier_yellow", description = "Yellow Soldier" }
+sprite{ id = "enemies/soldiers/soldier_yellow_sword", description = "Yellow Soldier Sword" }
 sprite{ id = "enemies/soldiers/tarosu_blue", description = "Blue Tarosu" }
 sprite{ id = "enemies/soldiers/tarosu_blue_weapon", description = "Blue Tarosu Weapon" }
 sprite{ id = "enemies/soldiers/tarosu_red", description = "Red Tarosu" }
@@ -564,10 +578,6 @@ sprite{ id = "enemies/soldiers/tarosu_red_weapon", description = "Red Tarosu Wea
 sprite{ id = "entities/arrow", description = "Arrow" }
 sprite{ id = "entities/ball", description = "Ball" }
 sprite{ id = "entities/ball_shadow", description = "Ball shadow" }
-sprite{ id = "entities/beach_debris_1", description = "Beach debris 1" }
-sprite{ id = "entities/beach_debris_2", description = "Beach debris 2" }
-sprite{ id = "entities/beach_debris_3", description = "Beach debris 3" }
-sprite{ id = "entities/beach_debris_4", description = "Beach debris 4" }
 sprite{ id = "entities/bed", description = "Hero's bed" }
 sprite{ id = "entities/big_chest", description = "Chest (big)" }
 sprite{ id = "entities/block", description = "Block" }
@@ -591,54 +601,48 @@ sprite{ id = "entities/boomerang1", description = "Boomerang 1" }
 sprite{ id = "entities/boomerang2", description = "Boomerang 2" }
 sprite{ id = "entities/bow", description = "Bow" }
 sprite{ id = "entities/bumper", description = "Bumper" }
-sprite{ id = "entities/bushes/bush_d_01", description = "Bush (Dark World 01)" }
-sprite{ id = "entities/bushes/bush_d_02", description = "Bush (Dark World 02)" }
-sprite{ id = "entities/bushes/bush_d_03", description = "Bush (Dark World 03)" }
-sprite{ id = "entities/bushes/bush_d_04", description = "Bush (Dark World 04)" }
-sprite{ id = "entities/bushes/bush_d_05", description = "Bush (Dark World 05)" }
-sprite{ id = "entities/bushes/bush_d_06", description = "Bush (Dark World 06)" }
-sprite{ id = "entities/bushes/bush_d_07", description = "Bush (Dark World 07)" }
-sprite{ id = "entities/bushes/bush_d_08", description = "Bush (Dark World 08)" }
-sprite{ id = "entities/bushes/bush_d_09", description = "Bush (Dark World 09)" }
-sprite{ id = "entities/bushes/bush_d_10", description = "Bush (Dark World 10)" }
-sprite{ id = "entities/bushes/bush_l_01", description = "Bush (Light World 01)" }
-sprite{ id = "entities/bushes/bush_l_02", description = "Bush (Light World 02)" }
-sprite{ id = "entities/bushes/bush_l_03", description = "Bush (Light World 03)" }
-sprite{ id = "entities/bushes/bush_l_04", description = "Bush (Light World 04)" }
-sprite{ id = "entities/bushes/bush_l_05", description = "Bush (Light World 05)" }
-sprite{ id = "entities/bushes/bush_l_06", description = "Bush (Light World 06)" }
-sprite{ id = "entities/bushes/bush_l_07", description = "Bush (Light World 07)" }
-sprite{ id = "entities/bushes/bush_l_08", description = "Bush (Light World 08)" }
-sprite{ id = "entities/bushes/bush_l_09", description = "Bush (Light World 09)" }
-sprite{ id = "entities/bushes/bush_l_10", description = "Bush (Light World 10)" }
+sprite{ id = "entities/bushes/bush_d_01", description = "Green bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_02", description = "Red bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_03", description = "Blue bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_04", description = "Yellow bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_05", description = "Purple bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_06", description = "Grey bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_07", description = "Light green bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_08", description = "Pink bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_09", description = "Orange bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_d_10", description = "Ice bush (Dark World)" }
+sprite{ id = "entities/bushes/bush_l_01", description = "Green bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_02", description = "Red bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_03", description = "Blue bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_04", description = "Yellow bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_05", description = "Purple bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_06", description = "Grey bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_07", description = "Light green bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_08", description = "Pink bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_09", description = "Orange bush (Light World)" }
+sprite{ id = "entities/bushes/bush_l_10", description = "Ice bush (Light World)" }
 sprite{ id = "entities/camera", description = "Camera" }
-sprite{ id = "entities/cannonball", description = "Cannon ball" }
 sprite{ id = "entities/castle_seal", description = "Castle Seal" }
 sprite{ id = "entities/chest", description = "Chest (normal)" }
 sprite{ id = "entities/chests/chest", description = "Chest" }
-sprite{ id = "entities/chests/chest_LttP", description = "ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big", description = "Big Wooden Chest" }
-sprite{ id = "entities/chests/chest_big_LttP", description = "Big ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big_blue", description = "Big Blue Chest" }
 sprite{ id = "entities/chests/chest_big_green", description = "Big Green Chest" }
+sprite{ id = "entities/chests/chest_big_normal", description = "Big ALTTP Chest" }
 sprite{ id = "entities/chests/chest_big_red", description = "Big Red Chest" }
 sprite{ id = "entities/chests/chest_big_yellow", description = "Big Yellow Chest" }
 sprite{ id = "entities/chests/chest_blue", description = "Blue Chest" }
 sprite{ id = "entities/chests/chest_boss", description = "Boss Chest" }
 sprite{ id = "entities/chests/chest_green", description = "Green Chest" }
+sprite{ id = "entities/chests/chest_normal", description = "ALTTP Chest" }
 sprite{ id = "entities/chests/chest_red", description = "Red Chest" }
 sprite{ id = "entities/chests/chest_yellow", description = "Yellow Chest" }
 sprite{ id = "entities/collapsing_tiles/collapse_tile1", description = "Collapsing Tile 1" }
 sprite{ id = "entities/collapsing_tiles/collapse_tile2", description = "Collapsing Tile 2" }
 sprite{ id = "entities/collapsing_tiles/collapse_tile3", description = "Collapsing Tile 3" }
 sprite{ id = "entities/collapsing_tiles/collapse_tile4", description = "Collapsing Tile 4" }
-sprite{ id = "entities/conveyor_belt1", description = "Conveyor belt 1" }
-sprite{ id = "entities/conveyor_belt2", description = "Conveyor belt 2" }
-sprite{ id = "entities/conveyor_belt3", description = "Conveyor belt 3" }
-sprite{ id = "entities/conveyor_belt4", description = "Conveyor belt 4" }
 sprite{ id = "entities/crystal", description = "Crystal" }
 sprite{ id = "entities/crystal_block", description = "Crystal block" }
-sprite{ id = "entities/destination", description = "Destination of teletransporter" }
 sprite{ id = "entities/destructibles/bomb_flower", description = "Bomb Flower" }
 sprite{ id = "entities/destructibles/pot01", description = "Pot 1 (Outside)" }
 sprite{ id = "entities/destructibles/pot02", description = "Pot 2 (Outside)" }
@@ -655,48 +659,48 @@ sprite{ id = "entities/destructibles/skull04", description = "Skull 4 (Outside)"
 sprite{ id = "entities/destructibles/vase", description = "Vase" }
 sprite{ id = "entities/destructibles/vase_skull", description = "Skull Vase" }
 sprite{ id = "entities/doors/inside/castle_lock", description = "Castle Lock" }
-sprite{ id = "entities/doors/inside/door_blue_key_block1", description = "Blue Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_blue_key", description = "Blue Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_green_key", description = "Green Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_red_key", description = "Red Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_silver_key", description = "Yellow Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_small_key", description = "Small Key (Block)" }
+sprite{ id = "entities/doors/inside/door_block_weak", description = "Weak Block" }
 sprite{ id = "entities/doors/inside/door_d1_big_key", description = "Big Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_blue_key", description = "Blue Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_boss_key1", description = "Boss Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_green_key", description = "Green Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_normal", description = "Normal (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_red_key", description = "Red Key (Type 1)" }
+sprite{ id = "entities/doors/inside/door_d1_silver_key", description = "Yellow Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_small_key", description = "Small Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_very_weak_wall", description = "Very Weak Wall (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d1_weak_wall", description = "Weak Wall (Type 1)" }
-sprite{ id = "entities/doors/inside/door_d1_yellow_key", description = "Yellow Key (Type 1)" }
 sprite{ id = "entities/doors/inside/door_d2_big_key", description = "Big Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_blue_key", description = "Blue Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_boss_key", description = "Boss Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_green_key", description = "Green Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_normal", description = "Normal (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_red_key", description = "Red Key (Type 2)" }
+sprite{ id = "entities/doors/inside/door_d2_silver_key", description = "Yellow Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_small_key", description = "Small Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_very_weak_wall", description = "Very Weak Wall (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d2_weak_wall", description = "Weak Wall (Type 2)" }
-sprite{ id = "entities/doors/inside/door_d2_yellow_key", description = "Yellow Key (Type 2)" }
 sprite{ id = "entities/doors/inside/door_d3_big_key", description = "Big Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_blue_key", description = "Blue Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_boss_key", description = "Boss Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_green_key", description = "Green Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_normal", description = "Normal (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_red_key", description = "Red Key (Type 3)" }
+sprite{ id = "entities/doors/inside/door_d3_silver_key", description = "Yellow Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_small_key", description = "Small Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_very_weak_wall", description = "Very Weak Wall (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d3_weak_wall", description = "Weak Wall (Type 3)" }
-sprite{ id = "entities/doors/inside/door_d3_yellow_key", description = "Yellow Key (Type 3)" }
 sprite{ id = "entities/doors/inside/door_d4_very_weak_wall", description = "Very Weak Wall (Transparent)" }
 sprite{ id = "entities/doors/inside/door_d4_weak_wall", description = "Weak Wall (Transparent)" }
-sprite{ id = "entities/doors/inside/door_green_key_block1", description = "Green Key (Block)" }
-sprite{ id = "entities/doors/inside/door_red_key_block1", description = "Red Key (Block)" }
-sprite{ id = "entities/doors/inside/door_small_key_block1", description = "Small Key (Block)" }
-sprite{ id = "entities/doors/inside/door_weak_block", description = "Weak Block" }
-sprite{ id = "entities/doors/inside/door_yellow_key_block1", description = "Yellow Key (Block)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock01", description = "DW Weak Wall (White)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock02", description = "DW Weak Wall (Grey)" }
 sprite{ id = "entities/doors/outside/cave_dark_rock03", description = "DW Weak Wall (Pink)" }
-sprite{ id = "entities/doors/outside/cave_dark_rock04", description = "DW Weak Wall (Pink)" }
+sprite{ id = "entities/doors/outside/cave_dark_rock04", description = "DW Weak Wall (Yellow)" }
 sprite{ id = "entities/doors/outside/cave_door_rock01", description = "Rock Door (Light)" }
 sprite{ id = "entities/doors/outside/cave_door_rock02", description = "Rock Door (Dark)" }
 sprite{ id = "entities/doors/outside/cave_door_rock03", description = "Rock Door (Yellow)" }
@@ -734,23 +738,21 @@ sprite{ id = "entities/effects/lightning_strike_core", description = "Lightning 
 sprite{ id = "entities/effects/rain", description = "Rain" }
 sprite{ id = "entities/effects/sparkle_big", description = "Big sparkle" }
 sprite{ id = "entities/effects/sparkle_small", description = "Small sparkle" }
-sprite{ id = "entities/egg", description = "Egg" }
 sprite{ id = "entities/explosion", description = "Explosion" }
 sprite{ id = "entities/fairy", description = "Fairy" }
 sprite{ id = "entities/fire", description = "Fire" }
 sprite{ id = "entities/fire_mask", description = "Fire mask" }
-sprite{ id = "entities/frozen_door", description = "Frozen Door" }
 sprite{ id = "entities/grass", description = "Grass" }
-sprite{ id = "entities/grass/grass01", description = "Grass 01" }
-sprite{ id = "entities/grass/grass02", description = "Grass 02" }
-sprite{ id = "entities/grass/grass03", description = "Grass 03" }
-sprite{ id = "entities/grass/grass04", description = "Grass 04" }
-sprite{ id = "entities/grass/grass05", description = "Grass 05" }
-sprite{ id = "entities/grass/grass06", description = "Grass 06" }
-sprite{ id = "entities/grass/grass07", description = "Grass 07" }
-sprite{ id = "entities/grass/grass08", description = "Grass 08" }
-sprite{ id = "entities/grass/grass09", description = "Grass 09" }
-sprite{ id = "entities/grass/grass10", description = "Grass 10" }
+sprite{ id = "entities/grass/grass01", description = "Green grass" }
+sprite{ id = "entities/grass/grass02", description = "Red grass" }
+sprite{ id = "entities/grass/grass03", description = "Blue grass" }
+sprite{ id = "entities/grass/grass04", description = "Yellow grass" }
+sprite{ id = "entities/grass/grass05", description = "Purple grass" }
+sprite{ id = "entities/grass/grass06", description = "Grey grass" }
+sprite{ id = "entities/grass/grass07", description = "Light green grass" }
+sprite{ id = "entities/grass/grass08", description = "Pink grass" }
+sprite{ id = "entities/grass/grass09", description = "Orange grass" }
+sprite{ id = "entities/grass/grass10", description = "Ice grass" }
 sprite{ id = "entities/graves/gravestone01", description = "Grave 01" }
 sprite{ id = "entities/graves/gravestone02", description = "Grave 02" }
 sprite{ id = "entities/graves/gravestone03", description = "Grave 03" }
@@ -764,7 +766,6 @@ sprite{ id = "entities/graves/gravestone10", description = "Grave 10" }
 sprite{ id = "entities/graves/gravestone11", description = "Grave 11" }
 sprite{ id = "entities/graves/gravestone12", description = "Grave 12" }
 sprite{ id = "entities/green_cristal", description = "Green cristal" }
-sprite{ id = "entities/grey_block_unused", description = "Grey Block" }
 sprite{ id = "entities/ground_effects/grass", description = "ground_effects/leaves" }
 sprite{ id = "entities/ground_effects/sand", description = "Sand" }
 sprite{ id = "entities/ground_effects/walrus_diving_effect", description = "Walrus diving effect" }
@@ -872,12 +873,7 @@ sprite{ id = "entities/moving_platform_dg_5", description = "Moving platform (du
 sprite{ id = "entities/moving_platform_dg_5_chain", description = "Moving platform chain (dungeon 5)" }
 sprite{ id = "entities/non_diggable", description = "Diggable" }
 sprite{ id = "entities/notes", description = "Notes" }
-sprite{ id = "entities/outside_door", description = "Outside closed door" }
 sprite{ id = "entities/outside_ladder", description = "Outside ladder" }
-sprite{ id = "entities/owl", description = "Owl" }
-sprite{ id = "entities/owl_blue", description = "Owl blue" }
-sprite{ id = "entities/owl_out", description = "Owl out" }
-sprite{ id = "entities/pedestal", description = "Pedestal" }
 sprite{ id = "entities/pillar", description = "Pillar" }
 sprite{ id = "entities/pillar_base", description = "Pillar base" }
 sprite{ id = "entities/platform", description = "Platform" }
@@ -913,16 +909,6 @@ sprite{ id = "entities/solid_switch", description = "Solid switch" }
 sprite{ id = "entities/somaria_block", description = "Somaria block" }
 sprite{ id = "entities/star", description = "Star" }
 sprite{ id = "entities/statue", description = "Statue" }
-sprite{ id = "entities/statue_big_dungeon_3", description = "Statue dungeon 3" }
-sprite{ id = "entities/statue_dungeon_1", description = "Statue dungeon 1" }
-sprite{ id = "entities/statue_dungeon_1_block", description = "Statue dungeon 1 block" }
-sprite{ id = "entities/statue_dungeon_1_key", description = "Statue dungeon 1 key" }
-sprite{ id = "entities/statue_dungeon_3", description = "Statue dungeon 3" }
-sprite{ id = "entities/statue_dungeon_3_block", description = "Statue dungeon 3 block" }
-sprite{ id = "entities/statue_dungeon_3_key", description = "Statue dungeon 3 key" }
-sprite{ id = "entities/statue_dungeon_6", description = "Statue dungeon 6" }
-sprite{ id = "entities/statue_dungeon_6_head", description = "Statue dungeon 6 head" }
-sprite{ id = "entities/statue_dungeon_7", description = "Statue dungeon 7" }
 sprite{ id = "entities/statue_liftable_dungeon_6", description = "Statue liftable dungeon 6" }
 sprite{ id = "entities/statue_pig", description = "Statue pig" }
 sprite{ id = "entities/statue_small", description = "Statue small" }
@@ -935,7 +921,6 @@ sprite{ id = "entities/statues/statue_pig", description = "Pig statue" }
 sprite{ id = "entities/stones/stone_black", description = "Black Stone" }
 sprite{ id = "entities/stones/stone_black_large", description = "Large Black Stone" }
 sprite{ id = "entities/stones/stone_black_skull", description = "Black Skull" }
-sprite{ id = "entities/stones/stone_lg_dark01", description = "Large Stone (Dark World 01)" }
 sprite{ id = "entities/stones/stone_lg_dark02", description = "Large Stone (Dark World 02)" }
 sprite{ id = "entities/stones/stone_lg_dark03", description = "Large Stone (Dark World 03)" }
 sprite{ id = "entities/stones/stone_lg_dark04", description = "Large Stone (Dark World 04)" }
@@ -950,19 +935,15 @@ sprite{ id = "entities/stones/stone_lg_light05", description = "Large Stone (Lig
 sprite{ id = "entities/stones/stone_lg_light06", description = "Large Stone (Light World 06)" }
 sprite{ id = "entities/stones/stone_lg_light07", description = "Large Stone (Light World 07)" }
 sprite{ id = "entities/stones/stone_lg_light08", description = "Large Stone (Light World 08)" }
-sprite{ id = "entities/stones/stone_sm_dark01", description = "Dark Stone 01 (Unused)" }
 sprite{ id = "entities/stones/stone_sm_dark02", description = "Dark Stone 02" }
 sprite{ id = "entities/stones/stone_sm_dark03", description = "Dark Stone 03" }
 sprite{ id = "entities/stones/stone_sm_dark04", description = "Dark Stone 04" }
-sprite{ id = "entities/stones/stone_sm_dark05", description = "Dark Skull 01 (Unused)" }
 sprite{ id = "entities/stones/stone_sm_dark06", description = "Dark Skull 02" }
 sprite{ id = "entities/stones/stone_sm_dark07", description = "Dark Skull 03" }
 sprite{ id = "entities/stones/stone_sm_dark08", description = "Dark Skull 04" }
-sprite{ id = "entities/stones/stone_sm_light01", description = "Light Stone 01 (Unused)" }
 sprite{ id = "entities/stones/stone_sm_light02", description = "Light Stone 02" }
 sprite{ id = "entities/stones/stone_sm_light03", description = "Light Stone 03" }
 sprite{ id = "entities/stones/stone_sm_light04", description = "Light Stone 04" }
-sprite{ id = "entities/stones/stone_sm_light05", description = "Light Skull 01 (Unused)" }
 sprite{ id = "entities/stones/stone_sm_light06", description = "Light Skull 02" }
 sprite{ id = "entities/stones/stone_sm_light07", description = "Light Skull 03" }
 sprite{ id = "entities/stones/stone_sm_light08", description = "Light Skull 04" }
@@ -980,6 +961,7 @@ sprite{ id = "entities/switch", description = "Switch" }
 sprite{ id = "entities/switches/crystal", description = "Crystal switch" }
 sprite{ id = "entities/switches/crystal_block", description = "Crystal block" }
 sprite{ id = "entities/switches/lever", description = "Lever" }
+sprite{ id = "entities/switches/owl_statue", description = "Owl statue" }
 sprite{ id = "entities/switches/solid_switch", description = "Solid switch" }
 sprite{ id = "entities/switches/star", description = "Star switch" }
 sprite{ id = "entities/switches/switch", description = "Switch" }
@@ -1025,8 +1007,6 @@ sprite{ id = "entities/symbols/snores", description = "Snores" }
 sprite{ id = "entities/tent_bazaar", description = "Bazaar Tent" }
 sprite{ id = "entities/tent_small", description = "Small Tent" }
 sprite{ id = "entities/torch", description = "Torch" }
-sprite{ id = "entities/torch_candle", description = "Candle torch" }
-sprite{ id = "entities/torch_lantern", description = "Lantern torch" }
 sprite{ id = "entities/torch_light", description = "Torch light" }
 sprite{ id = "entities/torch_light_hero", description = "Torch light, hero" }
 sprite{ id = "entities/torch_light_room", description = "Torch light, room" }
@@ -1060,17 +1040,16 @@ sprite{ id = "hero/item/bow/bow_moving_free_tunic1", description = "1a" }
 sprite{ id = "hero/item/bow/bow_moving_no_arrow_tunic1", description = "2a" }
 sprite{ id = "hero/item/bow/bow_moving_with_arrow_tunic1", description = "2b" }
 sprite{ id = "hero/item/bow/bow_shoot_tunic1", description = "3" }
-sprite{ id = "hero/item/fire_rod/rod", description = "Fire Rod" }
-sprite{ id = "hero/item/fire_rod/rod_moving", description = "hero/item/fire_rod/rod_moving" }
-sprite{ id = "hero/item/fire_rod/rod_moving_tunic_1", description = "hero/item/fire_rod/rod_moving_tunic_1" }
-sprite{ id = "hero/item/ice_rod/rod_moving", description = "hero/item/ice_rod/rod_moving" }
 sprite{ id = "hero/item/ocarina/learned.tunic_1", description = "Learned song" }
 sprite{ id = "hero/item/ocarina/ocarina.tunic_1", description = "Ocarina" }
+sprite{ id = "hero/item/rods/darkness_rod", description = "Darkness rod" }
+sprite{ id = "hero/item/rods/doom_rod", description = "Doom rod" }
 sprite{ id = "hero/item/rods/fire_rod", description = "Fire Rod" }
 sprite{ id = "hero/item/rods/healing_wand", description = "Healing Wand" }
 sprite{ id = "hero/item/rods/ice_rod", description = "Ice Rod" }
-sprite{ id = "hero/item/rods/rod_moving", description = "Moving rod" }
-sprite{ id = "hero/item/rods/rod_moving_tunic_1", description = "Moving Rod Tunic 1" }
+sprite{ id = "hero/item/rods/light_rod", description = "Light rod" }
+sprite{ id = "hero/item/rods/somaria_cane", description = "Somaria Cane" }
+sprite{ id = "hero/item/rods/thunder_rod", description = "Thunder rod" }
 sprite{ id = "hero/item/rods/wind_rod", description = "Wind Rod" }
 sprite{ id = "hero/item/sword_beam", description = "Sword Beam" }
 sprite{ id = "hero/link_sad", description = "Link sad" }
@@ -1089,28 +1068,27 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
-sprite{ id = "hero/tunic4", description = "Tunic 4" }
-sprite{ id = "hud/action_icon_flip", description = "Action icon" }
+sprite{ id = "hero/tunic4", description = "Hero tunic 4" }
+sprite{ id = "hud/action_icon", description = "Action icon" }
+sprite{ id = "hud/attack_icon", description = "Attack icon" }
 sprite{ id = "hud/clock", description = "Clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
 sprite{ id = "hud/empty_heart", description = "Empty heart" }
 sprite{ id = "hud/gameover_fade", description = "Game-over fade" }
+sprite{ id = "hud/item_icon_1", description = "hud/item_icon_1" }
+sprite{ id = "hud/item_icon_2", description = "hud/item_icon_2" }
 sprite{ id = "hud/magic_bar", description = "Magic bar" }
-sprite{ id = "hud/new_clock", description = "Clock" }
-sprite{ id = "hud/pause_icon_flip", description = "Pause icon" }
-sprite{ id = "hud/piece_of_heart_icon", description = "hud/piece_of_heart_icon" }
+sprite{ id = "hud/pause_icon", description = "Pause icon" }
 sprite{ id = "hud/sword_icon_flip", description = "Sword icon" }
 sprite{ id = "hud/weather", description = "Weather icons" }
-sprite{ id = "maps/a2", description = "Zora" }
-sprite{ id = "maps/a4", description = "Map ALTTP" }
-sprite{ id = "maps/alttp", description = "ALTTP map" }
-sprite{ id = "maps/c4", description = "Lake Hylia" }
+sprite{ id = "maps/alttp_overworld", description = "Map ALTTP" }
 sprite{ id = "maps/desert_palace", description = "Desert Palace" }
-sprite{ id = "maps/fire_temple", description = "Fire temple" }
-sprite{ id = "maps/gt", description = "Ganon's Tower" }
+sprite{ id = "maps/ganon_tower", description = "Ganon's Tower" }
+sprite{ id = "maps/loz_overworld", description = "Overworld" }
 sprite{ id = "maps/minimap" }
+sprite{ id = "maps/minish_cap_overworld", description = "Zora" }
+sprite{ id = "maps/misery_mire", description = "ALTTP map" }
 sprite{ id = "maps/mountain", description = "Mountains map" }
-sprite{ id = "maps/overworld", description = "Overworld" }
 sprite{ id = "maps/room_layout", description = "Room layout for dungeons" }
 sprite{ id = "maps/screen_size", description = "Screen size" }
 sprite{ id = "maps/underwater", description = "Underwater" }
@@ -1209,8 +1187,12 @@ sprite{ id = "npc/kokiri_2", description = "Kokiri" }
 sprite{ id = "npc/kokiri_3", description = "Kokiri" }
 sprite{ id = "npc/lady_blue", description = "Blue Lady" }
 sprite{ id = "npc/lady_cyan", description = "Cyan Lady" }
+sprite{ id = "npc/lady_emerald", description = "Emerald Woman" }
 sprite{ id = "npc/lady_green", description = "Green Lady" }
+sprite{ id = "npc/lady_light_green", description = "Green Woman" }
+sprite{ id = "npc/lady_orange", description = "Orange Woman" }
 sprite{ id = "npc/lady_red", description = "Red Lady" }
+sprite{ id = "npc/lady_yellow", description = "Yellow Woman" }
 sprite{ id = "npc/little_elephant", description = "Little elephant" }
 sprite{ id = "npc/little_tree", description = "Little Tree" }
 sprite{ id = "npc/lost_old_man", description = "Lost Old Man" }
@@ -1224,13 +1206,22 @@ sprite{ id = "npc/maid_purple", description = "Purple Maid" }
 sprite{ id = "npc/maid_red", description = "Red Maid" }
 sprite{ id = "npc/maid_turquoise", description = "Turquoise Maid" }
 sprite{ id = "npc/maid_yellow", description = "Yellow Maid" }
-sprite{ id = "npc/merchant_blue", description = "Blue merchant" }
-sprite{ id = "npc/merchant_green", description = "Green merchant" }
-sprite{ id = "npc/merchant_pink", description = "Pink Merchant" }
-sprite{ id = "npc/merchant_purple", description = "Purple Merchant" }
-sprite{ id = "npc/merchant_red", description = "Red Merchant" }
-sprite{ id = "npc/merchant_turquoise", description = "Turquoise Merchant" }
-sprite{ id = "npc/merchant_yellow", description = "Yellow Merchant" }
+sprite{ id = "npc/merchant_hooded_blue", description = "Blue hooded merchant" }
+sprite{ id = "npc/merchant_hooded_green", description = "Green hooded merchant" }
+sprite{ id = "npc/merchant_hooded_orange", description = "Orange hooded merchant" }
+sprite{ id = "npc/merchant_hooded_pink", description = "Pink hooded merchant" }
+sprite{ id = "npc/merchant_hooded_purple", description = "Purple hooded merchant" }
+sprite{ id = "npc/merchant_hooded_red", description = "Red hooded merchant" }
+sprite{ id = "npc/merchant_hooded_turquoise", description = "Turquoise hooded merchant" }
+sprite{ id = "npc/merchant_hooded_yellow", description = "Yellow hooded merchant" }
+sprite{ id = "npc/merchant_street_blue", description = "Blue street merchant" }
+sprite{ id = "npc/merchant_street_green", description = "Green street merchant" }
+sprite{ id = "npc/merchant_street_orange", description = "Orange street merchant" }
+sprite{ id = "npc/merchant_street_pink", description = "Pink street merchant" }
+sprite{ id = "npc/merchant_street_purple", description = "Purple street merchant" }
+sprite{ id = "npc/merchant_street_red", description = "Red street merchant" }
+sprite{ id = "npc/merchant_street_turquoise", description = "Turquoise street merchant" }
+sprite{ id = "npc/merchant_street_yellow", description = "Yellow street merchant" }
 sprite{ id = "npc/mini_game_man_blue", description = "Blue Minigame Man" }
 sprite{ id = "npc/mini_game_man_green", description = "Green Minigame Man" }
 sprite{ id = "npc/mini_game_man_pink", description = "Pink Minigame Man" }
@@ -1270,16 +1261,11 @@ sprite{ id = "npc/tokay_blue", description = "Blue Tokay" }
 sprite{ id = "npc/tokay_gin", description = "Gin Tokay" }
 sprite{ id = "npc/tokay_orange", description = "Orange Tokay" }
 sprite{ id = "npc/tokay_red", description = "Red Tokay" }
-sprite{ id = "npc/uncle", description = "Uncle" }
 sprite{ id = "npc/wise_old_man_green", description = "Green Wise old man" }
 sprite{ id = "npc/wise_old_man_orange", description = "Orange Wise old man" }
 sprite{ id = "npc/wise_old_man_pink", description = "Pink Wise old man" }
 sprite{ id = "npc/wise_old_man_yellow", description = "Yellow Wise Old Man" }
 sprite{ id = "npc/witch", description = "Witch" }
-sprite{ id = "npc/woman_emerald", description = "Emerald Woman" }
-sprite{ id = "npc/woman_green", description = "Green Woman" }
-sprite{ id = "npc/woman_orange", description = "Orange Woman" }
-sprite{ id = "npc/woman_yellow", description = "Yellow Woman" }
 sprite{ id = "npc/zelda", description = "Zelda" }
 sprite{ id = "npc/zora", description = "Zora" }
 sprite{ id = "npc/zora_juba", description = "Zora Juba" }
@@ -1305,11 +1291,8 @@ music{ id = "boss/ganondorf", description = "Ganondorf" }
 music{ id = "boss/mallard", description = "Mallard" }
 music{ id = "boss/miniboss", description = "Miniboss" }
 music{ id = "cutscenes/castle_sealed", description = "Castle sealed" }
-music{ id = "cutscenes/credits", description = "Credits & Alternate Savegame Music" }
 music{ id = "cutscenes/crystal_get", description = "Get crystal" }
 music{ id = "cutscenes/cutscene_danger", description = "Danger Cutscence (Bridge on Fire TP)" }
-music{ id = "cutscenes/cutscene_introduction", description = "Introduction" }
-music{ id = "cutscenes/cutscene_introduction_loop", description = "Introduction (looped)" }
 music{ id = "cutscenes/cutscene_zelda", description = "Zelda" }
 music{ id = "cutscenes/end_credits", description = "End credits" }
 music{ id = "cutscenes/end_credits_alttp", description = "End credits" }
@@ -1317,6 +1300,7 @@ music{ id = "cutscenes/fanfare", description = "Fanfare" }
 music{ id = "cutscenes/game_over", description = "Game Over" }
 music{ id = "cutscenes/kaepora_gaebora", description = "Kaepora Gaebora" }
 music{ id = "cutscenes/master_sword", description = "Master sword" }
+music{ id = "cutscenes/prologue", description = "Prologue" }
 music{ id = "cutscenes/raining", description = "Beginning" }
 music{ id = "cutscenes/savegames", description = "Savegames" }
 music{ id = "cutscenes/song_learned", description = "Song learned" }
@@ -1366,14 +1350,11 @@ music{ id = "inside/library", description = "Library" }
 music{ id = "inside/mask_salesman", description = "Masks Shop" }
 music{ id = "inside/minigame_1", description = "Minigames" }
 music{ id = "inside/minigame_alttp", description = "Minigames (ALTTP)" }
-music{ id = "inside/minigame_estrgg", description = "Minigames (SMB)" }
 music{ id = "inside/minigame_mm", description = "Minigames (MM)" }
 music{ id = "inside/minigame_oot", description = "Minigames (OOT)" }
 music{ id = "inside/observatory", description = "Observatory" }
-music{ id = "inside/pop_estrgg", description = "Prince of Persia Cave" }
 music{ id = "inside/potion", description = "Potion Shop" }
 music{ id = "inside/ravio", description = "Ravio's House" }
-music{ id = "inside/rick_estrgg", description = "Rick Roll Cave" }
 music{ id = "inside/sanctuary_1", description = "Sanctuary" }
 music{ id = "inside/sanctuary_2", description = "Sanctuary" }
 music{ id = "inside/sanctuary_3", description = "Sanctuary" }
@@ -1389,15 +1370,14 @@ music{ id = "outside/clock_town", description = "Clock Town" }
 music{ id = "outside/dark_world", description = "Dark World" }
 music{ id = "outside/east_lost_woods", description = "East Lost Woods" }
 music{ id = "outside/faron_woods", description = "Faron Woods" }
-music{ id = "outside/field_2", description = "Hyrule Field (2)" }
 music{ id = "outside/field_4", description = "Hyrule Field (Rock)" }
-music{ id = "outside/field_oot", description = "Hyrule Field (Day)" }
 music{ id = "outside/field_tp", description = "Hyrule Field (TP)" }
 music{ id = "outside/gerudo", description = "Gerudo Desert" }
 music{ id = "outside/graveyard", description = "Graveyard" }
 music{ id = "outside/hylia_lake", description = "Hylia Lake" }
-music{ id = "outside/hyrule_field_beginning", description = "Hyrule Field (ALBW)" }
 music{ id = "outside/hyrule_field_day", description = "Hyrule Field (Day)" }
+music{ id = "outside/hyrule_field_intro_day", description = "Hyrule Field (Intro, day)" }
+music{ id = "outside/hyrule_field_intro_night", description = "Hyrule Field (Intro, night)" }
 music{ id = "outside/hyrule_field_night", description = "Hyrule Field (Night)" }
 music{ id = "outside/hyrule_town", description = "Hyrule Town" }
 music{ id = "outside/kakarico", description = "Kakarico Village" }
@@ -1407,7 +1387,6 @@ music{ id = "outside/lost_woods", description = "Lost Woods" }
 music{ id = "outside/mountains", description = "Death Mountains" }
 music{ id = "outside/mudora", description = "Mudora" }
 music{ id = "outside/north_korea", description = "North Korea" }
-music{ id = "outside/owl_theme", description = "Owl Theme" }
 music{ id = "outside/parapa_town", description = "Parapa Town" }
 music{ id = "outside/rito_village", description = "Rito Village" }
 music{ id = "outside/sea", description = "Great Sea" }
@@ -1417,6 +1396,7 @@ music{ id = "outside/subrosia", description = "Underworld" }
 music{ id = "outside/swamp", description = "Swamp" }
 music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
 music{ id = "outside/town_ruto", description = "(Outset Island)" }
+music{ id = "outside/west_mountains", description = "West Mountains" }
 music{ id = "outside/zora", description = "Zora Domain" }
 music{ id = "outside/zora_forest", description = "Zora Forest" }
 
@@ -1473,6 +1453,7 @@ sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reache
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
+sound{ id = "enemies/zora", description = "enemies/zora" }
 sound{ id = "enemy_hurt", description = "Empty sound" }
 sound{ id = "enemy_killed", description = "Empty sound" }
 sound{ id = "environment/bush", description = "Bush" }
@@ -1492,13 +1473,35 @@ sound{ id = "environment/water_drain", description = "water_drain" }
 sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
 sound{ id = "environment/water_fill", description = "water_fill" }
 sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
-sound{ id = "environment/water_level/loop", description = "Water level loop" }
-sound{ id = "environment/water_level/start", description = "Water level start" }
-sound{ id = "environment/wind", description = "wind" }
 sound{ id = "explosion", description = "Empty sound" }
+sound{ id = "hero/hero_dying", description = "hero/hero_dying" }
+sound{ id = "hero/hero_falls", description = "hero/hero_falls" }
+sound{ id = "hero/hero_hurt1", description = "hero/hero_hurt1" }
+sound{ id = "hero/hero_hurt2", description = "hero/hero_hurt2" }
+sound{ id = "hero/hero_hurt3", description = "hero/hero_hurt3" }
+sound{ id = "hero/hero_lands", description = "hero/hero_lands" }
 sound{ id = "hero/hero_lift", description = "lift" }
+sound{ id = "hero/hero_pushes", description = "hero/hero_pushes" }
+sound{ id = "hero/hero_seen", description = "hero/hero_seen" }
+sound{ id = "hero/jump", description = "hero/jump" }
+sound{ id = "hero/running", description = "hero/running" }
+sound{ id = "hero/running_obstacle", description = "hero/running_obstacle" }
 sound{ id = "hero/splash", description = "Splash" }
 sound{ id = "hero/swim", description = "swim" }
+sound{ id = "hero/sword1", description = "hero/sword1" }
+sound{ id = "hero/sword2", description = "hero/sword2" }
+sound{ id = "hero/sword3", description = "hero/sword3" }
+sound{ id = "hero/sword4", description = "hero/sword4" }
+sound{ id = "hero/sword_spin_attack_load", description = "hero/sword_spin_attack_load" }
+sound{ id = "hero/sword_spin_attack_load_double", description = "hero/sword_spin_attack_load_double" }
+sound{ id = "hero/sword_spin_attack_release", description = "hero/sword_spin_attack_release" }
+sound{ id = "hero/sword_tapping", description = "hero/sword_tapping" }
+sound{ id = "hero/sword_tapping_weak_wall", description = "hero/sword_tapping_weak_wall" }
+sound{ id = "hero/throw", description = "hero/throw" }
+sound{ id = "hero/victory", description = "hero/victory" }
+sound{ id = "hero/voice/pulling_heavy_object0", description = "Pulling heavy object" }
+sound{ id = "hero/walk_on_grass", description = "hero/walk_on_grass" }
+sound{ id = "hero/walk_on_water", description = "hero/walk_on_water" }
 sound{ id = "hero_falls", description = "Empty sound" }
 sound{ id = "hero_hurt", description = "Empty sound" }
 sound{ id = "hero_lands", description = "Empty sound" }
@@ -1507,15 +1510,16 @@ sound{ id = "hookshot", description = "Empty sound" }
 sound{ id = "items/bomb", description = "Bomb" }
 sound{ id = "items/boomerang", description = "Boomerang" }
 sound{ id = "items/bow", description = "Bow" }
+sound{ id = "items/cane", description = "Cane" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
-sound{ id = "items/fire_rod/shoot", description = "Shoot" }
+sound{ id = "items/fire_rod", description = "Shoot" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
 sound{ id = "items/hammer/hit", description = "Hammer hit" }
 sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
 sound{ id = "items/hookshot/firing_start", description = "Firing start" }
 sound{ id = "items/hookshot/hit_valid_target", description = "Hit valid target" }
 sound{ id = "items/hookshot/link_tracted", description = "Link tracted" }
-sound{ id = "items/ice_rod/shoot", description = "Shoot" }
+sound{ id = "items/ice_rod", description = "Shoot" }
 sound{ id = "items/item_metal_collision_wall", description = "Item metal collision" }
 sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
@@ -1540,6 +1544,7 @@ sound{ id = "items/sidequest_major_item", description = "Sidequest major item" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
+sound{ id = "items/wind_rod", description = "wind" }
 sound{ id = "jump", description = "Empty sound" }
 sound{ id = "lift", description = "Empty sound" }
 sound{ id = "menus/cursor", description = "Cursor" }
@@ -1582,14 +1587,17 @@ sound{ id = "running", description = "Empty sound" }
 sound{ id = "running_obstacle", description = "Empty sound" }
 sound{ id = "shield", description = "Empty sound" }
 sound{ id = "splash", description = "Empty sound" }
-sound{ id = "stairs_down_end", description = "Empty sound" }
-sound{ id = "stairs_down_start", description = "Empty sound" }
-sound{ id = "stairs_up_end", description = "Empty sound" }
-sound{ id = "stairs_up_start", description = "Empty sound" }
+sound{ id = "stairs_down_end", description = "Stair down" }
+sound{ id = "stairs_down_start", description = "Stair down" }
+sound{ id = "stairs_up_end", description = "Stair up" }
+sound{ id = "stairs_up_start", description = "Stair up" }
 sound{ id = "stone", description = "Empty sound" }
 sound{ id = "swim", description = "Empty sound" }
 sound{ id = "switch", description = "Empty sound" }
 sound{ id = "sword1", description = "Empty sound" }
+sound{ id = "sword2", description = "Empty sound" }
+sound{ id = "sword3", description = "Empty sound" }
+sound{ id = "sword4", description = "Empty sound" }
 sound{ id = "sword_spin_attack_load", description = "Empty sound" }
 sound{ id = "sword_spin_attack_release", description = "Empty sound" }
 sound{ id = "sword_tapping", description = "Empty sound" }
@@ -1605,9 +1613,7 @@ sound{ id = "wrong", description = "Empty sound" }
 
 item{ id = "_placeholder", description = "Placeholder" }
 item{ id = "arrow", description = "Arrow (1 / 5 / 10 /200)" }
-item{ id = "beak_of_stone", description = "Beak of stone" }
 item{ id = "big_key", description = "Dungeon big key" }
-item{ id = "bird_key", description = "Bird key" }
 item{ id = "blue_key", description = "Blue Key" }
 item{ id = "blue_tunic", description = "Blue tunic" }
 item{ id = "bomb", description = "Bomb (1 / 3 / 8 / 10)" }
@@ -1615,14 +1621,12 @@ item{ id = "bomb_bag", description = "Bombs bag" }
 item{ id = "bomb_counter", description = "Bombs counter" }
 item{ id = "book_of_mudora", description = "Book of Mudora" }
 item{ id = "boomerang", description = "Boomerang" }
-item{ id = "boss_key", description = "Boss key" }
 item{ id = "bottle_1", description = "Bottle 1" }
 item{ id = "bottle_2", description = "Bottle 2" }
 item{ id = "bottle_3", description = "Bottle 3" }
 item{ id = "bottle_4", description = "Bottle 4" }
 item{ id = "bow", description = "Bow" }
 item{ id = "bow_bomb", description = "Bomb bow" }
-item{ id = "butter_quest", description = "Quest (Butter)" }
 item{ id = "compass", description = "Compass" }
 item{ id = "crystal_1", description = "Crystal 1" }
 item{ id = "crystal_2", description = "Crystal 2" }
@@ -1631,30 +1635,24 @@ item{ id = "crystal_4", description = "Crystal 4" }
 item{ id = "crystal_5", description = "Crystal 5" }
 item{ id = "crystal_6", description = "Crystal 6" }
 item{ id = "crystal_7", description = "Crystal 7" }
+item{ id = "din_flame", description = "Din's Flame" }
 item{ id = "divine_ore", description = "Divine Ore" }
-item{ id = "divine_ore_counter", description = "Divine ore counter" }
-item{ id = "drug", description = "Drug" }
-item{ id = "face_key", description = "Face key" }
+item{ id = "doom_rod", description = "Bird key" }
 item{ id = "fairy", description = "Fairy" }
+item{ id = "farore_quake", description = "Farore's quake" }
 item{ id = "feather", description = "Feather" }
 item{ id = "fire_rod", description = "Fire rod" }
 item{ id = "flippers", description = "Flippers" }
 item{ id = "food/fish", description = "Fish" }
-item{ id = "golden_leaf", description = "Golden leaf" }
-item{ id = "golden_leaf_counter", description = "Golden Leaf counter" }
 item{ id = "goron_amber", description = "Goron Amber" }
-item{ id = "goron_amber_counter", description = "Goron Amber counter" }
 item{ id = "green_key", description = "Green Key" }
 item{ id = "green_tunic", description = "Green Tunic" }
 item{ id = "hammer", description = "Hammer" }
 item{ id = "healing_wand", description = "Healing Wand" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
-item{ id = "heart_fly", description = "Heart fly" }
 item{ id = "heart_triple", description = "Triple heart" }
-item{ id = "hero_shield", description = "Shield" }
 item{ id = "hookshot", description = "Hookshot" }
-item{ id = "hylia_shield", description = "Hylia Shield" }
 item{ id = "ice_rod", description = "Ice rod" }
 item{ id = "lamp", description = "Lamp" }
 item{ id = "lens_of_truth", description = "Lens of Truth" }
@@ -1665,22 +1663,16 @@ item{ id = "magic_powder", description = "Magic Powder" }
 item{ id = "magic_powder_counter", description = "Magic Powder counter" }
 item{ id = "magnifying_lens", description = "Magnifying lens" }
 item{ id = "map", description = "Dungeon map" }
-item{ id = "mirror_shield", description = "Mirror Shield" }
 item{ id = "monster_claw", description = "Monster Claw" }
-item{ id = "monster_claw_counter", description = "Monster Claw counter" }
 item{ id = "monster_gut", description = "Monster Gut" }
-item{ id = "monster_gut_counter", description = "Monster Gut counter" }
 item{ id = "monster_horn", description = "Monster Horn" }
-item{ id = "monster_horn_counter", description = "Monster Horn counter" }
 item{ id = "monster_tail", description = "Monster Tail" }
-item{ id = "monster_tail_counter", description = "Monster Tail counter" }
 item{ id = "mushroom", description = "Mushroom" }
-item{ id = "pegasus_shoes", description = "Pegasus shoes" }
+item{ id = "nayru_ether", description = "Nayru's ether" }
+item{ id = "pegasus_boots", description = "Pegasus shoes" }
 item{ id = "pendant_1", description = "Courage Pendant" }
 item{ id = "pendant_2", description = "Power Pendant" }
 item{ id = "pendant_3", description = "Wisdom Pendant" }
-item{ id = "photo", description = "Photo" }
-item{ id = "photo_counter", description = "Photos counter" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
 item{ id = "potion", description = "Potion (Red / Green / Blue)" }
 item{ id = "power_gloves", description = "Power bracelet" }
@@ -1696,11 +1688,11 @@ item{ id = "red_tunic", description = "Red tunic" }
 item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 1000)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "seas_map", description = "Seas map" }
-item{ id = "seashell", description = "Seashell" }
-item{ id = "seashell_counter", description = "Seashell counter" }
+item{ id = "shield_hero", description = "Shield" }
+item{ id = "shield_hylia", description = "Hylia Shield" }
+item{ id = "shield_mirror", description = "Mirror Shield" }
 item{ id = "shovel", description = "Shovel" }
 item{ id = "silver_key", description = "Silver Key" }
-item{ id = "slim_key", description = "Slim key" }
 item{ id = "small_key", description = "Small key" }
 item{ id = "somaria_cane", description = "Somaria Cane" }
 item{ id = "song_10_zelda", description = "Song 10 (Zelda's Lullaby)" }
@@ -1718,13 +1710,12 @@ item{ id = "song_5_lorule", description = "Song 5 (César's Mountain)" }
 item{ id = "song_8_shadow", description = "Song 8 (Nocturne of Shadow)" }
 item{ id = "sword", description = "Sword" }
 item{ id = "sword_skill_beam", description = "Sword Beam" }
-item{ id = "tail_key", description = "Tail key" }
+item{ id = "thunder_rod", description = "Beak of stone" }
 item{ id = "time_tunic", description = "Time tunic" }
 item{ id = "trading_1", description = "Trading (Seas Map)" }
 item{ id = "trading_2", description = "Trading 2 (Better Magic Bar)" }
 item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }
-item{ id = "wings", description = "Wings" }
 item{ id = "world_map", description = "World Map" }
 
 enemy{ id = "boss/agahnim", description = "Agahnim" }
@@ -1808,6 +1799,7 @@ enemy{ id = "dungeons/leever_green", description = "Green Leever" }
 enemy{ id = "dungeons/leever_purple", description = "Purple Leever" }
 enemy{ id = "dungeons/lizalfos", description = "Lizalfos" }
 enemy{ id = "dungeons/lizalfos_blue", description = "Blue Lizalfos" }
+enemy{ id = "dungeons/lizalfos_purple", description = "Purple Lizalfos" }
 enemy{ id = "dungeons/lizalfos_red", description = "Red Lizalfos" }
 enemy{ id = "dungeons/lizalfos_yellow", description = "Yellow Lizalfos" }
 enemy{ id = "dungeons/maskass", description = "Maskass" }
@@ -1854,8 +1846,8 @@ enemy{ id = "outside/armos_green", description = "Green Armos" }
 enemy{ id = "outside/armos_ice", description = "Ice Armos" }
 enemy{ id = "outside/armos_yellow", description = "Yellow Armos" }
 enemy{ id = "outside/blob_blue", description = "Blue Blob" }
-enemy{ id = "outside/blob_cyan", description = "Cyan Blob" }
 enemy{ id = "outside/blob_green", description = "Green Blob" }
+enemy{ id = "outside/blob_ice", description = "Ice Blob" }
 enemy{ id = "outside/blob_red", description = "Red Blob" }
 enemy{ id = "outside/blob_yellow", description = "Yellow Blob" }
 enemy{ id = "outside/bomber", description = "Bomber" }
@@ -1867,6 +1859,12 @@ enemy{ id = "outside/deadrock", description = "Deadrock" }
 enemy{ id = "outside/geldman", description = "Geldman" }
 enemy{ id = "outside/hinox", description = "Hinox" }
 enemy{ id = "outside/hinox_blue", description = "Blue Hinox" }
+enemy{ id = "outside/like_like", description = "Like Like" }
+enemy{ id = "outside/like_like_ice", description = "Ice Like Like" }
+enemy{ id = "outside/like_like_purple", description = "Purple Like Like" }
+enemy{ id = "outside/like_rupee_blue", description = "Blue Rupee Like" }
+enemy{ id = "outside/like_rupee_green", description = "Green Rupee Like" }
+enemy{ id = "outside/like_rupee_red", description = "Red Rupee Like" }
 enemy{ id = "outside/lynel", description = "Lynel" }
 enemy{ id = "outside/lynel_baby_red", description = "Red Baby Lynel" }
 enemy{ id = "outside/lynel_black", description = "Black Lynel" }
@@ -1908,11 +1906,18 @@ enemy{ id = "projectiles/shadowball", description = "Shadowball" }
 enemy{ id = "projectiles/spear", description = "Spear" }
 enemy{ id = "projectiles/stone", description = "Octorok Stone" }
 enemy{ id = "projectiles/stone_light", description = "Green Octorok Stone" }
-enemy{ id = "soldiers/spear_soldier_red", description = "Red Spear Soldier" }
-enemy{ id = "soldiers/sword_soldier_blue", description = "Blue Sword Soldier" }
-enemy{ id = "soldiers/sword_soldier_dark_green", description = "Orange Sword Soldier" }
-enemy{ id = "soldiers/sword_soldier_green", description = "Green Sword Soldier" }
-enemy{ id = "soldiers/sword_soldier_yellow", description = "Yellow Sword Soldier" }
+enemy{ id = "soldiers/knight_black", description = "Black Knight" }
+enemy{ id = "soldiers/knight_black_ballchain", description = "Black ballchain knight" }
+enemy{ id = "soldiers/knight_blue", description = "Blue Knight" }
+enemy{ id = "soldiers/knight_ice", description = "Ice Knight" }
+enemy{ id = "soldiers/knight_myrtle", description = "Myrtle Knight" }
+enemy{ id = "soldiers/knight_red", description = "Red Knight" }
+enemy{ id = "soldiers/knight_yellow", description = "Yellow Knight" }
+enemy{ id = "soldiers/knight_yellow_ballchain", description = "Yellow ballchain Knight" }
+enemy{ id = "soldiers/soldier_blue", description = "Blue Sword Soldier" }
+enemy{ id = "soldiers/soldier_green", description = "Green Sword Soldier" }
+enemy{ id = "soldiers/soldier_myrtle", description = "Myrtle Sword Soldier" }
+enemy{ id = "soldiers/soldier_yellow", description = "Yellow Sword Soldier" }
 enemy{ id = "soldiers/tarosu_blue", description = "Blue Tarosu" }
 enemy{ id = "soldiers/tarosu_red", description = "Red Tarosu" }
 
@@ -1939,7 +1944,6 @@ entity{ id = "dice", description = "Dice" }
 entity{ id = "explosion", description = "Explosion" }
 entity{ id = "eye_switch", description = "Eye switch" }
 entity{ id = "fire", description = "Fire" }
-entity{ id = "fire_old", description = "Fire old" }
 entity{ id = "follower", description = "Follower" }
 entity{ id = "frog", description = "Frog" }
 entity{ id = "green_crystal", description = "Green crystal" }
@@ -1995,10 +1999,14 @@ language{ id = "fr", description = "Français" }
 
 font{ id = "04b03", description = "04b03" }
 font{ id = "alttp", description = "alttp" }
+font{ id = "alttp_black", description = "alttp_black" }
+font{ id = "alttp_blue", description = "alttp_blue" }
 font{ id = "alttp_floors", description = "Alttp Floors" }
 font{ id = "alttp_ttf", description = "alttp_ttf" }
 font{ id = "capital", description = "Capital" }
 font{ id = "default", description = "default" }
+font{ id = "ega", description = "Px437_IBM_EGA_8x14" }
+font{ id = "ega_png", description = "ega_png" }
 font{ id = "enter_command_mono", description = "Enter Command Mono" }
 font{ id = "green_digits", description = "Green digits" }
 font{ id = "map_name", description = "map_name" }
@@ -2046,6 +2054,11 @@ shader{ id = "tft", description = "TFT" }
 shader{ id = "toon", description = "toon" }
 shader{ id = "water_effect", description = "water_effect" }
 
+file{ path = "enemies/dungeons/lizalfos.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_blue.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_purple.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_red.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/dungeons/lizalfos_yellow.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/flying_tile.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/lib/common_actions.lua", author = "Vlag", license = "GPL v3" }
 file{ path = "enemies/lib/fire_breathing_statue.lua", author = "Christopho", license = "GPL v3" }
@@ -2054,12 +2067,19 @@ file{ path = "enemies/lib/thwomp_crush.lua", author = "PhoenixII54", license = "
 file{ path = "enemies/lib/towards_hero.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/lib/waiting_for_hero.lua", license = "GPL v3" }
 file{ path = "enemies/lib/weapons.lua", author = "Vlag", license = "GPL v3" }
+file{ path = "enemies/outside/like_like.lua", author = "Vlag, The Unknown", license = "GPL v3" }
+file{ path = "enemies/outside/like_like_ice.lua", author = "Vlag, The Unknown", license = "GPL v3" }
+file{ path = "enemies/outside/like_like_purple.lua", author = "Vlag, The Unknown", license = "GPL v3" }
+file{ path = "enemies/outside/like_rupee_blue.lua", author = "Vlag, The Unknown", license = "GPL v3" }
+file{ path = "enemies/outside/like_rupee_green.lua", author = "Vlag, The Unknown", license = "GPL v3" }
+file{ path = "enemies/outside/like_rupee_red.lua", author = "Vlag, The Unknown", license = "GPL v3" }
 file{ path = "entities/arrow.lua", license = "GPL v3" }
 file{ path = "entities/ball.lua", author = "Vlag", license = "GPL v3" }
 file{ path = "entities/bomb_arrow.lua", license = "GPL v3" }
 file{ path = "entities/bottle.lua", license = "GPL v3" }
 file{ path = "entities/boundaries.lua", author = "Benjamin Schweitzer, Christopho, Phoenixll54", license = "GPL v3" }
 file{ path = "entities/bubble.lua", license = "GPL v3" }
+file{ path = "entities/bumper.lua", author = "Xavius", license = "GPL v3" }
 file{ path = "entities/cliff.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "entities/collapsing_soil.lua", author = "Benjamin Schweitzer, Christopho, Phoenixll54", license = "GPL v3" }
 file{ path = "entities/color_platform.lua", license = "GPL v3" }
@@ -2101,16 +2121,46 @@ file{ path = "fonts/enter_command_mono.ttf", author = "Nintendo, Yuji Oshimoto",
 file{ path = "items/bomb_bag.lua", license = "GPL v3" }
 file{ path = "items/rupee_bag.lua", license = "GPL v3" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "maps/dungeons/1", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/1/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/10", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/11", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/12", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/12/0f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/12/0f.lua", author = "The Unknown", }
+file{ path = "maps/dungeons/13", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/14", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/15", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/dungeons/16", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/17", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/dungeons/2", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/2/0f.dat", author = "The Unknown", }
-file{ path = "maps/dungeons/3", author = "The Unknown", }
-file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", }
+file{ path = "maps/dungeons/3", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/4", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/5", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/6", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/7", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/dungeons/8", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/dungeons/9", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/0f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/0f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/1f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/1f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/2f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/2f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/3f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/3f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/4f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/4f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/5f.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/9/5f.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/dungeons/secret", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/dungeons/secret/1f.dat", author = "The Unknown", }
 file{ path = "maps/dungeons/secret/1f.lua", author = "The Unknown", }
 file{ path = "maps/extensions/east_continent/a1.dat", author = "The Unknown", }
 file{ path = "maps/extensions/east_continent/a1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/cordinia_town/fairy_cave.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/caves/cordinia_town/fairy_cave.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/death_mountains/unused_cave.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/death_mountains/unused_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/east_mountains/divine_ore_cave.dat", author = "The Unknown", }
@@ -2127,6 +2177,8 @@ file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Un
 file{ path = "maps/inside/houses/cordinia_town/pond_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/gerudo_village/training_grounds.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/houses/gerudo_village/training_grounds.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/houses/hyrule_town/bakery.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/bakery.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
@@ -2135,6 +2187,8 @@ file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/inn.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/library.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/library.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/hyrule_town/pink_house.dat", author = "The Unknown", license = "CC-BY-NC-SA" }
+file{ path = "maps/inside/houses/hyrule_town/pink_house.lua", author = "The Unknown", license = "CC-BY-NC-SA" }
 file{ path = "maps/inside/houses/hyrule_town/temple_of_time.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/temple_of_time.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/hyrule_town/vase_house.dat", author = "The Unknown", }
@@ -2169,75 +2223,251 @@ file{ path = "maps/inside/shrines/lighthouse/0f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/0f.lua", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.dat", author = "The Unknown", }
 file{ path = "maps/inside/shrines/lighthouse/1f.lua", author = "The Unknown", }
-file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "LinkFF", }
-file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "LinkFF", }
-file{ path = "maps/out/a1.dat", author = "The Unknown", }
-file{ path = "maps/out/a2.dat", author = "The Unknown", }
-file{ path = "maps/out/a3.dat", author = "Nintendo, The Unknown", }
-file{ path = "maps/out/a4.dat", author = "The Unknown", }
-file{ path = "maps/out/a5.dat", author = "The Unknown", }
-file{ path = "maps/out/a6.dat", author = "The Unknown", }
-file{ path = "maps/out/a7.dat", author = "The Unknown", }
-file{ path = "maps/out/a8.dat", author = "The Unknown", }
-file{ path = "maps/out/a8.lua", author = "The Unknown", }
-file{ path = "maps/out/a9.dat", author = "The Unknown", }
-file{ path = "maps/out/a9.lua", author = "The Unknown", }
-file{ path = "maps/out/b1.dat", author = "Nintendo, The Unknown", }
-file{ path = "maps/out/b2.dat", author = "The Unknown", }
-file{ path = "maps/out/b3.dat", author = "The Unknown", }
-file{ path = "maps/out/b4.dat", author = "The Unknown", }
-file{ path = "maps/out/b5.dat", author = "The Unknown", }
-file{ path = "maps/out/b6.dat", author = "The Unknown", }
-file{ path = "maps/out/c1.dat", author = "Nintendo, The Unknown", }
-file{ path = "maps/out/c4.dat", author = "The Unknown", }
-file{ path = "maps/out/c5.dat", author = "The Unknown", }
-file{ path = "maps/out/c7.dat", author = "The Unknown", }
-file{ path = "maps/out/d1.dat", author = "The Unknown", }
-file{ path = "maps/out/d4.dat", author = "The Unknown", }
-file{ path = "maps/out/d6.dat", author = "The Unknown", }
-file{ path = "maps/out/e4.dat", author = "The Unknown", }
-file{ path = "maps/out/e6.dat", author = "The Unknown", }
-file{ path = "maps/out/f4.dat", author = "The Unknown", }
-file{ path = "maps/out/f5.dat", author = "The Unknown", }
-file{ path = "maps/out/f6.dat", author = "The Unknown", }
-file{ path = "maps/out/f7.dat", author = "The Unknown", }
-file{ path = "maps/out/g4.dat", author = "The Unknown", }
-file{ path = "maps/out/g4.lua", author = "The Unknown", }
-file{ path = "maps/out/g7.dat", author = "The Unknown", }
-file{ path = "maps/out/h4.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/i3.dat", author = "Linkff", }
-file{ path = "maps/out/i4.dat", author = "Linkff", }
-file{ path = "maps/out/i4.lua", author = "Linkff", }
-file{ path = "maps/out/i5.dat", author = "Linkff", }
-file{ path = "maps/out/i5.lua", author = "Linkff", }
-file{ path = "maps/out/j1.dat", author = "The Unknown", }
-file{ path = "maps/out/j1.lua", author = "The Unknown", }
-file{ path = "maps/out/j5.dat", author = "Linkff", }
-file{ path = "maps/out/j5.lua", author = "Linkff", }
-file{ path = "maps/out/j6.dat", author = "Linkff", }
-file{ path = "maps/out/j6.lua", author = "Linkff", }
-file{ path = "maps/out/j7.dat", author = "Linkff", }
-file{ path = "maps/out/k1.dat", author = "The Unknown", }
-file{ path = "maps/out/k7.dat", author = "Linkff", }
-file{ path = "maps/out/k8.dat", author = "The Unknown", }
-file{ path = "maps/out/k9.dat", author = "The Unknown", }
-file{ path = "maps/out/l1.dat", author = "Linkff", }
-file{ path = "maps/out/l1.lua", author = "Linkff", }
-file{ path = "maps/out/l2.dat", author = "The Unknown", }
-file{ path = "maps/out/l2.lua", author = "The Unknown", }
-file{ path = "maps/out/l3.dat", author = "The Unknown", }
-file{ path = "maps/out/l3.lua", author = "The Unknown", }
-file{ path = "maps/out/l4.dat", author = "The Unknown", }
-file{ path = "maps/out/l4.lua", author = "The Unknown", }
-file{ path = "maps/out/l5.dat", author = "The Unknown", }
-file{ path = "maps/out/l5.lua", author = "The Unknown", }
-file{ path = "maps/out/l6.dat", author = "The Unknown", }
-file{ path = "maps/out/l6.lua", author = "The Unknown", }
-file{ path = "maps/out/l7.dat", author = "The Unknown", }
-file{ path = "maps/out/l8.dat", author = "The Unknown", }
-file{ path = "maps/out/l9.dat", author = "Linkff, The Unknown", }
-file{ path = "maps/out/l9.lua", author = "Linkff, The Unknown", }
-file{ path = "musics/inside/pop_estrgg.ogg", author = "Francis Mechner", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.dat", author = "Linkff", }
+file{ path = "maps/inside/shrines/shibo_nayru/0f.lua", author = "Linkff", }
+file{ path = "maps/out/a1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/a9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/b9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/c9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/d9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/e9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/f9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/g9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h4.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/h4.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/h5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/h9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i3.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i3.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i4.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i4.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/i5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/i9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j5.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j5.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j6.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j6.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j7.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/j7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/j9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k3.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k3.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k7.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k7.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/k8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k8.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k9.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/k9.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l1.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l1.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l2.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l2.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l3.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l3.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l4.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l4.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l5.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l5.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l6.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l6.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l7.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l7.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l8.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/out/l8.lua", author = "The Unknown", license = "GPL V3" }
+file{ path = "maps/out/l9.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "maps/out/l9.lua", author = "Linkff", license = "GPL v3" }
+file{ path = "musics/boss/boss_albw.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/boss/cryobraz.ogg", author = "boss dungeon 9", }
+file{ path = "musics/cutscenes/game_over.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/cutscenes/kaepora_gaebora.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/cutscenes/prologue.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/cutscenes/savegames.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/dungeons/07_desert.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/inside/castle.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/inside/cave.ogg", license = "Proprietary" }
+file{ path = "musics/inside/goron.ogg", license = "Proprietary" }
+file{ path = "musics/inside/house.ogg", license = "Proprietary" }
+file{ path = "musics/inside/library.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_1.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_alttp.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_mm.ogg", license = "Proprietary" }
+file{ path = "musics/inside/minigame_oot.ogg", license = "Proprietary" }
+file{ path = "musics/inside/observatory.ogg", license = "Proprietary" }
+file{ path = "musics/inside/potion.ogg", license = "Proprietary" }
+file{ path = "musics/inside/ravio.ogg", license = "Proprietary" }
+file{ path = "musics/inside/shop.ogg", license = "Proprietary" }
+file{ path = "musics/inside/temple_time.ogg", license = "Proprietary" }
+file{ path = "musics/inside/windmill.ogg", license = "Proprietary" }
+file{ path = "musics/outside/dark_world.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/east_lost_woods.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/hyrule_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/hyrule_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
 file{ path = "scripts/automation", author = "Olivier Cl�ro", license = "BSD, GPL v3" }
@@ -2251,16 +2481,13 @@ file{ path = "scripts/gfx_effects/fade_to_white.lua", author = "PhoenixII54", li
 file{ path = "scripts/gfx_effects/pixellisation.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/gfx_effects/radial_fade_out.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/hud/hud.lua", license = "GPL v3" }
-file{ path = "scripts/lib", license = "GPL v3" }
-file{ path = "scripts/lib/iter.lua", license = "GPL v3" }
-file{ path = "scripts/lib/text_utils.lua", license = "GPL v3" }
 file{ path = "scripts/maps/block_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/ceiling_drop_manager.lua", author = "MetalZelda, adapted by PhoenixII54", }
 file{ path = "scripts/maps/cinematic_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/effect_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/flying_tile_manager.lua", license = "GPL v3" }
-file{ path = "scripts/maps/fsa_effect.lua", license = "GPL v3" }
-file{ path = "scripts/maps/gb_effect.lua", license = "GPL v3" }
+file{ path = "scripts/maps/fsa_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
+file{ path = "scripts/maps/gb_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/house_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/jump_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/laser_manager.lua", license = "GPL v3" }
@@ -2271,9 +2498,12 @@ file{ path = "scripts/maps/lib/windfish_maze_config.lua", license = "GPL v3" }
 file{ path = "scripts/maps/light_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/main_quest_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/map_tools.lua", license = "GPL v3" }
+file{ path = "scripts/maps/minigame_manager.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/pushing_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/sideview_manager.lua", author = "PhoenixII54", license = "GPL v3" }
 file{ path = "scripts/maps/teletransporter_manager.lua", license = "GPL v3" }
+file{ path = "scripts/maps/tft_effect.lua", author = "Stdgregwar, adapted by The Unknown", license = "GPL v3" }
+file{ path = "scripts/maps/timer_manager.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "scripts/maps/travel_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/trial_manager.lua", license = "GPL v3" }
 file{ path = "scripts/maps/unstable_floor_manager.lua", license = "GPL v3" }
@@ -2305,6 +2535,11 @@ file{ path = "scripts/tools", license = "GPL v3" }
 file{ path = "scripts/tools/debug_utils.lua", license = "GPL v3" }
 file{ path = "scripts/tools/math_utils.lua", license = "GPL v3" }
 file{ path = "scripts/tools/string_utils.lua", license = "GPL v3" }
+file{ path = "scripts/weather/fall_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/hail_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/rain_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/snow_manager.lua", author = "Diarando", license = "GPL v3" }
+file{ path = "scripts/weather/weather_manager.lua", author = "Diarando", license = "GPL v3" }
 file{ path = "shaders/default.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/default.frag.glsl", author = "std::gregwar", license = "GPL v3" }
 file{ path = "shaders/default.vert.glsl", author = "std::gregwar", license = "GPL v3" }
@@ -2323,33 +2558,130 @@ file{ path = "shaders/power_effect.dat", author = "PhoenixII54", }
 file{ path = "shaders/radial_fade_out.dat", author = "PhoenixII54", }
 file{ path = "shaders/radial_fade_out.frag.glsl", author = "PhoenixII54", }
 file{ path = "shaders/starman.dat", author = "PhoenixII54", }
+file{ path = "sounds/items/cane.ogg", author = "Nintendo", license = "Proprietary" }
 file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
+file{ path = "sprites/enemies/dungeons/lizalfos.png", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_blue.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_purple.dat", author = "The Unknown", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_red.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_spear.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_sword.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/lizalfos_yellow.dat", author = "Newlink", license = "CC-BY-SA" }
+file{ path = "sprites/enemies/dungeons/medusa.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/medusa.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/tentacle_ice.dat", author = "The Unknown", license = "CC-BY-NC-SA" }
 file{ path = "sprites/enemies/outside/armos.png", author = "The Unknown", }
-file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/hinox_blue.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_baby.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_baby_red.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_black.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_black.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_blue.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_platine.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/lynel_silver.dat", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/moblin_black.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/moblin_green.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "LinkFF", }
-file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "LinkFF", }
-file{ path = "sprites/entities/fairy.dat", author = "ALTTP", }
+file{ path = "sprites/enemies/outside/armos_fire.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/armos_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/armos_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/armos_yellow.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/outside/blob_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob_grey.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/blob_yellow.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/outside/cukeman_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman_grey.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/cukeman_yellow.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/hinox.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/outside/hinox.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/outside/hinox_black.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/hinox_blue.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/hinox_green.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/like_like.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/like_like.png", author = "Nintendo, The Unknown", license = "Proprietary, CC-BY-NC-SA" }
+file{ path = "sprites/enemies/outside/like_like_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/like_like_purple.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/like_rupee_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/like_rupee_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/like_rupee_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel.dat", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel_baby.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/lynel_black.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_blue.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_gold.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/lynel_silver.dat", author = "Linkff", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/moblin_black.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_boy.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/nk_rebel_girl_animate.png", author = "Linkff", }
+file{ path = "sprites/enemies/outside/octorok_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/octorok_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/outside/octorok_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/knight_black.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_black_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_blue_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_ice_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_myrtle.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_myrtle_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_red_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_spear.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_sword.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/knight_yellow.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/knight_yellow_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/soldier_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_blue_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_cannon.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_cannon.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/soldier_green.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_green_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_ice.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_ice_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_myrtle.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_myrtle_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_red_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_spear.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_sword.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/soldier_yellow.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/soldier_yellow_sword.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/tarosu_blue.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/tarosu_blue.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/tarosu_blue_weapon.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/tarosu_red.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/enemies/soldiers/tarosu_red.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/soldiers/tarosu_red_weapon.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "sprites/entities/bumper.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/bumper.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/castle_seal.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/castle_seal.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/chest.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/chest.png", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/fairy.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/entities/fairy.png", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/entities/ground_effects/walrus_diving_effect.dat", author = "JulioTanaka", }
+file{ path = "sprites/entities/switches/owl_statue.dat", author = "Olivier Cléro, The Unknown", license = "CC-BY-SA" }
 file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hud/new_clock.dat", author = "The Unknown", license = "CC-BY-SA" }
+file{ path = "sprites/hero/item/rods/darkness_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/doom_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/fire_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/healing_wand.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/ice_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/light_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.moving.entity.png", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod.png", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/somaria_cane.dat", author = "Nintendo, Mister Man", license = "Proprietary" }
+file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/wind_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
@@ -2371,3 +2703,102 @@ file{ path = "sprites/menus/title_screen/triforce.dat", author = "Olivier Cléro
 file{ path = "sprites/menus/title_screen/triforce.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/npc/fisher_blue.dat", author = "The Unknown", }
 file{ path = "sprites/npc/fisher_green.dat", author = "The Unknown", }
+file{ path = "sprites/npc/merchant_hooded_blue.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_green.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_orange.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_pink.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_purple.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_red.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_turquoise.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_hooded_yellow.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_blue.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_green.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_orange.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_pink.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_purple.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_red.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_turquoise.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/npc/merchant_street_yellow.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "tilesets/Full Hyrule.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/Full Hyrule.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/Full Hyrule.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_01.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_01.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_01.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_02.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_02.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_02.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_03.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_03.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_03.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_04.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_04.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_04.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_05.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_05.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_05.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_06.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_06.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_06.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_07.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_07.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_07.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_08.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_08.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_08.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_09.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_09.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_09.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_10.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_10.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_10.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_11.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_11.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_11.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_12.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_12.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_12.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_13.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_13.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_13.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_14.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_14.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_14.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_15.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_15.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_15.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_16.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_16.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_16.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_17.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_17.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_17.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_18.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_18.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_18.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_19.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_19.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_19.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_20.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_20.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_20.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_21.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_21.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_21.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_22.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_22.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_22.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_23.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_23.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/absolute_dungeon_23.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_additions.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_additions.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_buildings.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_buildings.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_main.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_main.entities.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_main.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_minimap.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_minimap.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_special.dat", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }
+file{ path = "tilesets/outside_special.tiles.png", author = "Nintendo, FFOmega, The Unknown", license = "Proprietary" }

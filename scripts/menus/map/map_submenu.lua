@@ -18,7 +18,7 @@ function submenu:on_started()
 	sol.menu.bring_to_front(submenu)
   self.title_arrows = sol.surface.create("menus/pause/submenus_arrows.png")
 	self.title_surfaces = sol.surface.create(88, 16)
-	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png") 
+	self.caption_background = sol.surface.create("menus/map/world_map_caption.png") 
   self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
   self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
   self.save_dialog_cursor_pos = "left"
@@ -70,14 +70,14 @@ function submenu:on_started()
   self.caption_text_1 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "alttp_ttf",
+    font = "alttp",
     font_size = 8,
     color = self.text_color,
   }
   self.caption_text_2 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
-    font = "alttp_ttf",
+    font = "alttp",
     font_size = 8,
     color = self.text_color,
   }
@@ -133,23 +133,26 @@ function submenu:draw_caption(dst_surface)
         -- Draw caption text.
         if self.caption_text_2:get_text():len() == 0 then
           self.caption_text_1:set_xy(width / 2 + 48, height / 2 + 70)
-          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color, nil, nil, "dialogue")
         else
           self.caption_text_1:set_xy(dst_surface, width / 2 + 48, height / 2 + 62)
           self.caption_text_2:set_xy(dst_surface, width / 2 + 48, height / 2 + 87)
-          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
-          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color, nil, nil, "dialogue")
+          text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color, nil, nil, "dialogue")
         end
-    else
+    else 
+      local caption_w, caption_h = self.caption_background:get_size()
+      self.caption_background:set_xy((width / 2) - (caption_w / 2), (height / 2) + 70)
+      self.caption_background:draw(dst_surface)
       -- Draw caption text.
       if self.caption_text_2:get_text():len() == 0 then
-        self.caption_text_1:set_xy(width / 2, height / 2 + 94)
-        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+        self.caption_text_1:set_xy(width / 2, height / 2 + 88)
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color, nil, nil, "dialogue")
       else
         self.caption_text_1:set_xy(dst_surface, width / 2, height / 2 + 89)
         self.caption_text_2:set_xy(dst_surface, width / 2, height / 2 + 99)
-        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color)
-        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color)
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_2, self.text_stroke_color, nil, nil, "dialogue")
+        text_fx_helper:draw_text_with_stroke(dst_surface, self.caption_text_1, self.text_stroke_color, nil, nil, "dialogue")
       end
     end
   end

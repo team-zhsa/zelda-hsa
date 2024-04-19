@@ -1,6 +1,6 @@
 local fsa = {}
 
-local light_mgr = require("scripts/lights/light_manager")
+local light_mgr = require("scripts/maps/light_manager")
 
 local quest_w, quest_h = sol.video.get_quest_size()
 
@@ -334,30 +334,50 @@ local function setup_inside_lights(map)
 	local house = map:get_id():match("^inside/houses/") ~= nil
 	light_mgr:init(map,
 		(function()
-			if house then
-				return {200,190,180}
+			if map.fsa_dark then
+				if map.lit_torches ~= nil then
+					return {0,0,0} -- Ambient darkness
+				end
 			else
-				return {105,100,95}
+				if house then
+					-- House ambient light
+					return {200,190,180}
+				else
+					-- Cave/other light
+					return {105,100,95}
+				end
 			end
 		end)())
 	light_mgr:add_occluder(map:get_hero())
 
-
-	if not house then
-		local hero = map:get_hero()
-		--create hero light
-		local hl = create_light(map,-64,-64,0,"80","196,128,200")
-		function hl:on_update()
-			if map:get_game():has_item("lamp") then
-				hl:set_position(hero:get_position())
+-- HERE FOR DARKNESS SYSTEM
+local hero = map:get_hero()
+--create hero light
+		if map.fsa_dark then
+			-- Create a smaller hero light
+			local hl = create_light(map,-16,-16,0,"32","193,185,80")
+			function hl:on_update()
+				if map:get_game():has_item("lamp") then
+					hl:set_position(hero:get_position())
+				end
+			end
+			hl.excluded_occs = {[hero]=true}
+		else
+			if not house then
+				-- Create a normal hero light
+				local hl = create_light(map,-48,-48,0,"64","196,128,200")
+				function hl:on_update()
+					if map:get_game():has_item("lamp") then
+						hl:set_position(hero:get_position())
+					end
+				end
+				hl.excluded_occs = {[hero]=true}
 			end
 		end
-		hl.excluded_occs = {[hero]=true}
-	end
 
 	--add a static light for each torch pattern in the map
 	local map_lights = get_lights_from_map(map)
-	local default_radius = "160"            
+	local default_radius = "80"   
 	local default_color = "193,185,80"
 
 	for _,l in ipairs(map_lights) do

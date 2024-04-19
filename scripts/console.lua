@@ -14,7 +14,7 @@ local console = {
 	padding = 6,                          -- Padding of the console in pixels.
 
 	color = {32, 32, 32},                  -- Background color of the console.
-	opacity = 248,                        -- Background opacity of the console.
+	opacity = 200,                        -- Background opacity of the console.
 	font_color = {255, 255, 255},         -- Color of the font.
 	selection_color = {64, 128, 192},     -- Color of the selection.
 	selection_opacity = 80,               -- Selection opacity.

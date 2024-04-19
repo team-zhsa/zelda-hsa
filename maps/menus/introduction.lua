@@ -238,24 +238,24 @@ function phase_6()
 	end
 end
 
-function map:on_started()
+map:register_event("on_started", function()
 	map:set_joypad_commands()
 	effect_manager:set_effect(game, nil)
 	game:set_value("mode", "snes")
 	game:get_dialog_box():set_style("empty")
 	map:get_camera():set_position(0, 0)
-	sol.audio.play_music("cutscenes/cutscene_introduction")
+	sol.audio.play_music("cutscenes/prologue")
 	black_surface:fill_color({ 0, 0, 0 })
 	black_surface:set_opacity(0)
 	map_surface:set_opacity(0)
 	map_surface:set_scale(scale_x, scale_y)
 	game:set_hud_enabled(false)
 	phase_1()
-end
+end)
 
-function map:on_opening_transition_finished()
+map:register_event("on_opening_transition_finished", function()
 	hero:freeze()
-end
+end)
 
 function map:set_joypad_commands()
 	-- Button mapping according commonly used xbox gamepad on PC

@@ -1,7 +1,7 @@
 -- initialise sensor behavior specific to this quest.
 
 local sensor_meta = sol.main.get_metatable("sensor")
-require("scripts/maps/light_manager")
+require("scripts/maps/light_manager_old")
 
 function sensor_meta:on_activated()
 

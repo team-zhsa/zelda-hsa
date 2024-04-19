@@ -1,13 +1,13 @@
 local submenu = require("scripts/menus/map/map_submenu")
 local map_submenu = submenu:new()
 local max_floors_displayed = 7
-local outside_world_size = {}
-local outside_world_minimap_size = {}
 local map_shown = false
 local waypoint_positions = require("scripts/menus/map/waypoint_config")
 local map_areas_config = require("scripts/menus/map/map_areas_config")
 
--- TODO add a zoom option for the outside map
+-------------------
+-- COMMON EVENTS --
+-------------------
 
 function map_submenu:on_started()
 	submenu.on_started(self)
@@ -33,58 +33,72 @@ function map_submenu:on_started()
 		-- Not in a dungeon: show a world map.
 		self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
 
-		-- Absolute coordinates (relative to the real world): we set the hero position to the map's coordinates.
-		local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
-		local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
-		local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
+	-- Absolute coordinates (relative to the real world): we set the hero position to the map's coordinates.
+	local hero_absolute_x, hero_absolute_y = self.game:get_map():get_location()
+	local waypoint_absolute_x = waypoint_positions[self.game:get_value("main_quest_step")].x
+	local waypoint_absolute_y = waypoint_positions[self.game:get_value("main_quest_step")].y
+	local map_width, map_height = self.game:get_map():get_size()
 
-		local map_width, map_height = self.game:get_map():get_size()
-		if self.game:is_in_outside_world() then -- What maps are outside? Set the hero's position to his actual position.
-			local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
-			hero_absolute_x = hero_absolute_x + hero_map_x
-			hero_absolute_y = hero_absolute_y + hero_map_y
-			waypoint_absolute_x = waypoint_absolute_x
-			waypoint_absolute_y = waypoint_absolute_y
-		end
-		if self.game:is_in_inside_world() then -- What maps are inside? Keep the hero's position to the map's position.
-			local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
-			hero_absolute_x = hero_absolute_x
-			hero_absolute_y = hero_absolute_y
-			waypoint_absolute_x = waypoint_absolute_x
-			waypoint_absolute_y = waypoint_absolute_y
-		end
+	if self.game:is_in_outside_world() then -- What maps are outside? Set the hero's position to his actual position.
+		local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
+		hero_absolute_x = hero_absolute_x + hero_map_x
+		hero_absolute_y = hero_absolute_y + hero_map_y
+		waypoint_absolute_x = waypoint_absolute_x
+		waypoint_absolute_y = waypoint_absolute_y
+	end
+	if self.game:is_in_inside_world() then -- What maps are inside? Keep the hero's position to the map's position.
+		local hero_map_x, hero_map_y = self.game:get_map():get_entity("hero"):get_position()
+		hero_absolute_x = hero_absolute_x
+		hero_absolute_y = hero_absolute_y
+		waypoint_absolute_x = waypoint_absolute_x
+		waypoint_absolute_y = waypoint_absolute_y
+	end
 
-		self.world_minimap_movement = nil
-		self.world_minimap_visible_xy = {x = 0, y = 0, product = 0}
-		self.current_map_hovered = {x = 1, y = 1}
+	self.world_minimap_movement = nil
+	self.world_minimap_visible_xy = {x = 0, y = 0, product = 0}
+	self.current_map_hovered = {x = 1, y = 1}
+	self.current_map_index = {x = 1, y = 1}
 
-		if self.game:get_item("world_map"):get_variant() > 0 then
-			if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
-				map_shown = true      -- If in North Hyrule with World Map, then show the map.
-				self.outside_world_size = {width = 15360 + 1408, height = 12960 + 1120}
-				self.outside_world_minimap_size = {width = 960 + 88 - 16, height = 810 + 70}
-				self.world_minimap_img = sol.surface.create("menus/map/full_hyrule_world_map.png")
+	self.zoom_mode = "full"
+	self.world_minimap_img = sol.surface.create("menus/map/"..self.zoom_mode.."_hyrule_world_map.png")
+	local box_x, box_y = self.world_map_background_img:get_size()
+	box_x, box_y = 87, 70
+
+	if self.game:get_item("world_map"):get_variant() > 0 then
+		if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
+			if self.zoom_mode ~= "small" then
+				map_shown = true
+				-- Add room for scrolling on the lower right edge.
+				self.outside_world_size = {width = 1536 + 15360 + 1536, height = 1536 + 12960 + 1536}
+				self.outside_world_minimap_size = {width = 96 + 960 + 96, height = 96 + 810 + 96}
+				local offset_x, offset_y = 96, 96
+				self.box_offset_x, self.box_offset_y = 30, 54
+				local scale_x, scale_y = self.outside_world_minimap_size.width / self.outside_world_size.width, 
+																 self.outside_world_minimap_size.height / self.outside_world_size.height
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
-				local hero_minimap_x = math.floor(hero_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-				local hero_minimap_y = math.floor(hero_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-				local waypoint_minimap_x = math.floor(waypoint_absolute_x * self.outside_world_minimap_size.width / self.outside_world_size.width)
-				local waypoint_minimap_y = math.floor(waypoint_absolute_y * self.outside_world_minimap_size.height / self.outside_world_size.height)
-				-- Offset the position because the map is offsetted from the world (clouds)
-				self.hero_x = hero_minimap_x + (hero_absolute_x / map_width) + 57 + 88 -- 64 is the real map's offset with the sprite image
-				self.hero_y = hero_minimap_y + (hero_absolute_y / map_height) + 50 + 88
-				self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + 57 + 88 --+ 45 + 64 + 16 -- 64 is the real map's offset with the sprite image
-				self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + 50 + 88-- + 28 + 64 + 16
-				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width, math.max(0, hero_minimap_x + 88 - 87)) 
-				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height, math.max(0, hero_minimap_y  + 88 - 72))
+				local hero_minimap_x = math.floor((hero_absolute_x + 1536) * scale_x)
+				local hero_minimap_y = math.floor((hero_absolute_y + 1536) * scale_y)
+				local waypoint_minimap_x = math.floor((waypoint_absolute_x) * scale_x)
+				local waypoint_minimap_y = math.floor((waypoint_absolute_y) * scale_y)
+				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
+					self.hero_x = hero_minimap_x
+					self.hero_y = hero_minimap_y
+					self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
+					self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
+				self.world_minimap_visible_xy.x = self.hero_x--math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x + self.box_offset_x))
+				self.world_minimap_visible_xy.y = self.hero_y--math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y + self.box_offset_y))
+			else
+
 			end
-		else
-			-- if World Map not in inventory, show clouds in map screen
-			map_shown = false
-			self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
-			self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
-			self.world_minimap_visible_xy.y = 0
-			self.world_minimap_visible_xy.x = 0
 		end
+	else
+		-- if World Map not in inventory, show clouds in map screen
+		map_shown = false
+		self.world_map_background_img = sol.surface.create("menus/map/world_map_background.png")
+		self.world_minimap_img = sol.surface.create("menus/map/world_map_clouds.png")
+		self.world_minimap_visible_xy.y = 0
+		self.world_minimap_visible_xy.x = 0
+	end
 
 	else
 		-- In a dungeon.
@@ -141,26 +155,6 @@ function map_submenu:on_finished()
 	sol.menu.stop(self)
 end
 
-------------------
--- MAP MOVEMENT --
-------------------
-
-function map_submenu:on_command_pressed(command)
-  local handled = submenu.on_command_pressed(self, command)
-  if not handled then
-    if self.dungeon then
-      handled = self:dungeon_on_command_pressed(command)
-    elseif not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then
-			-- Move the outside world minimap.
-			if map_shown then
-				handled = self:world_on_command_pressed(command)
-			end
-    end
-  end
-  return handled
-end
-
-
 -- Called when drawn
 function map_submenu:on_draw(dst_surface)
 
@@ -193,18 +187,19 @@ function map_submenu:draw_world_map(dst_surface)
 		center_x - 87, center_y - 70)
 
 	if map_shown then
+
 		-- Draw the hero's position and the waypoint's position.
-		local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x + 16
+		local hero_visible_x = self.hero_x- self.world_minimap_visible_xy.x
 		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
 		local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x
 		local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y
-		if (hero_visible_x >= center_x - 100 and hero_visible_x <= center_x + 100 - 24)
-		and (hero_visible_y >= center_y - 80  and hero_visible_y <= center_y + 80 - 16) then
+		if (hero_visible_x >= center_x - 87 and hero_visible_x <= center_x + 87)
+		and (hero_visible_y >= center_y - 70  and hero_visible_y <= center_y + 70) then
 			-- Makes the hero icon invisible when it is out of bounds.
 			self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
 		end
-		if (waypoint_position_visible_x >= center_x - 100 and waypoint_position_visible_x <= center_x + 100 - 24)
-		and (waypoint_position_visible_y >= center_y - 80 and waypoint_position_visible_y <= center_y + 80 - 16) then
+		if (waypoint_position_visible_x >= center_x - 87 and waypoint_position_visible_x <= center_x + 87)
+		and (waypoint_position_visible_y >= center_y - 70 and waypoint_position_visible_y <= center_y + 70) then
 			-- Makes the waypoint icon invisible when it is out of bounds.
 			self.waypoint_sprite:draw(dst_surface, waypoint_position_visible_x, waypoint_position_visible_y)
 		end
@@ -213,22 +208,22 @@ function map_submenu:draw_world_map(dst_surface)
 		self.world_map_background_img:draw(dst_surface, center_x - 95, center_y - 78)
 
 		-- Draw the arrows.
-		if self.world_minimap_visible_xy.y > 19 then
+		if self.world_minimap_visible_xy.y > 28 then
 			self.up_arrow_sprite:draw(dst_surface, center_x - 40, center_y - 85)
 			self.up_arrow_sprite:draw(dst_surface, center_x + 24, center_y - 85)
 		end
 		
-		if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 52 then
-			self.down_arrow_sprite:draw(dst_surface, center_x - 40, center_y + 77)
-			self.down_arrow_sprite:draw(dst_surface, center_x + 24, center_y + 77)
+		if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 71 then
+			self.down_arrow_sprite:draw(dst_surface, center_x - 40, center_y + 109)
+			self.down_arrow_sprite:draw(dst_surface, center_x + 24, center_y + 109)
 		end
 
-		if self.world_minimap_visible_xy.x > 5 then
+		if self.world_minimap_visible_xy.x > 11 then
 			self.left_arrow_sprite:draw(dst_surface, center_x - 103, center_y - 48)
 			self.left_arrow_sprite:draw(dst_surface, center_x - 103, center_y + 32)
 		end
 		
-		if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 87 then
+		if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 88 then
 			self.right_arrow_sprite:draw(dst_surface, center_x + 94, center_y - 48)
 			self.right_arrow_sprite:draw(dst_surface, center_x + 94, center_y + 32)
 		end
@@ -237,154 +232,22 @@ function map_submenu:draw_world_map(dst_surface)
 	end
 
 	-- Set the caption according to the currently visible area.
-	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x - center_x - 1) / 80) + 2
-	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y - center_y + 12) / 90) + 1
+	local box_x, box_y = self.world_map_background_img:get_size()
+	box_x, box_y = ((box_x - 16) / 2) + 8 , ((box_y - 16) / 2) + 8
+	self.current_map_hovered.x = math.ceil((self.world_minimap_visible_xy.x + box_x - 100))
+	self.current_map_hovered.y = math.ceil((self.world_minimap_visible_xy.y + box_y - 100))
+	print(self.hero_x, self.hero_y)
+	--print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
+	--print("HOVER"..self.current_map_hovered.x.. " ".. self.current_map_hovered.y)
+	self.current_map_index.x = math.floor(self.current_map_hovered.x / 80) + 1
+	if self.current_map_index.x == -1 then self.current_map_index.x = 0 end
+		self.current_map_index.y = math.floor(self.current_map_hovered.y / 90) + 1
+	if self.current_map_index.y == -1 then self.current_map_index.y = 0 end
+	--print(self.current_map_index.x, self.current_map_index.y)
 	if map_shown then
-   self:set_caption(map_areas_config[self.current_map_hovered.x][self.current_map_hovered.y].key)
+		self:set_caption(map_areas_config[self.current_map_index.x][self.current_map_index.y].key)
 	else self:set_caption("map.title") end
 	self.map_cursor_img:draw(dst_surface, center_x - 87, center_y - 70)
-end
-
-function map_submenu:world_on_command_pressed(command)
-	local handled = false
-	if command == "left" then
-		handled = true
-		if self.world_minimap_visible_xy.x > 0 then
-			local angle = math.pi
-			if self.world_minimap_movement ~= nil then
-				self.world_minimap_movement:stop()
-			end
-			local movement = sol.movement.create("straight")
-				movement:set_speed(172)
-				movement:set_angle(angle)
-				local submenu = self
-
-			function movement:on_position_changed()
-				-- Stop the movement when the key is not pressed.
-				if not submenu.game:is_command_pressed("left") then
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-				-- Stop the movement when map borders reached.
-				if submenu.world_minimap_visible_xy.x <= 4
-				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-				or submenu.world_minimap_visible_xy.y <= 15
-				or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-					if submenu.world_minimap_visible_xy.x == 4 then submenu.world_minimap_visible_xy.x = 5 end
-					if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-			end
-			movement:start(self.world_minimap_visible_xy)
-			self.world_minimap_movement = movement
-
-		end
-	elseif command == "right" then
-		handled = true
-		if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 86 then
-			local angle = 0
-			if self.world_minimap_movement ~= nil then
-				self.world_minimap_movement:stop()
-			end
-			local movement = sol.movement.create("straight")
-			movement:set_speed(172)
-			movement:set_angle(angle)
-			local submenu = self
-
-			function movement:on_position_changed()
-			-- Stop the movement when the key is not pressed.
-			if not submenu.game:is_command_pressed("right") then
-				self:stop()
-				submenu.world_minimap_movement = nil
-				end
-
-				-- Stop the movement when map borders reached.
-				if submenu.world_minimap_visible_xy.x <= 4
-				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-				or submenu.world_minimap_visible_xy.y <= 18
-				or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-					if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 86 then submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 86 - 1 end
-					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-			end
-			movement:start(self.world_minimap_visible_xy)
-			self.world_minimap_movement = movement
-		end
-	elseif command == "up" then
-		handled = true
-		if self.world_minimap_visible_xy.y < self.outside_world_minimap_size.height - 51 then
-			local angle = math.pi / 2
-
-			if self.world_minimap_movement ~= nil then
-				self.world_minimap_movement:stop()
-			end
-			local movement = sol.movement.create("straight")
-			movement:set_speed(172)
-			movement:set_angle(angle)
-			local submenu = self
-
-			function movement:on_position_changed()
-				if not submenu.game:is_command_pressed("up")  then
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-
-				-- Stop the movement when map borders reached.
-				if submenu.world_minimap_visible_xy.x <= 4
-				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-				or submenu.world_minimap_visible_xy.y <= 18
-				or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-					if submenu.world_minimap_visible_xy.x == 4 then submenu.world_minimap_visible_xy.x = 5 end
-					if submenu.world_minimap_visible_xy.y == 18 then submenu.world_minimap_visible_xy.y = 19 end
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-			end
-
-			movement:start(self.world_minimap_visible_xy)
-			self.world_minimap_movement = movement
-		end
-	elseif command == "down" then
-		handled = true
-		if self.world_minimap_visible_xy.y > 0 then
-			local angle =  3 * math.pi / 2
-
-			if self.world_minimap_movement ~= nil then
-				self.world_minimap_movement:stop()
-			end
-
-			local movement = sol.movement.create("straight")
-			movement:set_speed(172)
-			movement:set_angle(angle)
-			local submenu = self
-
-			function movement:on_position_changed()
-				if not submenu.game:is_command_pressed("down")  then
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-
-				-- Stop the movement when map borders reached.
-				if submenu.world_minimap_visible_xy.x <= 4
-				or submenu.world_minimap_visible_xy.x >= submenu.outside_world_minimap_size.width - 86
-				or submenu.world_minimap_visible_xy.y <= 18
-				or submenu.world_minimap_visible_xy.y >= submenu.outside_world_minimap_size.height - 51 then
-					if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 86 then submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 86 - 1 end
-					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 51 then submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 51 - 1 end
-					self:stop()
-					submenu.world_minimap_movement = nil
-				end
-			end
-			
-			movement:start(self.world_minimap_visible_xy)
-			self.world_minimap_movement = movement
-
-		end
-	end
-	return handled
 end
 
 ------------------
@@ -415,8 +278,8 @@ function map_submenu:draw_dungeon_map(dst_surface)
 		self.hero_point_sprite:draw(self.dungeon_map_img, self.hero_x, self.hero_y)
 	end
 	self.dungeon_map_img:draw(dst_surface,
-	map_box_x + 19,-- dungeon_map_center_x,
-	map_box_y + 29)-- dungeon_map_center_y)
+	map_box_x + 20,-- dungeon_map_center_x,
+	map_box_y + 28)-- dungeon_map_center_y)
 end
 
 function map_submenu:draw_dungeon_items(dst_surface)
@@ -545,54 +408,6 @@ function map_submenu:draw_dungeon_floors(dst_surface)
 	if self.highest_floor_displayed < self.dungeon.highest_floor then
 		self.up_arrow_sprite:draw(dst_surface, center_x - 76, center_y - 62)
 	end
-end
-
-function map_submenu:dungeon_on_command_pressed(command)
-	local handled = false
-	if commmand == "left" then
-	elseif command == "right" then
-	elseif command == "up" then
-		-- We are in a dungeon: select another floor.
-		local new_selected_floor
-		if command == "up" then
-			new_selected_floor = self.selected_floor + 1
-		end
-		if new_selected_floor >= self.dungeon.lowest_floor
-				and new_selected_floor <= self.dungeon.highest_floor then
-			-- The new floor is valid.
-			sol.audio.play_sound("menus/cursor")
-			self.hero_head_sprite:set_frame(0)
-			self.selected_floor = new_selected_floor
-			if self.selected_floor <= self.highest_floor_displayed - 7 then
-				self.highest_floor_displayed = self.highest_floor_displayed - 1
-			elseif self.selected_floor > self.highest_floor_displayed then
-				self.highest_floor_displayed = self.highest_floor_displayed + 1
-			end
-			self:load_dungeon_map_image()
-		end
-		handled = true
-	elseif command == "down" then
-		-- We are in a dungeon: select another floor.
-		local new_selected_floor
-		if command == "down" then
-			new_selected_floor = self.selected_floor - 1
-		end
-		if new_selected_floor >= self.dungeon.lowest_floor
-				and new_selected_floor <= self.dungeon.highest_floor then
-			-- The new floor is valid.
-			sol.audio.play_sound("menus/cursor")
-			self.hero_head_sprite:set_frame(0)
-			self.selected_floor = new_selected_floor
-			if self.selected_floor <= self.highest_floor_displayed - 7 then
-				self.highest_floor_displayed = self.highest_floor_displayed - 1
-			elseif self.selected_floor > self.highest_floor_displayed then
-				self.highest_floor_displayed = self.highest_floor_displayed + 1
-			end
-			self:load_dungeon_map_image()
-		end
-		handled = true
-	end
-	return handled
 end
 
 -- Converts x,y relative to the real floor into coordinates relative
@@ -746,5 +561,243 @@ function map_submenu:load_chests()
 
 	-- Cleanup temporary value.
 end
+
+--------------------
+-- COMMAND EVENTS --
+--------------------
+
+function map_submenu:on_command_pressed(command)
+  local handled = submenu.on_command_pressed(self, command)
+  if not handled then
+    if self.dungeon then
+      handled = self:dungeon_on_command_pressed(command)
+    elseif not self.game:is_in_dungeon() and self.game:get_item("world_map"):get_variant() > 0 then
+			-- Move the outside world minimap.
+			if map_shown then
+				handled = self:world_on_command_pressed(command)
+			end
+    end
+  end
+  return handled
+end
+
+function map_submenu:world_on_command_pressed(command)
+
+	local border_reached
+	--[[if self.zoom_mode ~= "small" then
+		border_reached = (self.world_minimap_visible_xy.x == 9
+		or self.world_minimap_visible_xy.x == self.outside_world_minimap_size.width - 87
+		or self.world_minimap_visible_xy.y == 26
+		or self.world_minimap_visible_xy.y == self.outside_world_minimap_size.height - 70)
+	else
+		border_reached = (self.world_minimap_visible_xy.x <= 24
+		or self.world_minimap_visible_xy.x >= self.outside_world_minimap_size.width - 25 + 24
+		or self.world_minimap_visible_xy.y <= 24
+		or self.world_minimap_visible_xy.y >= self.outside_world_minimap_size.height - 25 + 24)
+	end--]]
+
+	local handled = false
+	if command == "left" then
+		handled = true
+		if self.world_minimap_visible_xy.x > 9 then
+			local angle = math.pi
+			if self.world_minimap_movement ~= nil then
+				self.world_minimap_movement:stop()	
+			end
+			local movement = sol.movement.create("straight")
+				movement:set_speed(172)
+				movement:set_angle(angle)
+				local submenu = self
+
+			function movement:on_position_changed()
+				-- Stop the movement when the key is not pressed.
+				if not submenu.game:is_command_pressed("left") then
+					self:stop()
+					submenu.world_minimap_movement = nil
+				end
+				-- Stop the movement when map borders reached.
+				if (submenu.world_minimap_visible_xy.x == 9
+				or submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87
+				or submenu.world_minimap_visible_xy.y == 26
+				or submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70) then
+					self:stop()
+					if submenu.world_minimap_visible_xy.x == 9 then submenu.world_minimap_visible_xy.x = 10 end
+					if submenu.world_minimap_visible_xy.y == 26 then submenu.world_minimap_visible_xy.y = 27 end
+					if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87 then
+						submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 88 end
+					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70 then
+						submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 71 end
+					submenu.world_minimap_movement = nil
+				end
+			end
+			movement:start(self.world_minimap_visible_xy)
+			self.world_minimap_movement = movement
+		end
+	elseif command == "right" then
+		handled = true
+		if self.world_minimap_visible_xy.x < self.outside_world_minimap_size.width - 87 then
+			local angle = 0
+			if self.world_minimap_movement ~= nil then
+				self.world_minimap_movement:stop()
+			end
+			local movement = sol.movement.create("straight")
+			movement:set_speed(172)
+			movement:set_angle(angle)
+			local submenu = self
+
+			function movement:on_position_changed()
+			-- Stop the movement when the key is not pressed.
+			if not submenu.game:is_command_pressed("right") then
+				self:stop()
+				submenu.world_minimap_movement = nil
+				end
+
+				-- Stop the movement when map borders reached.
+				if (submenu.world_minimap_visible_xy.x == 9
+				or submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87
+				or submenu.world_minimap_visible_xy.y == 26
+				or submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70) then
+					self:stop()
+				if submenu.world_minimap_visible_xy.x == 9 then submenu.world_minimap_visible_xy.x = 10 end
+				if submenu.world_minimap_visible_xy.y == 26 then submenu.world_minimap_visible_xy.y = 27 end
+				if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87 then
+					submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 88 end
+				if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70 then
+					submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 71 end
+					submenu.world_minimap_movement = nil
+				end
+			end
+			movement:start(self.world_minimap_visible_xy)
+			self.world_minimap_movement = movement
+		end
+	elseif command == "up" then
+		handled = true
+		if self.world_minimap_visible_xy.y > 26 then
+			local angle = math.pi / 2
+
+			if self.world_minimap_movement ~= nil then
+				self.world_minimap_movement:stop()
+			end
+			local movement = sol.movement.create("straight")
+			movement:set_speed(172)
+			movement:set_angle(angle)
+			local submenu = self
+
+			function movement:on_position_changed()
+				if not submenu.game:is_command_pressed("up")  then
+					self:stop()
+					submenu.world_minimap_movement = nil
+				end
+
+				-- Stop the movement when map borders reached.
+				if (submenu.world_minimap_visible_xy.x == 9
+				or submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87
+				or submenu.world_minimap_visible_xy.y == 26
+				or submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70) then
+					self:stop()
+				if submenu.world_minimap_visible_xy.x == 9 then submenu.world_minimap_visible_xy.x = 10 end
+				if submenu.world_minimap_visible_xy.y == 26 then submenu.world_minimap_visible_xy.y = 27 end
+				if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87 then
+					submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 88 end
+				if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70 then
+					submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 71 end
+					submenu.world_minimap_movement = nil
+				end
+			end
+			movement:start(self.world_minimap_visible_xy)
+			self.world_minimap_movement = movement
+		end
+	elseif command == "down" then
+		handled = true
+		if self.world_minimap_visible_xy.y > 0 then
+			local angle =  3 * math.pi / 2
+
+			if self.world_minimap_movement ~= nil then
+				self.world_minimap_movement:stop()
+			end
+
+			local movement = sol.movement.create("straight")
+			movement:set_speed(172)
+			movement:set_angle(angle)
+			local submenu = self
+
+			function movement:on_position_changed()
+				if not submenu.game:is_command_pressed("down")  then
+					self:stop()
+					submenu.world_minimap_movement = nil
+				end
+
+				-- Stop the movement when map borders reached.
+				if (submenu.world_minimap_visible_xy.x == 9
+				or submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87
+				or submenu.world_minimap_visible_xy.y == 26
+				or submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70) then
+					self:stop()
+					if submenu.world_minimap_visible_xy.x == 9 then submenu.world_minimap_visible_xy.x = 10 end
+					if submenu.world_minimap_visible_xy.y == 26 then submenu.world_minimap_visible_xy.y = 27 end
+					if submenu.world_minimap_visible_xy.x == submenu.outside_world_minimap_size.width - 87 then
+						submenu.world_minimap_visible_xy.x = submenu.outside_world_minimap_size.width - 88 end
+					if submenu.world_minimap_visible_xy.y == submenu.outside_world_minimap_size.height - 70 then
+						submenu.world_minimap_visible_xy.y = submenu.outside_world_minimap_size.height - 71 end
+						submenu.world_minimap_movement = nil
+				end
+			end
+			
+			movement:start(self.world_minimap_visible_xy)
+			self.world_minimap_movement = movement
+
+		end
+	end
+	return handled
+end
+
+function map_submenu:dungeon_on_command_pressed(command)
+	local handled = false
+	if commmand == "left" then
+	elseif command == "right" then
+	elseif command == "up" then
+		-- We are in a dungeon: select another floor.
+		local new_selected_floor
+		if command == "up" then
+			new_selected_floor = self.selected_floor + 1
+		end
+		if new_selected_floor >= self.dungeon.lowest_floor
+				and new_selected_floor <= self.dungeon.highest_floor then
+			-- The new floor is valid.
+			sol.audio.play_sound("menus/cursor")
+			self.hero_head_sprite:set_frame(0)
+			self.selected_floor = new_selected_floor
+			if self.selected_floor <= self.highest_floor_displayed - 7 then
+				self.highest_floor_displayed = self.highest_floor_displayed - 1
+			elseif self.selected_floor > self.highest_floor_displayed then
+				self.highest_floor_displayed = self.highest_floor_displayed + 1
+			end
+			self:load_dungeon_map_image()
+		end
+		handled = true
+	elseif command == "down" then
+		-- We are in a dungeon: select another floor.
+		local new_selected_floor
+		if command == "down" then
+			new_selected_floor = self.selected_floor - 1
+		end
+		if new_selected_floor >= self.dungeon.lowest_floor
+				and new_selected_floor <= self.dungeon.highest_floor then
+			-- The new floor is valid.
+			sol.audio.play_sound("menus/cursor")
+			self.hero_head_sprite:set_frame(0)
+			self.selected_floor = new_selected_floor
+			if self.selected_floor <= self.highest_floor_displayed - 7 then
+				self.highest_floor_displayed = self.highest_floor_displayed - 1
+			elseif self.selected_floor > self.highest_floor_displayed then
+				self.highest_floor_displayed = self.highest_floor_displayed + 1
+			end
+			self:load_dungeon_map_image()
+		end
+		handled = true
+	end
+	return handled
+end
+
 
 return map_submenu

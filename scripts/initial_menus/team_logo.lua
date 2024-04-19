@@ -106,7 +106,7 @@ function team_logo_menu:try_skip_menu()
     is_skipping = true
 
 		logo_surface:fade_out(fade_delay)
-    -- Start another tier to quit the menu after the fade-out.
+    -- Start another timer to quit the menu after the fade-out.
     sol.timer.start(team_logo_menu, fade_delay + 700, function()
       -- Quit menu
       sol.menu.stop(team_logo_menu)

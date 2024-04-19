@@ -16,29 +16,28 @@ local hud_config = {
   {
     menu_script = "scripts/hud/hearts",
     x = 6,
-    y = 6,
+    y = 10,
   },
 
   -- Magic bar.
   {
     menu_script = "scripts/hud/magic_bar",
     x = 6,
-    y = 8,
+    y = 20,
   },
-
 
   -- Rupee counter.
   {
     menu_script = "scripts/hud/rupees",
     x = 6,
-    y = -20,
+    y = -22,
   },
 
   -- Clock icon.
   {
     menu_script = "scripts/hud/clock",
     x = -30,
-    y = -6,
+    y = -10,
   },
 
   -- Small key counter.
@@ -58,38 +57,38 @@ local hud_config = {
   -- Pause icon.
   {
     menu_script = "scripts/hud/pause_icon",
-    x = -170,
-    y = 6,
+    x = -126,
+    y = 10,
   },
 
   -- Item icon for slot 1.
   {
     menu_script = "scripts/hud/item_icon",
-    x = -95,
-    y = 6,
+    x = -78,
+    y = 10,
     slot = 1,  -- Item slot (1 or 2).
   },
 
   -- Item icon for slot 2.
   {
     menu_script = "scripts/hud/item_icon",
-    x = -45,
-    y = 6,
+    x = -30,
+    y = 10,
     slot = 2,  -- Item slot (1 or 2).
   },
 
   -- Attack icon.
   {
     menu_script = "scripts/hud/attack_icon",
-    x = -95,
-    y = 20,
+    x = -54,
+    y = 22,
   },
 
   -- Action icon.
   {
     menu_script = "scripts/hud/action_icon",
-    x = -145 + 24,
-    y = 20,
+    x = -102,
+    y = 22,
   },
 
 

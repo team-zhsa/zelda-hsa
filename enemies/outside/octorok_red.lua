@@ -42,7 +42,7 @@ function enemy:start_walking()
       -- Throw a stone if the hero is on the direction the enemy is looking at.
       if enemy:get_direction4_to(hero) == sprite:get_direction() then
         enemy:throw_projectile(projectile_breed, throwing_duration, projectile_offset[direction][1], projectile_offset[direction][2], function()
-          audio_manager:play_entity_sound(enemy, "octorok")
+          audio_manager:play_entity_sound(enemy, "enemies/octorok")
           enemy:start_walking()
         end)
       else

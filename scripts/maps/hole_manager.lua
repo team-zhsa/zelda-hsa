@@ -23,7 +23,7 @@ function hole_manager:enable_a_tiles(map, sound)
       tile:set_enabled(false)
     end
   end
-  game:set_value("dungeon_"..dungeon_index.."_hole_state", a)
+  game:set_value("dungeon_"..dungeon_index.."_hole_state", "a")
   if sound ~= nil then
     sol.audio.play_sound(sound)
   end
@@ -52,7 +52,7 @@ function hole_manager:enable_b_tiles(map, sound)
       tile:set_enabled(false)
     end
   end
-  game:set_value("dungeon_"..dungeon_index.."_hole_state", b)
+  game:set_value("dungeon_"..dungeon_index.."_hole_state", "b")
   if sound ~= nil then
     sol.audio.play_sound(sound)
   end
@@ -63,10 +63,10 @@ function hole_manager:switch_states(map)
   local game = map:get_game()
   local dungeon_index = game:get_dungeon_index()
 
-  if game:get_value("dungeon_"..dungeon_index.."_hole_state", a) then
+  if game:get_value("dungeon_"..dungeon_index.."_hole_state") == "a" then
     hole_manager:enable_b_tiles()
 
-  elseif game:get_value("dungeon_"..dungeon_index.."_hole_state") == a
+  elseif game:get_value("dungeon_"..dungeon_index.."_hole_state") == "b"
   or game:get_value("dungeon_"..dungeon_index.."_hole_state") == nil then
     hole_manager:enable_a_tiles()
   end

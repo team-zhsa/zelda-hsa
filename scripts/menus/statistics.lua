@@ -18,7 +18,7 @@ local treasure_savegame_variables = {
   -- Library award.  TODO update the tresure list from the Excel file (#46).
   "possession_feather",
   "possession_lamp",
-  "possession_pegasus_shoes",
+  "possession_pegasus_boots",
   "possession_bow",
   "possession_hookshot",
   "possession_boomerang",  -- Boomerang.
