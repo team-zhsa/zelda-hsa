@@ -61,33 +61,32 @@ function map_submenu:on_started()
 
 	self.zoom_mode = "full"
 	self.world_minimap_img = sol.surface.create("menus/map/"..self.zoom_mode.."_hyrule_world_map.png")
-	local box_x, box_y = self.world_map_background_img:get_size()
-	box_x, box_y = 87, 70
+	self.box_x, self.box_y = 87, 70
 
 	if self.game:get_item("world_map"):get_variant() > 0 then
 		if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
 			if self.zoom_mode ~= "small" then
 				map_shown = true
 				-- Add room for scrolling on the lower right edge.
-				self.outside_world_size = {width = 1536 + 15360 + 1536, height = 1536 + 12960 + 1536}
-				self.outside_world_minimap_size = {width = 96 + 960 + 96, height = 96 + 810 + 96}
-				local offset_x, offset_y = 96, 96
+				self.outside_world_size = {width = 1536 + 15360, height = 1536 + 12960 }
+				self.outside_world_minimap_size = {width = 96 + 960 , height = 96 + 810 }
+				local world_offset_x, world_offset_y = 1536, 1536
+				local minimap_offset_x, minimap_offset_y = 96, 96
 				self.box_offset_x, self.box_offset_y = 30, 54
 				local scale_x, scale_y = self.outside_world_minimap_size.width / self.outside_world_size.width, 
 																 self.outside_world_minimap_size.height / self.outside_world_size.height
 				-- Set the apparent position by multiplying the real position by the map/world size ratio
-				local hero_minimap_x = math.floor((hero_absolute_x + 1536) * scale_x)
-				local hero_minimap_y = math.floor((hero_absolute_y + 1536) * scale_y)
-				local waypoint_minimap_x = math.floor((waypoint_absolute_x) * scale_x)
-				local waypoint_minimap_y = math.floor((waypoint_absolute_y) * scale_y)
+				local hero_minimap_x = math.floor((hero_absolute_x + world_offset_x) * scale_x)
+				local hero_minimap_y = math.floor((hero_absolute_y + world_offset_y) * scale_y)
+				local waypoint_minimap_x = math.floor((waypoint_absolute_x +world_offset_x) * scale_x)
+				local waypoint_minimap_y = math.floor((waypoint_absolute_y+world_offset_y) * scale_y)
 				-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
 					self.hero_x = hero_minimap_x
 					self.hero_y = hero_minimap_y
-					self.waypoint_x = waypoint_minimap_x + (waypoint_absolute_x / map_width) + offset_x
-					self.waypoint_y = waypoint_minimap_y + (waypoint_absolute_y / map_height) + offset_y
-				self.world_minimap_visible_xy.x = self.hero_x--math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x + self.box_offset_x))
-				self.world_minimap_visible_xy.y = self.hero_y--math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y + self.box_offset_y))
-			else
+					self.waypoint_x = waypoint_minimap_x
+					self.waypoint_y = waypoint_minimap_y
+				self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x))
+				self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y))
 
 			end
 		end
@@ -176,7 +175,7 @@ end
 
 function map_submenu:draw_world_map(dst_surface)
 	local width, height = dst_surface:get_size()
-	local center_x, center_y = width / 2, height / 2
+	local center_x, center_y = width / 2, height / 2 - 24
 
 	-- Draw the minimap.
 	self.world_minimap_img:draw_region(
@@ -189,15 +188,15 @@ function map_submenu:draw_world_map(dst_surface)
 	if map_shown then
 
 		-- Draw the hero's position and the waypoint's position.
-		local hero_visible_x = self.hero_x- self.world_minimap_visible_xy.x
-		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y
-		local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x
-		local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y
-		if (hero_visible_x >= center_x - 87 and hero_visible_x <= center_x + 87)
-		and (hero_visible_y >= center_y - 70  and hero_visible_y <= center_y + 70) then
+		local hero_visible_x = self.hero_x - self.world_minimap_visible_xy.x  + center_x - self.box_x
+		local hero_visible_y = self.hero_y - self.world_minimap_visible_xy.y  + center_y - self.box_y
+ 		local waypoint_position_visible_x = self.waypoint_x - self.world_minimap_visible_xy.x + center_x - self.box_x
+		local waypoint_position_visible_y = self.waypoint_y - self.world_minimap_visible_xy.y + center_y - self.box_y
+		--if (hero_visible_x >= center_x - 87 and hero_visible_x <= center_x + 87)
+		--and (hero_visible_y >= center_y - 70  and hero_visible_y <= center_y + 70) then
 			-- Makes the hero icon invisible when it is out of bounds.
 			self.hero_head_sprite:draw(dst_surface, hero_visible_x, hero_visible_y)
-		end
+		--end
 		if (waypoint_position_visible_x >= center_x - 87 and waypoint_position_visible_x <= center_x + 87)
 		and (waypoint_position_visible_y >= center_y - 70 and waypoint_position_visible_y <= center_y + 70) then
 			-- Makes the waypoint icon invisible when it is out of bounds.
