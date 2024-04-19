@@ -30,12 +30,18 @@ local function initialise_map_features(game)
       submenu_index = 1
     end
     game:set_value("map_last_submenu", submenu_index)
-
-    -- Play the sound of pausing the game.
-    sol.audio.play_sound("menus/minimap_on")
-    -- Start the selected submenu.
-    sol.menu.start(map_menu, game.map_submenus[submenu_index])
-  end
+		-- Play the sound of pausing the game.
+		sol.audio.play_sound("menus/pause_open")
+		-- Forces the dialog_box to be at bottom.
+		local dialog_box = game:get_dialog_box()
+		self.backup_dialog_position = dialog_box:get_position()
+		dialog_box:set_position("bottom")
+		-- Set the HUD correct mode.
+		map_menu.backup_hud_mode = game:get_hud_mode()
+		game:set_hud_mode("pause")
+		-- Start the selected submenu.
+		sol.menu.start(map_menu, game.map_submenus[submenu_index])
+	end
 
   function map_menu:open()
     sol.menu.start(game, map_menu, true)
@@ -53,10 +59,12 @@ local function initialise_map_features(game)
 
     -- Play the sound of unpausing the game.
     sol.audio.play_sound("menus/minimap_off")
+    -- Clear the submenus table.
     game.map_submenus = {}
-    -- Restore opacity
-    game:get_hud():set_item_icon_opacity(1, 255)
-    game:get_hud():set_item_icon_opacity(2, 255)
+    -- Restore the dialog_box position.
+    game:get_dialog_box():set_position(self.backup_dialog_position)
+    -- Restore the HUD mode.
+    game:set_hud_mode(map_menu.backup_hud_mode)
     -- Restore the built-in effect of action and attack commands.
     if game.set_custom_command_effect ~= nil then
       game:set_custom_command_effect("action", nil)

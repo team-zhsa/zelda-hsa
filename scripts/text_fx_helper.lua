@@ -18,6 +18,15 @@ local function copy_text_surface(src_text_surface, new_color, type)
         text = src_text_surface:get_text(),
         color = new_color,
       }
+    elseif type == "hud" then
+      new_surface = sol.text_surface.create{
+        horizontal_alignment = src_text_surface:get_horizontal_alignment(),
+        vertical_alignment = src_text_surface:get_vertical_alignment(),
+        font = src_text_surface:get_font() .. "_black",
+        font_size = src_text_surface:get_font_size(),
+        text = src_text_surface:get_text(),
+        color = new_color,
+      }
     else
       new_surface = sol.text_surface.create{
         horizontal_alignment = src_text_surface:get_horizontal_alignment(),
@@ -55,9 +64,9 @@ function text_fx_helper:draw_text_stroke(dst_surface, text, stroke_color, x, y, 
 end
 
 -- Draws the text with a stroke.
-function text_fx_helper:draw_text_with_stroke(dst_surface, text, stroke_color, x, y)
+function text_fx_helper:draw_text_with_stroke(dst_surface, text, stroke_color, x, y, type)
   -- Draw the stroke with the stroke color.
-    self:draw_text_stroke(dst_surface, text, stroke_color, x, y)
+    self:draw_text_stroke(dst_surface, text, stroke_color, x, y, type)
 
   -- Draw text above the stroke.
   text:draw(dst_surface)
