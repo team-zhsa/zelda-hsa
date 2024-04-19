@@ -21435,8 +21435,8 @@ teletransporter{
 destination{
   name = "from_dungeon",
   layer = 0,
-  x = 904,
-  y = 85,
+  x = 8,
+  y = 13,
   direction = 3,
 }
 
@@ -21668,17 +21668,6 @@ teletransporter{
   height = 1440,
   transition = "scrolling",
   destination_map = "out/b1",
-  destination = "_side",
-}
-
-teletransporter{
-  layer = 0,
-  x = 0,
-  y = -16,
-  width = 1280,
-  height = 16,
-  transition = "scrolling",
-  destination_map = "out/a7",
   destination = "_side",
 }
 
