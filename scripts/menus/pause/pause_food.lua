@@ -247,14 +247,15 @@ function inventory_submenu:set_cursor_position(row, column)
     self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
-      item_icon_opacity = 255
-    end
-  else
-    self:set_caption_key(nil)
-    self.game:set_custom_command_effect("action", nil)
-  end
-  self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)
-  self.game:get_hud():set_item_icon_opacity(2, item_icon_opacity)
+      self.game:set_hud_mode("normal")
+    else
+      self.game:set_hud_mode("pause")
+		end
+	else
+		self:set_caption(nil)
+		self.game:set_custom_command_effect("action", nil)
+		self.game:set_hud_mode("pause")
+	end
 
 end
 

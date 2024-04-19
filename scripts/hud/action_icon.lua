@@ -9,8 +9,8 @@ function action_icon_builder:new(game, config)
   local action_icon = {}
 
   -- Creates the hud icon delegate.
-  action_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.x, config.y)
-  action_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/action_icon_flip"))
+  action_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.dialog_x, config.dialog_y)
+  action_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/action_icon"))
   
   -- Initializes the icon.
   action_icon.effect_displayed = nil
@@ -24,18 +24,68 @@ function action_icon_builder:new(game, config)
   function action_icon:rebuild_foreground()
     if action_icon.effect_displayed == nil or action_icon.effect_displayed == "" then
       -- No foreground if no effect.
-      action_icon.hud_icon:set_enabled(false)
-      --action_icon.hud_icon:set_foreground(nil)
+      action_icon.hud_icon:set_foreground(nil)
     else
       local text = sol.language.get_string("hud."..action_icon.effect_displayed)
-      action_icon.hud_icon:set_enabled(true)
       action_icon.hud_icon:set_foreground_text(text)
     end
   end
     
+  -- Returns if the icon is enabled or disabled.
+  function action_icon:is_enabled(active)
+    return action_icon.hud_icon:is_enabled()
+  end
+
+  -- Set if the icon is enabled or disabled.
+  function action_icon:set_enabled(enabled)
+    if enabled then
+      action_icon:update_effect_displayed(false)
+    end
+    action_icon.hud_icon:set_enabled(enabled)
+  end
+      
+  -- Returns if the icon is active or inactive.
+  function action_icon:is_active(active)
+    return action_icon.hud_icon:is_active()
+  end
+
+  -- Set if the icon is active or inactive.
+  function action_icon:set_active(active)
+    action_icon.hud_icon:set_active(active)
+  end
+
+  -- Returns if the icon is transparent or not.
+  function action_icon:is_transparent()
+    return action_icon.hud_icon:set_transparent()
+  end
+
+  -- Sets if the icon is transparent or not.
+  function action_icon:set_transparent(transparent)
+    action_icon.hud_icon:set_transparent(transparent)
+  end
+
+  -- Gets the position of the icon.
+  function action_icon:get_dst_position()
+    return action_icon.hud_icon:get_dst_position()
+  end
+
+  -- Sets the position of the icon.
   function action_icon:set_dst_position(x, y)
-    dst_x = x
-    dst_y = y
+    action_icon.hud_icon:set_dst_position(x, y)
+  end
+
+  -- Gets the normal position of the icon.
+  function action_icon:get_normal_position()
+    return action_icon.hud_icon:get_normal_position()
+  end
+
+  -- Gets the dialog position of the icon.
+  function action_icon:get_dialog_position()
+    return action_icon.hud_icon:get_dialog_position()
+  end
+
+  -- Called when the command effect changes.
+  function action_icon:on_command_effect_changed(effect)
   end
 
   -- Checks if the icon needs a refresh.
