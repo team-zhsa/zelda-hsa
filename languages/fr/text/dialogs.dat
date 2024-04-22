@@ -206,7 +206,6 @@ dialog{
 Tu as obtenu une clé bleue ! $0
 Je me demande bien à quoi elle
 pourrait bien servir...$0 Une idée ?
-
 ]],
 }
 
@@ -2956,15 +2955,6 @@ redonne de la vie.
 }
 
 dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
-  text = [[
-Bonjour, jeune héros !
-Choisis ce que tu veux.
-
-]],
-}
-
-dialog{
   id = "maps.houses.east_castle.blacksmith.offer_sword",
   text = [[
 Des rumeurs racontent que des
@@ -4497,7 +4487,7 @@ a quelques générations.
 dialog{
   id = "maps.houses.north_field.sanctuary.priest_3",
   text = [[
-$2La légende stipule que seule une
+$2La légende énonce que seule une
 arme est capable de vaincre ce
 monstre des ténèbres.$0
 On raconte qu'elle est cachée
@@ -6386,12 +6376,7 @@ dialog{
   id = "maps.out.south_field.sign_2",
   skip = "all",
   text = [[
-Tiens, voilà un
-flacon !
-
-Le prendre ?
-Oui
-Non
+<<<
 ]],
 }
 
@@ -8649,6 +8634,17 @@ dialog{
   text = [[
 La lettre que t'a donnée le
 vieux monsieur.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.wind_rod.1",
+  icon = "40",
+  skip = "all",
+  text = [[
+Le Bâton de Vent envoie de
+puissantes bourrasques sur
+tes ennemis.
 ]],
 }
 

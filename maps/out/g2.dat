@@ -24009,15 +24009,6 @@ teletransporter{
   destination = "_side",
 }
 
-enemy{
-  layer = 0,
-  x = 888,
-  y = 509,
-  direction = 2,
-  breed = "soldiers/knight_red",
-  treasure_name = "random_mountains",
-}
-
 destructible{
   layer = 0,
   x = 280,
@@ -24046,24 +24037,6 @@ destructible{
   sprite = "entities/stones/stone_white",
   destruction_sound = "environment/rock_shatter",
   weight = 1,
-}
-
-enemy{
-  layer = 0,
-  x = 576,
-  y = 533,
-  direction = 2,
-  breed = "soldiers/knight_red",
-  treasure_name = "random_mountains",
-}
-
-enemy{
-  layer = 0,
-  x = 40,
-  y = 437,
-  direction = 2,
-  breed = "soldiers/knight_red",
-  treasure_name = "random_mountains",
 }
 
 enemy{

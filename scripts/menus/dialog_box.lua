@@ -575,8 +575,8 @@ local function initialise_dialog_box_features(game)
         text_x = text_x + 24
       end
 
-			text_fx_helper:draw_text_stroke(dialog_box.dialog_surface, dialog_box.line_surfaces[i], 
-				dialog_box.stroke_colour, text_x, text_y, "dialogue")
+			--[[text_fx_helper:draw_text_stroke(dialog_box.dialog_surface, dialog_box.line_surfaces[i], 
+				dialog_box.stroke_colour, text_x, text_y, "dialogue")--]]
 			dialog_box.line_surfaces[i]:draw(dialog_box.dialog_surface, text_x, text_y)
 
     end

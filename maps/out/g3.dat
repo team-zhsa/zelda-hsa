@@ -20932,11 +20932,16 @@ door{
   layer = 0,
   x = 472,
   y = 352,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/Outside/cave_door_rock01",
   savegame_variable = "outside_east_castle_weak_door",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 custom_entity{

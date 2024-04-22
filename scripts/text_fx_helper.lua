@@ -4,6 +4,7 @@
 
 local text_fx_helper = {}
 local language_manager = require("scripts/language_manager")
+local text_utils = require("scripts/tools/text_utils")
 -- Creates a text_surface with all same properties except the color. 
 local function copy_text_surface(src_text_surface, new_color, type)
   -- Create a text surface with the shadow color.

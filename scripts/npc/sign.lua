@@ -8,7 +8,7 @@ return function(sign)
   -- Include scripts
   require("scripts/multi_events")
   local audio_manager = require("scripts/audio_manager")
-  sign:set_weight(1)
+  sign:set_weight(0)
 
 
   -- Sign destruction

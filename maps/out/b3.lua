@@ -20,13 +20,12 @@ map:register_event("on_started", function()
 	outside_kakarico_playing_maze = false
 	outside_kakarico_won_maze = false
 	map:set_digging_allowed(true)
-	if game:is_step_done("sahasrahla_lost_woods_map") then
+	if game:is_step_done("lost_woods_mapper_met") then
 		for npc in map:get_entities("npc_soldier_") do
 			npc:set_enabled(false)
 		end
 	end
 end)
-
 
 for npc in map:get_entities("npc_soldier_") do
 	npc:register_event("on_interaction", function()

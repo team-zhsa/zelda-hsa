@@ -36,7 +36,7 @@ sensor_cutscene:register_event("on_activated", function()
 end)
 
 function owl_dialog()
-  game:start_dialog("maps.out.north_field.kaepora_gaebora", function(answer)
+  game:start_dialog("maps.out.north_field.kaepora_gaebora_ruins", function(answer)
     if answer == 1 then
       owl_dialog()
     elseif answer == 2 then

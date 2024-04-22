@@ -74,7 +74,7 @@ function bumper:on_created()
 				m:start(self:get_map():get_entity("hero"))
 				
 				-- Boing!
-				sol.audio.play_sound("bounce")
+				sol.audio.play_sound("common/bounce")
 				
 				-- Lock function
 				boingIsReady = false

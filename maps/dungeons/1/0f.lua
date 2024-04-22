@@ -9,7 +9,7 @@ map:register_event("on_started", function()
 end)
 
 switch_door_22:register_event("on_activated", function()
-  map:open_doors("door_23_n1")
+  map:open_doors("door_23_n")
   timer_manager:start_timer(map, 15000, "countdown", function() --Timer for 15 seconds
     map:close_doors("door_23_n")
     switch_door_22:set_activated(false)
