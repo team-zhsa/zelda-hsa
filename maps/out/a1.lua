@@ -9,12 +9,11 @@
 
 local map = ...
 local game = map:get_game()
-
+local audio_manager = require("scripts/audio_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	game:show_map_name("ruins")
 	map:set_digging_allowed(true)
-    -- Music
 
 end)
 
@@ -49,7 +48,8 @@ function owl_dialog()
       owl_movement_leave:start(owl_4, function()
         map:set_cinematic_mode(false, options)
         hero:unfreeze()
-      end) 
+        audio_manager:play_music_fade(map, map:get_music())
+      end)
     end
   end)
 end

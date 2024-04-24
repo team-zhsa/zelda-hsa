@@ -1973,6 +1973,90 @@ six coeurs, très utile.
 }
 
 dialog{
+  id = "maps.caves.east_mountains.goron_town.darumaruk_dodongos_cavern",
+  text = [[
+Ah, mon p’tit si tu veux sauver
+ce village, rends-toi à la
+Caverne Dodongo.
+Tu y trouveras le monarque
+de nos ennemis jurés, les
+Dodongos.
+Ces saletés détiennent le sage
+du feu.$0 J’ai indiqué l'empla-
+cement de la caverne sur ta
+carte.$0
+Prends garde aux monstres sur
+ton chemin !$0 J’compte sur toi...
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_1",
+  text = [[
+Salut Hylien !
+Je me sens si bien
+dans ce rocher !
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_2",
+  text = [[
+Salut !
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_3",
+  text = [[
+Un goron, ça mange
+des rochers ! Tu 
+le savais, toi ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_4",
+  text = [[
+Comment vas-tu ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_ask",
+  question = "1",
+  text = [[
+Salut ! J'aurais besoin de 
+ton aide pour rapporter
+des rochers.
+Pourrais-tu le faire ?
+Oui, avec plaisir !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_no",
+  text = [[
+Bon, tant pis. Une
+autre fois, peut-
+être ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_yes",
+  text = [[
+Super ! Descends au
+dernier sous-sol de
+notre grotte et vas
+voir Dungor, à côté
+de la grotte du chef.
+Il te dira quoi faire
+]],
+}
+
+dialog{
   id = "maps.caves.east_mountains.shop.merchant_welcome",
   text = [[
 Bonjour jeune héros.
@@ -2003,90 +2087,6 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.darumaruk_dodongos_cavern",
-  text = [[
-Ah, mon p’tit si tu veux sauver
-ce village, rends-toi à la
-Caverne Dodongo.
-Tu y trouveras le monarque
-de nos ennemis jurés, les
-Dodongos.
-Ces saletés détiennent le sage
-du feu.$0 J’ai indiqué l'empla-
-cement de la caverne sur ta
-carte.$0
-Prends garde aux monstres sur
-ton chemin !$0 J’compte sur toi...
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_1",
-  text = [[
-Salut Hylien !
-Je me sens si bien
-dans ce rocher !
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_2",
-  text = [[
-Salut !
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_3",
-  text = [[
-Un goron, ça mange
-des rochers ! Tu 
-le savais, toi ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_4",
-  text = [[
-Comment vas-tu ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_ask",
-  question = "1",
-  text = [[
-Salut ! J'aurais besoin de 
-ton aide pour rapporter
-des rochers.
-Pourrais-tu le faire ?
-Oui, avec plaisir !
-Non.
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_no",
-  text = [[
-Bon, tant pis. Une
-autre fois, peut-
-être ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_yes",
-  text = [[
-Super ! Descends au
-dernier sous-sol de
-notre grotte et vas
-voir Dungor, à côté
-de la grotte du chef.
-Il te dira quoi faire
 ]],
 }
 
@@ -5156,9 +5156,9 @@ dialog{
 dialog{
   id = "maps.out.gerudo_desert.kaeopora_gaebora",
   text = [[
-$2Hou ! C'est moi Kaepora Gaebora !$0
-Tu es devant le Colosse du
-Désert !
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Colosse du Désert !
 Le Palais du Désert se trouve
 en haut de l'escalier. Il abrite
 le Gant de Puissance qui te

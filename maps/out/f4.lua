@@ -86,6 +86,7 @@ function map:start_castle_seal_cutscene()
       entity_castle_barrier:get_sprite():fade_out(400) -- set_enabled(false)
       white_surface:fade_out()
       map:set_cinematic_mode(false)
+      audio_manager:play_music_fade(map, map:get_music())
     end)
   end)
 end
