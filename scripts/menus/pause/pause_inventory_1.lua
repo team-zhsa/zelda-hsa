@@ -20,15 +20,15 @@ local item_names_assignable = {
 	"hookshot",														-- Hookshot
 	"feather",														-- Feather
 	"bottle_3",														-- Bottle
-	"green_tunic",												-- Tunic 1
-	"blue_tunic",													-- Tunic 2
+	"tunic_green",												-- Tunic 1
+	"tunic_blue",													-- Tunic 2
 	-- Row 4
 	"hammer",															-- Hammer
 	"_placeholder", 											-- Magic mirror
 	"_placeholder",												-- ??
 	"bottle_4",														-- Bottle
-	"red_tunic",													-- Tunic 3
-	"time_tunic",													-- Tunic 4
+	"tunic_red",													-- Tunic 3
+	"tunic_time",													-- Tunic 4
 }
 
 local item_names_static = {

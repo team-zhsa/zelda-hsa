@@ -3,7 +3,7 @@ local item = ...
 
 function item:on_created()
 
-  self:set_savegame_variable("possession_red_tunic")
+  self:set_savegame_variable("possession_tunic_red")
 	self:set_assignable(true)
 
 end

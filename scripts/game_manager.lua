@@ -43,7 +43,7 @@ function game_manager:create(file)
     for _, entity_type in pairs({"hero", "pickable", "block"}) do
       ceiling_drop_manager:create(entity_type)
     end
-
+    game:check_variables()
 	end)
 
 	game:register_event("on_finished", function()
@@ -69,8 +69,70 @@ function game_manager:create(file)
     end
   end)
 
-  function game:get_player_name()
+  function game:check_variables()
+    print("Checking your savefile version...")
+    game:assign_variables("dungeon_2_b2_24_pool_full", true, "dungeon_2_water_level", "high")
+    game:assign_variables("dungeon_2_b2_24_pool_full",false, "dungeon_2_water_level",  "low")
+    game:assign_variables("possession_tunic", 1, "possession_tunic_green", 1)
+    game:assign_variables("possession_tunic", 2, "possession_tunic_blue",1 )
+    game:assign_variables("possession_tunic", 3, "possession_tunic_red", 1)
+    game:assign_variables("possession_tunic", 4, "possession_tunic_time", 1)
+    game:convert_variables("treasure_d1","dungeon_1_treasure")
+    game:convert_variables("dungeon_2_yellow_key","dungeon_2_silver_key")
+    game:convert_variables("dungeon_3_yellow_key","dungeon_3_silver_key")
+    game:convert_variables("dungeon_10_yellow_key","dungeon_10_silver_key")
+    game:convert_variables("possession_golden_leaf_counter","possession_golden_leaf_counter")
+    game:convert_variables("possession_goron_amber_counter","possession_goron_amber")
+    game:convert_variables("amount_goron_amber_counter","amount_goron_amber")
+    game:convert_variables("possession_monster_claw_counter","possession_monster_claw")
+    game:convert_variables("amount_monster_claw_counter","amount_monster_claw")
+    game:convert_variables("possession_monster_horn_counter","possession_monster_horn")
+    game:convert_variables("amount_monster_horn_counter","amount_monster_horn")
+    game:convert_variables("possession_monster_gut_counter","possession_monster_gut")
+    game:convert_variables("amount_monster_gut_counter","amount_monster_gut")
+    game:convert_variables("possession_monster_tail_counter","possession_monster_tail")
+    game:convert_variables("amount_monster_tail_counter","amount_monster_tail")
+    game:convert_variables("possession_photo_counter","possession_photo_counter")
+    game:convert_variables("amount_photo_counter","amount_photo_counter")
+    game:convert_variables("possession_seashell_counter","possession_seashell_counter")
+    game:convert_variables("amount_seashell_counter","amount_seashell_counter")
+    game:convert_variables("possession_slim_key","possession_slim_key")
+    game:convert_variables("possession_tail_key","possession_tail_key")
+    game:convert_variables("possession_butter","possession_butter")
+    game:convert_variables("possession_green_tunic","possession_tunic_green")
+    game:convert_variables("possession_blue_tunic","possession_tunic_blue")
+    game:convert_variables("possession_red_tunic","possession_tunic_red")
+    game:convert_variables("possession_hero_shield","possession_shield_hero")
+    game:convert_variables("possession_hylia_shield","possession_shield_hylia")
+    game:convert_variables("possession_mirror_shield","possession_shield_mirror")
+    game:convert_variables("possession_time_tunic","possession_tunic_time")
+    game:convert_variables("dungeon_5_1f_20_chest_smal_key","dungeon_5_1f_20_chest_small_key")
+    game:convert_variables("dungeons_1_final_door","dungeons_1_final_door")
+    game:convert_variables("dungeon_1_door_small_key","dungeon_1_0f_door_28_33")
+    game:convert_variables("door_d1_23_n1","dungeon_1_0f_door_18_23")
+    game:convert_variables("d9_2f_b4_lynel","d9_2f_b4_lynel")
+    game:convert_variables("d9_2f_b4_sm","d9_2f_b4_sm")
+  end
+  
+  function game:convert_variables(old_variable, new_variable)
+    if game:get_value(old_variable) ~= nil then
+      game:set_value(new_variable, game:get_value(old_variable))
+      print("Setting the variable "..new_variable)
+      game:set_value(old_variable, nil)
+      print("Clearing the variable " .. old_variable)
+    end
+  end
 
+  function game:assign_variables(old_variable, new_variable, old_value, new_value)
+    if game:get_value(old_variable) == old_value then
+      game:set_value(new_variable, new_value)
+      print("Setting the variable "..new_variable)
+      game:set_value(old_variable, nil)
+      print("Clearing the variable " .. old_variable)
+    end
+  end
+
+  function game:get_player_name()
     local name = self:get_value("player_name")
     local hero_is_thief = game:get_value("hero_is_thief")
     if hero_is_thief then

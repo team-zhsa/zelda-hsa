@@ -30,13 +30,6 @@ animation{
   },
 }
 animation{
-  name = "blue_tunic",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 16, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "bomb",
   src_image = "entities/items.png",
   directions = {
@@ -326,13 +319,6 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 0, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
-  name = "green_tunic",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 0, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
@@ -647,13 +633,6 @@ animation{
   },
 }
 animation{
-  name = "red_tunic",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 32, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "rupee",
   src_image = "entities/items.png",
   frame_delay = 80,
@@ -873,13 +852,6 @@ animation{
   },
 }
 animation{
-  name = "time_tunic",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 0, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "trading_1",
   src_image = "entities/items.png",
   directions = {
@@ -901,6 +873,34 @@ animation{
     { x = 128, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "tunic_blue",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 16, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "tunic_green",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "tunic_red",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 32, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "tunic_time",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 0, y = 144, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
