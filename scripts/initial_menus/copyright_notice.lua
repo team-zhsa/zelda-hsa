@@ -44,7 +44,7 @@ function copyright_notice:on_started()
   gpl_logo_width, gpl_logo_height = gpl_logo:get_size()
 
   -- Fonts info.
-  menu_font, menu_font_size = "alttp_ttf", 7
+  menu_font, menu_font_size = "ega", 16
 
   made_by_fans_line_1 = sol.text_surface.create{
     horizontal_alignment = "center",

@@ -13,8 +13,8 @@ local presented_by_text = sol.text_surface.create{
 	horizontal_alignment = "center",
 	vertical_alignment = "middle",
 	color = {235, 174, 0},
-	font = "alttp_ttf",
-	font_size = 8,
+	font = "ega",
+	font_size = 16,
 	text_key = "title_screen.presented_by",
 }
 
