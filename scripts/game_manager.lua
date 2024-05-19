@@ -20,15 +20,16 @@ time_flow = 500
 function game_manager:create(file)
 	product_key = math.random(1000, 9999)
   -- Create the game (but do not start it).
-  local exists = sol.game.exists(file)
-  local game = sol.game.load(file)
-  if not exists then
-    -- This is a new savegame file.
-    initial_game:initialise_new_savegame(game)
-  end
-
-	game:register_event("on_started", function()
-
+    local exists = sol.game.exists(file)
+    local game = sol.game.load(file)
+    if not exists then
+      -- This is a new savegame file.
+      initial_game:initialise_new_savegame(game)
+    end
+    
+    local version_check_menu = {}
+    game:register_event("on_started", function()
+      
 		tone = tone_manager:create(game)
 		condition_manager:initialise(game)
 		map_name:initialise(game)
@@ -38,23 +39,28 @@ function game_manager:create(file)
 		game:set_world_snow_mode("outside_world", nil)
 		game:set_time_flow(time_flow)
     print("Main quest step start:"..game:get_value("main_quest_step"))
+		sol.menu.start(game, version_check_menu, true)
 
     local ceiling_drop_manager = require("scripts/maps/ceiling_drop_manager")
     for _, entity_type in pairs({"hero", "pickable", "block"}) do
       ceiling_drop_manager:create(entity_type)
     end
-    game:check_variables()
-	end)
 
+    -- Check if the savefile is earlier than May 1st 2024
+    if not (game:get_value("time_saved") >= 1714514400) == true then
+      game:check_variables()
+    end
+	end)
+  
 	game:register_event("on_finished", function()
     print("Main quest step finish:"..game:get_value("main_quest_step"))
-
+    
 	end)
-
+  
 	game:register_event("on_map_changed", function()
 		tone:on_map_changed()
 	end)
-
+  
   game:register_event("on_world_changed", function()
     local map = game:get_map()
     if not game.teleport_in_progress then -- play custom transition at game startup
@@ -68,9 +74,8 @@ function game_manager:create(file)
       end)
     end
   end)
-
+    
   function game:check_variables()
-    print("Checking your savefile version...")
     game:assign_variables("dungeon_2_b2_24_pool_full", true, "dungeon_2_water_level", "high")
     game:assign_variables("dungeon_2_b2_24_pool_full",false, "dungeon_2_water_level",  "low")
     game:assign_variables("possession_tunic", 1, "possession_tunic_green", 1)

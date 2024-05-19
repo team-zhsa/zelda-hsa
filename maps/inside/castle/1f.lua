@@ -63,7 +63,7 @@ function jump_from_bed()
 	hero:start_jumping(7, 24, true)
 	game:set_pause_allowed(true)
 	bed:get_sprite():set_animation("empty_open")
-	game:set_starting_location("inside/castle/rooms", "start_game")
+	game:set_starting_location("inside/castle/1f", "start_game")
 	--sol.audio.play_sound("hero_lands")
 end
 

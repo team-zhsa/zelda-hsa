@@ -1,16 +1,4 @@
 dialog{
-  id = "_cannot_break_without_boots",
-  skip = "all",
-  text = [[
-Oh ! Quel        
-drôle d'objet !  
-Peut-être que tu
-peux le briser  
-en fonçant dedans.
-]],
-}
-
-dialog{
   id = "_cannot_lift_still_too_heavy",
   skip = "all",
   text = [[
@@ -5335,27 +5323,50 @@ est de la ville, il font de super
 }
 
 dialog{
-  id = "maps.out.hyrule_town.impa.sahasrahla",
+  id = "maps.out.hyrule_town.impa.intro_1",
+  text = [[
+$2Ah ! Te voilà enfin, $v.$0
+Je dois te parler des graves
+événements qui se sont déroulés
+ces derniers temps...
+Depuis que Ganon a installé
+ses sbires dans la tour du
+Château, des monstres sont
+apparus et sèment la pagaile un
+peu partout dans le pays.
+Cela ressemble à ce qui s'est
+passé il y a quelque temps et je
+trouve cela très bizarre...
+Je sens qu'un grand malheur
+risque de se produire d'ici peu...
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.impa.intro_2",
   question = "1",
   text = [[
-$2Ah ! Te voilà enfin, $v
-Je t'attendais.
+$2Ecoute-moi bien, $v.$0
+J'aurais besoin que tu trouves la
+lanterne cachée dans un
+souterrain de la ville.
 
-Depuis que Ganon a installé
-ses sbires dans les étages
-supérieurs du château, des
-monstres sont apparus un peu
-partout dans le pays. $0 Je trouve
-cela très bizarre...
-Je pense que Ganon cherche
-à asseoir sa domination sur
-Hyrule.$0
-Ecoute-moi bien. $0 Je voudrais
-que tu ailles au village Cocorico
-voir Sahasrahla. Il pourra t'en
-dire plus.$0 Mais avant, passe à
-la forge, Hyrule est très
-dangereux !
+
+Ensuite, tu te rendras à la forge
+par le chemin de l'Est du
+Château, où tu trouveras une épée.
+Enfin, j'aurais besoin que tu
+ailles dans les plus brefs délais
+au Village Cocorico.
+Là-bas se trouve Sahasrahla
+qui pourra te donner de plus
+amples précisions.
+Je te confie cet ocarina, relique
+du héros du Temps qui jadis avait
+sauvé le pays de Ganon.$0
+Il te servira pour ta quête.
+
+
 As-tu tout compris ?
 Non, pas du tout !
 Oui
@@ -8695,6 +8706,19 @@ Entrer
 }
 
 dialog{
+  id = "scripts.menus.version_checker.update_question",
+  question = "1",
+  text = [[
+Votre sauvegarde n'est pas à jour.
+Elle sera mise à jour vers la
+dernière version du jeu.
+Mettre à jour la sauvegarde ?
+Oui
+Non (retour au menu)
+]],
+}
+
+dialog{
   id = "scripts.meta.map.door_locked",
   text = [[
 Cette porte semble
@@ -8713,7 +8737,6 @@ Coeurs !
 
 dialog{
   id = "test",
-  skip = "all",
   text = [[
  !"#$%&'()*+,-./
 0123456789:;<=>?

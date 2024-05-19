@@ -233,7 +233,7 @@ function phase_6()
 			hero:unfreeze()
 
 			-- Go to the first map.
-			hero:teleport("inside/castle/rooms", "start_game")
+			hero:teleport("inside/castle/1f", "start_game")
 		end)
 	end
 end
