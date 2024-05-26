@@ -476,7 +476,7 @@ teletransporter{
   height = 16,
   destination_map = "inside/castle/0f",
   sprite = "entities/warps/teletransporter",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 teletransporter{
@@ -489,7 +489,7 @@ teletransporter{
   destination_map = "dungeons/1/0f",
   destination = "from_below",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 switch{
@@ -516,7 +516,7 @@ teletransporter{
   width = 16,
   height = 16,
   destination_map = "dungeons/9/0f",
-  destination = "destination",
+  destination = "from_outside",
   sprite = "entities/warps/teletransporter",
 }
 
@@ -548,7 +548,7 @@ teletransporter{
   destination_map = "out/a2",
   destination = "from_fortune",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 custom_entity{
@@ -619,7 +619,7 @@ teletransporter{
   destination_map = "misc/test_arena",
   destination = "destination",
   sprite = "entities/warps/teletransporter",
-  sound = "world_warp",
+  sound = "common/world_warp",
 }
 
 teletransporter{
@@ -631,14 +631,14 @@ teletransporter{
   destination_map = "out/b3",
   destination = "destination_maze",
   sprite = "entities/warps/teletransporter",
-  sound = "world_warp",
+  sound = "common/world_warp",
 }
 
 chest{
   layer = 0,
   x = 168,
   y = 29,
-  treasure_name = "pegasus_shoes",
+  treasure_name = "pegasus_boots",
   sprite = "entities/chest",
 }
 
@@ -1081,7 +1081,7 @@ teletransporter{
   height = 16,
   destination_map = "inside/caves/gerudo_valley/north_east_desert_cave_1f",
   sprite = "entities/warps/teletransporter2",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 sensor{
@@ -1348,18 +1348,6 @@ custom_entity{
   direction = 0,
   sprite = "entities/blocks/block-dungeon1",
   model = "block",
-}
-
-custom_entity{
-  layer = 0,
-  x = 112,
-  y = 157,
-  width = 72,
-  height = 80,
-  direction = 0,
-  sprite = "entities/destination",
-  tiled = true,
-  model = "ground_spikes",
 }
 
 teletransporter{

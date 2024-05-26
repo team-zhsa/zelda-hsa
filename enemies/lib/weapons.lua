@@ -47,7 +47,7 @@ function weapons.learn(enemy)
     weapon:set_damage(enemy:get_damage())
     
     -- Synchronize sprites animation and direction.
-    local weapon_sprite = weapon:create_sprite(sprite_name or "enemies/" .. enemy:get_breed() .. "/sword")
+    local weapon_sprite = weapon:create_sprite(sprite_name or ("enemies/" .. enemy:get_breed() .. "/sword"))
     weapon_sprite:synchronize(reference_sprite)
     reference_sprite:register_event("on_direction_changed", function(reference_sprite)
       weapon_sprite:set_direction(reference_sprite:get_direction())

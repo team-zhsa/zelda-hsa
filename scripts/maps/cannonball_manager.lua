@@ -13,7 +13,6 @@ function cannonball_manager:create_cannons(map, prefix)
     return
   end
   sol.timer.start(map, 2600, function()
-
     local hero = map:get_entity("hero")
     if hero:is_in_same_region(cannons[1]) then
       local index = math.random(#cannons)
@@ -32,7 +31,6 @@ function cannonball_manager:create_cannons(map, prefix)
     end
     return true  -- Repeat the timer.
   end)
-
 end
 
 return cannonball_manager

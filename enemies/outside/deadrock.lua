@@ -38,6 +38,7 @@ end
 function enemy:on_update()
   if self.rock then
      self:set_damage(0)
+     self:set_can_attack(false)
      enemy:set_hero_weapons_reactions({
       arrow = "protected",
       boomerang = "protected",
@@ -54,7 +55,9 @@ function enemy:on_update()
     })
     if self:get_sprite():get_animation() ~= "immobilized" then self:get_sprite():set_animation("immobilized") end
   else
-     enemy:set_hero_weapons_reactions({
+    self:set_damage(2)
+    self:set_can_attack(true)
+    enemy:set_hero_weapons_reactions({
       arrow = "protected",
       boomerang = "protected",
       explosion = 1,
@@ -68,6 +71,5 @@ function enemy:on_update()
       shield = "protected",
       thrust = "protected"
     })
-    self:set_damage(2)
   end
 end

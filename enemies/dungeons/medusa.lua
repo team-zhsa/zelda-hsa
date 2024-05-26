@@ -41,7 +41,7 @@ enemy:register_event("on_restarted", function(enemy)
     if enemy:get_distance(hero) < detection_distance and enemy:is_in_same_region(hero) then
       enemy:set_can_attack(true)
       if not map.fire_breath_recent_sound then
-        audio_manager:play_sound("zora")
+        audio_manager:play_sound("enemies/zora")
         -- Avoid loudy simultaneous sounds if there are several fire breathing enemies.
         map.fire_breath_recent_sound = true
         sol.timer.start(map, 200, function()
@@ -53,7 +53,7 @@ enemy:register_event("on_restarted", function(enemy)
         name = (enemy:get_name() or enemy:get_breed()) .. "_fireball",
         breed = "projectiles/fireball"
       })
-      sol.audio.play_sound("zora")
+      sol.audio.play_sound("enemies/zora")
       enemy:restart()
     end
     return true  -- Repeat the timer.

@@ -22,25 +22,6 @@ custom_entity{
 }
 
 tile{
-  layer = -2,
-  x = 0,
-  y = 0,
-  width = 1600,
-  height = 1200,
-  pattern = "2047",
-}
-
-custom_entity{
-  layer = -2,
-  x = 8,
-  y = 13,
-  width = 1600,
-  height = 1200,
-  direction = 0,
-  sprite = "maps/room_layout",
-}
-
-tile{
   layer = 0,
   x = 1008,
   y = 880,
@@ -9997,7 +9978,7 @@ tile{
 tile{
   layer = 0,
   x = 768,
-  y = 1032,
+  y = 1008,
   width = 64,
   height = 8,
   pattern = "hole.2",
@@ -10024,25 +10005,25 @@ tile{
 tile{
   layer = 0,
   x = 832,
-  y = 1040,
+  y = 1016,
   width = 8,
-  height = 40,
+  height = 64,
   pattern = "hole.3",
 }
 
 tile{
   layer = 0,
   x = 760,
-  y = 1040,
+  y = 1016,
   width = 8,
-  height = 40,
+  height = 64,
   pattern = "hole.4",
 }
 
 tile{
   layer = 0,
   x = 760,
-  y = 1032,
+  y = 1008,
   width = 8,
   height = 8,
   pattern = "hole.corner_reverse.4",
@@ -10051,7 +10032,7 @@ tile{
 tile{
   layer = 0,
   x = 832,
-  y = 1032,
+  y = 1008,
   width = 8,
   height = 8,
   pattern = "hole.corner_reverse.3",
@@ -10078,9 +10059,9 @@ tile{
 tile{
   layer = 0,
   x = 768,
-  y = 1040,
+  y = 1016,
   width = 64,
-  height = 48,
+  height = 80,
   pattern = "floor.13-1",
 }
 
@@ -10415,7 +10396,7 @@ enemy{
   name = "auto_enemy_1",
   layer = 0,
   x = 800,
-  y = 917,
+  y = 933,
   direction = 0,
   breed = "dungeons/beamos",
 }
@@ -10436,7 +10417,7 @@ switch{
   y = 568,
   subtype = "walkable",
   sprite = "entities/switches/switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -10559,7 +10540,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -10637,7 +10618,7 @@ chest{
   y = 365,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_7_0f_7_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 switch{
@@ -10647,7 +10628,7 @@ switch{
   y = 304,
   subtype = "walkable",
   sprite = "entities/switches/switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -10659,7 +10640,7 @@ chest{
   y = 349,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_7_map",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 crystal{
@@ -10967,7 +10948,7 @@ switch{
   y = 128,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -10978,7 +10959,7 @@ switch{
   y = 112,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -10989,7 +10970,7 @@ switch{
   y = 96,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11000,7 +10981,7 @@ switch{
   y = 80,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11011,7 +10992,7 @@ switch{
   y = 64,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11022,7 +11003,7 @@ switch{
   y = 112,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11033,7 +11014,7 @@ switch{
   y = 96,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11044,7 +11025,7 @@ switch{
   y = 80,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11055,7 +11036,7 @@ switch{
   y = 64,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11066,7 +11047,7 @@ switch{
   y = 64,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11077,7 +11058,7 @@ switch{
   y = 80,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11088,7 +11069,7 @@ switch{
   y = 80,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11099,7 +11080,7 @@ switch{
   y = 96,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11110,7 +11091,7 @@ switch{
   y = 112,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11121,7 +11102,7 @@ switch{
   y = 128,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11132,7 +11113,7 @@ switch{
   y = 144,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11143,7 +11124,7 @@ switch{
   y = 144,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11155,7 +11136,7 @@ switch{
   y = 128,
   subtype = "walkable",
   sprite = "entities/switches/switch_d3-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11166,7 +11147,7 @@ switch{
   y = 112,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11177,7 +11158,7 @@ switch{
   y = 144,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11188,7 +11169,7 @@ switch{
   y = 144,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11199,7 +11180,7 @@ switch{
   y = 160,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11210,7 +11191,7 @@ switch{
   y = 160,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11221,7 +11202,7 @@ switch{
   y = 160,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-2",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11329,7 +11310,7 @@ switch{
   y = 592,
   subtype = "walkable",
   sprite = "entities/switches/switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -11364,7 +11345,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11376,7 +11357,7 @@ destructible{
   treasure_name = "bomb",
   treasure_variant = 3,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11387,7 +11368,7 @@ destructible{
   y = 661,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11398,7 +11379,7 @@ destructible{
   y = 629,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11409,7 +11390,7 @@ destructible{
   y = 581,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11468,7 +11449,7 @@ chest{
   y = 301,
   treasure_name = "compass",
   treasure_savegame_variable = "dungeon_7_compass",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 sensor{
@@ -11533,7 +11514,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11545,7 +11526,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11631,7 +11612,7 @@ destructible{
   y = 973,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11642,7 +11623,7 @@ destructible{
   y = 957,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11654,7 +11635,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11666,7 +11647,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11678,7 +11659,7 @@ destructible{
   treasure_name = "bomb",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11690,7 +11671,7 @@ destructible{
   treasure_name = "bomb",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11702,7 +11683,7 @@ destructible{
   treasure_name = "bomb",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11713,7 +11694,7 @@ destructible{
   y = 1101,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11724,7 +11705,7 @@ destructible{
   y = 1133,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11735,14 +11716,14 @@ destructible{
   y = 1149,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
 block{
   layer = 0,
   x = 792,
-  y = 1069,
+  y = 1045,
   sprite = "entities/block",
   pushable = false,
   pullable = false,
@@ -11752,7 +11733,7 @@ block{
 block{
   layer = 0,
   x = 808,
-  y = 1069,
+  y = 1045,
   sprite = "entities/block",
   pushable = false,
   pullable = false,
@@ -11766,7 +11747,7 @@ destructible{
   y = 653,
   treasure_name = "bomb",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11777,7 +11758,7 @@ destructible{
   y = 653,
   treasure_name = "bomb",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11788,7 +11769,7 @@ destructible{
   y = 333,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -11799,7 +11780,7 @@ destructible{
   y = 333,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -12458,5 +12439,95 @@ tile{
   width = 64,
   height = 48,
   pattern = "ceiling.1",
+}
+
+separator{
+  name = "auto_separator_1",
+  layer = 2,
+  x = 312,
+  y = 0,
+  width = 16,
+  height = 1200,
+}
+
+separator{
+  name = "auto_separator_2",
+  layer = 2,
+  x = 952,
+  y = 0,
+  width = 16,
+  height = 1200,
+}
+
+separator{
+  name = "auto_separator_3",
+  layer = 2,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1200,
+}
+
+separator{
+  name = "auto_separator_4",
+  layer = 2,
+  x = 0,
+  y = 232,
+  width = 1600,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_5",
+  layer = 2,
+  x = 0,
+  y = 472,
+  width = 1280,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_6",
+  layer = 2,
+  x = 0,
+  y = 712,
+  width = 960,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_7",
+  layer = 2,
+  x = 0,
+  y = 952,
+  width = 320,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_8",
+  layer = 2,
+  x = 632,
+  y = 480,
+  width = 16,
+  height = 720,
+}
+
+separator{
+  name = "auto_separator_9",
+  layer = 2,
+  x = 1280,
+  y = 712,
+  width = 320,
+  height = 16,
+}
+
+separator{
+  name = "auto_separator_10",
+  layer = 2,
+  x = 1280,
+  y = 952,
+  width = 320,
+  height = 16,
 }
 

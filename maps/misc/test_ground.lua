@@ -20,7 +20,6 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 local t = sol.sprite.create("menus/title_triforce")
 t:set_animation("triforce")
 
-local map_surface = sol.surface.create("menus/map/pause_outside_map.png")
 local ds = 0.1
 local smax = 8
 local timer = 100
@@ -28,8 +27,6 @@ local sx, sy
 local nsx, nsy = 0.5, 0.5
 
 function map:on_draw(dst_surface)
-	map_surface:set_transformation_origin(120, 90)
-	--map_surface:draw(dst_surface)
 	
 	t:draw(dst_surface, 88, 88)
 end
@@ -40,7 +37,6 @@ function map:on_started()
 	sol.timer.start(game, 40, function()
 		nsx = nsx + ds
 		nsy = nsy + ds
-		map_surface:set_scale(nsx, nsy)
 		--print(nsx)
 		return nsx < smax
 	end)

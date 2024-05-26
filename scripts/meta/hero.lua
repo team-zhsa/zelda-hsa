@@ -4,6 +4,7 @@
 local hero_meta = sol.main.get_metatable("hero")
 
 -- Include scripts
+require("scripts/multi_events")
 local audio_manager = require("scripts/audio_manager")
 local timer_sword_loading = nil
 local timer_sword_tapping = nil
@@ -16,21 +17,27 @@ function hero_meta:is_custom_state_started(state_name)
   return state=="custom" and object:get_description()==state_name
 end
 
-require("scripts/multi_events")
+
 hero_meta:register_event("on_position_changed", function(hero)
-    if not hero.walking_sound_timer then
-      hero.walking_sound_timer=sol.timer.start(hero, 300, function()
-          hero.walking_sound_timer = nil
-        end)
-      if hero:get_ground_below()=="shallow_water" then
-        audio_manager:play_sound("walk_on_water")
-      elseif hero:get_ground_below()=="grass" then
-        audio_manager:play_sound("walk_on_grass")
-      end
+  local map = hero:get_map()
+  
+  if not hero.walking_sound_timer then
+    hero.walking_sound_timer=sol.timer.start(hero, 300, function()
+        hero.walking_sound_timer = nil
+      end)
+    if hero:get_ground_below() == "shallow_water" then
+      audio_manager:play_sound("hero/walk_on_water")
+    elseif hero:get_ground_below() == "grass" then
+      audio_manager:play_sound("hero/walk_on_grass")
     end
-    
-    local map = hero:get_map()
-    for npc in map:get_entities(npc) do
+  end
+  local x, y, z = hero:get_position()
+  if z <= map:get_max_layer() - 1 then
+    if map:get_ground(x, y, z + 1) == "deep_water" then
+      hero:set_position(x, y, z + 1)
+    end
+  end
+  for npc in map:get_entities(npc) do
     local face_player = npc:get_property("face_player")
     local x, y, z = hero:get_position()
     local nx, ny, nz = npc:get_position()
@@ -60,40 +67,39 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       audio_manager:play_sound("lift") 
     elseif current_state == "sword loading" or state_desc=="sword_loading" then
       timer_sword_loading = sol.timer.start(hero, 1000, function()
-          audio_manager:play_sound("sword_spin_attack_load") 
+          audio_manager:play_sound("hero/sword_spin_attack_load") 
         end)
     elseif current_state == "sword spin attack" or state_desc=="sword_spin_attack" then
       -- Sword spin attack
-      audio_manager:play_sound("sword_spin_attack_release") 
+      audio_manager:play_sound("hero/sword_spin_attack_release") 
     elseif current_state == "sword swinging" or state_desc=="sword" then
       -- Sword swinging
-      local index = game:get_ability("sword")
-      audio_manager:play_sound("sword" .. index) 
+      --local index = game:get_ability("sword")
+      audio_manager:play_sound("hero/sword" .. math.random(1,4)) 
     elseif current_state == "sword tapping" or state_desc=="sword_tapping" then
       if timer_sword_tapping == nil then
         timer_sword_tapping = sol.timer.start(hero, 250, function()
             local sound_sword = false
             local entity = hero:get_facing_entity()
             if entity ~= nil then
-              sound_sword = entity:get_property("sound_sword")          
+              if entity:get_type() == "door" and entity:get_property("opening_method") == "explosion" then
+                sound_sword = true
+              end 
             end
-            if sound_sword then
-              audio_manager:play_sound("sword_tapping_weak_wall")
-            else
-              audio_manager:play_sound("sword_tapping") 
-            end
+            if sound_sword then audio_manager:play_sound("hero/sword_tapping_weak_wall")
+            else audio_manager:play_sound("hero/sword_tapping") end
             return true
           end)
       end
     elseif current_state == "hurt" then
       -- Hurt
-      audio_manager:play_sound("hero_hurt") 
+      audio_manager:play_sound("hero/hero_hurt".. math.random(1,3)) 
     elseif current_state == "falling" then
       -- Falling
       hero:stop_movement()
-      audio_manager:play_sound("hero_falls") 
+      audio_manager:play_sound("hero/hero_falls") 
     elseif current_state == "jumping" then
-      --audio_manager:play_sound("hero/cliff_jump")
+      audio_manager:play_sound("hero/jump")
     elseif current_state == "stairs" then
       if timer_stairs == nil then
         timer_stairs = sol.timer.start(hero, 0, function()
@@ -106,7 +112,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       -- Frozen
       local entity = hero:get_facing_entity()
       if entity ~= nil and entity:get_type() == "chest" and game:is_command_pressed("action") then
-        audio_manager:play_sound("chest_open")
+        audio_manager:play_sound("common/chest_open")
       end
 
     end
@@ -150,7 +156,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       if ground == "deep_water" then -- Est-ce toujours utile du coup maintenant qu'on a une custom state de noyade ?
         game:add_life(1)
       end
-      sol.audio.play_sound("menu/dialogue_end")
+      sol.audio.play_sound("menus/message_end")
     end
   end)
 
@@ -207,21 +213,21 @@ function hero_meta.play_ground_effect(hero)
   --print ("ground: "..ground)
   local x,y=hero:get_position()
 
-  if ground=="shallow_water" then
+  if ground == "shallow_water" then
     --print "landed in water"
     hero:show_ground_effect("water")
-    audio_manager:play_sound("walk_on_water")
-  elseif ground=="grass" then
+    audio_manager:play_sound("hero/walk_on_water")
+  elseif ground == "grass" then
     --print "landed in grass"
     hero:show_ground_effect("grass")
-    audio_manager:play_sound("walk_on_grass")
-  elseif ground=="deep_water" or ground=="lava" then
+    audio_manager:play_sound("hero/walk_on_grass")
+  elseif ground == "deep_water" or ground == "lava" then
     --print "plundged in some fluid"
-    audio_manager:play_sound("swim")
+    audio_manager:play_sound("hero/swim")
   else --Not a standard ground
     --print "landed in some other ground"
     for entity in map:get_entities_in_rectangle(x,y,1,1) do
-      if entity:get_property("custom_ground")=="sand" then
+      if entity:get_property("custom_ground") == "sand" then
         --print "landed in sand"
         hero:show_ground_effect("sand") --TODO make proper sprite for sand landing effect
       end
@@ -294,8 +300,8 @@ hero_meta:register_event("on_position_changed", function(hero)
       local row = math.floor(y / room_height)
       local room = row * num_columns + column + 1
       local room_old = game:get_value("room")
-      game:set_value("room", room)
-      game:set_explored_dungeon_room(nil, nil, room)
+     -- game:set_value("room", room)
+    --  game:set_explored_dungeon_room(nil, nil, room)
     end
 
   end)

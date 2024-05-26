@@ -1,41 +1,45 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "_placeholder", -- Row 1 -- Ether Medallion
-	"_placeholder", -- Fire rod
-  "_placeholder", -- Healing rod
-  "_placeholder", -- Thunder rod
-  "wind_rod", -- Light rod
-	"fire_rod", --  rod?
-	"fire_rod", --  rod?
-  "_placeholder", -- Row 2 -- Flames Medallion
-  "sword_skill_beam", -- Ice rod Hero Shield
-	"hero_shield", -- Wind Rod
-  "_placeholder", -- Darkness rod
-	"_placeholder", -- Somaria Cane
-	"ice_rod", -- Doom rod?
-	"ice_rod", -- Doom rod?
-	"_placeholder", -- Row 3 -- Quake Medallion
-	"trading_1", 
-	"trading_1", 
-	"hylia_shield", -- Hylia Shield
-	"healing_wand", -- Healing Wand
-	"bottle_1", -- Bottle
-	"bottle_2", -- Bottle
-	"book_of_mudora", -- Row 4 -- Book of Mudora
-	"mushroom",  -- Deku Stick
-	"mushroom",  -- Deku Stick
-	"mirror_shield",  -- Mirror Shield
-	"somaria_cane", --
-	"bottle_3", -- Bottle
-	"bottle_4", -- Bottle
-
+	-- Row 1
+	"_placeholder",												-- Magic cape
+	"magic_mirror",												-- Magic mirror
+	"book_of_mudora",								      -- Book of Mudora
+	"fire_rod",														-- Fire rod
+	"_placeholder",												-- Light rod
+	"somaria_cane",												-- Somaria cane
+	"wind_rod",														-- Wind rod
+	-- Row 2                                      
+	"_placeholder",												-- ?      
+	"lens_of_truth",											-- Lens of truth    
+	"healing_wand",												-- Healing wand
+	"ice_rod",									    			-- Ice rod
+	"thunder_rod",												-- Thunder rod
+	"_placeholder",												-- Darkness rod
+	"doom_rod",														-- Doom rod
+	-- Row 3
+	"_placeholder", 											-- ?
+	"_placeholder",												-- ?
+	"din_flame",								  				-- Din Flame
+	"farore_quake",												-- Farore Quake
+	"nayru_ether",												-- Nayru Ether
+	"_placeholder",												-- ?
+	"_placeholder",												-- ?
+	-- Row 4
+	"_placeholder",												-- ?
+	"_placeholder",					    					-- ?
+	"sword_skill_beam", 									-- Sword skill
+	"_placeholder",						     				-- Sword skill
+	"_placeholder",						  					-- Sword skill 
+	"_placeholder",						 						-- ?
+	"_placeholder",												-- ?
 }
+
 local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"pegasus_boots"
 }
 
 local cell_size = 28
@@ -184,7 +188,7 @@ function inventory_submenu:on_command_pressed(command)
       if self.cursor_column == 0 then
         self:previous_submenu()
       else
-        sol.audio.play_sound("cursor")
+        sol.audio.play_sound("menus/cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
       end
       handled = true
@@ -194,18 +198,18 @@ function inventory_submenu:on_command_pressed(command)
       if self.cursor_column == limit then
         self:next_submenu()
       else
-        sol.audio.play_sound("cursor")
+        sol.audio.play_sound("menus/cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
       end
       handled = true
 
     elseif command == "up" and self.cursor_column < 7 then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
       handled = true
 
     elseif command == "down" and self.cursor_column < 7 then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
       handled = true
 
@@ -252,14 +256,15 @@ function inventory_submenu:set_cursor_position(row, column)
     self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
-      item_icon_opacity = 255
-    end
-  else
-    self:set_caption_key(nil)
-    self.game:set_custom_command_effect("action", nil)
-  end
-  self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)
-  self.game:get_hud():set_item_icon_opacity(2, item_icon_opacity)
+      self.game:set_hud_mode("normal")
+    else
+      self.game:set_hud_mode("pause")
+		end
+	else
+		self:set_caption(nil)
+		self.game:set_custom_command_effect("action", nil)
+		self.game:set_hud_mode("pause")
+	end
 
 end
 

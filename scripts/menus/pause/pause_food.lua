@@ -31,7 +31,7 @@ local item_names_static = {
   "sword",
   "power_gloves",
   "flippers",
- 	"pegasus_shoes"
+ 	"pegasus_boots"
 }
 
 local cell_size = 28
@@ -179,7 +179,7 @@ function inventory_submenu:on_command_pressed(command)
       if self.cursor_column == 0 then
         self:previous_submenu()
       else
-        sol.audio.play_sound("cursor")
+        sol.audio.play_sound("menus/cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
       end
       handled = true
@@ -189,18 +189,18 @@ function inventory_submenu:on_command_pressed(command)
       if self.cursor_column == limit then
         self:next_submenu()
       else
-        sol.audio.play_sound("cursor")
+        sol.audio.play_sound("menus/cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
       end
       handled = true
 
     elseif command == "up" and self.cursor_column < 7 then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
       handled = true
 
     elseif command == "down" and self.cursor_column < 7 then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
       handled = true
 
@@ -247,14 +247,15 @@ function inventory_submenu:set_cursor_position(row, column)
     self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
-      item_icon_opacity = 255
-    end
-  else
-    self:set_caption_key(nil)
-    self.game:set_custom_command_effect("action", nil)
-  end
-  self.game:get_hud():set_item_icon_opacity(1, item_icon_opacity)
-  self.game:get_hud():set_item_icon_opacity(2, item_icon_opacity)
+      self.game:set_hud_mode("normal")
+    else
+      self.game:set_hud_mode("pause")
+		end
+	else
+		self:set_caption(nil)
+		self.game:set_custom_command_effect("action", nil)
+		self.game:set_hud_mode("pause")
+	end
 
 end
 

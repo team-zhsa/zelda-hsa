@@ -63,7 +63,7 @@ function block_meta:on_moving()
   sol.timer.start(self, 50, function()
       local x_end, y_end = self:get_position()  
       if x_start ~= x_end or y_start ~= y_end then
-        audio_manager:play_sound("hero_pushes")
+        audio_manager:play_sound("hero/hero_pushes")
       end
     end)
 

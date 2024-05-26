@@ -36,13 +36,14 @@ local function explode()
       {key = "explosive_type_2", value = "destructible"},
       {key = "explosive_type_3", value = "door"},
       {key = "explosive_type_4", value = "enemy"},
-      {key = "explosive_type_5", value = "sensor"}
+      {key = "explosive_type_5", value = "hero"},
+      {key = "explosive_type_6", value = "sensor"}
     }
   })
   map:get_hero():unfreeze()
   map:get_hero():set_animation("stopped")
   bomb:remove()
-  audio_manager:play_sound("explosion")
+  audio_manager:play_sound("environment/explosion")
 end
 
 -- Start the countdown before explosion.

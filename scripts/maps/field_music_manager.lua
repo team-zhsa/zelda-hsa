@@ -17,21 +17,26 @@ local field_id = {"out/a1", "out/a6",
 "out/j4", "out/k3", "out/k4"}
 
 local function map_is_field(id)
-    for index = 1, #field_id do
-        if field_id[index] == id then
-            return true
-        end
-    end
+	for index = 1, #field_id do
+		if field_id[index] == id then
+			return true
+		end
+	end
 end
 
 map_meta:register_event("on_started", function(map)
   local game = map:get_game()
 	if map_is_field(map:get_id()) then
 		if not game:is_step_done("dungeon_1_started") then
-			audio_manager:play_music("outside/hyrule_field_beginning")
+			if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
+				audio_manager:play_music("outside/hyrule_field_intro_day")
+			elseif game:get_value("time_of_day") == "night" then
+				audio_manager:play_music("outside/hyrule_field_intro_night")
+			end
 		elseif game:is_step_last("priest_kidnapped") then
 			audio_manager:play_music("cutscenes/cutscene_danger")
-		else
+		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
+					or	game:is_step_done("agahnim_met") then
 			if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
 				audio_manager:play_music("outside/hyrule_field_day")
 			elseif game:get_value("time_of_day") == "night" then

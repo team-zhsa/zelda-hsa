@@ -1077,7 +1077,7 @@ npc{
   y = 61,
   direction = 3,
   subtype = 1,
-  sprite = "npc/merchant_yellow",
+  sprite = "npc/merchant_hooded_yellow",
   behavior = "dialog#maps.houses.east_castle.blacksmith.merchant_welcome",
 }
 
@@ -1090,21 +1090,12 @@ sensor{
   height = 16,
 }
 
-sensor{
-  name = "sensor_shop_welcome",
-  layer = 0,
-  x = 272,
-  y = 117,
-  width = 16,
-  height = 32,
-}
-
 shop_treasure{
   name = "product_shield",
   layer = 0,
   x = 248,
   y = 64,
-  treasure_name = "hero_shield",
+  treasure_name = "shield_hero",
   price = 80,
   font = "white_digits",
   dialog = "maps.houses.east_castle.blacksmith.product_shield",

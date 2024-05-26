@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
-  music = "outside/mountains",
+  music = "outside/west_mountains",
 }
 
 tile{
@@ -66372,7 +66372,7 @@ destructible{
   y = 637,
   treasure_name = "random_mountains",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 3,
   damage_on_enemies = 4,
 }
@@ -66383,7 +66383,7 @@ destructible{
   y = 653,
   treasure_name = "random_mountains",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 3,
   damage_on_enemies = 4,
 }

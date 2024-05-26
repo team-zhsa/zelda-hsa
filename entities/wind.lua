@@ -1,5 +1,5 @@
--- A flame that can hurt enemies.
--- It is meant to by created by the lamp and the wind rod.
+
+-- It is meant to by created by the wind rod.
 local wind = ...
 local sprite
 
@@ -57,56 +57,11 @@ wind:set_can_traverse_ground("deep_water", true)
 wind:set_can_traverse_ground("shallow_water", true)
 wind:set_can_traverse_ground("hole", true)
 wind:set_can_traverse_ground("lava", true)
+wind:set_can_traverse_ground("grass", true)
 wind:set_can_traverse_ground("prickles", true)
 wind:set_can_traverse_ground("low_wall", true)
 wind:set_can_traverse(true)
 wind.apply_cliffs = true
-
--- Burn bushes.
-wind:add_collision_test(bush_collision_test, function(wind, entity)
-
---[[  local map = wind:get_map()
-
-  if entity:get_type() == "destructible" then
-    if not is_bush(entity) then
-      return
-    end
-    local bush = entity
-
-    local bush_sprite = entity:get_sprite()
-    if bush_sprite:get_animation() ~= "on_ground" then
-      -- Possibly already being destroyed.
-      return
-    end
-
-    wind:stop_movement()
-    sprite:set_animation("stopped")
-    sol.audio.play_sound("wind")
-
-    -- TODO remove this when the engine provides a function destructible:destroy()
-    local bush_sprite_id = bush_sprite:get_animation_set()
-    local bush_x, bush_y, bush_layer = bush:get_position()
-    local treasure = { bush:get_treasure() }
-    if treasure ~= nil then
-      local pickable = map:create_pickable({
-        x = bush_x,
-        y = bush_y,
-        layer = bush_layer,
-        treasure_name = treasure[1],
-        treasure_variant = treasure[2],
-        treasure_savegame_variable = treasure[3],
-      })
-    end
-
-    sol.audio.play_sound(bush:get_destruction_sound())
-    bush:remove()
-
-    local bush_destroyed_sprite = wind:create_sprite(bush_sprite_id)
-    local x, y = wind:get_position()
-    bush_destroyed_sprite:set_xy(bush_x - x, bush_y - y)
-    bush_destroyed_sprite:set_animation("destroy")
-  end--]]
-end)
 
 -- Hurt enemies.
 wind:add_collision_test("sprite", function(wind, entity)

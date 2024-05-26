@@ -25,6 +25,7 @@ map:register_event("on_started", function(destination)
         game:get_dialog_box():set_style("box")
         game:set_step_done("zelda_kidnapped")
         map:set_cinematic_mode(false)
+        audio_manager:play_music_fade(map, map:get_music())
       end)
     end)
   end

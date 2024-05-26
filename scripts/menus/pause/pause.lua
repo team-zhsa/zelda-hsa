@@ -17,7 +17,6 @@ local function initialise_pause_features(game)
 	local inventory_builder_2 = require("scripts/menus/pause/pause_inventory_2")
 	local ocarina_builder = require("scripts/menus/pause/pause_ocarina")
 	local food_builder = require("scripts/menus/pause/pause_food")
-	local map_builder = require("scripts/menus/pause/pause_map")
 	local quest_builder = require("scripts/menus/pause/pause_quest")
 	local options_builder = require("scripts/menus/pause/pause_options")
   local joy_avoid_repeat = {-2, -2}
@@ -41,14 +40,19 @@ local function initialise_pause_features(game)
 		-- Select the submenu that was saved if any.
 		local submenu_index = game:get_value("pause_last_submenu") or 1
 		if submenu_index <= 0
-				or submenu_index > #game.pause_submenus then
+		or submenu_index > #game.pause_submenus then
 			submenu_index = 1
 		end
 		game:set_value("pause_last_submenu", submenu_index)
-
 		-- Play the sound of pausing the game.
-		sol.audio.play_sound("menu/pause_open")
-
+		sol.audio.play_sound("menus/pause_open")
+		-- Forces the dialog_box to be at bottom.
+		local dialog_box = game:get_dialog_box()
+		self.backup_dialog_position = dialog_box:get_position()
+		dialog_box:set_position("bottom")
+		-- Set the HUD correct mode.
+		pause_menu.backup_hud_mode = game:get_hud_mode()
+		game:set_hud_mode("pause")
 		-- Start the selected submenu.
 		sol.menu.start(pause_menu, game.pause_submenus[submenu_index])
 	end
@@ -64,18 +68,20 @@ local function initialise_pause_features(game)
 	function pause_menu:on_finished()
 
 		-- Play the sound of unpausing the game.
-		sol.audio.play_sound("menu/pause_close")
+		sol.audio.play_sound("menus/pause_close")
 
-		game.pause_submenus = {}
-		-- Restore opacity
-		game:get_hud():set_item_icon_opacity(1, 255)
-		game:get_hud():set_item_icon_opacity(2, 255)
-		-- Restore the built-in effect of action and attack commands.
-		if game.set_custom_command_effect ~= nil then
-			game:set_custom_command_effect("action", nil)
-			game:set_custom_command_effect("attack", nil)
-		end
-	end
+    -- Clear the submenus table.
+    game.pause_submenus = {}
+    -- Restore the dialog_box position.
+    game:get_dialog_box():set_position(self.backup_dialog_position)
+    -- Restore the HUD mode.
+    game:set_hud_mode(pause_menu.backup_hud_mode)
+    -- Restore the built-in effect of action and attack commands.
+    if game.set_custom_command_effect ~= nil then
+      game:set_custom_command_effect("action", nil)
+      game:set_custom_command_effect("attack", nil)
+    end
+  end
 
 	game:register_event("on_paused", function(game)
 		pause_menu:open()

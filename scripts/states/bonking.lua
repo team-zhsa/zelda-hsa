@@ -18,7 +18,7 @@ function state:on_started()
   local movement=sol.movement.create("straight")
 
   local entity=state:get_entity()
-  movement:set_speed(88)
+  movement:set_speed(128)
   movement:set_angle((entity:get_direction()+2)*math.pi/2)
   function movement:on_position_changed()
     if entity:is_running() then
@@ -31,7 +31,7 @@ function state:on_started()
   end
   entity.bonking=true
   --state:set_can_control_movement(false)
-  audio_manager:play_sound("running_obstacle")
+  audio_manager:play_sound("hero/running_obstacle")
 
   local map=entity:get_map()
 
@@ -57,7 +57,7 @@ function state:on_started()
   if sword_sprite then
     entity:remove_sprite(sword_sprite)
   end
-  local shield = state:get_game():get_item("hero_shield") or state:get_game():get_item("hylia_shield") or state:get_game():get_item("mirror_shield")
+  local shield = state:get_game():get_item("shield_hero") or state:get_game():get_item("shield_hylia") or state:get_game():get_item("shield_mirror")
   if shield:is_being_used() then
     shield:stop_using()
   end
