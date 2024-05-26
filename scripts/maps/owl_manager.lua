@@ -82,7 +82,7 @@ function owl_manager:appear(map, step, callback)
       end
       tell_dialog()
       function fly_away()
-              timer_sound2:stop()
+      timer_sound2:stop()
       owl:get_sprite():set_animation("walking")
       owl:get_sprite():set_direction(1)
       owl_shadow:get_sprite():set_animation("walking")

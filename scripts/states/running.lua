@@ -85,11 +85,11 @@ function state:on_started()
   entity.run_sound_timer = sol.timer.start(state, 200, function()
       if not entity.is_jumping or not entity:is_jumping() then
         if entity:get_ground_below() == "shallow_water" then
-          audio_manager:play_sound("walk_on_water")
+          audio_manager:play_sound("hero/walk_on_water")
         elseif entity:get_ground_below()=="grass" then
-          audio_manager:play_sound("walk_on_grass")
+          audio_manager:play_sound("hero/walk_on_grass")
         else
-          audio_manager:play_sound("running")
+          audio_manager:play_sound("hero/running")
         end
         return true
       end
@@ -177,7 +177,7 @@ function state:on_command_released(command)
   local game = state:get_game()
   for i=1, 2 do
     local item =game:get_item_assigned(""..i)
-    if command == "item_"..i and item and item:get_name()=="pegasus_shoes" then
+    if command == "item_"..i and item and item:get_name()=="pegasus_boots" then
       local entity=state:get_entity()
       if entity.running_timer~=nil then
         entity:unfreeze()

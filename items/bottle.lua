@@ -9,7 +9,7 @@ return function(item)
 
     -- empty bottle
     if variant == 1 then
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
       self:set_finished()
 
       -- water

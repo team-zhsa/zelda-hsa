@@ -41,11 +41,10 @@ local frenzy_duration  = 1000
 
 local right_hand_offset_x = -20
 local right_hand_offset_y = -52
-local bomb_holding_duration = 300
+local bomb_holding_duration = 10
 local bomb_throwing_duration = 800
 local bomb_throwing_height = 60
 local bomb_throwing_speed = 120
-local hero_holding_duration = 800
 local hero_throwing_duration = 800
 local hero_throwing_height = 60
 local hero_throwing_speed = 240
@@ -54,20 +53,10 @@ local hero_stunned_duration = 1000
 -- Hold the given entity in the given hand and wait for the actual throw.
 local function start_holding(right_hand, hold_duration, on_throwing)
 
-  is_bomb_upcoming = false
-  
-  enemy:set_drawn_in_y_order(false) -- Display this enemy as a flat entity for the throw to draw the hero above.
-  enemy:bring_to_front()
-  sprite:set_animation("hurt") -- TODO make holding animation("holding_" .. (right_hand and "right" or "left"))
+ -- TODO make holding animation("holding_" .. (right_hand and "right" or "left"))
   --sprite:set_direction(right_hand and 2 or 0)
 
-  sol.timer.start(enemy, hold_duration, function()
-    enemy:throw_bomb()
-    sprite:set_animation("hurt") -- TODO make throwing animation ("throwing_" .. (right_hand and "right" or "left"))
-    sol.timer.start(enemy, waiting_duration, function()
-      enemy:restart()
-    end)
-  end)
+
 end
 
 -- Start the enemy walking movement.
@@ -77,11 +66,12 @@ function enemy:start_walking()
 
     -- At the end of the move, wait a few time then randomly charge or restart another move.
     sol.timer.start(enemy, waiting_duration, function()
-      if math.random() <= charging_probability then
-        enemy:throw_bomb()
-      else
-        enemy:start_walking()
+      is_bomb_upcoming = true
+      -- Remove a possible holded bomb to throw the next one.
+      if holded_bomb then
+        holded_bomb:start_death()
       end
+      enemy:start_walking()
     end)
   end)
 end
@@ -109,8 +99,13 @@ function enemy:throw_bomb()
     bomb:set_position(x + hand_offset_x, y)
     bomb:get_sprite():set_xy(0, right_hand_offset_y)
     holded_bomb = bomb
+    is_bomb_upcoming = false
 
-    start_holding(is_right_hand_throw, bomb_holding_duration, function()
+    enemy:set_drawn_in_y_order(false) -- Display this enemy as a flat entity for the throw to draw the hero above.
+    enemy:bring_to_front()
+    sprite:set_animation("holding")
+
+    sol.timer.start(enemy, bomb_holding_duration, function()
       bomb:set_drawn_in_y_order(false) -- Display the bomb as flat entity until the throw.
       bomb:bring_to_front()
 
@@ -122,13 +117,17 @@ function enemy:throw_bomb()
       end)
       bomb:set_drawn_in_y_order()
       holded_bomb = nil
+      sprite:set_animation("holding")
+      sol.timer.start(enemy, waiting_duration, function()
+        enemy:restart()
+      end)
     end)
+
   end
 end
 
 -- Prepare to throw a bomb after restart when hurt.
 enemy:register_event("on_hurt", function(enemy)
-
   is_bomb_upcoming = true
 
   -- Remove a possible holded bomb to throw the next one.
@@ -172,7 +171,7 @@ enemy:register_event("on_restarted", function(enemy)
   enemy:set_can_attack(true)
   enemy:set_obstacle_behavior("flying") -- Don't fall in holes.
   enemy:set_drawn_in_y_order() -- Reset y drawn order possibly changed by the throw.
-  sprite:set_animation("shaking")
+
   if is_bomb_upcoming then
     enemy:throw_bomb()
   else
@@ -180,4 +179,5 @@ enemy:register_event("on_restarted", function(enemy)
       enemy:start_walking()
     end)
   end
+
 end)

@@ -9,12 +9,14 @@
 
 local map = ...
 local game = map:get_game()
-
+local timer_manager = require("scripts/maps/timer_manager")
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 	for tile in map:get_entities("tile_floor_") do
 		tile:set_visible(false)
 	end
+	if not game:is_step_done("master_sword_obtained") then
+		chest:set_enabled(false) end
 end)
 
 switch_floor:register_event("on_activated", function()
@@ -22,10 +24,12 @@ switch_floor:register_event("on_activated", function()
 	for tile in map:get_entities("tile_floor_") do
 		tile:set_visible(true)
 	end
-	sol.timer.start(map, 5000, function()
+
+  timer_manager:start_timer(map, 5000, "countdown", function() --Timer for 15 seconds
 		switch_floor:set_activated(false)
 		for tile in map:get_entities("tile_floor_") do
 			tile:set_visible(false)
 		end
-	end)
+  end)
+
 end)

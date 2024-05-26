@@ -51,7 +51,7 @@ npc_marathon:register_event("on_interaction", function()
       -- Bridge closed
       game:start_dialog("maps.caves.north_field.marathon_man.marathon_bridge_closed")
     else
-      if not game:has_item("pegasus_shoes") then
+      if not game:has_item("pegasus_boots") then
         -- No Pegasus Boots
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_no_shoes")
       

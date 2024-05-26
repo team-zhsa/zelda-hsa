@@ -4,32 +4,42 @@ animation{
   frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 0, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 192, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 288, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
   },
 }
 animation{
   name = "hurt",
   src_image = "enemies/outside/lynel.png",
-  frame_delay = 50,
+  frame_delay = 20,
   frame_to_loop_on = 0,
   directions = {
-    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 64, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 64, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
-    { x = 64, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 3 },
+    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8, num_columns = 1 },
+    { x = 160, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8, num_columns = 1 },
+    { x = 256, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8, num_columns = 1 },
+    { x = 352, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8, num_columns = 1 },
   },
 }
 animation{
   name = "immobilized",
   src_image = "enemies/outside/lynel.png",
   directions = {
-    { x = 64, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 64, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 64, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
-    { x = 64, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 96, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 192, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 288, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+  },
+}
+animation{
+  name = "frozen",
+  src_image = "enemies/outside/lynel.png",
+  directions = {
+    { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 96, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 192, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
+    { x = 288, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29 },
   },
 }
 animation{
@@ -38,10 +48,10 @@ animation{
   frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {
-    { x = 32, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 32, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 128, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 224, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 320, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
   },
 }
 animation{
@@ -50,9 +60,9 @@ animation{
   frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {
-    { x = 32, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
-    { x = 32, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 32, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 128, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 224, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
+    { x = 320, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 2 },
   },
 }

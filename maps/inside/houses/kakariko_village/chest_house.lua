@@ -34,7 +34,7 @@ local function play_question_dialog_finished(answer)
       game:start_dialog("maps.houses.kakarico_village.chest_house.minigame_yes")
 
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
       game:start_dialog("_shop.not_enough_money")
     end
 	else game:start_dialog("maps.houses.kakarico_village.chest_house.minigame_no")
@@ -73,7 +73,7 @@ local function chest_empty(chest)
     won = true
 		audio_manager:play_music("inside/house")
   else
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     chest:set_open(false)
   end
 end

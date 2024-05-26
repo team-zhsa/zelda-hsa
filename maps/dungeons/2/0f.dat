@@ -1012,15 +1012,6 @@ tile{
 
 tile{
   layer = -1,
-  x = 768,
-  y = 360,
-  width = 16,
-  height = 16,
-  pattern = "cauldron.hole-1",
-}
-
-tile{
-  layer = -1,
   x = 760,
   y = 360,
   width = 8,
@@ -1053,15 +1044,6 @@ tile{
   width = 32,
   height = 8,
   pattern = "cauldron.2-1",
-}
-
-tile{
-  layer = -1,
-  x = 832,
-  y = 360,
-  width = 16,
-  height = 16,
-  pattern = "cauldron.hole-1",
 }
 
 tile{
@@ -1228,7 +1210,7 @@ destructible{
   y = 317,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -1239,7 +1221,7 @@ destructible{
   y = 333,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -1250,7 +1232,7 @@ destructible{
   y = 349,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -1279,38 +1261,6 @@ sensor{
   y = 325,
   width = 16,
   height = 16,
-}
-
-teletransporter{
-  layer = -1,
-  x = 768,
-  y = 360,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 16,
-  destination_map = "dungeons/2/b1",
-  destination = "from_0f_4",
-}
-
-teletransporter{
-  layer = -1,
-  x = 832,
-  y = 360,
-  properties = {
-    {
-      key = "effect",
-      value = "pixellisation",
-    },
-  },
-  width = 16,
-  height = 16,
-  destination_map = "dungeons/2/b1",
-  destination = "from_0f_4",
 }
 
 stairs{
@@ -9827,7 +9777,7 @@ tile{
 tile{
   layer = 0,
   x = 384,
-  y = 136,
+  y = 152,
   width = 16,
   height = 24,
   pattern = "barrier_big.border.2-1",
@@ -9837,7 +9787,7 @@ tile{
 tile{
   layer = 0,
   x = 384,
-  y = 40,
+  y = 64,
   width = 16,
   height = 16,
   pattern = "barrier_big.border.1-1",
@@ -9847,9 +9797,9 @@ tile{
 tile{
   layer = 0,
   x = 384,
-  y = 56,
+  y = 80,
   width = 16,
-  height = 80,
+  height = 72,
   pattern = "barrier_big.2-1",
   tileset = "absolute_dungeon_07",
 }
@@ -9867,7 +9817,7 @@ tile{
 tile{
   layer = 0,
   x = 416,
-  y = 80,
+  y = 128,
   width = 16,
   height = 16,
   pattern = "barrier_big.border.1-1",
@@ -9877,9 +9827,9 @@ tile{
 tile{
   layer = 0,
   x = 416,
-  y = 96,
+  y = 144,
   width = 16,
-  height = 80,
+  height = 32,
   pattern = "barrier_big.2-1",
   tileset = "absolute_dungeon_07",
 }
@@ -12851,6 +12801,54 @@ tile{
   pattern = "statue_eye-1",
 }
 
+tile{
+  layer = 0,
+  x = 768,
+  y = 360,
+  width = 16,
+  height = 16,
+  pattern = "cauldron.hole-1",
+}
+
+tile{
+  layer = 0,
+  x = 832,
+  y = 360,
+  width = 16,
+  height = 16,
+  pattern = "cauldron.hole-1",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 72,
+  width = 16,
+  height = 24,
+  pattern = "barrier_big.border.2-1",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "barrier_big.border.1-1",
+  tileset = "absolute_dungeon_07",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 56,
+  width = 16,
+  height = 16,
+  pattern = "barrier_big.2-1",
+  tileset = "absolute_dungeon_07",
+}
+
 sensor{
   name = "dungeon_room_8_3",
   layer = 0,
@@ -13004,7 +13002,7 @@ chest{
   y = 845,
   treasure_name = "blue_key",
   treasure_savegame_variable = "dungeon_2_blue_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 switch{
@@ -13014,7 +13012,7 @@ switch{
   y = 832,
   subtype = "walkable",
   sprite = "entities/switches/switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -13025,7 +13023,7 @@ chest{
   y = 1053,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_0f_22_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 block{
@@ -13540,7 +13538,7 @@ chest{
   y = 557,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_2_1f_11_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 enemy{
@@ -13683,7 +13681,7 @@ chest{
   y = 1325,
   treasure_name = "compass",
   treasure_savegame_variable = "dungeon_2_compass",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 switch{
@@ -13692,7 +13690,7 @@ switch{
   x = 1512,
   y = 1280,
   subtype = "arrow_target",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -13703,7 +13701,7 @@ switch{
   x = 1352,
   y = 1280,
   subtype = "arrow_target",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -13715,7 +13713,7 @@ switch{
   y = 1264,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-1",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = true,
   inactivate_when_leaving = true,
 }
@@ -13763,7 +13761,7 @@ switch{
   y = 1360,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-1",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = true,
   inactivate_when_leaving = true,
 }
@@ -13775,7 +13773,7 @@ switch{
   y = 1360,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-1",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = true,
   inactivate_when_leaving = true,
 }
@@ -13787,7 +13785,7 @@ switch{
   y = 1264,
   subtype = "walkable",
   sprite = "entities/switches/switch_d1-1",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = true,
   inactivate_when_leaving = true,
 }
@@ -14070,7 +14068,7 @@ destructible{
   y = 541,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14080,7 +14078,7 @@ destructible{
   y = 541,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14090,7 +14088,7 @@ destructible{
   y = 557,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14100,7 +14098,7 @@ destructible{
   y = 589,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14110,7 +14108,7 @@ destructible{
   y = 605,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14120,7 +14118,7 @@ destructible{
   y = 621,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14130,7 +14128,7 @@ destructible{
   y = 653,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14140,7 +14138,7 @@ destructible{
   y = 669,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14150,7 +14148,7 @@ destructible{
   y = 669,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14160,7 +14158,7 @@ destructible{
   y = 669,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14170,7 +14168,7 @@ destructible{
   y = 669,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14180,7 +14178,7 @@ destructible{
   y = 653,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14190,7 +14188,7 @@ destructible{
   y = 557,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14200,7 +14198,7 @@ destructible{
   y = 541,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14210,7 +14208,7 @@ destructible{
   y = 541,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14220,7 +14218,7 @@ destructible{
   y = 589,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14230,7 +14228,7 @@ destructible{
   y = 605,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14240,7 +14238,7 @@ destructible{
   y = 621,
   treasure_name = "random_central",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14746,7 +14744,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 5,
   treasure_savegame_variable = "dungeon_2_0f_7_rupees",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 enemy{
@@ -14849,7 +14847,7 @@ destructible{
   y = 581,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14860,7 +14858,7 @@ destructible{
   y = 581,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14872,7 +14870,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14884,7 +14882,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14896,7 +14894,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14908,7 +14906,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14920,7 +14918,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14932,7 +14930,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14944,7 +14942,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -14956,7 +14954,7 @@ destructible{
   treasure_name = "rupee",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15046,7 +15044,7 @@ switch{
   y = 112,
   subtype = "walkable",
   sprite = "entities/switches/switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -15059,7 +15057,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15071,7 +15069,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15083,7 +15081,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15095,7 +15093,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15106,7 +15104,7 @@ destructible{
   y = 541,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15118,7 +15116,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15130,7 +15128,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 2,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15253,7 +15251,7 @@ destructible{
   y = 541,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15264,7 +15262,7 @@ destructible{
   y = 557,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15275,7 +15273,7 @@ destructible{
   y = 653,
   treasure_name = "arrow",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15286,7 +15284,7 @@ destructible{
   y = 669,
   treasure_name = "arrow",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15297,7 +15295,7 @@ destructible{
   y = 669,
   treasure_name = "arrow",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15308,7 +15306,7 @@ destructible{
   y = 653,
   treasure_name = "fairy",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15319,7 +15317,7 @@ destructible{
   y = 669,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15330,7 +15328,7 @@ destructible{
   y = 669,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15341,7 +15339,7 @@ destructible{
   y = 557,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15352,7 +15350,7 @@ destructible{
   y = 541,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15363,7 +15361,7 @@ destructible{
   y = 541,
   treasure_name = "arrow",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -15548,6 +15546,38 @@ sensor{
   y = 613,
   width = 16,
   height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 768,
+  y = 360,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/2/b1",
+  destination = "from_0f_4",
+}
+
+teletransporter{
+  layer = 0,
+  x = 832,
+  y = 360,
+  properties = {
+    {
+      key = "effect",
+      value = "pixellisation",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/2/b1",
+  destination = "from_0f_4",
 }
 
 tile{

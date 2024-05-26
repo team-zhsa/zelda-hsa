@@ -17,7 +17,7 @@ end
 function language_manager:get_dialog_font(language)
 
   -- No font differences between languages (for now).
-  return "alttp", 8
+  return "alttp_border", 8
 end
 
 -- Returns the font and font size to be used for console

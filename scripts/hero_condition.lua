@@ -192,7 +192,7 @@ function condition_manager:initialise(game)
     hero:unfreeze()
     hero:set_animation("walking")
     hero:set_condition('frozen', false)
-    sol.audio.play_sound("ice_shatter")
+    sol.audio.play_sound("environment/ice_shatter")
   end
 
   function hero:stop_electrocution()

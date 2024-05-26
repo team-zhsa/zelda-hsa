@@ -11,6 +11,7 @@ local lib={}
     sfx : The sound to play during the transition
     callback (optional): the function to execute after the effect is finiched playing
 --]]
+local audio_manager=require "scripts/audio_manager"
 require("scripts/multi_events")
 function lib.start_effect(surface, game, mode, sfx, callback)
   local map=game:get_map()

@@ -16968,16 +16968,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 768,
-  y = 0,
-  width = 96,
-  height = 72,
-  pattern = "1",
-  tileset = "outside_additions",
-}
-
-tile{
-  layer = 0,
   x = 880,
   y = 96,
   width = 8,
@@ -47783,6 +47773,16 @@ tile{
   pattern = "973",
 }
 
+tile{
+  layer = 0,
+  x = 768,
+  y = 0,
+  width = 96,
+  height = 64,
+  pattern = "1",
+  tileset = "outside_additions",
+}
+
 pickable{
   layer = 0,
   x = 344,
@@ -48098,7 +48098,7 @@ destructible{
   y = 1101,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
 }
 

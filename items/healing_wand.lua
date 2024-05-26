@@ -10,7 +10,7 @@ function item:on_created()
 end
 
 function item:on_variant_changed(new_variant)
-	new_life = new_variant * 12
+  new_life = new_variant * 12 + 12
 	magic_needed = new_variant * magic_needed
 end
 

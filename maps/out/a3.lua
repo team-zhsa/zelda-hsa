@@ -11,15 +11,8 @@ local map = ...
 local game = map:get_game()
 local num_dialogue = 0
 
-function guard_walk()
-  local m = sol.movement.create("random_path")
-  m:set_speed(50)
-	m:start(npc_guard)
-end
-
 -- Event called at initialization time, as soon as this map becomes is loaded.
 map:register_event("on_started", function() 
-	guard_walk()
 	game:show_map_name("kakarico_village")
 	map:set_digging_allowed(true)
 	if game:is_step_done("lost_woods_mapper_met") then

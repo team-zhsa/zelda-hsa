@@ -24,7 +24,7 @@ function lib.start_effect(surface, game, mode, sfx, callback)
     return a+p*(b-a)
   end
   if sfx then
-    audio_manager:play_sound("world_warp")
+    audio_manager:play_sound("common/world_warp")
   end
   surface:set_shader(shader_ocarina)
   local mask=sol.surface.create(surface:get_size())

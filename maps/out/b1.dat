@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
-  music = "outside/mountains",
+  music = "outside/west_mountains",
 }
 
 tile{
@@ -38118,6 +38118,24 @@ tile{
 
 tile{
   layer = 0,
+  x = 976,
+  y = 112,
+  width = 112,
+  height = 192,
+  pattern = "347",
+}
+
+tile{
+  layer = 0,
+  x = 920,
+  y = 168,
+  width = 144,
+  height = 112,
+  pattern = "907",
+}
+
+tile{
+  layer = 0,
   x = 0,
   y = 576,
   width = 1280,
@@ -38185,15 +38203,6 @@ tile{
   y = 384,
   width = 752,
   height = 48,
-  pattern = "347",
-}
-
-tile{
-  layer = 0,
-  x = 976,
-  y = 112,
-  width = 112,
-  height = 192,
   pattern = "347",
 }
 
@@ -40396,15 +40405,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 920,
-  y = 168,
-  width = 144,
-  height = 112,
-  pattern = "907",
-}
-
-tile{
-  layer = 0,
   x = 1048,
   y = 288,
   width = 16,
@@ -40433,9 +40433,9 @@ tile{
 tile{
   layer = 0,
   x = 1024,
-  y = 512,
+  y = 496,
   width = 48,
-  height = 96,
+  height = 112,
   pattern = "907",
 }
 
@@ -56975,24 +56975,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1008,
-  y = 224,
-  width = 16,
-  height = 16,
-  pattern = "1078",
-}
-
-tile{
-  layer = 0,
-  x = 1024,
-  y = 224,
-  width = 16,
-  height = 16,
-  pattern = "1079",
-}
-
-tile{
-  layer = 0,
   x = 1024,
   y = 208,
   width = 16,
@@ -59684,9 +59666,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 1024,
+  x = 1072,
   y = 504,
-  width = 256,
+  width = 208,
   height = 8,
   pattern = "959",
 }
@@ -69288,16 +69270,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 104,
-  y = 776,
-  width = 32,
-  height = 16,
-  pattern = "70",
-  tileset = "outside_additions",
-}
-
-tile{
-  layer = 0,
   x = 824,
   y = 232,
   width = 8,
@@ -69892,6 +69864,42 @@ tile{
   pattern = "1108",
 }
 
+tile{
+  layer = 0,
+  x = 1064,
+  y = 504,
+  width = 8,
+  height = 8,
+  pattern = "14874",
+}
+
+tile{
+  layer = 0,
+  x = 1016,
+  y = 232,
+  width = 16,
+  height = 8,
+  pattern = "13892",
+}
+
+tile{
+  layer = 0,
+  x = 1008,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "1078",
+}
+
+tile{
+  layer = 0,
+  x = 1024,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "1079",
+}
+
 jumper{
   layer = 0,
   x = 600,
@@ -69926,7 +69934,7 @@ destructible{
   y = 365,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69936,7 +69944,7 @@ destructible{
   y = 365,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69946,7 +69954,7 @@ destructible{
   y = 429,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69956,7 +69964,7 @@ destructible{
   y = 141,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69966,7 +69974,7 @@ destructible{
   y = 349,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69976,7 +69984,7 @@ destructible{
   y = 429,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69986,7 +69994,7 @@ destructible{
   y = 445,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -69996,7 +70004,7 @@ destructible{
   y = 461,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70006,7 +70014,7 @@ destructible{
   y = 781,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70016,7 +70024,7 @@ destructible{
   y = 797,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70026,7 +70034,7 @@ destructible{
   y = 813,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70036,7 +70044,7 @@ destructible{
   y = 797,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70046,7 +70054,7 @@ destructible{
   y = 829,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70056,7 +70064,7 @@ destructible{
   y = 765,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70066,7 +70074,7 @@ destructible{
   y = 813,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70076,7 +70084,7 @@ destructible{
   y = 845,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70086,7 +70094,7 @@ destructible{
   y = 845,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70096,7 +70104,7 @@ destructible{
   y = 829,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70106,7 +70114,7 @@ destructible{
   y = 717,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70116,7 +70124,7 @@ destructible{
   y = 717,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70126,7 +70134,7 @@ destructible{
   y = 1101,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70136,7 +70144,7 @@ destructible{
   y = 1101,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70146,7 +70154,7 @@ destructible{
   y = 669,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70156,7 +70164,7 @@ destructible{
   y = 685,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70166,7 +70174,7 @@ destructible{
   y = 829,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70176,7 +70184,7 @@ destructible{
   y = 1133,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70186,7 +70194,7 @@ destructible{
   y = 1149,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70196,7 +70204,7 @@ destructible{
   y = 1165,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70206,7 +70214,7 @@ destructible{
   y = 1181,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70216,7 +70224,7 @@ destructible{
   y = 1197,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70226,7 +70234,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70236,7 +70244,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70246,7 +70254,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70256,7 +70264,7 @@ destructible{
   y = 1277,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70266,7 +70274,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70276,7 +70284,7 @@ destructible{
   y = 1389,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70286,7 +70294,7 @@ destructible{
   y = 1309,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70296,7 +70304,7 @@ destructible{
   y = 1309,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70306,7 +70314,7 @@ destructible{
   y = 1277,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70316,7 +70324,7 @@ destructible{
   y = 1165,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70326,7 +70334,7 @@ destructible{
   y = 1133,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70336,7 +70344,7 @@ destructible{
   y = 1117,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70346,7 +70354,7 @@ destructible{
   y = 1261,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70356,7 +70364,7 @@ destructible{
   y = 1277,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70366,7 +70374,7 @@ destructible{
   y = 1357,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70376,7 +70384,7 @@ destructible{
   y = 1245,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70386,7 +70394,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70396,7 +70404,7 @@ destructible{
   y = 1261,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70406,7 +70414,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70416,7 +70424,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70426,7 +70434,7 @@ destructible{
   y = 1229,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70436,7 +70444,7 @@ destructible{
   y = 1213,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70446,7 +70454,7 @@ destructible{
   y = 1229,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70456,7 +70464,7 @@ destructible{
   y = 781,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70467,7 +70475,7 @@ destructible{
   y = 813,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70478,7 +70486,7 @@ destructible{
   y = 861,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70489,7 +70497,7 @@ destructible{
   y = 1197,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70500,7 +70508,7 @@ destructible{
   y = 1197,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70511,7 +70519,7 @@ destructible{
   y = 1165,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70522,7 +70530,7 @@ destructible{
   y = 1229,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70533,7 +70541,7 @@ destructible{
   y = 1069,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70544,7 +70552,7 @@ destructible{
   y = 1293,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70555,7 +70563,7 @@ destructible{
   y = 1245,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70566,7 +70574,7 @@ destructible{
   y = 221,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70577,7 +70585,7 @@ destructible{
   y = 237,
   treasure_name = "random",
   sprite = "entities/stones/stone_black",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 2,
   damage_on_enemies = 2,
 }
@@ -70588,7 +70596,7 @@ destructible{
   y = 893,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70609,7 +70617,7 @@ destructible{
   y = 1325,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70619,7 +70627,7 @@ destructible{
   y = 1341,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70629,7 +70637,7 @@ destructible{
   y = 1341,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70639,7 +70647,7 @@ destructible{
   y = 1325,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70649,7 +70657,7 @@ destructible{
   y = 1373,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -70659,7 +70667,7 @@ destructible{
   y = 1373,
   treasure_name = "random",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -71327,7 +71335,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/spectacle_rock_1f",
+  destination_map = "inside/caves/mountains/spectacle_rock_0f",
   destination = "from_outside",
 }
 

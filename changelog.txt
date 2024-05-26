@@ -27,9 +27,9 @@ Pre-Alpha 1.0.1 (21/10/19):
 	FIX: Fixed hero freezing on using bow.
 	
 Alpha 1.1 (01/01/20):
-	CHG: Changed save menu.
-	CHG: Changed screen length to 320 instead of 248.
-	CHG: Changed dungeon savegames syntax.
+	CHG: Changed the save menu.
+	CHG: Changed the screen length to 320 instead of 248.
+	CHG: Changed the dungeon savegames syntax.
 
 Alpha 1.2 (10/02/20):
 	CHG: Made the first boss easier by setting his life's points to 40 instead of 120.
@@ -42,17 +42,17 @@ Alpha 1.3 (25/03/20):
 	FIX: Fixed hero freezing on using boomerang.
 	
 Alpha 1.3.1 (02/04/20):
-	FIX: Fixed boomerang sound missing.
-	FIX: Fixed inventory wrong items movement.
+	FIX: Fixed the boomerang sound missing.
+	FIX: Fixed the inventory wrong items movement.
 
 Alpha 1.3.2 (11/04/20):
-	ADD: Added weather script from Diarandor.
+	ADD: Added the weather script from Diarandor.
 	ADD: Added a few shaders.
 	
 Alpha 1.4 (19/01/21) "Angler Update":
-	ADD: Added ceiling dropping function.
-	ADD: Added anticopy (password) script from Max.
-	ADD: Added credits script.
+	ADD: Added a ceiling dropping function.
+	ADD: Added an anticopy (password) script from Max.
+	ADD: Added the credits script.
 	CHG: Cleaned up musics.
 	CHG: Cleaned up sprites.
 	FIX: Fixed wrong sprite for shield 1 when going right.
@@ -84,10 +84,10 @@ Alpha 1.7 (11/04/21) "Dorado Update":
 	CHG: Started switching enemies' behaviours to ALTTD's.
 	CHG: Started switching to audio_manager.lua.
 	FIX: Fixed soldiers slowing down hero.
-	FIX: Fixed moldorm not working.
-	FIX: Fixed dark room sensor not working.
-	FIX: Fixed dungeon minimap system.
-	FIX: Fixed shield item not working for ALTTD's ennemies.
+	FIX: Fixed Moldorms not working.
+	FIX: Fixed the dark room sensor not working.
+	FIX: Fixed the dungeon minimap system.
+	FIX: Fixed the shield item not working for ALTTD's ennemies.
 	
 Alpha 1.7.1 (16/04/21) "Dorado Update":
 	ADD: Added entities sprites.
@@ -258,10 +258,10 @@ Alpha 1.15 (31/12/22) "Ladyfish Update":
 	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
 	FIX: Fixed destructibles weights being too high around the Blacksmith.
 	FIX: Fixed the teletransporter to the Temple of Time linking to a deleted map (#40).
-	FIX: Fixed door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
+	FIX: Fixed the door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
 	FIX: Fixed water resetting itself in the room 24 (B2) of the Forest Temple (#4).
 	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
-	FIX: Fixed "yellow_key" not saved in the Forest Temple (#5).
+	FIX: Fixed the "yellow_key" not saved in the Forest Temple (#5).
 	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
 	FIX: Fixed Link being invisible after fighting boss (#16).
 
@@ -287,8 +287,8 @@ Alpha 1.15.1 (31/01/23) "Ladyfish Update":
 	FIX: Fixed Link being able to walk on wall edges when there is water (#54).
 	REM: Removed debug printing when dropping from a ceiling.
 	REM: Removed map discovering values being saved because not needed.
-	REM: Removed Kokiri Village layout in the minimap (#57).
-	REM: Removed red, green and blue potions item (replaced by potion variants) (#62).
+	REM: Removed the Kokiri Village layout in the minimap (#57).
+	REM: Removed the red, green and blue potion items (replaced by potion variants) (#62).
 
 Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 	ADD: Added maps.
@@ -296,7 +296,7 @@ Alpha 1.15.2 (14/02/23) "Ladyfish Update":
 	FIX: Fixed cave entrance support being traversable (#76).
 	FIX: Fixed firebar rotation centre being off-centered (#77).
 	FIX: Fixed a wrong cave border pattern (#78).
-	REM: Removed "la" font.
+	REM: Removed the "la" font.
 
 Alpha 1.15.3 (21/02/23) "Ladyfish Update":
 	ADD: Added maps.
@@ -367,7 +367,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added side quests (#95).
 	ADD: Added enemies.
 	ADD: Added musics.
-	ADD: Implemented a scaling function for the intro cutscene (see the test map) (#131).
+	ADD: Implemented a scaling function for the prologue (see the test map) (#131).
 	ADD: Added sea maps (#132).
 	ADD: Added new cutscenes for the prologue (#86).
 	ADD: Added all the missing animations for the three tunics (#27).
@@ -385,7 +385,20 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added the team's logo and a copyright notice in the initial menus (#191).
 	ADD: Added NPC meta functions from Mercuris' Chest.
 	ADD: Added boss names for their parchment.
-	ADD: Added a new clock HUD (#200).
+	ADD: Added a new clock HUD (#114, #200).
+	ADD: Added a chronometer HUD (#36).
+	ADD: Added healing wand variants (#194).
+	ADD: Added animations for all the rods (#220).
+	ADD: Added the missing items treasure and inventory dialogues (#9).
+	ADD: Added new Hinox sprites (#28).
+	ADD: Added new soldiers and knight colour variations.
+	ADD: Added new Lynel colour variations (#221).
+	ADD: Added Cukeman enemies.
+	ADD: Added Like Like and Rupee Like enemies.
+	ADD: Added a custom property for bombable doors.
+	ADD: Added new glyphs to the ALTTP font (#228).
+	ADD: Added colour variations to the ALTTP font (#228).
+	ADD: Added a version conversion in order to keep savegames up to date (#170).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -402,7 +415,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Progressively switch enemies behaviour to ALTTD's (#15).
 	CHG: Moved the piece of heart #15 from L1 to K2.
 	CHG: Restored the graveyard music for the Kakarico Graveyard.
-	CHG: Replaced "Linkff" by "LinkFF" in the project database.
 	CHG: Updated the hero head sprite with the actual tunic colours.
 	CHG: Lowered the Tektites' damage values (#177).
 	CHG: Changed the Armos sprite palette.
@@ -414,7 +426,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Rescripted the Fire Rod.
 	CHG: Increased the running speed from 192 to 256.
 	CHG: Rescripted bombs with custom entities.
-	CHG: Replaced the parchment font by "capital" (#184).
 	CHG: Player names can now have up to 8 characters.
 	CHG: Allowed the scrollable map to be panned farther.
 	CHG: Changed the colour of the options menu cursor to match the other submenus.
@@ -426,6 +437,16 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Moved the radial fading animation when launching a game from "dungeons" to "game_manager".
 	CHG: Renamed the Zora Forest to the Lanayru Forest.
 	CHG: Adjusted the sunset map tone.
+	CHG: Replaced disabled tiles by invisible tiles in the in the room 5 (B2) of the Fire Temple.
+	CHG: Improve the dungeon map menu (#211).
+	CHG: Replaced the Yellow Key by the Silver Key (#215).
+	CHG: Merged countable items into a single item file (#189).
+	CHG: Replaced hardcoded sounds by empty ones (#137).
+	CHG: Made the hero automatically float when there is water above.
+	CHG: Merged Popos and Blobs colour variations into one sprite sheet (#221).
+	CHG: Changed the time saved string format.
+	CHG: Simplified the minimap script (#129).
+	CHG: Updated dungeon minimaps (#2).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -459,7 +480,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
 	FIX: Fixed the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
 	FIX: Fixed the game restarting after completing the marathon minigame (#186).
-	FIX: Fixed bombs not exploding anything but themselves (#185).
 	FIX: Fixed forest talus tiles missing a border (#187).
 	FIX: Fixed the cursor moving too fast with analog controller in menus (#82).
 	FIX: Fixed piece of hearts being misaligned in the quest status menu.
@@ -468,6 +488,22 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the world map background not being loaded sometimes (#153).
 	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
 	FIX: Fixed fairies not reviving the player (#204).
+	FIX: Made bombs explode even if Link is carrying them (#183).
+	FIX: Fixed bombs not exploding anything but themselves (#185).
+	FIX: Fixed the fog not appearing when leaving and reentering a map (#212).
+	FIX: Fixed a separator overriding error in the Forest Temple (B2) (#218).
+	FIX: Fixed Armos not appearing (#209).
+	FIX: Fixed enemies not going down one layer when there's no ground (#198).
+	FIX: Fixed the brandish animation not being displayed (#219).
+	FIX: Fixed Deadrocks playing the hero hurting animation when immobilised (#222).
+	FIX: Fixed the victory animation not being synchronised with Link movement (#10).
+	FIX: Fixed teletransporter sounds not playing (#226).
+	FIX: Fixed a nil value error in the inventory after buying something from Ravio (#92).
+	FIX: Fixed signs not being liftable at the beginning of the game because their weight was set to 1 (#34).
+	FIX: Fixed a wrong dialogue in front of Ravio's shop (#231).
+	FIX: Fixed the 33N door in the Northern Ruins variable not being saved (#233).
+	FIX: Fixed a Kaepora Gaebora missing ruins dialogue (#234).
+	FIX: Fixed a nil value error when using some special effect teletransporters (#237).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -483,37 +519,32 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed unused maps.
 	REM: Removed the map from the inventory menu (#202).
 	REM: Removed unused sprite files.
-	TDO: Make bombs explode even if Link is carrying them (#183).
+	REM: Removed the dungeon exploring room variable changing based on the hero position (need to activate sensor instead).
+	REM: Removed the fog manager script (#212).
+	REM: Removed pre-alpha screenshots from the sprites folder (#195).
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
-	TDO: Fix a nil value error in the inventory after buying something from Ravio (#92).
-	TDO: Replace corrupt files.
 	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
 	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
 	TDO: Fix low memory issues on MacOS (#39).
 	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
 	TDO: Update the statistics menu with treasures from the Excel file (#46).
-	TDO: Fix the HUD clock showing the wrong hour randomly (#114).
 	TDO: Map the missing caves (#151).
 	TDO: Finish realigning trees in the Hyrule Field (#96).
 	TDO: Rename some soldier enemies in order to make them appear during the game and not at the beginning (#97).
-	TDO: Merge countable items into a single item file (#189).
-	TDO: Remove pre-alpha screenshots from the sprites folder (#195).
 	TDO: Add a quick swap feature (#196).
-	TDO: Fix enemies not going down one layer when there's no ground (#198).
 	TDO: Overhaul the game over menu (#199).
-	TDO: Fix minimap border glitches when diagonal scrolling.
+	TDO: Remove the tofu character at the end of lines in the enter_command_mono font (#184).
+	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
+	TDO: Fix Ballchain Knights being incompatible with the separator manager (#223).
 
 Alpha 1.17.1 (//23) "Needlefish Update":
-	TDO: Add version conversion scripts in order to keep savegames up to date (#170).
 	TDO: Remove *.xcf and *.psd work files from the data files (#169).
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103). 
 	TDO: Finish the remaining houses (#104).
 	TDO: Add remaining inside maps coordinates (#105).
-	TDO: Add items treasure and inventory missing dialogues (#9).
-	TDO: Fix victory animation not being synchronised with Link movement (#10).
 	TDO: Clean up unused files (#98).
 	TDO: Update the title screen (#50).
 	TDO: Change the Master Sword sprite on the title screen (#50).
@@ -528,6 +559,7 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Unify all the caves' darkness system (#13).
 	TDO: Unify all the electrocution system (#14).
 	TDO: Finish the outside map (#33).
+	TDO: Make rod improvement shrines (#224).
 	TDO: Add side quests (#95).
 
 Alpha 1.17.2 (//23) "Needlefish Update":
@@ -539,9 +571,7 @@ Alpha 1.17.2 (//23) "Needlefish Update":
 	TDO: Slightly change HUD icons.
 	TDO: Add file licenses to the project database (#106).
 	TDO: Add a HUD version for timers (#36).
-	TDO: Find throwing and holding bomb animations for Hinox sprite (#28).
 	TDO: Add the Tournament of the Strongest (#180).
-	TDO: Remove the tofu character at the end of the lines in the enter_command_mono font (#184).
 	TDO: Add a climbing state (#188).
 
 Alpha 1.18 (//23) "Opah Update": Musics and sounds
@@ -558,7 +588,6 @@ Alpha 1.18.1 (//23) "Opah Update":
 Alpha 1.19 (//23) "Perch Update":
 	TDO: Add support for multiple aspect ratios (#124).
 	TDO: Set destructibles ground as "low wall" (#158).
-	TDO: Fix missing sound file 'sounds/message_end.ogg' when going back to solid ground without flippers (#137).
 	TDO: Add maps.
 	TDO: Add a boat.
 	TDO: Rescript somaria cane.

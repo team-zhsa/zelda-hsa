@@ -7435,7 +7435,7 @@ destructible{
   y = 277,
   treasure_name = "random_south",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
 }
 
@@ -7532,7 +7532,7 @@ custom_entity{
   width = 32,
   height = 32,
   direction = 0,
-  sprite = "entities/stone_large_white",
+  sprite = "entities/stones/stone_white_large",
   model = "heavy_object",
 }
 
@@ -7664,7 +7664,7 @@ destructible{
   y = 277,
   treasure_name = "random_south",
   sprite = "entities/stones/stone_white",
-  destruction_sound = "objects/e_rock_1_lift",
+  destruction_sound = "environment/rock_shatter",
   weight = 1,
   ground = "low_wall",
 }

@@ -780,6 +780,7 @@ door{
   sprite = "entities/doors/inside/door_d1_very_weak_wall",
   savegame_variable = "inside_ruins_building_door",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -791,6 +792,7 @@ door{
   sprite = "entities/doors/inside/door_d1_very_weak_wall",
   savegame_variable = "inside_ruins_building_door",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -832,7 +834,7 @@ chest{
   layer = 0,
   x = 192,
   y = 173,
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
@@ -840,14 +842,14 @@ chest{
   x = 160,
   y = 173,
   treasure_savegame_variable = "gfh",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
   layer = 0,
   x = 128,
   y = 173,
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 destructible{
@@ -856,7 +858,7 @@ destructible{
   y = 317,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -866,7 +868,7 @@ destructible{
   y = 317,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -876,7 +878,7 @@ destructible{
   y = 333,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -886,7 +888,7 @@ destructible{
   y = 333,
   treasure_name = "heart",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -896,7 +898,7 @@ destructible{
   y = 333,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -906,7 +908,7 @@ destructible{
   y = 333,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -916,7 +918,7 @@ destructible{
   y = 317,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -926,7 +928,7 @@ destructible{
   y = 317,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -937,7 +939,7 @@ destructible{
   treasure_name = "bomb",
   treasure_variant = 4,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 
@@ -948,7 +950,7 @@ destructible{
   treasure_name = "arrow",
   treasure_variant = 3,
   sprite = "entities/destructibles/vase",
-  destruction_sound = "objects/e_pot_shatter",
+  destruction_sound = "environment/pot_shatter",
   can_be_cut = true,
 }
 

@@ -76,7 +76,7 @@ local function initialise_game_over_features(game)
       fade_sprite.on_animation_finished = function()
         if state == "closing_game" then
           state = "red_screen"
-          sol.audio.play_sound("hero_dying")
+          sol.audio.play_sound("hero/hero_dying")
           hero_dead_sprite:set_paused(false)
           hero_dead_sprite:set_direction(0)
           hero_dead_sprite:set_animation("dying")
@@ -199,13 +199,13 @@ local function initialise_game_over_features(game)
     end
 
     if command == "down" then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       cursor_position = (cursor_position + 1) % 4
       local fairy_x, fairy_y = fairy_sprite:get_xy()
       fairy_y = 112 + cursor_position * 16
       fairy_sprite:set_xy(fairy_x, fairy_y)
     elseif command == "up" then
-      sol.audio.play_sound("cursor")
+      sol.audio.play_sound("menus/cursor")
       cursor_position = (cursor_position + 3) % 4
       local fairy_x, fairy_y = fairy_sprite:get_xy()
       fairy_y = 112 + cursor_position * 16
@@ -213,7 +213,7 @@ local function initialise_game_over_features(game)
     elseif command == "action" or command == "attack" then
 
       state = "finished"
-      sol.audio.play_sound("danger")
+      sol.audio.play_sound("menus/danger")
       game:set_hud_enabled(false)
       game:add_life(6 * 4)  -- Restore 7 hearts.
 

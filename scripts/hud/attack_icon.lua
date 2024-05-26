@@ -1,141 +1,145 @@
 -- The icon that shows what the attack command does.
 
+local hud_icon_builder = require("scripts/hud/hud_icon")
+
 local attack_icon_builder = {}
 
 function attack_icon_builder:new(game, config)
 
   local attack_icon = {}
 
-  local dst_x, dst_y = config.x, config.y
+  -- Creates the hud icon delegate.
+  attack_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.dialog_x, config.dialog_y)
+  attack_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/attack_icon"))
+  
+  -- Initializes the icon.
+  attack_icon.effect_displayed = nil
+  attack_icon.sword_displayed = nil
+  attack_icon.item_sprite = sol.sprite.create("entities/items")
+  attack_icon.item_sprite:set_animation("sword")
 
-  attack_icon.surface = sol.surface.create(72, 24)
-  attack_icon.icons_img = sol.surface.create("sword_icon.png", true)
-  attack_icon.icon_region_y = nil
-  attack_icon.icon_flip_sprite = sol.sprite.create("hud/sword_icon_flip")
-  attack_icon.is_flipping = false
-  attack_icon.effect_displayed = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
-  attack_icon.sword_displayed = game:get_ability("sword")
-  attack_icon.showing_dialog = false
+  -- Draws the icon surface.
+  function attack_icon:on_draw(dst_surface)
+    attack_icon.hud_icon:on_draw(dst_surface)
+  end
 
-  function attack_icon.icon_flip_sprite:on_animation_finished()
-    if attack_icon.is_flipping then
-      attack_icon.is_flipping = false
-      attack_icon:compute_icon_region_y()
-      attack_icon:rebuild_surface()
+  -- Rebuild the foreground (called only when needed).
+  function attack_icon:rebuild_foreground()
+    if attack_icon.effect_displayed == nil or attack_icon.effect_displayed == "" then
+      -- No foreground if no effect.
+      attack_icon.hud_icon:set_foreground(nil)
+    elseif attack_icon.effect_displayed == "sword" then
+      -- Sword icon.
+      attack_icon.item_sprite:set_direction(attack_icon.sword_displayed - 1)
+      attack_icon.hud_icon:set_foreground(attack_icon.item_sprite)
+    else
+      -- Text.
+      local text = sol.language.get_string("hud."..attack_icon.effect_displayed)
+      attack_icon.hud_icon:set_foreground_text(text)
     end
   end
-
-  function attack_icon.icon_flip_sprite:on_frame_changed()
-    attack_icon:rebuild_surface()
+    
+  -- Returns if the icon is enabled or disabled.
+  function attack_icon:is_enabled(active)
+    return attack_icon.hud_icon:is_enabled()
   end
 
-  function attack_icon:compute_icon_region_y()
-
-    if attack_icon.effect_displayed ~= nil or not game:is_dialog_enabled() then
-      if attack_icon.effect_displayed == nil then
-        -- Show an empty icon.
-        attack_icon.icon_region_y = 0
-      elseif attack_icon.effect_displayed == "sword" then
-        -- Create an icon with the current sword.
-        attack_icon.icon_region_y = 96 + 24 * attack_icon.sword_displayed
-      elseif attack_icon.effect_displayed ~= nil then
-        -- Create an icon with the name of the current effect.
-        local effects_indexes = {
-          ["save"] = 1,
-          ["return"] = 2,
-          ["validate"] = 3,
-          ["skip"] = 4,
-        }
-        attack_icon.icon_region_y = 24 * effects_indexes[attack_icon.effect_displayed]
-      end
+  -- Set if the icon is enabled or disabled.
+  function attack_icon:set_enabled(enabled)
+    if enabled then
+      attack_icon:update_effect_displayed(false)
     end
+    attack_icon.hud_icon:set_enabled(enabled)
+  end
+    
+  -- Returns if the icon is active or inactive.
+  function attack_icon:is_active(active)
+    return attack_icon.hud_icon:is_active()
   end
 
-  function attack_icon:check()
+  -- Set if the icon is active or inactive.
+  function attack_icon:set_active(active)
+    attack_icon.hud_icon:set_active(active)
+  end
 
-    local need_rebuild = false
+  -- Returns if the icon is transparent or not.
+  function attack_icon:is_transparent()
+    return attack_icon.hud_icon:set_transparent()
+  end
 
-    if not attack_icon.flipping then
+  -- Sets if the icon is transparent or not.
+  function attack_icon:set_transparent(transparent)
+    attack_icon.hud_icon:set_transparent(transparent)
+  end
+
+  -- Gets the position of the icon.
+  function attack_icon:get_dst_position()
+    return attack_icon.hud_icon:get_dst_position()
+  end
+
+  -- Sets the position of the icon.
+  function attack_icon:set_dst_position(x, y)
+    attack_icon.hud_icon:set_dst_position(x, y)
+  end
+
+  -- Gets the normal position of the icon.
+  function attack_icon:get_normal_position()
+    return attack_icon.hud_icon:get_normal_position()
+  end
+
+  -- Gets the dialog position of the icon.
+  function attack_icon:get_dialog_position()
+    return attack_icon.hud_icon:get_dialog_position()
+  end
+
+  -- Called when the command effect changes.
+  function attack_icon:on_command_effect_changed(effect)
+  end
+
+  -- Checks if the icon needs a refresh.
+  function attack_icon:update_effect_displayed(flip_icon)
+    if not attack_icon.hud_icon.animating then
       local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
       local sword = game:get_ability("sword")
-      local showing_dialog = game:is_dialog_enabled()
-      if effect ~= attack_icon.effect_displayed
-          or sword ~= attack_icon.sword_displayed
-          or showing_dialog ~= attack_icon.showing_dialog then
+      attack_icon:set_effect_displayed(effect, sword, flip_icon)
+    end
+  end
 
-        if attack_icon.effect_displayed ~= nil then
-          if effect == nil and showing_dialog then
-            attack_icon.icon_flip_sprite:set_animation("disappearing")
-          else
-            attack_icon.icon_flip_sprite:set_animation("flip")
-          end
-        else
-          attack_icon.icon_flip_sprite:set_animation("appearing")
-        end
-        attack_icon.effect_displayed = effect
-        attack_icon.sword_displayed = sword
-        attack_icon.showing_dialog = showing_dialog
-        attack_icon.icon_region_y = nil
-        attack_icon.is_flipping = true
-        need_rebuild = true
+  -- Sets the effect to be displayed on the icon.
+  function attack_icon:set_effect_displayed(effect, sword, flip_icon)
+    if effect ~= attack_icon.effect_displayed or sword ~= attack_icon.sword_displayed then
+      -- Store the current command.
+      attack_icon.effect_displayed = effect
+      attack_icon.sword_displayed = sword
+
+      -- Update the icon foreground.
+      attack_icon:rebuild_foreground()
+      
+      -- Flip the icon.
+      if flip_icon then
+        attack_icon.hud_icon:flip_icon()
+      end
+
+      -- Update the icon visibility.
+      if attack_icon.on_command_effect_changed then
+        attack_icon:on_command_effect_changed(effect)
       end
     end
+  end
 
-    -- Redraw the surface only if something has changed.
-    if need_rebuild then
-      attack_icon:rebuild_surface()
-    end
+  -- Called when the menu is started.
+  function attack_icon:on_started()
+    attack_icon:update_effect_displayed(false)
 
-    -- Schedule the next check.
+    -- Check every 50ms if the icon needs a refresh.
     sol.timer.start(attack_icon, 50, function()
-      attack_icon:check()
+      attack_icon:update_effect_displayed(true)
+      return true
     end)
   end
 
-  function attack_icon:rebuild_surface()
-
-    attack_icon.surface:clear()
-
-    if attack_icon.icon_region_y ~= nil then
-      -- Draw the static image of the icon.
-      attack_icon.icons_img:draw_region(0, attack_icon.icon_region_y, 72, 24, attack_icon.surface)
-    elseif attack_icon.is_flipping then
-      -- Draw the flipping sprite
-      attack_icon.icon_flip_sprite:draw(attack_icon.surface, 24, 0)
-    end
-  end
-
-  function attack_icon:get_surface()
-    return attack_icon.surface
-  end
-
-  function attack_icon:set_dst_position(x, y)
-    dst_x = x
-    dst_y = y
-  end
-
-  function attack_icon:on_draw(dst_surface)
-
-    local x, y = dst_x, dst_y
-    local width, height = dst_surface:get_size()
-    if x < 0 then
-      x = width + x
-    end
-    if y < 0 then
-      y = height + y
-    end
-
-    attack_icon.surface:draw(dst_surface, x, y)
-  end
-
-  function attack_icon:on_started()
-    attack_icon:compute_icon_region_y()
-    attack_icon:check()
-    attack_icon:rebuild_surface()
-  end
-
+  -- Returns the menu.
   return attack_icon
 end
 
 return attack_icon_builder
-

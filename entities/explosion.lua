@@ -82,16 +82,16 @@ explosion:add_collision_test("sprite", function(explosion, entity)
     end
 
   elseif type == "door" then
-    if string.find(entity:get_sprite():get_animation_set(), "weak") or string.find(entity:get_sprite():get_animation_set(), "rock0") then -- Workaround : No fucking way to know if the door can be opened with an explosion, hardcode the name.
+    if entity:get_property("opening_method") == "explosion"  then
       entity:open()
+      sol.audio.play_sound("common/secret_discover_minor")
     end
 
   elseif type == "enemy" then
     entity:receive_attack_consequence("explosion", entity:get_attack_consequence("explosion"))
 
-  elseif type == "hero" then--and not entity:is_invincible() and not entity:is_blinking() then
-    entity:start_hurt(explosion, damage_on_hero)
-    print("a")
+  elseif type == "hero" and not entity:is_invincible() and not entity:is_blinking() then
+    explosion:get_map():get_hero():start_hurt(explosion, 4)
   else -- Else interact with any other type of entity if the on_explosion() method is registered.
     if entity.on_explosion then
       entity:on_explosion()

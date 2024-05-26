@@ -4203,7 +4203,7 @@ tile{
   y = 920,
   width = 48,
   height = 24,
-  pattern = "wall.1-5",
+  pattern = "wall.1-2",
 }
 
 tile{
@@ -4212,7 +4212,7 @@ tile{
   y = 960,
   width = 48,
   height = 24,
-  pattern = "wall.2-5",
+  pattern = "wall.2-2",
 }
 
 tile{
@@ -4221,7 +4221,7 @@ tile{
   y = 848,
   width = 24,
   height = 48,
-  pattern = "wall.3-5",
+  pattern = "wall.3-2",
 }
 
 tile{
@@ -4230,7 +4230,7 @@ tile{
   y = 848,
   width = 24,
   height = 48,
-  pattern = "wall.4-5",
+  pattern = "wall.4-2",
 }
 
 tile{
@@ -6694,7 +6694,7 @@ dynamic_tile{
   y = 928,
   width = 24,
   height = 48,
-  pattern = "wall.4-5",
+  pattern = "wall.4-2",
 }
 
 dynamic_tile{
@@ -6704,7 +6704,7 @@ dynamic_tile{
   y = 928,
   width = 24,
   height = 48,
-  pattern = "wall.3-5",
+  pattern = "wall.3-2",
 }
 
 door{
@@ -6716,6 +6716,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -6727,6 +6728,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -6758,7 +6760,7 @@ dynamic_tile{
   y = 832,
   width = 48,
   height = 24,
-  pattern = "wall.2-5",
+  pattern = "wall.2-2",
 }
 
 dynamic_tile{
@@ -6768,7 +6770,7 @@ dynamic_tile{
   y = 888,
   width = 48,
   height = 24,
-  pattern = "wall.1-5",
+  pattern = "wall.1-2",
 }
 
 door{
@@ -6780,6 +6782,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -6791,6 +6794,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -6902,6 +6906,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -6913,6 +6918,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -6966,6 +6972,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -6977,6 +6984,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -7140,6 +7148,7 @@ door{
   sprite = "entities/doors/inside/door_d2_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -7151,6 +7160,7 @@ door{
   sprite = "entities/doors/inside/door_d2_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 dynamic_tile{
@@ -7182,6 +7192,7 @@ door{
   sprite = "entities/doors/inside/door_d2_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -7193,6 +7204,7 @@ door{
   sprite = "entities/doors/inside/door_d2_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -7480,6 +7492,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -7491,6 +7504,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 wall{
@@ -7544,6 +7558,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -7555,6 +7570,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -8314,42 +8330,6 @@ tile{
 
 tile{
   layer = 1,
-  x = 344,
-  y = 944,
-  width = 8,
-  height = 16,
-  pattern = "door_cache.4-5",
-}
-
-tile{
-  layer = 1,
-  x = 384,
-  y = 944,
-  width = 8,
-  height = 16,
-  pattern = "door_cache.3-5",
-}
-
-tile{
-  layer = 1,
-  x = 360,
-  y = 888,
-  width = 16,
-  height = 8,
-  pattern = "door_cache.1-5",
-}
-
-tile{
-  layer = 1,
-  x = 360,
-  y = 848,
-  width = 16,
-  height = 8,
-  pattern = "door_cache.2-5",
-}
-
-tile{
-  layer = 1,
   x = 160,
   y = 1432,
   width = 16,
@@ -8843,6 +8823,42 @@ tile{
   pattern = "door_cache.2-4",
 }
 
+tile{
+  layer = 1,
+  x = 344,
+  y = 944,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.4-2",
+}
+
+tile{
+  layer = 1,
+  x = 384,
+  y = 944,
+  width = 8,
+  height = 16,
+  pattern = "door_cache.3-2",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 848,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-2",
+}
+
+tile{
+  layer = 1,
+  x = 360,
+  y = 888,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.1-2",
+}
+
 dynamic_tile{
   name = "door_28_e_open",
   layer = 1,
@@ -8850,7 +8866,7 @@ dynamic_tile{
   y = 936,
   width = 8,
   height = 32,
-  pattern = "door_top.blast.4-5",
+  pattern = "door_top.blast.4-2",
 }
 
 dynamic_tile{
@@ -8860,7 +8876,7 @@ dynamic_tile{
   y = 936,
   width = 8,
   height = 32,
-  pattern = "door_top.blast.3-5",
+  pattern = "door_top.blast.3-2",
 }
 
 dynamic_tile{
@@ -8870,7 +8886,7 @@ dynamic_tile{
   y = 848,
   width = 32,
   height = 8,
-  pattern = "door_top.blast.2-5",
+  pattern = "door_top.blast.2-2",
 }
 
 dynamic_tile{
@@ -8880,7 +8896,7 @@ dynamic_tile{
   y = 888,
   width = 32,
   height = 8,
-  pattern = "door_top.blast.1-5",
+  pattern = "door_top.blast.1-2",
 }
 
 dynamic_tile{

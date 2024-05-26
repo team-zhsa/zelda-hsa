@@ -31,7 +31,7 @@ map:register_event("on_started", function()
 	else
     chest_30_compass:set_enabled(true)
   end
-
+	map.fsa_dark = false
 	if game:get_value("dungeon_2_1f_10_collapse_ground") == true then
 		dynamic_10_light:set_enabled(false)
 		dynamic_10_collapse:set_enabled(false)
@@ -44,7 +44,6 @@ map:register_event("on_started", function()
 	end
 
 end)
-
 
 function switch_28_1:on_activated()
   if switch_28_2:is_activated() and switch_28_3:is_activated() and switch_28_4:is_activated() then

@@ -52,7 +52,7 @@ function map_name:show_name(name, extra)
 	if self.timer0 ~= nil then self.timer0:stop() end
 	
 	if (type(extra) == "string" and extra ~= "boss_name") or type(extra) == "nil" then
-	 	self.map_name:set_text_key("map.names.out." .. self.name)
+	 	self.map_name:set_text_key("map.out." .. self.name)
 		self.mx, self.my = self.map_name:get_size()
 		self.map_name_surface = sol.surface.create(self.mx * 2, self.my)
 		self.map_name_surface:set_opacity(0)

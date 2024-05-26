@@ -108,11 +108,11 @@ function jump_manager.update_jump(entity, callback)
 
       else
         local off= entity.y_offset
-        if off<-12 then
+        if off< -12 then
           sprite:set_animation("small")
-        elseif off>=-12 and off<-8 then
+        elseif off>=-12 and off < -8 then
           sprite:set_animation("medium_high")
-        elseif off>=-8  and off<-4 then
+        elseif off>=-8  and off < -4 then
           sprite:set_animation("medium_low")
         else
           sprite:set_animation("big")

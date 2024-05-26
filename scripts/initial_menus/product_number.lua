@@ -64,19 +64,19 @@ function savegame_menu:direction_pressed_phase_choose_name(direction8)
 
   local handled = true
   if direction8 == 0 then  -- Right.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 1) % 13
 
   elseif direction8 == 2 then  -- Up.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 4) % 5
 
   elseif direction8 == 4 then  -- Left.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 12) % 13
 
   elseif direction8 == 6 then  -- Down.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 1) % 5
 
   else
@@ -126,9 +126,9 @@ function savegame_menu:add_letter_player_name()
 
       if letter_cursor.x == 10 then  -- Remove the last letter.
         if size == 0 then
-          sol.audio.play_sound("wrong")
+          sol.audio.play_sound("common/wrong")
         else
-          sol.audio.play_sound("danger")
+          sol.audio.play_sound("menus/danger")
           self.player_name = self.player_name:sub(1, size - 1)
         end
 
@@ -136,7 +136,7 @@ function savegame_menu:add_letter_player_name()
         finished = self:validate_player_name()
 
       elseif letter_cursor.x == 12 then  -- Cancel.
-        sol.audio.play_sound("danger")
+        sol.audio.play_sound("menus/danger")
         finished = true
       end
     end
@@ -145,10 +145,10 @@ function savegame_menu:add_letter_player_name()
   if letter_to_add ~= nil then
     -- A letter was selected.
     if size < 6 then
-      sol.audio.play_sound("danger")
+      sol.audio.play_sound("menus/danger")
       self.player_name = self.player_name .. letter_to_add
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
 
@@ -158,11 +158,11 @@ end
 function savegame_menu:validate_player_name()
 
   if self.player_name:len() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 
-  sol.audio.play_sound("ok")
+  sol.audio.play_sound("menus/select")
   if self.player_name:lower() == "zelda" or self.player_name:lower() == "ju" or self.player_name:lower() == "lucifer" or self.player_name:lower() == "linkff" or self.player_name:lower() == "salade verte" then
     sol.audio.play_music("cutscenes/credits")
   end

@@ -123,7 +123,7 @@ function item:on_created()
 
     if game:get_magic() <= 0 then
       if sound_timer == nil then
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
         sound_timer = sol.timer.start(game, 500, function()
           sound_timer = nil
         end)

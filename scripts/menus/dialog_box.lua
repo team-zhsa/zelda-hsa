@@ -6,7 +6,7 @@
 require("scripts/multi_events")
 local language_manager = require("scripts/language_manager")
 local audio_manager = require("scripts/audio_manager")
-local text_utils = require("scripts/lib/text_utils")
+local text_utils = require("scripts/tools/text_utils")
 local text_fx_helper = require("scripts/text_fx_helper")
 -- Creates and sets up a dialog box for the specified game.
 local function initialise_dialog_box_features(game)
@@ -49,7 +49,8 @@ local function initialise_dialog_box_features(game)
 		box_dst_position = nil,      -- Destination coordinates of the dialog box.
 		question_dst_position = nil, -- Destination coordinates of the question icon.
 		icon_dst_position = nil,     -- Destination coordinates of the icon.
-		text_color = { 224, 224, 224 } -- Text color.
+		text_color = { 255, 255, 255 }, -- Text colour.
+		stroke_colour = { 55, 55, 25}
 
 	}
 
@@ -148,7 +149,7 @@ local function initialise_dialog_box_features(game)
 		if not dialog_box:is_full() then
 			dialog_box:add_character()
 		else
-			sol.audio.play_sound("menu/dialogue_end")
+			sol.audio.play_sound("menus/message_end")
 			if dialog_box:has_more_lines()
 				or dialog_box.dialog.next ~= nil
 				or dialog_box.selected_answer ~= nil then
@@ -176,7 +177,9 @@ local function initialise_dialog_box_features(game)
 		local map = game:get_map()
 		local camera_x, camera_y, camera_width, camera_height = map:get_camera():get_bounding_box()
 		local hero = map:get_entity("hero")
-		hero:set_animation("stopped")
+		if hero:get_animation() == "walking" then
+			hero:set_animation("stopped")
+		end
 		local top = false
 		if self.vertical_position == "top" then
 			top = true
@@ -464,7 +467,7 @@ local function initialise_dialog_box_features(game)
 
     if not special and current_char ~= nil and self.need_letter_sound then
       -- Play a letter sound sometimes.
-      audio_manager:play_sound("menu/dialogue_letter")
+      audio_manager:play_sound("menus/message_letter")
       self.need_letter_sound = false
       sol.timer.start(self, letter_sound_delay, function()
         self.need_letter_sound = true
@@ -533,7 +536,7 @@ local function initialise_dialog_box_features(game)
 			if self.selected_answer ~= nil
 					and not self:has_more_lines()
 					and self:is_full() then
-				sol.audio.play_sound("cursor")
+				sol.audio.play_sound("menus/cursor")
 				self.selected_answer = 3 - self.selected_answer  -- Switch between 1 and 2.
 			end
 		end
@@ -571,7 +574,10 @@ local function initialise_dialog_box_features(game)
         -- The last two lines are the answer to a question.
         text_x = text_x + 24
       end
-			self.line_surfaces[i]:draw(self.dialog_surface, text_x, text_y)
+
+			--[[text_fx_helper:draw_text_stroke(dialog_box.dialog_surface, dialog_box.line_surfaces[i], 
+				dialog_box.stroke_colour, text_x, text_y, "dialogue")--]]
+			dialog_box.line_surfaces[i]:draw(dialog_box.dialog_surface, text_x, text_y)
 
     end
 

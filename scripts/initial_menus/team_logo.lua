@@ -13,8 +13,8 @@ local presented_by_text = sol.text_surface.create{
 	horizontal_alignment = "center",
 	vertical_alignment = "middle",
 	color = {235, 174, 0},
-	font = "alttp_ttf",
-	font_size = 8,
+	font = "ega",
+	font_size = 16,
 	text_key = "title_screen.presented_by",
 }
 
@@ -84,7 +84,7 @@ function team_logo_menu:expand_logo()
 	phase = 3
 	team_logo_sprite:set_frame(0)
 	team_logo_sprite:set_animation("opening")
-	sol.audio.play_sound("menu/title/presented_by")
+	sol.audio.play_sound("menus/title/presented_by")
   sol.timer.start(team_logo_menu, 2000, function()
     can_skip_menu = true
     -- Quit menu
@@ -106,7 +106,7 @@ function team_logo_menu:try_skip_menu()
     is_skipping = true
 
 		logo_surface:fade_out(fade_delay)
-    -- Start another tier to quit the menu after the fade-out.
+    -- Start another timer to quit the menu after the fade-out.
     sol.timer.start(team_logo_menu, fade_delay + 700, function()
       -- Quit menu
       sol.menu.stop(team_logo_menu)

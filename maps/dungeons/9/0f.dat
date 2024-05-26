@@ -1,8 +1,8 @@
 properties{
   x = 0,
   y = 0,
-  width = 960,
-  height = 720,
+  width = 1280,
+  height = 960,
   min_layer = -1,
   max_layer = 2,
   world = "dungeon_9",
@@ -3141,7 +3141,7 @@ switch{
   y = 608,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -3153,7 +3153,7 @@ switch{
   y = 544,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -3165,7 +3165,7 @@ switch{
   y = 544,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -3177,7 +3177,7 @@ switch{
   y = 640,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
@@ -3249,13 +3249,13 @@ switch{
   y = 640,
   subtype = "solid",
   sprite = "entities/switches/solid_switch",
-  sound = "objects/on_switch",
+  sound = "common/switch_walkable",
   needs_block = false,
   inactivate_when_leaving = false,
 }
 
 destination{
-  name = "destination",
+  name = "from_outside",
   layer = 0,
   x = 480,
   y = 693,
@@ -3302,14 +3302,14 @@ chest{
   layer = 0,
   x = 88,
   y = 381,
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
   layer = 0,
   x = 232,
   y = 381,
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 stream{
@@ -3595,6 +3595,22 @@ sensor{
   y = 613,
   width = 16,
   height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 504,
+  y = 600,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "out/g1",
+  destination = "from_dungeon",
 }
 
 tile{
@@ -4007,7 +4023,7 @@ separator{
   x = 312,
   y = 0,
   width = 16,
-  height = 720,
+  height = 960,
 }
 
 separator{
@@ -4015,14 +4031,14 @@ separator{
   x = 632,
   y = 0,
   width = 16,
-  height = 720,
+  height = 960,
 }
 
 separator{
   layer = 2,
   x = 0,
   y = 232,
-  width = 960,
+  width = 1280,
   height = 16,
 }
 
@@ -4030,7 +4046,7 @@ separator{
   layer = 2,
   x = 0,
   y = 472,
-  width = 960,
+  width = 1280,
   height = 16,
 }
 

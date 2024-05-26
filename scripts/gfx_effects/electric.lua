@@ -7,7 +7,7 @@ local lib={}
     sfx : The sound to play during the effect
     callback (optional): the function to execute after the effect is finiched playing
 --]]
-
+local audio_manager=require "scripts/audio_manager"
 local duration=600          --Duration of the effect
 
 function lib.start_effect(surface, game, sfx, mode, callback)
