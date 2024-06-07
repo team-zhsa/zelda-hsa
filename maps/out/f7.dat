@@ -17907,6 +17907,30 @@ teletransporter{
   destination = "_side",
 }
 
+destination{
+  name = "from_fairy",
+  layer = 0,
+  x = 1144,
+  y = 69,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1136,
+  y = 40,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/south_field/swamp_fairy_cave",
+  destination = "from_outside",
+}
+
 tile{
   layer = 1,
   x = 640,
