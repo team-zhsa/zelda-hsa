@@ -23514,6 +23514,17 @@ custom_entity{
   model = "hookable",
 }
 
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/i6",
+  destination = "_side",
+}
+
 tile{
   layer = 1,
   x = 408,

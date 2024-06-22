@@ -31116,6 +31116,17 @@ tile{
   pattern = "958",
 }
 
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/i6",
+  destination = "_side",
+}
+
 jumper{
   layer = 0,
   x = 752,
