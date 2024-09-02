@@ -10822,7 +10822,7 @@ tile{
   x = 312,
   y = 1072,
   width = 8,
-  height = 48,
+  height = 64,
   pattern = "972",
 }
 
@@ -13557,15 +13557,6 @@ tile{
   y = 632,
   width = 16,
   height = 8,
-  pattern = "13892",
-}
-
-tile{
-  layer = 0,
-  x = 352,
-  y = 648,
-  width = 8,
-  height = 16,
   pattern = "13892",
 }
 
@@ -20652,6 +20643,105 @@ tile{
   pattern = "100",
 }
 
+tile{
+  layer = 0,
+  x = 272,
+  y = 1408,
+  width = 48,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 1392,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 1400,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 560,
+  y = 1408,
+  width = 48,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 1392,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 632,
+  y = 1384,
+  width = 32,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 664,
+  y = 1376,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 1392,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 1392,
+  width = 32,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1408,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 1400,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
 teletransporter{
   layer = 0,
   x = -8,
@@ -20660,7 +20750,7 @@ teletransporter{
   height = 16,
   transition = "scrolling",
   destination_map = "out/i5",
-  destination = "from_haunted_forest",
+  destination = "_side",
 }
 
 wall{
@@ -27447,5 +27537,15 @@ tile{
   width = 8,
   height = 48,
   pattern = "4586",
+}
+
+tile{
+  layer = 1,
+  x = 520,
+  y = 888,
+  width = 32,
+  height = 16,
+  pattern = "6066",
+  tileset = "outside_buildings",
 }
 

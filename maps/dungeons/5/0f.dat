@@ -9605,6 +9605,78 @@ tile{
   pattern = "door.2.support.2-2",
 }
 
+tile{
+  layer = 0,
+  x = 1096,
+  y = 856,
+  width = 48,
+  height = 64,
+  pattern = "floor.7-1",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 864,
+  width = 8,
+  height = 48,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 856,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 864,
+  width = 8,
+  height = 48,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 856,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1136,
+  y = 912,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1104,
+  y = 912,
+  width = 32,
+  height = 8,
+  pattern = "wall_border.2-3",
+}
+
 wall{
   layer = 0,
   x = 792,
@@ -11399,20 +11471,11 @@ separator{
 }
 
 separator{
-  name = "auto_separator_11",
-  layer = 2,
-  x = 1592,
-  y = 960,
-  width = 16,
-  height = 480,
-}
-
-separator{
   name = "auto_separator_12",
   layer = 2,
   x = 1592,
   y = 0,
   width = 16,
-  height = 480,
+  height = 1440,
 }
 
