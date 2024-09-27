@@ -13,8 +13,16 @@ local function initialise_game_over_features(game)
     return
   end
 
-  local game_over_menu = {}  -- The game-over menu.
+  -- Sets the menu on the game.
+  local game_over_menu = {}
   game.game_over_menu = game_over_menu
+
+  -- Start the game over menu when the game needs it.
+  game:register_event("on_game_over_started", function(game)
+    -- Attach the game-over menu to the map so that the map's fade-out
+    -- effect applies to it when restarting the game.
+      sol.menu.start(game:get_map(), game_over_menu)
+  end)
 
   local music
   local background_img
@@ -26,23 +34,30 @@ local function initialise_game_over_features(game)
   local cursor_position
   local state
 
-  -- state can be one of:
-  -- "waiting_start": The game-over scene will start soon.
-  -- "closing_game": Fade-out on the game screen.
-  -- "red_screen": Red screen during a small delay.
-  -- "opening_menu": Fade-in on the game-over menu.
-  -- "saved_by_fairy": The player is being saved by a fairy.
-  -- "waiting_end": The game will be resumed soon.
-  -- "resume_game": The game can be resumed.
-  -- "menu": The player can choose an option in the game-over menu.
-  -- "finished": An action was validated in the menu.
+  game_over_menu.steps = {
+    "waiting_start", -- The game-over scene will start soon.
+    "closing_game", -- Fade-out on the game screen.
+    "red_screen", -- Red screen during a small delay.
+    "opening_menu", -- Fade-in on the game-over menu.
+    "saved_by_fairy", -- The player is being saved by a fairy.
+    "waiting_end", -- The game will be resumed soon.
+    "resume_game", -- The game can be resumed.
+    "menu", -- The player can choose an option in the game-over menu.
+    "finished" -- An action was validated in the menu.
+  }
 
-  game:register_event("on_game_over_started", function(game)
+  local function invert_table(t)
+    local s = {}
+    for k, v in pairs(t) do
+      s[v] = k
+    end
+    return s
+  end
+  game_over_menu.step_indexes = invert_table(game_over_menu.steps)
+  game_over_menu.step_index = 0
 
-    -- Attach the game-over menu to the map so that the map's fade-out
-    -- effect applies to it when restarting the game.
-    sol.menu.start(game:get_map(), game_over_menu)
-  end)
+
+
 
   function game_over_menu:on_started()
 
