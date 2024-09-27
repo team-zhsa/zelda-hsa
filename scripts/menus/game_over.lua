@@ -4,6 +4,9 @@
 -- require("scripts/menus/game_over")
 
 require("scripts/multi_events")
+local automation = require("scripts/automation/automation")
+local messagebox = require("scripts/menus/messagebox")
+local audio_manager = require("scripts/audio_manager")
 
 -- Creates and sets up a game-over menu for the specified game.
 local function initialise_game_over_features(game)
@@ -24,65 +27,134 @@ local function initialise_game_over_features(game)
       sol.menu.start(game:get_map(), game_over_menu)
   end)
 
-  local music
-  local background_img
-  local hero_was_visible
-  local hero_dead_sprite
-  local hero_dead_x, hero_dead_y
-  local fade_sprite
-  local fairy_sprite
-  local cursor_position
-  local state
-
-  game_over_menu.steps = {
-    "waiting_start", -- The game-over scene will start soon.
-    "closing_game", -- Fade-out on the game screen.
-    "red_screen", -- Red screen during a small delay.
-    "opening_menu", -- Fade-in on the game-over menu.
-    "saved_by_fairy", -- The player is being saved by a fairy.
-    "waiting_end", -- The game will be resumed soon.
-    "resume_game", -- The game can be resumed.
-    "menu", -- The player can choose an option in the game-over menu.
-    "finished" -- An action was validated in the menu.
-  }
-
-  local function invert_table(t)
-    local s = {}
-    for k, v in pairs(t) do
-      s[v] = k
-    end
-    return s
-  end
-  game_over_menu.step_indexes = invert_table(game_over_menu.steps)
-  game_over_menu.step_index = 0
-
-
-
-
-  function game_over_menu:on_started()
-
+  -- Saves the current game state, to restore it after the menu
+  -- is finished.
+  function game_over_menu:backup_game_state()
+    game_over_menu.backup_action = game:get_custom_command_effect("action")
+    game_over_menu.backup_attack = game:get_custom_command_effect("attack")
+    game_over_menu.backup_hud_mode = game:get_hud_mode()
+    game_over_menu.backup_music = sol.audio.get_music()
     local hero = game:get_hero()
-    hero_was_visible = hero:is_visible()
-    hero:set_visible(false)
-    music = sol.audio.get_music()
-    background_img = sol.surface.create("gameover_menu.png", true)
-    local tunic = game:get_ability("tunic")
-    hero_dead_sprite = sol.sprite.create("hero/tunic" .. tunic)
-    hero_dead_sprite:set_animation("hurt")
-    hero_dead_sprite:set_direction(hero:get_direction())
-    hero_dead_sprite:set_paused(true)
-    fade_sprite = sol.sprite.create("hud/gameover_fade")
-    fairy_sprite = sol.sprite.create("entities/fairy")
-    fairy_sprite:set_animation("fairy")
-    powder_sprite = sol.sprite.create("entities/fairy")
-    powder_sprite:set_animation("powder")
-    state = "waiting_start"
+    game_over_menu.backup_hero_visible = hero:is_visible()
+  end
 
+  -- Restores the game state to what it was before starting the menu.
+  function game_over_menu:restore_game_state(restore_music)
+    -- Restore hero.
+    local hero = game:get_hero()
+    if hero ~= nil then
+      hero:set_visible(game_over_menu.backup_hero_visible)
+    end
+
+    -- Restore HUD.
+    game:set_custom_command_effect("action", game_over_menu.backup_action)
+    game:set_custom_command_effect("attack", game_over_menu.backup_attack)
+    game:set_hud_mode(game_over_menu.backup_hud_mode)
+
+    -- Restore music.
+    if restore_music then
+      sol.audio.play_music(game_over_menu.backup_music)
+    end
+  end
+  
+  function game_over_menu:on_started()
+    local quest_w, quest_h = sol.video.get_quest_size()
+    
+    local music
+    local background_img
+    local hero_was_visible
+    local hero_dead_sprite
+    local hero_dead_x, hero_dead_y
+    local fade_sprite
+    local fairy_sprite
+    local cursor_position
+    local state
+    
+    -- Adapt the HUD
+    game:set_hud_mode("no_buttons")
+    game:bring_hud_to_front()
+    game:set_custom_command_effect("action", "")
+    game:set_custom_command_effect("attack", "")
+    game:get_hero():set_visible(false)
+    
+    -- Steps
+    game_over_menu.steps = {
+      "waiting_start", -- The game-over scene will start soon.
+      "closing_game", -- Fade-out on the game screen.
+      "red_screen", -- Red screen during a small delay.
+      "opening_menu", -- Fade-in on the game-over menu.
+      "saved_by_fairy", -- The player is being saved by a fairy.
+      "waiting_end", -- The game will be resumed soon.
+      "resume_game", -- The game can be resumed.
+      "menu", -- The player can choose an option in the game-over menu.
+      "finished" -- An action was validated in the menu.
+    }
+    local function invert_table(t)
+      local s = {}
+      for k, v in pairs(t) do
+        s[v] = k
+      end
+      return s
+    end
+
+    game_over_menu.step_indexes = invert_table(game_over_menu.steps)
+    game_over_menu.step_index = 0
+
+    -- Letters
+    game_over_menu.title_w, game_over_menu.title_h = 120, 23
+    game_over_menu.title_x, game_over_menu.title_y = math.ceil((quest_w - game_over_menu.title_w) / 2), 32
+    game_over_menu.letters = {
+      { name = "g", offset = 0},
+      { name = "a", offset = 20},
+      { name = "m", offset = 33},
+      { name = "e", offset = 49},
+      { name = "o", offset = 65},
+      { name = "v", offset = 86},
+      { name = "e", offset = 99},
+      { name = "r", offset = 107},
+    } 
+    game_over_menu.anim_duration = 1000
+    for _, letter in pairs(game_over_menu.letters) do
+      local sprite = sol.sprite.create("menus/game_over/game_over_title")
+      sprite:set_animation(letter.name)
+      local x, y = game_over_menu.title_x + letter.offset, - game_over_menu.title_h
+      sprite:set_xy(x, y)
+      letter.sprite = sprite
+      letter.automation = automation:new(
+        game_over_menu, sprite, "elastic_out",
+        game_over_menu.anim_duration, { y = game_over_menu.title_y})
+    end
+
+    -- Sprites.
     local map = game:get_map()
     local camera_x, camera_y = map:get_camera():get_position()
     local hero_x, hero_y = hero:get_position()
-    hero_dead_x = hero_x - camera_x
-    hero_dead_y = hero_y - camera_y
+    hero_dead_x, hero_dead_y = hero_x - camera_x, hero_y - camera_y
+    local tunic = game:get_ability("tunic")
+    game_over_menu.hero_dead_sprite = sol.sprite.create("hero/tunic" .. tunic)
+    game_over_menu.hero_dead_sprite:set_animation("hurt")
+    game_over_menu.hero_dead_sprite:set_direction(hero:get_direction())
+    game_over_menu.hero_dead_sprite:set_paused(true)
+    game_over_menu.hero_dead_sprite:set_xy(hero_dead_x, hero_dead_y)
+
+
+    music = sol.audio.get_music()
+    background_img = sol.surface.create("gameover_menu.png", true)
+    game_over_menu.fade_sprite = sol.sprite.create("menus/game_over/game_over_fade")
+    game_over_menu.fade_sprite:set_xy(hero_dead_x, hero_dead_y)
+    game_over_menu.fairy_sprite = sol.sprite.create("entities/fairy")
+    game_over_menu.fairy_sprite:set_animation("fairy")
+    game_over_menu.powder_sprite = sol.sprite.create("entities/fairy")
+    game_over_menu.powder_sprite:set_animation("powder")
+
+    -- Launch the animation.
+    game_over_menu:set_step(1)
+  end
+
+  -- Goes to the menu's next step.
+  function game_over_menu:next_step()
+    game_over_menu:set_step(game_over_menu.step_index + 1)
+  end
 
     sol.timer.start(self, 500, function()
       state = "closing_game"
@@ -256,4 +328,3 @@ local game_meta = sol.main.get_metatable("game")
 game_meta:register_event("on_started", initialise_game_over_features)
 
 return true
-
