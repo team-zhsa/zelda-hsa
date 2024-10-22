@@ -7,6 +7,7 @@ require("scripts/multi_events")
 local automation = require("scripts/automation/automation")
 local messagebox = require("scripts/menus/messagebox")
 local audio_manager = require("scripts/audio_manager")
+local language_manager = require("scripts/language_manager")
 
 -- Creates and sets up a game-over menu for the specified game.
 local function initialise_game_over_features(game)
@@ -27,35 +28,7 @@ local function initialise_game_over_features(game)
       sol.menu.start(game:get_map(), game_over_menu)
   end)
 
-  -- Saves the current game state, to restore it after the menu
-  -- is finished.
-  function game_over_menu:backup_game_state()
-    game_over_menu.backup_action = game:get_custom_command_effect("action")
-    game_over_menu.backup_attack = game:get_custom_command_effect("attack")
-    game_over_menu.backup_hud_mode = game:get_hud_mode()
-    game_over_menu.backup_music = sol.audio.get_music()
-    local hero = game:get_hero()
-    game_over_menu.backup_hero_visible = hero:is_visible()
-  end
 
-  -- Restores the game state to what it was before starting the menu.
-  function game_over_menu:restore_game_state(restore_music)
-    -- Restore hero.
-    local hero = game:get_hero()
-    if hero ~= nil then
-      hero:set_visible(game_over_menu.backup_hero_visible)
-    end
-
-    -- Restore HUD.
-    game:set_custom_command_effect("action", game_over_menu.backup_action)
-    game:set_custom_command_effect("attack", game_over_menu.backup_attack)
-    game:set_hud_mode(game_over_menu.backup_hud_mode)
-
-    -- Restore music.
-    if restore_music then
-      sol.audio.play_music(game_over_menu.backup_music)
-    end
-  end
   
   function game_over_menu:on_started()
     local quest_w, quest_h = sol.video.get_quest_size()
@@ -70,12 +43,12 @@ local function initialise_game_over_features(game)
     local state
     
     -- Adapt the HUD
+    game_over_menu:backup_game_state()
     game:set_hud_mode("no_buttons")
     game:bring_hud_to_front()
     game:set_custom_command_effect("action", "")
     game:set_custom_command_effect("attack", "")
     game:get_hero():set_visible(false)
-    game_over_menu:backup_game_state()
     
     -- Steps
     game_over_menu.steps = {
@@ -119,7 +92,7 @@ local function initialise_game_over_features(game)
       sprite:set_xy(x, y)
       letter.sprite = sprite
       letter.automation = automation:new(
-        game_over_menu, sprite, "elastic_out",
+        game_over_menu, sprite, "back_in_out",
         game_over_menu.anim_duration, { y = game_over_menu.title_y})
     end
 
@@ -136,9 +109,12 @@ local function initialise_game_over_features(game)
     game_over_menu.hero_dead_sprite:set_paused(true)
     game_over_menu.hero_dead_sprite:set_xy(game_over_menu.hero_dead_x, game_over_menu.hero_dead_y)
 
-    game_over_menu.background = sol.surface.create(quest_w, quest_h)
-    game_over_menu.background:fill_color({29, 34, 55})
-    game_over_menu.background:set_opacity(0)
+    game_over_menu.background_red = sol.surface.create(quest_w, quest_h)
+    game_over_menu.background_red:fill_color({128, 0, 0})
+    game_over_menu.background_red:set_opacity(0)
+    game_over_menu.background_black = sol.surface.create(quest_w, quest_h)
+    game_over_menu.background_black:fill_color({0, 0, 0})
+    game_over_menu.background_black:set_opacity(0)
     game_over_menu.fade_sprite = sol.sprite.create("menus/game_over/game_over_fade")
     game_over_menu.fade_sprite:set_xy(game_over_menu.hero_dead_x, game_over_menu.hero_dead_y)
     game_over_menu.fairy_sprite = sol.sprite.create("entities/fairy")
@@ -146,7 +122,37 @@ local function initialise_game_over_features(game)
     game_over_menu.powder_sprite = sol.sprite.create("entities/fairy")
     game_over_menu.powder_sprite:set_animation("powder")
     game_over_menu.cursor_position = 0
+    game_over_menu.cursor_field_x = quest_w/2 - 104
+    game_over_menu.cursor_field_y = quest_h/2 - 8
 
+    game_over_menu.text_save_continue = sol.text_surface.create({
+      font = language_manager:get_dialog_font(),
+      text_key = "game_over.save_continue",})
+    game_over_menu.text_save_continue:set_xy(
+      game_over_menu.cursor_field_x + 24,
+      game_over_menu.cursor_field_y + 0 * 20 - 4)
+      
+    game_over_menu.text_save_quit = sol.text_surface.create({
+      font = language_manager:get_dialog_font(),
+      text_key = "game_over.save_quit",})
+    game_over_menu.text_save_quit:set_xy(
+      game_over_menu.cursor_field_x + 24, 
+      game_over_menu.cursor_field_y + 1 * 20 - 4)
+          
+    game_over_menu.text_retry = sol.text_surface.create({
+      font = language_manager:get_dialog_font(),
+      text_key = "game_over.retry",})
+    game_over_menu.text_retry:set_xy(
+      game_over_menu.cursor_field_x + 24, 
+      game_over_menu.cursor_field_y + 2 * 20 - 4)
+
+    game_over_menu.text_quit = sol.text_surface.create({
+      font = language_manager:get_dialog_font(),
+      text_key = "game_over.quit",})
+    game_over_menu.text_quit:set_xy(
+      game_over_menu.cursor_field_x + 24,
+      game_over_menu.cursor_field_y + 3 * 20 - 4)
+          
     -- Launch the animation.
     game_over_menu:set_step(1)
   end
@@ -179,6 +185,36 @@ local function initialise_game_over_features(game)
     end
   end
 
+  -- Saves the current game state, to restore it after the menu
+  -- is finished.
+  function game_over_menu:backup_game_state()
+    game_over_menu.backup_action = game:get_custom_command_effect("action")
+    game_over_menu.backup_attack = game:get_custom_command_effect("attack")
+    game_over_menu.backup_hud_mode = game:get_hud_mode()
+    game_over_menu.backup_music = sol.audio.get_music()
+    local hero = game:get_hero()
+    game_over_menu.backup_hero_visible = hero:is_visible()
+  end
+
+  -- Restores the game state to what it was before starting the menu.
+  function game_over_menu:restore_game_state(restore_music)
+    -- Restore hero.
+    local hero = game:get_hero()
+    if hero ~= nil then
+      hero:set_visible(game_over_menu.backup_hero_visible)
+    end
+
+    -- Restore HUD.
+    game:set_custom_command_effect("action", game_over_menu.backup_action)
+    game:set_custom_command_effect("attack", game_over_menu.backup_attack)
+    game:set_hud_mode(game_over_menu.backup_hud_mode)
+
+    -- Restore music.
+    if restore_music then
+      sol.audio.play_music(game_over_menu.backup_music)
+    end
+  end
+
   -- Step 1: Starting up.
   function game_over_menu:step_wait_start()
     game_over_menu:next_step()
@@ -188,6 +224,8 @@ local function initialise_game_over_features(game)
   function game_over_menu:step_fade_in()
     sol.audio.stop_music()
     game_over_menu.fade_sprite:set_animation("close", function()
+      game_over_menu.background_black:set_opacity(255)
+      game_over_menu.background_red:set_opacity(255)
       game_over_menu:next_step()
     end)
     game_over_menu.hero_dead_sprite:set_direction(0)
@@ -198,9 +236,8 @@ local function initialise_game_over_features(game)
   
   -- Step 3: Red screen
   function game_over_menu:step_red_screen()
-    game_over_menu.fade_sprite:fade_out()
-    game_over_menu.background:set_opacity(255)
     sol.timer.start(self, 2000, function()
+      game_over_menu.background_red:fade_out()
       game_over_menu:next_step()
     end)
   end
@@ -264,8 +301,6 @@ local function initialise_game_over_features(game)
     -- Add the death to the total death count.
     local death_count = game:get_value("stats_hero_death_count") or 0
     game:set_value("stats_hero_death_count", death_count + 1)
-    -- Play the game over music.
-    sol.audio.play_music("cutscenes/game_over")
     -- Hide the hero.
     game_over_menu.hero_dead_sprite:fade_out(10, function()
       -- Launch animations.
@@ -285,28 +320,21 @@ local function initialise_game_over_features(game)
   end
 
   -- Step 6: Asking menu
-  function game_over_menu:step_ask_menu()          
-    game_over_menu.fairy_sprite:set_xy(76, 112)  -- Cursor.
+  function game_over_menu:step_ask_menu() 
+    -- Play the game over music.
+    sol.audio.play_music("cutscenes/game_over")         
+    game_over_menu.fairy_sprite:set_xy(game_over_menu.cursor_field_x, game_over_menu.cursor_field_y)  -- Cursor.
     game_over_menu.cursor_position = 0
   end
 
   local black = {0, 0, 0}
-  local red = {255, 64, 61}
+  local red = {128, 65, 55}
   function game_over_menu:on_draw(dst_surface)
-    if game_over_menu.step_index ~= game_over_menu.step_indexes["wait_start"] then
-      -- Hide the whole map.
-      game_over_menu.background:fill_color(black)
-    end
-
-    -- Fade.
     if game_over_menu.step_index >= game_over_menu.step_indexes["fade_in"] then
+      -- Hide the whole map.
+      game_over_menu.background_black:draw(dst_surface)
+      game_over_menu.background_red:draw(dst_surface)
       game_over_menu.fade_sprite:draw(dst_surface)
-      game_over_menu.background:draw(dst_surface)
-    end
-    if game_over_menu.step_index == game_over_menu.step_indexes["fade_in"] then
-      game_over_menu.fade_sprite:draw(dst_surface, game_over_menu.hero_dead_x, game_over_menu.hero_dead_y)
-    elseif game_over_menu.step_index == game_over_menu.step_indexes["red_screen"] then
-      game_over_menu.background:fill_color(red)
     end
 
     -- Title.
@@ -317,6 +345,13 @@ local function initialise_game_over_features(game)
     game_over_menu.hero_dead_sprite:draw(dst_surface)
     game_over_menu.fairy_sprite:draw(dst_surface)
     game_over_menu.powder_sprite:draw(dst_surface)
+
+    if game_over_menu.step_index >= game_over_menu.step_indexes["ask_menu"] then
+      game_over_menu.text_save_continue:draw(dst_surface)
+      game_over_menu.text_save_quit:draw(dst_surface)
+      game_over_menu.text_retry:draw(dst_surface)
+      game_over_menu.text_quit:draw(dst_surface)
+    end
   end
 
   function game_over_menu:on_command_pressed(command)
@@ -330,41 +365,43 @@ local function initialise_game_over_features(game)
       sol.audio.play_sound("menus/cursor")
       game_over_menu.cursor_position = (game_over_menu.cursor_position + 1) % 4
       local fairy_x, fairy_y = game_over_menu.fairy_sprite:get_xy()
-      fairy_y = 112 + game_over_menu.cursor_position * 16
+      fairy_y = game_over_menu.cursor_field_y + game_over_menu.cursor_position * 20
       game_over_menu.fairy_sprite:set_xy(fairy_x, fairy_y)
     elseif command == "up" then
       sol.audio.play_sound("menus/cursor")
-      cursor_position = (cursor_position + 3) % 4
+      game_over_menu.cursor_position = (game_over_menu.cursor_position + 3) % 4
       local fairy_x, fairy_y = game_over_menu.fairy_sprite:get_xy()
-      fairy_y = 112 + game_over_menu.cursor_position * 16
+      fairy_y = game_over_menu.cursor_field_y + game_over_menu.cursor_position * 20
       game_over_menu.fairy_sprite:set_xy(fairy_x, fairy_y)
     elseif command == "action" or command == "attack" then
+      game_over_menu.step_index = game_over_menu.step_indexes["finished"]
       sol.audio.play_sound("menus/danger")
-      game:set_hud_enabled(false)
+      --game:set_hud_enabled(false)
       local restored_heart_count = 6
-      game:add_life(restored_heart_count * 4)
-      if cursor_position == 0 then
+      if game_over_menu.cursor_position == 0 then
         -- Save and continue.
+        game:add_life(restored_heart_count * 4)
         game:save()
-          -- Wait for the hearts to be refilled before quitting the menu.
-          sol.timer.start(game_over_menu, 250 * restored_heart_count, function()
-            game_over_menu:restore_game_state(false)
-            game:set_hud_enabled(false)
-            game:start()
-          end)
-      elseif cursor_position == 1 then
+        -- Wait for the hearts to be refilled before quitting the menu.
+        sol.timer.start(game_over_menu, 250 * restored_heart_count, function()
+          game_over_menu:restore_game_state(false)
+          game:set_hud_enabled(false)
+          game:start()
+        end)
+      elseif game_over_menu.cursor_position == 1 then
         -- Save and quit.
+        game:add_life(restored_heart_count * 4)
         game:save()
         sol.main.reset()
-      elseif cursor_position == 2 then
+      elseif game_over_menu.cursor_position == 2 then
         -- Continue without saving.
-          -- Wait for the hearts to be refilled before quitting the menu.
-          sol.timer.start(game_over_menu, 250 * restored_heart_count, function()
-            game_over_menu:restore_game_state(false)
-            game:set_hud_enabled(false)
-            game:start()
-          end)
-      elseif cursor_position == 3 then
+        -- Wait for the hearts to be refilled before quitting the menu.
+        sol.timer.start(game_over_menu, 250 * restored_heart_count, function()
+          game_over_menu:restore_game_state(false)
+          game:set_hud_enabled(false)
+          game:start()
+        end)
+      elseif game_over_menu.cursor_position == 3 then
         -- Quit without saving.
         sol.main.reset()
       end
