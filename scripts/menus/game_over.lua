@@ -327,8 +327,6 @@ local function initialise_game_over_features(game)
     game_over_menu.cursor_position = 0
   end
 
-  local black = {0, 0, 0}
-  local red = {128, 65, 55}
   function game_over_menu:on_draw(dst_surface)
     if game_over_menu.step_index >= game_over_menu.step_indexes["fade_in"] then
       -- Hide the whole map.
