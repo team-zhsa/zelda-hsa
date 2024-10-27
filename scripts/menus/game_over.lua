@@ -25,7 +25,7 @@ local function initialise_game_over_features(game)
   game:register_event("on_game_over_started", function(game)
     -- Attach the game-over menu to the map so that the map's fade-out
     -- effect applies to it when restarting the game.
-      sol.menu.start(game:get_map(), game_over_menu)
+      sol.menu.start(game, game_over_menu, true)
   end)
 
 
