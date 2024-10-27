@@ -52,6 +52,12 @@ function map_submenu:on_started()
 		color = self.text_color,
 	}
 
+	self:init_coordinates("full")
+
+end
+
+function map_submenu:init_coordinates(zoom_mode)
+
 	self.dungeon = self.game:get_dungeon()
 	if self.dungeon == nil then
 		-- Not in a dungeon: show a world map.
@@ -83,7 +89,7 @@ function map_submenu:on_started()
 	self.current_map_hovered = {x = 1, y = 1}
 	self.current_map_index = {x = 1, y = 1}
 
-	self.zoom_mode = "full"
+	self.zoom_mode = zoom_mode
 	self.world_minimap_img = sol.surface.create("menus/map/"..self.zoom_mode.."_hyrule_world_map.png")
 	self.box_x, self.box_y = 87, 70
 	self.box_left_x, self.box_left_y = 9, 26
@@ -91,12 +97,12 @@ function map_submenu:on_started()
 	if self.game:get_item("world_map"):get_variant() > 0 then
 		if self.game:is_in_outside_world() or self.game:is_in_inside_world() then
 			-- Set the world and minimap sizes (including the clouds offset)
-			if self.zoom_mode ~= "small" then
+			if self.zoom_mode == "full" then
 				self.outside_world_size = {width = 1536 + 15360, height = 1536 + 12960 }
 				self.outside_world_minimap_size = {width = 96 + 960 , height = 96 + 810 }
-			else
-				self.outside_world_size = {width = 1536 + 15360, height = 1536 + 12960 }
-				self.outside_world_minimap_size = {width = 96 + 960 , height = 96 + 810 }
+			elseif self.zoom_mode == "small" then
+				self.outside_world_size = {width = 6144 + 15360, height = 6144 + 12960 }
+				self.outside_world_minimap_size = {width = 96 + 240 , height = 96 + 202 }
 			end
 			map_shown = true
 			local world_offset_x, world_offset_y = 1536, 1536
@@ -109,13 +115,23 @@ function map_submenu:on_started()
 			local hero_minimap_y = math.floor((hero_absolute_y + world_offset_y) * scale_y)
 			local waypoint_minimap_x = math.floor((waypoint_absolute_x +world_offset_x) * scale_x)
 			local waypoint_minimap_y = math.floor((waypoint_absolute_y+world_offset_y) * scale_y)
-			-- Offset the position because the map is offsetted from the world (clouds) by 88 pixels
-				self.hero_x = hero_minimap_x
-				self.hero_y = hero_minimap_y
-				self.waypoint_x = waypoint_minimap_x
-				self.waypoint_y = waypoint_minimap_y
-			self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x - self.box_x))
-			self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y - self.box_y))
+			-- Offset the position because the map is offsetted from the world (clouds) by 96 pixels
+
+				if self.zoom_mode == "full" then
+					self.hero_x = hero_minimap_x
+					self.hero_y = hero_minimap_y
+					self.waypoint_x = waypoint_minimap_x
+					self.waypoint_y = waypoint_minimap_y
+					self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x - self.box_x))
+					self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y - self.box_y))
+				elseif self.zoom_mode == "small" then
+					self.hero_x = hero_minimap_x + 72
+					self.hero_y = hero_minimap_y + 72
+					self.waypoint_x = waypoint_minimap_x + 72
+					self.waypoint_y = waypoint_minimap_y + 72
+					self.world_minimap_visible_xy.x = math.min(self.outside_world_minimap_size.width,	math.max(0, self.hero_x - self.box_x))
+					self.world_minimap_visible_xy.y = math.min(self.outside_world_minimap_size.height,math.max(0, self.hero_y - self.box_y))
+				end
 		end
 	else
 		-- if World Map not in inventory, show clouds in map screen
@@ -173,8 +189,8 @@ function map_submenu:on_started()
 			"menus/map/dungeon_maps/map_" .. self.dungeon_index)
 		self:load_dungeon_map_image()
 	end
-
 end
+
 
 function map_submenu:on_finished()
 	self.game:set_hud_enabled(true)
@@ -320,11 +336,18 @@ function map_submenu:draw_world_map(dst_surface)
 	--print(self.hero_x, self.hero_y)
 	--print("VISIBLE"..self.world_minimap_visible_xy.x.. " ".. self.world_minimap_visible_xy.y)
 	--print("HOVER"..self.current_map_hovered.x.. " ".. self.current_map_hovered.y)
-	self.current_map_index.x = math.floor(self.current_map_hovered.x / 80) + 1
+	if self.zoom_mode == "full" then
+		self.current_map_index.x = math.floor(self.current_map_hovered.x / 80) + 1
+		if self.current_map_index.x == -1 then self.current_map_index.x = 0 end
+			self.current_map_index.y = math.floor(self.current_map_hovered.y / 90) + 1
+		if self.current_map_index.y == -1 then self.current_map_index.y = 0 end
+		--print(self.current_map_index.x, self.current_map_index.y)
+	elseif self.zoom_mode == "small" then
+		self.current_map_index.x = math.floor(self.current_map_hovered.x / 20) + 1
 	if self.current_map_index.x == -1 then self.current_map_index.x = 0 end
-		self.current_map_index.y = math.floor(self.current_map_hovered.y / 90) + 1
+		self.current_map_index.y = math.floor(self.current_map_hovered.y / 24) + 1
 	if self.current_map_index.y == -1 then self.current_map_index.y = 0 end
-	--print(self.current_map_index.x, self.current_map_index.y)
+	end
 	if map_shown then
 		self:set_caption(map_areas_config[self.current_map_index.x][self.current_map_index.y].key)
 	else self:set_caption("map.title") end
@@ -843,6 +866,13 @@ function map_submenu:world_on_command_pressed(command)
 			movement:start(self.world_minimap_visible_xy)
 			self.world_minimap_movement = movement
 
+		end
+	elseif command == "attack" then
+		handled = true
+		if self.zoom_mode == "full" then
+			self:init_coordinates("small")
+		elseif self.zoom_mode == "small" then
+			self:init_coordinates("full")
 		end
 	end
 	return handled
