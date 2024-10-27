@@ -32,6 +32,7 @@ local function initialize_hud_features(game)
   local magic_bar
   local rupees
   local keys
+  local clock
 
   function set_menu_enabled(menu, enabled)
     if enabled then
@@ -256,7 +257,8 @@ local function initialize_hud_features(game)
   -- Ex: During a dialog, move the action icon and the sword icon, and hides the
   -- item icons.
   function hud:set_mode(mode)
-    if mode == "normal" or mode == "dialog" or mode == "pause" or mode == "no_buttons" then
+    if mode == "normal" or mode == "dialog" or mode == "pause" 
+    or mode == "no_buttons" or mode == "no_hud" then
       hud.mode = mode
       hud:adapt_to_curent_mode()
     else
@@ -362,8 +364,8 @@ local function initialize_hud_features(game)
       end
 
       if pause_icon ~= nil then
-        pause_icon:set_enabled(true)
-        pause_icon:set_active(true)
+        pause_icon:set_enabled(false)
+        pause_icon:set_active(false)
       end
 
       for _, item_icon in ipairs(item_icons) do
@@ -447,6 +449,7 @@ local function initialize_hud_features(game)
     hud:set_rupees_enabled(enabled)
     hud:set_magic_bar_enabled(enabled)
     hud:set_keys_enabled(enabled)
+    hud:set_clock_enabled(enabled)
   end
 
   -- Enables or disables the life counter.
@@ -474,6 +477,13 @@ local function initialize_hud_features(game)
   function hud:set_keys_enabled(enabled)
     if keys then
       set_menu_enabled(keys, enabled)
+    end
+  end
+  
+  -- Enables or disables the life counter.
+  function hud:set_clock_enabled(enabled)
+    if clock then
+      set_menu_enabled(clock, enabled)
     end
   end
 
@@ -537,6 +547,8 @@ local function initialize_hud_features(game)
       keys = element
     elseif element_config.menu_script == "scripts/hud/rupees" then
       rupees = element
+    elseif element_config.menu_script == "scripts/hud/clock" then
+      clock = element
     end
   end
 
