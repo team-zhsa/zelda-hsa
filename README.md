@@ -9,7 +9,7 @@
 This repository contains the essential data files from the Solarus Action-RPG game *The Legend of Zelda: Hyrule's Adventure*. To learn more about Solarus, see the [Solarus website](https://www.solarus-games.org).
 This project is currently in development and isn't complete so your game may crash. If you encounter something which seems wrong, please [create a new issue](https://github.com/team-zhsa/zelda-hsa/issues/new) (you may need to create a GitHub account).
 
-- **Release Date:** Autumn 2024
+- **Release Date:** Unknown
 - **Players:** 1
 - **Length:** N/C
 - **License:** Copyright, CC BY-NC-SA 4.0, CC-BY-SA 4.0, GPL v3
