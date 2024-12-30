@@ -25,7 +25,7 @@ end
 function language_manager:get_monospace_font(language)
 
   -- No font differences between languages (for now).
-  return "enter_command_mono", 16
+  return "kubasta", 10
 end
 
 -- Returns the font and font size to be used to display text in menus
@@ -33,7 +33,7 @@ end
 function language_manager:get_menu_font(language)
 
   -- No font differences between languages (for now).
-  return "enter_command_mono", 16
+  return "kubasta", 10
 end
 
 -- Returns the font and font size to be used to display text on HUD icons
