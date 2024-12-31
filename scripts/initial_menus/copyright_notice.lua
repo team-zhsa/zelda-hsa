@@ -44,7 +44,7 @@ function copyright_notice:on_started()
   gpl_logo_width, gpl_logo_height = gpl_logo:get_size()
 
   -- Fonts info.
-  menu_font, menu_font_size = "ega", 16
+  menu_font, menu_font_size = "alttp", 8
 
   made_by_fans_line_1 = sol.text_surface.create{
     horizontal_alignment = "center",
@@ -106,8 +106,8 @@ function copyright_notice:on_started()
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     color = {235, 174, 0},
-    font = "minecraftia",
-    font_size = 7,
+    font = "alttp",
+    font_size = 8,
     text_key = "copyright_notice.website",
   }
 

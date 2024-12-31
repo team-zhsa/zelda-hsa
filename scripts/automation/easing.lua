@@ -620,6 +620,7 @@ local function bounce_out(t, b, c, d)
     t = t - (2.625 / 2.75)
     return c * (7.5625 * t * t + 0.984375) + b
   end
+end
 
 -- Easing equation function for a bounce (exponentially decaying parabolic
 -- bounce) easing in: accelerating from zero velocity.
@@ -629,7 +630,6 @@ local function bounce_out(t, b, c, d)
 -- d = duration
 local function bounce_in(t, b, c, d)
   return c - bounce_out(d - t, 0, c, d) + b
-end
 end
 
 -- Easing equation function for a bounce (exponentially decaying parabolic

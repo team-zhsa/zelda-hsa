@@ -59,11 +59,21 @@ map{ id = "dungeons/7/b1", description = "Desert Palace (Basement 1)" }
 map{ id = "dungeons/8/0f", description = "Jabu Jabu's Belly (Ground Floor)" }
 map{ id = "dungeons/8/b1", description = "Jabu Jabu's Belly (Basement 1)" }
 map{ id = "dungeons/9/0f", description = "César's Peak (Ground Floor)" }
+map{ id = "dungeons/9/10f", description = "César's Peak (10th Floor)" }
+map{ id = "dungeons/9/11f", description = "César's Peak (11th Floor)" }
+map{ id = "dungeons/9/12f", description = "César's Peak (12th Floor)" }
+map{ id = "dungeons/9/13f", description = "César's Peak (13th Floor)" }
+map{ id = "dungeons/9/14f", description = "César's Peak (14th Floor)" }
+map{ id = "dungeons/9/15f", description = "César's Peak (15th Floor)" }
 map{ id = "dungeons/9/1f", description = "César's Peak (1st Floor)" }
 map{ id = "dungeons/9/2f", description = "César's Peak (2nd Floor)" }
 map{ id = "dungeons/9/3f", description = "César's Peak (3rd Floor)" }
 map{ id = "dungeons/9/4f", description = "César's Peak (4th Floor)" }
 map{ id = "dungeons/9/5f", description = "César's Peak (5th Floor)" }
+map{ id = "dungeons/9/6f", description = "César's Peak (6th Floor)" }
+map{ id = "dungeons/9/7f", description = "César's Peak (7th Floor)" }
+map{ id = "dungeons/9/8f", description = "César's Peak (8th Floor)" }
+map{ id = "dungeons/9/9f", description = "César's Peak (9th Floor)" }
 map{ id = "dungeons/secret/1f", description = "Secret Dungeon (1st Floor)" }
 map{ id = "examples/inside_store", description = "Inside Store" }
 map{ id = "examples/outside_store", description = "Outside Store" }
@@ -120,6 +130,7 @@ map{ id = "inside/caves/rito_village/rito_village", description = "inside/caves/
 map{ id = "inside/caves/rito_village/strongest_tournament_easy", description = "Strongest Tournament (Easy)" }
 map{ id = "inside/caves/snowpeaks/ice_cave", description = "Ice Cave" }
 map{ id = "inside/caves/south_field/north_east_swamp_cave", description = "Rupees South Swamp Cave" }
+map{ id = "inside/caves/south_field/swamp_fairy_cave", description = "Swamp fairy cave" }
 map{ id = "inside/caves/south_field/vah_naboris_fairy_cave", description = "Vah'Naboris Fairy Cave" }
 map{ id = "inside/caves/west_forest/kokiri_cave", description = "Kokiri Cave" }
 map{ id = "inside/caves/west_forest/sacred_grove_hideout", description = "Sacred Grove Hideout" }
@@ -389,19 +400,23 @@ sprite{ id = "enemies/dungeons/cannonball_big", description = "Big Cannonball" }
 sprite{ id = "enemies/dungeons/chain_and_ball", description = "Chain and Ball" }
 sprite{ id = "enemies/dungeons/death_ball", description = "Death Ball" }
 sprite{ id = "enemies/dungeons/dodongo", description = "Dodongo" }
-sprite{ id = "enemies/dungeons/evil_tile2", description = "Evil Tile 2" }
-sprite{ id = "enemies/dungeons/evil_tile3", description = "Evil Tile 3" }
-sprite{ id = "enemies/dungeons/evil_tile4", description = "Evil Tile 4" }
+sprite{ id = "enemies/dungeons/eyegore_blue", description = "Blue Eyegore" }
+sprite{ id = "enemies/dungeons/eyegore_green", description = "Green Eyegore" }
+sprite{ id = "enemies/dungeons/eyegore_red", description = "Red Eyegore" }
 sprite{ id = "enemies/dungeons/eyegore_statue", description = "Eyegore Statue" }
 sprite{ id = "enemies/dungeons/fireball", description = "Circular moving fireball" }
 sprite{ id = "enemies/dungeons/fireball_animated", description = "Animated fireball" }
 sprite{ id = "enemies/dungeons/firebar", description = "Fire bar (for use in editor only)" }
 sprite{ id = "enemies/dungeons/flame_red_fixed", description = "Fixed red flame" }
 sprite{ id = "enemies/dungeons/flying_tile", description = "Evil Tile 1" }
+sprite{ id = "enemies/dungeons/flying_tile_2", description = "Evil Tile 2" }
+sprite{ id = "enemies/dungeons/flying_tile_3", description = "Evil Tile 3" }
+sprite{ id = "enemies/dungeons/flying_tile_4", description = "Evil Tile 4" }
 sprite{ id = "enemies/dungeons/gel", description = "Gel" }
 sprite{ id = "enemies/dungeons/gibdo", description = "Gibdo" }
 sprite{ id = "enemies/dungeons/gohma", description = "Gohma" }
 sprite{ id = "enemies/dungeons/goriya_green", description = "Green Goriya" }
+sprite{ id = "enemies/dungeons/goriya_grey", description = "Grey Goriya" }
 sprite{ id = "enemies/dungeons/goriya_red", description = "Red Goriya" }
 sprite{ id = "enemies/dungeons/hardhat_beetle_blue", description = "Blue Hardhat Beetle" }
 sprite{ id = "enemies/dungeons/hardhat_beetle_red", description = "Red Hardhat Beetle" }
@@ -1076,7 +1091,6 @@ sprite{ id = "hud/attack_icon", description = "Attack icon" }
 sprite{ id = "hud/clock", description = "Clock" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
 sprite{ id = "hud/empty_heart", description = "Empty heart" }
-sprite{ id = "hud/gameover_fade", description = "Game-over fade" }
 sprite{ id = "hud/item_icon_1", description = "hud/item_icon_1" }
 sprite{ id = "hud/item_icon_2", description = "hud/item_icon_2" }
 sprite{ id = "hud/magic_bar", description = "Magic bar" }
@@ -1096,6 +1110,8 @@ sprite{ id = "maps/screen_size", description = "Screen size" }
 sprite{ id = "maps/underwater", description = "Underwater" }
 sprite{ id = "maps/world_scale_1_bis", description = "i6" }
 sprite{ id = "menus/arrow", description = "Arrow" }
+sprite{ id = "menus/game_over/game_over_fade", description = "Game-over fade" }
+sprite{ id = "menus/game_over/game_over_title", description = "Game-over title" }
 sprite{ id = "menus/map/dungeon_maps/map_1", description = "Map 1" }
 sprite{ id = "menus/map/dungeon_maps/map_2", description = "Map 2" }
 sprite{ id = "menus/map/dungeon_maps/map_3", description = "Map 3" }
@@ -2013,9 +2029,8 @@ font{ id = "ega", description = "Px437_IBM_EGA_8x14" }
 font{ id = "ega_png", description = "ega_png" }
 font{ id = "enter_command_mono", description = "Enter Command Mono" }
 font{ id = "green_digits", description = "Green digits" }
+font{ id = "kubasta", description = "Kubasta" }
 font{ id = "map_name", description = "map_name" }
-font{ id = "minecraftia", description = "Minecraftia" }
-font{ id = "minecraftia_mono", description = "Minecraftia Mono" }
 font{ id = "small_green_digits", description = "Small green digits" }
 font{ id = "small_white_digits", description = "Small white digits" }
 font{ id = "white_digits", description = "White digits" }
@@ -2175,6 +2190,8 @@ file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "The U
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/miracles_coast/magical_maze_cave.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/miracles_coast/magical_maze_cave.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/caves/south_field/swamp_fairy_cave.dat", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/caves/south_field/swamp_fairy_cave.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/river_cave.dat", author = "The Unknown", }
@@ -2570,6 +2587,12 @@ file{ path = "sounds/items/cane.ogg", author = "Nintendo", license = "Proprietar
 file{ path = "sounds/timer.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/timer_hurry.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sprites/enemies/boss/spectral_ganon.dat", author = "Nintendo, The Unknown", }
+file{ path = "sprites/enemies/dungeons/eyegore_blue.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/eyegore_green.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/eyegore_red.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/goriya_green.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/goriya_grey.dat", author = "Nintendo", license = "Proprietary" }
+file{ path = "sprites/enemies/dungeons/goriya_red.dat", author = "Nintendo", license = "Proprietary" }
 file{ path = "sprites/enemies/dungeons/lizalfos.png", author = "Newlink", license = "CC-BY-SA" }
 file{ path = "sprites/enemies/dungeons/lizalfos_blue.dat", author = "Newlink", license = "CC-BY-SA" }
 file{ path = "sprites/enemies/dungeons/lizalfos_purple.dat", author = "The Unknown", license = "CC-BY-SA" }
@@ -2692,6 +2715,10 @@ file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "Linkff", licens
 file{ path = "sprites/hero/item/rods/wind_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
+file{ path = "sprites/menus/game_over/game_over_fade.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/game_over/game_over_fade.png", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/game_over/game_over_title.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
+file{ path = "sprites/menus/game_over/game_over_title.png", author = "Olivier Cléro", license = "CC BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_boss.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_default.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }
 file{ path = "sprites/menus/parchment/parchment_shadow.png", author = "Olivier Cléro", license = "CC-BY-SA 4.0" }

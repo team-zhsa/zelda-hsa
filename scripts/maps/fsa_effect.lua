@@ -24,7 +24,7 @@ local distort_map = sol.surface.create(sol.video.get_quest_size())
 
 local clouds = sol.surface.create("fogs/clouds_reflection.png")
 local clouds_shadow = sol.surface.create("fogs/clouds_shadow.png")
-clouds_shadow:set_opacity(120)
+clouds_shadow:set_opacity(10)
 clouds_shadow:set_blend_mode("multiply")
 
 local effect = sol.surface.create("fogs/fsa_background.png")

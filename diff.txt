@@ -1,0 +1,341 @@
++	FIX: Fixed the 33N door in the Northern Ruins variable not being saved (#233).
++	REM: Removed the dungeon exploring room variable changing based on the hero position (need to activate sensor instead).
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables.
++-- Configuration variables.
++        enemy:set_treasure(item_name, item:get_variant()) -- TODO savegame variable
++-- Global variables.
++-- Configuration variables.
++        enemy:set_treasure(item_name, item:get_variant()) -- TODO savegame variable
++-- Global variables.
++-- Configuration variables.
++        enemy:set_treasure(item_name, item:get_variant()) -- TODO savegame variable
++-- Global variables.
++-- Configuration variables.
++-- Global variables.
++-- Configuration variables.
++-- Global variables.
++-- Configuration variables.
++-- Global variables
++-- Configuration variables.
++-- Global variables
++-- Configuration variables
++-- Configuration variables.
++-- Configuration variables.
++-- Configuration variables.
++-- Configuration variables.
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
++-- Global variables
++-- Configuration variables
+--- Configuration variables
+--- Configuration variables
+--- Configuration variables
+--- Configuration variables
+--- Configuration variables
+--- Configuration variables
++-- Global variables
+ -- Configuration variables
++-- Global variables.
++-- Configuration variables.
+-        treasure_savegame_variable = treasure[3],
+-        treasure_savegame_variable = treasure[3],
+-function item:on_obtaining(variant, savegame_variable)
+-function item:on_obtaining(variant, savegame_variable)
+--- Butter (has several variables)
+-  self:set_savegame_variable("possession_butter")
++  self:set_savegame_variable("possession_din_flame")
++  self:set_savegame_variable("possession_goron_amber")
++  self:set_amount_savegame_variable("amount_goron_amber")
++function item:on_obtaining(variant, savegame_variable)
++function item:on_obtained(variant, savegame_variable)
+-  self:set_savegame_variable("possession_drug")
+-  self:set_savegame_variable("possession_face_key")
++  self:set_savegame_variable("possession_farore_quake")
++  self:set_savegame_variable("possession_fish")
++  self:set_amount_savegame_variable("amount_fish")
++function item:on_obtaining(variant, savegame_variable)
++  self:set_savegame_variable("possession_fish")
++  self:set_amount_savegame_variable("amount_fish")
++function item:on_obtaining(variant, savegame_variable)
++  self:set_savegame_variable("possession_chocolate_bread")
++  self:set_amount_savegame_variable("amount_chocolate_bread")
++function item:on_obtaining(variant, savegame_variable)
++  self:set_savegame_variable("possession_fish")
++  self:set_amount_savegame_variable("amount_fish")
++function item:on_obtaining(variant, savegame_variable)
++  self:set_savegame_variable("possession_fish")
++  self:set_amount_savegame_variable("amount_fish")
++function item:on_obtaining(variant, savegame_variable)
++  self:set_savegame_variable("possession_fish")
++  self:set_amount_savegame_variable("amount_fish")
++function item:on_obtaining(variant, savegame_variable)
+-function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_golden_leaf_counter")
+-  self:set_amount_savegame_variable("amount_golden_leaf_counter")
++  self:set_savegame_variable("possession_goron_amber")
++  self:set_amount_savegame_variable("amount_goron_amber")
+ function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_goron_amber_counter")
+-  self:set_amount_savegame_variable("amount_goron_amber_counter")
+-function item:on_obtained(variant, savegame_variable)
+-function item:on_obtaining(variant, savegame_variable)
++-- Variables
+   self:set_savegame_variable("possession_magic_powder_counter")
+   self:set_amount_savegame_variable("amount_magic_powder_counter")
+-function item:on_obtaining(variant, savegame_variable)
+-  --item:set_savegame_variable(nil)
++  self:set_savegame_variable("possession_monster_claw")
++  self:set_amount_savegame_variable("amount_monster_claw")
+ function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_monster_claw_counter")
+-  self:set_amount_savegame_variable("amount_monster_claw_counter")
++  self:set_savegame_variable("possession_monster_gut")
++  self:set_amount_savegame_variable("amount_monster_gut")
+ function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_monster_gut_counter")
+-  self:set_amount_savegame_variable("amount_monster_gut_counter")
++  self:set_savegame_variable("possession_monster_horn")
++  self:set_amount_savegame_variable("amount_monster_horn")
+ function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_monster_horn_counter")
+-  self:set_amount_savegame_variable("amount_monster_horn_counter")
++  self:set_savegame_variable("possession_monster_tail")
++  self:set_amount_savegame_variable("amount_monster_tail")
+ function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_monster_tail_counter")
+-  self:set_amount_savegame_variable("amount_monster_tail_counter")
++  self:set_savegame_variable("possession_nayru_ether")
+-function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_photo_counter")
+-  self:set_amount_savegame_variable("amount_photo_counter")
+-function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_seashell_counter")
+-  self:set_amount_savegame_variable("amount_seashell_counter")
+-  self:set_savegame_variable("possession_slim_key")
+-function item:on_obtaining(variant, savegame_variable)
+-  self:set_savegame_variable("possession_tail_key")
+-function item:on_obtaining(variant, savegame_variable)
++  item:set_savegame_variable("possession_thunder_rod")
+-  self:set_savegame_variable("possession_tunic")
+-function item:on_obtained(variant, savegame_variable)
+-  savegame_variable = "dungeons_1_final_door",
+   treasure_savegame_variable = "dungeon_1_compass",
+-  treasure_savegame_variable = "dungeon_1_0f_29_rupees",
+-  treasure_savegame_variable = "dungeon_1_0f_29_piece_of_heart",
++  treasure_savegame_variable = "dungeon_1_0f_29_rupees",
++  treasure_savegame_variable = "dungeon_1_0f_29_piece_of_heart",
+-  savegame_variable = "dungeon_1_door_small_key",
++  savegame_variable = "dungeon_1_0f_door_28_33",
+   opening_method = "interaction_if_savegame_variable",
+-  savegame_variable = "door_d1_23_n1",
++  savegame_variable = "dungeon_1_0f_door_18_23",
+   treasure_savegame_variable = "treasure_d1",
+   treasure_savegame_variable = "dungeon_1_0f_23_chest_small_key",
++  treasure_savegame_variable = "dungeon_1_map",
+-  treasure_savegame_variable = "dungeon_1_map",
++  savegame_variable = "dungeon_1_0f_door_28_33",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_1_0f_door_28_29",
++  savegame_variable = "dungeon_1_0f_door_28_29",
+-  savegame_variable = "dungeon_10_1f_31_enemies",
+-  savegame_variable = "dungeon_10_1f_31_enemies",
+-  savegame_variable = "dungeon_10_1f_31_enemies",
+-  savegame_variable = "dungeon_10_1f_31_enemies",
+-  savegame_variable = "dungeon_10_1f_31_enemies",
+-  treasure_savegame_variable = "dungeon_10_1f_yellow_key",
++  savegame_variable = "dungeon_10_1f_31_enemies",
++  savegame_variable = "dungeon_10_1f_31_enemies",
++  savegame_variable = "dungeon_10_1f_31_enemies",
++  savegame_variable = "dungeon_10_1f_31_enemies",
++  savegame_variable = "dungeon_10_1f_31_enemies",
++  treasure_savegame_variable = "dungeon_10_1f_silver_key",
++  treasure_savegame_variable = "dungeon_16_3f_1_chest_small_key",
++  savegame_variable = "dungeon_16_3f_door_1_2",
++  savegame_variable = "dungeon_16_3f_door_1_3",
++  treasure_savegame_variable = "dungeon_16_3f_1_enemy_small_key",
++  treasure_savegame_variable = "dungeon_5_1f_destructible_small_key",
++  treasure_savegame_variable = "dungeon_5_map",
++  treasure_savegame_variable = "dungeon_5_1f_20_chest_smal_key",
++  treasure_savegame_variable = "dungeon_5_compass",
++  savegame_variable = "dungeon_5_1f_door_29_30",
+-  treasure_savegame_variable = "dungeon_5_1f_destructible_small_key",
+-  treasure_savegame_variable = "dungeon_5_map",
++  savegame_variable = "dungeon_5_1f_door_30_36",
++  savegame_variable = "dungeon_5_1f_door_30_36",
++  savegame_variable = "dungeon_5_1f_door_29_30",
+-  treasure_savegame_variable = "dungeon_5_1f_20_chest_smal_key",
+-  treasure_savegame_variable = "dungeon_5_compass",
++  savegame_variable = "dungeon_5_1f_door_20_21",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_5_1f_door_4_10",
++  savegame_variable = "dungeon_5_1f_door_4_10",
++  savegame_variable = "dungeon_5_1f_door_9_15",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_5_1f_door_9_15",
++  opening_method = "interaction_if_savegame_variable",
++  treasure_savegame_variable = "dungeon_5_1f_9_chest_small_key",
+-  savegame_variable = "dungeon_5_1f_door_29_30",
+-  savegame_variable = "dungeon_5_1f_door_30_36",
+-  savegame_variable = "dungeon_5_1f_door_30_36",
+-  savegame_variable = "dungeon_5_1f_door_29_30",
++  savegame_variable = "dungeon_5_1f_door_20_21",
+   opening_method = "interaction_if_savegame_variable",
+-  opening_method = "interaction_if_savegame_variable",
++  treasure_savegame_variable = "dungeon_5_1f_30_rupees",
+-  opening_method = "interaction_if_savegame_variable",
++  treasure_savegame_variable = "dungeon_5_1f_10_chest_small_key",
++  treasure_savegame_variable = "dungeon_5_1f_16_chest_small_key",
++  treasure_savegame_variable = "dungeon_5_1f_6_chest_rupees",
+-  opening_method = "interaction_if_savegame_variable",
+-  treasure_savegame_variable = "dungeon_5_1f_9_chest_small_key",
+   treasure_savegame_variable = "dungeon_5_1f_destructible_small_key",
+   treasure_savegame_variable = "dungeon_5_map",
+-  treasure_savegame_variable = "dungeon_5_1f_20_chest_smal_key",
+   treasure_savegame_variable = "dungeon_5_compass",
+-  savegame_variable = "dungeon_5_1f_door_29_30",
+-  savegame_variable = "dungeon_5_1f_door_30_36",
+-  savegame_variable = "dungeon_5_1f_door_30_36",
+-  savegame_variable = "dungeon_5_1f_door_29_30",
+-  savegame_variable = "dungeon_6_0f_door_33",
+-  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_0f_door_33",
++  opening_method = "interaction_if_savegame_variable",
+   savegame_variable = "dungeon_6_0f_door_14_26_1",
+   savegame_variable = "dungeon_6_0f_door_14_26_2",
+   opening_method = "interaction_if_savegame_variable",
+   treasure_savegame_variable = "dungeon_6_map",
+   savegame_variable = "dungeon_6_0f_door_14_26_1",
+   savegame_variable = "dungeon_6_0f_door_14_26_2",
+   opening_method = "interaction_if_savegame_variable",
+   treasure_savegame_variable = "dungeon_6_0f_18_chest_small_key",
+   treasure_savegame_variable = "dungeon_6_0f_27_pot_small_key",
++  savegame_variable = "dungeon_6_0f_door_27_33",
++  savegame_variable = "dungeon_6_0f_door_27_33",
++  savegame_variable = "dungeon_6_0f_door_33_34",
++  savegame_variable = "dungeon_6_0f_door_33_34",
++  treasure_savegame_variable = "dungeon_6_b1_27_pot_small_key",
++  savegame_variable = "dungeon_6_b1_door_24_30",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_24_30",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_24_30",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_24_30",
++  opening_method = "interaction_if_savegame_variable",
++  treasure_savegame_variable = "dungeon_6_b1_29_chest_small_key",
++  treasure_savegame_variable = "dungeon_6_b1_26_chest_small_key",
++  savegame_variable = "dungeon_6_b1_door_28_34",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_27",
++  opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_28_34",
++  opening_method = "interaction_if_savegame_variable",
+-  savegame_variable = "dungeon_6_b1_door_24_30",
+-  opening_method = "interaction_if_savegame_variable",
+-  savegame_variable = "dungeon_6_b1_door_24_30",
++  savegame_variable = "dungeon_6_b1_door_27",
+   opening_method = "interaction_if_savegame_variable",
++  savegame_variable = "dungeon_6_b1_door_17_18",
++  savegame_variable = "dungeon_6_b1_door_17_18",
++  treasure_savegame_variable = "dungeon_6_b1_18_chest_small_key",
++  savegame_variable = "dungeon_6_b1_door_17_23",
++  savegame_variable = "dungeon_6_b1_door_17_23",
+-  savegame_variable = "d9_2f_b4_lynel",
+-  treasure_savegame_variable = "d9_2f_b4_sm",
+-  treasure_savegame_variable = "island_stone_rupee",
+-  treasure_savegame_variable = "island_invisible_piece_of_heart",
+-  treasure_savegame_variable = "island_rupee_8",
+-  treasure_savegame_variable = "island_rupee_10",
+-  treasure_savegame_variable = "island_rupee_9",
+-  treasure_savegame_variable = "island_rupee_11",
+-  treasure_savegame_variable = "island_rupee_12",
+-  treasure_savegame_variable = "island_rupee_13",
+-  treasure_savegame_variable = "island_scaring_rupee_obtained",
+-  treasure_savegame_variable = "island_rupee_1",
+-  treasure_savegame_variable = "island_rupee_2",
+-  treasure_savegame_variable = "island_rupee_3",
+-  treasure_savegame_variable = "island_rupee_4",
+-  treasure_savegame_variable = "island_rupee_5",
+-  treasure_savegame_variable = "island_rupee_6",
+-  treasure_savegame_variable = "island_rupee_7",
+-  treasure_savegame_variable = "island_rupee_14",
+-  treasure_savegame_variable = "island_rupee_15",
+-  treasure_savegame_variable = "island_rupee_16",
+-  treasure_savegame_variable = "island_rupee_17",
+-  treasure_savegame_variable = "island_rupee_18",
+-  treasure_savegame_variable = "island_rupee_19",
+-  treasure_savegame_variable = "island_rupee_20",
+-  treasure_savegame_variable = "island_rupee_21",
+-  treasure_savegame_variable = "island_rupee_22",
+-  treasure_savegame_variable = "island_rupee_23",
+-  treasure_savegame_variable = "island_rupee_24",
+-  treasure_savegame_variable = "island_rupee_25",
+-  treasure_savegame_variable = "island_rupee_26",
+-  treasure_savegame_variable = "island_rupee_27",
++  treasure_savegame_variable = "inside_east_mountains_divine_ore_chest",-  savegame_variable = "door_temple_of_time",
+-  savegame_variable = "door_temple_of_time",
+-  treasure_savegame_variable = "island_stone_rupee",
++-- Configuration variables+  savegame_variable = "outside_miracles_coast_weak_door",
++  treasure_savegame_variable = "outside_cordinia_piece_of_heart",
++  treasure_savegame_variable = "outside_forests_coast_piece_of_heart",
++  treasure_savegame_variable = "outside_zora_river_piece_of_heart",-  treasure_savegame_variable = "outside_zora_falls_piece_of_heart_2",
++      savegame_variable = "dungeon_8_boss",
++      savegame_variable = "dungeon_9_boss",
++      savegame_variable = "dungeon_13_boss",
++      savegame_variable = "dungeon_14_boss",
++      savegame_variable = "dungeon_16_boss",
+-        savegame_variable = "dungeon_4_boss",
+-        savegame_variable = "dungeon_5_boss",
+-        savegame_variable = "dungeon_6_boss",
+-        savegame_variable = "dungeon_10_boss",
+-  -- Returns the name of the boolean variable that stores the exploration
+-  function game:get_explored_dungeon_room_variable(dungeon_index, floor, room)
+-      self:get_explored_dungeon_room_variable(dungeon_index, floor, room)
+-      self:get_explored_dungeon_room_variable(dungeon_index, floor, room),-    -- - $v: variable
++				and boss.savegame_variable ~= nil
++				and not self.game:get_value(boss.savegame_variable) then
++					and chest.savegame_variable ~= nil
++					and not self.game:get_value(chest.savegame_variable) then+					savegame_variable = chest_properties.treasure_savegame_variable,
+-        and boss.savegame_variable ~= nil
+-        and not self.game:get_value(boss.savegame_variable) then
+-          and chest.savegame_variable ~= nil
+-          and not self.game:get_value(chest.savegame_variable) then-          savegame_variable = chest_properties.treasure_savegame_variable,
+-        and boss.savegame_variable ~= nil
+-        and not self.game:get_value(boss.savegame_variable) then
+-          and chest.savegame_variable ~= nil
+-          and not self.game:get_value(chest.savegame_variable) then-          savegame_variable = chest_properties.treasure_savegame_variable,
+-        and boss.savegame_variable ~= nil
+-        and not self.game:get_value(boss.savegame_variable) then
+-          and chest.savegame_variable ~= nil
+-          and not self.game:get_value(chest.savegame_variable) then
+-          savegame_variable = chest_properties.treasure_savegame_variable,
+-        and boss.savegame_variable ~= nil
+-        and not self.game:get_value(boss.savegame_variable) then
+-          and chest.savegame_variable ~= nil
+-          and not self.game:get_value(chest.savegame_variable) then-          savegame_variable = chest_properties.treasure_savegame_variable,

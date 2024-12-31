@@ -797,7 +797,7 @@ function console:on_draw(dst_surface)
 	-- draw cursor
 	local line, char = self:get_cursor_position(self.cursor)
 	x = origin + ((char - 1) * self.char_width)
-	y = origin + ((line - 1) * self.line_height) + math.floor((self.line_height - self.cursor_sprite_h) / 2)
+	y = origin + ((line - 1) * self.line_height) + 5
 	self.cursor_sprite:draw(dst_surface, x, y)
 end
 

@@ -92,8 +92,8 @@ function tone_manager:create(game)
     -- Sleeping during day takes player to 2000 (8pm) and sleeping at night takes us to 0800 (8am).
     if game:get_value("time_of_day") == "day" then
       game:set_value("time_of_day", "night")
-      game:set_value("hour_of_day", 20)
-      minute = 0
+      game:set_value("hour_of_day", 19)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(true)
       end
@@ -102,8 +102,8 @@ function tone_manager:create(game)
       end
     else
       game:set_value("time_of_day", "day")
-      game:set_value("hour_of_day", 8)
-      minute = 0
+      game:set_value("hour_of_day", 7)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(false)
       end

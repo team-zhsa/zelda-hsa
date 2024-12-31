@@ -9570,16 +9570,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1232,
-  y = 1280,
-  width = 16,
-  height = 16,
-  pattern = "6146",
-  tileset = "outside_buildings",
-}
-
-tile{
-  layer = 0,
   x = 64,
   y = 992,
   width = 16,
@@ -30314,6 +30304,15 @@ tile{
   pattern = "84",
 }
 
+tile{
+  layer = 0,
+  x = 1232,
+  y = 1280,
+  width = 16,
+  height = 16,
+  pattern = "1038",
+}
+
 destination{
   name = "from_kokiri",
   layer = 0,
@@ -31052,9 +31051,19 @@ npc{
   layer = 0,
   x = 1240,
   y = 1293,
+  properties = {
+    {
+      key = "dialogue_id",
+      value = "maps.out.parapa.sign_1",
+    },
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.parapa.sign_1",
+  sprite = "entities/sign",
 }
 
 destructible{
