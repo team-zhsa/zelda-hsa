@@ -7,7 +7,7 @@ require("scripts/multi_events")
 local map_meta = sol.main.get_metatable("map")
 
 function item:on_created()
-
+	self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_shovel")
   item:set_assignable(true)
 
@@ -23,7 +23,7 @@ function item:on_using()
   local dig_indexes = item:test_dig()
   if dig_indexes == nil then
     -- No digging possible here.
-    sol.audio.play_sound("sword_tapping")
+    sol.audio.play_sound("hero/sword_tapping")
     hero:set_animation("shovel_fail", function()
       hero:unfreeze()
     end)

@@ -6,13 +6,13 @@ function item:on_created()
   self:set_savegame_variable("possession_bow")
   self:set_amount_savegame_variable("amount_bow")
   self:set_assignable(true)
-  item:set_sound_when_brandished("items/major_item")
+  self:set_sound_when_brandished("items/get_major_item")
 end
 
 function item:on_using()
 
   if self:get_amount() == 0 then
-    sol.audio.play_sound("common/wrong")
+    sol.audio.play_sound("items/bow_no_arrows")
   else
     -- we remove the arrow from the equipment after a small delay because the hero
     -- does not shoot immediately

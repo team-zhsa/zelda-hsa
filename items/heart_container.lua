@@ -4,7 +4,7 @@ local item = ...
 function item:on_created()
 
   self:set_sound_when_picked(nil)
-  self:set_sound_when_brandished("items/heart_container")
+  self:set_sound_when_brandished("items/get_heart_container")
 end
 
 function item:on_obtained()

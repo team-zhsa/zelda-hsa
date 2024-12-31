@@ -7,6 +7,8 @@ local new_life = 12
 function item:on_created()
   item:set_savegame_variable("possession_healing_wand")
   item:set_assignable(true)
+  self:set_sound_when_brandished("items/get_major_item")
+
 end
 
 function item:on_variant_changed(new_variant)

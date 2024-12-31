@@ -15,9 +15,7 @@ local game = item:get_game()
 function item:on_created()
 	self:set_assignable(true)
 	self:set_savegame_variable("possession_book_of_mudora")
-  -- initialise the properties of your item here,
-  -- like whether it can be saved, whether it has an amount
-  -- and whether it can be assigned.
+	self:set_sound_when_brandished("items/get_major_item")
 end
 
 -- Event called when the hero starts using this item.

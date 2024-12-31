@@ -12,7 +12,7 @@ local audio_manager = require("scripts/audio_manager")
 
 -- Event called when the game is initialized.
 function item:on_created()
-
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_flippers")
   item.is_hero_diving = false
   item:set_sound_when_brandished(nil) 

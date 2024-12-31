@@ -1,7 +1,8 @@
 local item = ...
-
+local audio_manager = require("scripts/audio_manager")
 function item:on_created()
-
+  self:set_sound_when_picked("items/get_small_item_pick_"..math.random(0,1))
+  self:set_sound_when_brandished("items/get_minor_item")
   self:set_shadow("small")
   self:set_can_disappear(true)
   self:set_brandish_when_picked(false)
