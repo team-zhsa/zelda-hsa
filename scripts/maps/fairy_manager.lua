@@ -27,58 +27,57 @@ end
 
 -- Creates hearts around the hero and launch animation
 function fairy_manager:create_hearts(map, index, fairy_name, hearts, music_name)
-
-        local hero = map:get_hero()
-        local x, y, layer = hero:get_position()
-        local radius = 40
-        sol.timer.start(map, 150, function()
-            if (index < 8) then
-              local position_x = x
-              local position_y = y
-              if index == 0 then
-                position_y = position_y - radius
-              end
-              if index == 1 then
-                position_y = position_y - radius*math.sin(45 * math.pi / 180)
-                position_x = position_x + radius*math.cos(45  * math.pi / 180)
-              end
-              if index == 2 then
-                position_x = position_x + radius
-              end
-              if index == 3 then
-                position_y = position_y + radius*math.sin(135 * math.pi / 180)
-                position_x = position_x - radius*math.cos(135  * math.pi / 180)
-              end
-              if index == 4 then
-                position_y = position_y + radius
-              end
-              if index == 5 then
-                position_y = position_y - radius*math.sin(225 * math.pi / 180)
-                position_x = position_x + radius*math.cos(225  * math.pi / 180)
-              end
-              if index== 6 then
-                position_x = position_x - radius
-              end
-              if index == 7 then
-                position_y = position_y + radius*math.sin(315 * math.pi / 180)
-                position_x = position_x - radius*math.cos(315  * math.pi / 180)
-              end
-              hearts[index] = map:create_custom_entity({
-                sprite = "hud/heart",
-                x = position_x,
-                y = position_y,
-                width = 8,
-                height = 8,
-                layer = 2,
-                direction = 0
-              })
-              index = index + 1
-              sol.audio.play_sound("fairy_heal")
-              fairy_manager:create_hearts(map, index, fairy_name, hearts, music_name)
-            else
-              fairy_manager:animate_hearts(map, fairy_name, hearts, music_name)
-            end
-        end)
+  local hero = map:get_hero()
+  local x, y, layer = hero:get_position()
+  local radius = 40
+  sol.timer.start(map, 150, function()
+      if (index < 8) then
+        local position_x = x
+        local position_y = y
+        if index == 0 then
+          position_y = position_y - radius
+        end
+        if index == 1 then
+          position_y = position_y - radius*math.sin(45 * math.pi / 180)
+          position_x = position_x + radius*math.cos(45  * math.pi / 180)
+        end
+        if index == 2 then
+          position_x = position_x + radius
+        end
+        if index == 3 then
+          position_y = position_y + radius*math.sin(135 * math.pi / 180)
+          position_x = position_x - radius*math.cos(135  * math.pi / 180)
+        end
+        if index == 4 then
+          position_y = position_y + radius
+        end
+        if index == 5 then
+          position_y = position_y - radius*math.sin(225 * math.pi / 180)
+          position_x = position_x + radius*math.cos(225  * math.pi / 180)
+        end
+        if index== 6 then
+          position_x = position_x - radius
+        end
+        if index == 7 then
+          position_y = position_y + radius*math.sin(315 * math.pi / 180)
+          position_x = position_x - radius*math.cos(315  * math.pi / 180)
+        end
+        hearts[index] = map:create_custom_entity({
+          sprite = "hud/heart",
+          x = position_x,
+          y = position_y,
+          width = 8,
+          height = 8,
+          layer = 2,
+          direction = 0
+        })
+        index = index + 1
+        sol.audio.play_sound("fairy_heal")
+        fairy_manager:create_hearts(map, index, fairy_name, hearts, music_name)
+      else
+        fairy_manager:animate_hearts(map, fairy_name, hearts, music_name)
+      end
+  end)
 end
 
 

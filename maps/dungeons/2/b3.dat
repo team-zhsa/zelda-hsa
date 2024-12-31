@@ -9004,6 +9004,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b3_door_15_20",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -9015,6 +9016,7 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b3_door_15_20",
   opening_method = "explosion",
+   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 enemy{
@@ -10527,21 +10529,23 @@ enemy{
 }
 
 chest{
+  name = "chest_12_silver_key",
   layer = 0,
   x = 480,
   y = 637,
-  treasure_name = "yellow_key",
-  treasure_savegame_variable = "dungeon_2_yellow_key",
-  sprite = "entities/chests/chest_LttP",
+  treasure_name = "silver_key",
+  treasure_savegame_variable = "dungeon_2_silver_key",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
+  name = "chest_12_treasure",
   layer = 0,
   x = 480,
   y = 565,
   treasure_name = "bow",
   treasure_savegame_variable = "dungeon_2_treasure",
-  sprite = "entities/chests/chest_big_LttP",
+  sprite = "entities/chests/chest_big_normal",
   opening_condition = "dungeon_2_big_key",
 }
 
@@ -12180,6 +12184,7 @@ destination{
 }
 
 door{
+  name = "door_7_s",
   layer = 0,
   x = 472,
   y = 440,
@@ -12192,6 +12197,7 @@ door{
 }
 
 door{
+  name = "door_12_n",
   layer = 0,
   x = 472,
   y = 504,

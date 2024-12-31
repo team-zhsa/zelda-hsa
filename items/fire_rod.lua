@@ -1,7 +1,7 @@
 local item = ...
 local game = item:get_game()
 
-local magic_needed = 5 -- Number of magic points required.
+local magic_needed = 1 -- Number of magic points required.
 
 function item:on_created()
 
@@ -27,9 +27,7 @@ function item:shoot()
     direction = direction,
   })
 
- -- local fire_sprite = entity:get_sprite("fire")
-  --fire_sprite:set_animation("flying")
-	sol.audio.play_sound("items/fire_rod/shoot")
+	sol.audio.play_sound("items/fire_rod")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)
@@ -38,7 +36,7 @@ function item:shoot()
   movement:start(fire)
 end
 
-function item:start_using()
+function item:on_using()
 
   local map = item:get_map()
   local hero = map:get_hero()
@@ -79,7 +77,7 @@ function item:start_using()
   end)
 end
 
--- Initialise the metatable of appropriate entities to work with the fire.
+-- initialise the metatable of appropriate entities to work with the fire.
 local function initialise_meta()
 
   -- Add Lua fire properties to enemies.
@@ -88,6 +86,7 @@ local function initialise_meta()
     -- Already done.
     return
   end
+
   enemy_meta.fire_reaction = 3  -- 3 life points by default.
   enemy_meta.fire_reaction_sprite = {}
   function enemy_meta:get_fire_reaction(sprite)
@@ -98,41 +97,28 @@ local function initialise_meta()
     return self.fire_reaction
   end
 
-  function enemy_meta:set_fire_reaction(reaction)
+  function enemy_meta:set_fire_reaction(reaction, sprite)
 
     self.fire_reaction = reaction
-    
   end
 
   function enemy_meta:set_fire_reaction_sprite(sprite, reaction)
 
     self.fire_reaction_sprite[sprite] = reaction
-    
   end
 
   -- Change the default enemy:set_invincible() to also
   -- take into account the fire.
   local previous_set_invincible = enemy_meta.set_invincible
   function enemy_meta:set_invincible()
-    
     previous_set_invincible(self)
     self:set_fire_reaction("ignored")
-    
   end
   local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
   function enemy_meta:set_invincible_sprite(sprite)
-    
     previous_set_invincible_sprite(self, sprite)
     self:set_fire_reaction_sprite(sprite, "ignored")
-    
   end
 
 end
-
-function item:on_using()
-  item:start_using()
-  item:set_finished()
-end
-
 initialise_meta()
-

@@ -48,7 +48,6 @@ function config:create(item, properties)
 
   function item:summon_bird()
     local game = self:get_game()
-    local map = self:get_map()
   	local map = game:get_map()
    	local hero = map:get_hero()
   	local x,y,layer = hero:get_position()

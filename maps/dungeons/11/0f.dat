@@ -1,13 +1,13 @@
 properties{
-  x = 320,
+  x = 3201,
   y = 0,
   width = 1600,
   height = 1200,
   min_layer = -1,
   max_layer = 2,
-  world = "dungeon_11",
+  world = "dungeon_1",
   floor = 0,
-  tileset = "absolute_dungeon_11",
+  tileset = "absolute_dungeon_10",
   music = "dungeons/11_ice",
 }
 
@@ -1401,6 +1401,34 @@ stairs{
   y = 608,
   direction = 2,
   subtype = 4,
+}
+
+separator{
+  name = "auto_separator_5",
+  layer = -1,
+  x = 632,
+  y = 960,
+  width = 16,
+  height = 240,
+}
+
+dynamic_tile{
+  name = "invisible_tile_1",
+  layer = -1,
+  x = 384,
+  y = 0,
+  width = 1216,
+  height = 896,
+  pattern = "hole",
+}
+
+separator{
+  name = "auto_separator_6",
+  layer = -1,
+  x = 1272,
+  y = 960,
+  width = 16,
+  height = 240,
 }
 
 tile{
@@ -7720,7 +7748,7 @@ chest{
   y = 1021,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_11_map",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 enemy{
@@ -7831,7 +7859,7 @@ destination{
   name = "from_outside",
   layer = 0,
   x = 800,
-  y = 1165,
+  y = 1173,
   direction = 1,
 }
 
@@ -7924,7 +7952,7 @@ chest{
   y = 661,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_11_0f_12_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 custom_entity{
@@ -8192,7 +8220,7 @@ chest{
   y = 381,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_11_0f_9_chest_small_key",
-  sprite = "entities/chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 jumper{

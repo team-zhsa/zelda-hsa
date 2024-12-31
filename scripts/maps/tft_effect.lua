@@ -10,8 +10,6 @@ tftshader:set_uniform('previous',previous)
 
 local persistence = 0.75
 
-
-
 local big_dst = sol.surface.create(previous:get_size())
 local enabled
 

@@ -49,6 +49,7 @@ if game:get_value("dungeon_2_miniboss") ~= true then
 
 	miniboss:register_event("on_dead", function()
 		audio_manager:play_music("dungeons/02_forest")
+		treasure_manager:appear_pickable(map, "pickable_18_big_key")
 	end)
 end
 

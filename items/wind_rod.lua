@@ -1,7 +1,7 @@
 local item = ...
 local game = item:get_game()
 
-local magic_needed = 13 -- Number of magic points required.
+local magic_needed = 1 -- Number of magic points required.
 
 function item:on_created()
 
@@ -18,16 +18,16 @@ function item:shoot()
 
   local x, y, layer = hero:get_center_position()
   local wind = map:create_custom_entity({
-    model = "rod_wind",
+    model = "wind",
     x = x,
-    y = y + 3,
+    y = y - 8,
     layer = layer,
-    width = 8,
-    height = 8,
+    width = 16,
+    height = 16,
     direction = direction,
   })
 
-	sol.audio.play_sound("wind")
+	sol.audio.play_sound("items/wind_rod")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)
@@ -64,7 +64,7 @@ function item:on_using()
 
   -- Make sure that the wind rod stays on the hero.
   -- Even if he is using this item, he can move
-  -- because of holes or ice.
+  -- because of holes or wind.
   sol.timer.start(wind_rod, 10, function()
     wind_rod:set_position(hero:get_position())
     return true

@@ -12,6 +12,7 @@ local game = map:get_game()
 local separator_manager = require("scripts/maps/separator_manager.lua")
 
 function map:on_started()
+  map.fsa_dark = true
 	separator_manager:manage_map(map)
   if game:has_item("magic_bar") then
     npc_wizard:set_enabled(false)

@@ -34,14 +34,9 @@ blacksmith_dialog_4:register_event("on_interaction", function()
   blacksmith_interaction()
 end)
 
-function sensor_shop_welcome:on_activated()
-  game:start_dialog("maps.houses.east_castle.blacksmith.merchant_welcome")
-  sensor_shop_welcome:remove()
-end
-
 function sensor_welcome:on_activated()
   game:start_dialog("maps.houses.east_castle.blacksmith.welcome")
-  sensor_shop_welcome:remove()
+  sensor_welcome:remove()
 end
 
 function blacksmith_interaction()
@@ -63,10 +58,4 @@ function blacksmith_interaction()
   elseif game:get_value("sword_being_upgraded", true) then
     game:start_dialog("maps.houses.east_castle.blacksmith.sword_upgrade_not_ready")
   end
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
 end

@@ -13,26 +13,12 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 
 -- Map events
 map:register_event("on_started", function()
-
-  -- Chests
   treasure_manager:disappear_chest(map, "chest_7_small_key")
   treasure_manager:disappear_chest(map, "chest_6_compass")
   treasure_manager:appear_chest_when_torches_lit(map, "torch_6_", "chest_6_compass")
-
-
-  -- Doors
   map:set_doors_open("door_11_n", true)
   map:set_doors_open("door_11_e", true)
   map:set_doors_open("door_11_s", true)
-
-
-  -- Enemies
-
-  -- Music
-
-  -- Pickables
-
-  -- Separators
   separator_manager:manage_map(map)
 
 end)

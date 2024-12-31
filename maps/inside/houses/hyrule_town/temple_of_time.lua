@@ -96,7 +96,7 @@ end
 		local hero_sprite = hero:get_sprite()
 		local hero_x, hero_y =  hero:get_position()
 		hero_sprite:set_animation("grabbing")
-		sol.audio.play_sound("characters/link/voice/pulling_heavy_object0")
+		sol.audio.play_sound("hero/voice/pulling_heavy_object0")
 		pendant_surface:fade_in()
 		pendant_1:set_opacity(0)
 		pendant_2:set_opacity(0)

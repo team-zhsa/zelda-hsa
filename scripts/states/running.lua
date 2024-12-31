@@ -177,7 +177,7 @@ function state:on_command_released(command)
   local game = state:get_game()
   for i=1, 2 do
     local item =game:get_item_assigned(""..i)
-    if command == "item_"..i and item and item:get_name()=="pegasus_shoes" then
+    if command == "item_"..i and item and item:get_name()=="pegasus_boots" then
       local entity=state:get_entity()
       if entity.running_timer~=nil then
         entity:unfreeze()

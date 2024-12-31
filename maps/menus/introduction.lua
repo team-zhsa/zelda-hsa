@@ -60,7 +60,7 @@ dialog_background_bottom:fill_color({255, 255, 128, 32})
 local black_surface = sol.surface.create()
 
 -- Map surface
-local map_surface = sol.surface.create("menus/map/scrollable_hyrule_world_map.png")
+local map_surface = sol.surface.create("menus/map/full_hyrule_world_map.png")
 local scale_delta = 0.05
 local scale_max = 8
 local scale_timer = 100
@@ -175,7 +175,7 @@ function phase_4()
 		wizard:get_sprite():set_animation("invoking")
 		sol.timer.start(map, 1000, function()
 			wizard:get_sprite():set_animation("stopped")
-			sol.audio.play_sound("boss_charge")
+			sol.audio.play_sound("enemies/boss_charge")
 			agahnim:get_sprite():fade_in(40, function()
 				game:start_dialog("scripts.menus.introduction.intro_7", game:get_player_name(), function()
 					sol.timer.start(map, 100, function()
@@ -233,29 +233,29 @@ function phase_6()
 			hero:unfreeze()
 
 			-- Go to the first map.
-			hero:teleport("inside/castle/rooms", "start_game")
+			hero:teleport("inside/castle/1f", "start_game")
 		end)
 	end
 end
 
-function map:on_started()
+map:register_event("on_started", function()
 	map:set_joypad_commands()
 	effect_manager:set_effect(game, nil)
 	game:set_value("mode", "snes")
 	game:get_dialog_box():set_style("empty")
 	map:get_camera():set_position(0, 0)
-	sol.audio.play_music("cutscenes/cutscene_introduction")
+	sol.audio.play_music("cutscenes/prologue")
 	black_surface:fill_color({ 0, 0, 0 })
 	black_surface:set_opacity(0)
 	map_surface:set_opacity(0)
 	map_surface:set_scale(scale_x, scale_y)
 	game:set_hud_enabled(false)
 	phase_1()
-end
+end)
 
-function map:on_opening_transition_finished()
+map:register_event("on_opening_transition_finished", function()
 	hero:freeze()
-end
+end)
 
 function map:set_joypad_commands()
 	-- Button mapping according commonly used xbox gamepad on PC

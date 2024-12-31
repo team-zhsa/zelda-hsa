@@ -214,7 +214,10 @@ function savegame_menu:read_savegames()
     if sol.game.exists(slot.file_name) then
       -- Existing file.
       slot.player_name_text:set_text(slot.savegame:get_value("player_name"))
-      slot.time_saved_text:set_text(slot.savegame:get_value("time_saved"))
+      if slot.savegame:get_value("time_saved") == nil then
+        slot.savegame:set_value("time_saved", "0")
+      end
+      slot.time_saved_text:set_text(os.date("%d/%m/%Y %H:%M", tonumber(slot.savegame:get_value("time_saved"))))
       -- Hearts.
       local hearts_class = require("scripts/hud/hearts")
       slot.hearts_view = hearts_class:new(slot.savegame)
@@ -478,7 +481,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
   if key == "space" or key == "return" then
    if self.cursor_position == 5 then
       -- The user chooses "yes".
-      sol.audio.play_sound("menus/fileselect_erase0")
+      sol.audio.play_sound("menus/fileselect_erase")
       local slot = self.slots[self.save_number_to_erase]
       sol.game.delete(slot.file_name)
       self.cursor_position = self.save_number_to_erase
@@ -611,7 +614,7 @@ function savegame_menu:key_pressed_phase_options(key)
       -- Set an option.
       local option = self.options[self.options_cursor_position]
       if not self.modifying_option then
-	sol.audio.play_sound("menus/option_modifyvalue")
+	sol.audio.play_sound("menus/modify_value")
 	self.left_arrow_sprite:set_frame(0)
 	self.right_arrow_sprite:set_frame(0)
 	option.label_text:set_color{255, 255, 255}
@@ -672,7 +675,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index % #option.values) + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menus/option_modifyvalue")
+      sol.audio.play_sound("menus/modify_value")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true
@@ -681,7 +684,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index + #option.values - 2) % #option.values + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menus/option_modifyvalue")
+      sol.audio.play_sound("menus/modify_value")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true

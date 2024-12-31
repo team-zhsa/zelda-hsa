@@ -9,7 +9,7 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
   local hud_icon = {}
   hud_icon.x, hud_icon.y = icon_x, icon_y
 
-  hud_icon.font, hud_icon.font_size = "alttp_ttf", 8--language_manager:get_hud_icons_font()
+  hud_icon.font, hud_icon.font_size = "alttp", 8--language_manager:get_hud_icons_font()
   hud_icon.font_color = {255, 255, 255}
   hud_icon.font_stroke_color = {0, 0, 0}
 
@@ -275,7 +275,7 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
         cache_surface = sol.surface.create(text_surface_w + 2, text_surface_h + 6)
         local total_surface_w, total_surface_h = cache_surface:get_size()
         text_surface:set_xy(total_surface_w / 2, total_surface_h / 2 - 1)
-        text_fx_helper:draw_text_with_stroke_and_shadow(cache_surface, text_surface, hud_icon.font_stroke_color, hud_icon.font_stroke_color)
+        text_fx_helper:draw_text_with_stroke(cache_surface, text_surface, hud_icon.font_stroke_color, nil, nil, "hud")
       
         -- Then add it to the cache.
         hud_icon.foreground_text_cache[text] = cache_surface

@@ -12,7 +12,7 @@ local effects = {
 function tone_manager:create(game)
   local tone_menu = {}
   
-  local mr, mg, mb, ma = nil, nil, nil, nil
+  local mr, mg, mb, ma = nil, nil, nil, nil -- Create the map tone
   local cr, cg, cb = nil, nil, nil  -- Create the current tone
   local tr, tg, tb = nil, nil, nil  -- Create the target tone
   local minute = 0
@@ -92,8 +92,8 @@ function tone_manager:create(game)
     -- Sleeping during day takes player to 2000 (8pm) and sleeping at night takes us to 0800 (8am).
     if game:get_value("time_of_day") == "day" then
       game:set_value("time_of_day", "night")
-      game:set_value("hour_of_day", 20)
-      minute = 0
+      game:set_value("hour_of_day", 19)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(true)
       end
@@ -102,8 +102,8 @@ function tone_manager:create(game)
       end
     else
       game:set_value("time_of_day", "day")
-      game:set_value("hour_of_day", 8)
-      minute = 0
+      game:set_value("hour_of_day", 7)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(false)
       end
@@ -284,9 +284,8 @@ function tone_manager:create(game)
         shadow:fill_color{cr, cg, cb, 255}
       elseif not time_system and mr == nil then
         -- The map has undefined tone.
-
-  shadow = sol.surface.create(320, 240)
-  shadow:set_blend_mode("multiply")
+        shadow = sol.surface.create(320, 240)
+        shadow:set_blend_mode("multiply")
         shadow:fill_color{255, 255, 255, 255}
       end
       

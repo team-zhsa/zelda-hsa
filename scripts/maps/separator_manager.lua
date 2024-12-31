@@ -10,6 +10,7 @@
 -- If you prefer, you can also enable it automatically on all maps from game:on_map_changed().
 
 local separator_manager = {}
+require("scripts/multi_events")
 
 function separator_manager:manage_map(map)
 
@@ -24,7 +25,26 @@ function separator_manager:manage_map(map)
     local hero = map:get_hero()
     local d = hero:get_direction() * 2
     if game:is_in_dungeon() then
-	    hero:walk(d..d..d..d..d..d)
+      local _, _, z = hero:get_position()
+      if z == -1 then
+        hero:freeze()
+        hero:set_animation("walking")
+        local movement = sol.movement.create("path")
+        movement:set_path({d,d,d,d,d,d,d,d,d}) -- NOT WORKING TO DO
+        movement:set_speed(88)
+        movement:start(hero, function()
+          hero:unfreeze()
+        end)
+      else
+        hero:freeze()
+        hero:set_animation("walking")
+        local movement = sol.movement.create("path")
+        movement:set_path({d,d,d,d,d,d})
+        movement:set_speed(88)
+        movement:start(hero, function()
+          hero:unfreeze()
+        end)
+      end
     end
 
     -- Enemies.
@@ -48,7 +68,6 @@ function separator_manager:manage_map(map)
           name = enemy_place.name,
         })
         enemy:set_treasure(unpack(enemy_place.treasure))
-        enemy.on_dead = old_enemy.on_dead  -- For door_manager.
         enemy_place.enemy = enemy
       end
     end
@@ -68,14 +87,13 @@ function separator_manager:manage_map(map)
 
     local hero = map:get_hero()
     hero.respawn_point_saved=nil
-    local directions={
-      {48,0},
-      {0,-48},
-      {-48,0},
-      {0,48}
-    }
+    local directions={{48,0}, {0,-48}, {-48,0}, {0,48}}
+    local directions_low={{56,0}, {0,-56}, {-56,0}, {0,56}}
     local x,y,layer=hero:get_position()
-    local offset_x, offset_y=unpack(directions[hero:get_direction()+1])
+    local offset_x, offset_y
+    if layer ~= -1 then
+      offset_x, offset_y = unpack(directions[hero:get_direction()+1])
+    else offset_x, offset_y = unpack(directions_low[hero:get_direction()+1]) end
 
     hero:save_solid_ground(x+offset_x, y+offset_y, layer)
     hero.last_solid_ground={

@@ -14,7 +14,7 @@ local console = {
 	padding = 6,                          -- Padding of the console in pixels.
 
 	color = {32, 32, 32},                  -- Background color of the console.
-	opacity = 248,                        -- Background opacity of the console.
+	opacity = 200,                        -- Background opacity of the console.
 	font_color = {255, 255, 255},         -- Color of the font.
 	selection_color = {64, 128, 192},     -- Color of the selection.
 	selection_opacity = 80,               -- Selection opacity.
@@ -797,7 +797,7 @@ function console:on_draw(dst_surface)
 	-- draw cursor
 	local line, char = self:get_cursor_position(self.cursor)
 	x = origin + ((char - 1) * self.char_width)
-	y = origin + ((line - 1) * self.line_height) + math.floor((self.line_height - self.cursor_sprite_h) / 2)
+	y = origin + ((line - 1) * self.line_height) + 5
 	self.cursor_sprite:draw(dst_surface, x, y)
 end
 

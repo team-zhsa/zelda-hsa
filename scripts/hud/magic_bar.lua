@@ -72,13 +72,26 @@ function magic_bar_builder:new(game, config)
     return magic_bar.surface
   end
 
-  function magic_bar:on_draw(dst_surface)
+  function magic_bar:set_dst_position(x, y)
+    magic_bar.dst_x = x
+    magic_bar.dst_y = y
+  end
 
+  function magic_bar:get_surface()
+    return magic_bar.surface
+  end
+
+  -- Returns if the icon is transparent or not.
+  function magic_bar:is_transparent()
+    return magic_bar.hud_icon:set_transparent()
+  end
+
+  function magic_bar:on_draw(dst_surface)
     -- Is there a magic bar to show?
     if magic_bar.max_magic_displayed > 0 then
       local x, y = magic_bar.dst_x, magic_bar.dst_y
       local width, height = dst_surface:get_size()
-      y = magic_bar.dst_y + 8 * math.ceil(game:get_max_life()/60)
+      y = magic_bar.dst_y + 8 * (math.ceil(game:get_max_life()/60) - 1)
       if x < 0 then
         x = width + x
       end
@@ -87,20 +100,23 @@ function magic_bar_builder:new(game, config)
       end
 
       -- Max magic.
-      magic_bar.container_sprite:draw(dst_surface, x, y)
+      magic_bar.container_sprite:draw(magic_bar.surface, 0, y0)
 
       -- Current magic (with cross-multiplication to adapt the value to the smaller bar)
-      magic_bar.magic_bar_img:draw_region(0, 40, math.floor(magic_bar.magic_displayed * 114 / 150) + 1, 4, dst_surface, x + 3, y + 3)
+      magic_bar.magic_bar_img:draw_region(0, 40, math.floor(magic_bar.magic_displayed * 114 / 150) + 1, 4,
+      magic_bar.surface, 0 + 3, 0 + 3)
 
       -- Fix left and right borders.
       if magic_bar.magic_displayed == 0 then
         -- Fix darker pixels on the right border.
-        dst_surface:fill_color({40, 40, 40}, x + 1, y + 1, 1, 4)
+        --dst_surface:fill_color({40, 40, 40}, x + 1, y + 1, 1, 4)
       end
       if magic_bar.magic_displayed == magic_bar.max_magic_displayed then
         -- Fix darker pixels on the right border.
-        magic_bar.magic_bar_img:draw_region(135, 25, 1, 0, dst_surface, x + 41, y + 0)
+        magic_bar.magic_bar_img:draw_region(135, 25, 1, 0, magic_bar.surface, 0, 0)
       end
+      magic_bar.surface:set_opacity(magic_bar.transparent and 128 or 255)
+      magic_bar.surface:draw(dst_surface, x, y)
     end
   end
 
@@ -108,6 +124,12 @@ function magic_bar_builder:new(game, config)
     magic_bar:check()
   end
 
+-- Sets if the element is semi-transparent or not.
+function magic_bar:set_transparent(transparent)
+  if transparent ~= magic_bar.transparent then
+    magic_bar.transparent = transparent
+  end
+end
   return magic_bar
 end
 

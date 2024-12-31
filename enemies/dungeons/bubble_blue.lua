@@ -18,7 +18,7 @@ function enemy:on_attacking_hero(hero)
     hero:set_invincible(true, 200)
     if self:get_game():get_magic() > 0 then
       self:get_game():remove_magic(2)
-      sol.audio.play_sound("common/magic_bar/6")
+      sol.audio.play_sound("menus/magic_bar")
     end
   end
 end

@@ -1,26 +1,4 @@
 dialog{
-  id = "_cannot_break_without_boots",
-  skip = "all",
-  text = [[
-Oh ! Quel        
-drôle d'objet !  
-Peut-être que tu
-peux le briser  
-en fonçant dedans.
-]],
-}
-
-dialog{
-  id = "_cannot_lift_should_cut",
-  skip = "all",
-  text = [[
-Il te faudrait quelque
-chose de tranchant pour
-couper ces buissons...
-]],
-}
-
-dialog{
   id = "_cannot_lift_still_too_heavy",
   skip = "all",
   text = [[
@@ -78,6 +56,14 @@ ouvrir la serrure !
 }
 
 dialog{
+  id = "_cannot_open_without_silver_key",
+  text = [[
+Il te faut une clé d'argent pour
+ouvrir la serrure !
+]],
+}
+
+dialog{
   id = "_cannot_open_without_small_key",
   text = [[
 Rien à faire, cette porte semble
@@ -85,14 +71,6 @@ bloquée...
 
 Essaie de trouver une clé qui
 pourrait l'ouvrir.
-]],
-}
-
-dialog{
-  id = "_cannot_open_without_yellow_key",
-  text = [[
-Il te faut une clé jaune pour
-ouvrir la serrure !
 ]],
 }
 
@@ -110,28 +88,6 @@ dialog{
   text = [[
 Essaie d'activer ce cristal
 avec une épée ou un boomerang.
-]],
-}
-
-dialog{
-  id = "_found_fairy",
-  question = "1",
-  text = [[
-Tu as attrapé une fée !
-Elle est merveilleuse !
-
-Que vas-tu en faire ?
-La mettre dans un flacon !
-La garder !
-]],
-}
-
-dialog{
-  id = "_found_fairy.no_empty_bottle",
-  text = [[
-Tu n'as pas de flacon vide.
-Tu n'as pas le choix,
-relâche-la !
 ]],
 }
 
@@ -171,7 +127,7 @@ Ne pas acheter
 
 dialog{
   id = "_treasure.arrow.1",
-  icon = "3",
+  icon = "28",
   next = "_treasure.arrow.1.1",
   text = [[
 Tu as trouvé une Flèche !$0
@@ -189,7 +145,7 @@ ennemis !
 
 dialog{
   id = "_treasure.arrow.2",
-  icon = "3",
+  icon = "28",
   next = "_treasure.arrow.1.1",
   text = [[
 Tu as trouvé 5
@@ -200,7 +156,7 @@ Utilise l'Arc et les
 
 dialog{
   id = "_treasure.arrow.3",
-  icon = "3",
+  icon = "28",
   next = "_treasure.arrow.1.1",
   text = [[
 Tu as trouvé 10
@@ -211,6 +167,7 @@ Utilise l'Arc et les
 
 dialog{
   id = "_treasure.arrow.4",
+  icon = "28",
   text = [[
 Tu as 200 flèches.
 Félicitations !
@@ -221,20 +178,8 @@ lourd !
 }
 
 dialog{
-  id = "_treasure.beak_of_stone.1",
-  icon = "39",
-  text = [[
-Vous trouvez un 
-bec de pierre !
-Allez compléter
-une statue de
-chouette.
-]],
-}
-
-dialog{
   id = "_treasure.big_key.1",
-  icon = "118",
+  icon = "135",
   text = [[
 Tu as la Grande Clé ! $0
 Elle ouvre les verrous que les
@@ -243,27 +188,18 @@ petites clés ne peuvent ouvrir.
 }
 
 dialog{
-  id = "_treasure.bird_key.1",
-  icon = "42",
-  text = [[
-Tu as la        
-Clé Vautour!
-]],
-}
-
-dialog{
   id = "_treasure.blue_key.1",
-  icon = "125",
+  icon = "131",
   text = [[
-Tu as obtenu une clé bleue.
+Tu as obtenu une clé bleue ! $0
 Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
+pourrait bien servir...$0 Une idée ?
 ]],
 }
 
 dialog{
   id = "_treasure.blue_tunic.1",
-  icon = "44",
+  icon = "111",
   text = [[
 Tu as obtenu la Tunique Bleue !
 Maintenant, tu peux respirer
@@ -273,7 +209,7 @@ sous l'eau !
 
 dialog{
   id = "_treasure.bomb.1",
-  icon = "4",
+  icon = "10",
   next = "_treasure.bomb.1.1",
   text = [[
 Tu as obtenu une Bombe !
@@ -291,7 +227,7 @@ sur le bouton A.
 
 dialog{
   id = "_treasure.bomb.2",
-  icon = "4",
+  icon = "10",
   next = "_treasure.bomb.1.1",
   text = [[
 Tu as obtenu trois Bombes !
@@ -300,7 +236,7 @@ Tu as obtenu trois Bombes !
 
 dialog{
   id = "_treasure.bomb.3",
-  icon = "4",
+  icon = "10",
   next = "_treasure.bomb.1.1",
   text = [[
 Tu as obtenu huit Bombes !
@@ -309,7 +245,7 @@ Tu as obtenu huit Bombes !
 
 dialog{
   id = "_treasure.bomb.4",
-  icon = "4",
+  icon = "10",
   next = "_treasure.bomb.1.1",
   text = [[
 Tu as obtenu dix Bombes !
@@ -318,7 +254,7 @@ Tu as obtenu dix Bombes !
 
 dialog{
   id = "_treasure.bomb_bag.1",
-  icon = "53",
+  icon = "23",
   text = [[
 Tu as obtenu le Sac de Bombes !$0
 Il contient 20 bombes !
@@ -329,7 +265,7 @@ fais tout sauter !
 
 dialog{
   id = "_treasure.bomb_bag.2",
-  icon = "54",
+  icon = "24",
   text = [[
 Tu as obtenu le Grand Sac de
 Bombes !$0
@@ -340,7 +276,7 @@ Bombes au lieu de 20 !
 
 dialog{
   id = "_treasure.bomb_bag.3",
-  icon = "55",
+  icon = "25",
   text = [[
 Tu as obtenu le Grand Sac de
 Bombes !$0
@@ -351,7 +287,7 @@ Bombes au lieu de 30 !
 
 dialog{
   id = "_treasure.book_of_mudora.1",
-  icon = "106",
+  icon = "52",
   text = [[
 Tu as trouvé le livre de
 Mudora ! Il te permet de
@@ -362,7 +298,7 @@ des Hyliens.
 
 dialog{
   id = "_treasure.boomerang.1",
-  icon = "0",
+  icon = "5",
   text = [[
 Tu as le Boomerang !$0
 Fais un essai ! Pour choisir un
@@ -372,7 +308,7 @@ objet, appuie sur le bouton D.
 
 dialog{
   id = "_treasure.boomerang.2",
-  icon = "1",
+  icon = "6",
   text = [[
 Tu as le Boomerang Magique ! $0
 Tu peux le lancer plus vite et
@@ -381,21 +317,8 @@ plus loin que le vieux !
 }
 
 dialog{
-  id = "_treasure.boss_key.1",
-  icon = "118",
-  text = [[
-Tu as trouvé la
-Clé du Maître ! Tu
-peux maintenant
-entrer dans le
-repaire du maître
-des lieux !
-]],
-}
-
-dialog{
   id = "_treasure.bottle_1.1",
-  icon = "21",
+  icon = "60",
   text = [[
 C'est le Flacon Magique !$0
 Tu peux t'en servir pour y
@@ -405,7 +328,7 @@ stocker tout type de choses.
 
 dialog{
   id = "_treasure.bottle_2.1",
-  icon = "21",
+  icon = "60",
   text = [[
 C'est le Flacon Magique !$0
 Tu peux t'en servir pour y
@@ -415,7 +338,7 @@ stocker tout type de choses.
 
 dialog{
   id = "_treasure.bottle_3.1",
-  icon = "21",
+  icon = "60",
   text = [[
 C'est le Flacon Magique !$0
 Tu peux t'en servir pour y
@@ -425,7 +348,7 @@ stocker tout type de choses.
 
 dialog{
   id = "_treasure.bottle_4.1",
-  icon = "21",
+  icon = "60",
   text = [[
 C'est le Flacon Magique !$0
 Tu peux t'en servir pour y
@@ -445,17 +368,27 @@ jusqu'à ce que tu n'en aies plus.
 
 dialog{
   id = "_treasure.bow.2",
-  icon = "17",
+  icon = "2",
   text = [[
-Voici la Flèche de Lumière dont
-tu as besoin pour vaincre
-Ganon !
+Tu as obtenu le Super Arc !
+Il peut tirer trois flèches en
+même temps !
+]],
+}
+
+dialog{
+  id = "_treasure.bow_bomb.1",
+  icon = "4",
+  text = [[
+Tu as trouvé l'arc bombe !
+Il envoie des flèches
+explosives !
 ]],
 }
 
 dialog{
   id = "_treasure.compass.1",
-  icon = "129",
+  icon = "136",
   text = [[
 Tu as trouvé la Boussole !$0
 Désormais tu peux repérer la
@@ -466,63 +399,91 @@ Donjon !
 
 dialog{
   id = "_treasure.crystal_1.1",
+  icon = "143",
   text = [[
-Tu as délivré la première
-jeune fille !
+Tu as délivré le premier
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_2.1",
+  icon = "143",
   text = [[
-Tu as délivré la deuxième
-jeune fille !
+Tu as délivré le deuxième
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_3.1",
+  icon = "143",
   text = [[
-Tu as délivré la troisième
-jeune fille !
+Tu as délivré le troisième
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_4.1",
+  icon = "143",
   text = [[
-Tu as délivré la quatrième
-jeune fille !
+Tu as délivré le quatrième
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_5.1",
+  icon = "143",
   text = [[
-Tu as délivré la cinquième
-jeune fille !
+Tu as délivré le cinquième
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_6.1",
+  icon = "143",
   text = [[
-Tu as délivré la sixième
-jeune fille !
+Tu as délivré le sixième
+descendant des Sept Sages !
 ]],
 }
 
 dialog{
   id = "_treasure.crystal_7.1",
+  icon = "143",
   text = [[
-Tu as délivré la septième
-jeune fille !
+Tu as délivré le dernier
+descendant des Sept Sages !
+]],
+}
+
+dialog{
+  id = "_treasure.darkness_rod.1",
+  icon = "41",
+  text = [[
+Tu as obtenu le Sceptre des
+Ténèbres !$0
+Envoie l'esprit du mal sur tes
+ennemis !
+]],
+}
+
+dialog{
+  id = "_treasure.din_flame.1",
+  icon = "48",
+  text = [[
+Tu as obtenu la Flamme de Din !$0
+Elle te permet de revenir à
+l'éntrée du donjon !
 ]],
 }
 
 dialog{
   id = "_treasure.divine_ore.1",
-  icon = "92",
+  icon = "95",
   text = [[
 Tu as obtenu un fragment de
 Roche Divine !
@@ -531,7 +492,7 @@ Roche Divine !
 
 dialog{
   id = "_treasure.divine_ore.all_ores_obtained",
-  icon = "92",
+  icon = "95",
   text = [[
 Va à la forge pour améliorer ton
 épée !
@@ -539,27 +500,64 @@ Va à la forge pour améliorer ton
 }
 
 dialog{
-  id = "_treasure.face_key.1",
-  icon = "44",
+  id = "_treasure.doom_rod.1",
+  icon = "37",
   text = [[
-Tu as la        
-Clé Masque!
+Tu as obtenu le Sceptre du
+Jugement Dernier !$0
+Il envoie tous les sorts sur tes
+ennemis !
+
+Mais surveille ta barre de magie !
+]],
+}
+
+dialog{
+  id = "_treasure.fairy",
+  question = "1",
+  text = [[
+Tu as attrapé une fée !
+Elle est merveilleuse !
+
+Que vas-tu en faire ?
+La mettre dans un flacon !
+La garder !
+]],
+}
+
+dialog{
+  id = "_treasure.fairy.no_empty_bottle",
+  text = [[
+Tu n'as pas de flacon vide.
+Tu n'as pas le choix,
+relâche-la !
+]],
+}
+
+dialog{
+  id = "_treasure.farore_quake.1",
+  icon = "46",
+  text = [[
+Tu as obtenu la Secousse de
+Farore !$0
+Envoie un tremblement de terre
+dévastateur sur tes environs !
 ]],
 }
 
 dialog{
   id = "_treasure.feather.1",
-  icon = "7",
+  icon = "15",
   text = [[
-Tu as la Plume!$0
-Soudain, tu es plus 
-léger que l'air !
+Tu as la Plume !$0
+Soudain, tu es plus léger
+que l'air !
 ]],
 }
 
 dialog{
   id = "_treasure.fire_rod.1",
-  icon = "80",
+  icon = "30",
   text = [[
 Tu as trouvé la Baguette de Feu !$0
 Elle commande le feu rougeoyant !
@@ -569,8 +567,20 @@ Magique !
 }
 
 dialog{
+  id = "_treasure.fire_rod.2",
+  icon = "31",
+  text = [[
+Tu as trouvé la Super Baguette
+de Feu !$0 Elle envoie des flammes
+dévastatrices !
+Mais surveille ton Compteur
+Magique !
+]],
+}
+
+dialog{
   id = "_treasure.flippers.1",
-  icon = "49",
+  icon = "117",
   text = [[
 Tu as acheté les Palmes de
 Zora !$0 Elles vont te permettre
@@ -579,73 +589,8 @@ de nager même en eau profonde.
 }
 
 dialog{
-  id = "_treasure.golden_leaf.1",
-  icon = "115",
-  text = [[
-Une Feuille     
-d'Or !           
-Appuyez sur     
-START pour voir 
-combien vous en 
-avez !
-]],
-}
-
-dialog{
-  id = "_treasure.golden_leaf.2",
-  icon = "115",
-  text = [[
-Une Feuille     
-d'Or !           
-Appuyez sur     
-START pour voir 
-combien vous en 
-avez !
-]],
-}
-
-dialog{
-  id = "_treasure.golden_leaf.3",
-  icon = "115",
-  text = [[
-Une Feuille     
-d'Or !           
-Appuyez sur     
-START pour voir 
-combien vous en 
-avez !
-]],
-}
-
-dialog{
-  id = "_treasure.golden_leaf.4",
-  icon = "115",
-  text = [[
-Une Feuille     
-d'Or !           
-Appuyez sur     
-START pour voir 
-combien vous en 
-avez !
-]],
-}
-
-dialog{
-  id = "_treasure.golden_leaf.5",
-  icon = "115",
-  text = [[
-Tu as trouvé    
-la dernière     
-Feuille d'Or !   
-Amène-les chez  
-Richard. Parle- 
-lui de la Clé...
-]],
-}
-
-dialog{
   id = "_treasure.goron_amber.1",
-  icon = "184",
+  icon = "94",
   text = [[
 Tu as trouvé un fragment
 d'Ambre Goron !
@@ -654,17 +599,18 @@ d'Ambre Goron !
 
 dialog{
   id = "_treasure.green_key.1",
-  icon = "124",
+  icon = "130",
   text = [[
-Tu as obtenu une clé verte.
+Tu as obtenu une clé verte ! $0
 Je me demande bien à quoi elle
 pourrait bien servir...$0 Une idée ?
+
 ]],
 }
 
 dialog{
   id = "_treasure.green_tunic.1",
-  icon = "43",
+  icon = "110",
   text = [[
 Tu as obtenu la Tunique Verte !
 Elle n'est pas très efficace,
@@ -674,7 +620,7 @@ mais elle fera l'affaire.
 
 dialog{
   id = "_treasure.hammer.1",
-  icon = "5",
+  icon = "13",
   text = [[
 Tu as obtenu le Marteau Magique !$0
 Tu peux enfoncer les piquets de
@@ -685,80 +631,77 @@ d'autres objets.
 }
 
 dialog{
+  id = "_treasure.hammer.2",
+  icon = "14",
+  text = [[
+Tu as obtenu le Super Marteau !$0
+Tu peux enfoncer les piquets de
+bois dans le sol ! Tu peux aussi
+t'en servir pour pilonner
+d'autres objets.
+]],
+}
+
+dialog{
   id = "_treasure.healing_wand.1",
-  icon = "101",
+  icon = "32",
   text = [[
 Tu as obtenu le Sceptre de Soin. $0
-Utilise-le pour te régénérer !
+Utilise-le pour régénérer six
+coeurs !
 ]],
 }
 
 dialog{
   id = "_treasure.healing_wand.2",
-  icon = "101",
+  icon = "33",
   text = [[
 Tu as amélioré ton sceptre de
 Soin !$0
-Il te permet de récupérer plus
-d'énergie !
+Il te permet de récupérer
+neuf coeurs !
 ]],
 }
 
 dialog{
   id = "_treasure.healing_wand.3",
-  icon = "101",
+  icon = "34",
   text = [[
 Tu as amélioré ton sceptre de
 Soin !$0
-Il te permet de récupérer encore
-plus d'énergie !
+Il te permet de récupérer
+douze coeurs !
 ]],
 }
 
 dialog{
   id = "_treasure.heart.1",
-  icon = "176",
+  icon = "62",
   text = [[
-Tu as trouvé un
-Coeur !
+Tu as trouvé un Coeur !
 ]],
 }
 
 dialog{
   id = "_treasure.heart_container.1",
-  icon = "105",
+  icon = "86",
   text = [[
 Tu as trouvé un réceptacle de
 coeur !$0 Ton énergie vitale a
-augmenté d'un coeur !"
+augmenté d'un coeur !
 ]],
 }
 
 dialog{
   id = "_treasure.heart_triple.1",
-  icon = "175",
   text = [[
-Tu as trouvé trois
-Coeur !
-]],
-}
-
-dialog{
-  id = "_treasure.hero_shield.1",
-  icon = "140",
-  text = [[
-Tu as obtenu le Bouclier du 
-Héros !$0
-
-Utilise-le pour te protéger des
-attaques en appuyant sur
-\[controller_r\] !
+Tu as trouvé trois Coeurs !
 ]],
 }
 
 dialog{
   id = "_treasure.hookshot.1",
-  icon = "8",
+  icon = "16",
   text = [[
 CLING ! C'est le grappin !$0
 Il se détend et se contracte et
@@ -768,21 +711,41 @@ beaucoup d'objets !
 }
 
 dialog{
-  id = "_treasure.hylia_shield.1",
-  icon = "141",
+  id = "_treasure.hookshot.2",
+  icon = "17",
   text = [[
-Tu as obtenu le Bouclier 
-d'Hylia !$0
+CLING ! C'est le Super grappin !$0
+Il se détend et se contracte et
+CLING ! Il peut agripper
+beaucoup d'objets !
+]],
+}
 
-Il est plus puissant que l'ancien
-et permet de repousser les
-attaques de feu !
+dialog{
+  id = "_treasure.ice_rod.1",
+  icon = "38",
+  text = [[
+Tu as obtenu la Baguette de
+Glace !$0
+Gèle tous tes ennemis et découvre
+des passages secrets !
+]],
+}
+
+dialog{
+  id = "_treasure.ice_rod.2",
+  icon = "39",
+  text = [[
+Tu as obtenu la Super Baguette de
+Glace !$0
+Elle te permet d'atteindre des
+zones plus éloignées !
 ]],
 }
 
 dialog{
   id = "_treasure.lamp.1",
-  icon = "9",
+  icon = "19",
   text = [[
 Tu as obtenu la Lanterne !$0
 Maintenant tu peux allumer les
@@ -795,7 +758,7 @@ ta barre de magie !
 
 dialog{
   id = "_treasure.lens_of_truth.1",
-  icon = "16",
+  icon = "45",
   text = [[
 Tu as obtenu le Monocle de
 Vérité !
@@ -808,7 +771,7 @@ ton Compteur Magique !
 
 dialog{
   id = "_treasure.light_rod.1",
-  icon = "100",
+  icon = "36",
   text = [[
 Tu as trouvé la Baguette de
 Feu !$0 Elle envoie des rayons
@@ -819,7 +782,7 @@ Compteur Magique !
 
 dialog{
   id = "_treasure.magic_bar.1",
-  icon = "59",
+  icon = "81",
   text = [[
 Tu as obtenu la petite barre
 de magie ! $0Tu peux
@@ -830,7 +793,7 @@ qui en nécéssitent.
 
 dialog{
   id = "_treasure.magic_bar.2",
-  icon = "69",
+  icon = "82",
   text = [[
 Tu as obtenu la barre de magie
 moyenne !$0 Elle est plus grande
@@ -840,20 +803,17 @@ que l'ancienne !
 
 dialog{
   id = "_treasure.magic_cape.1",
-  icon = "13",
+  icon = "44",
   text = [[
-Tu as trouvé la Cape
-Magique !$0
-
-Elle t'avertira si
-tu t'approches d'un
-mur fragile.
+Tu as trouvé la Cape Magique !$0
+Elle te permet de devenir
+invincible un court instant.
 ]],
 }
 
 dialog{
   id = "_treasure.magic_flask.1",
-  icon = "59",
+  icon = "80",
   text = [[
 Tu as trouvé une petite
 bouteille d'énergie magique !
@@ -862,7 +822,7 @@ bouteille d'énergie magique !
 
 dialog{
   id = "_treasure.magic_flask.2",
-  icon = "69",
+  icon = "81",
   text = [[
 Tu as trouvé une grande
 bouteille d'énergie magique !
@@ -871,7 +831,7 @@ bouteille d'énergie magique !
 
 dialog{
   id = "_treasure.magic_mirror.1",
-  icon = "18",
+  icon = "49",
   text = [[
 Tu as obtenu le miroir magique !$0
 Tu peux désormais revenir à
@@ -881,7 +841,7 @@ l'entrée du donjon !
 
 dialog{
   id = "_treasure.magic_powder_counter.1",
-  icon = "14",
+  icon = "26",
   text = [[
 Tu as gagné la  
 Poudre Magique! $0
@@ -1051,7 +1011,7 @@ lettre de chèvre
 
 dialog{
   id = "_treasure.map.1",
-  icon = "119",
+  icon = "113",
   text = [[
 Tu as le Plan ! $0
 Sers-t'en pour voir ta position
@@ -1061,21 +1021,8 @@ sur le bouton \[controller_select\].
 }
 
 dialog{
-  id = "_treasure.mirror_shield.1",
-  icon = "142",
-  text = [[
-Tu as obtenu le Bouclier 
-Miroir !$0
-
-Il te protège de quasiment toutes
-les attaques et repousse les
-lasers.
-]],
-}
-
-dialog{
   id = "_treasure.monster_claw.1",
-  icon = "182",
+  icon = "92",
   text = [[
 Tu as obtenu une griffe de
 monstre !$0 Attention à ne pas
@@ -1085,7 +1032,7 @@ te couper avec !
 
 dialog{
   id = "_treasure.monster_gut.1",
-  icon = "180",
+  icon = "90",
   text = [[
 Tu as obtenu un foie de monstre !$0
 Attention, c'est très visqueux !
@@ -1094,7 +1041,7 @@ Attention, c'est très visqueux !
 
 dialog{
   id = "_treasure.monster_horn.1",
-  icon = "181",
+  icon = "91",
   text = [[
 Tu as obtenu une corne de
 monstre !$0 Attention aux doigts,
@@ -1104,7 +1051,7 @@ elle est couverte d'épines !
 
 dialog{
   id = "_treasure.monster_tail.1",
-  icon = "183",
+  icon = "93",
   text = [[
 Tu as obtenu une queue de
 monstre !$0 Attention, elle
@@ -1114,7 +1061,7 @@ bouge encore !
 
 dialog{
   id = "_treasure.mushroom.1",
-  icon = "19",
+  icon = "27",
   text = [[
 Ce Champignon a l'odeur
 douceâtre d'un fruit pourri.$0
@@ -1125,8 +1072,18 @@ bouton X.
 }
 
 dialog{
-  id = "_treasure.pegasus_shoes.1",
-  icon = "66",
+  id = "_treasure.nayru_ether.1",
+  icon = "47",
+  text = [[
+Tu as obtenu l'Ether de Nayru !$0
+Envoie un éclair foudroyant sur
+tes ennemis !
+]],
+}
+
+dialog{
+  id = "_treasure.pegasus_boots.1",
+  icon = "118",
   text = [[
 Tu as obtenu les Bottes de
 Pégase. $0 Maintenant tu peux
@@ -1139,7 +1096,7 @@ instant.
 
 dialog{
   id = "_treasure.pendant_1.1",
-  icon = "34",
+  icon = "140",
   text = [[
 Tu as gagné le Pendentif du
 Courage !$0 Apporte-le à
@@ -1150,7 +1107,7 @@ deux Pendentifs !
 
 dialog{
   id = "_treasure.pendant_2.1",
-  icon = "35",
+  icon = "141",
   text = [[
 Tu as gagné le Pendentif du
 Pouvoir ! $0Tu te rapproches de
@@ -1162,7 +1119,7 @@ recherche du dernier !
 
 dialog{
   id = "_treasure.pendant_3.1",
-  icon = "33",
+  icon = "142",
   text = [[
 Tu as gagné le Pendentif de
 Sagesse !$0 Bravo ! Tu as les
@@ -1173,17 +1130,8 @@ pour retrouver l'épée de Légende.
 }
 
 dialog{
-  id = "_treasure.photo.1",
-  icon = "150",
-  text = [[
-Tu as récupéré 
-une photo !
-]],
-}
-
-dialog{
   id = "_treasure.piece_of_heart.1",
-  icon = "95",
+  icon = "85",
   text = [[
 Tu as trouvé un Fragment de
 Coeur !
@@ -1192,7 +1140,7 @@ Coeur !
 
 dialog{
   id = "_treasure.piece_of_heart.2",
-  icon = "105",
+  icon = "86",
   text = [[
 Tu as trouvé un réceptacle de
 coeur !$0 Ton énergie vitale a
@@ -1202,7 +1150,7 @@ augmenté d'un coeur !
 
 dialog{
   id = "_treasure.potion.1",
-  icon = "22",
+  icon = "74",
   text = [[
 Tu as trouvé de la Potion
 Rouge !$0
@@ -1214,7 +1162,7 @@ ton énergie vitale.
 
 dialog{
   id = "_treasure.potion.2",
-  icon = "23",
+  icon = "75",
   text = [[
 Tu as trouvé de la Potion
 Verte !$0
@@ -1226,7 +1174,7 @@ ton énergie magique.
 
 dialog{
   id = "_treasure.potion.3",
-  icon = "24",
+  icon = "76",
   text = [[
 Tu as trouvé de la Potion
 Bleue !$0
@@ -1238,7 +1186,7 @@ ta vie et ta magie.
 
 dialog{
   id = "_treasure.power_gloves.1",
-  icon = "63",
+  icon = "124",
   text = [[
 Tu as récupéré le Gant de la
 Puissance !$0Tu dois ressentir
@@ -1250,7 +1198,7 @@ pierres maintenant !
 
 dialog{
   id = "_treasure.power_gloves.2",
-  icon = "64",
+  icon = "125",
   text = [[
 Tu as la Moufle du Titan !$0
 Te voilà maintenant capable de
@@ -1262,7 +1210,7 @@ d'ébranler.
 
 dialog{
   id = "_treasure.power_gloves.3",
-  icon = "65",
+  icon = "126",
   text = [[
 Tu as récupéré le Gant
 d'Emeraude ! $0Il te permet de
@@ -1273,7 +1221,7 @@ plus lourdes !
 
 dialog{
   id = "_treasure.quiver.1",
-  icon = "56",
+  icon = "20",
   text = [[
 Tu as obtenu le Carquois !$0
 Il peut contenir jusqu'à 30
@@ -1283,7 +1231,7 @@ Flèches !
 
 dialog{
   id = "_treasure.quiver.2",
-  icon = "57",
+  icon = "21",
   text = [[
 Tu as obtenu le Grand Carquois !$0
 Il peut contenir jusqu'à 40
@@ -1294,7 +1242,7 @@ Flèches au lieu de 30 !
 
 dialog{
   id = "_treasure.quiver.3",
-  icon = "58",
+  icon = "22",
   text = [[
 Tu as obtenu le Carquois Géant !$0
 Il peut contenir jusqu'à 50
@@ -1304,17 +1252,17 @@ Flèches au lieu de 40 !
 
 dialog{
   id = "_treasure.red_key.1",
-  icon = "126",
+  icon = "132",
   text = [[
-Tu as obtenu une clé rouge.
+Tu as obtenu une clé rouge ! $0
 Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
+pourrait bien servir...$0 Une idée ?
 ]],
 }
 
 dialog{
   id = "_treasure.red_tunic.1",
-  icon = "45",
+  icon = "112",
   text = [[
 Tu as obtenu la Tunique Rouge !
 Elle te protège du feu et des
@@ -1323,15 +1271,8 @@ chaleurs extrêmes !
 }
 
 dialog{
-  id = "_treasure.roll.1",
-  text = [[
-TODO
-]],
-}
-
-dialog{
   id = "_treasure.rupee.1",
-  icon = "110",
+  icon = "170",
   text = [[
 Tu as trouvé un rubis !
 ]],
@@ -1339,7 +1280,7 @@ Tu as trouvé un rubis !
 
 dialog{
   id = "_treasure.rupee.2",
-  icon = "111",
+  icon = "171",
   text = [[
 Tu as trouvé cinq rubis.
 Fantastique !
@@ -1348,7 +1289,7 @@ Fantastique !
 
 dialog{
   id = "_treasure.rupee.3",
-  icon = "112",
+  icon = "172",
   text = [[
 Tu as trouvé vingt rubis.
 Ô joie !
@@ -1357,7 +1298,7 @@ Tu as trouvé vingt rubis.
 
 dialog{
   id = "_treasure.rupee.4",
-  icon = "120",
+  icon = "173",
   text = [[
 Tu as trouvé cinquante rubis.
 Merveilleux !
@@ -1366,7 +1307,7 @@ Merveilleux !
 
 dialog{
   id = "_treasure.rupee.5",
-  icon = "121",
+  icon = "174",
   text = [[
 Tu as trouvé cent rubis.
 Incroyable !
@@ -1375,7 +1316,7 @@ Incroyable !
 
 dialog{
   id = "_treasure.rupee.6",
-  icon = "122",
+  icon = "175",
   text = [[
 Tu as trouvé deux cents rubis.
 Magnifique !
@@ -1384,7 +1325,7 @@ Magnifique !
 
 dialog{
   id = "_treasure.rupee.7",
-  icon = "130",
+  icon = "176",
   text = [[
 Tu as trouvé cinq cents rubis.
 C'est exceptionnel !
@@ -1393,7 +1334,7 @@ C'est exceptionnel !
 
 dialog{
   id = "_treasure.rupee.8",
-  icon = "131",
+  icon = "177",
   text = [[
 Tu as trouvé mille rubis.
 Quelle extase !
@@ -1402,7 +1343,7 @@ Quelle extase !
 
 dialog{
   id = "_treasure.rupee.9",
-  icon = "132",
+  icon = "178",
   text = [[
 Tu as trouvé deux mille rubis.      
 Sublime !
@@ -1411,14 +1352,14 @@ Sublime !
 
 dialog{
   id = "_treasure.rupee_bag.1",
-  icon = "50",
+  icon = "127",
   text = [[
 ]],
 }
 
 dialog{
   id = "_treasure.rupee_bag.2",
-  icon = "51",
+  icon = "128",
   text = [[
 Tu as obtenu la Grande Bourse !$0
 Elle peut transporter jusqu'à
@@ -1428,7 +1369,7 @@ Elle peut transporter jusqu'à
 
 dialog{
   id = "_treasure.rupee_bag.3",
-  icon = "52",
+  icon = "129",
   text = [[
 Tu as obtenu la Bourse Géante !$0
 Elle peut contenir jusqu'à
@@ -1438,7 +1379,7 @@ Elle peut contenir jusqu'à
 
 dialog{
   id = "_treasure.seas_map.1",
-  icon = "152",
+  icon = "116",
   text = [[
 Tu as obtenu la Carte des Mers !$0
 Tu peux désormais explorer les
@@ -1447,20 +1388,47 @@ terres situées au-delà d'Hyrule !
 }
 
 dialog{
-  id = "_treasure.seashell.1",
-  icon = "94",
+  id = "_treasure.shield_hero.1",
+  icon = "121",
   text = [[
-Tu as trouvé un 
-coquillage !     
-Collectes-en    
-beaucoup pour faire
-du troc...
+Tu as obtenu le Bouclier du 
+Héros !$0
+
+Utilise-le pour te protéger des
+attaques en appuyant sur
+\[controller_r\] !
+]],
+}
+
+dialog{
+  id = "_treasure.shield_hylia.1",
+  icon = "122",
+  text = [[
+Tu as obtenu le Bouclier 
+d'Hylia !$0
+
+Il est plus puissant que l'ancien
+et permet de repousser les
+attaques de feu !
+]],
+}
+
+dialog{
+  id = "_treasure.shield_mirror.1",
+  icon = "123",
+  text = [[
+Tu as obtenu le Bouclier 
+Miroir !$0
+
+Il te protège de quasiment toutes
+les attaques et repousse les
+lasers.
 ]],
 }
 
 dialog{
   id = "_treasure.shovel.1",
-  icon = "5",
+  icon = "12",
   text = [[
 Tu as obtenu une pelle !$0
 Tu peux creuser à beaucoup
@@ -1470,20 +1438,18 @@ trouveras !
 }
 
 dialog{
-  id = "_treasure.slim_key.1",
-  icon = "43",
+  id = "_treasure.silver_key.1",
+  icon = "133",
   text = [[
-Tu as la        
-Clé Cyclope!    
-Vite! Va vers   
-l'entrée de     
-La Prairie!
+Tu as obtenu une clé d'argent ! $0
+Je me demande bien à quoi elle
+pourrait bien servir...$0 Une idée ?
 ]],
 }
 
 dialog{
   id = "_treasure.small_key.1",
-  icon = "128",
+  icon = "134",
   text = [[
 Tu as trouvé une petite Clé !$0
 Tu peux ouvrir une porte
@@ -1494,7 +1460,7 @@ environs.
 
 dialog{
   id = "_treasure.somaria_cane.1",
-  icon = "70",
+  icon = "42",
   text = [[
 Tu as la Canne de Somaria !$0
 Elle est très utile à qui sait
@@ -1504,7 +1470,7 @@ s'en servir !
 
 dialog{
   id = "_treasure.sword.1",
-  icon = "170",
+  icon = "105",
   text = [[
 Tu as obtenu une épée !$0
 Pour concentrer tout le pouvoir
@@ -1517,7 +1483,7 @@ transmise par notre peuple.
 
 dialog{
   id = "_treasure.sword.2",
-  icon = "171",
+  icon = "106",
   text = [[
 Tu as obtenu l'épée de
 Légende !$0 Seul un véritable
@@ -1529,7 +1495,7 @@ cette épée émet des rayons.
 
 dialog{
   id = "_treasure.sword.3",
-  icon = "172",
+  icon = "107",
   text = [[
 Génial ! Ton épée est plus
 puissante ! Sens la fabuleuse
@@ -1540,7 +1506,7 @@ veines !
 
 dialog{
   id = "_treasure.sword.4",
-  icon = "173",
+  icon = "108",
   text = [[
 Tu as obtenu l'épée dorée !
 Elle est bien plus puissante
@@ -1550,7 +1516,7 @@ que la vieille !
 
 dialog{
   id = "_treasure.sword.5",
-  icon = "174",
+  icon = "109",
   text = [[
 Formidable !$0
 Tu as obtenu l'épée de Lumière !
@@ -1562,14 +1528,13 @@ utiliser !
 }
 
 dialog{
-  id = "_treasure.tail_key.1",
-  icon = "40",
+  id = "_treasure.time_tunic.1",
+  icon = "110",
   text = [[
-Tu as la        
-Clé Flagello!   
-Tu peux ouvrir  
-la porte de la  
-Cave Flagello!
+Tu as la Tunique du Temps ! $0
+Portée par un véritable héros,
+elle te protège de beaucoup de
+dégâts !
 ]],
 }
 
@@ -1690,7 +1655,7 @@ collectionneur de Firone !
 
 dialog{
   id = "_treasure.wind_rod.1",
-  icon = "61",
+  icon = "40",
   text = [[
 Tu as obtenu le bâton de Vent !$0
 Tu peux désormais lancer des
@@ -1700,7 +1665,7 @@ bourrasques puissantes !
 
 dialog{
   id = "_treasure.wine.1",
-  icon = "49",
+  icon = "87",
   text = [[
 Tu as acheté du vin !
 Attention, tu peux
@@ -1710,7 +1675,7 @@ devenir ivre !
 
 dialog{
   id = "_treasure.world_map.1",
-  icon = "150",
+  icon = "114",
   text = [[
 Tu as obtenu la carte d'Hyrule !
 Désormais tu pourras arpenter
@@ -1718,16 +1683,6 @@ plus facilement tous ces chemins
 et partir à la conquête des
 recoins les plus reculés !
 Appuie sur \[controller_select\].
-]],
-}
-
-dialog{
-  id = "_treasure.yellow_key.1",
-  icon = "127",
-  text = [[
-Tu as obtenu une clé jaune.
-Je me demande bien à quoi elle
-pourrait bien servir...$1  Une idée ?
 ]],
 }
 
@@ -2006,6 +1961,90 @@ six coeurs, très utile.
 }
 
 dialog{
+  id = "maps.caves.east_mountains.goron_town.darumaruk_dodongos_cavern",
+  text = [[
+Ah, mon p’tit si tu veux sauver
+ce village, rends-toi à la
+Caverne Dodongo.
+Tu y trouveras le monarque
+de nos ennemis jurés, les
+Dodongos.
+Ces saletés détiennent le sage
+du feu.$0 J’ai indiqué l'empla-
+cement de la caverne sur ta
+carte.$0
+Prends garde aux monstres sur
+ton chemin !$0 J’compte sur toi...
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_1",
+  text = [[
+Salut Hylien !
+Je me sens si bien
+dans ce rocher !
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_2",
+  text = [[
+Salut !
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_3",
+  text = [[
+Un goron, ça mange
+des rochers ! Tu 
+le savais, toi ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.generic_4",
+  text = [[
+Comment vas-tu ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_ask",
+  question = "1",
+  text = [[
+Salut ! J'aurais besoin de 
+ton aide pour rapporter
+des rochers.
+Pourrais-tu le faire ?
+Oui, avec plaisir !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_no",
+  text = [[
+Bon, tant pis. Une
+autre fois, peut-
+être ?
+]],
+}
+
+dialog{
+  id = "maps.caves.east_mountains.goron_town.rock_yes",
+  text = [[
+Super ! Descends au
+dernier sous-sol de
+notre grotte et vas
+voir Dungor, à côté
+de la grotte du chef.
+Il te dira quoi faire
+]],
+}
+
+dialog{
   id = "maps.caves.east_mountains.shop.merchant_welcome",
   text = [[
 Bonjour jeune héros.
@@ -2036,90 +2075,6 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.darumaruk_dodongos_cavern",
-  text = [[
-Ah, mon p’tit si tu veux sauver
-ce village, rends-toi à la
-Caverne Dodongo.
-Tu y trouveras le monarque
-de nos ennemis jurés, les
-Dodongos.
-Ces saletés détiennent le sage
-du feu.$0 J’ai indiqué l'empla-
-cement de la caverne sur ta
-carte.$0
-Prends garde aux monstres sur
-ton chemin !$0 J’compte sur toi...
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_1",
-  text = [[
-Salut Hylien !
-Je me sens si bien
-dans ce rocher !
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_2",
-  text = [[
-Salut !
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_3",
-  text = [[
-Un goron, ça mange
-des rochers ! Tu 
-le savais, toi ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.generic_4",
-  text = [[
-Comment vas-tu ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_ask",
-  question = "1",
-  text = [[
-Salut ! J'aurais besoin de 
-ton aide pour rapporter
-des rochers.
-Pourrais-tu le faire ?
-Oui, avec plaisir !
-Non.
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_no",
-  text = [[
-Bon, tant pis. Une
-autre fois, peut-
-être ?
-]],
-}
-
-dialog{
-  id = "maps.caves.goron_town.rock_yes",
-  text = [[
-Super ! Descends au
-dernier sous-sol de
-notre grotte et vas
-voir Dungor, à côté
-de la grotte du chef.
-Il te dira quoi faire
 ]],
 }
 
@@ -2609,15 +2564,6 @@ Donjon secret
 }
 
 dialog{
-  id = "maps.dungeons.2.blue_chest_wrong",
-  text = [[
-Réfléchis un peu...
-Le coffre bleu s'ouvre avec la
-clé BLEUE.
-]],
-}
-
-dialog{
   id = "maps.dungeons.2.boss_description",
   text = [[
 Spectre de l'au-delà
@@ -2648,29 +2594,8 @@ dialog{
   text = [[
 Il faut tirer le levier pour
 ouvrir le sol. Appuie sur le
-bouton \[controller_a\] ainsi que sur la manette
-vers le bas.
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.indication",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.owl_2",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.dungeons.2.owl_3",
-  text = [[
-<<<
+bouton \[controller_a\] ainsi que sur la
+manette vers le bas.
 ]],
 }
 
@@ -3014,15 +2939,6 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
-]],
-}
-
-dialog{
-  id = "maps.houses.east_castle.blacksmith.merchant_welcome",
-  text = [[
-Bonjour, jeune héros !
-Choisis ce que tu veux.
-
 ]],
 }
 
@@ -3979,63 +3895,6 @@ qu'il détestait la lumière.
 }
 
 dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_2",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_3",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.meow_meow_4",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_1_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_2",
-  question = "1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_3",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.houses.kakarico_village.blind_hideout_house.small_bowwow_2_4",
-  text = [[
-<<<
-]],
-}
-
-dialog{
   id = "maps.houses.kakarico_village.chest_house.minigame_already_playing",
   text = [[
 Très bien ! Ouvre le coffre que
@@ -4548,6 +4407,24 @@ attaques des ennemis.
 }
 
 dialog{
+  id = "maps.houses.korok_village.korok_shop.merchant_welcome",
+  text = [[
+Bonjour jeune héros !
+Bienvenue à la boutique Korogu !
+Choisis ce que tu veux.
+]],
+}
+
+dialog{
+  id = "maps.houses.korok_village.korok_shop.product_shield",
+  text = [[
+Voici le bouclier du Héros !
+Il te permet de repousser les
+attaques de tes ennemis.
+]],
+}
+
+dialog{
   id = "maps.houses.north_field.sanctuary.agahnim_1",
   text = [[
 $2Mouah ! Ah ! Ah ! $0
@@ -4616,7 +4493,7 @@ a quelques générations.
 dialog{
   id = "maps.houses.north_field.sanctuary.priest_3",
   text = [[
-$2La légende stipule que seule une
+$2La légende énonce que seule une
 arme est capable de vaincre ce
 monstre des ténèbres.$0
 On raconte qu'elle est cachée
@@ -5285,9 +5162,9 @@ dialog{
 dialog{
   id = "maps.out.gerudo_desert.kaeopora_gaebora",
   text = [[
-$2Hou ! C'est moi Kaepora Gaebora !$0
-Tu es devant le Colosse du
-Désert !
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Colosse du Désert !
 Le Palais du Désert se trouve
 en haut de l'escalier. Il abrite
 le Gant de Puissance qui te
@@ -5464,27 +5341,50 @@ est de la ville, il font de super
 }
 
 dialog{
-  id = "maps.out.hyrule_town.impa.sahasrahla",
+  id = "maps.out.hyrule_town.impa.intro_1",
+  text = [[
+$2Ah ! Te voilà enfin, $v.$0
+Je dois te parler des graves
+événements qui se sont déroulés
+ces derniers temps...
+Depuis que Ganon a installé
+ses sbires dans la tour du
+Château, des monstres sont
+apparus et sèment la pagaile un
+peu partout dans le pays.
+Cela ressemble à ce qui s'est
+passé il y a quelque temps et je
+trouve cela très bizarre...
+Je sens qu'un grand malheur
+risque de se produire d'ici peu...
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.impa.intro_2",
   question = "1",
   text = [[
-$2Ah ! Te voilà enfin, $v
-Je t'attendais.
+$2Ecoute-moi bien, $v.$0
+J'aurais besoin que tu trouves la
+lanterne cachée dans un
+souterrain de la ville.
 
-Depuis que Ganon a installé
-ses sbires dans les étages
-supérieurs du château, des
-monstres sont apparus un peu
-partout dans le pays. $0 Je trouve
-cela très bizarre...
-Je pense que Ganon cherche
-à asseoir sa domination sur
-Hyrule.$0
-Ecoute-moi bien. $0 Je voudrais
-que tu ailles au village Cocorico
-voir Sahasrahla. Il pourra t'en
-dire plus.$0 Mais avant, passe à
-la forge, Hyrule est très
-dangereux !
+
+Ensuite, tu te rendras à la forge
+par le chemin de l'Est du
+Château, où tu trouveras une épée.
+Enfin, j'aurais besoin que tu
+ailles dans les plus brefs délais
+au Village Cocorico.
+Là-bas se trouve Sahasrahla
+qui pourra te donner de plus
+amples précisions.
+Je te confie cet ocarina, relique
+du héros du Temps qui jadis avait
+sauvé le pays de Ganon.$0
+Il te servira pour ta quête.
+
+
 As-tu tout compris ?
 Non, pas du tout !
 Oui
@@ -5680,6 +5580,60 @@ dialog{
 En nous parlant, tu vas
 apprendre plein de choses !$0
 Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.buy_map",
+  question = "1",
+  text = [[
+En attendant d'avoir une fée, je
+vends des cartes pour aider mon
+père...
+Rien que pour toi, je t'en vendrai
+une à prix d'ami pour 40 rubis !
+
+Alors qu'en penses-tu ?
+Oui !
+Une autre fois
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.first_time",
+  next = "maps.out.hyrule_town.tingle.buy_map",
+  text = [[
+Salut ! Moi, c'est Tingle !$0
+Je suis la réincarnation d'une
+magique fée des bois !
+Cela fait 35 ans que j'attends
+qu'une fée vienne me voir$0.$0.$0.
+Mais aucune n'est venue...
+Mon père me dit de grandir et
+d'agir en adulte responsable.$0
+Mais pourquoi donc ?
+J'aimerais bien avoir une fée,
+moi...$0
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.map_no",
+  text = [[
+Pas de problème !
+Je suis toujours là quand tu en
+as envie !
+]],
+}
+
+dialog{
+  id = "maps.out.hyrule_town.tingle.map_yes",
+  text = [[
+Youpi !
+Tingle, Tingle !
+Kooloo-Limpah !
+Ce sont mes mots magiques.
+Ne les vole pas !
 ]],
 }
 
@@ -5965,13 +5919,6 @@ Ci-gît le Coq Volant.
 
 dialog{
   id = "maps.out.kokiri_village.sign_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.lonlon_ranch.sign_2",
   text = [[
 <<<
 ]],
@@ -6451,12 +6398,7 @@ dialog{
   id = "maps.out.south_field.sign_2",
   skip = "all",
   text = [[
-Tiens, voilà un
-flacon !
-
-Le prendre ?
-Oui
-Non
+<<<
 ]],
 }
 
@@ -6764,14 +6706,8 @@ dialog{
 Crédits :
 
 
-Directeurs : The Unknown, LinkFF
+Directeurs : The Unknown, Linkff
 Dir. assistant : Prince DeDeDe
-
-
-
-
-
-Coordination : The Unknown
 
 
 
@@ -6779,13 +6715,13 @@ Coordination : The Unknown
 
 Moteur Solarus :
 Christopho,
-Max
+Equipe Solarus
 
 
 
 
 
-Scripts :
+Programmation :
 Alex Gleason,
 Binbin,
 Christopho,
@@ -6798,15 +6734,9 @@ Olivier Cléro,
 PhoenixII54,
 Razdarac;
 Rekinenko,
+std::gregwar,
+Vlag,
 Equipe Solarus,
-The Unknown
-
-
-
-
-
-Conception originale :
-LinkFF,
 The Unknown
 
 
@@ -6816,12 +6746,15 @@ The Unknown
 Concepteurs graphiques sujets :
 Soichiro Tomita,
 Takaya Imamura,
+
 Matt Wright,
 MetalZelda,
 FFOmega,
 Bruce Juice,
+Barack Obama,
 Newlink,
-LinkFF,
+Olivier Cléro,
+Linkff,
 The Unknown
 
 
@@ -6831,16 +6764,11 @@ The Unknown
 Concepteurs graphiques décors :
 Masanao Arimoto,
 Tsuyoshi Watanabe,
+
 FFOmega,
-LinkFF,
-The Unknown
-
-
-
-
-
-Programmation :
-Salade-verte,
+Olivier Cléro,
+Wanolink,
+Linkff,
 The Unknown
 
 
@@ -6848,7 +6776,7 @@ The Unknown
 
 
 Concepteurs quêtes :
-LinkFF,
+Linkff,
 Prince DeDeDe,
 The Unknown
 
@@ -6858,7 +6786,8 @@ The Unknown
 
 Concepteurs textes :
 Takeshi Yasukawa,
-LinkFF,
+
+Linkff,
 Prince DeDeDe,
 The Unknown
 
@@ -6868,9 +6797,13 @@ The Unknown
 
 Musiques et sons :
 Koji Kondo,
+Ryo Nagamatsu,
+Manaka Kataoka,
+Yasuaki Iwata
+
 Matt Wright,
 MetalZelda,
-LinkFF,
+Linkff,
 The Unknown
 
 
@@ -6878,7 +6811,7 @@ The Unknown
 
 
 Supports de communication :
-LinkFF,
+Linkff,
 Salade-verte,
 Jules M.,
 The Unknown
@@ -6887,7 +6820,7 @@ The Unknown
 
 
 Supports matériels et locaux :
-LinkFF,
+Linkff,
 Salade-verte,
 The Unknown
 
@@ -6896,19 +6829,20 @@ The Unknown
 
 
 Illustrations :
-LinkFF
+Linkff
+The Unknown,
 
 
 
 
 
 Idées :
-ML-,
+Maxence L.,
 Elliot D.,
 Jules M.,
-BP,
+Basile P.,
 Prince DeDeDe,
-LinkFF,
+Linkff,
 The Unknown
 
 
@@ -6918,7 +6852,10 @@ The Unknown
 Idée originale :
 Hiroshi Yamauchi,
 Shigeru Miyamoto,
-Takashi Tezuka
+Takashi Tezuka,
+
+Linkff,
+The Unknown
 
 
 
@@ -6976,9 +6913,12 @@ propice pour agir.
 Il avait pour cela besoin de
 se reconstruire une armée plus
 puissante.
-C'est pourquoi il attaqua la
-ville de Shin Hikari pour y
-installer son empire, Néo Kuni.
+Bataille après bataille,
+victoire après victoire,
+Ganon parvint à conquérir de
+vastes terres pour y faire régner
+le mal.
+
 Cordinia, où jadis rayonnait la
 capitale d'Hyrule, n'était alors
 plus que ruine et désespoir$0.$0.$0.
@@ -7104,19 +7044,8 @@ Cet objet ne sert à rien.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.bird_key.1",
-  icon = "42",
-  skip = "all",
-  text = [[
-Permet d'ouvrir
-la porte de la
-la tour du vautour.
-]],
-}
-
-dialog{
   id = "scripts.menus.pause_inventory.blue_tunic.1",
-  icon = "44",
+  icon = "121",
   skip = "all",
   text = [[
 Une tunique bleue qui te
@@ -7127,7 +7056,7 @@ de respirer sous l'eau.
 
 dialog{
   id = "scripts.menus.pause_inventory.bomb_counter.1",
-  icon = "4",
+  icon = "10",
   skip = "all",
   text = [[
 Utilise les Bombes
@@ -7139,8 +7068,18 @@ obstacles.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bomb_counter.2",
+  icon = "11",
+  skip = "all",
+  text = [[
+Utilise la Super Bombe pour
+faire exploser plus d'obstacles.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.boomerang.1",
-  icon = "0",
+  icon = "5",
   skip = "all",
   text = [[
 Utilise le Boomerang pour
@@ -7151,7 +7090,7 @@ attraper des objets à distance.
 
 dialog{
   id = "scripts.menus.pause_inventory.boomerang.2",
-  icon = "1",
+  icon = "6",
   skip = "all",
   text = [[
 Utilise le Super Boomerang pour
@@ -7162,7 +7101,7 @@ attraper des objets à distance.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_1.1",
-  icon = "21",
+  icon = "60",
   skip = "all",
   text = [[
 Un flacon que tu peux remplir !
@@ -7170,8 +7109,53 @@ Un flacon que tu peux remplir !
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.10",
+  icon = "69",
+  skip = "all",
+  text = [[
+Une potion violette <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.11",
+  icon = "70",
+  skip = "all",
+  text = [[
+Du miel <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.12",
+  icon = "71",
+  skip = "all",
+  text = [[
+Orbe rouge  en flacon<<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.13",
+  icon = "72",
+  skip = "all",
+  text = [[
+Orbe verte en flacon <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.14",
+  icon = "73",
+  skip = "all",
+  text = [[
+Orbe jaune en flacon <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_1.2",
-  icon = "38",
+  icon = "61",
   skip = "all",
   text = [[
 Un flacon qui est rempli d'eau
@@ -7181,7 +7165,7 @@ et qui permet de te désaltérer.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_1.3",
-  icon = "22",
+  icon = "62",
   skip = "all",
   text = [[
 Restaure tous tes coeurs.
@@ -7190,7 +7174,7 @@ Restaure tous tes coeurs.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_1.4",
-  icon = "23",
+  icon = "63",
   skip = "all",
   text = [[
 Restaure ta magie.
@@ -7199,7 +7183,7 @@ Restaure ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_1.5",
-  icon = "24",
+  icon = "64",
   skip = "all",
   text = [[
 Restaure tes coeurs et ta magie.
@@ -7208,7 +7192,7 @@ Restaure tes coeurs et ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_1.6",
-  icon = "39",
+  icon = "65",
   skip = "all",
   text = [[
 Une fée qui permet de te sauver
@@ -7217,8 +7201,36 @@ si tu meurs.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.7",
+  icon = "66",
+  skip = "all",
+  text = [[
+Un abeille <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.8",
+  icon = "67",
+  skip = "all",
+  text = [[
+De l'eau boueuse...$0
+Qui sait à quoi cela sert...
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_1.9",
+  icon = "68",
+  skip = "all",
+  text = [[
+Du lait Meuh-Meuh <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_2.1",
-  icon = "21",
+  icon = "60",
   skip = "all",
   text = [[
 Un flacon que tu peux remplir !
@@ -7226,8 +7238,53 @@ Un flacon que tu peux remplir !
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.10",
+  icon = "69",
+  skip = "all",
+  text = [[
+Une potion violette <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.11",
+  icon = "70",
+  skip = "all",
+  text = [[
+Du miel <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.12",
+  icon = "71",
+  skip = "all",
+  text = [[
+Orbe rouge  en flacon<<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.13",
+  icon = "72",
+  skip = "all",
+  text = [[
+Orbe verte en flacon <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.14",
+  icon = "73",
+  skip = "all",
+  text = [[
+Orbe jaune en flacon <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_2.2",
-  icon = "38",
+  icon = "61",
   skip = "all",
   text = [[
 Un flacon qui est rempli d'eau
@@ -7237,7 +7294,7 @@ et qui permet de te désaltérer.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_2.3",
-  icon = "22",
+  icon = "62",
   skip = "all",
   text = [[
 Restaure tous tes coeurs.
@@ -7246,7 +7303,7 @@ Restaure tous tes coeurs.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_2.4",
-  icon = "23",
+  icon = "63",
   skip = "all",
   text = [[
 Restaure ta magie.
@@ -7255,7 +7312,7 @@ Restaure ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_2.5",
-  icon = "24",
+  icon = "64",
   skip = "all",
   text = [[
 Restaure tes coeurs et ta magie.
@@ -7264,7 +7321,7 @@ Restaure tes coeurs et ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_2.6",
-  icon = "39",
+  icon = "65",
   skip = "all",
   text = [[
 Une fée qui permet de te sauver
@@ -7273,8 +7330,36 @@ si tu meurs.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.7",
+  icon = "66",
+  skip = "all",
+  text = [[
+Un abeille <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.8",
+  icon = "67",
+  skip = "all",
+  text = [[
+De l'eau boueuse...$0
+Qui sait à quoi cela sert...
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_2.9",
+  icon = "68",
+  skip = "all",
+  text = [[
+Du lait Meuh-Meuh <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_3.1",
-  icon = "21",
+  icon = "60",
   skip = "all",
   text = [[
 Un flacon que tu peux remplir !
@@ -7282,8 +7367,53 @@ Un flacon que tu peux remplir !
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.10",
+  icon = "69",
+  skip = "all",
+  text = [[
+Une potion violette <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.11",
+  icon = "70",
+  skip = "all",
+  text = [[
+Du miel <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.12",
+  icon = "71",
+  skip = "all",
+  text = [[
+Orbe rouge  en flacon<<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.13",
+  icon = "72",
+  skip = "all",
+  text = [[
+Orbe verte en flacon <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.14",
+  icon = "73",
+  skip = "all",
+  text = [[
+Orbe jaune en flacon <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_3.2",
-  icon = "38",
+  icon = "61",
   skip = "all",
   text = [[
 Un flacon qui est rempli d'eau
@@ -7293,7 +7423,7 @@ et qui permet de te désaltérer.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_3.3",
-  icon = "22",
+  icon = "62",
   skip = "all",
   text = [[
 Restaure tous tes coeurs.
@@ -7302,7 +7432,7 @@ Restaure tous tes coeurs.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_3.4",
-  icon = "23",
+  icon = "63",
   skip = "all",
   text = [[
 Restaure ta magie.
@@ -7311,7 +7441,7 @@ Restaure ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_3.5",
-  icon = "24",
+  icon = "64",
   skip = "all",
   text = [[
 Restaure tes coeurs et ta magie.
@@ -7320,7 +7450,7 @@ Restaure tes coeurs et ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_3.6",
-  icon = "39",
+  icon = "65",
   skip = "all",
   text = [[
 Une fée qui permet de te sauver
@@ -7329,8 +7459,36 @@ si tu meurs.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.7",
+  icon = "66",
+  skip = "all",
+  text = [[
+Un abeille <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.8",
+  icon = "67",
+  skip = "all",
+  text = [[
+De l'eau boueuse...$0
+Qui sait à quoi cela sert...
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_3.9",
+  icon = "68",
+  skip = "all",
+  text = [[
+Du lait Meuh-Meuh <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_4.1",
-  icon = "21",
+  icon = "60",
   skip = "all",
   text = [[
 Un flacon que tu peux remplir !
@@ -7338,8 +7496,53 @@ Un flacon que tu peux remplir !
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.10",
+  icon = "69",
+  skip = "all",
+  text = [[
+Une potion violette <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.11",
+  icon = "70",
+  skip = "all",
+  text = [[
+Du miel <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.12",
+  icon = "71",
+  skip = "all",
+  text = [[
+Orbe rouge  en flacon<<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.13",
+  icon = "72",
+  skip = "all",
+  text = [[
+Orbe verte en flacon <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.14",
+  icon = "73",
+  skip = "all",
+  text = [[
+Orbe jaune en flacon <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bottle_4.2",
-  icon = "38",
+  icon = "61",
   skip = "all",
   text = [[
 Un flacon qui est rempli d'eau
@@ -7349,7 +7552,7 @@ et qui permet de te désaltérer.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_4.3",
-  icon = "22",
+  icon = "62",
   skip = "all",
   text = [[
 Restaure tous tes coeurs.
@@ -7358,7 +7561,7 @@ Restaure tous tes coeurs.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_4.4",
-  icon = "23",
+  icon = "63",
   skip = "all",
   text = [[
 Restaure ta magie.
@@ -7367,7 +7570,7 @@ Restaure ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_4.5",
-  icon = "24",
+  icon = "64",
   skip = "all",
   text = [[
 Restaure tes coeurs et ta magie.
@@ -7376,7 +7579,7 @@ Restaure tes coeurs et ta magie.
 
 dialog{
   id = "scripts.menus.pause_inventory.bottle_4.6",
-  icon = "39",
+  icon = "65",
   skip = "all",
   text = [[
 Une fée qui permet de te sauver
@@ -7385,8 +7588,36 @@ si tu meurs.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.7",
+  icon = "66",
+  skip = "all",
+  text = [[
+Un abeille <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.8",
+  icon = "67",
+  skip = "all",
+  text = [[
+De l'eau boueuse...$0
+Qui sait à quoi cela sert...
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.bottle_4.9",
+  icon = "68",
+  skip = "all",
+  text = [[
+Du lait Meuh-Meuh <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.bow.1",
-  icon = "2",
+  icon = "0",
   skip = "all",
   text = [[
 Tu n'as plus de Flèches !
@@ -7395,7 +7626,7 @@ Tu n'as plus de Flèches !
 
 dialog{
   id = "scripts.menus.pause_inventory.bow.2",
-  icon = "3",
+  icon = "1",
   skip = "all",
   text = [[
 Tire des Flèches pour vaincre
@@ -7404,82 +7635,113 @@ des ennemis coriaces.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.crystal_1.1",
-  icon = "20",
+  id = "scripts.menus.pause_inventory.bow.3",
+  icon = "2",
   skip = "all",
   text = [[
-La première jeune fille,
-délivrée dans l'Arbre Mojo.
+Tire des Super Flèches <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.crystal_1.1",
+  icon = "143",
+  skip = "all",
+  text = [[
+Le premier descendant des Sept
+Sages, délivré dans l'Arbre Mojo.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_2.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La deuxième jeune fille,
-délivrée dans la Caverne
+Le deuxième descendant des Sept
+Sages, délivré dans la Caverne
 Dodongo.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_3.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La troisième jeune fille,
-délivrée dans le Palais du
-Désert.
+Le troisième descendant des Sept
+Sages, délivré dans le Temple de
+l'Eau.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_4.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La quaitrième jeune fille,
-délivrée dans le Ventre de
-Jabu-Jabu.
+Le quatrième descendant des Sept
+Sages, délivré dans le Palais du
+Désert.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_5.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La cinquième jeune fille,
-délivrée dans le Pic César.
+Le ciquième descendant des Sept
+Sages, délivré dans le Ventre de
+Jabu-Jabu.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_6.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La sixième jeune fille,
-délivrée dans le Temple Oublié.
+Le sixième descendant des Sept
+Sages, délivré dans le Pic
+César.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.crystal_7.1",
-  icon = "20",
+  icon = "143",
   skip = "all",
   text = [[
-La septième jeune fille,
-délivrée dans le Temple de
-la Glace.
+Le dernier descendant des Sept
+Sages, délivré dans la Tour des
+Vents.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.darkness_rod.1",
+  icon = "41",
+  skip = "all",
+  text = [[
+Le Sceptre des Ténèbres envoie
+une force sombre sur tes ennemis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.din_flame.1",
+  icon = "48",
+  skip = "all",
+  text = [[
+Le Feu de Din te permet de
+retourner à l'entrée du donjon.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.divine_ore.1",
-  icon = "92",
+  icon = "95",
   skip = "all",
   text = [[
 Les fragments de Roche Divine
@@ -7491,19 +7753,29 @@ que ton épée soit plus puissante.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.face_key.1",
-  icon = "44",
+  id = "scripts.menus.pause_inventory.doom_rod.1",
+  icon = "37",
   skip = "all",
   text = [[
-Permet d'ouvrir
-la porte du
-temple du masque.
+Le Sceptre du Jugement Dernier
+appelle tous les sorts !$0
+Mais surveille ta barre de magie !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.farore_quake.1",
+  icon = "46",
+  skip = "all",
+  text = [[
+La Secousse de Farore envoie un
+tremblement de terre destructeur.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.feather.1",
-  icon = "7",
+  icon = "15",
   skip = "all",
   text = [[
 Utilise la Plume pour sauter et
@@ -7513,16 +7785,29 @@ franchir des obstacles.
 
 dialog{
   id = "scripts.menus.pause_inventory.fire_rod.1",
-  icon = "80",
+  icon = "30",
   skip = "all",
   text = [[
-Brûle tout !
+La Baguette de Feu permet de
+déclencher des attaques de feu
+destructrices.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.fire_rod.2",
+  icon = "31",
+  skip = "all",
+  text = [[
+La Super Baguette de Feu permet
+de déclencher des attaques de feu
+dévastatrices.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.flippers.1",
-  icon = "49",
+  icon = "117",
   skip = "all",
   text = [[
 Les Palmes te
@@ -7532,30 +7817,18 @@ dans l'eau profonde.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.golden_leaves.1",
-  icon = "115",
-  skip = "all",
-  text = [[
-Retrouvez toutes les
-feuilles d'or et
-apportez-les
-à Richard.
-]],
-}
-
-dialog{
   id = "scripts.menus.pause_inventory.goron_amber.1",
-  icon = "184",
+  icon = "94",
   skip = "all",
   text = [[
 Des Ambres Gorons qui peuvent
-être troqués ou vendus.
+être troquées ou vendues.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.green_tunic.1",
-  icon = "43",
+  icon = "110",
   text = [[
 Une tunique verte, rien que
 pour toi !
@@ -7564,79 +7837,101 @@ pour toi !
 
 dialog{
   id = "scripts.menus.pause_inventory.hammer.1",
-  icon = "5",
+  icon = "13",
   skip = "all",
   text = [[
-Retournez et écrasez
-vos ennemis !
+Le Marteau te permet de retourner
+et d'écraser tes ennemis !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.hammer.2",
+  icon = "13",
+  skip = "all",
+  text = [[
+Le Super Marteau te permet
+de retourner tes ennemis sur une
+plus grande surface.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.healing_wand.1",
-  icon = "101",
+  icon = "32",
   skip = "all",
   text = [[
-Soignez-vous avec le sceptre
-de Soin !
+Le Sceptre de Soin te permet de
+restaurer six coeurs.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.healing_wand.2",
-  icon = "101",
+  icon = "33",
   skip = "all",
   text = [[
-Soignez-vous avec le sceptre
-de Soin !
+Le Sceptre de Soin te permet de
+restaurer neuf coeurs.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.healing_wand.3",
-  icon = "101",
+  icon = "34",
   skip = "all",
   text = [[
-Soignez-vous avec le sceptre
-de Soin !
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.hero_shield.1",
-  icon = "140",
-  skip = "all",
-  text = [[
-Permet de repousser
-tes ennemis.
+Le Sceptre de Soin te permet de
+restaurer douze coeurs.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.hookshot.1",
-  icon = "8",
+  icon = "16",
   skip = "all",
   text = [[
-Hisse-toi à des
-endroits
-inaccessibles grâce
-au Grappin.
+Hisse-toi à des endroits
+inaccessibles grâce au Grappin.
 ]],
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.hylia_shield.1",
-  icon = "141",
+  id = "scripts.menus.pause_inventory.hookshot.2",
+  icon = "17",
   skip = "all",
   text = [[
-Permet de repousser
-les attaques de feu.
+Le Super Grappin te permet
+d'atteindre des cibles plus
+éloignées !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.ice_rod.1",
+  icon = "38",
+  skip = "all",
+  text = [[
+La Baguette de Glace te permet
+de givrer tes ennemis et de geler
+le sol !
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.ice_rod.2",
+  icon = "39",
+  skip = "all",
+  text = [[
+La Super Baguette de Glace te
+permet de glacer ce qui t'entoure
+de façon engivrante !
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.lamp.1",
-  icon = "9",
+  icon = "19",
   skip = "all",
   text = [[
 Permet d'allumer des torches.
@@ -7645,7 +7940,7 @@ Permet d'allumer des torches.
 
 dialog{
   id = "scripts.menus.pause_inventory.lens_of_truth.1",
-  icon = "16",
+  icon = "45",
   skip = "all",
   text = [[
 Un monocle qui te permet de voir
@@ -7655,7 +7950,7 @@ l'invisible.
 
 dialog{
   id = "scripts.menus.pause_inventory.light_rod.1",
-  icon = "100",
+  icon = "36",
   skip = "all",
   text = [[
 Crée un rayon de lumière pour
@@ -7665,7 +7960,7 @@ terrasser tes ennemis.
 
 dialog{
   id = "scripts.menus.pause_inventory.magic_cape.1",
-  icon = "13",
+  icon = "44",
   skip = "all",
   text = [[
 La Cape Magique te permet de
@@ -7676,7 +7971,7 @@ invincible.
 
 dialog{
   id = "scripts.menus.pause_inventory.magic_mirror.1",
-  icon = "18",
+  icon = "49",
   skip = "all",
   text = [[
 Permet de revenir à l'entrée du
@@ -7686,11 +7981,10 @@ donjon.
 
 dialog{
   id = "scripts.menus.pause_inventory.magic_powders_counter.1",
-  icon = "14",
+  icon = "26",
   skip = "all",
   text = [[
-Essaie de la    
-saupoudrer sur  
+Essaie de la saupoudrer sur  
 plein de choses !
 ]],
 }
@@ -7844,18 +8138,8 @@ Une petite lettre
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.mirror_shield.1",
-  icon = "142",
-  skip = "all",
-  text = [[
-Permet de repousser
-les rayons lasers.
-]],
-}
-
-dialog{
   id = "scripts.menus.pause_inventory.monster_claw.1",
-  icon = "182",
+  icon = "92",
   skip = "all",
   text = [[
 Des griffes de monstres qui
@@ -7866,7 +8150,7 @@ vendues.
 
 dialog{
   id = "scripts.menus.pause_inventory.monster_gut.1",
-  icon = "180",
+  icon = "90",
   skip = "all",
   text = [[
 Des foies de monstres qui
@@ -7877,7 +8161,7 @@ vendus.
 
 dialog{
   id = "scripts.menus.pause_inventory.monster_horn.1",
-  icon = "181",
+  icon = "91",
   skip = "all",
   text = [[
 Des cornes de monstres qui
@@ -7888,7 +8172,7 @@ vendues.
 
 dialog{
   id = "scripts.menus.pause_inventory.monster_tail.1",
-  icon = "183",
+  icon = "93",
   skip = "all",
   text = [[
 Des queues de monstres qui
@@ -7899,32 +8183,38 @@ vendues.
 
 dialog{
   id = "scripts.menus.pause_inventory.mushroom.1",
-  icon = "19",
+  icon = "27",
   skip = "all",
   text = [[
-Si tu brandis   
-le Champignon,  
-un arôme subtil 
-se répandra !
+Si tu brandis le Champignon,
+un arôme subtil se répandra !
 ]],
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.pegasus_shoes.1",
-  icon = "66",
+  id = "scripts.menus.pause_inventory.nayru_ether.1",
+  icon = "47",
   skip = "all",
   text = [[
-Fonce à toute allure
-grâce aux Bottes de
-Pégase.
-Appuie sur la touche
-Action pour courir.
+L'éther de Nayru envoir un éclair
+saissant autour de toi.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.pegasus_boots.1",
+  icon = "128",
+  skip = "all",
+  text = [[
+Fonce à toute allure grâce aux
+Bottes de Pégase. Appuie sur \[controller_a\]
+pour courir.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.pendant_1.1",
-  icon = "34",
+  icon = "140",
   skip = "all",
   text = [[
 C'est le pendentif du Courage.
@@ -7933,7 +8223,7 @@ C'est le pendentif du Courage.
 
 dialog{
   id = "scripts.menus.pause_inventory.pendant_2.1",
-  icon = "35",
+  icon = "141",
   skip = "all",
   text = [[
 C'est le pendentif du Pouvoir.
@@ -7942,7 +8232,7 @@ C'est le pendentif du Pouvoir.
 
 dialog{
   id = "scripts.menus.pause_inventory.pendant_3.1",
-  icon = "33",
+  icon = "142",
   skip = "all",
   text = [[
 C'est le pendentif de la
@@ -7951,30 +8241,18 @@ Sagesse.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.photo_counter.1",
-  icon = "150",
-  skip = "all",
-  text = [[
-Collectionnes-les
-en souvenir de
-votre aventure !
-]],
-}
-
-dialog{
   id = "scripts.menus.pause_inventory.piece_of_heart.1",
-  icon = "95",
+  icon = "85",
   skip = "all",
   text = [[
-Collectionnes en 4
-pour récupérer un
-coeur supplémentaire !
+Collectionnes en 4 pour récupérer
+un coeur supplémentaire !
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.power_gloves.1",
-  icon = "63",
+  icon = "124",
   skip = "all",
   text = [[
 Porte des choses que tu ne
@@ -7984,7 +8262,7 @@ pouvais pas porter avant !
 
 dialog{
   id = "scripts.menus.pause_inventory.power_gloves.2",
-  icon = "64",
+  icon = "125",
   skip = "all",
   text = [[
 Porte des choses plus lourdes
@@ -7994,7 +8272,7 @@ avec cette Moufle !
 
 dialog{
   id = "scripts.menus.pause_inventory.power_gloves.3",
-  icon = "65",
+  icon = "126",
   skip = "all",
   text = [[
 Porte les choses les plus
@@ -8004,7 +8282,8 @@ lourdes avec cette Moufle !
 
 dialog{
   id = "scripts.menus.pause_inventory.red_tunic.1",
-  icon = "45",
+  icon = "112",
+  skip = "all",
   text = [[
 Une tunique rouge qui te
 protège du feu et de la
@@ -8014,7 +8293,7 @@ chaleur.
 
 dialog{
   id = "scripts.menus.pause_inventory.rupee_bag.1",
-  icon = "50",
+  icon = "127",
   skip = "all",
   text = [[
 La Petite Bourse, qui permet
@@ -8025,16 +8304,17 @@ rubis.
 
 dialog{
   id = "scripts.menus.pause_inventory.rupee_bag.2",
-  icon = "50",
+  icon = "128",
+  skip = "all",
   text = [[
-La Bourse de Géant, qui permet
+La Grande Bourse, qui permet
 de transporter jusqu'à 499 rubis.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.rupee_bag.3",
-  icon = "52",
+  icon = "129",
   skip = "all",
   text = [[
 La Bourse de Géant, qui permet
@@ -8044,7 +8324,7 @@ de transporter jusqu'à 999 rubis
 
 dialog{
   id = "scripts.menus.pause_inventory.seas_map.1",
-  icon = "152",
+  icon = "117",
   skip = "all",
   text = [[
 Cette carte te permet de voyager
@@ -8053,19 +8333,38 @@ en mer.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.seashell_counter.1",
-  icon = "94",
+  id = "scripts.menus.pause_inventory.shield_hero.1",
+  icon = "121",
   skip = "all",
   text = [[
-Collectes-en    
-beaucoup pour   
-faire du troc !
+Permet de repousser
+tes ennemis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.shield_hylia.1",
+  icon = "122",
+  skip = "all",
+  text = [[
+Permet de repousser
+les attaques de feu.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.shield_mirror.1",
+  icon = "123",
+  skip = "all",
+  text = [[
+Permet de repousser
+les rayons lasers.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.shovel.1",
-  icon = "5",
+  icon = "12",
   skip = "all",
   text = [[
 La pelle te permet de déterrer
@@ -8074,19 +8373,8 @@ des trésors du sol
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.slim_key.1",
-  icon = "43",
-  skip = "all",
-  text = [[
-Permet d'ouvrir
-la porte de
-la cave aux clefs
-]],
-}
-
-dialog{
   id = "scripts.menus.pause_inventory.somaria_cane.1",
-  icon = "70",
+  icon = "42",
   skip = "all",
   text = [[
 Crée des blocs pour résoudre des
@@ -8096,7 +8384,7 @@ Crée des blocs pour résoudre des
 
 dialog{
   id = "scripts.menus.pause_inventory.song_10_zelda.1",
-  icon = "144",
+  icon = "159",
   skip = "all",
   text = [[
 La berceuse que la princesse
@@ -8106,7 +8394,7 @@ Zelda t'as apprise.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_11_time.1",
-  icon = "145",
+  icon = "160",
   skip = "all",
   text = [[
 Permet d'ouvrir la porte du
@@ -8116,17 +8404,17 @@ Temps.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_12_secret.1",
-  icon = "146",
+  icon = "161",
   skip = "all",
   text = [[
 Permet de se téléporter à
-Hyrule Sud.
+Hyrule du Sud.
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.song_13_light.1",
-  icon = "147",
+  icon = "162",
   skip = "all",
   text = [[
 Permet de se téléporter au
@@ -8136,7 +8424,7 @@ temple du Temps.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_14_storms.1",
-  icon = "148",
+  icon = "163",
   skip = "all",
   text = [[
 Permet de se téléporter
@@ -8146,7 +8434,7 @@ au village Cocorico.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_15_sun.1",
-  icon = "149",
+  icon = "164",
   skip = "all",
   text = [[
 Permet de passer du jour à la
@@ -8156,7 +8444,7 @@ nuit et de la nuit au jour.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_16_epona.1",
-  icon = "154",
+  icon = "165",
   skip = "all",
   text = [[
 Permet d'appeler Epona.
@@ -8165,7 +8453,7 @@ Permet d'appeler Epona.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_1_forest.1",
-  icon = "134",
+  icon = "150",
   skip = "all",
   text = [[
 Permet de se téléporter au
@@ -8175,7 +8463,7 @@ temple de la Forêt.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_2_fire.1",
-  icon = "135",
+  icon = "151",
   skip = "all",
   text = [[
 Permet de se téléporter dans
@@ -8185,7 +8473,7 @@ le cratère du temple du Feu.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_3_water.1",
-  icon = "136",
+  icon = "152",
   skip = "all",
   text = [[
 Permet de se téléporter au
@@ -8195,7 +8483,7 @@ centre du Lac Hylia.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_4_spirit.1",
-  icon = "137",
+  icon = "153",
   skip = "all",
   text = [[
 Permet de se téléporter dans
@@ -8205,7 +8493,7 @@ le désert Gerudo.
 
 dialog{
   id = "scripts.menus.pause_inventory.song_5_lorule.1",
-  icon = "138",
+  icon = "154",
   skip = "all",
   text = [[
 Permet de se téléporter devant
@@ -8214,8 +8502,27 @@ le pic César.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.song_6_forget.1",
+  icon = "155",
+  skip = "all",
+  text = [[
+Chant de l'oubli <<<
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.song_7_winds.1",
+  icon = "156",
+  skip = "all",
+  text = [[
+Permet de se téléporter au Village
+Piaf.
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.song_8_shadow.1",
-  icon = "139",
+  icon = "157",
   skip = "all",
   text = [[
 Permet de se téleporter à
@@ -8224,8 +8531,17 @@ la Caverne.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.song_9_dark.1",
+  icon = "158",
+  skip = "all",
+  text = [[
+Permet de <<<
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.sword.1",
-  icon = "170",
+  icon = "105",
   skip = "all",
   text = [[
 Une belle épée avec
@@ -8235,7 +8551,7 @@ ton nom écrit dessus.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.2",
-  icon = "171",
+  icon = "106",
   skip = "all",
   text = [[
 L'épée de Légende, maniée par
@@ -8245,7 +8561,7 @@ de véritables héros.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.3",
-  icon = "172",
+  icon = "107",
   skip = "all",
   text = [[
 L'épée de Légende améliorée
@@ -8255,7 +8571,7 @@ par le forgeron.
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.4",
-  icon = "173",
+  icon = "108",
   skip = "all",
   text = [[
 L'épée dorée, inflige beaucoup
@@ -8265,34 +8581,23 @@ de dégâts
 
 dialog{
   id = "scripts.menus.pause_inventory.sword.5",
-  icon = "174",
+  icon = "109",
   skip = "all",
   text = [[
-L'épée dorée, inflige
+L'épée blue, inflige
 énormément de dégâts.
 ]],
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.sword_beam.1",
-  icon = "103",
+  id = "scripts.menus.pause_inventory.sword_skill_beam.1",
+  icon = "104",
   skip = "all",
   text = [[
 Crée un rayon de vie pour
 éliminer tes enemis de loin !
 Ne fonctionne qui si tu as ta
 barre de vie pleine.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.tail_key.1",
-  icon = "40",
-  skip = "all",
-  text = [[
-Permet d'ouvrir
-la porte de
-la cave Flagello
 ]],
 }
 
@@ -8355,19 +8660,28 @@ vieux monsieur.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.wine.1",
-  icon = "150",
+  id = "scripts.menus.pause_inventory.wind_rod.1",
+  icon = "40",
   skip = "all",
   text = [[
-Un peu d'énergie
-pour croquer la vie
-à pleines dents !
+Le Bâton de Vent envoie de
+puissantes bourrasques sur
+tes ennemis.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.wine.1",
+  icon = "87",
+  skip = "all",
+  text = [[
+Un verre d'alcool offert <<<
 ]],
 }
 
 dialog{
   id = "scripts.menus.pause_inventory.world_map.1",
-  icon = "150",
+  icon = "114",
   text = [[
 La carte d'Hyrule, te permettant
 de te repérer dans ce vaste
@@ -8403,6 +8717,19 @@ Entrer
 }
 
 dialog{
+  id = "scripts.menus.version_checker.update_question",
+  question = "1",
+  text = [[
+Votre sauvegarde n'est pas à jour.
+Elle sera mise à jour vers la
+dernière version du jeu.
+Mettre à jour la sauvegarde ?
+Oui
+Non (retour au menu)
+]],
+}
+
+dialog{
   id = "scripts.meta.map.door_locked",
   text = [[
 Cette porte semble
@@ -8416,6 +8743,27 @@ dialog{
 Voici un petit bonus.    
 Je restaure tous tes
 Coeurs !
+]],
+}
+
+dialog{
+  id = "test",
+  text = [[
+ !"#$%&'()*+,-./
+0123456789:;<=>?
+@ABCDEFGHIJKLMNO
+PQRSTUVWXYZ ^_
+`abcdefghijklmno
+pqrstuvwxyz{|}~
+¡¢£¤¥¦§¨©ª«¬­®¯
+°±²³´µ¶·¸¹º»¼½¾¿
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ
+ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
+àáâãäåæçèéêëìíîï
+ðñòóôõö÷øùúûüýþÿ
+ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğ
+ĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿ
+ŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞş
 ]],
 }
 
