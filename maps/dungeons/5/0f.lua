@@ -27,7 +27,7 @@ map:register_event("on_started", function()
 
   -- Doors
   map:set_doors_open("door_26_n", true)
-  door_manager:open_when_enemies_dead(map, "enemy_26_", "door_26_n", sound)
+  door_manager:open_when_enemies_dead(map, "enemy_26_", "door_26_n", false)
 end)
 
 sensor_26_door:register_event("on_activated", function()
