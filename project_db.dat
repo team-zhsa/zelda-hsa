@@ -1437,9 +1437,9 @@ sound{ id = "common/chest_open", description = "Chest Open" }
 sound{ id = "common/door/boss_door_unlock", description = "Boss door unlock" }
 sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
 sound{ id = "common/door/stone_close", description = "Stone close" }
-sound{ id = "common/door/stone_open", description = "Stone open" }
-sound{ id = "common/door/stone_slam", description = "Stone door slam" }
-sound{ id = "common/door/unlock_small_key", description = "Unlock small key" }
+sound{ id = "common/door_close", description = "Stone door slam" }
+sound{ id = "common/door_open", description = "Stone open" }
+sound{ id = "common/door_unlocked", description = "Unlock small key" }
 sound{ id = "common/gong", description = "Gong" }
 sound{ id = "common/hint_notification", description = "Hint notification" }
 sound{ id = "common/item_away", description = "Item away" }
@@ -1532,6 +1532,17 @@ sound{ id = "items/bow", description = "Bow" }
 sound{ id = "items/cane", description = "Cane" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
 sound{ id = "items/fire_rod", description = "Shoot" }
+<<<<<<< Updated upstream
+=======
+sound{ id = "items/get_heart", description = "Heart" }
+sound{ id = "items/get_heart_container", description = "Heart container" }
+sound{ id = "items/get_major_item", description = "items/get_major_item" }
+sound{ id = "items/get_minor_item", description = "items/get_minor_item" }
+sound{ id = "items/get_rupee_chest", description = "get rupee from tp" }
+sound{ id = "items/get_sidequest_major_item", description = "Sidequest major item" }
+sound{ id = "items/get_sidequest_minor_item", description = "items/sidequest_minor_item" }
+sound{ id = "items/get_small_key", description = "Picked Small Key" }
+>>>>>>> Stashed changes
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
 sound{ id = "items/hammer/hit", description = "Hammer hit" }
 sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
@@ -1558,6 +1569,7 @@ sound{ id = "items/ocarina/song/3_water", description = "3 Serenade of Water" }
 sound{ id = "items/ocarina/song/4_spirit", description = "4 Requiem of Spirit" }
 sound{ id = "items/ocarina/song/5_lorule", description = "5 Song of Lorule" }
 sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" }
+sound{ id = "items/rupee", description = "Rupee" }
 sound{ id = "items/shield", description = "Shield" }
 sound{ id = "items/sidequest_major_item", description = "Sidequest major item" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
@@ -1598,9 +1610,6 @@ sound{ id = "menus/timer_switch", description = "Timer" }
 sound{ id = "menus/title/presented_by", description = "Presented by" }
 sound{ id = "message_end", description = "Empty sound" }
 sound{ id = "monster_hurt", description = "Empty sound" }
-sound{ id = "objects/heart/heart", description = "Heart" }
-sound{ id = "objects/rupee/rupee", description = "Rupee" }
-sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
 sound{ id = "picked_item", description = "Empty sound" }
 sound{ id = "running", description = "Empty sound" }
 sound{ id = "running_obstacle", description = "Empty sound" }
