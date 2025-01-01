@@ -166,12 +166,14 @@ function parchment:initialise()
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     text = parchment.text_line_1,
-    font = "alttp_ttf",
+    font = "alttp",
     font_size = 8,
     color = text_line_1_color,
   }
   text_line_surface_1:set_xy(parchment.surface_w / 2, 13)
-  text_fx_helper:draw_text_with_stroke_and_shadow(parchment.text_lines_surface, text_line_surface_1, text_line_1_stroke_color, text_line_1_shadow_color)
+  text_line_surface_1:draw(parchment.text_lines_surface)
+
+  --text_fx_helper:draw_text_with_stroke_and_shadow(parchment.text_lines_surface, text_line_surface_1, text_line_1_stroke_color, text_line_1_shadow_color)
 
   -- Create and draw second text line.
   local text_line_surface_2 = sol.text_surface.create{

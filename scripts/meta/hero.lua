@@ -93,7 +93,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
       end
     elseif current_state == "hurt" then
       -- Hurt
-      audio_manager:play_sound("hero/hero_hurt".. math.random(1,3)) 
+      audio_manager:play_sound("hero/hero_hurt_".. math.random(1,3)) 
     elseif current_state == "falling" then
       -- Falling
       hero:stop_movement()
@@ -146,7 +146,7 @@ hero_meta:register_event("on_state_changed", function(hero, current_state)
         --print "drown"
         sol.timer.start(hero, 10, function()
             local s,c=hero:get_state()
-            --print ("prepare to drown when in state"..s..(c and "("..c:get_description()..")" or ""))
+            --sol.audio.play_sound("hero/hero_drown")
             --hero:drown()
           end)
       end
