@@ -74,7 +74,10 @@ end
 -- Gets enemy_type
 function enemy_meta:get_breed_short()
 	breed = self:get_breed():match(".*/(.*)$")
-	short_breed = breed:match('^(.-)_')
+	if not breed:match("[_]") then
+		short_breed = breed:match("^(.*)")
+	else short_breed = breed:match("^(.*)_")
+	end
 	return short_breed
 end
 
@@ -103,6 +106,7 @@ function enemy_meta:on_restarted()
 end
 
 function enemy_meta:on_hurt(attack)
+		print(self:get_breed_short())
 	if not self.is_hurt_silently then
 		if self:get_hurt_style() == "boss" then
 			audio_manager:play_sound("enemies/boss_hurt")

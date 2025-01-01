@@ -54,7 +54,11 @@ function config:create(item, properties)
 							end
 						end)
 					elseif properties.type == "skip_dialogue" then
-						hero:teleport(properties.destination_map, properties.destination)
+						if properties.type == "teleportation" then
+							hero:teleport(properties.destination_map, properties.destination)
+						else
+							properties.effect()
+						end
 					end
 				end
 			end)

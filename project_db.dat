@@ -459,8 +459,9 @@ sprite{ id = "enemies/dungeons/redead", description = "ReDead" }
 sprite{ id = "enemies/dungeons/rope", description = "Rope" }
 sprite{ id = "enemies/dungeons/spiked_beetle", description = "Spiked Beetle" }
 sprite{ id = "enemies/dungeons/stalfos_blue", description = "Blue Stalfos" }
-sprite{ id = "enemies/dungeons/stalfos_grey", description = "Grey Stalfos" }
+sprite{ id = "enemies/dungeons/stalfos_green", description = "Green Stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_knight", description = "Stalfos Knight" }
+sprite{ id = "enemies/dungeons/stalfos_orange", description = "Orange stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_blue", description = "Blue Tentacle" }
@@ -1460,7 +1461,9 @@ sound{ id = "enemies/armos_awake", description = "enemies/armos_awakei" }
 sound{ id = "enemies/armos_hurt", description = "enemies/armos_hurt" }
 sound{ id = "enemies/armos_jump", description = "enemies/armos_jump" }
 sound{ id = "enemies/armos_killed", description = "enemies/armos_killed" }
-sound{ id = "enemies/bari", description = "Bari" }
+sound{ id = "enemies/bari_hurt", description = "enemies/bari_hurt" }
+sound{ id = "enemies/bari_killed", description = "enemies/bari_killed" }
+sound{ id = "enemies/bari_shock", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
 sound{ id = "enemies/boss_charge", description = "enemies/boss_charge" }
 sound{ id = "enemies/boss_fireball", description = "enemies/boss_fireball" }
@@ -1474,6 +1477,9 @@ sound{ id = "enemies/monster_hurt", description = "Monster hurt" }
 sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
+sound{ id = "enemies/tektite_hurt", description = "enemies/tektite_hurt" }
+sound{ id = "enemies/tektite_jump", description = "enemies/tektite_jump" }
+sound{ id = "enemies/tektite_killed", description = "enemies/tektite_killed" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
 sound{ id = "enemies/zora", description = "enemies/zora" }
 sound{ id = "enemy_hurt", description = "Empty sound" }
@@ -1860,9 +1866,10 @@ enemy{ id = "dungeons/redead", description = "ReDead" }
 enemy{ id = "dungeons/rope", description = "Rope" }
 enemy{ id = "dungeons/spiked_beetle", description = "Spiked Beetle" }
 enemy{ id = "dungeons/stalfos_blue", description = "Blue Stalfos" }
-enemy{ id = "dungeons/stalfos_grey", description = "Grey Stalfos" }
+enemy{ id = "dungeons/stalfos_green", description = "Grey Stalfos" }
 enemy{ id = "dungeons/stalfos_head", description = "Stalfos Head" }
 enemy{ id = "dungeons/stalfos_knight", description = "Stalfos Knight" }
+enemy{ id = "dungeons/stalfos_orange", description = "Orange Stalfos" }
 enemy{ id = "dungeons/stalfos_red", description = "Red Stalfos" }
 enemy{ id = "dungeons/tentacle", description = "Tentacle" }
 enemy{ id = "dungeons/tentacle_blue", description = "Blue Tentacle" }

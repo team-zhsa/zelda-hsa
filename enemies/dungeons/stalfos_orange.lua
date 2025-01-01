@@ -149,6 +149,6 @@ enemy:register_event("on_restarted", function(enemy)
   enemy:set_obstacle_behavior("normal")
   enemy.is_exhausted = false
   enemy:set_can_attack(true)
-  enemy:set_damage(3)
+  enemy:set_damage(2)
   enemy:start_walking()
 end)

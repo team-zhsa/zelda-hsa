@@ -120,7 +120,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(4)
+  enemy:set_life(6)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
   enemy:start_shadow()
@@ -149,6 +149,6 @@ enemy:register_event("on_restarted", function(enemy)
   enemy:set_obstacle_behavior("normal")
   enemy.is_exhausted = false
   enemy:set_can_attack(true)
-  enemy:set_damage(3)
+  enemy:set_damage(2)
   enemy:start_walking()
 end)
