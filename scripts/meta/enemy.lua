@@ -65,6 +65,19 @@ function enemy_meta:set_hero_weapons_reactions(reactions)
 	end
 end
 
+-- Gets filename
+function enemy_meta:get_breed_name()
+  breed_name = self:get_breed():match(".*/(.*)$")
+  return breed_name
+end
+
+-- Gets enemy_type
+function enemy_meta:get_breed_short()
+	breed = self:get_breed():match(".*/(.*)$")
+	short_breed = breed:match('^(.-)_')
+	return short_breed
+end
+
 function enemy_meta:on_created()
 
 	local map = self:get_map()
@@ -90,14 +103,17 @@ function enemy_meta:on_restarted()
 end
 
 function enemy_meta:on_hurt(attack)
-
 	if not self.is_hurt_silently then
 		if self:get_hurt_style() == "boss" then
 			audio_manager:play_sound("enemies/boss_hurt")
 		elseif self:get_hurt_style() == "monster" then
 			audio_manager:play_sound("enemies/monster_hurt")
 		else
-			audio_manager:play_sound("enemies/enemy_hurt")
+			if sol.file.exists("sounds/enemies/"..self:get_breed_short().."_hurt.ogg") then
+				audio_manager:play_sound("enemies/"..self:get_breed_short().."_hurt")
+			else
+				audio_manager:play_sound("enemies/enemy_hurt")
+			end
 		end
 	end
 	local final_damage = self:get_attack_consequence(attack)
@@ -121,7 +137,11 @@ function enemy_meta:on_dying()
 					audio_manager:play_sound("environment/explosion")
 				end)
 		else
-			audio_manager:play_sound("enemies/enemy_killed")
+			if sol.file.exists("sounds/enemies/"..self:get_breed_short().."_killed.ogg") then
+				audio_manager:play_sound("enemies/"..self:get_breed_short().."_killed")
+			else
+				audio_manager:play_sound("enemies/enemy_killed")
+			end
 		end
 	end
 	local death_count = game:get_value("stats_enemy_death_count") or 0
