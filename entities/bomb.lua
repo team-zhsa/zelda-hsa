@@ -16,8 +16,8 @@ local sprite = bomb:get_sprite()
 local exploding_timer, blinking_timer
 
 -- Configuration variables.
-local countdown_duration = tonumber(bomb:get_property("countdown_duration")) or 2000
-local blinking_duration = 1000
+local countdown_duration = tonumber(bomb:get_property("countdown_duration")) or 4000
+local blinking_duration = 2000
 
 -- Make the bomb explode.
 local function explode()
@@ -76,5 +76,5 @@ end)
 bomb:register_event("on_created", function(bomb)
 
   start_countdown()
-  audio_manager:play_sound("bomb")
+  audio_manager:play_sound("items/bomb")
 end)

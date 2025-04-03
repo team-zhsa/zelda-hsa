@@ -2,7 +2,7 @@
 local item = ...
 
 function item:on_created()
-
+	item:set_sound_when_brandished("items/get_major_item")
   self:set_savegame_variable("possession_tunic_blue")
 	self:set_assignable(true)
 

@@ -10,3 +10,6 @@ function item:on_obtaining(variant, savegame_variable)
   end
   game:set_value("dungeon_" .. dungeon .. "_silver_key", true)
 end
+function item:on_created()
+  self:set_sound_when_brandished("items/get_major_item")
+end

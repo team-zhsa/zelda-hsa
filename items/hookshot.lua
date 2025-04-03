@@ -50,7 +50,7 @@ local item = ...
 local config = require("items/hookshot_config.lua")
 
 function item:on_created()
-
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_hookshot")
   item:set_assignable(true)
 end

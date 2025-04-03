@@ -13,7 +13,7 @@ local probabilities = {
   [{ "bomb", 2}]        = 6,  -- 3 Bombs.
   [{ "arrow", 1 }]      = 6,   --  Arrow.
   [{ "arrow", 2 }]      = 4,   --  5 Arrows.
-  [{ "magic_flask", 1 }]      = 1512,   --  Magic Flask.
+  [{ "magic_flask", 1 }]      = 12,   --  Magic Flask.
 }
 
 function item:on_pickable_created(pickable)

@@ -27,6 +27,7 @@ function item:on_created()
   self:set_assignable(false)
   local game = self:get_game()
   game:set_ability("jump_over_water", 0) -- Disable auto-jump on water border.
+  self:set_sound_when_brandished("items/get_major_item")
 end
 
 local game_meta = sol.main.get_metatable("game")

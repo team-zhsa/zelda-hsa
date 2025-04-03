@@ -61,7 +61,7 @@ function hearts_builder:new(game, config)
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed + 1
         if game:is_started()
             and hearts.nb_current_hearts_displayed % 4 == 0 then
-          sol.audio.play_sound("objects/heart/heart")
+          sol.audio.play_sound("items/get_heart")
         end
       end
     end
