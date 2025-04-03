@@ -14,6 +14,8 @@ function sol.main:on_started()
   math.randomseed(os.time())
   --sol.video.set_window_size(320,240)
 
+    sol.video.set_cursor_visible(false)
+
   -- Show the initial menus.
   if #initial_menus_config == 0 then
     return
