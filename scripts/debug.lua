@@ -65,11 +65,11 @@ function debug:on_key_pressed(key, modifiers)
     elseif key == "k" then
       game:remove_magic(5)
     elseif key == "kp 7" then
-      game:set_max_magic(50)
+      game:set_max_magic(39)
     elseif key == "kp 8" then
-      game:set_max_magic(100)
+      game:set_max_magic(79)
     elseif key == "kp 9" then
-      game:set_max_magic(150)
+      game:set_max_magic(119)
     elseif key == "kp 1" then
       local tunic = game:get_item("tunic")
       local variant = math.max(1, tunic:get_variant() - 1)
