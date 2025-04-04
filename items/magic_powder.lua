@@ -3,7 +3,7 @@
 
 -- Variables
 local item = ...
-
+local audio_manager = require("scripts/audio_manager")
 -- Event called when the game is initialized.
 function item:on_created()
 

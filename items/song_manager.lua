@@ -8,41 +8,60 @@ function config:create(item, properties)
   	self:set_assignable(true)
 	end
 
+	function item:on_using()
+  	item:play_song(music)
+  	self:set_finished()
+	end
+
 	function item:play_song(music)
 		local game = self:get_game()
-    local map = self:get_map()
   	local map = game:get_map()
    	local hero = map:get_hero()
   	local x,y,layer = hero:get_position()
-
     local music_volume = sol.audio.get_music_volume()
+
 		sol.audio.set_music_volume(10)
  	  hero:freeze()
   	hero:set_animation("playing_ocarina")
-  	local notes = map:create_custom_entity{
-    	x = x,
- 	   	y = y,
-  	  layer = layer + 1,
- 		  width = 24,
-  	  height = 32,
-  	  direction = 0,
-  	  sprite = "entities/notes"
-	  }
-		sol.audio.play_sound(properties.music)
-		sol.timer.start(map, properties.duration, function()
-			sol.audio.set_music_volume(music_volume)
-    	hero:unfreeze()
-			hero:set_direction(3)
-    	notes:remove()
-			if not game:is_in_dungeon() then
-				game:start_dialog(properties.dialogue, function(answer)
-					if answer == 1 then
-            hero:teleport(properties.destination_map, properties.destination)
-					else
-  					item:set_finished()
+
+		-- Wait for the hero animation
+		sol.timer.start(map, 800, function()
+			local notes = map:create_custom_entity{
+				x = x,
+				y = y,
+				layer = layer + 1,
+				width = 24,
+				height = 32,
+				direction = math.random(0,7),
+				sprite = "entities/notes"
+			}
+			sol.audio.play_sound(properties.music)
+			sol.timer.start(map, properties.duration, function()
+				sol.audio.set_music_volume(music_volume)
+	    	hero:unfreeze()
+				hero:set_direction(3)
+	    	notes:remove()
+				if not game:is_in_dungeon() then
+					-- Effect depending on song type
+					if properties.type ~= "skip_dialogue" then
+						game:start_dialog(properties.dialogue, function(answer)
+							if answer == 1 then
+								if properties.type == "teleportation" then
+									hero:teleport(properties.destination_map, properties.destination)
+								else
+									properties.effect()
+								end
+							end
+						end)
+					elseif properties.type == "skip_dialogue" then
+						if properties.type == "teleportation" then
+							hero:teleport(properties.destination_map, properties.destination)
+						else
+							properties.effect()
+						end
 					end
-				end)
-			end
+				end
+			end)
   	end)
 	end
 
@@ -70,10 +89,7 @@ function config:create(item, properties)
     end)
   end
 
-	function item:on_using()
-  	item:play_song(music)
-  	self:set_finished()
-	end
+
 end
 
 return config

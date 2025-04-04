@@ -5,6 +5,7 @@ local config = require("items/song_manager")
 local properties = {
 	savegame_variable = "possession_song_14",
   music = "items/ocarina/song/14_storms",
+	type = "teleportation",
   destination_map = "out/a3",
 	destination = "from_flute",
 	duration = 4000,

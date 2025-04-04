@@ -21,7 +21,7 @@ require("scripts/multi_events")
 
 -- Event called when the game is initialized.
 function item:on_started()
-  
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_feather")
   item:set_sound_when_brandished(nil)
   item:set_assignable(true)
@@ -46,11 +46,6 @@ end
 function item:on_using()
   item:start_using()
   item:set_finished()
-end
-
--- Play fanfare sound on obtaining.
-function item:on_obtaining()
-  audio_manager:play_sound("items/major_item")
 end
 
 -- Initialize the metatable of appropriate entities to be able to set a reaction on jumped on.

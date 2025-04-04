@@ -168,6 +168,7 @@ local function get_lights_from_map(map)
 		["stain_glass.2.bottom"] = true,
 		["stain_glass.3.bottom"] = true,
 		["stain_glass.4.bottom"] = true,
+		["lava"] = true,
 	}
 
 	local big = "110"
@@ -176,6 +177,7 @@ local function get_lights_from_map(map)
 	local radii = {
 		["torch"] = small,
 		["torch_big.top"] = small,
+		["lava"] = big,
 	}
 
 	local win_cut = "0.1"

@@ -57,7 +57,7 @@ end
 -- Play sound on obtaining.
 function item:on_obtaining()
   
-  audio_manager:play_sound("items/major_item")   
+  audio_manager:play_sound("items/get_major_item")   
 end
 
 -- Start using the shield.

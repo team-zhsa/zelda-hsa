@@ -26,6 +26,7 @@ end
 
 function enemy:shock()
   shocking = true
+  sol.audio.play_sound("enemies/bari_shock")
   enemy:get_sprite():set_animation("shaking")
   sol.timer.start(enemy, math.random(10)*1000, function()
     enemy:get_sprite():set_animation("walking")

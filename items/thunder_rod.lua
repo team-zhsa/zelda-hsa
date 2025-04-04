@@ -4,7 +4,7 @@ local game = item:get_game()
 local magic_needed = 1 -- Number of magic points required.
 
 function item:on_created()
-
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_thunder_rod")
   item:set_assignable(true)
 end

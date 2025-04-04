@@ -29,8 +29,8 @@ local jumping_speed = 128
 
 -- Pounce to the hero.
 function enemy:start_pouncing()
-
   sprite:set_animation("jumping")
+  sol.audio.play_sound("enemies/tektite_jump")
   enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
     enemy:restart()
   end)

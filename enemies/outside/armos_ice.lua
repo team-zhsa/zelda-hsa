@@ -33,17 +33,11 @@ local jumping_height = 8
 local jumping_speed = 32 + math.random(10)
 local triggering_distance = 96
 
--- Pounce to the hero.
-function enemy:start_pouncing()
-
-
-end
-
 -- Wait a few time then shake and pounce.
 function enemy:awaken()
-
   sol.timer.start(enemy, math.random(waiting_minimum_duration, waiting_maximum_duration), function()
     sprite:set_animation("shaking")
+    sol.audio.play_sound("enemies/armos_awake")
     sol.timer.start(enemy, shaking_duration, function()
       enemy:go_hero()
     end)
@@ -96,6 +90,7 @@ function enemy:go_hero()
   enemy:set_traversable(true)
   sprite:set_animation("jumping")
   enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+    sol.audio.play_sound("enemies/armos_jump")
     if enemy:get_distance(hero) < triggering_distance then
       enemy:go_hero()
     else
@@ -154,7 +149,6 @@ enemy:register_event("on_restarted", function()
   enemy:set_damage(4)
   enemy:check_hero()
 end)
-
 
 enemy:register_event("on_hurt", function()
   if timer ~= nil then

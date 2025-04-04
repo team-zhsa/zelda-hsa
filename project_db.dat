@@ -459,8 +459,9 @@ sprite{ id = "enemies/dungeons/redead", description = "ReDead" }
 sprite{ id = "enemies/dungeons/rope", description = "Rope" }
 sprite{ id = "enemies/dungeons/spiked_beetle", description = "Spiked Beetle" }
 sprite{ id = "enemies/dungeons/stalfos_blue", description = "Blue Stalfos" }
-sprite{ id = "enemies/dungeons/stalfos_grey", description = "Grey Stalfos" }
+sprite{ id = "enemies/dungeons/stalfos_green", description = "Green Stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_knight", description = "Stalfos Knight" }
+sprite{ id = "enemies/dungeons/stalfos_orange", description = "Orange stalfos" }
 sprite{ id = "enemies/dungeons/stalfos_red", description = "Red Stalfos" }
 sprite{ id = "enemies/dungeons/tentacle", description = "Tentacle" }
 sprite{ id = "enemies/dungeons/tentacle_blue", description = "Blue Tentacle" }
@@ -782,7 +783,6 @@ sprite{ id = "entities/graves/gravestone09", description = "Grave 09" }
 sprite{ id = "entities/graves/gravestone10", description = "Grave 10" }
 sprite{ id = "entities/graves/gravestone11", description = "Grave 11" }
 sprite{ id = "entities/graves/gravestone12", description = "Grave 12" }
-sprite{ id = "entities/green_cristal", description = "Green cristal" }
 sprite{ id = "entities/ground_effects/grass", description = "ground_effects/leaves" }
 sprite{ id = "entities/ground_effects/sand", description = "Sand" }
 sprite{ id = "entities/ground_effects/walrus_diving_effect", description = "Walrus diving effect" }
@@ -1434,12 +1434,10 @@ sound{ id = "common/bounce", description = "Bounce" }
 sound{ id = "common/cannonball", description = "Cannonball" }
 sound{ id = "common/chest_appear", description = "Chest appearing" }
 sound{ id = "common/chest_open", description = "Chest Open" }
-sound{ id = "common/door/boss_door_unlock", description = "Boss door unlock" }
-sound{ id = "common/door/mecanical_open", description = "Mechanical open" }
-sound{ id = "common/door/stone_close", description = "Stone close" }
-sound{ id = "common/door/stone_open", description = "Stone open" }
-sound{ id = "common/door/stone_slam", description = "Stone door slam" }
-sound{ id = "common/door/unlock_small_key", description = "Unlock small key" }
+sound{ id = "common/door_close", description = "Stone door slam" }
+sound{ id = "common/door_open", description = "Stone open" }
+sound{ id = "common/door_unlocked_big_key", description = "debug/door_unlocked_big_key" }
+sound{ id = "common/door_unlocked_key", description = "debug/door_unlocked_key" }
 sound{ id = "common/gong", description = "Gong" }
 sound{ id = "common/hint_notification", description = "Hint notification" }
 sound{ id = "common/item_away", description = "Item away" }
@@ -1450,20 +1448,28 @@ sound{ id = "common/medallion/medallion_appear", description = "Medallion appear
 sound{ id = "common/medallion/medallion_falling", description = "Medallion falls" }
 sound{ id = "common/secret_discover_minor", description = "Secret discover minor" }
 sound{ id = "common/secret_discover_minor0", description = "Secret discover" }
-sound{ id = "common/switch_crystal", description = "Switch crystal hit" }
-sound{ id = "common/switch_walkable", description = "Switch (On/Off)" }
+sound{ id = "common/switch_crystal", description = "debug/switch_crystal" }
+sound{ id = "common/switch_walkable", description = "debug/switch_walkable" }
 sound{ id = "common/warp", description = "common/warp" }
 sound{ id = "common/world_warp", description = "common/world_warp" }
-sound{ id = "common/wrong", description = "common/wrong" }
+sound{ id = "common/wrong", description = "debug/wrong" }
 sound{ id = "door_closed", description = "Empty sound" }
 sound{ id = "door_open", description = "Empty sound" }
 sound{ id = "door_unlocked", description = "Empty sound" }
 sound{ id = "enemies/_miniboss/phantom_ganon/laugh", description = "Phantom Ganon laugh" }
-sound{ id = "enemies/bari", description = "Bari" }
+sound{ id = "enemies/armos_awake", description = "enemies/armos_awakei" }
+sound{ id = "enemies/armos_hurt", description = "enemies/armos_hurt" }
+sound{ id = "enemies/armos_jump", description = "enemies/armos_jump" }
+sound{ id = "enemies/armos_killed", description = "enemies/armos_killed" }
+sound{ id = "enemies/bari_hurt", description = "enemies/bari_hurt" }
+sound{ id = "enemies/bari_killed", description = "enemies/bari_killed" }
+sound{ id = "enemies/bari_shock", description = "Bari" }
 sound{ id = "enemies/beamos", description = "Beamos" }
 sound{ id = "enemies/boss_charge", description = "enemies/boss_charge" }
+sound{ id = "enemies/boss_fireball", description = "enemies/boss_fireball" }
 sound{ id = "enemies/boss_hurt", description = "Boss hurt" }
 sound{ id = "enemies/boss_killed", description = "Boss killed" }
+sound{ id = "enemies/boss_shoot", description = "enemies/boss_shoot" }
 sound{ id = "enemies/cucco", description = "cucco" }
 sound{ id = "enemies/enemy_hurt", description = "Enemy hurt" }
 sound{ id = "enemies/enemy_killed", description = "Enemy killed" }
@@ -1471,6 +1477,9 @@ sound{ id = "enemies/monster_hurt", description = "Monster hurt" }
 sound{ id = "enemies/pike_obstacle_reached", description = "Pike obstacle reached" }
 sound{ id = "enemies/rat", description = "Rat" }
 sound{ id = "enemies/redead", description = "ReDead" }
+sound{ id = "enemies/tektite_hurt", description = "enemies/tektite_hurt" }
+sound{ id = "enemies/tektite_jump", description = "enemies/tektite_jump" }
+sound{ id = "enemies/tektite_killed", description = "enemies/tektite_killed" }
 sound{ id = "enemies/wizzrobe", description = "Wizzrobe" }
 sound{ id = "enemies/zora", description = "enemies/zora" }
 sound{ id = "enemy_hurt", description = "Empty sound" }
@@ -1482,6 +1491,7 @@ sound{ id = "environment/ice_melt", description = "Ice melt" }
 sound{ id = "environment/ice_shatter", description = "ice_shatter" }
 sound{ id = "environment/pot_shatter", description = "Shattering Pot" }
 sound{ id = "environment/rock_shatter", description = "Rock" }
+sound{ id = "environment/sign_slice", description = "environment/sign_slice" }
 sound{ id = "environment/skull_shatter", description = "Shattering Skull" }
 sound{ id = "environment/thunder1", description = "Thunder" }
 sound{ id = "environment/thunder2", description = "Thunder" }
@@ -1493,11 +1503,15 @@ sound{ id = "environment/water_drain_begin", description = "water_drain_begin" }
 sound{ id = "environment/water_fill", description = "water_fill" }
 sound{ id = "environment/water_fill_begin", description = "water_fill_begin" }
 sound{ id = "explosion", description = "Empty sound" }
+sound{ id = "hero/hero_dive_1", description = "hero/hero_dive_1" }
+sound{ id = "hero/hero_dive_2", description = "hero/hero_dive_2" }
+sound{ id = "hero/hero_dive_3", description = "hero/hero_dive_3" }
+sound{ id = "hero/hero_drown", description = "hero/hero_drown" }
 sound{ id = "hero/hero_dying", description = "hero/hero_dying" }
 sound{ id = "hero/hero_falls", description = "hero/hero_falls" }
-sound{ id = "hero/hero_hurt1", description = "hero/hero_hurt1" }
-sound{ id = "hero/hero_hurt2", description = "hero/hero_hurt2" }
-sound{ id = "hero/hero_hurt3", description = "hero/hero_hurt3" }
+sound{ id = "hero/hero_hurt_1", description = "hero/hero_hurt_4" }
+sound{ id = "hero/hero_hurt_2", description = "hero/hero_hurt2" }
+sound{ id = "hero/hero_hurt_3", description = "hero/hero_hurt_3" }
 sound{ id = "hero/hero_lands", description = "hero/hero_lands" }
 sound{ id = "hero/hero_lift", description = "lift" }
 sound{ id = "hero/hero_pushes", description = "hero/hero_pushes" }
@@ -1506,6 +1520,10 @@ sound{ id = "hero/jump", description = "hero/jump" }
 sound{ id = "hero/running", description = "hero/running" }
 sound{ id = "hero/running_obstacle", description = "hero/running_obstacle" }
 sound{ id = "hero/splash", description = "Splash" }
+sound{ id = "hero/stairs_down_external", description = "debug/stairs_down" }
+sound{ id = "hero/stairs_down_internal", description = "common/internal_stairs_down" }
+sound{ id = "hero/stairs_up_external", description = "debug/stairs_up" }
+sound{ id = "hero/stairs_up_internal", description = "common/internal_stairs_up" }
 sound{ id = "hero/swim", description = "swim" }
 sound{ id = "hero/sword1", description = "hero/sword1" }
 sound{ id = "hero/sword2", description = "hero/sword2" }
@@ -1526,12 +1544,26 @@ sound{ id = "hero_hurt", description = "Empty sound" }
 sound{ id = "hero_lands", description = "Empty sound" }
 sound{ id = "hero_pushes", description = "Empty sound" }
 sound{ id = "hookshot", description = "Empty sound" }
+sound{ id = "items/arrow_hit", description = "items/arrow_hit" }
 sound{ id = "items/bomb", description = "Bomb" }
 sound{ id = "items/boomerang", description = "Boomerang" }
 sound{ id = "items/bow", description = "Bow" }
+sound{ id = "items/bow_no_arrows", description = "No arrows shoot" }
 sound{ id = "items/cane", description = "Cane" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
 sound{ id = "items/fire_rod", description = "Shoot" }
+sound{ id = "items/get_heart", description = "Heart" }
+sound{ id = "items/get_heart_container", description = "Heart container" }
+sound{ id = "items/get_major_item", description = "items/get_major_item" }
+sound{ id = "items/get_minor_item", description = "items/get_minor_item" }
+sound{ id = "items/get_piece_of_heart", description = "items/piece_of_heart" }
+sound{ id = "items/get_rupee", description = "Rupee" }
+sound{ id = "items/get_rupee_chest", description = "debug/get_rupee_chest" }
+sound{ id = "items/get_sidequest_major_item", description = "Sidequest major item" }
+sound{ id = "items/get_sidequest_minor_item", description = "items/sidequest_minor_item" }
+sound{ id = "items/get_small_item_pick_0", description = "items/small_item0" }
+sound{ id = "items/get_small_item_pick_1", description = "items/small_item1" }
+sound{ id = "items/get_small_key", description = "Picked Small Key" }
 sound{ id = "items/hammer/heavy_block_hit", description = "Hammer Stake" }
 sound{ id = "items/hammer/hit", description = "Hammer hit" }
 sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
@@ -1544,7 +1576,6 @@ sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
 sound{ id = "items/lens_of_truth/lens_end", description = "Lens of Truth End" }
 sound{ id = "items/lens_of_truth/lens_start", description = "Lens of Truth Start" }
-sound{ id = "items/no_arrows_shoot", description = "No arrows shoot" }
 sound{ id = "items/ocarina/song/10_zelda", description = "10 Zelda' Lullaby" }
 sound{ id = "items/ocarina/song/11_time", description = "11 Song of Time" }
 sound{ id = "items/ocarina/song/12_secret", description = "12 Secret Song" }
@@ -1559,7 +1590,7 @@ sound{ id = "items/ocarina/song/4_spirit", description = "4 Requiem of Spirit" }
 sound{ id = "items/ocarina/song/5_lorule", description = "5 Song of Lorule" }
 sound{ id = "items/ocarina/song/8_shadow", description = "8 Nocturne of Shadow" }
 sound{ id = "items/shield", description = "Shield" }
-sound{ id = "items/sidequest_major_item", description = "Sidequest major item" }
+sound{ id = "items/shovel", description = "items/shovel" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
@@ -1579,7 +1610,9 @@ sound{ id = "menus/magic_bar", description = "Magic bar" }
 sound{ id = "menus/message_done", description = "Message done" }
 sound{ id = "menus/message_end", description = "Message end" }
 sound{ id = "menus/message_letter", description = "Message letter" }
-sound{ id = "menus/message_no", description = "Message no" }
+sound{ id = "menus/message_no", description = "debug/message_no" }
+sound{ id = "menus/message_question", description = "debug/message_question" }
+sound{ id = "menus/message_yes", description = "menus/message_yes" }
 sound{ id = "menus/minimap_off", description = "Minimap off" }
 sound{ id = "menus/minimap_on", description = "Minimap on" }
 sound{ id = "menus/modify_value", description = "Modify value" }
@@ -1598,9 +1631,6 @@ sound{ id = "menus/timer_switch", description = "Timer" }
 sound{ id = "menus/title/presented_by", description = "Presented by" }
 sound{ id = "message_end", description = "Empty sound" }
 sound{ id = "monster_hurt", description = "Empty sound" }
-sound{ id = "objects/heart/heart", description = "Heart" }
-sound{ id = "objects/rupee/rupee", description = "Rupee" }
-sound{ id = "objects/small_key/picked_small_key", description = "Picked Small Key" }
 sound{ id = "picked_item", description = "Empty sound" }
 sound{ id = "running", description = "Empty sound" }
 sound{ id = "running_obstacle", description = "Empty sound" }
@@ -1836,9 +1866,10 @@ enemy{ id = "dungeons/redead", description = "ReDead" }
 enemy{ id = "dungeons/rope", description = "Rope" }
 enemy{ id = "dungeons/spiked_beetle", description = "Spiked Beetle" }
 enemy{ id = "dungeons/stalfos_blue", description = "Blue Stalfos" }
-enemy{ id = "dungeons/stalfos_grey", description = "Grey Stalfos" }
+enemy{ id = "dungeons/stalfos_green", description = "Grey Stalfos" }
 enemy{ id = "dungeons/stalfos_head", description = "Stalfos Head" }
 enemy{ id = "dungeons/stalfos_knight", description = "Stalfos Knight" }
+enemy{ id = "dungeons/stalfos_orange", description = "Orange Stalfos" }
 enemy{ id = "dungeons/stalfos_red", description = "Red Stalfos" }
 enemy{ id = "dungeons/tentacle", description = "Tentacle" }
 enemy{ id = "dungeons/tentacle_blue", description = "Blue Tentacle" }
@@ -2031,6 +2062,7 @@ font{ id = "enter_command_mono", description = "Enter Command Mono" }
 font{ id = "green_digits", description = "Green digits" }
 font{ id = "kubasta", description = "Kubasta" }
 font{ id = "map_name", description = "map_name" }
+font{ id = "pixolde", description = "pixolde" }
 font{ id = "small_green_digits", description = "Small green digits" }
 font{ id = "small_white_digits", description = "Small white digits" }
 font{ id = "white_digits", description = "White digits" }

@@ -8,7 +8,7 @@ local audio_manager = require("scripts/audio_manager")
 local sound_timer
 
 function item:on_created()
-
+	self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_bomb_counter")
   item:set_amount_savegame_variable("amount_bomb_counter")
   item:set_assignable(true)
@@ -26,7 +26,7 @@ function item:start_using()
 --  debug_print "Single item bomb"
   if item:get_amount() == 0 then
     if sound_timer == nil then
-      audio_manager:play_sound("misc/error")
+      audio_manager:play_sound("common/wrong")
       sound_timer = sol.timer.start(game, 500, function()
           sound_timer = nil
         end)
