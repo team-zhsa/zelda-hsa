@@ -89988,11 +89988,14 @@ npc{
       key = "model",
       value = "sign",
     },
+                  {
+      key = "dialogue_id",
+      value = "maps.out.east_mountains.sign_2",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.east_mountains.sign_2",
 }
 
 jumper{

@@ -13859,11 +13859,14 @@ npc{
       key = "model",
       value = "sign",
     },
+          {
+      key = "dialogue_id",
+      value = "maps.out.hyrule_town.sign_1",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.hyrule_town.sign_1",
 }
 
 npc{

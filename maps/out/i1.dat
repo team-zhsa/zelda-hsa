@@ -55184,11 +55184,14 @@ npc{
       key = "model",
       value = "sign",
     },
+                          {
+      key = "dialogue_id",
+      value = "maps.out.snowpeaks.sign_2",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.snowpeaks.sign_2",
 }
 
 jumper{

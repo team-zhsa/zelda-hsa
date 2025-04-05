@@ -21706,11 +21706,14 @@ npc{
       key = "model",
       value = "sign",
     },
+        {
+      key = "dialogue_id",
+      value = "maps.out.south_coast.path_sign_1",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.south_coast.path_sign_1",
 }
 
 jumper{

@@ -16691,11 +16691,14 @@ npc{
       key = "model",
       value = "sign",
     },
+                      {
+      key = "dialogue_id",
+      value = "maps.out.east_castle.sign_3",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.east_castle.sign_3",
 }
 
 destructible{
@@ -19705,11 +19708,14 @@ npc{
       key = "model",
       value = "sign",
     },
+                          {
+      key = "dialogue_id",
+      value = "maps.out.east_castle.sign_2",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.east_castle.sign_2",
 }
 
 tile{

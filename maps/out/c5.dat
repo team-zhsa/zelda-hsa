@@ -22052,9 +22052,19 @@ npc{
   layer = 0,
   x = 1128,
   y = 237,
+  properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+    {
+      key = "dialogue_id",
+      value = "maps.out.gerudo_desert.sign_1",
+    },
+  },
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.gerudo_desert.sign_1",
+  sprite = "entities/sign",
 }
 
 teletransporter{
