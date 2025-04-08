@@ -11,7 +11,8 @@ local easing = require("scripts/automation/easing")
 
 local automation_builder = {}
 
-function automation_builder:new(context, target_entity, curve_type, duration, end_properties, on_finished)
+function automation_builder:new(context, target_entity, curve_type,
+                            duration, end_properties, on_finished)
 
   -- No automation if incorrect parameters.
   local easing_func = easing[curve_type]
@@ -41,7 +42,7 @@ function automation_builder:new(context, target_entity, curve_type, duration, en
     easing_func = easing_func,
   }
 
-  -- Initializes begin_properties.
+  -- initialises begin_properties.
   function automation:init_properties()
     -- A bit dirty at the moment...
     if automation.end_properties.x or automation.end_properties.y then

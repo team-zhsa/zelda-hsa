@@ -1,6 +1,5 @@
 local enemy_manager = {}
 
-
 function enemy_manager:execute_when_vegas_dead(map, enemy_prefix)
 
   local function enemy_on_symbol_fixed(enemy)
@@ -23,7 +22,7 @@ function enemy_manager:execute_when_vegas_dead(map, enemy_prefix)
 
     sol.timer.start(map, 500, function()
       if not all_same_direction then
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
         for vegas in map:get_entities(enemy_prefix) do
           vegas:set_symbol_fixed(false)
         end
@@ -56,7 +55,7 @@ function enemy_manager:create_teletransporter_if_small_boss_dead(map, sound)
         y = teletransporter_A_y - 16,
         width = 16,
         height = 16,
-        sprite = "entities/teletransporter_dungeon",
+        sprite = "entities/warps/teletransporter_dungeon",
         layer = teletransporter_A_layer,
         destination = "teletransporter_destination_B",
         destination_map = map:get_id(),
@@ -67,7 +66,7 @@ function enemy_manager:create_teletransporter_if_small_boss_dead(map, sound)
         y = teletransporter_B_y - 16,
         width = 16,
         height = 16,
-        sprite = "entities/teletransporter_dungeon",
+        sprite = "entities/warps/teletransporter_dungeon",
         layer = teletransporter_B_layer,
         destination = "teletransporter_destination_A",
         destination_map = map:get_id(),
@@ -128,6 +127,7 @@ function enemy_manager:launch_boss_if_not_dead(map)
     local x,y,layer = placeholder:get_position()
     placeholder:set_enabled(false)
     local enemy = map:create_enemy{
+			name = "boss",
       breed = dungeon_infos["boss"]["breed"],
       direction = 2,
       x = x,
@@ -140,6 +140,26 @@ function enemy_manager:launch_boss_if_not_dead(map)
     map:close_doors(door_prefix)
     sol.audio.play_music("boss/boss_alttp")
         
+end
+
+function enemy_manager:start_completing_sequence(map)
+  local game = map:get_game()
+  local hero = map:get_hero()
+  local dungeon_infos = game:get_dungeon()
+  if dungeon_infos["completing_sequence"] == "simple" then
+    hero:freeze()
+    sol.audio.play_music("cutscenes/victory", function()
+      sol.audio.stop_music()
+      hero:start_victory(function()
+				game:set_magic(game:get_max_magic())
+        game:set_life(game:get_max_life())
+        local map_id = dungeon_infos["main_exit"]["map_id"]
+        local destination_name = dungeon_infos["main_exit"]["destination_name"]
+        hero:teleport(map_id, destination_name, "fade")
+        hero:set_visible(true)
+      end)
+    end)
+  end
 end
 
 return enemy_manager

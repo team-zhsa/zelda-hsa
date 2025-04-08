@@ -19,7 +19,7 @@ local function call_with_delay_if_on_entity(entity_to_overlap, source_entity, de
   if not entity_to_overlap.call_timer then
     local delay_time_remaining=delay
 
---    debug_print "Initialize pre-action timer"
+--    debug_print "initialise pre-action timer"
     entity_to_overlap.call_timer=sol.timer.start(entity_to_overlap, 10, function()
 
         if not source_entity:overlaps(entity_to_overlap, "center") then

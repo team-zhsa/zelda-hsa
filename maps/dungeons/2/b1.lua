@@ -48,6 +48,10 @@ function switch_23_door:on_activated()
 	map:open_doors("door_18_s")
 end
 
+function sensor_14_door_15:on_activated()
+	map:set_doors_open("door_15_s", false)
+end
+
 function door_6_s:on_opened()
   dynamic_6_wall_s:set_enabled(false)
   dynamic_6_wall_s_top:set_enabled(false)

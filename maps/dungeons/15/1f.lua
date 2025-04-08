@@ -1,4 +1,4 @@
--- Lua script of map dongeon_15.
+-- Lua script of map dungeon_15_2f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -13,7 +13,7 @@ local game = map:get_game()
 -- Event called at initialization time, as soon as this map becomes is loaded.
 function map:on_started()
 
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

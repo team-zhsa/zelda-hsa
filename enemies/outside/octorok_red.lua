@@ -25,10 +25,10 @@ local walking_angles = {0, quarter, 2.0 * quarter, 3.0 * quarter}
 local walking_speed = 48
 local walking_minimum_distance = 16
 local walking_maximum_distance = 32
-local waiting_duration = 800
+local waiting_duration = 400
 local throwing_duration = 200
 
-local projectile_breed = "outside/octorok_stone"
+local projectile_breed = "projectiles/stone"
 local projectile_offset = {{0, -8}, {0, -8}, {0, -8}, {0, -8}}
 
 -- Start the enemy movement.
@@ -42,7 +42,7 @@ function enemy:start_walking()
       -- Throw a stone if the hero is on the direction the enemy is looking at.
       if enemy:get_direction4_to(hero) == sprite:get_direction() then
         enemy:throw_projectile(projectile_breed, throwing_duration, projectile_offset[direction][1], projectile_offset[direction][2], function()
-          audio_manager:play_entity_sound(enemy, "octorok")
+          audio_manager:play_entity_sound(enemy, "enemies/octorok")
           enemy:start_walking()
         end)
       else
@@ -54,10 +54,10 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-
-  enemy:set_life(1)
+  enemy:set_life(10)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
+  --enemy:set_fire_reaction_sprite(sprite, reaction)
 end)
 
 -- Restart settings.
@@ -65,11 +65,12 @@ enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 1,
-  	boomerang = 1,
+  	boomerang = "immobilized",
   	explosion = 1,
   	sword = 1,
   	thrown_item = 1,
-  	fire = 1,
+    fire = "immobilized",
+    ice = 0,
   	jump_on = "ignored",
   	hammer = 1,
   	hookshot = 1,

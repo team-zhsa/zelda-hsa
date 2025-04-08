@@ -5,7 +5,9 @@ properties{
   height = 1680,
   min_layer = 0,
   max_layer = 2,
-  tileset = "Absolute Dungeon 17",
+  world = "dungeon_14",
+  floor = -1,
+  tileset = "absolute_dungeon_17",
 }
 
 tile{
@@ -5233,7 +5235,7 @@ door{
   x = 344,
   y = 600,
   direction = 2,
-  sprite = "entities/Doors/Inside/door_d2_small_key",
+  sprite = "entities/doors/inside/door_d2_small_key",
   opening_method = "interaction_if_item",
   opening_condition = "small_key",
   opening_condition_consumed = true,
@@ -5244,7 +5246,7 @@ door{
   x = 792,
   y = 504,
   direction = 1,
-  sprite = "entities/Doors/Inside/door_d2_boss_key",
+  sprite = "entities/doors/inside/door_d2_boss_key",
   opening_method = "interaction_if_item",
   opening_condition = "boss_key",
 }

@@ -5,7 +5,8 @@ function item:on_created()
   self:set_shadow("small")
   self:set_can_disappear(true)
   self:set_brandish_when_picked(false)
-  self:set_sound_when_picked("common/get_small_item0")
+  self:set_sound_when_picked("items/get_rupee")
+  self:set_sound_when_brandished("items/get_rupee_chest")
 end
 
 function item:on_obtaining(variant, savegame_variable)

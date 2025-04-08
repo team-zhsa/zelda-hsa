@@ -4,8 +4,8 @@ local enemy = ...
 
 function enemy:on_created()
   self:set_life(8); self:set_damage(2)
-  self:create_sprite("enemies/bosslanmola_tail")
-  self:set_size(16, 16); self:set_/origin(8, 8)
+  self:create_sprite("enemies/boss/lanmola_tail")
+  self:set_size(16, 16); self:set_origin(8, 8)
   self:go(36)
 end
 

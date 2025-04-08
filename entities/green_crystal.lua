@@ -15,14 +15,14 @@ local map = entity:get_map()
 local sprite = entity:get_sprite()
 local is_destroy = false
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_created()
 
   entity:set_traversable_by("hero", false)
 
 end
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function entity:on_interaction()
 
       game:start_dialog("_cannot_break_without_boots");

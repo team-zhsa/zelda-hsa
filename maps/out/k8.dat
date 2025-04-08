@@ -6,7 +6,7 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
   music = "outside/sea",
 }
 
@@ -166,6 +166,17 @@ teletransporter{
   height = 16,
   transition = "scrolling",
   destination_map = "out/k7",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/j8",
   destination = "_side",
 }
 

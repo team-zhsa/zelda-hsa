@@ -1,4 +1,3 @@
--- Lua script of map out/h2.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -9,28 +8,42 @@
 
 local map = ...
 local game = map:get_game()
+local num_dialogue = 0
+
+-- Event called at initialization time, as soon as this map is loaded.
 local audio_manager = require("scripts/audio_manager")
 
--- Map events
-map:register_event("on_started", function(map, destination)
-
-  -- Music
-  map:init_music()
-
+map:register_event("on_started", function()
+  game:show_map_name("east_castle")
+	map:set_digging_allowed(true)
+	if game:is_step_done("sword_obtained") then
+		npc_soldier_3:set_enabled(false)
+	end
+	if game:is_step_done("sahasrahla_lost_woods_map") then
+		npc_soldier_1:set_enabled(false)
+		npc_soldier_2:set_enabled(false)
+	end
 end)
 
--- Initialize the music of the map
-function map:init_music()
-  if game:get_value("time_of_day", "day") then
-    audio_manager:play_music("outside/overworld")
-  elseif game:get_value("time_of_day", "night") then
-    audio_manager:play_music("outside/field_night")
-  end
-
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
+for npc in map:get_entities("npc_soldier_") do
+	npc:register_event("on_interaction", function()
+		if num_dialogue == 0 then
+			if game:get_time_of_day() == "dawn" or game:get_time_of_day() == "day" or game:get_time_of_day() == "sunset" then
+				game:start_dialog("maps.out.north_field.soldiers.soldiers_day")
+				num_dialogue = 1
+			elseif game:get_time_of_day() == "night" or game:get_time_of_day() == "twillight" then
+				game:start_dialog("maps.out.north_field.soldiers.soldiers_night")
+				num_dialogue = 1
+			end
+		elseif num_dialogue == 1 then
+			game:start_dialog("maps.out.north_field.soldiers.tip_chest")
+			num_dialogue = 2
+		elseif num_dialogue == 2 then
+			game:start_dialog("maps.out.north_field.soldiers.tip_read")
+			num_dialogue = 3
+		elseif num_dialogue == 3 then
+			game:start_dialog("maps.out.north_field.soldiers.tip_speak")
+			num_dialogue = 0
+		end
+	end)
 end

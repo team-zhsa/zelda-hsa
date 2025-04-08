@@ -1,110 +1,186 @@
---MERCURIS CHESS VERSION
--- This script adds to maps some functions that allow you to put the map
--- into the dark.
---
--- Maps will have the following new functions:
--- map:get_light() and map:set_light().
---
--- Usage:
---
--- require("scripts/maps/light_manager")
---
--- your_map:set_light(0)  -- Put the map into the dark.
--- your_map:set_light(1)  -- Restore normal light.
+local light_mgr = {occluders={},lights={},occ_maps = {},occ_chunks={}}
 
-local light_manager = {}
+light_mgr.light_acc = sol.surface.create(sol.video.get_quest_size())
+light_mgr.light_acc:set_blend_mode('multiply')
 
-require("scripts/multi_events")
+local make_shadow_s = sol.shader.create("make_shadow1d")
+local cast_shadow_s = sol.shader.create("cast_shadow1d")
 
--- Dark overlay for each hero direction.
-local dark_surfaces = {
-  [0] = sol.surface.create("fogs/dark0.png"),
-  [1] = sol.surface.create("fogs/dark1.png"),
-  [2] = sol.surface.create("fogs/dark2.png"),
-  [3] = sol.surface.create("fogs/dark3.png")
+local fire_dist = sol.shader.create('fire_dist')
+
+local angular_resolution = 256
+local shadow_map = sol.surface.create(angular_resolution,1)
+shadow_map:set_blend_mode("add")
+shadow_map:set_shader(cast_shadow_s)
+local chunk_size = 512
+
+function light_mgr:add_occluder(occ,sprite)
+  self.occluders[occ]=sprite or occ:get_sprite()
+end
+
+function light_mgr:add_light(light,name)
+  self.lights[name or light] = light
+end
+
+function light_mgr:get_fire_shader()
+  return fire_dist
+end
+
+local blocking_grounds = {
+  wall = true
 }
-local black = {0, 0, 0}
 
-local map_meta = sol.main.get_metatable("map")
+function light_mgr:chunk_id(chunk_x,chunk_y,layer)
+  return chunk_x +
+    chunk_y*self.chunk_width +
+    (layer-self.map:get_min_layer())*self.chunk_width*self.chunk_height
+end
 
-local function dark_map_on_draw(map, dst_surface)
-
-  if map:get_light() ~= 0 then
-    -- Normal light: nothing special to do.
-    return
+function light_mgr:get_occ_chunk(chunk_x,chunk_y,layer)
+  --don't recompute map_occluder for the same layer
+  local cid = self:chunk_id(chunk_x,chunk_y,layer)
+  local chunk = self.occ_chunks[cid]
+  if not chunk then
+    --create chunk as it doesn't exist
+    chunk = {surf=sol.surface.create(chunk_size,chunk_size),valid=false}
+    self.occ_chunks[cid] = chunk
   end
-
-  -- Map normally dark but maybe there are torches.
-  if map.lit_torches ~= nil then
-    for torch in pairs(map.lit_torches) do
-      if torch:exists() and
-          torch:is_enabled() then
-        return
+  if chunk.valid then
+    -- chunk is still valid, return it as is
+    return chunk.surf
+  end
+  --chunk is invalid, update it!
+  --print(string.format("computing chunk at (%d,%d,%d)",chunk_x,chunk_y,layer))
+  local map = self.map
+  local cx,cy = chunk_x*chunk_size,chunk_y*chunk_size
+  local l = layer
+  local dx,dy = cx % 8, cy % 8
+  local w,h = chunk_size, chunk_size
+  local color = {0,0,0,255}
+  chunk.surf:clear()
+  for x=0,w,8 do
+    for y=0,h,8 do
+      local ground = map:get_ground(cx+x,cy+y,l)
+      if blocking_grounds[ground] then
+        chunk.surf:fill_color(color,x-dx,y-dy,8,8)
       end
     end
   end
+  chunk.valid = true
+  return chunk.surf
+end
 
-  -- Dark room.
-  local screen_width, screen_height = dst_surface:get_size()
-  local hero = map:get_entity("hero")
-  local hero_x, hero_y = hero:get_center_position()
-  local camera_x, camera_y = map:get_camera():get_bounding_box()
-  local x = 320 - hero_x + camera_x
-  local y = 240 - hero_y + camera_y
-  local dark_surface = dark_surfaces[hero:get_direction()]
-  dark_surface:draw_region(
-      x, y, screen_width, screen_height, dst_surface)
-
-  -- dark_surface may be too small if the screen size is greater
-  -- than 320x240. In this case, add black bars.
-  if x < 0 then
-    dst_surface:fill_color(black, 0, 0, -x, screen_height)
-  end
-
-  if y < 0 then
-    dst_surface:fill_color(black, 0, 0, screen_width, -y)
-  end
-
-  local dark_surface_width, dark_surface_height = dark_surface:get_size()
-  if x > dark_surface_width - screen_width then
-    dst_surface:fill_color(black, dark_surface_width - x, 0,
-        x - dark_surface_width + screen_width, screen_height)
-  end
-
-  if y > dark_surface_height - screen_height then
-    dst_surface:fill_color(black, 0, dark_surface_height - y,
-        screen_width, y - dark_surface_height + screen_height)
+function light_mgr:invalidate_occ_chunks()
+  for k,chunk in pairs(self.occ_chunks) do
+    chunk.valid = false
   end
 end
 
-function map_meta:get_light()
-
-  return self.light or 1
+function light_mgr:get_occ_map(radius)
+  if not self.occ_maps[radius] then
+    self.occ_maps[radius] = sol.surface.create(radius*2,radius*2)
+    self.occ_maps[radius]:set_shader(make_shadow_s)
+  end
+  return self.occ_maps[radius]
 end
 
-function map_meta:set_light(light)
-  
-  self.light = light
+function light_mgr:compute_light_shadow_map(light)
+  local radius = light.radius
+  local occ_map = self:get_occ_map(radius)
 
-  if light ~= 0 then
-      -- Normal light: nothing special to do.
-    return
+  local size = radius*2
+
+  --setup shaders for this light
+  local resolution = {radius,radius}
+  make_shadow_s:set_uniform("resolution",resolution)
+  shadow_map:set_scale(size/angular_resolution,size)
+  cast_shadow_s:set_uniform("resolution",resolution)
+  cast_shadow_s:set_uniform("lcolor",light.color)
+  cast_shadow_s:set_uniform("dir",light.direction or {1,0})
+  cast_shadow_s:set_uniform("aperture",light.aperture or -1.5)
+  cast_shadow_s:set_uniform("halo",light.halo or 0.2)
+  cast_shadow_s:set_uniform("cut",light.cut or 0.0)
+
+  --get light geometry
+  local lx,ly,ll = light:get_topleft()
+
+  --compute overlapped chunks
+  local cxmin = math.floor(lx/chunk_size)
+  local cymin = math.floor(ly/chunk_size)
+
+  local cxmax = math.floor((lx+size)/chunk_size)
+  local cymax = math.floor((ly+size)/chunk_size)
+
+
+  occ_map:clear()
+
+  --draw occlusion chunks on the light occlusion map
+  for cx = cxmin,cxmax do
+    for cy = cymin,cymax do
+      local chunk = self:get_occ_chunk(cx,cy,ll)
+      local cxx = cx*chunk_size
+      local cyy = cy*chunk_size
+      local rx,ry = cxx-lx,cyy-ly
+      chunk:draw(occ_map,rx,ry)
+    end
   end
 
-  self:register_event("on_draw", dark_map_on_draw)
-end
-
--- Function called by the torch script when a torch state has changed.
-function map_meta:torch_changed(torch)
-
-  self.lit_torches = self.lit_torches or {}
-
-  local lit = torch:is_lit()
-  if lit then
-    self.lit_torches[torch] = true
-  else
-    self.lit_torches[torch] = nil
+  --draw non-static occluders on this light
+  for ent,occ in pairs(self.occluders) do
+    if not light.excluded_occs[ent] and ent:is_enabled() then
+      local ex,ey = ent:get_position()
+      local x,y = ex-lx,ey-ly
+      occ:draw(occ_map,x,y)
+    end
+    if not ent:exists() then
+      self.occluders[ent] = nil
+    end
   end
+
+
+  occ_map:draw(shadow_map)
+  return shadow_map
 end
 
-return light_manager
+local function table_filter(table, pred)
+  local res = {}
+  for k,v in pairs(table) do
+    if pred(k,v) then res[k] = v; print(v) end
+  end
+  return res
+end
+
+function light_mgr:init(map,ambient)
+  self.ambient = ambient
+  self.occluders = table_filter(self.occluders,
+    function(k,v) return k:get_map() == map end)
+  self.lights = table_filter(self.lights,
+    function(k,v) return v:get_map() == map end)
+
+  --init occlusion chunks cache
+  local mw, mh = map:get_size()
+  self.occ_chunks = {}
+  self.chunk_width = math.ceil(mw / chunk_size)
+  self.chunk_height = math.ceil(mh / chunk_size)
+  self.map = map
+
+end
+
+local inv_count = 0
+
+function light_mgr:draw(dst,map)
+  if inv_count % 50 == 0 then
+    self:invalidate_occ_chunks()
+  end
+  inv_count = inv_count + 1
+  self.light_acc:fill_color(self.ambient or {25,25,25,255})
+  local camera = map:get_camera()
+  for n,l in pairs(self.lights) do
+    l:draw_light(self.light_acc,camera)
+  end
+  self.map_occluder_layer = nil
+  self.light_acc:draw(dst,0,0)
+  --self.map_occ:draw(dst,0,0)
+end
+
+return light_mgr

@@ -115,7 +115,7 @@ function behavior:create(enemy, properties)
     -- The angle is partially random to avoid too many enemies overlapping.
     local m = sol.movement.create("straight")
     local angle = self:get_angle(self:get_map():get_hero())
-    math.randomseed(os.time()) -- Initialize random seed.
+    math.randomseed(os.time()) -- initialise random seed.
     local d = 2 * math.random() - 1 -- Random real number in [-1,1].
     angle = angle + d * math.pi / 2 -- Alter jumping angle, randomly. /4
     m:set_speed(properties.jump_speed)

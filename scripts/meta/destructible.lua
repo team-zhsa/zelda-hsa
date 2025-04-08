@@ -1,18 +1,20 @@
--- Initialize destructible behavior specific to this quest.
+-- initialise destructible behavior specific to this quest.
 
 -- Variables
 local destructible_meta = sol.main.get_metatable("destructible")
 
 -- Include scripts
 local audio_manager = require("scripts/audio_manager")
+local custom_ground_entity
 
 function destructible_meta:on_created(game)
 
+  -- TODO destruction sounds
   local directory = audio_manager:get_directory()
   if self:get_can_be_cut() then
-    self:set_destruction_sound(directory .. "/misc/bush_cut") -- Todo
+    --self:set_destruction_sound(directory .. "/misc/bush_cut") -- Todo
   else
-    self:set_destruction_sound(directory .. "/misc/rock_shatter") -- Todo
+    --self:set_destruction_sound(directory .. "/misc/rock_shatter") -- Todo
   end
 
 end
@@ -36,6 +38,7 @@ function destructible_meta:on_looked()
   end
 
 end
+
 
 function destructible_meta:is_hookable()
 

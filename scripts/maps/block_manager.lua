@@ -10,15 +10,15 @@ function block_manager:init_block_riddle(map, group_prefix, callback)
   for block in map:get_entities(group_prefix) do
     block.group=group_prefix
     block:register_event("on_moved", function() 
-        local remaining=map.blocks_remaining[block.group]
-        remaining = remaining - 1
-        map.blocks_remaining[block.group] = remaining
-        if remaining == 0 then
-          if callback then
-            callback()
-          end
+      local remaining=map.blocks_remaining[block.group]
+      remaining = remaining - 1
+      map.blocks_remaining[block.group] = remaining
+      if remaining == 0 then
+        if callback then
+          callback()
         end
-      end)
+      end
+    end)
   end
 end
 return block_manager

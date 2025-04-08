@@ -1,28 +1,98 @@
 -- An icon that shows the inventory item assigned to a slot.
 
+local hud_icon_builder = require("scripts/hud/hud_icon")
+
 local item_icon_builder = {}
 
 function item_icon_builder:new(game, config)
 
   local item_icon = {}
-
-  local dst_x, dst_y = config.x, config.y
-
   item_icon.slot = config.slot or 1
-  item_icon.surface = sol.surface.create(32, 28)
-  item_icon.background_img = sol.surface.create("hud/item_icon_" .. item_icon.slot .. ".png")
+
+  -- Creates the hud icon delegate.
+  item_icon.hud_icon = hud_icon_builder:new(config.x, config.y)
+  item_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/item_icon_"..item_icon.slot))
+  
+  -- Initializes the icon.
   item_icon.item_sprite = sol.sprite.create("entities/items")
+  item_icon.item_sprite_w, item_icon.item_sprite_h = item_icon.item_sprite:get_size()
   item_icon.item_displayed = nil
   item_icon.item_variant_displayed = 0
   item_icon.amount_text = sol.text_surface.create{
-    horizontal_alignment = "center",
+    horizontal_alignment = "right",
     vertical_alignment = "top"
   }
   item_icon.amount_displayed = nil
   item_icon.max_amount_displayed = nil
 
-  function item_icon:check()
+  -- The surface used by the icon for the foreground is handled here.
+  item_icon.foreground = sol.surface.create(32, 24)
+  item_icon.hud_icon:set_foreground(item_icon.foreground)
 
+  -- Draws the icon surface.
+  function item_icon:on_draw(dst_surface)
+    item_icon.hud_icon:on_draw(dst_surface)
+  end
+
+  -- Rebuild the foreground (called only when needed).
+  function item_icon:rebuild_foreground()  
+  
+    -- Clear the surface in all cases to handle the loose of an item.
+    item_icon.foreground:clear()  
+
+    if item_icon.item_displayed ~= nil then
+      -- Item.
+      local foreground_w, foreground_h = item_icon.foreground:get_size()
+      item_icon.item_sprite:draw(item_icon.foreground, foreground_w / 2, foreground_h / 2 + 4)
+
+      -- Amount.
+      if item_icon.amount_displayed ~= nil then
+        item_icon.amount_text:set_text(tostring(item_icon.amount_displayed))
+
+        -- The font color changes according to the amount.
+        if item_icon.amount_displayed == item_icon.max_amount_displayed then
+          item_icon.amount_text:set_font("green_digits")
+        else
+          item_icon.amount_text:set_font("white_digits")
+        end
+
+        item_icon.amount_text:draw(item_icon.foreground, foreground_w, foreground_h - 8)
+      end
+    end
+  end
+  
+  -- Returns if the icon is enabled or disabled.
+  function item_icon:is_enabled(active)
+    return item_icon.hud_icon:is_enabled()
+  end
+
+  -- Set if the icon is enabled or disabled.
+  function item_icon:set_enabled(enabled)
+    item_icon.hud_icon:set_enabled(enabled)
+  end
+          
+  -- Returns if the icon is active or inactive.
+  function item_icon:is_active(active)
+    return item_icon.hud_icon:is_active()
+  end
+
+  -- Set if the icon is active or inactive.
+  function item_icon:set_active(active)
+    item_icon.hud_icon:set_active(active)
+  end
+
+  -- Returns if the icon is transparent or not.
+  function item_icon:is_transparent()
+    return item_icon.hud_icon:set_transparent()
+  end
+
+  -- Sets if the icon is transparent or not.
+  function item_icon:set_transparent(transparent)
+    item_icon.hud_icon:set_transparent(transparent)
+  end
+  
+  -- Checks periodically if the icon needs to be redrawn.
+  function item_icon:check()
     local need_rebuild = false
 
     -- Item assigned.
@@ -49,8 +119,7 @@ function item_icon_builder:new(game, config)
       if item:has_amount() then
         local amount = item:get_amount()
         local max_amount = item:get_max_amount()
-        if item_icon.amount_displayed ~= amount
-            or item_icon.max_amount_displayed ~= max_amount then
+        if item_icon.amount_displayed ~= amount or item_icon.max_amount_displayed ~= max_amount then
           need_rebuild = true
           item_icon.amount_displayed = amount
           item_icon.max_amount_displayed = max_amount
@@ -68,7 +137,7 @@ function item_icon_builder:new(game, config)
 
     -- Redraw the surface only if something has changed.
     if need_rebuild then
-      item_icon:rebuild_surface()
+      item_icon:rebuild_foreground()
     end
 
     -- Schedule the next check.
@@ -76,55 +145,18 @@ function item_icon_builder:new(game, config)
       item_icon:check()
     end)
   end
-
-  function item_icon:rebuild_surface()
-
-    item_icon.surface:clear()
-
-    -- Background image.
-    item_icon.background_img:draw(item_icon.surface)
-
-    if item_icon.item_displayed ~= nil then
-      -- Item.
-      item_icon.item_sprite:draw(item_icon.surface, 12, 17)
-      if item_icon.amount_displayed ~= nil then
-        -- Amount.
-        item_icon.amount_text:set_text(tostring(item_icon.amount_displayed))
-        if item_icon.amount_displayed == item_icon.max_amount_displayed then
-          item_icon.amount_text:set_font("green_digits")
-        else
-          item_icon.amount_text:set_font("white_digits")
-        end
-        item_icon.amount_text:draw(item_icon.surface, 18, 16)
-      end
-    end
+  
+  -- Update the surface each time the sprite change.
+  function item_icon.item_sprite:on_frame_changed()
+    item_icon:rebuild_foreground()
   end
 
-  function item_icon:get_surface()
-    return item_icon.surface
-  end
-
-  function item_icon:on_draw(dst_surface)
-
-    if not game:is_dialog_enabled() then
-      local x, y = dst_x, dst_y
-      local width, height = dst_surface:get_size()
-      if x < 0 then
-        x = width + x
-      end
-      if y < 0 then
-        y = height + y
-      end
-
-      item_icon.surface:draw(dst_surface, x, y)
-    end
-  end
-
+  -- Called when the menu is started.
   function item_icon:on_started()
     item_icon:check()
-    item_icon:rebuild_surface()
   end
 
+  -- Returns the menu.
   return item_icon
 end
 

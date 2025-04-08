@@ -1,7 +1,5 @@
 local map = ...
 local game = map:get_game()
--- Variables
-
 map.overlay_angles = {
   3 * math.pi / 4,
   5 * math.pi / 4,
@@ -9,22 +7,24 @@ map.overlay_angles = {
   7 * math.pi / 4
 }
 map.overlay_step = 1
-
--- Functions
+map.overlay_name = "forest"
+map.overlay_opacity = 96
+map:register_event("on_started", function()
+  game:show_map_name("faron_woods")
+  map:set_digging_allowed(true)
+	map:set_overlay()
+end)
 
 function map:set_overlay()
-
-  map.overlay = sol.surface.create("fogs/forest.png")
-  map.overlay:set_opacity(96)
+  map.overlay = sol.surface.create("fogs/"..map.overlay_name..".png")
+  map.overlay:set_opacity(map.overlay_opacity)
   map.overlay_offset_x = 0  -- Used to keep continuity when getting lost.
   map.overlay_offset_y = 0
   map.overlay_m = sol.movement.create("straight")
-  map.restart_overlay_movement()
-
+  restart_overlay_movement()
 end
 
-function map:restart_overlay_movement()
-
+function restart_overlay_movement()
   map.overlay_m:set_speed(16) 
   map.overlay_m:set_max_distance(100)
   map.overlay_m:set_angle(map.overlay_angles[map.overlay_step])
@@ -33,24 +33,16 @@ function map:restart_overlay_movement()
     map.overlay_step = 1
   end
   map.overlay_m:start(map.overlay, function()
-    map:restart_overlay_movement()
+    restart_overlay_movement()
   end)
-
 end
 
--- Events
-
-function map:on_started(destination)
-  map:set_overlay()
-end
-
-function map:on_draw(destination_surface)
-
+map:register_event("on_draw", function(map, dst_surface)
   -- Make the overlay scroll with the camera, but slightly faster to make
   -- a depth effect.
-  local camera_x, camera_y = self:get_camera():get_position()
+  local camera_x, camera_y = map:get_camera():get_position()
   local overlay_width, overlay_height = map.overlay:get_size()
-  local screen_width, screen_height = destination_surface:get_size()
+  local screen_width, screen_height = dst_surface:get_size()
   local x, y = camera_x + map.overlay_offset_x, camera_y + map.overlay_offset_y
   x, y = -math.floor(x * 1.5), -math.floor(y * 1.5)
 
@@ -65,10 +57,9 @@ function map:on_draw(destination_surface)
     local dst_x = x
     while dst_x < screen_width + overlay_width do
       -- Repeat the overlay's pattern.
-      map.overlay:draw(destination_surface, dst_x, dst_y)
+      map.overlay:draw(dst_surface, dst_x, dst_y)
       dst_x = dst_x + overlay_width
     end
     dst_y = dst_y + overlay_height
   end
-
-end
+end)

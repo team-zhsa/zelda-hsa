@@ -15,10 +15,10 @@ local item, variant, savegame_variable
 local timer
 
 require("scripts/multi_events")
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 
 entity:register_event("on_created", function(entity)
-    -- Initialize the properties of your custom entity here,
+    -- initialise the properties of your custom entity here,
     -- like the sprite, the size, and whether it can traverse other
     -- entities and be traversed by them.
     entity:set_visible(false)

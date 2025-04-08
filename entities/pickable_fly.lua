@@ -10,7 +10,7 @@ local sprite_shadow
 local audio_manager = require("scripts/audio_manager")
 require("scripts/multi_events")
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 entity:register_event("on_created", function()
 
   entity:set_layer_independent_collisions(true)
@@ -56,12 +56,12 @@ entity:register_event("on_picked", function()
     end
   -- Bomb item.
   elseif sprite_name == "entities/items/bomb_fly" then
-    bombs_counter = game:get_item("bombs_counter")
-    if bombs_counter:get_amount() == bombs_counter:get_max_amount() then
+    bomb_counter = game:get_item("bomb_counter")
+    if bomb_counter:get_amount() == bomb_counter:get_max_amount() then
       audio_manager:play_sound("items/get_item")
     else
       audio_manager:play_sound("items/get_item2")
-      bombs_counter:add_amount(1)
+      bomb_counter:add_amount(1)
     end
   -- Arrow item.
   elseif sprite_name == "entities/items/arrow_fly" then
@@ -74,7 +74,7 @@ entity:register_event("on_picked", function()
     end
   -- Rupee item.
   elseif sprite_name == "entities/items/rupee_fly" then
-    if game:get_money() == game:get_max_life() then
+    if game:get_money() == game:get_max_money() then
       audio_manager:play_sound("items/get_item")
     else
       game:add_money(1)
@@ -91,7 +91,7 @@ entity:register_event("on_picked", function()
       powder_counter:add_amount(10)
     end
 
-  -- TODO: add more flying items here.
+  -- TDO: add more flying items here.
 
   end
 

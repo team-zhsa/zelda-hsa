@@ -6,7 +6,7 @@ properties{
   min_layer = -1,
   max_layer = 2,
   world = "inside_world",
-  tileset = "Absolute Dungeon 11",
+  tileset = "absolute_dungeon_11",
   music = "inside/cave",
 }
 
@@ -1635,8 +1635,8 @@ chest{
   x = 408,
   y = 573,
   treasure_name = "piece_of_heart",
-  treasure_savegame_variable = "inside_snowpeaks_ice_cave_piece_of_heart",
-  sprite = "entities/Chests/chest_blue",
+  treasure_savegame_variable = "inside_cave_snowpeaks_piece_of_heart",
+  sprite = "entities/chests/chest_normal",
 }
 
 block{
@@ -1664,6 +1664,15 @@ tile{
   width = 560,
   height = 80,
   pattern = "floor.16-1",
+}
+
+tile{
+  layer = 0,
+  x = 488,
+  y = 200,
+  width = 112,
+  height = 24,
+  pattern = "wall.2-3",
 }
 
 tile{
@@ -3333,15 +3342,6 @@ teletransporter{
   height = 16,
   destination_map = "out/j1",
   destination = "from_ice_cave",
-}
-
-tile{
-  layer = 1,
-  x = 488,
-  y = 200,
-  width = 112,
-  height = 24,
-  pattern = "wall.2-3",
 }
 
 tile{

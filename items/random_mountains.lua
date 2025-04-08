@@ -5,15 +5,15 @@ local item = ...
 
 -- Probability of each item between 0 and 200.
 local probabilities = {
-  [{ "rupee", 1 }]      = 22,   -- 1 rupee.
-  [{ "rupee", 2 }]      = 25,   -- 5 rupees.
-  [{ "heart", 1 }]      = 18,   -- Heart.
-  [{ "bomb", 1}]        = 12,   -- Bomb.
-  [{ "bomb", 2}]        = 18,  -- 3 Bombs.
-  [{ "arrow", 3 }]      = 18,   --  10 Arrows.
-  [{ "arrow", 2 }]      = 12,   --  8 Arrows.
-	[{ "magic_flask", 1 }]      = 22,   --  Magic Flask.
-	[{ "magic_flask", 2 }]      = 12,   --  Magic Flask.
+  [{ "rupee", 1 }]      = 8,   -- 1 rupee.
+  [{ "rupee", 2 }]      = 6,   -- 5 rupees.
+  [{ "rupee", 3 }]      = 4,   -- 20 rupees.
+  [{ "heart", 1 }]      = 12,   -- Heart.
+  [{ "bomb", 1}]        = 10,   -- Bomb.
+  [{ "bomb", 2}]        = 8,  -- 3 Bombs.
+  [{ "arrow", 1 }]      = 10,   --  Arrow.
+  [{ "arrow", 2 }]      = 4,   --  5 Arrows.
+  [{ "magic_flask", 1 }]      = 12,   --  Magic Flask.
 }
 
 function item:on_pickable_created(pickable)

@@ -2,6 +2,8 @@ local condition_manager = {}
 local in_command_pressed = false
 local in_command_release = false
 local sword_level = 0
+local effect_model = require("scripts/gfx_effects/electric")
+local audio_manager = require("scripts/audio_manager")
 
 condition_manager.timers = {
   slow = nil,
@@ -12,7 +14,7 @@ condition_manager.timers = {
   drunk = nil
 }
 
-function condition_manager:initialize(game)
+function condition_manager:initialise(game)
   local hero = game:get_hero()
   hero.condition = {
     slow = false,
@@ -31,33 +33,6 @@ function condition_manager:initialize(game)
     hero.condition[condition] = active
   end
 
-  function hero:on_taking_damage(in_damage)
-    local damage = in_damage
-
-    if hero:is_condition_active('frozen') then
-      damage = damage * 3
-      hero:stop_frozen(true)
-    end
-
-    if damage == 0 then
-      return
-    end
-
-    local shield_level = game:get_ability("shield")
-    local tunic_level = game:get_ability("tunic")
-
-    local protection_divider = tunic_level * math.ceil(shield_level / 2)
-    if protection_divider == 0 then
-      protection_divider = 1
-    end
-    damage = math.floor(damage / protection_divider)
-
-    if damage < 1 then
-      damage = 1
-    end
-
-    game:remove_life(damage)
-  end
 
   function hero:start_confusion(delay)
     local aDirectionPressed = {
@@ -115,19 +90,27 @@ function condition_manager:initialize(game)
     end)
   end
 
-  function hero:start_electrocution(delay)
+  function hero:start_electrocution(damage)
     if hero:is_condition_active('electrocution') then
       return
     end
-
-    hero:freeze()
+    local map = hero:get_map()
+    local camera = map:get_camera()
+    local surface = camera:get_surface()
+    hero:get_sprite():set_ignore_suspend(true)
+    game:set_suspended(true)
+    audio_manager:play_sound("enemies/bari")
     hero:set_animation("electrocuted")
-    sol.audio.play_sound("spark")
-    game:remove_life(2)
-
-    hero:set_condition('electrocution', true)
-    condition_manager.timers['electrocution'] = sol.timer.start(hero, delay, function()
-      hero:stop_electrocution()
+    effect_model.start_effect(surface, game, 'in', false)
+    local shake_config = {
+      count = 32,
+      amplitude = 4,
+      speed = 180,
+    }
+    camera:shake(shake_config, function()
+      game:set_suspended(false)
+      hero:unfreeze()
+      hero:start_hurt(damage)
     end)
   end
 
@@ -209,7 +192,7 @@ function condition_manager:initialize(game)
     hero:unfreeze()
     hero:set_animation("walking")
     hero:set_condition('frozen', false)
-    sol.audio.play_sound("ice_shatter")
+    sol.audio.play_sound("environment/ice_shatter")
   end
 
   function hero:stop_electrocution()

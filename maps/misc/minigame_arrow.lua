@@ -23,7 +23,7 @@ end
 function end_minigame()
   hero:teleport(map:get_id(),"front_manager")
   sol.timer.start(1000,function()
-    sol.audio.play_music("house_1")
+    sol.audio.play_music("inside/house")
     game:start_dialog("cocorico.arrow_minigame.results_calculate",function()
       hero:freeze()
       manager:get_sprite():set_direction(0)
@@ -78,7 +78,7 @@ function minigame_manager()
     end
     if map:get_entity("target"):get_sprite():get_animation() == "hurt" then
       hits = hits + 1
-      sol.audio.play_sound("correct")
+      sol.audio.play_sound("menus/select")
       map:set_entities_enabled("display_counter",false)
       map:set_entities_enabled("display_counter_"..hits,true)
       if hits == 10 then map:set_entities_enabled("display_counter_perfect",true) end
@@ -134,14 +134,14 @@ function manager:on_interaction()
                   map:set_entities_enabled("display_target",true)
                   map:set_entities_enabled("display_counter_0",true)
                   map:close_doors("door")
-                  sol.audio.play_music("minigame")
+                  sol.audio.play_music("inside/minigame_alttp")
                   cannonball_manager:create_cannons(map, "cannon_")
                   minigame_manager()
                 end)
               end)
             end)
           else
-            sol.audio.play_sound("wrong")
+            sol.audio.play_sound("common/wrong")
             game:start_dialog("cocorico.arrow_minigame.not_enough_money")
           end
         else

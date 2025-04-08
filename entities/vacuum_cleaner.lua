@@ -109,7 +109,7 @@ function entity:on_removed()
   hero:unfreeze()  
 end
 
--- Functions to initialize tile pattern from the map script.
+-- Functions to initialise tile pattern from the map script.
 function entity:get_tile_sprite() return sprite end
 function entity:set_tile_sprite(new_sprite) sprite = new_sprite end
 

@@ -1,0 +1,20 @@
+animation{
+  name = "inactivated",
+  src_image = "entities/switches/owl_statue.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+  },
+}
+animation{
+  name = "activated",
+  src_image = "entities/switches/owl_statue.png",
+  directions = {
+    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 4, origin_y = 8 },
+  },
+}

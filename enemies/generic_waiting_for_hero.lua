@@ -23,7 +23,7 @@ local enemy = ...
 --   awaking_animation = "awaking",
 --   normal_animation = "walking",
 --   obstacle_behavior = "flying",
---   awakening_sound  = "stone"
+--   awakening_sound  = "environment/rock_shatter"
 -- })
 
 -- The parameter of set_properties() is a table.

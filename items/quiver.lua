@@ -1,7 +1,7 @@
 local item = ...
 
 function item:on_created()
-
+  self:set_sound_when_brandished("items/get_major_item")
   self:set_savegame_variable("possession_quiver")
 end
 
@@ -19,7 +19,7 @@ function item:on_variant_changed(variant)
     bow:set_max_amount(0)
     arrow:set_obtainable(false)
   else
-    local max_amounts = {10, 30, 99}
+    local max_amounts = {30, 40, 50}
     local max_amount = max_amounts[variant]
 
     -- Set the max value of the bow counter.

@@ -9,22 +9,19 @@
 
 local map = ...
 local game = map:get_game()
+local audio_manager = require("scripts/audio_manager")
+local door_manager = require("scripts/maps/door_manager")
+local enemy_manager = require("scripts/maps/enemy_manager")
+local separator_manager = require("scripts/maps/separator_manager")
+local switch_manager = require("scripts/maps/switch_manager")
+local treasure_manager = require("scripts/maps/treasure_manager")
+local flying_tile_manager = require("scripts/maps/flying_tile_manager")
+local cannonball_manager = require("scripts/maps/cannonball_manager")
+local water_level_manager = require("scripts/maps/water_level_manager")
 
--- Event called at initialization time, as soon as this map becomes is loaded.
-function map:on_started()
+-- Event called at initialization time, as soon as this map is loaded.
+function map:on_started(destination)
+	water_level_manager:check_water_level(map)
+	separator_manager:manage_map(map)
 
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
-
-for npc in map:get_entities("water_level_down_") do
-  function npc:on_interaction_item("bow", true)
-    
-  end
 end

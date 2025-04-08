@@ -62,16 +62,45 @@ function enemy:go_angry()
   going_hero = true
   local movement = sol.movement.create("target")
   movement:set_speed(96)
+  movement:set_ignore_obstacles(true)
   movement:start(enemy)
   enemy:get_sprite():set_animation("angry")
   enemy:set_can_attack(true)
 end
 
 function enemy:on_hurt()
-
+  local hero_x, hero_y, hero_z = map:get_hero():get_position()
   num_times_hurt = num_times_hurt + 1
-  if num_times_hurt == 3 and not map.angry_chickens then
+  if num_times_hurt == 15 and not map.angry_chickens then
     -- Make all chickens of the map attack the hero.
+    map:create_enemy({
+      breed = "outside/chicken",
+      x = hero_x + math.random(-180, -160),
+      y = hero_y + math.random(-140, -120),
+      direction = 1,
+      layer = hero_z
+    })
+    map:create_enemy({
+      breed = "outside/chicken",
+      x = hero_x + math.random(-180, -160),
+      y = hero_y + math.random(120, 140),
+      direction = 1,
+      layer = hero_z
+    })
+    map:create_enemy({
+      breed = "outside/chicken",
+      x = hero_x + math.random(160, 180),
+      y = hero_y + math.random(-140, -120),
+      direction = 1,
+      layer = hero_z
+    })
+    map:create_enemy({
+      breed = "outside/chicken",
+      x = hero_x + math.random(160, 180),
+      y = hero_y + math.random(120, 140),
+      direction = 1,
+      layer = hero_z
+    })
     map.angry_chickens = true
   end
 end

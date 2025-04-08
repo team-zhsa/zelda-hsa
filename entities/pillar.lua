@@ -17,7 +17,7 @@ local hero = map:get_hero()
 local sprite = pillar:get_sprite()
 local sprite_top = pillar:create_sprite("entities/statues/pillar", "top")
 
--- Initialize the pillar.
+-- initialise the pillar.
 pillar:register_event("on_created", function(pillar)
 
   pillar:set_traversable_by(false)

@@ -79,7 +79,7 @@ function behavior:create(enemy, properties)
           y = properties.fire_y,
           layer = map:get_max_layer()
         })
-        children[#children]:set_layer_independent_collisions(true)
+        children[#children]:set_layer_independent_collisions(false)
       end
       return true  -- Repeat the timer.
     end)
@@ -93,7 +93,7 @@ function behavior:create(enemy, properties)
   enemy:register_event("on_removed", function(enemy)
 
     for _, child in ipairs(children) do
-      child:silent_kill()
+      child:start_death()
     end
   end)
 

@@ -1,35 +1,6 @@
--- Lua script of map outside/j7.
--- This script is executed every time the hero enters this map.
-
--- Feel free to modify the code below.
--- You can add more events and remove the ones you don't need.
-
--- See the Solarus Lua API documentation:
--- http://www.solarus-games.org/doc/latest
-
 local map = ...
 local game = map:get_game()
-
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
-
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
-
-for destructible in map:get_entities("bs_j7_name") do
-  function destructible:on_destroyed()
-    game:set_value("black_stone", game:get_value("black_stone") +1)
-  end
-end
--- Variables
-
+local minigame_manager = require("scripts/maps/minigame_manager")
 map.overlay_angles = {
   3 * math.pi / 4,
   5 * math.pi / 4,
@@ -37,22 +8,64 @@ map.overlay_angles = {
   7 * math.pi / 4
 }
 map.overlay_step = 1
+map.overlay_name = "forest"
+map.overlay_opacity = 96
 
--- Functions
+map:register_event("on_started", function(destination)
+	map:set_overlay()
+	map:set_digging_allowed(true)
+	game:show_map_name("faron_woods")
+	
+	if not minigame_manager:is_playing(map, "marathon") then
+		npc_marathon:set_enabled(false)
+	end
+	
+end)
+
+npc_marathon:register_event("on_interaction", function()
+	if not minigame_manager:is_playing(map, "marathon") then
+		game:start_dialog("maps.out.faron_woods.marathon_man.marathon_already_finished")
+	else
+		minigame_manager:end_minigame(map, "marathon")
+		if (game:get_value("marathon_minigame_time")
+		< game:get_value("marathon_minigame_time_limit")) then
+			-- New record
+			game:start_dialog("maps.out.faron_woods.marathon_man.marathon_finished_lower", game:get_value("marathon_minigame_time"), function()
+
+				sol.timer.start(map, 100, function()
+					-- Select the treasure
+					if not game:get_value("outside_marathon_minigame_piece_of_heart")
+					and not game:get_value("outside_marathon_minigame_rupees") then
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_piece_of_heart", function()
+							hero:start_treasure("piece_of_heart", 1, "outside_marathon_minigame_piece_of_heart")
+						end)
+					elseif not game:get_value("outside_marathon_minigame_rupees") then
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_rupees", function()
+							hero:start_treasure("rupee", 5, "outside_marathon_minigame_rupees")
+						end)
+					else
+						game:start_dialog("maps.out.faron_woods.marathon_man.marathon_rupees", function()
+							hero:start_treasure("rupee", 3)
+						end)
+					end
+				end)
+
+			end)
+		else game:start_dialog("maps.out.faron_woods.marathon_man.marathon_finished_higher")
+		end
+	end
+end)
 
 function map:set_overlay()
-
-  map.overlay = sol.surface.create("fogs/forest.png")
-  map.overlay:set_opacity(96)
+  map.overlay = sol.surface.create("fogs/"..map.overlay_name..".png")
+  map.overlay:set_opacity(map.overlay_opacity)
   map.overlay_offset_x = 0  -- Used to keep continuity when getting lost.
   map.overlay_offset_y = 0
   map.overlay_m = sol.movement.create("straight")
-  map.restart_overlay_movement()
-
+  restart_overlay_movement()
 end
 
-function map:restart_overlay_movement()
-
+function restart_overlay_movement()
   map.overlay_m:set_speed(16) 
   map.overlay_m:set_max_distance(100)
   map.overlay_m:set_angle(map.overlay_angles[map.overlay_step])
@@ -61,24 +74,16 @@ function map:restart_overlay_movement()
     map.overlay_step = 1
   end
   map.overlay_m:start(map.overlay, function()
-    map:restart_overlay_movement()
+    restart_overlay_movement()
   end)
-
 end
 
--- Events
-
-function map:on_started(destination)
-  map:set_overlay()
-end
-
-function map:on_draw(destination_surface)
-
+map:register_event("on_draw", function(map, dst_surface)
   -- Make the overlay scroll with the camera, but slightly faster to make
   -- a depth effect.
-  local camera_x, camera_y = self:get_camera():get_position()
+  local camera_x, camera_y = map:get_camera():get_position()
   local overlay_width, overlay_height = map.overlay:get_size()
-  local screen_width, screen_height = destination_surface:get_size()
+  local screen_width, screen_height = dst_surface:get_size()
   local x, y = camera_x + map.overlay_offset_x, camera_y + map.overlay_offset_y
   x, y = -math.floor(x * 1.5), -math.floor(y * 1.5)
 
@@ -93,9 +98,9 @@ function map:on_draw(destination_surface)
     local dst_x = x
     while dst_x < screen_width + overlay_width do
       -- Repeat the overlay's pattern.
-      map.overlay:draw(destination_surface, dst_x, dst_y)
+      map.overlay:draw(dst_surface, dst_x, dst_y)
       dst_x = dst_x + overlay_width
     end
     dst_y = dst_y + overlay_height
   end
-end
+end)

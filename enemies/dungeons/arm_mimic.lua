@@ -17,28 +17,6 @@ local hero = map:get_hero()
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local is_pushed_back = false
 
--- Only hurt the enemy if the sword attack is a spin attack or sword better than level 1, else push the enemy back.
-local function on_sword_attack_received()
-
-  local hero_animation = hero:get_sprite():get_animation()
-
-  -- Stop the sword loading if any.
-  if hero_animation == "sword_loading_stopped" or hero_animation == "sword_loading_walking" then
-    -- TODO
-  end
-
-  local sword_variant = game:get_item("sword"):get_variant()
-  if hero_animation == "spin_attack" or sword_variant > 1 then
-    enemy:hurt(1)
-
-  elseif not is_pushed_back then
-    is_pushed_back = true
-    enemy:start_pushed_back(hero, 250, 120, sprite, nil, function()
-      is_pushed_back = false
-    end)
-  end
-end
-
 -- Reverse the hero movement if he is moving, not hurt and if the enemy not dying.
 local function reverse_move()
 
@@ -89,7 +67,7 @@ end)
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(1)
+  enemy:set_life(4)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
 end)
@@ -101,7 +79,7 @@ enemy:register_event("on_restarted", function(enemy)
     arrow = "protected",
     boomerang = "immobilized",
     explosion = "ignored",
-    sword = on_sword_attack_received,
+    sword = 1,
     thrown_item = "protected",
     fire = "protected",
     jump_on = "ignored",
@@ -115,5 +93,5 @@ enemy:register_event("on_restarted", function(enemy)
   -- States.
   reverse_move() -- Reverse move on restarted in case the hero is already running when the map is loaded or separator crossed.
   enemy:set_can_attack(true)
-  enemy:set_damage(12)
+  enemy:set_damage(4)
 end)

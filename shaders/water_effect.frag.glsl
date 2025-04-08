@@ -22,7 +22,7 @@ uniform int sol_time;
 COMPAT_VARYING vec2 sol_vtex_coord;
 COMPAT_VARYING vec4 sol_vcolor;
 
-vec3 keys[5];
+vec3 keys[6];
 
 
 const float threshold = 0.01;
@@ -30,12 +30,14 @@ const float threshold = 0.01;
 void main() {
 
     // ugly but only way to make it work with glsl es 2.0
+    // Blue water (shallow and deep)
     keys[0] = vec3(122.0-32.0,164.0-32.0,230.0-32.0)/255.0;
     keys[1] = vec3(88.0-32.0,128.0-32.0,200.0-32.0)/255.0;
-    keys[2] = vec3(65.0-32.0,147.0-32.0,106.0-32.0)/255.0;
-    keys[3] = vec3(65.0-32.0,164.0-32.0,114.0-32.0)/255.0;
-    keys[4] = vec3(81.0-32.0,106.0-32.0,155.0-32.0)/255.0;
-
+    keys[2] = vec3(81.0-32.0,106.0-32.0,155.0-32.0)/255.0;
+    // Green water (shallow and deep)
+    keys[3] = vec3(65.0-32.0,147.0-32.0,106.0-32.0)/255.0;
+    keys[4] = vec3(65.0-32.0,164.0-32.0,114.0-32.0)/255.0;
+    keys[5] = vec3(56.0-32.0,89.0-32.0,73.0-32.0)/255.0;
 
     vec4 tex_color = COMPAT_TEXTURE(sol_texture, sol_vtex_coord);
     bool should_texture = false;

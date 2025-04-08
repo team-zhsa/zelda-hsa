@@ -1,4 +1,4 @@
--- Lua script of map out/e6.
+-- Lua script of map out/d4.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -9,14 +9,8 @@
 
 local map = ...
 local game = map:get_game()
-local audio_manager = require("scripts/audio_manager")
 
-function map:on_started()
-	audio_manager:play_music("outside/overworld")
-end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+  game:show_map_name("south_field")
+end)

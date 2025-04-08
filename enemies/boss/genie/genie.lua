@@ -14,7 +14,7 @@ local movement_first_step
 local movement_first_step_angle = 0
 local movement_first_step_distance = 48
 
--- Event called when the enemy is initialized.
+-- Event called when the enemy is initialised.
 function enemy:on_created()
 
   sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())

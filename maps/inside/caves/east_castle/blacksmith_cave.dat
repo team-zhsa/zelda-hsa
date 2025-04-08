@@ -6,7 +6,7 @@ properties{
   min_layer = -1,
   max_layer = 2,
   world = "inside_world",
-  tileset = "Absolute Dungeon 07",
+  tileset = "absolute_dungeon_07",
   music = "inside/cave",
 }
 
@@ -334,6 +334,24 @@ tile{
   pattern = "wall_low_border.corner_reverse.4-3",
 }
 
+tile{
+  layer = -1,
+  x = 144,
+  y = 384,
+  width = 24,
+  height = 32,
+  pattern = "wall_low.4-2",
+}
+
+tile{
+  layer = -1,
+  x = 144,
+  y = 368,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner_reverse.4-2",
+}
+
 stairs{
   layer = -1,
   x = 272,
@@ -610,24 +628,6 @@ tile{
   width = 256,
   height = 24,
   pattern = "wall.1-3",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 384,
-  width = 24,
-  height = 32,
-  pattern = "wall_low.4-2",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 368,
-  width = 24,
-  height = 24,
-  pattern = "wall_low.corner_reverse.4-2",
 }
 
 tile{
@@ -1379,7 +1379,7 @@ chest{
   treasure_name = "bomb",
   treasure_variant = 3,
   treasure_savegame_variable = "inside_cave_blacksmith_bombs",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
@@ -1388,8 +1388,8 @@ chest{
   y = 293,
   treasure_name = "rupee",
   treasure_variant = 5,
-  treasure_savegame_variable = "inside_cave_blacksmith_rupees",
-  sprite = "entities/Chests/chest_LttP",
+  treasure_savegame_variable = "inside_cave_blacksmith_rupees_1",
+  sprite = "entities/chests/chest_normal",
 }
 
 block{
@@ -1417,7 +1417,7 @@ chest{
   y = 61,
   treasure_name = "piece_of_heart",
   treasure_savegame_variable = "inside_cave_blacksmith_piece_of_heart",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
@@ -1427,7 +1427,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 3,
   treasure_savegame_variable = "inside_cave_blacksmith_rupees_2",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 destructible{
@@ -1436,7 +1436,7 @@ destructible{
   y = 61,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   can_be_cut = true,
 }
 
@@ -1446,7 +1446,7 @@ destructible{
   y = 61,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   can_be_cut = true,
 }
 
@@ -1456,7 +1456,7 @@ destructible{
   y = 61,
   treasure_name = "rupee",
   treasure_variant = 2,
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   can_be_cut = true,
 }
 
@@ -1467,7 +1467,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 3,
   treasure_savegame_variable = "inside_cave_blacksmith_rupees_3",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 chest{
@@ -1477,7 +1477,7 @@ chest{
   treasure_name = "rupee",
   treasure_variant = 3,
   treasure_savegame_variable = "inside_cave_blacksmith_rupees_4",
-  sprite = "entities/Chests/chest_LttP",
+  sprite = "entities/chests/chest_normal",
 }
 
 destructible{
@@ -1485,7 +1485,7 @@ destructible{
   x = 72,
   y = 157,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   can_be_cut = true,
 }
 
@@ -1494,7 +1494,7 @@ destructible{
   x = 88,
   y = 157,
   treasure_name = "heart",
-  sprite = "entities/Destructables/vase",
+  sprite = "entities/destructibles/vase",
   can_be_cut = true,
 }
 

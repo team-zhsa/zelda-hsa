@@ -25,7 +25,7 @@ local function is_bush(destructible)
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/bush" or sprite_id:match("^entities/Bushes/bush_")
+  return sprite_id == "entities/destructibles/vase" or sprite_id:match("^entities/bushes/bush_")
 end
 
 local function bush_collision_test(beam, other)
@@ -45,7 +45,7 @@ local function bush_collision_test(beam, other)
 end
 
 -- Traversable rules.
-beam:set_can_traverse("crystal", true)
+beam:set_can_traverse("crystal", false)
 beam:set_can_traverse("crystal_block", true)
 beam:set_can_traverse("hero", true)
 beam:set_can_traverse("jumper", true)
@@ -65,7 +65,7 @@ beam.apply_cliffs = true
 -- Burn bushes.
 beam:add_collision_test(bush_collision_test, function(beam, entity)
 
---[[  local map = beam:get_map()
+  local map = beam:get_map()
 
   if entity:get_type() == "destructible" then
     if not is_bush(entity) then
@@ -81,7 +81,6 @@ beam:add_collision_test(bush_collision_test, function(beam, entity)
 
     beam:stop_movement()
     sprite:set_animation("stopped")
-    sol.audio.play_sound("beam")
 
     -- TODO remove this when the engine provides a function destructible:destroy()
     local bush_sprite_id = bush_sprite:get_animation_set()
@@ -105,8 +104,36 @@ beam:add_collision_test(bush_collision_test, function(beam, entity)
     local x, y = beam:get_position()
     bush_destroyed_sprite:set_xy(bush_x - x, bush_y - y)
     bush_destroyed_sprite:set_animation("destroy")
-  end--]]
+  end
 end)
+
+
+ -- Set up collisions.
+beam:add_collision_test("overlapping", function(beam, entity)
+
+    local entity_type = entity:get_type()
+
+    if entity_type == "crystal" then
+      -- Activate crystals.
+        sol.audio.play_sound("switch")
+        map:change_crystal_state()
+
+    elseif entity_type == "switch" then
+      -- Activate solid switches.
+      local switch = entity
+      local sprite = switch:get_sprite()
+        if sprite ~= nil and
+        sprite:get_animation_set() == "entities/switches/solid_switch" then
+
+        	if switch:is_activated() then
+          	sol.audio.play_sound("sword_tapping")
+        	else
+          	sol.audio.play_sound("switch")
+          	switch:set_activated(true)
+        	end
+				end	
+      end
+  end)
 
 -- Hurt enemies.
 beam:add_collision_test("sprite", function(beam, entity)
@@ -133,7 +160,7 @@ beam:add_collision_test("sprite", function(beam, entity)
     end
     enemies_touched[enemy] = true
     local reaction = enemy:get_beam_reaction(enemy_sprite)
-    enemy:receive_attack_consequence("beam", reaction)
+    enemy:receive_attack_consequence("beam", 1)
 
     sol.timer.start(beam, 200, function()
       beam:remove()

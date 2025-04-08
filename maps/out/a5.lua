@@ -9,3 +9,8 @@
 
 local map = ...
 local game = map:get_game()
+
+map:register_event("on_started", function()
+	game:show_map_name("kokiri_village")
+	map:set_digging_allowed(true)
+end)

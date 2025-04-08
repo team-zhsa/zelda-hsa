@@ -1,4 +1,4 @@
--- Initialize door behavior specific to this quest.
+-- initialise door behavior specific to this quest.
 
 -- Variables
 local door_meta = sol.main.get_metatable("door")
@@ -16,7 +16,12 @@ door_meta:register_event("on_created", function(door)
     -- Opening animation  
     if sprite:get_animation() == "opening" and sound_is_playing == false then
       sound_is_playing = true
-      audio_manager:play_sound("misc/dungeon_door_open")
+      local sprite_id = sprite:get_animation_set()
+      if sprite_id:match("key") then
+        audio_manager:play_sound("common/door_unlocked")
+      elseif sprite_id:match("normal") then
+        audio_manager:play_sound("common/door_open")
+      end
       sol.timer.start(game, 50, function()
         sound_is_playing = false
       end)
@@ -24,7 +29,7 @@ door_meta:register_event("on_created", function(door)
     -- Closing animation  
     if sprite:get_animation() == "closing" and sound_is_playing == false then
       sound_is_playing = true
-      audio_manager:play_sound("misc/dungeon_door_slam")
+      audio_manager:play_sound("common/door_close")
       sol.timer.start(game, 50, function()
         sound_is_playing = false
       end)

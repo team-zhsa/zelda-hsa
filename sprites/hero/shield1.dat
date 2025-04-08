@@ -31,7 +31,7 @@ animation{
 }
 animation{
   name = "sword",
-  src_image = "hero/sword.shield1.png",
+  src_image = "hero/sword.shield.png",
   frame_delay = 30,
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 23, num_frames = 12 },
@@ -40,7 +40,7 @@ animation{
 }
 animation{
   name = "sword_loading_stopped",
-  src_image = "hero/loading.shield1.png",
+  src_image = "hero/loading.shield.png",
   directions = {
     { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
     { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 23 },
@@ -50,7 +50,7 @@ animation{
 }
 animation{
   name = "sword_loading_walking",
-  src_image = "hero/loading.shield1.png",
+  src_image = "hero/loading.shield.png",
   frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {

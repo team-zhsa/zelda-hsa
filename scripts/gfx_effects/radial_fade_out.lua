@@ -13,7 +13,7 @@ local lib={}
 require("scripts/multi_events")
 local audio_manager=require "scripts/audio_manager"
 local duration=1000
-local max_radius=360
+local max_radius=320
 
 function lib.start_effect(surface, game, mode, sfx, callback)
 

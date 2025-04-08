@@ -17,8 +17,15 @@ end
 function language_manager:get_dialog_font(language)
 
   -- No font differences between languages (for now).
-	-- ALTTP font can have up to 32 chars in one box.
-  return "alttp", 11
+  return "alttp_border", 8
+end
+
+-- Returns the font and font size to be used for console
+-- depending on the specified language (the current one by default).
+function language_manager:get_monospace_font(language)
+
+  -- No font differences between languages (for now).
+  return "kubasta", 10
 end
 
 -- Returns the font and font size to be used to display text in menus
@@ -26,7 +33,23 @@ end
 function language_manager:get_menu_font(language)
 
   -- No font differences between languages (for now).
-  return "la", 12
+  return "kubasta", 10
+end
+
+-- Returns the font and font size to be used to display text on HUD icons
+-- depending on the specified language (the current one by default).
+function language_manager:get_hud_icons_font(language)
+
+  -- No font differences between languages (for now).
+  return "alttp", 8
+end
+
+-- Returns the font and font size to be used to display text for floors.
+-- depending on the specified language (the current one by default).
+function language_manager:get_floors_font(language)
+
+  -- No font differences between languages (for now).
+  return "alttp_floors", 7
 end
 
 return language_manager

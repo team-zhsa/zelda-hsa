@@ -156,7 +156,7 @@ function door_manager:destroy_wall(map, weak_wall_prefix)
   local game = map:get_game()
   local dungeon = game:get_dungeon_index()
   map:remove_entities(weak_wall_prefix)
-  audio_manager:play_sound("misc/secret1")
+  audio_manager:play_sound("common/secret_discover_minor")
 
 end
 

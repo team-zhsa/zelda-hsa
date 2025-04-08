@@ -2,9 +2,9 @@ local map_tools = {}
 
 local audio_manager = require("scripts/audio_manager")
 
------------------------
--- Visual effects.
------------------------
+--------------------
+-- Visual effects --
+--------------------
 
 -- Shake the screen
 function map_tools.start_earthquake(shake_config)
@@ -46,9 +46,9 @@ function map_tools.start_chained_explosion_on_entity(entity, duration, max_dista
   end
 end
 
------------------------
--- Saving tools.
------------------------
+------------------
+-- Saving tools --
+------------------
 
 -- Save current entity position.
 function map_tools.save_entity_position(entity)

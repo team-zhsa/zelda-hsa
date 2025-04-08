@@ -1,0 +1,612 @@
+Changelog:
+The versions are indicated as following:
+Status of the version (Pre-Alpha/Beta/Gamma(Prerelease)/Final) + version index + date + codename
+
+Pre-Alpha 0.3 (14/02/18):
+	ADD: The inventory is from A Link to the Dream.
+	ADD: Functionnal game-over menu.
+
+Pre-Alpha 0.4 (07/03/18):
+	ADD: Added maps.
+
+Pre-Alpha 0.5 (12/03/18):
+	ADD: Added a savegame and title menu.
+
+Pre-Alpha 0.6 (03/08/18):
+	ADD: Added maps.
+
+Pre-Alpha 1.0 (05/08/18):
+	ADD: Added new dialogues
+	ADD: Added maps.
+
+Pre-Alpha 1.0.1 (21/10/19):
+	ADD: Added new items and textures.
+	CHG: Rupees max value changed to 2000 instead of 300.
+	CHG: Changed screen length to 248 instead of 320.
+	CHG: Changed inventory texture.
+	FIX: Fixed hero freezing on using bow.
+	
+Alpha 1.1 (01/01/20):
+	CHG: Changed the save menu.
+	CHG: Changed the screen length to 320 instead of 248.
+	CHG: Changed the dungeon savegames syntax.
+
+Alpha 1.2 (10/02/20):
+	CHG: Made the first boss easier by setting his life's points to 40 instead of 120.
+	FIX: Fixed some missing sounds errors.
+	FIX: Fixed inventory problems.
+
+Alpha 1.3 (25/03/20):
+	ADD: Added some dialogues.
+	CHG: Updated tilesets.
+	FIX: Fixed hero freezing on using boomerang.
+	
+Alpha 1.3.1 (02/04/20):
+	FIX: Fixed the boomerang sound missing.
+	FIX: Fixed the inventory wrong items movement.
+
+Alpha 1.3.2 (11/04/20):
+	ADD: Added the weather script from Diarandor.
+	ADD: Added a few shaders.
+	
+Alpha 1.4 (19/01/21) "Angler Update":
+	ADD: Added a ceiling dropping function.
+	ADD: Added an anticopy (password) script from Max.
+	ADD: Added the credits script.
+	CHG: Cleaned up musics.
+	CHG: Cleaned up sprites.
+	FIX: Fixed wrong sprite for shield 1 when going right.
+
+Alpha 1.5 (23/02/21) "Barracuda Update":
+	ADD: Added maps.
+	ADD: Added outside maps coordinates.
+	ADD: Added a new inventory page.
+	ADD: Added fire and ice rods sprites.
+	ADD: Linked outside maps with teletransporters.
+
+Alpha 1.6 (23/03/21) "Carp Update":
+	ADD: Finished the maze game in Kakarico Village.
+	ADD: Added maps.
+	CHG: Tweaked random pickables probabilities.
+	CHG: Changed dark rooms system.
+	FIX: Fixed hero freezing on using hookshot.
+	FIX: Fixed 15 hearts not displaying properly in the HUD.
+
+Alpha 1.7 (11/04/21) "Dorado Update":
+	ADD: Added maps.
+	ADD: Added world minimap.
+	ADD: Added wind rod.
+	ADD: Added feather.
+	CHG: Changed hero sprite for climbing ladders.
+	CHG: Updated dungeons tilesets for autotiles.
+	CHG: Changed wind rod sprite when using it.
+	CHG: Changed chest sprite color.
+	CHG: Started switching enemies' behaviours to ALTTD's.
+	CHG: Started switching to audio_manager.lua.
+	FIX: Fixed soldiers slowing down hero.
+	FIX: Fixed Moldorms not working.
+	FIX: Fixed the dark room sensor not working.
+	FIX: Fixed the dungeon minimap system.
+	FIX: Fixed the shield item not working for ALTTD's ennemies.
+	
+Alpha 1.7.1 (16/04/21) "Dorado Update":
+	ADD: Added entities sprites.
+	ADD: Added dialogues.
+	ADD: Added ocarina teletransportation system.
+	ADD: Added maps.
+	ADD: Added bottles.
+	ADD: Added statistics menu.
+	ADD: Added assignable tunics.
+	ADD: Added bomb flowers.
+	ADD: Added three columns to ocarina inventory page.
+	CHG: Moved some rocks.
+	CHG: Started switching to audio_manager.lua.
+	CHG: Improved credits menu.
+	CHG: Tweaked (again) random pickables probabilities.
+	CHG: Increased ocarina sounds volume.
+	CHG: Changed items inventory sprite.
+	CHG: Changed items inventory position.
+	CHG: Cleaned up entities sprites.
+	FIX: Fixed hero sprite going blank on some frames when lifting heavy objects.
+	FIX: Fixed hero sprite position being wrong in minimap.
+	FIX: Fixed whirlwind stuck in bushes.
+	FIX: Fixed items inventory captions.
+	REM: Removed hero sprite for climbing ladders because not working as intended.
+	
+Alpha 1.8 (11/05/21) "Eel Update":
+	ADD: Added maps.
+	ADD: Added new ocarina songs.
+	ADD: Added ocarina song durations instead of using 20 seconds for everything.
+	ADD: Added bumpers.
+	ADD: Added day/night cycle (finally!).
+	ADD: Added the mode 7 teletransportation system from ALTTD.
+	ADD: Added the "outside_additions" tileset.
+	ADD: Added FSA and GB effects.
+	ADD: Added a camera shaking when reaching an obstacle while running.
+	ADD: Added a scrollable map menu.
+	ADD: Added a big magic bar in the HUD.
+	ADD: Added hero conditions (electrocution, freezing, confusion, slow, poisoned) from BOM.
+	ADD: Added ennemies.
+	ADD: Added map name system.
+	ADD: Created a GitHub repository.
+	CHG: Changed NPCs palette by swtiching to the NTSC palette.
+	CHG: Changed musics.
+	CHG: Changed treasure dialogues to ALTTP's.
+	CHG: Changed dialogue box sprites.
+	CHG: Changed soldiers noticing hero distance to 64 instead of 500.
+	CHG: Changed entity shadow having the wrong sprite.
+	CHG: Changed song system to use a generic config file.
+	CHG: Updated dungeons tilesets.
+	CHG: Changed outside ground colors to ALTTP's.
+	CHG: Changed title screen background.
+	CHG: Reduced dungeons minimaps sprites to 40x56 instead of 80x112.
+	CHG: Changed random pickables probabilities.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	FIX: Fixed game over red screen having the wrong color.
+	FIX: Fixed game crashing when picking pickables with the hookshot.
+	FIX: Fixed game crashing when killing the first boss.
+	FIX: Fixed compass showing a wrong position for chests and hero in map menu.
+	REM: Removed the ability to catch pickables with the hookshot because causing a crash.
+	REM: Removed weather script from Diarandor because not working with the day/night cycle.
+	
+Alpha 1.9 (25/05/21) "Flatfish Update":
+	ADD: Added maps.
+	ADD: Added dungeon maps.
+	ADD: Added graphical effects.
+	ADD: Added the Pegasus boots from ALTTD.
+	CHG: Cleaned up items dialog icons sprites.
+	CHG: Changed values in the feather script.
+	CHG: Changed values in the flickering shader.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	CHG: Changed some sound effects.
+	CHG: Changed to a global field music manager instead of defining the music from the maps themselves.
+
+Alpha 1.9.1 (18/06/21) "Flatfish Update":
+	ADD: Added a secret credits music.
+	ADD: Added custom running script.
+	ADD: Added support for inside maps in the minimap.
+	ADD: Readded weather script from Diarandor.
+	ADD: Started adding support for joypad in menus and items.
+	ADD: Added methods game:is_quest_active() and game:set_quest_active().
+	ADD: Added methods game:is_quest_finished() and game:set_quest_finished().
+	ADD: Added a custom title screen.
+	ADD: Added bosses.
+	ADD: Added healing wand.
+	ADD: Added maps.
+	CHG: Cleaned up items sprites.
+	CHG: Cleaned up soldiers sprites.
+	CHG: Cleaned up enemies.
+	CHG: Changed shields sprites.
+	CHG: Changed savegames menu.
+	CHG: Changed some graphics.
+	CHG: Changed cacti sprite by making it opaque instead of transparent.
+	CHG: Changed dungeons minimap scale to support multiple dungeon sizes.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	CHG: Moved pause menus to "languages" directory (#1).
+	FIX: Fixed bombs not being liftable.
+	FIX: Fixed tunics only changing the sprite and not dividing the damage.
+	REM: Removed "maps/houses" folder.
+	REM: Removed some enemies.
+
+Alpha 1.10 (27/07/21) "Goldfish Update":
+	ADD: Added the TFT effect.
+	ADD: Added musics.
+	ADD: Added maps.
+	ADD: Merged TQ maps into Hyrule's Adventure.
+	CHG: Changed outside musics.
+	CHG: Changed the electrocution system.
+	CHG: Changed outside tilesets to smaller versions.
+	CHG: Looped musics.
+	CHG: Reduced some sprites sizes.
+	CHG: Changed entities sprites images to tileset instead of using "entities/Full Hyrule.tiles.png".
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	FIX: Fixed "tunic 2 stopped" animation being 1 pixel off by changing the sprite's origin.
+	
+Alpha 1.11 (18/01/22) "Haddock Update":
+	ADD: Added maps.
+	CHG: Update the map scripts to ALTTD's.
+	CHG: Renumbered dungeon floors.
+	CHG: Changed the electrocution system.
+	CHG: Switched signs to ALTTD's.
+	CHG: Progressively switched enemies behaviour to ALTTD's (#15).
+	CHG: Changed item sprites on hero.
+	FIX: Fixed flying tiles not working properly when coming back into the room.
+
+Alpha 1.12 (19/03/22) "Ide Update":
+	ADD: Added maps.
+	CHG: Changed magic bar size.
+
+Alpha 1.13 (28/05/22) "Jawfish Update":
+	ADD: Finished the two first bosses.
+	ADD: Added a goal waypoint indicator in the minimap (#69).
+	ADD: Added maps.
+	CHG: Changed max magic values to 50, 100 and 150.
+	CHG: Changed magic bar values in the HUD according to the max magic values.
+	CHG: Changed magic bar and hearts colours in the HUD.
+	CHG: Improved dark rooms lightning.
+	FIX: Fixed Beamos firing at hero even when in another region (#70).
+	FIX: Fixed nil timer error on first part of title screen (#71).
+	FIX: Fixed ocarina setting music volume to 75 after using it (#72).
+	FIX: Fixed the upper-right corner of the scrollable minimap.
+	FIX: Fixed Helmasaur King being stuck by moving it a few tiles down (#73).
+	FIX: Fixed player being able to run with the gamepad without having the Pegasus Boots (#74).
+	FIX: Fixed some inventory icons.
+	
+Alpha 1.14 (18/10/22) "Koi Update":
+	ADD: Finished the first three dungeons' layout.
+	ADD: Added maps.
+	CHG: Moved changelog file location.
+	CHG: Changed outside buildings to the tileset located in the "tilesets" folder instead of the "tilesets/out" one.
+
+Alpha 1.15 (31/12/22) "Ladyfish Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
+	CHG: Moved data files to another hard drive.
+	CHG: Replaced the timer dialog in the room 23 (0F) of the Ruins by a real timer sound (#37).
+	CHG: Changed the room 14 (B1) of the Forest Temple structure in order to be able to move the block from every directions (#6).
+	CHG: Copied changelog.txt issues to GitHub in order to improve issue tracking.
+	CHG: Changed some sanctuary priest dialogues.
+	CHG: Moved the location of the big key lock to the door 12N instead of the big chest in the room 12 (B2) of the Forest Temple.
+	CHG: Replaced the torches in the room 10 (0F) of the Forest Temple by a pull handle (#43).
+	CHG: Cleaned up signs dialogues.
+	CHG: Updated the minimap of the Forest Temple (#2).
+	FIX: Fixed missing "tunic0" sprite in the hero head's sprite in the minimap.
+	FIX: Fixed map inconsistencies.
+	FIX: Fixed some wrong bushes weights.
+	FIX: Fixed pot layers in rooms 18 and 27 (B2) of the Fire Temple being wrong.
+	FIX: Fixed missing wall tile in room 35 (door 35N) of the Fire Temple (B2).
+	FIX: Fixed owl not appearing before dungeon 3 because audio_manager not loaded.
+	FIX: Fixed destructibles weights being too high around the Blacksmith.
+	FIX: Fixed the teletransporter to the Temple of Time linking to a deleted map (#40).
+	FIX: Fixed the door at the north of the room 8 (0F) of the Forest Temple being closed when arriving from downstairs (#7).
+	FIX: Fixed water resetting itself in the room 24 (B2) of the Forest Temple (#4).
+	FIX: Fixed bombs pickables being generated in the "random" item without having the Bomb Bag (#41).
+	FIX: Fixed the "yellow_key" not saved in the Forest Temple (#5).
+	FIX: Fixed missing stairs in the room 30 (B2) of the Fire Temple (#45).
+	FIX: Fixed Link being invisible after fighting boss (#16).
+
+Alpha 1.15.1 (31/01/23) "Ladyfish Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
+	ADD: Added a NPC property making them able to face the player when they move (#52).
+	ADD: Added an extra small key in the Fire Temple to prevent the player from being stuck (#68).
+	ADD: Added a hint pointing to the extra small key in the Fire Temple (#68).
+	ADD: Added water variations for pull handles (#53).
+	ADD: Added a debug screen from ALTTD.
+	ADD: Added soldiers around the Northern Hyrule Field.
+	CHG: Changed normal pull handles sprites (#53).
+	CHG: Splitted the Hyrule Field in smaller parts for better dialogues organisation.
+	CHG: Changed heavy rocks colours' to ALTTP's (#61).
+	CHG: Centered minimap arrows (#49).
+	CHG: Renamed "houses/cordinia/" folder to "houses/cordinia_town/".
+	CHG: Updated unique collectibles savegame values with the new map nomenclature.
+	FIX: Fixed main quest step being saved to 5 after starting the game by calling the step done method after the world map is obtained and not when the item is created (#51).
+	FIX: Fixed wrong dialogue icons (#64).
+	FIX: Fixed invisible wall in "out/g3" being enabled after obtaining the sword (#65).
+	FIX: Fixed wrong coordinates for the Lost Woods mapper minimap cross (#66).
+	FIX: Fixed Link being able to walk on wall edges when there is water (#54).
+	REM: Removed debug printing when dropping from a ceiling.
+	REM: Removed map discovering values being saved because not needed.
+	REM: Removed the Kokiri Village layout in the minimap (#57).
+	REM: Removed the red, green and blue potion items (replaced by potion variants) (#62).
+
+Alpha 1.15.2 (14/02/23) "Ladyfish Update":
+	ADD: Added maps.
+	CHG: Started rescripting the ice rod.
+	FIX: Fixed cave entrance support being traversable (#76).
+	FIX: Fixed firebar rotation centre being off-centered (#77).
+	FIX: Fixed a wrong cave border pattern (#78).
+	REM: Removed the "la" font.
+
+Alpha 1.15.3 (21/02/23) "Ladyfish Update":
+	ADD: Added maps.
+	ADD: Added a collapsing ground function in the Dodongo's Cavern.
+	CHG: Moved trees in the Hyrule Field (#96).
+	CHG: Renamed some soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	FIX: Fixed Medusa fireballs going through walls (#79).
+
+Alpha 1.16 (29/03/23) "Mackerel Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
+	ADD: Added issues templates for the GitHub repository.
+	CHG: Replaced "Stalfos" by "Skull Kid" in a dialogue from Sahasrahla (#94).
+	CHG: Moved trees in the Hyrule Field (#96).
+	CHG: Renamed some soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	FIX: Fixed carpet tiles in the Hyrule Castle main room being on the wrong layer (#89).
+	FIX: Fixed wrong tree tiles in the Blacksmith area (#93).
+
+Alpha 1.16.1 (11/04/23) "Mackerel Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
+	ADD: Added musics.
+	ADD: Added more cloud tiles in the world map tileset.
+	ADD: Added support for text icons in dialogues (#44).
+	CHG: Changed the height of stone destructibles sprites from 24 to 16 (#101).
+	CHG: Renamed unused stone sprites in order to avoid confusion (#101).
+	CHG: Updated file author names (#107).
+	CHG: Renamed unused files.
+	CHG: Replaced the pause world map background by rescaling the scrollable one (#24).
+	CHG: Replaced "initialize" by "initialise" to keep UK spelling.
+	CHG: Lowered the Red Lizalfos' speed (#99).
+	FIX: Fixed pot weights in the Forest Temple (#3).
+	FIX: Fixed a cemetery border tile being resizable only horizontally (#102).
+	FIX: Fixed a carpet border tile being resizable in both directions (#108).
+	FIX: Fixed unassigned "main_quest_step" value right after starting the game for the first time (#88).
+	FIX: Fixed a nil value error in game_manager.lua when starting the intro cutscene (#109).
+	FIX: Fixed the Blacksmith not giving the sword (#110).
+	FIX: Fixed Hyrule Town soldiers not disappearing after obtaining the lamp (#90).
+	FIX: Fixed cliff shadows in the Kokiri Village (#91).
+	FIX: Fixed a light source being visible in the lamp cave (#111).
+	FIX: Fixed possible crash at the beginning of the game when moving with the analog stick (#83).
+	FIX: Fixed the Lost Woods mapper step not being registered as done (#113).
+	FIX: Fixed the miniboss of the Forest Temple (B3) death sequence not being triggered (#115).
+	FIX: Fixed a wall being visible in the Fire Temple (B2) at door 35N (#116).
+	REM: Removed ignored files.
+
+Alpha 1.16.2 (23/04/23) "Mackerel Update":
+	ADD: Added maps.
+	ADD: Added more than 30 NPC sprites (#23).
+	ADD: Added treasure items.
+	ADD: Added coloured keys to dungeon informations (#127).
+	ADD: Added coloured keys to the dungeon minimap menu (#127).
+	ADD: Added an inventory page for food.
+	CHG: Renamed NPC sprites (#23).
+	CHG: Splitted the pause menu background in multiple rows (#117).
+	CHG: Drawn pause menu title captions separately to add support for translations (#118).
+	CHG: Moved pause menu sprites to a separate folder.
+	CHG: Renamed collectible treasure items.
+	CHG: Changed the sword colour on hero (#21).
+	CHG: Made the HUD icons semi-transparent when the hero is underneath (#123).
+	FIX: Fixed collectible treasures amount not being updated (#122).
+	FIX: Fixed static items sprites not showing the right variant in the inventory (#125).
+	FIX: Fixed scrollable map not being centered when using another quest size (#126).
+
+Alpha 1.17 (started 03/05/23) "Needlefish Update":
+	ADD: Added maps.
+	ADD: Added dialogues.
+	ADD: Added side quests (#95).
+	ADD: Added enemies.
+	ADD: Added musics.
+	ADD: Implemented a scaling function for the prologue (see the test map) (#131).
+	ADD: Added sea maps (#132).
+	ADD: Added new cutscenes for the prologue (#86).
+	ADD: Added all the missing animations for the three tunics (#27).
+	ADD: Added a star switch manager script to use one function for all hole switches (#152).
+	ADD: Added item folders.
+	ADD: Added Bari colour variations (#143).
+	ADD: Added soldier colour variations.
+	ADD: Rescripted the feather (#144).
+	ADD: Added enemy:is_frozen() and enemy:set_frozen() methods.
+	ADD: Added the ability to use jumpers when running.
+	ADD: Added the marathon minigame.
+	ADD: Added the ability to switch shaders through the options menu (#119).
+	ADD: Added a world map caption depending on the currently visible area (#192).
+	ADD: Added the ability to zoom in and out of the minimap (#192).
+	ADD: Added the Master Sword cutscene.
+	ADD: Added the team's logo and a copyright notice in the initial menus (#191).
+	ADD: Added NPC meta functions from Mercuris' Chest.
+	ADD: Added boss names for their parchment.
+	ADD: Added a new clock HUD (#114, #200).
+	ADD: Added a chronometer HUD (#36).
+	ADD: Added healing wand variants (#194).
+	ADD: Added animations for all the rods (#220).
+	ADD: Added the missing items treasure and inventory dialogues (#9).
+	ADD: Added new Hinox sprites (#28).
+	ADD: Added new soldiers and knight colour variations.
+	ADD: Added new Lynel colour variations (#221).
+	ADD: Added Cukeman enemies.
+	ADD: Added Like Like and Rupee Like enemies.
+	ADD: Added a custom property for bombable doors.
+	ADD: Added new glyphs to the ALTTP font (#228).
+	ADD: Added colour variations to the ALTTP font (#228).
+	ADD: Added a version conversion in order to keep savegames up to date (#170).
+	CHG: Redone Spectral Ganon's sprite (#29).
+	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
+	CHG: Moved the green house in the east of the castle.
+	CHG: Rewrote the game intro dialogues (#8).
+	CHG: Changed chicken hit values.
+	CHG: Renamed dungeon tilesets (#133).
+	CHG: Remade the introduction cinematic slides (#86).
+	CHG: Improved the shovel usability (#26).
+	CHG: Moved hero animations into specific folders (#27).
+	CHG: Grouped hero animations into one file instead of different ones for each tunic (#47).
+	CHG: Unified the "dialogue_id" property for all signs (#34).
+	CHG: Moved small key and clock HUD positions.
+	CHG: Switched the dungeons 10 and 12 (#165).
+	CHG: Progressively switch enemies behaviour to ALTTD's (#15).
+	CHG: Moved the piece of heart #15 from L1 to K2.
+	CHG: Restored the graveyard music for the Kakarico Graveyard.
+	CHG: Updated the hero head sprite with the actual tunic colours.
+	CHG: Lowered the Tektites' damage values (#177).
+	CHG: Changed Armos' sprite palette and sounds.
+	CHG: Updated the Octoroks' sprites.
+	CHG: Changed Link's animation to stopped after bonking against a wall.
+	CHG: Updated the enemy weapon script from ALTTD.
+	CHG: Renamed the castle as dungeon 16.
+	CHG: Finished rescripting the Ice Rod.
+	CHG: Rescripted the Fire Rod.
+	CHG: Increased the running speed from 192 to 256.
+	CHG: Rescripted bombs with custom entities.
+	CHG: Player names can now have up to 8 characters.
+	CHG: Allowed the scrollable map to be panned farther.
+	CHG: Changed the colour of the options menu cursor to match the other submenus.
+	CHG: Updated the copyright year to 2025 in the dialogues.
+	CHG: Changed the parchment font.
+	CHG: Changed the dungeon parchment dialogues in order to show the dungeon's name as the title.
+	CHG: Moved the magic bar up according to the number of available rows of hearts (#197).
+	CHG: Modifed "field_music_manager" music updating and field map scripts in order not to reset the music on game overs (#48).
+	CHG: Moved the radial fading animation when launching a game from "dungeons" to "game_manager".
+	CHG: Renamed the Zora Forest to the Lanayru Forest.
+	CHG: Adjusted the sunset map tone.
+	CHG: Replaced disabled tiles by invisible tiles in the in the room 5 (B2) of the Fire Temple.
+	CHG: Improve the dungeon map menu (#211).
+	CHG: Replaced the Yellow Key by the Silver Key (#215).
+	CHG: Merged countable items into a single item file (#189).
+	CHG: Replaced hardcoded sounds by empty ones (#137).
+	CHG: Made the hero automatically float when there is water above.
+	CHG: Merged Popos and Blobs colour variations into one sprite sheet (#221).
+	CHG: Changed the time saved string format.
+	CHG: Simplified the minimap script (#129).
+	CHG: Updated dungeon minimaps (#2).
+	CHG: Overhauled the game over menu (#199).
+	CHG: Changed the daytime witch to one minute before the hour for light to update faster.
+	CHG: Standardised ocarina songs.
+	CHG: Changed ocarina notes sprites.
+	CHG: Hid the mouse cursor.
+	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
+	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
+	FIX: Fixed case sensibility issues (#133).
+	FIX: Fixed Hyrule's Castle side doors opening sensors missing (#139).
+	FIX: Fixed NPC sprites being at the wrong place in the sprite image (#135).
+	FIX: Fixed an "invalid destination side" crash when entering the Hyrule Town library (#136).
+	FIX: Fixed missing NPC soldiers issues at some quest steps.
+	FIX: Fixed the hammer stake being down before Link hits it (#142).
+	FIX: Fixed Agahnim being spelled wrong.
+	FIX: Fixed missing animations for other tunics (#47).
+	FIX: Fixed a missing sword shield sprites crash (#154).
+	FIX: Fixed a lava plunging sound playing when entering the ground floor in the Dodongo's Cavern (#157).
+	FIX: Fixed Hyrule Castle music being played at the beginning of the game at the ground floor (#158).
+	FIX: Fixed the player's name not being displayed in one dialogue in the intro cutscene (#156).
+	FIX: Fixed a wrong teletransporter linking in the Hyrule Town (#155).
+	FIX: Fixed a missing NPC sprite in the Hyrule Town inn (#160).
+	FIX: Fixed the purple house door being misplaced in the Hyrule Town.
+	FIX: Fixed map:set_doors_open() playing a sound when it shouldn't (#163).
+	FIX: Fixed the water level changing animation in the Water Temple (#56).
+	FIX: Fixed Bari enemies animation not being accurate to ALTTP (#143).
+	FIX: Fixed a nil value error in the Hyrule Castle (#171).
+	FIX: Fixed the Zora River caves being unreachable in J2 (#172).
+	FIX: Fixed the hero walking animation still playing when a teletransporter effect is playing (#173).
+	FIX: Fixed a missing electrocution sound.
+	FIX: Fixed the tunic item not being saved when opening the minimap (#175).
+	FIX: Fixed the hero being able to run through some walls when running (#178).
+	FIX: Fixed the Hyrule Town library teletransporter not having the radial fade out effect.
+	FIX: Fixed Link's animation being frozen after reloading a save with the debug when using the feather (#144).
+	FIX: Fixed crash on ocarina cinematic because of an invalid animation direction (#63).
+	FIX: Fixed the map menu being openable when a map transition is playing (#127).
+	FIX: Fixed bombs not being liftable when starting the game inside unless going outside (#31).
+	FIX: Fixed the "Illegal direction for sprite 'hero/diving' in animation 'walking'" error (#147).
+	FIX: Fixed the game restarting after completing the marathon minigame (#186).
+	FIX: Fixed forest talus tiles missing a border (#187).
+	FIX: Fixed the cursor moving too fast with analog controller in menus (#82).
+	FIX: Fixed piece of hearts being misaligned in the quest status menu.
+	FIX: Fixed a typo in the Marathon Man dialogue (#190).
+	FIX: Fixed a typo in a Blacksmith dialogue (#201).
+	FIX: Fixed the world map background not being loaded sometimes (#153).
+	FIX: Fixed the savefile version value causing the savegame to be unsuable in 1.6.4 (#203).
+	FIX: Fixed fairies not reviving the player (#204).
+	FIX: Made bombs explode even if Link is carrying them (#183).
+	FIX: Fixed bombs not exploding anything but themselves (#185).
+	FIX: Fixed the fog not appearing when leaving and reentering a map (#212).
+	FIX: Fixed a separator overriding error in the Forest Temple (B2) (#218).
+	FIX: Fixed Armos not appearing (#209).
+	FIX: Fixed enemies not going down one layer when there's no ground (#198).
+	FIX: Fixed the brandish animation not being displayed (#219).
+	FIX: Fixed Deadrocks playing the hero hurting animation when immobilised (#222).
+	FIX: Fixed the victory animation not being synchronised with Link movement (#10).
+	FIX: Fixed teletransporter sounds not playing (#226).
+	FIX: Fixed a nil value error in the inventory after buying something from Ravio (#92).
+	FIX: Fixed signs not being liftable at the beginning of the game because their weight was set to 1 (#34).
+	FIX: Fixed a wrong dialogue in front of Ravio's shop (#231).
+	FIX: Fixed the 33N door in the Northern Ruins variable not being saved (#233).
+	FIX: Fixed a Kaepora Gaebora missing ruins dialogue (#234).
+	FIX: Fixed a nil value error when using some special effect teletransporters (#237).
+	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
+	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
+	REM: Removed the old unused dialogue box script.
+	REM: Removed unused *.zip tileset files.
+	REM: Removed *.xcf and work files from the data files (#169).
+	REM: Removed the old tunic item.
+	REM: Removed unused Tektite sprite files.
+	REM: Removed unused Chuchu sprite files.
+	REM: Removed orange and brown sword soldiers.
+	REM: Removed old member names from the savegame menu easter eggs.
+	REM: Removed unused savegames menu sprite files.
+	REM: Removed LA dialogues.
+	REM: Removed unused maps.
+	REM: Removed the map from the inventory menu (#202).
+	REM: Removed unused sprite files.
+	REM: Removed the dungeon exploring room variable changing based on the hero position (need to activate sensor instead).
+	REM: Removed the fog manager script (#212).
+	REM: Removed pre-alpha screenshots from the sprites folder (#195).
+	REM: Removed support for MacOS Ventura.
+	REM: Removed Minecraftia font.
+	TDO: Setup the quest files for the Solarus launcher.
+	TDO: Overhaul the bow & arrow system such as in OOT (#145).
+	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
+	TDO: Fix "door_manager:open_when_switch_activated()" only opening the last door when there are multiple doors (#75).
+	TDO: Fix diagonal jumpers jump lengths being too high in the mountains (#38).
+	TDO: Fix low memory issues on MacOS (#39).
+	TDO: Fix low framerate in rooms with lots of conveyor belts (#42).
+	TDO: Update the statistics menu with treasures from the Excel file (#46).
+	TDO: Map the missing caves (#151).
+	TDO: Finish realigning trees in the Hyrule Field (#96).
+	TDO: Rename some soldier enemies in order to make them appear during the game and not at the beginning (#97).
+	TDO: Add a quick swap feature (#196).
+	TDO: Remove the tofu character at the end of lines in the enter_command_mono font (#184).
+	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
+	TDO: Fix Ballchain Knights being incompatible with the separator manager (#223).
+
+Alpha 1.17.1 (//23) "Needlefish Update":
+	TDO: Remove *.xcf and *.psd work files from the data files (#169).
+	TDO: Add night entities to maps (#67).
+	TDO: Add hook entities to trees (#103). 
+	TDO: Finish the remaining houses (#104).
+	TDO: Add remaining inside maps coordinates (#105).
+	TDO: Clean up unused files (#98).
+	TDO: Update the title screen (#50).
+	TDO: Change the Master Sword sprite on the title screen (#50).
+	TDO: Change all the enemies in the Hyrule Field (#81).
+	TDO: Add a falling animation for enemies (#84).
+	TDO: Write the game's walkthrough (#85).
+	TDO: Improve the shield usability (#30).
+	TDO: Fix remaining wrong sprite palettes (#32).
+	TDO: Fix signs being readable after being cut (#34).
+	TDO: Change Helmasaur reaction to hookshot (#22).
+	TDO: Fix the Book of Mudora not working as intended (#12).
+	TDO: Unify all the caves' darkness system (#13).
+	TDO: Unify all the electrocution system (#14).
+	TDO: Finish the outside map (#33).
+	TDO: Make rod improvement shrines (#224).
+	TDO: Add side quests (#95).
+
+Alpha 1.17.2 (//23) "Needlefish Update":
+	TDO: Add maps.
+	TDO: Add food (#20).
+	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).
+	TDO: Rename owl entities according to main quest steps (#19).
+	TDO: Progressively switch enemies behaviour to ALTTD's (#15).
+	TDO: Slightly change HUD icons.
+	TDO: Add file licenses to the project database (#106).
+	TDO: Add a HUD version for timers (#36).
+	TDO: Add the Tournament of the Strongest (#180).
+	TDO: Add a climbing state (#188).
+
+Alpha 1.18 (//23) "Opah Update": Musics and sounds
+	TDO: Replace musics by better versions (#35).
+	TDO: Add Koume and Koutake.
+	TDO: Fix music loops (#25).
+	TDO: Clean up unused musics.
+
+Alpha 1.18.1 (//23) "Opah Update":
+	TDO: Add maps.
+	TDO: Add decoration to temples.
+	TDO: Add all the Pokémons.
+
+Alpha 1.19 (//23) "Perch Update":
+	TDO: Add support for multiple aspect ratios (#124).
+	TDO: Set destructibles ground as "low wall" (#158).
+	TDO: Add maps.
+	TDO: Add a boat.
+	TDO: Rescript somaria cane.
+	TDO: Add new items.
+	TDO: Finish all the items.
+
+Alpha 1.19.1 (//) "Perch Update":
+	TDO: Add an extension loader.
+	TDO: Add quests.
+	TDO: Add quests in quest pause menu.
+
+Beta 1.0 (//)"The Great Update":
+Beta 1.1 (//)"Weapon Update":
+Beta 1.2 (//)"Quest Update":
+Beta 1.3 (//)"The Great Expansion":

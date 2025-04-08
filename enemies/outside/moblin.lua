@@ -2,8 +2,8 @@ local enemy = ...
 
 -- Molblin: goes in a random direction.
 
-enemy:set_life(1)
-enemy:set_damage(1)
+enemy:set_life(8)
+enemy:set_damage(12)
 
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 

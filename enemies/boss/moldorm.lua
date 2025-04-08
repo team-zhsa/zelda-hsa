@@ -71,11 +71,11 @@ end
 local function on_attack_received()
 
   -- Make sure to only trigger this event once by attack.
-  enemy:set_invincible()
+  --enemy:set_invincible()
 
   -- Don't hurt and only repulse if the hero sword sprite doesn't collide with the tail sprite.
   if not enemy:overlaps(hero, "sprite", tail_sprite, hero:get_sprite("sword")) then
-    enemy:start_pushing_back(hero, 200, 100, sprite, nil, function()
+			enemy:stop_attracting()
       enemy:set_hero_weapons_reactions({
       	arrow = on_attack_received,
       	boomerang = on_attack_received,
@@ -90,7 +90,6 @@ local function on_attack_received()
       	shield = "protected",
       	thrust = on_attack_received
       })
-    end)
     return
   end
 
@@ -98,7 +97,7 @@ local function on_attack_received()
   if enemy:get_life() < 2 then
 
     -- Wait a few time, make tail then body sprites explode, wait a few time again and finally make the head explode and enemy die.
-    enemy:start_death(function()
+		function enemy:start_death()
       for _, sprite in enemy:get_sprites() do
         if sprite:has_animation("hurt") then
           sprite:set_animation("hurt")
@@ -115,7 +114,7 @@ local function on_attack_received()
           end)
         end)
       end)
-    end)
+    end
     return
   end
 
@@ -166,17 +165,17 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-
-  enemy:set_life(4)
+	enemy:set_push_hero_on_sword(true)
+  enemy:set_life(16)
   enemy:set_size(24, 24)
   enemy:set_origin(12, 12)
   
   -- Create sprites in right z-order.
-  sprites[5] = enemy:create_sprite("enemies/" .. enemy:get_breed() .. "/tail")
+  sprites[5] = enemy:create_sprite("enemies/boss/moldorm_components/tail")
   for i = 3, 1, -1 do
-    sprites[i + 1] = enemy:create_sprite("enemies/" .. enemy:get_breed() .. "/body_" .. i)
+    sprites[i + 1] = enemy:create_sprite("enemies/boss/moldorm_components/body_" .. i)
   end
-  sprites[1] = enemy:create_sprite("enemies/" .. enemy:get_breed())
+  sprites[1] = enemy:create_sprite("enemies/boss/moldorm")
 
   head_sprite = sprites[1]
   tail_sprite = sprites[5]

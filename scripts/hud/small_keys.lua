@@ -51,7 +51,7 @@ function small_keys_builder:new(game, config)
 
     small_keys.surface:clear()
     small_keys.icon_img:draw(small_keys.surface)
-    small_keys.digits_text:draw(small_keys.surface, 14, 2)
+    small_keys.digits_text:draw(small_keys.surface, 16, 2)
   end
 
   function small_keys:get_surface()

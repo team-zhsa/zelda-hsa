@@ -17,34 +17,37 @@ local weapons = {}
 
 function weapons.learn(enemy)
 
-  require("enemies/lib/common_actions").learn(enemy)
-
+  local common_actions = require("enemies/lib/common_actions")
   local game = enemy:get_game()
   local map = enemy:get_map()
   local hero = map:get_hero()
   local quarter = math.pi * 0.5
 
-  -- Make the enemy hold a basic weapon that hurt the hero on touched and push back on hit by sword.
+  common_actions.learn(enemy)
+
+  -- Make the enemy hold a basic weapon that push back both the enemy and hero back on hit by hero hand weapons.
   function enemy:hold_weapon(sprite_name, reference_sprite, x_offset, y_offset)
 
     local enemy_x, enemy_y, enemy_layer = enemy:get_position()
     reference_sprite = reference_sprite or enemy:get_sprite()
 
-    -- Create the welded custom entity.
-    local weapon = map:create_custom_entity({
+    -- Create the weapon as welded enemy.
+    local weapon = map:create_enemy({
       name = (enemy:get_name() or enemy:get_breed()) .. "_weapon",
+      breed = "empty", -- Workaround: Breed is mandatory but a non-existing one seems to be ok to create an empty enemy though.
       direction = enemy:get_sprite():get_direction(),
       x = enemy_x,
       y = enemy_y,
       layer = enemy_layer,
       width = 16,
-      height = 16,
-      sprite = sprite_name or "enemies/" .. enemy:get_breed() .. "/sword"
+      height = 16
     })
     enemy:start_welding(weapon, x_offset, y_offset)
+    common_actions.learn(weapon)
+    weapon:set_damage(enemy:get_damage())
     
     -- Synchronize sprites animation and direction.
-    local weapon_sprite = weapon:get_sprite()
+    local weapon_sprite = weapon:create_sprite(sprite_name or ("enemies/" .. enemy:get_breed() .. "/sword"))
     weapon_sprite:synchronize(reference_sprite)
     reference_sprite:register_event("on_direction_changed", function(reference_sprite)
       weapon_sprite:set_direction(reference_sprite:get_direction())
@@ -55,28 +58,43 @@ function weapons.learn(enemy)
       end
     end)
 
-    -- Hurt hero on collision with any sprite but the hero sword, else slightly move the hero back.
-    local is_pushed_back = false
-    weapon:add_collision_test("sprite", function(weapon, entity, weapon_sprite, entity_sprite)
-      if entity == hero  and not enemy:is_immobilized() then
-        if entity_sprite ~= hero:get_sprite("sword") then
-          if not hero:is_blinking() and not hero:is_invincible() then
-            hero:start_hurt(enemy, enemy:get_damage())
-          end
-        else
-          if not is_pushed_back then
-            is_pushed_back = true
-            enemy:set_invincible()
-            enemy:start_shock(hero, 100, 150, function()
-              enemy:restart()
-            end)
-          end
-        end
-      end
+    -- Make weapon disappear when the enemy became invisible on dying.
+    enemy:register_event("on_dying", function(enemy)
+      sol.timer.start(weapon, 300, function() -- No event when the enemy became invisible, hardcode a timer.
+        weapon:start_death()
+      end)
     end)
+
+    -- Echo weapon reactions on the enemy.
+    local is_pushed_back = false
+    local function shock()
+      if not is_pushed_back then
+        is_pushed_back = true
+        enemy:set_invincible()
+        enemy:stop_movement()
+        enemy:start_shock(hero, 100, 150, weapon_sprite, entity_sprite, function()
+          enemy:restart()
+        end)
+      end
+    end
     enemy:register_event("on_restarted", function(enemy)
       is_pushed_back = false
     end)
+
+    weapon:set_hero_weapons_reactions({
+    	arrow = "protected",
+    	boomerang = "protected",
+    	explosion = "protected",
+    	sword = shock,
+    	thrown_item = "protected",
+    	fire = "ignored",
+    	jump_on = "ignored",
+    	hammer = shock,
+    	hookshot = "protected",
+    	magic_powder = "ignored",
+    	shield = shock,
+    	thrust = shock
+    })
 
     return weapon
   end

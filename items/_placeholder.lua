@@ -10,12 +10,13 @@
 
 local item = ...
 local game = item:get_game()
+local audio_manager = require("scripts/audio_manager")
 
 -- Event called when all items have been created.
 function item:on_created()
 	self:set_assignable(true)
 	self:set_savegame_variable("possession_placeholder")
-  -- Initialize the properties of your item here,
+  -- initialise the properties of your item here,
   -- like whether it can be saved, whether it has an amount
   -- and whether it can be assigned.
 end

@@ -4,7 +4,7 @@ local enemy = ...
 
 function enemy:on_created()
   self:set_life(1); self:set_damage(2)
-  self:create_sprite("enemies/flame_red")
+  self:create_sprite("enemies/flames/flame_red")
   self:set_size(16, 16); self:set_origin(8, 13)
   self:set_invincible()
   self:set_obstacle_behavior("flying")

@@ -1,7 +1,4 @@
-local ceiling_drop_manager = {}
 
-local audio_manager=require "scripts/audio_manager"
-require "scripts/multi_events"
 -- Falling from ceiling
 -- Works with any type of entity
 -- Version 0.2 - MetalZelda, modified by PhoenixII54
@@ -38,7 +35,11 @@ require "scripts/multi_events"
 	- Remember that you can implement it anywhere else, the target only need to be an entity / sprite
 --]]
 
-local falling_state=sol.state.create("Dropping from ceiling")
+local ceiling_drop_manager = {}
+
+local audio_manager = require("scripts/audio_manager")
+require("scripts/multi_events")
+local falling_state = sol.state.create("Dropping from ceiling")
 falling_state:set_can_control_movement(false)
 falling_state:set_can_control_direction(false)
 falling_state:set_affected_by_ground("deep_water", false)
@@ -93,7 +94,7 @@ function ceiling_drop_manager:create(meta)
         layer = map:get_max_layer(),
         width = 16,
         height = 16,
-        sprite = "entities/Shadows/shadow",
+        sprite = "entities/shadows/shadow",
         direction = 0
       })
     shadow:set_modified_ground("traversable")

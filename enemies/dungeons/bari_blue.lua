@@ -1,81 +1,80 @@
 local enemy = ...
+local game = enemy:get_game()
+local map = enemy:get_map()
+local hero = map:get_hero()
+local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 
 -- Bari: a flying enemy that follows the hero and tries to electrocute him.
 
 local shocking = false
 
-function enemy:on_created()
-  self:set_life(3); self:set_damage(6)
-  self:create_sprite("enemies/dungeons/bari_blue")
-  self:set_size(16, 16); self:set_origin(8, 13)
-  self:set_attack_consequence("hookshot", "immobilized")
+-- Electrocute the hero.
+local function electrocute()
+	hero:start_electrocution(4)
+end
+
+local function hurt_by_sword()
+  function enemy:on_hurt_by_sword(hero, enemy_sprite)
+    if shocking == true then
+      electrocute()
+    else
+      enemy:hurt(2)
+      enemy:remove_life(2)
+    end
+  end
 end
 
 function enemy:shock()
   shocking = true
+  sol.audio.play_sound("enemies/bari_shock")
   enemy:get_sprite():set_animation("shaking")
   sol.timer.start(enemy, math.random(10)*1000, function()
     enemy:get_sprite():set_animation("walking")
     shocking = false
-    sol.timer.start(enemy, math.random(10)*1000, function() enemy:restart() end)
+    sol.timer.start(enemy, math.random(8)*1000, function() enemy:restart() end)
   end)
 end
 
-function enemy:on_restarted()
+-- The enemy appears: set its properties.
+enemy:register_event("on_created", function(enemy)
+  enemy:set_life(3)
+  enemy:set_size(16, 16); enemy:set_origin(8, 13)
+end)
+
+-- The enemy appears: set its properties.
+enemy:register_event("on_restarted", function(enemy)
+
   shocking = false
-  local m = sol.movement.create("path_finding")
-  m:set_speed(32)
-  m:start(self)
+  local m = sol.movement.create("random")
+  m:set_speed(12)
+  m:start(enemy)
   if math.random(10) < 5 then
     enemy:shock()
   end
-end
 
-function enemy:on_immobilized()
-  shocking = false
-end
+  enemy:set_hero_weapons_reactions({
+  	arrow = 3,
+  	boomerang = "ignored",
+  	explosion = 3,
+  	sword = hurt_by_sword(),
+  	thrown_item = 3,
+  	fire = 3,
+  	jump_on = "ignored",
+  	hammer = "protected",
+  	hookshot = 3,
+  	shield = "protected",
+  	thrust = hurt_by_sword()
+  })
 
-function enemy:on_hurt_by_sword(hero, enemy_sprite)
-  if shocking == true then
-    hero:start_electrocution(1500)
-  else
-    self:hurt(1)
-    enemy:remove_life(1)
-  end
-end
+  -- States.
+  enemy:set_damage(2)
+
+end)
+
 function enemy:on_attacking_hero(hero, enemy_sprite)
   if shocking == true then
-    hero:start_electrocution(1500)
+    electrocute()
   else
     hero:start_hurt(2)
   end
-end
-
-function enemy:on_dying()
-  -- It splits into two mini baris when it dies
-  enemy:create_enemy({ breed = "bari_mini" })
-  enemy:create_enemy({ breed = "bari_mini" })
-end
-
-local function electrocute()
-
-  local camera = map:get_camera()
-  local surface = camera:get_surface()
-  hero:get_sprite():set_ignore_suspend(true)
-  game:set_suspended(true)
-  sprite:set_animation("shocking")
-  audio_manager:play_sound("ennemies/bari/b_state_e")
-  hero:set_animation("electrocuted")
-  effect_model.start_effect(surface, game, 'in', false)
-  local shake_config = {
-    count = 32,
-    amplitude = 4,
-    speed = 180,
-  }
-  camera:shake(shake_config, function()
-    game:set_suspended(false)
-    sprite:set_animation("walking")
-    hero:unfreeze()
-    hero:start_hurt(enemy:get_damage())
-  end)
 end

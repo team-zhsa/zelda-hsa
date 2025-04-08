@@ -1,27 +1,78 @@
 animation{
   name = "stopped",
-  src_image = "entities/destructibles.png",
+  src_image = "entities/sign.png",
   directions = {
-    { x = 208, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
-    { x = 208, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
-    { x = 208, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
-    { x = 208, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13 },
   },
 }
 animation{
   name = "destroy",
-  src_image = "entities/destructibles.png",
+  src_image = "entities/sign.png",
   frame_delay = 100,
   directions = {
-    { x = 0, y = 120, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 29, num_frames = 8 },
+  },
+}
+animation{
+  name = "falling",
+  src_image = "entities/sign.png",
+  frame_delay = 80,
+  directions = {
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 5 },
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 5 },
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 5 },
+    { x = 64, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 5 },
+  },
+}
+animation{
+  name = "naked",
+  src_image = "entities/sign.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 48, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "sliced",
+  src_image = "entities/sign.png",
+  frame_delay = 40,
+  directions = {
+    { x = 0, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 8 },
+    { x = 0, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 8 },
+    { x = 0, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 8 },
+    { x = 0, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 8 },
+  },
+}
+animation{
+  name = "sliced_destroy",
+  src_image = "entities/sign.png",
+  frame_delay = 30,
+  directions = {
+    { x = 224, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 6 },
+    { x = 224, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 6 },
+    { x = 224, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 6 },
+    { x = 224, y = 24, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 20, num_frames = 6 },
   },
 }
 animation{
   name = "walking",
-  src_image = "entities/destructibles.png",
+  src_image = "entities/sign.png",
   frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {
-    { x = 208, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 3 },
   },
 }

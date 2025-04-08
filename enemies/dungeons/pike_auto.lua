@@ -27,7 +27,7 @@ function enemy:on_restarted()
   local direction4 = sprite:get_direction()
   local m = sol.movement.create("path")
   m:set_path{direction4 * 2}
-  m:set_speed(192)
+  m:set_speed(128)
   m:set_loop(true)
   m:start(self)
 end
@@ -43,7 +43,7 @@ function enemy:on_obstacle_reached()
   if recent_obstacle == 0
       and math.abs(x - hero_x) < 184
       and math.abs(y - hero_y) < 144 then
-    sol.audio.play_sound("sword_tapping")
+    sol.audio.play_sound("hero/sword_tapping")
   end
 
   recent_obstacle = 8

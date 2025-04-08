@@ -1,0 +1,864 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 240,
+  min_layer = 0,
+  max_layer = 2,
+  world = "inside_world",
+  tileset = "absolute_dungeon_03",
+  music = "inside/potion",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 176,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 16,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 16,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 176,
+  width = 48,
+  height = 48,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 48,
+  width = 176,
+  height = 144,
+  pattern = "floor_low.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 16,
+  width = 144,
+  height = 24,
+  pattern = "wall.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 56,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 200,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 64,
+  width = 24,
+  height = 112,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 200,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 56,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 64,
+  width = 24,
+  height = 112,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 184,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "wall_diag.border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 40,
+  width = 144,
+  height = 8,
+  pattern = "wall_border.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 192,
+  width = 144,
+  height = 8,
+  pattern = "wall_border.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 64,
+  width = 8,
+  height = 112,
+  pattern = "wall_border.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 64,
+  width = 8,
+  height = 112,
+  pattern = "wall_border.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 200,
+  width = 64,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 200,
+  width = 64,
+  height = 24,
+  pattern = "wall.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 200,
+  width = 16,
+  height = 16,
+  pattern = "door.2",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 200,
+  width = 8,
+  height = 16,
+  pattern = "door.2.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 32,
+  pattern = "floor_low.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.4-1",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 224,
+  width = 24,
+  height = 16,
+  pattern = "wall.3-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 104,
+  width = 24,
+  height = 32,
+  pattern = "window.3-2",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 104,
+  width = 24,
+  height = 32,
+  pattern = "window.4-2",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 72,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.4-9",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 152,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.4-9",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 152,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 72,
+  width = 24,
+  height = 16,
+  pattern = "wall_pillar.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 16,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 16,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 200,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 200,
+  width = 16,
+  height = 24,
+  pattern = "wall_pillar.2-9",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 24,
+  width = 16,
+  height = 32,
+  pattern = "wine_rack.1",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 24,
+  width = 32,
+  height = 32,
+  pattern = "wine_rack.2",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 24,
+  width = 16,
+  height = 32,
+  pattern = "wine_rack.3",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "carpet.7",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 120,
+  width = 128,
+  height = 8,
+  pattern = "carpet.8",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 88,
+  width = 8,
+  height = 32,
+  pattern = "carpet.4",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 88,
+  width = 128,
+  height = 32,
+  pattern = "carpet.5",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "carpet.9",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 88,
+  width = 8,
+  height = 32,
+  pattern = "carpet.6",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "carpet.3",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 80,
+  width = 8,
+  height = 8,
+  pattern = "carpet.1",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 80,
+  width = 128,
+  height = 8,
+  pattern = "carpet.2",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 88,
+  width = 16,
+  height = 16,
+  pattern = "torch",
+}
+
+destination{
+  name = "from_outside",
+  layer = 0,
+  x = 160,
+  y = 213,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 152,
+  y = 216,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "out/i3",
+  destination = "from_white_hut",
+}
+
+shop_treasure{
+  name = "product_blue_potion",
+  layer = 0,
+  x = 192,
+  y = 88,
+  treasure_name = "potion",
+  treasure_variant = 3,
+  price = 300,
+  font = "white_digits",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_blue_potion",
+}
+
+shop_treasure{
+  name = "product_red_potion",
+  layer = 0,
+  x = 96,
+  y = 88,
+  treasure_name = "potion",
+  price = 160,
+  font = "white_digits",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_red_potion",
+}
+
+shop_treasure{
+  name = "product_green_potion",
+  layer = 0,
+  x = 144,
+  y = 88,
+  treasure_name = "potion",
+  treasure_variant = 2,
+  price = 120,
+  font = "white_digits",
+  dialog = "maps.houses.cordinia_town.witch_hut.product_green_potion",
+}
+
+npc{
+  name = "merchant",
+  layer = 0,
+  x = 200,
+  y = 157,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/merchant_hooded_yellow",
+}
+
+sensor{
+  name = "sensor_shop_welcome",
+  layer = 0,
+  x = 152,
+  y = 197,
+  width = 32,
+  height = 16,
+}
+
+tile{
+  layer = 1,
+  x = 152,
+  y = 216,
+  width = 16,
+  height = 8,
+  pattern = "door_cache.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 144,
+  y = 216,
+  width = 32,
+  height = 8,
+  pattern = "door_top.2-1",
+}
+
+tile{
+  layer = 1,
+  x = 72,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 1,
+  x = 232,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "torch_big.top",
+}
+
+tile{
+  layer = 2,
+  x = 40,
+  y = 0,
+  width = 240,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 0,
+  y = 0,
+  width = 40,
+  height = 240,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 40,
+  y = 224,
+  width = 240,
+  height = 16,
+  pattern = "ceiling.2",
+}
+
+tile{
+  layer = 2,
+  x = 280,
+  y = 0,
+  width = 40,
+  height = 240,
+  pattern = "ceiling.2",
+}
+

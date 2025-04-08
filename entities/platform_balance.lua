@@ -36,7 +36,7 @@ local solidified=true
 -- Include scripts
 --require("scripts/multi_events")
 
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 entity:register_event("on_created", function()
     --Get the twin entity
     local name=entity:get_name()

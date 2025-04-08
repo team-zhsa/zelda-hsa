@@ -1,120 +1,56 @@
--- Lua script of map dungeons/2/1f.
--- This script is executed every time the hero enters this map.
-
--- Feel free to modify the code below.
--- You can add more events and remove the ones you don't need.
-
--- See the Solarus Lua API documentation:
--- http://www.solarus-games.org/doc/latest
-
+-- Variables
 local map = ...
 local game = map:get_game()
-local separator_manager = require("scripts/maps/separator_manager.lua")
-local camera_meta = require("scripts/meta/camera.lua")
-local audio_manager = require("scripts/audio_manager.lua")
 
--- Event called at initialization time, as soon as this map is loaded.
-function map:on_started(destination)
-	map:set_doors_open("door_19_s")
-	chest_20_blue_key:set_enabled(false)
-	if not game:get_value("dungeon_2_compass", true) then
-		chest_30_compass:set_enabled(false)
-	else chest_30_compass:set_enabled(true)
+-- Include scripts
+require("scripts/multi_events")
+local audio_manager = require("scripts/audio_manager")
+local door_manager = require("scripts/maps/door_manager")
+local enemy_manager = require("scripts/maps/enemy_manager")
+local separator_manager = require("scripts/maps/separator_manager")
+local switch_manager = require("scripts/maps/switch_manager")
+local treasure_manager = require("scripts/maps/treasure_manager")
+local is_boss_active = false
+-- Map events
+
+
+map:register_event("on_started", function()
+	separator_manager:manage_map(map)
+	if heart_container ~= nil and boss ~= nil then
+		treasure_manager:disappear_pickable(map, "heart_container")
+    treasure_manager:disappear_pickable(map, "pendant")
 	end
 	separator_manager:manage_map(map)
-end
+  door_manager:close_when_torches_unlit(map, "torch_12_door", "door_12_s")
+  door_manager:open_when_torches_lit(map, "torch_12_door", "door_12_s")
+  door_manager:open_when_torches_lit(map, "torch_28_door", "door_group_boss")
+  enemy_manager:execute_when_vegas_dead(map, "enemy_22_small_key")
+  treasure_manager:disappear_pickable(map, "small_key_22")
+  treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_22_small_key", "small_key_22")
+	separator_manager:manage_map(map)
+end)
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
+-- Boss events
+if boss ~= nil then
+	function sensor_boss:on_activated()
+		sol.audio.play_music("boss/boss_albw")
+		sensor_boss:remove()
+    map:close_doors("door_group_boss")
+    hero:save_solid_ground()
+	end
 
-function switch_28_1:on_activated()
-  if switch_28_2:is_activated() and switch_28_3:is_activated() and switch_28_4:is_activated() then
-    map:open_doors("door_27_n1")
-    audio_manager:play_sound("common/secret_discover_minor")
-  end
-end
-
-function switch_28_2:on_activated()
-  if switch_28_1:is_activated() and switch_28_3:is_activated() and switch_28_4:is_activated() then
-    map:open_doors("door_27_n1")
-    audio_manager:play_sound("common/secret_discover_minor")
-  end
-end
-
-function switch_28_3:on_activated()
-  if switch_28_2:is_activated() and switch_28_1:is_activated() and switch_28_4:is_activated() then
-    map:open_doors("door_27_n1")
-    audio_manager:play_sound("common/secret_discover_minor")
-  end
-end
-
-function switch_28_4:on_activated()
-  if switch_28_2:is_activated() and switch_28_3:is_activated() and switch_28_1:is_activated() then
-    map:open_doors("door_27_n1")
-    audio_manager:play_sound("common/secret_discover_minor")
-  end
-end
-
-function switch_20_chest:on_activated()
-	chest_20_blue_key:set_enabled(true)
-	game:set_value("dungeon_1_blue_key", 1)
-end
-
-function auto_block_2:on_moved()
-	map:open_doors("door_19_w")
-end
-
-function auto_block_5:on_moved()
-	map:open_doors("door_19_e")
-end
-
-function auto_block_8:on_moved()
-	map:open_doors("door_19_s")
-end
-
-local life = game:get_life()
-for custom_entity in map:get_entities("torch_10") do
-	function custom_entity:on_lit()
-		if math.random(1, 2) == 1 then
-			game:remove_life(life / 2)
-		else
-			game:set_value("dungeon_2_1f_10_collapse_ground", true)
-			dynamic_10_light:set_enabled(false)
-			dynamic_10_collapse:set_enabled(false)
-		end
+	function boss:on_dead()
+		treasure_manager:appear_pickable(map, "heart_container")
+    treasure_manager:appear_pickable(map, "pendant")
+    map:open_doors("door_group_boss")
 	end
 end
 
-function sensor_4_collapse:on_collision_explosion()
-	dynamic_4_collapse:set_enabled(false)
-	audio_manager:play_sound("common/secret_discover_minor")
-	game:set_value("dungeon_2_1f_4_collapse_ground", true)
-end
-
-function npc_fairy:on_interaction()
-	game:start_dialog("scripts.meta.map.fairy", function()
-		game:set_life(game:get_max_life())
-	end)
-end
-
-function switch_13_wall:on_activated()
-	dynamic_12_wall:set_enabled(false)
-	dynamic_12_wall_2:set_enabled(false)
-end
-
-function switch_30_fire:on_activated()
-	map:create_enemy({
-		name = "auto_enemy",
-		breed = "dungeons/bubble_red",
-		x = 1400,
-		y = 1304,
-		layer = 0,
-		direction = 1
-	})
-	switch_30_fire:set_activated(false)
-end
-
-function switch_30_chest:on_activated()
-	audio_manager:play_sound("common/secret_discover_minor")
-	chest_30_compass:set_enabled(true)
+if pendant ~= nil then
+	function map:on_obtained_treasure(item, variant, savegame_variable)
+  	if item:get_name() == "pendant_2" then
+      enemy_manager:start_completing_sequence(map)
+      game:set_step_done("dungeon_2_completed")
+    end
+	end
 end

@@ -43,11 +43,11 @@ function rupees_builder:new(game, config)
 
       -- Play a sound if we have just reached the final value.
       if rupees.money_displayed == money then
-        sol.audio.play_sound("common/dialog/message_end")
+        sol.audio.play_sound("menus/message_end")
 
       -- While the counter is scrolling, play a sound every 3 values.
       elseif rupees.money_displayed % 3 == 0 then
-        sol.audio.play_sound("common/dialog/message_end")
+        sol.audio.play_sound("menus/message_end")
       end
     end
 
@@ -67,7 +67,7 @@ function rupees_builder:new(game, config)
     rupees.surface:clear()
 
     -- Max money (icon).
-    rupees.rupee_icons_img:draw_region((rupees.rupee_bag_displayed - 1) * 12, 0, 12, 12, rupees.surface)
+    rupees.rupee_icons_img:draw_region((rupees.rupee_bag_displayed - 1) * 12, 0, 17, 12, rupees.surface)
 
     -- Current rupee (counter).
     local max_money = game:get_max_money()
@@ -77,7 +77,7 @@ function rupees_builder:new(game, config)
       rupees.digits_text:set_font("white_digits")
     end
     rupees.digits_text:set_text(rupees.money_displayed)
-    rupees.digits_text:draw(rupees.surface, 16, 5)
+    rupees.digits_text:draw(rupees.surface, 16, 6)
   end
 
   function rupees:get_surface()

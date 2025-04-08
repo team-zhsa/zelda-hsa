@@ -2,20 +2,20 @@ animation{
   name = "walking",
   src_image = "enemies/dungeons/wallmaster.png",
   directions = {
-    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
   },
 }
 animation{
   name = "closed",
   src_image = "enemies/dungeons/wallmaster.png",
   directions = {
-    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 64, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 32, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
   },
 }
 animation{
@@ -24,29 +24,29 @@ animation{
   frame_delay = 50,
   frame_to_loop_on = 0,
   directions = {
-    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2, num_columns = 1 },
-    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2, num_columns = 1 },
+    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
+    { x = 32, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 3 },
   },
 }
 animation{
   name = "shadow",
   src_image = "enemies/dungeons/wallmaster.png",
   directions = {
-    { x = 0, y = 32, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
-    { x = 0, y = 32, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
-    { x = 0, y = 32, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
-    { x = 0, y = 32, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 8, origin_x = 16, origin_y = 5 },
   },
 }
 animation{
   name = "sleeping",
   src_image = "enemies/dungeons/wallmaster.png",
   directions = {
-    { x = 0, y = 40, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
-    { x = 0, y = 40, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
-    { x = 0, y = 40, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
-    { x = 0, y = 40, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
+    { x = 32, y = 64, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
+    { x = 32, y = 64, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
+    { x = 32, y = 64, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
+    { x = 32, y = 64, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
   },
 }

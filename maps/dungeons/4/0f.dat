@@ -1,0 +1,67 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1280,
+  height = 960,
+  min_layer = -1,
+  max_layer = 2,
+  world = "dungeon_4",
+  floor = 0,
+  tileset = "absolute_dungeon_07",
+  music = "",
+}
+
+tile{
+  layer = -1,
+  x = 64,
+  y = 224,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 432,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 224,
+  width = 24,
+  height = 208,
+  pattern = "wall.3-9",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 200,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 200,
+  width = 176,
+  height = 24,
+  pattern = "wall.1-9",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 408,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner.3-4",
+}
+

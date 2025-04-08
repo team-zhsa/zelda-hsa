@@ -1,0 +1,9 @@
+animation{
+  name = "blink",
+  src_image = "menus/map/dungeon_map_icons.png",
+  frame_delay = 300,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 60, y = 9, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0, num_frames = 2 },
+  },
+}

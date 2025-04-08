@@ -4,7 +4,7 @@ local symbol_fixed = false
 
 function enemy:on_created()
 
-  enemy:set_life(1000)
+  enemy:set_life(10000)
   enemy:set_damage(1)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
@@ -38,7 +38,7 @@ function enemy:on_restarted()
   sprite:set_direction(math.random(4) - 1)
 
   -- Switch symbol repeatedly.
-  sol.timer.start(enemy, 500, function()
+  sol.timer.start(enemy, 800, function()
     if sprite:get_animation() ~= "walking" then
       return false
     end

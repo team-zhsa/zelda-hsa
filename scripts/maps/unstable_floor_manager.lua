@@ -28,9 +28,9 @@ This can be used by other scripts in this way:
 
 -Use the multi-events script if you need to add some code there or you may break the feature temporarily.
 -Do NOT redefine the event "hero/hero_meta.on_position_changed", or you will fully break the feature.
--Call "hero:initialize_unstable_floor_manager()" always after calling "hero:reset_solid_ground()",
+-Call "hero:initialise_unstable_floor_manager()" always after calling "hero:reset_solid_ground()",
 to restart the feature.
--By default, the events "game.on_map_changed" and "separator.on_activated" restart/initialize this
+-By default, the events "game.on_map_changed" and "separator.on_activated" restart/initialise this
 feature, unless you override them (which could break the feature temporarily).
 
 2) HOW TO define unstable floors (i.e., floors where the hero does not save position):
@@ -110,9 +110,9 @@ hero_meta:register_event("on_state_changing", function(hero, old_state, state)
     end
   end)
 
--- Function to initialize the unstable floor manager.
+-- Function to initialise the unstable floor manager.
 -- Use it always after calling "hero:reset_solid_ground()".
-function hero_meta:initialize_unstable_floor_manager()
+function hero_meta:initialise_unstable_floor_manager()
 
   local hero = self  
   hero:save_solid_ground(function()
@@ -136,16 +136,16 @@ function hero_meta:save_stable_floor_position()
   }
 end
 
--- Initialize the manager on the corresponding events.
+-- initialise the manager on the corresponding events.
 game_meta:register_event("on_map_changed", function(game, map)
 
     local hero = game:get_hero()
     hero:save_stable_floor_position()
-    hero:initialize_unstable_floor_manager()
+    hero:initialise_unstable_floor_manager()
   end)
 separator_meta:register_event("on_activated", function(separator, dir4)
 
     local hero = separator:get_map():get_hero()
     hero:save_stable_floor_position()
-    hero:initialize_unstable_floor_manager()
+    hero:initialise_unstable_floor_manager()
   end)

@@ -1,9 +1,10 @@
--- A flame that can hurt enemies.
--- It is meant to by created by the lamp and the ice rod.
+-- Variables
 local ice = ...
 local sprite
+local is_active = true
 
-local enemies_touched = { }
+-- Include scripts
+local audio_manager = require("scripts/audio_manager")
 
 ice:set_size(8, 8)
 ice:set_origin(4, 5)
@@ -13,31 +14,42 @@ sprite:set_direction(ice:get_direction())
 -- Remove the sprite if the animation finishes.
 -- Use animation "flying" if you want it to persist.
 function sprite:on_animation_finished()
+  
   ice:remove()
+  
 end
 
 -- Returns whether a destructible is a bush.
 local function is_bush(destructible)
 
   local sprite = destructible:get_sprite()
-  if sprite == nil then
+  if not is_active or sprite == nil then
     return false
   end
 
   local sprite_id = sprite:get_animation_set()
-  return sprite_id == "entities/bush" or sprite_id:match("^entities/Bushes/bush_")
+  return sprite_id == "entities/destructibles/bush" or sprite_id:match("^entities/destructibles/bush_")
+end
+
+-- Returns whether a destructible is a bush.
+local function is_ice_block(entity)
+
+  local sprite = entity:get_sprite()
+  if not is_active or sprite == nil then
+    return false
+  end
+  local sprite_id = sprite:get_animation_set()
+  return sprite_id == "entities/destructibles/block_ice"
 end
 
 local function bush_collision_test(ice, other)
 
-  if other:get_type() ~= "destructible" then
+  if other:get_type() ~= "destructible" and other:get_type() ~= "custom_entity" then
     return false
   end
-
-  if not is_bush(other) then
+  if not (is_bush(other) or is_ice_block(other)) then
     return
   end
-
   -- Check if the ice box touches the one of the bush.
   -- To do this, we extend it of one pixel in all 4 directions.
   local x, y, width, height = ice:get_bounding_box()
@@ -47,6 +59,7 @@ end
 -- Traversable rules.
 ice:set_can_traverse("crystal", true)
 ice:set_can_traverse("crystal_block", true)
+ice:set_can_traverse("enemy", true)
 ice:set_can_traverse("hero", true)
 ice:set_can_traverse("jumper", true)
 ice:set_can_traverse("stairs", false)
@@ -62,85 +75,95 @@ ice:set_can_traverse_ground("low_wall", true)
 ice:set_can_traverse(true)
 ice.apply_cliffs = true
 
--- Burn bushes.
-ice:add_collision_test(bush_collision_test, function(ice, entity)
+-- Going off animation and remove
+function ice:extinguish()
 
-  local map = ice:get_map()
-
-  if entity:get_type() == "destructible" then
-    if not is_bush(entity) then
-      return
-    end
-    local bush = entity
-
-    local bush_sprite = entity:get_sprite()
-    if bush_sprite:get_animation() ~= "on_ground" then
-      -- Possibly already being destroyed.
-      return
-    end
-
+  is_active = false
+  if sprite:get_animation() ~= "going_off" then
     ice:stop_movement()
-    sprite:set_animation("stopped")
-    sol.audio.play_sound("flame")
 
-    -- TODO remove this when the engine provides a function destructible:destroy()
-    local bush_sprite_id = bush_sprite:get_animation_set()
-    local bush_x, bush_y, bush_layer = bush:get_position()
-    local treasure = { bush:get_treasure() }
-    if treasure ~= nil then
-      local pickable = map:create_pickable({
-        x = bush_x,
-        y = bush_y,
-        layer = bush_layer,
-        treasure_name = treasure[1],
-        treasure_variant = treasure[2],
-        treasure_savegame_variable = treasure[3],
-      })
+    sprite:set_animation("going_off")
+    function sprite:on_animation_finished()
+      ice:remove()
     end
-
-    sol.audio.play_sound(bush:get_destruction_sound())
-    bush:remove()
-
-    local bush_destroyed_sprite = ice:create_sprite(bush_sprite_id)
-    local x, y = ice :get_position()
-    bush_destroyed_sprite:set_xy(bush_x - x, bush_y - y)
-    bush_destroyed_sprite:set_animation("destroy")
   end
-end)
+end
 
 -- Hurt enemies.
-ice:add_collision_test("sprite", function(ice, entity)
+ice:add_collision_test("sprite", function(ice, entity, ice_sprite, entity_sprite)
 
-  if entity:get_type() == "enemy" then
+  if is_active and entity:get_type() == "enemy" then
     local enemy = entity
-    if enemies_touched[enemy] then
-      -- If protected we don't want to play the sound repeatedly.
+    local reaction = enemy:get_ice_reaction(entity_sprite)
+
+    -- Don't continue if ice has no effect on the enemy.
+    if reaction == "protected" then
+      ice:extinguish()
       return
     end
-    enemies_touched[enemy] = true
-    local reaction = enemy:get_ice_reaction(enemy_sprite)
-    enemy:receive_attack_consequence("ice", reaction)
-
-    sol.timer.start(ice, 200, function()
-      ice:remove()
-    end)
-  end
-  if entity:get_type() == "enemy" then
-    local enemy = entity
-    if enemies_touched[enemy] then
-      -- If protected we don't want to play the sound repeatedly.
+    if reaction == "ignored" then
       return
     end
-    enemies_touched[enemy] = true
-    local reaction = enemy:get_ice_reaction(enemy_sprite)
-    enemy:receive_attack_consequence("ice", reaction)
+    if reaction == nil or reaction == 0 then
+      -- Freeze the enemy and make it unable to interact.
+      local reactions = enemy:get_hero_weapons_reactions()
+      sol.timer.stop_all(enemy)
+      enemy:stop_movement()
+      enemy:set_can_attack(false)
 
-    sol.timer.start(ice, 200, function()
-      ice:remove()
-    end)
+      -- Set the enemy's animation to frozen.
+      local enemy_sprite = enemy:get_sprite()
+      if enemy_sprite:has_animation("frozen") then
+        enemy_sprite:set_animation("frozen")
+        enemy:start_jumping(400, 8, math.pi / 2, 88, function()
+          enemy:set_frozen(true)
+        end)
+      else
+        local burning_sprite = enemy:create_sprite("entities/effects/flame", "burning")
+        burning_sprite:set_xy(entity_sprite:get_xy())
+        function burning_sprite:on_animation_finished()
+          enemy:remove_sprite(burning_sprite)
+        end
+      end
+    end
+    --[[ Directly pass attack consequences if reaction is a function.
+    if type(reaction) == "function" then
+      ice:extinguish()
+      enemy:receive_attack_consequence("ice", reaction)
+      return
+    end--]]
+
+
+
+    -- Push it back.
+    if enemy:is_pushed_back_when_hurt() then
+      enemy:set_pushed_back_when_hurt(false) -- Avoid pushing back again.
+      
+      local enemy_x, enemy_y, _ = enemy:get_position()
+      local enemy_sprite_x, enemy_sprite_y = entity_sprite:get_xy()
+      local ice_x, ice_y, _ = ice:get_position()
+      local movement = sol.movement.create("straight")
+      movement:set_speed(256)
+      movement:set_angle(math.atan2(ice_y - enemy_y - enemy_sprite_y, enemy_x - ice_x - enemy_sprite_x))
+      movement:set_max_distance(32)
+      movement:set_smooth(false)
+      movement:start(enemy)
+
+      -- Avoid enemy to restart before hurt.
+      function movement:on_finished()
+        enemy:stop_movement()
+      end
+      function movement:on_obstacle_reached()
+        enemy:stop_movement()
+      end
+    end
+
+    -- Remove the projectile and make the enemy burn.
+    ice:extinguish()
+    
   end
 end)
 
 function ice:on_obstacle_reached()
-  ice:remove()
+  ice:extinguish()
 end

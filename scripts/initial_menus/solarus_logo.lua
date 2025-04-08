@@ -72,7 +72,7 @@ end
 -- Starting the menu.
 function solarus_logo_menu:on_started()
 
-  -- Initialize or reinitialize the animation.
+  -- initialise or reinitialise the animation.
   animation_step = 0
   timer = nil
   surface:set_opacity(255)
@@ -97,7 +97,7 @@ function solarus_logo_menu:step1()
   sword:stop_movement()
   sword:set_xy(-48, 48)
   -- Play a sound.
-  sol.audio.play_sound("scene/title/solarus_logo")
+  sol.audio.play_sound("menus/solarus_logo")
   -- Update the surface.
   rebuild_surface()
 end

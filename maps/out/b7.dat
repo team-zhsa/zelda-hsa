@@ -6,8 +6,8 @@ properties{
   min_layer = 0,
   max_layer = 2,
   world = "outside_world",
-  tileset = "Full Hyrule",
-  music = "outside/overworld",
+  tileset = "outside_main",
+  music = "outside/beach",
 }
 
 tile{
@@ -17,6 +17,60 @@ tile{
   width = 1280,
   height = 1440,
   pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 136,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 232,
+  y = 152,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 152,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "454",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 168,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 184,
+  width = 8,
+  height = 8,
+  pattern = "454",
 }
 
 tile{
@@ -24526,6 +24580,60 @@ tile{
   pattern = "84",
 }
 
+tile{
+  layer = 0,
+  x = 624,
+  y = 808,
+  width = 16,
+  height = 40,
+  pattern = "262",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 808,
+  width = 8,
+  height = 40,
+  pattern = "261",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 808,
+  width = 8,
+  height = 40,
+  pattern = "260",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 848,
+  width = 8,
+  height = 24,
+  pattern = "4049",
+}
+
+tile{
+  layer = 0,
+  x = 624,
+  y = 848,
+  width = 16,
+  height = 24,
+  pattern = "4051",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 848,
+  width = 8,
+  height = 24,
+  pattern = "4050",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -24555,14 +24663,14 @@ teletransporter{
   properties = {
     {
       key = "effect",
-      value = "fade_to_white",
+      value = "fade_to_blue",
     },
   },
   width = 16,
   height = 16,
   destination_map = "out/a2",
   destination = "from_warp",
-  sound = "warp",
+  sound = "common/warp",
 }
 
 jumper{
@@ -24669,7 +24777,7 @@ jumper{
   layer = 0,
   x = 544,
   y = 808,
-  width = 176,
+  width = 72,
   height = 8,
   direction = 6,
   jump_length = 56,
@@ -25116,6 +25224,110 @@ jumper{
   height = 40,
   direction = 7,
   jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 648,
+  y = 808,
+  width = 72,
+  height = 8,
+  direction = 6,
+  jump_length = 56,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1280,
+  y = 0,
+  width = 16,
+  height = 1440,
+  transition = "scrolling",
+  destination_map = "out/c7",
+  destination = "_side",
+}
+
+enemy{
+  layer = 0,
+  x = 736,
+  y = 501,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 600,
+  y = 669,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 576,
+  y = 221,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 432,
+  y = 1157,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 1032,
+  y = 1309,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 1040,
+  y = 869,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 408,
+  y = 141,
+  direction = 0,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_south",
+}
+
+enemy{
+  layer = 0,
+  x = 920,
+  y = 637,
+  direction = 0,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_south",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/b8",
+  destination = "_side",
 }
 
 tile{

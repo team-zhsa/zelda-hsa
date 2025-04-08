@@ -1,7 +1,7 @@
--- Initialize sensor behavior specific to this quest.
+-- initialise sensor behavior specific to this quest.
 
 local sensor_meta = sol.main.get_metatable("sensor")
-require("scripts/maps/light_manager")
+require("scripts/maps/light_manager_old")
 
 function sensor_meta:on_activated()
 
@@ -32,7 +32,7 @@ function sensor_meta:on_activated()
     hero:save_solid_ground()
     return
   end
-
+  
   -- Sensors prefixed by "reset_solid_ground_sensor" clear any place for the hero
   -- to come back when falling into a hole or other bad ground.
   if name:match("^reset_solid_ground_sensor") then

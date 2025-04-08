@@ -1,0 +1,76 @@
+animation{
+  name = "returnable",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 2, num_columns = 1 },
+    { x = 32, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 2, num_columns = 1 },
+    { x = 32, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 2, num_columns = 1 },
+    { x = 32, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 2, num_columns = 1 },
+  },
+}
+animation{
+  name = "hurtless",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 33, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 12, num_frames = 2 },
+    { x = 0, y = 33, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 12, num_frames = 2 },
+    { x = 0, y = 33, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 12, num_frames = 2 },
+    { x = 0, y = 33, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 12, num_frames = 2 },
+  },
+}
+animation{
+  name = "hurtless_loading",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  frame_delay = 700,
+  directions = {
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+  },
+}
+animation{
+  name = "impact_1",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  directions = {
+    { x = 48, y = 0, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 48, y = 8, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 48, y = 16, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 48, y = 24, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+  },
+}
+animation{
+  name = "impact_2",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  directions = {
+    { x = 56, y = 0, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 56, y = 8, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 56, y = 16, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 56, y = 24, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+  },
+}
+animation{
+  name = "impact_3",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  directions = {
+    { x = 64, y = 0, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 64, y = 8, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 64, y = 16, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+    { x = 64, y = 24, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4 },
+  },
+}
+animation{
+  name = "returnable_loading",
+  src_image = "enemies/boss/shadow_nightmares/projectiles/shadowball.png",
+  frame_delay = 700,
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 3 },
+  },
+}

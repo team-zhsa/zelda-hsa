@@ -19,7 +19,7 @@ local y
 local layer
 local is_escape = false
 local is_move = false
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 function seagull:on_created()
 
   x,y,layer = seagull:get_position()

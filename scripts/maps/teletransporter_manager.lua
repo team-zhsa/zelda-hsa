@@ -4,6 +4,7 @@ require("scripts/multi_events")
 local game_meta = sol.main.get_metatable("game")
 
 game_meta:register_event("on_map_changed", function(game, map)
+    print("Changed map to '" .. map:get_id() .. "'")
     local camera = map:get_camera()
     local surface = camera:get_surface()
     local hero = map:get_hero()
@@ -19,9 +20,10 @@ game_meta:register_event("on_map_changed", function(game, map)
           local effect_model = require("scripts/gfx_effects/" .. effect)
           game:set_suspended(true)
           game:set_pause_allowed(false)
+          hero:freeze()
           game.teleport_in_progress=true
           -- Execute In effect
-          effect_model.start_effect(surface, game, "in", false, function()
+          effect_model.start_effect(surface, game, "in", teletransporter:get_sound(), function()
             if destination_name == "_side" then
               local w_map, h_map = map:get_size()
               -- We calculate the direction according to the position of the teletransporter on the map

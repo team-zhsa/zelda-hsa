@@ -10,27 +10,27 @@ function savegame_menu:on_started()
   -- Create all graphic objects.
   self.surface = sol.surface.create(320, 240)
   self.background_color = { 104, 144, 240 }
-  self.background_img = sol.surface.create("menus/selection_menu_background.png")
-  self.background_title_img = sol.surface.create("menus/selection_menu_background_title.png")
-  self.save_container_img = sol.surface.create("menus/selection_menu_save_container.png")
-  self.option_container_img = sol.surface.create("menus/selection_menu_option_container.png")
+  self.background_img = sol.surface.create("menus/savegames/background.png")
+  self.background_title_img = sol.surface.create("menus/savegames/background_title.png")
+  self.save_container_img = sol.surface.create("menus/savegames/save_container.png")
+  self.option_container_img = sol.surface.create("menus/savegames/option_container.png")
   local dialog_font, dialog_font_size = language_manager:get_dialog_font()
   local menu_font, menu_font_size = language_manager:get_menu_font()
   self.option1_text = sol.text_surface.create{
-    font = dialog_font,
+    font = "capital",
     font_size = dialog_font_size,
   }
   self.option2_text = sol.text_surface.create{
-    font = dialog_font,
+    font = "capital",
     font_size = dialog_font_size,
   }
   self.title_text = sol.text_surface.create{
     horizontal_alignment = "center",
-    font = menu_font,
+    font = "alttp",
     font_size = menu_font_size,
   }
   self.cursor_position = 1
-  self.cursor_sprite = sol.sprite.create("menus/selection_menu_cursor")
+  self.cursor_sprite = sol.sprite.create("menus/savegames/cursor")
   self.allow_cursor_move = true
   self.finished = false
   self.phase = 1
@@ -132,8 +132,8 @@ function savegame_menu:on_draw(dst_surface)
   -- Background title.
   self.background_title_img:draw(self.surface, 0, 0)
   -- Savegames container.
-  self.background_img:draw(self.surface, 37, 5)
-  self.title_text:draw(self.surface, 160, 21)
+  self.background_img:draw(self.surface, 37, 32)
+  self.title_text:draw(self.surface, 160, 48)
 
   -- Phase-specific draw method.
   local method_name = "draw_phase_" .. self.phase
@@ -147,11 +147,11 @@ end
 function savegame_menu:draw_savegame(slot_index)
 
   local slot = self.slots[slot_index]
-  self.save_container_img:draw(self.surface, 57, 10 + slot_index * 27)
-  slot.player_name_text:draw(self.surface, 87, 23 + slot_index * 27)
-
+  self.save_container_img:draw(self.surface, 57, 53 + slot_index * 27)
+  slot.player_name_text:draw(self.surface, 87, 66 + slot_index * 27)
+  slot.time_saved_text:draw(self.surface, 136, 77 + slot_index * 27)
   if slot.hearts_view ~= nil then
-    slot.hearts_view:set_dst_position(168, 13 + slot_index * 27)
+    slot.hearts_view:set_dst_position(136, 56 + slot_index * 27)
     slot.hearts_view:on_draw(self.surface)
   end
 end
@@ -165,9 +165,9 @@ function savegame_menu:draw_savegame_cursor()
     x = 58
   end
   if self.cursor_position < 4 then
-    y = 11 + self.cursor_position * 27
+    y = 54 + self.cursor_position * 27
   else
-    y = 121
+    y = 164
   end
   self.cursor_sprite:draw(self.surface, x, y)
 end
@@ -175,22 +175,22 @@ end
 function savegame_menu:draw_savegame_number(slot_index)
 
   local slot = self.slots[slot_index]
-  slot.number_img:draw(self.surface, 61, 15 + slot_index * 27)
+  slot.number_img:draw(self.surface, 61, 58 + slot_index * 27)
 end
 
 function savegame_menu:draw_bottom_buttons()
 
   local x
-  local y = 120
+  local y = 163
   if self.option1_text:get_text():len() > 0 then
     x = 57
     self.option_container_img:draw(self.surface, x, y)
-    self.option1_text:draw(self.surface, 90, 134)
+    self.option1_text:draw(self.surface, 90, 173)
   end
   if self.option2_text:get_text():len() > 0 then
     x = 165
     self.option_container_img:draw(self.surface, x, y)
-    self.option2_text:draw(self.surface, 198, 134)
+    self.option2_text:draw(self.surface, 198, 173)
   end
 end
 
@@ -202,8 +202,11 @@ function savegame_menu:read_savegames()
     local slot = {}
     slot.file_name = "save" .. i .. ".dat"
     slot.savegame = game_manager:create(slot.file_name)
-    slot.number_img = sol.surface.create("menus/selection_menu_save" .. i .. ".png")
-
+    slot.number_img = sol.surface.create("menus/savegames/save" .. i .. ".png")
+    slot.time_saved_text = sol.text_surface.create{
+      font = "04b03",
+      font_size = font_size,
+    }
     slot.player_name_text = sol.text_surface.create{
       font = font,
       font_size = font_size,
@@ -211,7 +214,10 @@ function savegame_menu:read_savegames()
     if sol.game.exists(slot.file_name) then
       -- Existing file.
       slot.player_name_text:set_text(slot.savegame:get_value("player_name"))
-
+      if slot.savegame:get_value("time_saved") == nil then
+        slot.savegame:set_value("time_saved", "0")
+      end
+      slot.time_saved_text:set_text(os.date("%d/%m/%Y %H:%M", tonumber(slot.savegame:get_value("time_saved"))))
       -- Hearts.
       local hearts_class = require("scripts/hud/hearts")
       slot.hearts_view = hearts_class:new(slot.savegame)
@@ -242,7 +248,7 @@ end
 
 function savegame_menu:move_cursor_up()
 
-  sol.audio.play_sound("menu/cursor")
+  sol.audio.play_sound("menus/cursor")
   local cursor_position = self.cursor_position - 1
   if cursor_position == 0 then
     cursor_position = 4
@@ -254,7 +260,7 @@ end
 
 function savegame_menu:move_cursor_down()
 
-  sol.audio.play_sound("menu/cursor")
+  sol.audio.play_sound("menus/cursor")
   local cursor_position = self.cursor_position + 1
   if cursor_position >= 5 then
     cursor_position = 1
@@ -265,10 +271,10 @@ end
 function savegame_menu:move_cursor_left_or_right()
 
   if self.cursor_position == 4 then
-    sol.audio.play_sound("menu/dir_left")
+    sol.audio.play_sound("menus/dir_left")
     self:set_cursor_position(5)
   elseif self.cursor_position == 5 then
-    sol.audio.play_sound("menu/dir_right")
+    sol.audio.play_sound("menus/dir_right")
     self:set_cursor_position(4)
   end
 end
@@ -315,7 +321,7 @@ function savegame_menu:key_pressed_phase_select_file(key)
 
   local handled = false
   if key == "space" or key == "return" then
-    sol.audio.play_sound("menu/fileselect_start")
+    sol.audio.play_sound("menus/fileselect_start")
     if self.cursor_position == 5 then
       -- The user chooses "Options".
       self:init_phase_options()
@@ -400,17 +406,17 @@ function savegame_menu:key_pressed_phase_erase_file(key)
   if key == "space" or key == "return" then
     if self.cursor_position == 4 then
       -- The user chooses "Cancel".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     elseif self.cursor_position > 0 and self.cursor_position <= 3 then
       -- The user chooses a savegame to delete.
       local slot = self.slots[self.cursor_position]
       if not sol.game.exists(slot.file_name) then
         -- The savegame doesn't exist: error sound.
-        sol.audio.play_sound("wrong")
+        sol.audio.play_sound("common/wrong")
       else
         -- The savegame exists: confirm deletion.
-        sol.audio.play_sound("ok")
+        sol.audio.play_sound("menus/select")
         self:init_phase_confirm_erase()
       end
     end
@@ -475,7 +481,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
   if key == "space" or key == "return" then
    if self.cursor_position == 5 then
       -- The user chooses "yes".
-      sol.audio.play_sound("menu/fileselect_erase0")
+      sol.audio.play_sound("menus/fileselect_erase")
       local slot = self.slots[self.save_number_to_erase]
       sol.game.delete(slot.file_name)
       self.cursor_position = self.save_number_to_erase
@@ -483,7 +489,7 @@ function savegame_menu:key_pressed_phase_confirm_erase(key)
       self:init_phase_select_file()
     elseif self.cursor_position == 4 then
       -- The user chooses "no".
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     end
   else
@@ -561,14 +567,14 @@ function savegame_menu:init_phase_options()
 
     -- Text surface of the label.
     option.label_text = sol.text_surface.create{
-      font = font,
+      font = "capital",
       font_size = font_size,
       text_key = "selection_menu.options." .. option.name
     }
 
     -- Text surface of the value.
     option.value_text = sol.text_surface.create{
-      font = font,
+      font = "capital",
       font_size = font_size,
       horizontal_alignment = "right"
     }
@@ -602,13 +608,13 @@ function savegame_menu:key_pressed_phase_options(key)
   if key == "space" or key == "return" then
     if self.options_cursor_position > #self.options then
       -- Back.
-      sol.audio.play_sound("ok")
+      sol.audio.play_sound("menus/select")
       self:init_phase_select_file()
     else
       -- Set an option.
       local option = self.options[self.options_cursor_position]
       if not self.modifying_option then
-	sol.audio.play_sound("menu/option_modifyvalue")
+	sol.audio.play_sound("menus/modify_value")
 	self.left_arrow_sprite:set_frame(0)
 	self.right_arrow_sprite:set_frame(0)
 	option.label_text:set_color{255, 255, 255}
@@ -616,7 +622,7 @@ function savegame_menu:key_pressed_phase_options(key)
 	self.title_text:set_text_key("selection_menu.phase.options.changing")
 	self.modifying_option = true
       else
-	sol.audio.play_sound("danger")
+	sol.audio.play_sound("menus/danger")
 	option.label_text:set_color{255, 255, 0}
 	option.value_text:set_color{255, 255, 255}
 	self.left_arrow_sprite:set_frame(0)
@@ -642,7 +648,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
     -- Just moving the options cursor (not modifying any option).
 
     if direction8 == 2 then  -- Up.
-      sol.audio.play_sound("menu/cursor")
+      sol.audio.play_sound("menus/cursor")
       self.left_arrow_sprite:set_frame(0)
       local position = self.options_cursor_position - 1
       if position == 0 then
@@ -652,7 +658,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       handled = true
 
     elseif direction8 == 6 then  -- Down.
-      sol.audio.play_sound("menu/cursor")
+      sol.audio.play_sound("menus/cursor")
       self.left_arrow_sprite:set_frame(0)
       local position = self.options_cursor_position + 1
       if position > #self.options + 1 then
@@ -669,7 +675,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index % #option.values) + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menu/option_modifyvalue")
+      sol.audio.play_sound("menus/modify_value")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true
@@ -678,7 +684,7 @@ function savegame_menu:direction_pressed_phase_options(direction8)
       local option = self.options[self.options_cursor_position]
       local index = (option.current_index + #option.values - 2) % #option.values + 1
       self:set_option_value(option, index)
-      sol.audio.play_sound("menu/option_modifyvalue")
+      sol.audio.play_sound("menus/modify_value")
       self.left_arrow_sprite:set_frame(0)
       self.right_arrow_sprite:set_frame(0)
       handled = true
@@ -692,7 +698,7 @@ function savegame_menu:draw_phase_options()
 
   -- All options.
   for i, option in ipairs(self.options) do
-    local y = 32 + i * 16
+    local y = 75 + i * 16
     option.label_text:draw(self.surface, 64, y)
     option.value_text:draw(self.surface, 266, y)
   end
@@ -706,7 +712,7 @@ function savegame_menu:draw_phase_options()
     self:draw_savegame_cursor()
   else
     -- The cursor is on an option line.
-    local y = 26 + self.options_cursor_position * 16
+    local y = 67 + self.options_cursor_position * 16
     if self.modifying_option then
       local option = self.options[self.options_cursor_position]
       local width, _ = option.value_text:get_size()
@@ -812,11 +818,11 @@ function savegame_menu:init_phase_choose_name()
   self.player_name = ""
   local font, font_size = language_manager:get_menu_font()
   self.player_name_text = sol.text_surface.create{
-    font = font,
+    font = "alttp",
     font_size = font_size,
   }
   self.letter_cursor = { x = 0, y = 0 }
-  self.letters_img = sol.surface.create("menus/selection_menu_letters.png")
+  self.letters_img = sol.surface.create("menus/savegames/letters.png")
   self.name_arrow_sprite = sol.sprite.create("menus/arrow")
   self.name_arrow_sprite:set_direction(0)
   self.can_add_letter_player_name = true
@@ -861,19 +867,19 @@ function savegame_menu:direction_pressed_phase_choose_name(direction8)
 
   local handled = true
   if direction8 == 0 then  -- Right.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 1) % 13
 
   elseif direction8 == 2 then  -- Up.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 4) % 5
 
   elseif direction8 == 4 then  -- Left.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.x = (self.letter_cursor.x + 12) % 13
 
   elseif direction8 == 6 then  -- Down.
-    sol.audio.play_sound("cursor")
+    sol.audio.play_sound("menus/cursor")
     self.letter_cursor.y = (self.letter_cursor.y + 1) % 5
 
   else
@@ -887,12 +893,12 @@ function savegame_menu:draw_phase_choose_name()
   -- Letter cursor.
   self.cursor_sprite:draw(self.surface,
       51 + 16 * self.letter_cursor.x,
-      55 + 18 * self.letter_cursor.y)
+      98 + 18 * self.letter_cursor.y)
 
   -- Name and letters.
-  self.name_arrow_sprite:draw(self.surface, 57, 38)
-  self.player_name_text:draw(self.surface, 67, 47)
-  self.letters_img:draw(self.surface, 57, 60)
+  self.name_arrow_sprite:draw(self.surface, 57, 81)
+  self.player_name_text:draw(self.surface, 67, 90)
+  self.letters_img:draw(self.surface, 57, 103)
 end
 
 function savegame_menu:add_letter_player_name()
@@ -923,9 +929,9 @@ function savegame_menu:add_letter_player_name()
 
       if letter_cursor.x == 10 then  -- Remove the last letter.
         if size == 0 then
-          sol.audio.play_sound("menu/letter_back")
+          sol.audio.play_sound("menus/letter_back")
         else
-          sol.audio.play_sound("menu/letter_back")
+          sol.audio.play_sound("menus/letter_back")
           self.player_name = self.player_name:sub(1, size - 1)
         end
 
@@ -933,7 +939,7 @@ function savegame_menu:add_letter_player_name()
         finished = self:validate_player_name()
 
       elseif letter_cursor.x == 12 then  -- Cancel.
-        sol.audio.play_sound("danger")
+        sol.audio.play_sound("menus/danger")
         finished = true
       end
     end
@@ -941,11 +947,11 @@ function savegame_menu:add_letter_player_name()
 
   if letter_to_add ~= nil then
     -- A letter was selected.
-    if size < 6 then
-      sol.audio.play_sound("menu/letter_add")
+    if size < 8 then
+      sol.audio.play_sound("menus/letter_add")
       self.player_name = self.player_name .. letter_to_add
     else
-      sol.audio.play_sound("wrong")
+      sol.audio.play_sound("common/wrong")
     end
   end
 
@@ -955,16 +961,31 @@ end
 function savegame_menu:validate_player_name()
 
   if self.player_name:len() == 0 then
-    sol.audio.play_sound("wrong")
+    sol.audio.play_sound("common/wrong")
     return false
   end
 
-  sol.audio.play_sound("menu/fileselect_created")
-  if self.player_name:lower() == "zelda" or self.player_name:lower() == "ju" or self.player_name:lower() == "lucifer" or self.player_name:lower() == "linkff" or self.player_name:lower() == "salade verte" or self.player_name:lower() == "prince dedede" or self.player_name:lower() == "vibel" or self.player_name:lower() == "bp" or self.player_name:lower() == "ml"then
+  sol.audio.play_sound("menus/fileselect_created")
+  -- Special music for special names
+  if self.player_name:lower() == "zelda"
+  or self.player_name:lower() == "unknown"
+  or self.player_name:lower() == "dedede"
+  or self.player_name:lower() == "linkff" then
     sol.audio.play_music("cutscenes/end_credits")
   end
-  if self.player_name:lower() == "azer" then
-    sol.audio.play_sound("wrong")
+  -- Prevent from creating a savegame with an offensive name
+  if self.player_name:lower() == "teub"
+  or self.player_name:lower() == "bite"
+  or self.player_name:lower() == "chatte"
+  or self.player_name:lower() == "merde"
+  or self.player_name:lower() == "putain"
+  or self.player_name:lower() == "chiasse"
+  or self.player_name:lower() == "teucha"
+  or self.player_name:lower() == "chier"
+  or self.player_name:lower() == "chiant"
+  or self.player_name:lower() == "couille"
+  then
+    sol.audio.play_sound("common/wrong")
     return false
   end
 

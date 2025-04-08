@@ -12,7 +12,9 @@ local jump_manager
 local state = sol.state.create("jumping")
 state:set_can_use_item(false)
 state:set_can_use_item("sword", true)
-state:set_can_use_item("shield", true)
+state:set_can_use_item("shield_hero", true)
+state:set_can_use_item("shield_hylia", true)
+state:set_can_use_item("shield_mirror", true)
 state:set_can_cut(false) --TODO refine me
 state:set_can_control_movement(true)
 state:set_can_control_direction(false)

@@ -1,5 +1,15 @@
--- Lua script of enemy zol_red.
--- This script is executed every time an enemy with this model is created.
+----------------------------------
+--
+-- Zol Red.
+--
+-- Slowly move to hero, and pounce on him when close enough.
+-- Split into two Gels when hit by weak weapons.
+--
+-- Methods : enemy:start_walking()
+--           enemy:start_pouncing()
+--           enemy:split()
+--
+----------------------------------
 
 -- Global variables
 local enemy = ...
@@ -8,7 +18,7 @@ require("enemies/lib/common_actions").learn(enemy)
 local sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
 local map = enemy:get_map()
 local hero = map:get_hero()
-local is_attacking, is_exhausted
+local is_splitting, is_attacking, is_exhausted
 
 -- Configuration variables
 local walking_speed = 4
@@ -23,6 +33,11 @@ local before_split_duration = 300
 local gel_spawn_jumping_height = 8
 local gel_spawn_jumping_duration = 400
 
+-- Split the zol on weak attack received.
+local function on_weak_attack_received()
+  enemy:split()
+end
+
 -- Start moving to the hero, and jump when he is close enough.
 function enemy:start_walking()
   
@@ -35,14 +50,14 @@ function enemy:start_walking()
       -- Shake for a short duration then start attacking.
       sprite:set_animation("shaking")
       sol.timer.start(enemy, shaking_duration, function()
-         enemy:start_jump_attack()
+         enemy:start_pouncing()
       end)
     end
   end
 end
 
--- Start jumping to the hero.
-function enemy:start_jump_attack()
+-- Start pouncing to the hero.
+function enemy:start_pouncing()
 
   local hero_x, hero_y, _ = hero:get_position()
   local enemy_x, enemy_y, _ = enemy:get_position()
@@ -56,7 +71,11 @@ end
 -- Remove the zol and split it into two gels.
 function enemy:split()
 
-  enemy:set_invincible()
+  if is_splitting then
+    return
+  end
+  is_splitting = true
+  enemy:stop_all()
 
   local x, y, layer = enemy:get_position()
   local function create_gel(x_offset)
@@ -69,36 +88,33 @@ function enemy:split()
       direction = enemy:get_direction4_to(hero)
     })
 
-    -- Make gel jump.
-    gel:stop_movement()
-    gel:start_jumping(gel_spawn_jumping_duration, gel_spawn_jumping_height, nil, nil, function()
-      gel:restart()
-    end)
-    gel:get_sprite():set_animation("jumping")
+    -- Make Gel jump.
+    if gel and gel:exists() then -- If the Gel was not immediatly removed from the on_created() event.
+      gel:stop_movement()
+      gel:set_treasure(enemy:get_treasure())
+      gel:start_jumping(gel_spawn_jumping_duration, gel_spawn_jumping_height, nil, nil, function()
+        gel:restart()
+      end)
+      gel:get_sprite():set_animation("jumping")
+    end
+
+    return gel
   end
 
   -- Start hurt behavior for some time then split into gels.
-  enemy:hurt(0)
-  sol.timer.start(map, before_split_duration, function()
-    create_gel(-5)
-    create_gel(5)
-    enemy:silent_kill()
+  sprite:set_animation("hurt")
+  sol.timer.start(enemy, before_split_duration, function()
+    local gels = {create_gel(-5), create_gel(5)}
+    gels[math.random(2)]:set_treasure(enemy:get_treasure()) -- The treasure will be dropped randomly by one of the gel.
+    enemy:start_death()
   end)
   
 end
 
--- Split the zol if hurt and not directly dead.
-enemy:register_event("on_hurt", function(enemy)
-
-  if enemy:get_life() > 0 then
-    enemy:split()
-  end
-end)
-
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(2)
+  enemy:set_life(1)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
   shadow = enemy:start_shadow()
@@ -107,17 +123,31 @@ end)
 -- Restart settings.
 enemy:register_event("on_restarted", function(enemy)
 
-  -- Behavior for each items.
-	enemy:set_attack_consequence("sword", 1)
-	enemy:set_attack_consequence("explosion", 1)
+  enemy:set_hero_weapons_reactions({
+  	arrow = on_weak_attack_received,
+  	boomerang = 1,
+  	explosion = on_weak_attack_received,
+  	sword = on_weak_attack_received,
+  	thrown_item = 1,
+  	fire = 1,
+  	jump_on = "ignored",
+  	hammer = 1,
+  	hookshot = 1,
+  	magic_powder = 1,
+  	shield = "protected",
+  	thrust = 1
+  })
 
   -- States.
+  is_splitting = false
   is_attacking = false
   is_exhausted = true
   sprite:set_xy(0, 0)
   sol.timer.start(enemy, math.random(exhausted_minimum_duration, exhausted_maximum_duration), function()
     is_exhausted = false
   end)
+  enemy:set_damage(1)
+  enemy:set_can_attack(true)
   enemy:set_obstacle_behavior("normal")
   enemy:set_pushed_back_when_hurt(false)
   enemy:set_damage(2)

@@ -2,7 +2,7 @@ local item = ...
 local game = item:get_game()
 
 function item:on_created()
-	item:set_sound_when_brandished("common/big_item")
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_hammer")
   item:set_assignable(true)
   item:set_pushed_stake(false)
@@ -15,15 +15,15 @@ function item:on_using()
 
   -- Enable collisions after a few frames.
   item.hammer_active = false
-  sol.timer.start(map, 150, function()
+  sol.timer.start(map, 350, function()
     item.hammer_active = true
   end)
 
   -- Handle stakes.
   item:set_pushed_stake(false)
-  sol.timer.start(map, 200, function()
+  sol.timer.start(map, 400, function()
     if item:has_pushed_stake() then
-      sol.audio.play_sound("items/hammer/heavy_block_hit")  -- Successfully pushed a stake.
+      sol.audio.play_sound("items/hammer/hammer_stake")  -- Successfully pushed a stake.
     else
       sol.audio.play_sound("items/hammer/hit")  -- No stake was pushed.
     end
@@ -111,8 +111,8 @@ function item:is_hammer_active()
   return item.hammer_active
 end
 
--- Initialize the metatable of appropriate entities to work with the hammer.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the hammer.
+local function initialise_meta()
 
   -- Add Lua hammer properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -156,4 +156,4 @@ local function initialize_meta()
 
 end
 
-initialize_meta()
+initialise_meta()

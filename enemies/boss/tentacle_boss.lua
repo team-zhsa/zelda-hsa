@@ -31,15 +31,15 @@ local stunned_duration = 1000
 local going_speed = 128
 require("enemies/lib/common_actions").learn(enemy)
 
--- Event called when the enemy is initialized.
+-- Event called when the enemy is initialised.
 function enemy:on_created()
 
-  -- Initialize the properties of your enemy here,
+  -- initialise the properties of your enemy here,
   -- like the sprite, the life and the damage.
 	enemy:set_size(32, 32)
 	enemy:set_origin(16, 29)
   enemy:set_life(35)
-  enemy:set_damage(2)
+  enemy:set_damage(3)
 	enemy:create_sprite("enemies/boss/tentacle_boss")
 	enemy:set_hurt_style("boss")
 	phase = 1

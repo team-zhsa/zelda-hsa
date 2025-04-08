@@ -11,5 +11,7 @@ local map = ...
 local game = map:get_game()
 local audio_manager = require("scripts/audio_manager")
 
-function map:on_started()
-end
+map:register_event("on_started", function()
+	map:set_digging_allowed(true
+)  game:show_map_name("parapa_valley")
+end)

@@ -8,14 +8,14 @@ return function(sign)
   -- Include scripts
   require("scripts/multi_events")
   local audio_manager = require("scripts/audio_manager")
-  sign:set_weight(1)
+  sign:set_weight(0)
 
 
   -- Sign destruction
   function sign:destroy()
     
     sign:set_weight(-1)
-    audio_manager:play_sound("misc/rock_shatter")
+    audio_manager:play_sound("environment/sign_slice")
     local sprite = sign:get_sprite()
     function sprite:on_animation_finished(animation)
       if animation == "sliced" then
@@ -44,9 +44,9 @@ return function(sign)
   sign:register_event("on_interaction", function()
      
     if sign:get_sprite():get_animation() == "stopped" then
-      local dialog_id = sign:get_property("dialog_id")
-      if dialog_id ~= nil then
-        game:start_dialog(dialog_id)
+      local dialogue_id = sign:get_property("dialogue_id")
+      if dialogue_id ~= nil then
+        game:start_dialog(dialogue_id)
       end
     end
 

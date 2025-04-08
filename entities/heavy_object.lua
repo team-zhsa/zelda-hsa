@@ -12,10 +12,7 @@ end
 
 function entity:on_interaction()
 
-  local lift = 2
-  if entity:get_sprite():get_animation() == "entities/statue_dungeon_6" then
-    lift = 2
-  end
+  local lift = tonumber(entity:get_property("lift")) or 2
   if game:get_ability("lift") < lift then
     return
   end
@@ -47,7 +44,7 @@ function entity:on_interaction()
       sprite = entity:get_sprite():get_animation_set(),
       weight = 1,
       ground = "wall",
-      destruction_sound = "stone",
+      destruction_sound = "environment/rock_shatter",
       damage_on_enemies = 4
     }
     hero:set_shield_sprite_id(shieldid)

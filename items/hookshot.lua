@@ -50,7 +50,7 @@ local item = ...
 local config = require("items/hookshot_config.lua")
 
 function item:on_created()
-
+  self:set_sound_when_brandished("items/get_major_item")
   item:set_savegame_variable("possession_hookshot")
   item:set_assignable(true)
 end
@@ -102,6 +102,7 @@ function item:on_using()
     entity:set_can_traverse_ground("shallow_water", true)
     entity:set_can_traverse_ground("hole", true)
     entity:set_can_traverse_ground("lava", true)
+    entity:set_can_traverse_ground("grass", true)
     entity:set_can_traverse_ground("prickles", true)
     -- TODO traversable types and grounds should be configurable
     entity:set_can_traverse_ground("low_wall", true)  -- Needed for inner stairs.
@@ -145,10 +146,10 @@ function item:on_using()
 
     local movement = sol.movement.create("straight")
     local angle = direction * math.pi / 2
-    movement:set_speed(config.speed)
+    movement:set_speed(config.speed * item:get_variant())
     movement:set_angle(angle)
     movement:set_smooth(false)
-    movement:set_max_distance(config.distance)
+    movement:set_max_distance(config.distance* item:get_variant())
     movement:start(hookshot)
 
     function movement:on_obstacle_reached()
@@ -242,7 +243,7 @@ function item:on_using()
     -- with the hookshot (flying), and we stop that jump movement.
     hero:start_jumping(0, 100, true)
     hero:get_movement():stop()
-    hero:set_animation("hookshot_intro")
+    hero:set_animation("hookshot_tracting")
     hero:set_direction(direction)
 
     local past_positions = {}
@@ -369,7 +370,7 @@ function item:on_using()
       if not hooked and
           not going_back and
           sprite ~= nil and
-          sprite:get_animation_set() == "entities/Switches/solid_switch" then
+          sprite:get_animation_set() == "entities/switches/solid_switch" then
 
         if switch:is_activated() then
           sol.audio.play_sound("sword_tapping")
@@ -459,8 +460,8 @@ function item:on_using()
   item:set_finished()
 end
 
--- Initialize the metatable of appropriate entities to work with the hookshot.
-local function initialize_meta()
+-- initialise the metatable of appropriate entities to work with the hookshot.
+local function initialise_meta()
 
   -- Add Lua hookhost properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
@@ -521,4 +522,4 @@ local function initialize_meta()
   end
 end
 
-initialize_meta()
+initialise_meta()

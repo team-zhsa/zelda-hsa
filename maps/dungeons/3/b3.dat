@@ -1,0 +1,582 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 1920,
+  height = 1440,
+  min_layer = -1,
+  max_layer = 2,
+  world = "dungeon_3",
+  floor = -3,
+  tileset = "absolute_dungeon_06",
+  music = "dungeons/03_fire",
+}
+
+tile{
+  layer = -1,
+  x = 1280,
+  y = 240,
+  width = 640,
+  height = 240,
+  pattern = "lava",
+}
+
+tile{
+  layer = -1,
+  x = 1728,
+  y = 240,
+  width = 24,
+  height = 80,
+  pattern = "wall_low.4-1",
+}
+
+tile{
+  layer = -1,
+  x = 1744,
+  y = 312,
+  width = 176,
+  height = 24,
+  pattern = "wall_low.1-1",
+}
+
+tile{
+  layer = -1,
+  x = 1728,
+  y = 312,
+  width = 24,
+  height = 24,
+  pattern = "wall_low.corner_reverse.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1712,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "wall_hole.corner_reverse.2-1",
+}
+
+tile{
+  layer = -1,
+  x = 1728,
+  y = 336,
+  width = 192,
+  height = 16,
+  pattern = "wall_hole.1-1",
+}
+
+tile{
+  layer = -1,
+  x = 1712,
+  y = 240,
+  width = 16,
+  height = 96,
+  pattern = "wall_hole.4-1",
+}
+
+separator{
+  layer = -1,
+  x = 1272,
+  y = 0,
+  width = 16,
+  height = 1440,
+}
+
+separator{
+  layer = -1,
+  x = 0,
+  y = 472,
+  width = 1920,
+  height = 16,
+}
+
+separator{
+  layer = -1,
+  x = 0,
+  y = 232,
+  width = 1920,
+  height = 16,
+}
+
+tile{
+  layer = 0,
+  x = 1768,
+  y = 288,
+  width = 160,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+tile{
+  layer = 0,
+  x = 1848,
+  y = 296,
+  width = 16,
+  height = 16,
+  pattern = "door_stairs.spiral_up.1",
+}
+
+tile{
+  layer = 0,
+  x = 1840,
+  y = 296,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.1-1",
+}
+
+tile{
+  layer = 0,
+  x = 1864,
+  y = 296,
+  width = 8,
+  height = 16,
+  pattern = "door.1.support.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1752,
+  y = 232,
+  width = 24,
+  height = 64,
+  pattern = "wall.4-5",
+}
+
+tile{
+  layer = 0,
+  x = 1752,
+  y = 288,
+  width = 24,
+  height = 24,
+  pattern = "wall.corner_reverse.2-5",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 352,
+  width = 384,
+  height = 32,
+  pattern = "floor_grid",
+}
+
+tile{
+  layer = 0,
+  x = 1840,
+  y = 312,
+  width = 32,
+  height = 72,
+  pattern = "floor_grid",
+}
+
+tile{
+  layer = 0,
+  x = 1872,
+  y = 312,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1872,
+  y = 344,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1832,
+  y = 312,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1832,
+  y = 344,
+  width = 8,
+  height = 8,
+  pattern = "barrier.border-1",
+}
+
+tile{
+  layer = 0,
+  x = 1832,
+  y = 320,
+  width = 8,
+  height = 24,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1872,
+  y = 320,
+  width = 8,
+  height = 24,
+  pattern = "barrier.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1536,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1568,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1600,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1632,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1664,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1696,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1728,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1760,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "floor_pot",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 320,
+  width = 96,
+  height = 96,
+  pattern = "hole_parallax.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 1336,
+  y = 320,
+  width = 80,
+  height = 8,
+  pattern = "hole.1",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 328,
+  width = 8,
+  height = 80,
+  pattern = "hole.3",
+}
+
+tile{
+  layer = 0,
+  x = 1416,
+  y = 328,
+  width = 8,
+  height = 80,
+  pattern = "hole.4",
+}
+
+tile{
+  layer = 0,
+  x = 1336,
+  y = 408,
+  width = 80,
+  height = 8,
+  pattern = "hole.2",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 320,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.1",
+}
+
+tile{
+  layer = 0,
+  x = 1416,
+  y = 320,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.2",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 408,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.3",
+}
+
+tile{
+  layer = 0,
+  x = 1416,
+  y = 408,
+  width = 8,
+  height = 8,
+  pattern = "hole.corner.4",
+}
+
+tile{
+  layer = 0,
+  x = 1448,
+  y = 352,
+  width = 8,
+  height = 32,
+  pattern = "hole.4.jump",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "arrow.4",
+}
+
+tile{
+  layer = 0,
+  x = 1456,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "arrow.4",
+}
+
+destructible{
+  layer = 0,
+  x = 1544,
+  y = 365,
+  treasure_name = "arrow",
+  treasure_variant = 3,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1576,
+  y = 381,
+  treasure_name = "arrow",
+  treasure_variant = 3,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1608,
+  y = 365,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1640,
+  y = 381,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1672,
+  y = 365,
+  treasure_name = "magic_flask",
+  treasure_variant = 2,
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1704,
+  y = 381,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1736,
+  y = 365,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destructible{
+  layer = 0,
+  x = 1768,
+  y = 381,
+  treasure_name = "heart",
+  sprite = "entities/destructibles/vase",
+  destruction_sound = "environment/pot_shatter",
+  can_be_cut = true,
+}
+
+destination{
+  name = "from_b2",
+  layer = 0,
+  x = 1856,
+  y = 309,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1848,
+  y = 296,
+  width = 16,
+  height = 16,
+  destination_map = "dungeons/3/b2",
+  destination = "from_b3",
+}
+
+stairs{
+  layer = 0,
+  x = 1848,
+  y = 296,
+  direction = 1,
+  subtype = 0,
+}
+
+sensor{
+  name = "dungeon_room_11",
+  layer = 0,
+  x = 1856,
+  y = 309,
+  width = 16,
+  height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 1328,
+  y = 320,
+  width = 96,
+  height = 96,
+  destination_map = "dungeons/3/b4",
+  destination = "from_b3",
+}
+
+jumper{
+  layer = 0,
+  x = 1448,
+  y = 352,
+  width = 8,
+  height = 32,
+  direction = 4,
+  jump_length = 56,
+}
+
+tile{
+  layer = 1,
+  x = 1840,
+  y = 288,
+  width = 32,
+  height = 8,
+  pattern = "door_cache.1-5",
+}
+
+tile{
+  layer = 1,
+  x = 1840,
+  y = 288,
+  width = 32,
+  height = 8,
+  pattern = "door_top.stairs.1-2",
+}
+
+tile{
+  layer = 1,
+  x = 1848,
+  y = 288,
+  width = 16,
+  height = 8,
+  pattern = "door_top.stairs_up.1-1",
+}
+
+tile{
+  layer = 2,
+  x = 1776,
+  y = 240,
+  width = 144,
+  height = 48,
+  pattern = "ceiling.1",
+}
+

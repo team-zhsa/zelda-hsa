@@ -13,14 +13,23 @@ local properties = {
 }
 behavior:create(enemy, properties)
 
-enemy:set_attack_arrow("protected")
-enemy:set_attack_hookshot("protected")
-enemy:set_attack_consequence("fire", "custom")
-enemy:set_attack_consequence("boomerang", "protected")
-enemy:set_attack_consequence("thrown_item", "protected")
+  enemy:set_hero_weapons_reactions({
+  	arrow = "protected",
+  	boomerang = "protected",
+  	explosion = 2,
+  	sword = 1,
+  	thrown_item = "protected",
+  	fire = "custom",
+  	jump_on = "ignored",
+  	hammer = "protected",
+  	hookshot = "protected",
+  	magic_powder = "custom",
+  	shield = "protected",
+  	thrust = "protected"
+  })
 
 function enemy:on_custom_attack_received(attack, sprite)
   if attack == "fire" then enemy:get_sprite():set_animation("fire") end
-  enemy:hurt(3)
-  enemy:remove_life(3)
+  enemy:hurt(6)
+  enemy:remove_life(6)
 end

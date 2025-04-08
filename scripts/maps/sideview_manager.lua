@@ -3,7 +3,7 @@ Sideview manager
 
 This script implements gravity and interaction of the hero with ladders, which are used in sideview maps.
 
-To initialize, just require it in a game setup script, like features.lua, 
+To initialise, just require it in a game setup script, like features.lua, 
    then call map:set_sidewiew(true) in the on_started event of each map you want to be in sideview mode.
    
 If you need to make things jump like the hero when he uses the feather, then simply do <your_entity>.vspeed=<some_negative_number>, then the gravity will do the rest.

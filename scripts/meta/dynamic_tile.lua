@@ -1,4 +1,4 @@
--- Initialize dynamic tile behavior specific to this quest.
+-- initialise dynamic tile behavior specific to this quest.
 
 local dynamic_tile_meta = sol.main.get_metatable("dynamic_tile")
 

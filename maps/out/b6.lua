@@ -9,13 +9,9 @@
 
 local map = ...
 local game = map:get_game()
-local audio_manager = require("scripts/audio_manager")
 
-function map:on_started()
-	audio_manager:play_music_fade(map, "outside/overworld")
-end
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
-
-end
+-- Event called at initialization time, as soon as this map becomes is loaded.
+map:register_event("on_started", function()
+	map:set_digging_allowed(true)
+  game:show_map_name("parapa_valley")
+end)

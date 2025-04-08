@@ -21,21 +21,35 @@ local is_boss_active = false
 map:register_event("on_started", function()
 	map:set_doors_open("door_group_boss", true)
 	separator_manager:manage_map(map)
-	--treasure_manager:appear_heart_container_if_boss_dead(map)
-	treasure_manager:disappear_pickable(map, "heart_container")
-  -- You can initialize the movement and sprites of various
+	if heart_container ~= nil then
+		treasure_manager:disappear_pickable(map, "heart_container")
+	end
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end)
 
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
 
+-- Boss events
+if boss ~= nil then
+	function sensor_boss:on_activated()
+		map:close_doors("door_group_boss")
+		sol.audio.play_music("boss/boss_albw")
+		sensor_boss:remove()
+	end
 
--- BOSS
-function sensor_boss:on_activated()
-	 if is_boss_active == false then
-    is_boss_active = true
-    enemy_manager:launch_boss_if_not_dead(map)
-  end
+	function boss:on_dead()
+		treasure_manager:appear_pickable(map, "heart_container")
+		map:open_doors("door_group_boss")
+	end
 end
 
+if pendant ~= nil then
+	function map:on_obtained_treasure(item, variant, savegame_variable)
+  	if item:get_name() == "pendant_1" then
+      enemy_manager:start_completing_sequence(map)
+      game:set_step_done("dungeon_1_completed")
+    end
+	end
+end

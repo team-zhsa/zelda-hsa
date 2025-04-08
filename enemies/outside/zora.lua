@@ -21,7 +21,7 @@ local waiting_minimum_duration = 2000
 local waiting_maximum_duration = 4000
 local appearing_duration = 1000
 local throwing_duration = 600
-local before_desappearing_delay = 1000
+local before_disappearing_delay = 1000
 
 -- Make the enemy appear.
 function enemy:appear()
@@ -39,11 +39,11 @@ function enemy:appear()
     sol.timer.start(enemy, throwing_duration, function()
       local fireball = enemy:create_enemy({
         name = (enemy:get_name() or enemy:get_breed()) .. "_fireball",
-        breed = "projectiles/beam_particle"
+        breed = "projectiles/fireball"
       })
       sprite:set_animation("firing")
-      sol.audio.play_sound("boss_fireball")
-      sol.timer.start(enemy, before_desappearing_delay, function()
+      sol.audio.play_sound("enemies/zora")
+      sol.timer.start(enemy, before_disappearing_delay, function()
         sprite:set_animation("disappearing", function()
           enemy:restart()
         end)

@@ -1,0 +1,36 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 480,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "Full Hyrule",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 320,
+  height = 208,
+  pattern = "162",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 208,
+  width = 320,
+  height = 272,
+  pattern = "169",
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 152,
+  y = 413,
+  direction = 1,
+}
+

@@ -19,17 +19,32 @@ local flying_speed = 120
 local flying_height = 24
 local triggering_distance = 60
 
--- Set the sprite direction 0 or 2 depending on the given angle.
+-- Set the sprite direction to 0 if the given angle in the left half circle, to 2 in the right half circle.
+-- Keep the same direction if the angle is in the slight dead zone between both half circles.
 local function set_sprite_direction2(angle)
 
   angle = angle % circle
-  sprite:set_direction(angle > quarter and angle < 3.0 * quarter and 2 or 0)
+  if angle > quarter + 0.1 and angle < 3.0 * quarter - 0.1 then
+    sprite:set_direction(2)
+  elseif angle < quarter - 0.1 or angle > 3.0 * quarter + 0.1 then
+    sprite:set_direction(0)
+  end
+end
+
+-- Return the angle from the enemy sprite to given entity.
+local function get_angle_from_sprite(sprite, entity)
+
+  local x, y, _ = enemy:get_position()
+  local sprite_x, sprite_y = sprite:get_xy()
+  local entity_x, entity_y, _ = entity:get_position()
+
+  return math.atan2(y - entity_y + sprite_y, entity_x - x - sprite_x)
 end
 
 -- Set given angle to movement and correct direction to the enemy sprite.
 local function set_hero_target_angle(movement)
 
-  local angle = enemy:get_angle_from_sprite(sprite, hero)
+  local angle = get_angle_from_sprite(sprite, hero)
   movement:set_angle(angle)
   set_sprite_direction2(angle)
 end
@@ -95,7 +110,7 @@ end
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
 
-  enemy:set_life(2)
+  enemy:set_life(1)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
   enemy:start_shadow()
@@ -103,8 +118,6 @@ end)
 
 -- Restart settings.
 enemy:register_event("on_restarted", function(enemy)
-
-  enemy:set_invincible()
 
   -- States.
   sprite:set_xy(0, 0)

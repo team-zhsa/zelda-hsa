@@ -9,3 +9,9 @@
 
 local map = ...
 local game = map:get_game()
+
+-- Event called at initialization time, as soon as this map becomes is loaded.
+map:register_event("on_started", function()
+	game:show_map_name("gerudo_desert")
+	map:set_digging_allowed(true)
+end)

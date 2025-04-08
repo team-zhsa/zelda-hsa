@@ -9,16 +9,47 @@
 
 local map = ...
 local game = map:get_game()
-
+local audio_manager = require("scripts/audio_manager")
 -- Event called at initialization time, as soon as this map is loaded.
-function map:on_started()
+map:register_event("on_started", function()
+	game:show_map_name("ruins")
+	map:set_digging_allowed(true)
 
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
-end
+end)
 
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.
-function map:on_opening_transition_finished()
+sensor_cutscene:register_event("on_activated", function()
+	if game:is_step_last("priest_met") then
+    map:set_cinematic_mode(true, options)
+    hero:freeze()
+    hero:set_direction(1)
+    sol.audio.play_music("cutscenes/kaepora_gaebora")
+    local owl_movement_to_position = sol.movement.create("target")
+    owl_movement_to_position:set_target(owl_4_position)
+    owl_movement_to_position:set_ignore_obstacles(true)
+    owl_movement_to_position:set_ignore_suspend(true)
+    owl_movement_to_position:set_speed(60)
+    owl_movement_to_position:start(owl_4, function()
+      owl_dialog()
+    end)
+  end
+end)
 
+function owl_dialog()
+  game:start_dialog("maps.out.north_field.kaepora_gaebora_ruins", function(answer)
+    if answer == 1 then
+      owl_dialog()
+    elseif answer == 2 then
+      game:set_step_done("dungeon_1_started")
+      local owl_movement_leave = sol.movement.create("target")
+      owl_movement_leave:set_target(1328, 328)
+      owl_movement_leave:set_ignore_obstacles(true)
+      owl_movement_leave:set_ignore_suspend(true)
+      owl_movement_leave:set_speed(60)
+      owl_movement_leave:start(owl_4, function()
+        map:set_cinematic_mode(false, options)
+        hero:unfreeze()
+        audio_manager:play_music_fade(map, map:get_music())
+      end)
+    end
+  end)
 end

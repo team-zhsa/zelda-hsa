@@ -7,25 +7,137 @@
 require("scripts/multi_events")
 local initial_game = require("scripts/initial_game")
 local game_manager = {}
-local destructible_meta = sol.main.get_metatable("destructible")
-local boundaries = sol.main.get_metatable("sensor")
 local tone_manager = require("scripts/maps/daytime_manager")
 local condition_manager = require("scripts/hero_condition")
-time_flow = 300
+local map_name = require("scripts/hud/map_name")
+--local field_music = require("scripts/maps/hyrule_field")
+local effect_manager = require('scripts/maps/effect_manager')
+local gb = require('scripts/maps/gb_effect')
+local fsa = require('scripts/maps/fsa_effect')
+time_flow = 500
 
 -- Creates a game ready to be played.
 function game_manager:create(file)
-	
+	product_key = math.random(1000, 9999)
   -- Create the game (but do not start it).
-  local exists = sol.game.exists(file)
-  local game = sol.game.load(file)
-  if not exists then
-    -- This is a new savegame file.
-    initial_game:initialize_new_savegame(game)
+    local exists = sol.game.exists(file)
+    local game = sol.game.load(file)
+    if not exists then
+      -- This is a new savegame file.
+      initial_game:initialise_new_savegame(game)
+    end
+    
+    local version_check_menu = {}
+    game:register_event("on_started", function()
+      
+		tone = tone_manager:create(game)
+		condition_manager:initialise(game)
+		map_name:initialise(game)
+    effect_manager:set_effect(game, fsa)
+    game:set_value("mode", "fsa")
+		game:set_world_rain_mode("outside_world", nil)
+		game:set_world_snow_mode("outside_world", nil)
+		game:set_time_flow(time_flow)
+    print("Main quest step start:"..game:get_value("main_quest_step"))
+		sol.menu.start(game, version_check_menu, true)
+
+    local ceiling_drop_manager = require("scripts/maps/ceiling_drop_manager")
+    for _, entity_type in pairs({"hero", "pickable", "block"}) do
+      ceiling_drop_manager:create(entity_type)
+    end
+
+    -- Check if the savefile is earlier than May 1st 2024
+    if not (game:get_value("time_saved") >= 1714514400) == true then
+      game:check_variables()
+    end
+	end)
+  
+	game:register_event("on_finished", function()
+    print("Main quest step finish:"..game:get_value("main_quest_step"))
+    
+	end)
+  
+	game:register_event("on_map_changed", function()
+		tone:on_map_changed()
+	end)
+  
+  game:register_event("on_world_changed", function()
+    local map = game:get_map()
+    if not game.teleport_in_progress then -- play custom transition at game startup
+      game:set_suspended(true)
+      local opening_transition = require("scripts/gfx_effects/radial_fade_out")
+      opening_transition.start_effect(map:get_camera():get_surface(), game, "out", nil, function()
+        game:set_suspended(false)
+        if map.do_after_transition then
+          map.do_after_transition()
+        end
+      end)
+    end
+  end)
+    
+  function game:check_variables()
+    game:assign_variables("dungeon_2_b2_24_pool_full", true, "dungeon_2_water_level", "high")
+    game:assign_variables("dungeon_2_b2_24_pool_full",false, "dungeon_2_water_level",  "low")
+    game:assign_variables("possession_tunic", 1, "possession_tunic_green", 1)
+    game:assign_variables("possession_tunic", 2, "possession_tunic_blue",1 )
+    game:assign_variables("possession_tunic", 3, "possession_tunic_red", 1)
+    game:assign_variables("possession_tunic", 4, "possession_tunic_time", 1)
+    game:convert_variables("treasure_d1","dungeon_1_treasure")
+    game:convert_variables("dungeon_2_yellow_key","dungeon_2_silver_key")
+    game:convert_variables("dungeon_3_yellow_key","dungeon_3_silver_key")
+    game:convert_variables("dungeon_10_yellow_key","dungeon_10_silver_key")
+    game:convert_variables("possession_golden_leaf_counter","possession_golden_leaf_counter")
+    game:convert_variables("possession_goron_amber_counter","possession_goron_amber")
+    game:convert_variables("amount_goron_amber_counter","amount_goron_amber")
+    game:convert_variables("possession_monster_claw_counter","possession_monster_claw")
+    game:convert_variables("amount_monster_claw_counter","amount_monster_claw")
+    game:convert_variables("possession_monster_horn_counter","possession_monster_horn")
+    game:convert_variables("amount_monster_horn_counter","amount_monster_horn")
+    game:convert_variables("possession_monster_gut_counter","possession_monster_gut")
+    game:convert_variables("amount_monster_gut_counter","amount_monster_gut")
+    game:convert_variables("possession_monster_tail_counter","possession_monster_tail")
+    game:convert_variables("amount_monster_tail_counter","amount_monster_tail")
+    game:convert_variables("possession_photo_counter","possession_photo_counter")
+    game:convert_variables("amount_photo_counter","amount_photo_counter")
+    game:convert_variables("possession_seashell_counter","possession_seashell_counter")
+    game:convert_variables("amount_seashell_counter","amount_seashell_counter")
+    game:convert_variables("possession_slim_key","possession_slim_key")
+    game:convert_variables("possession_tail_key","possession_tail_key")
+    game:convert_variables("possession_butter","possession_butter")
+    game:convert_variables("possession_green_tunic","possession_tunic_green")
+    game:convert_variables("possession_blue_tunic","possession_tunic_blue")
+    game:convert_variables("possession_red_tunic","possession_tunic_red")
+    game:convert_variables("possession_hero_shield","possession_shield_hero")
+    game:convert_variables("possession_hylia_shield","possession_shield_hylia")
+    game:convert_variables("possession_mirror_shield","possession_shield_mirror")
+    game:convert_variables("possession_time_tunic","possession_tunic_time")
+    game:convert_variables("dungeon_5_1f_20_chest_smal_key","dungeon_5_1f_20_chest_small_key")
+    game:convert_variables("dungeons_1_final_door","dungeons_1_final_door")
+    game:convert_variables("dungeon_1_door_small_key","dungeon_1_0f_door_28_33")
+    game:convert_variables("door_d1_23_n1","dungeon_1_0f_door_18_23")
+    game:convert_variables("d9_2f_b4_lynel","d9_2f_b4_lynel")
+    game:convert_variables("d9_2f_b4_sm","d9_2f_b4_sm")
+  end
+  
+  function game:convert_variables(old_variable, new_variable)
+    if game:get_value(old_variable) ~= nil then
+      game:set_value(new_variable, game:get_value(old_variable))
+      print("Setting the variable "..new_variable)
+      game:set_value(old_variable, nil)
+      print("Clearing the variable " .. old_variable)
+    end
+  end
+
+  function game:assign_variables(old_variable, new_variable, old_value, new_value)
+    if game:get_value(old_variable) == old_value then
+      game:set_value(new_variable, new_value)
+      print("Setting the variable "..new_variable)
+      game:set_value(old_variable, nil)
+      print("Clearing the variable " .. old_variable)
+    end
   end
 
   function game:get_player_name()
-
     local name = self:get_value("player_name")
     local hero_is_thief = game:get_value("hero_is_thief")
     if hero_is_thief then
@@ -63,39 +175,7 @@ function game_manager:create(file)
     game.magic_decreasing = magic_decreasing
   end
 
-	local alpha_warn = sol.surface.create("hud/version.png")
-
-	game:register_event("on_started", function()
-		tone = tone_manager:create(game)
-		condition_manager:initialize(game)
-	end)
-
-	game:register_event("on_map_changed", function()
-		tone:on_map_changed()
-	end)
-
   return game
 end
-
-
-  -- Show a dialog when the player cannot lift them.
-  local destructible_meta = sol.main.get_metatable("destructible")
-  -- destructible_meta represents the shared behavior of all destructible objects.
-
-
-  function destructible_meta:on_looked()
-
-    -- Here, self is the destructible object.
-    local game = self:get_game()
-    local sprite = self:get_sprite()
-    if self:get_can_be_cut() == false then
-      if not game:has_ability("lift") then
-        game:start_dialog("_cannot_lift_too_heavy");
-      else
-        game:start_dialog("_cannot_lift_still_too_heavy");
-      end
-    end
-  end
-
 
 return game_manager

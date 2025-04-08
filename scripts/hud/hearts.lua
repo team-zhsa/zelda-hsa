@@ -61,7 +61,7 @@ function hearts_builder:new(game, config)
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed + 1
         if game:is_started()
             and hearts.nb_current_hearts_displayed % 4 == 0 then
-          sol.audio.play_sound("objects/heart/heart")
+          sol.audio.play_sound("items/get_heart")
         end
       end
     end
@@ -98,11 +98,25 @@ function hearts_builder:new(game, config)
     end)
   end
 
+  function hearts:set_dst_position(x, y)
+    hearts.dst_x = x
+    hearts.dst_y = y
+  end
+
+  function hearts:get_surface()
+    return hearts.surface
+  end
+
+  -- Returns if the icon is transparent or not.
+  function hearts:is_transparent()
+    return hearts.hud_icon:set_transparent()
+  end
+
   function hearts:repeat_danger_sound()
 
     if game:get_life() <= game:get_max_life() / 4 then
 
-      sol.audio.play_sound("danger")
+      sol.audio.play_sound("menus/danger")
       hearts.danger_sound_timer = sol.timer.start(hearts, 750, function()
         hearts:repeat_danger_sound()
       end)
@@ -155,7 +169,15 @@ function hearts_builder:new(game, config)
     end
 
     -- Everything was already drawn on self.surface.
+    hearts.surface:set_opacity(hearts.transparent and 128 or 255)
     hearts.surface:draw(dst_surface, x, y)
+  end
+
+  -- Sets if the element is semi-transparent or not.
+  function hearts:set_transparent(transparent)
+    if transparent ~= hearts.transparent then
+      hearts.transparent = transparent
+    end
   end
 
   hearts:rebuild_surface()

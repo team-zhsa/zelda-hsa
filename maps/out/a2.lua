@@ -13,10 +13,13 @@ local x, y, layer = hero:get_position()
 
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
-
-  -- You can initialize the movement and sprites of various
-  -- map entities here.
+	game:show_map_name("hylia_lake")
+	if game:is_step_done("priest_met") then
+		for npc in map:get_entities("npc_soldier_") do
+			npc:set_enabled(false)
+		end
+	end
+  -- You can initialise the movement and sprites of various
+  
+	map:set_digging_allowed(true)
 end
-
--- Event called after the opening transition effect of the map,
--- that is, when the player takes control of the hero.

@@ -12,85 +12,84 @@
 
 local hud_config = {
 
-  -- Hearts meter.
-  {
-    menu_script = "scripts/hud/hearts",
-    x = 6,
-    y = 6,
-  },
+	-- Hearts meter.
+	{
+		menu_script = "scripts/hud/hearts",
+		x = 6,
+		y = 10,
+	},
 
-  -- Magic bar.
-  {
-    menu_script = "scripts/hud/magic_bar",
-    x = 6,
-    y = 24,
-  },
+	-- Magic bar.
+	{
+		menu_script = "scripts/hud/magic_bar",
+		x = 6,
+		y = 20,
+	},
 
+	-- Rupee counter.
+	{
+		menu_script = "scripts/hud/rupees",
+		x = 6,
+		y = -22,
+	},
 
-  -- Rupee counter.
-  {
-    menu_script = "scripts/hud/rupees",
-    x = 8,
-    y = -20,
-  },
+	-- Clock icon.
+	{
+		menu_script = "scripts/hud/clock",
+		x = -30,
+		y = -10,
+	},
 
-  -- Small key counter.
-  {
-    menu_script = "scripts/hud/small_keys",
-    x = -36,
-    y = -18,
-  },
+	-- Small key counter.
+	{
+		menu_script = "scripts/hud/small_keys",
+		x = 6,
+		y = -32,
+	},
 
-  -- Floor view.
-  {
-    menu_script = "scripts/hud/floor",
-    x = 5,
-    y = 70,
-  },
+	-- Floor view.
+	{
+		menu_script = "scripts/hud/floor",
+		x = 6,
+		y = 70,
+	},
 
-  -- Pause icon.
-  {
-    menu_script = "scripts/hud/pause_icon",
-    x = -170,
-    y = 6,
-  },
+	-- Pause icon.
+	{
+		menu_script = "scripts/hud/pause_icon",
+		x = -126,
+		y = 10,
+	},
 
-  -- Item icon for slot 1.
-  {
-    menu_script = "scripts/hud/item_icon",
-    x = -95,
-    y = 6,
-    slot = 1,  -- Item slot (1 or 2).
-  },
+	-- Attack icon.
+	{
+		menu_script = "scripts/hud/attack_icon",
+		x = -54,
+		y = 22,
+	},
 
-  -- Item icon for slot 2.
-  {
-    menu_script = "scripts/hud/item_icon",
-    x = -45,
-    y = 6,
-    slot = 2,  -- Item slot (1 or 2).
-  },
+	-- Action icon.
+	{
+		menu_script = "scripts/hud/action_icon",
+		x = -102,
+		y = 22,
+	},
 
-  -- Attack icon.
-  {
-    menu_script = "scripts/hud/attack_icon",
-    x = -94,
-    y = 20,
-  },
+	-- Item icon for slot 1.
+	{
+		menu_script = "scripts/hud/item_icon",
+		x = -78,
+		y = 10,
+		slot = 1,  -- Item slot (1 or 2).
+	},
 
-  -- Action icon.
-  {
-    menu_script = "scripts/hud/action_icon",
-    x = -145,
-    y = 20,
-  },
-
-  -- Clock icon.
-  {
-    menu_script = "scripts/hud/clock",
-    x = -32,
-    y = -64,
-  },
+	-- Item icon for slot 2.
+	{
+		menu_script = "scripts/hud/item_icon",
+		x = -30,
+		y = 10,
+		slot = 2,  -- Item slot (1 or 2).
+	},
 
 }
 

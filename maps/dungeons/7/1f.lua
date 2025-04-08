@@ -1,4 +1,4 @@
--- Lua script of map dungeons/7/1f.
+-- Lua script of map dungeons/7/3f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -13,7 +13,7 @@ local game = map:get_game()
 -- Event called at initialization time, as soon as this map is loaded.
 function map:on_started()
 
-  -- You can initialize the movement and sprites of various
+  -- You can initialise the movement and sprites of various
   -- map entities here.
 end
 

@@ -12,7 +12,7 @@ entity:set_can_traverse("custom_entity", false)
 
 entity:register_event("on_interaction", function()
     
-  local dialog=entity:get_property("dialog")
+  local dialog=entity:get_property("dialogue_id")
   if dialog and sol.language.get_dialog(dialog) then --Safety measures: do not trigger a non-existing dialog 
     game:start_dialog(dialog)
   end

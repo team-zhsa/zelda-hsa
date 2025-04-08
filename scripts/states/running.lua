@@ -14,6 +14,9 @@ local map_tools=require("scripts/maps/map_tools")
 state:set_can_use_item(false)
 state:set_can_use_item("feather", true)
 state:set_can_traverse("crystal_block", false)
+state:set_can_use_jumper(true)
+state:set_jumper_delay(0)
+
 local directions = {
   {
     key="right",
@@ -37,10 +40,8 @@ local directions = {
 function hero_meta.run(hero)
   local current_state=hero:get_state()
   if current_state~="custom" or hero:get_state_object():get_description()~="running" then
-    if not hero:get_direction()==0 or hero:get_direction()==2 then
       --In sideviews, only allow to run sideways
       hero:start_state(state)
-    end
   end
 end
 
@@ -55,8 +56,8 @@ end
 -- Create a new sword sprite to not trigger the "sword" attack on collision with enemies.
 local function create_running_sword(entity, direction)
 
-  local animation_set = entity:get_sprite("sword_override"):get_animation_set()
-  local sprite = entity:create_sprite(animation_set, "running_sword")
+  local animation_set = entity:get_sprite("sword"):get_animation_set()
+  local sprite=entity:get_sprite("running_sword") or entity:create_sprite(animation_set, "running_sword")
   sprite:set_animation("sword_loading_walking")
   sprite:set_direction(direction)
 
@@ -70,10 +71,12 @@ function state:on_started()
   local map = entity:get_map()
   local hero = map:get_hero()
   local sprite=entity:get_sprite("tunic")
+	local running_speed = 256
+	local ladder_running_speed = 16
   entity:get_sprite("trail"):set_animation("running") 
   sprite:set_animation("walking")
 
-  -- Initialize state abilities that may have changed.
+  -- initialise state abilities that may have changed.
   state:set_can_be_hurt(true)
   state:set_can_control_direction(true)
   state:set_can_control_movement(true)
@@ -82,11 +85,11 @@ function state:on_started()
   entity.run_sound_timer = sol.timer.start(state, 200, function()
       if not entity.is_jumping or not entity:is_jumping() then
         if entity:get_ground_below() == "shallow_water" then
-          audio_manager:play_sound("hero/wade1")
+          audio_manager:play_sound("hero/walk_on_water")
         elseif entity:get_ground_below()=="grass" then
-          audio_manager:play_sound("hero/walk on grass")
+          audio_manager:play_sound("hero/walk_on_grass")
         else
-          audio_manager:play_sound("hero/run")
+          audio_manager:play_sound("hero/running")
         end
         return true
       end
@@ -97,6 +100,7 @@ function state:on_started()
       entity.running_timer=nil --TODO check if this isn't useless 
       entity.running=true
       local sword_sprite
+
       state:set_can_be_hurt(false)
       state:set_can_control_direction(false)
       state:set_can_control_movement(false)
@@ -106,11 +110,12 @@ function state:on_started()
       end
 
       local running_movement=sol.movement.create("straight")
-      running_movement:set_speed(196)
-      running_movement:set_angle(sprite:get_direction()*math.pi/2)
+	      running_movement:set_angle(sprite:get_direction()*math.pi/2)
+				running_movement:set_speed(running_speed)
 
       -- Check if there is a collision with any sprite of the hero and an enemy, then hurt it.
       function running_movement:on_position_changed()
+
         for enemy in map:get_entities_by_type("enemy") do
           if hero:overlaps(enemy, "sprite") and enemy:get_life() > 0 and not enemy:is_immobilized() then
             local reaction = enemy:get_thrust_reaction()
@@ -132,25 +137,7 @@ function state:on_started()
         local ox, oy=hero:get_position()
         local map_w, map_h=map:get_size()
         local direction=entity:get_direction()
-        if x==0 and direction==2 then
-          print "GO LEFT"
-          hero:set_position(ox-1,oy)
-          --game:simulate_command_pressed("left")
-        elseif x+w==map_w and direction==0 then
-          print "GO RIGHT"
-         hero:set_position(ox+1,oy)
---          game:simulate_command_pressed("right")
-        elseif y==0 and direction==1 then
-          print "GO UP"
-          hero:set_position(ox,oy-1)
-          --game:simulate_command_pressed("up")
-        elseif y+h==map_h and direction==3 then
-          hero:set_position(ox,oy+1)
-          print "GO DOWN"
-          --game:simulate_command_pressed("down")
-        else
           entity:bonk()
-        end
       end
       --Run !
       running_movement:start(entity)
@@ -190,7 +177,7 @@ function state:on_command_released(command)
   local game = state:get_game()
   for i=1, 2 do
     local item =game:get_item_assigned(""..i)
-    if command == "item_"..i and item and item:get_name()=="pegasus_shoes" then
+    if command == "item_"..i and item and item:get_name()=="pegasus_boots" then
       local entity=state:get_entity()
       if entity.running_timer~=nil then
         entity:unfreeze()

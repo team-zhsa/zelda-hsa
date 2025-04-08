@@ -1,4 +1,4 @@
--- Initialize NPC behavior specific to this quest.
+-- Initialise NPC behavior specific to this quest.
 -- Variables
 local npc_meta = sol.main.get_metatable("npc")
 
@@ -11,8 +11,53 @@ npc_meta:register_event("on_created", function(npc)
   if model ~= nil then
     require("scripts/npc/" .. model)(npc)
   end
-  
+
+  local sprite = npc:get_sprite()
+  if sprite ~= nil then
+    local sprite_id = sprite:get_animation_set()
+    if sprite_id == "npc/specific/animals/chicken_white" then
+      npc:random_walk()
+    elseif sprite_id == "npc/specific/animals/doggy_brown" then
+      npc:random_walk()
+    end
+  end
+
+  local name = npc:get_name()
+  if name == nil then
+    return
+  end
+
+  if name:match("^random_walk_npc") then
+    npc:random_walk()
+  end
+
 end)
+
+npc_meta:register_event("on_interaction", function(npc)
+
+  local sprite = npc:get_sprite()
+  if sprite ~= nil then
+    local sprite_id = sprite:get_animation_set()
+    if sprite_id == "npc/specific/animals/chicken_white" then
+      sol.audio.play_sound("alttp/cucco")
+    elseif sprite_id == "npc/specific/animals/doggy_static"
+      or sprite_id == "npc/specific/animals/doggy_brown" then
+      sol.audio.play_sound("oot/dog")
+    end
+  end
+end)
+
+-- Makes the NPC randomly walk with the given optional speed.
+function npc_meta:random_walk(speed)
+
+  local movement = sol.movement.create("random_path")
+
+  if speed ~= nil then
+    movement:set_speed(speed)
+  end
+
+  movement:start(self)
+end
 
 -- Make signs hooks for the hookshot.
 function npc_meta:is_hookable()

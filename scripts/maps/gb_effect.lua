@@ -67,7 +67,7 @@ end
 
 function gbeff:clean(map)
   enabled = false
-  --sol.video.set_shader(previous_shader)
+  sol.video.set_shader(previous_shader)
 end
 
 return gbeff

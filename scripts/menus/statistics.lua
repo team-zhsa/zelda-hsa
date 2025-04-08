@@ -15,17 +15,17 @@ local treasure_savegame_variables = {
   -- Inventory items: ifeather, lamp, pegasus shoelaces, lens of truth,
   -- hookshot, boomerang, fire rod, pains au chocolat counter, croissants counter,
   -- cat food, mail counter, perfume counter, banana counter, VIP card, flippers,
-  -- Library award.
+  -- Library award.  TODO update the tresure list from the Excel file (#46).
   "possession_feather",
   "possession_lamp",
-  "possession_pegasus_shoes",
+  "possession_pegasus_boots",
   "possession_bow",
   "possession_hookshot",
   "possession_boomerang",  -- Boomerang.
   "possession_fire_rod",
   "possession_wind_rod",
   "possession_ice_rod",
-  "possession_bombs_counter",
+  "possession_bomb_counter",
   "possession_somaria_cane",
   "possession_hammer",
   "possession_flippers",
@@ -33,7 +33,7 @@ local treasure_savegame_variables = {
   -- Equipment: sword 4, shield 2.
   { "possession_sword", 4 },
   "dungeon_2_1f_shield_chest",
-  -- Dungeons: map, compass, big key, boss key, small keys, big chest, other treasures.
+  -- Dungeons: map, compass, big key, boss key, small keys, big chest, other treasures. TODO copy all tresures from the Excel file. (#46)
   "dungeon_1_map",
   "dungeon_1_compass",
   "dungeon_1_big_key",
@@ -66,7 +66,7 @@ local treasure_savegame_variables = {
   "dungeon_2_7f_nw_key_chest",
   "dungeon_2_8f_c_key_chest",
   "dungeon_2_boss_key_chest",
-  -- Other treasure chests.
+  -- Other treasure chests. TODO copy all tresures from the Excel file.
   "forest_invisible_rupee_chest",
   "forest_50_rupee_chest",
   "swamp_rupee_chest",
@@ -188,7 +188,7 @@ function statistics_manager:new(game)
   local function get_quest_version()
     -- Hack because there is no sol.main.get_quest_version() yet.
     -- TODO with Solarus 1.6, use sol.main.get_quest_version() instead.
-    local quest_version = sol.video.get_window_title():match("The Legend of Zelda : Hyrule's Adventure Pre-Alpha ([0-9.]+)")
+    local quest_version = sol.video.get_window_title():match("The Legend of Zelda : Hyrule's Adventure Alpha ([0-9.]+)")
     return quest_version
   end
 

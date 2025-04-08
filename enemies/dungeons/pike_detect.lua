@@ -68,7 +68,7 @@ function enemy:go(direction4)
     local x, y = self:get_position()
     local angle = direction4 * math.pi / 2
     local m = sol.movement.create("straight")
-    m:set_speed(192)
+    m:set_speed(128)
     m:set_angle(angle)
     m:set_max_distance(104)
     m:set_smooth(false)
@@ -104,7 +104,7 @@ function enemy:go_back()
     m:set_target(initial_xy.x, initial_xy.y)
     m:set_smooth(false)
     m:start(self)
-    sol.audio.play_sound("sword_tapping")
+    sol.audio.play_sound("hero/sword_tapping")
 
   elseif state == "going_back" then
 

@@ -14,7 +14,7 @@ local lib={}
 
 local max_step=7          --Number of drawing steps (the corresponding pixel width is 2^step)
 local step_duration=150  --Step duration in seconds
-
+local audio_manager=require "scripts/audio_manager"
 function lib.start_effect(surface, game, mode, sfx, callback)
 
   local shader=sol.shader.create("pixellisation")

@@ -26,16 +26,20 @@ local shaking_duration = 1000
 local jumping_duration = 700
 local jumping_height = 16
 local jumping_speed = 128
+local triggering_distance = 128
 
 -- Pounce to the hero.
 function enemy:start_pouncing()
-
   sprite:set_animation("jumping")
-  enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+  if enemy:get_distance(hero) < triggering_distance then
+    sol.audio.play_sound("enemies/tektite_jump")
+    enemy:start_jumping(jumping_duration, jumping_height, enemy:get_angle(hero), jumping_speed, function()
+      enemy:restart()
+    end)
+  else
     enemy:restart()
-  end)
+  end
 end
-
 -- Wait a few time then shake and pounce.
 function enemy:wait()
 
@@ -60,18 +64,18 @@ end)
 enemy:register_event("on_restarted", function(enemy)
 
   enemy:set_hero_weapons_reactions({
-  	arrow = 2,
-  	boomerang = 2,
-  	explosion = 2,
-  	sword = 1,
-  	thrown_item = 2,
-  	fire = 2,
+  	arrow = 4,
+  	boomerang = "immobilized",
+  	explosion = 4,
+  	sword = 2,
+  	thrown_item = 4,
+  	fire = 4,
   	jump_on = "ignored",
   	hammer = 2,
-  	hookshot = 2,
+  	hookshot = "immobilized",
   	magic_powder = 2,
   	shield = "protected",
-  	thrust = 2
+  	thrust = 4
   })
 
   -- States.

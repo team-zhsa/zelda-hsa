@@ -9,7 +9,7 @@
 require("scripts/multi_events")
 
 -- Measure the time played.
-local function initialize_chronometer_features(game)
+local function initialise_chronometer_features(game)
 
   -- Returns the game time in seconds.
   function game:get_time_played()
@@ -40,6 +40,6 @@ end
 
 -- Set up chronometer features on any game that starts.
 local game_meta = sol.main.get_metatable("game")
-game_meta:register_event("on_started", initialize_chronometer_features)
+game_meta:register_event("on_started", initialise_chronometer_features)
 
 return true

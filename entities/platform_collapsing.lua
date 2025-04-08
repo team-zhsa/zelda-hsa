@@ -40,7 +40,7 @@ entity:register_event("on_position_changed", function(entity, x,y,layer)
     end
     old_x, old_y=entity:get_bounding_box()
   end)
--- Event called when the custom entity is initialized.
+-- Event called when the custom entity is initialised.
 entity:register_event("on_created", function()
 
     sprite = entity:get_sprite()

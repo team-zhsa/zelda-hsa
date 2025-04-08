@@ -12,9 +12,9 @@ local effects = {
 function tone_manager:create(game)
   local tone_menu = {}
   
-  local mr, mg, mb, ma = nil
-  local cr, cg, cb = nil  -- Create the current tone
-  local tr, tg, tb = nil  -- Create the target tone
+  local mr, mg, mb, ma = nil, nil, nil, nil -- Create the map tone
+  local cr, cg, cb = nil, nil, nil  -- Create the current tone
+  local tr, tg, tb = nil, nil, nil  -- Create the target tone
   local minute = 0
   local d = 0
   
@@ -23,11 +23,11 @@ function tone_manager:create(game)
 	effects.torch_hero:set_blend_mode("blend")
   
   -- Shadow surface -> Draw tones
-  shadow = sol.surface.create(320, 240)
+  shadow = sol.surface.create(384, 240)
   shadow:set_blend_mode("multiply")
 	
 	-- Light surface -> Draw light effects
-	light = sol.surface.create(320, 240)
+	light = sol.surface.create(384, 240)
   light:set_blend_mode("add")
   
   function game:restart_tone_system()
@@ -52,9 +52,13 @@ function tone_manager:create(game)
   end
   
   function game:set_time(hour)  
-    if (hour >= 7 and hour < 17) then
+    if (hour <= 6 and hour < 7) then
+      game:set_value("time_of_day", "dawn")
+    elseif (hour <= 7 and hour < 17) then
       game:set_value("time_of_day", "day")
-    elseif hour >= 20 or hour < 5 then
+    elseif (hour >= 17 and hour < 19) then
+      game:set_value("time_of_day", "sunset")
+    elseif (hour >= 19 and hour < 6) then
       game:set_value("time_of_day", "night")
     end
     
@@ -88,8 +92,8 @@ function tone_manager:create(game)
     -- Sleeping during day takes player to 2000 (8pm) and sleeping at night takes us to 0800 (8am).
     if game:get_value("time_of_day") == "day" then
       game:set_value("time_of_day", "night")
-      game:set_value("hour_of_day", 20)
-      minute = 0
+      game:set_value("hour_of_day", 19)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(true)
       end
@@ -98,8 +102,8 @@ function tone_manager:create(game)
       end
     else
       game:set_value("time_of_day", "day")
-      game:set_value("hour_of_day", 8)
-      minute = 0
+      game:set_value("hour_of_day", 7)
+      minute = 59
       for entity in game:get_map():get_entities("night_") do
         entity:set_enabled(false)
       end
@@ -128,7 +132,7 @@ function tone_manager:create(game)
       game:on_tone_system_saving()
       
       local previous_time_system = time_system
-      time_system = game:is_in_outside_world() or (map:get_id() == "20" or map:get_id() == "21" or map:get_id() == "22")
+      time_system = game:is_in_outside_world()
       if time_system ~= previous_time_system then mr = nil end
       
       cr, cg, cb = game:get_value("cr"), game:get_value("cg"), game:get_value("cb")
@@ -225,7 +229,7 @@ function tone_manager:create(game)
   	  self:set_new_tone(180, 140, 120)
   	elseif hour == 18 and minute >= 30 then
   	  game:set_value("time_of_day", "twilight")
-  	  self:set_new_tone(150, 110, 100)
+  	  self:set_new_tone(150, 110, 120)
   	elseif hour == 19 and minute < 30 then
       game:set_value("time_of_day","night")
   	  self:set_new_tone(110, 105, 190)	 
@@ -247,7 +251,7 @@ function tone_manager:create(game)
   	  self:set_new_tone(150, 150, 255)
   	end
     
-    d = 1800
+    d = 400 -- Transition time between each colour
   end
   
   function tone_menu:on_finished()
@@ -280,6 +284,8 @@ function tone_manager:create(game)
         shadow:fill_color{cr, cg, cb, 255}
       elseif not time_system and mr == nil then
         -- The map has undefined tone.
+        shadow = sol.surface.create(320, 240)
+        shadow:set_blend_mode("multiply")
         shadow:fill_color{255, 255, 255, 255}
       end
       
@@ -337,7 +343,7 @@ function tone_manager:create(game)
           end
         end
         if game:has_item("lamp") and game:get_magic() > 0 then
-          if game:get_time_of_day() == "night" or map:get_id() == "202" then
+          if game:get_time_of_day() == "night" then
             effects.torch_hero:draw(light, x - cam_x - 64, y - cam_y - 68)
           end
       	end

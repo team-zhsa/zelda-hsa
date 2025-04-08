@@ -10,7 +10,7 @@ local going_hero = false
 local freeze_timer = nil
 
 function enemy:on_created()
-  self:set_life(14); self:set_damage(6)
+  self:set_life(30); self:set_damage(16)
   self:create_sprite("enemies/chu_big_ice")
   self:set_size(48, 48); self:set_origin(24, 43)
   self:set_hurt_style("boss")
@@ -94,7 +94,7 @@ function enemy:on_custom_attack_received(attack, sprite)
     freeze_timer = sol.timer.start(self, 4000, function() freeze_timer = nil end)
   elseif attack == "explosion" then
     freezing = false
-    sol.audio.play_sound("ice_shatter")
+    sol.audio.play_sound("environment/ice_shatter")
     self:get_sprite():set_animation("walking")
     self:set_attack_consequence("sword", 1)
     self:check_hero()

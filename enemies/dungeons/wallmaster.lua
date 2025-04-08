@@ -1,34 +1,39 @@
+-- Falling hand that teleports the hero back to the entrance.
 local enemy = ...
 local map = enemy:get_map()
-local hero = map:get_hero()
+
 local sprite
 local shadow
 local grabbed_hero
 
--- Wallmaster: Falling hand that teleports the hero back to the entrance.
-
 function enemy:on_created()
-  self:set_life(10); self:set_damage(0)
-  sprite = self:create_sprite("enemies/dungeons/wallmaster")
-  self:set_size(16, 16); self:set_origin(8, 13)
-  self:set_obstacle_behavior("flying")
-  self:set_can_hurt_hero_running(true)
-  self:set_layer_independent_collisions(true)
-  self:set_optimization_distance(0)
+
+  enemy:set_life(7)
+  enemy:set_damage(0)
+  enemy:set_size(16, 16)
+  enemy:set_origin(8, 13)
+  enemy:set_obstacle_behavior("flying")
+  enemy:set_can_hurt_hero_running(true)
+  enemy:set_layer_independent_collisions(true)
+  enemy:set_optimization_distance(0)
+  --enemy:set_invincible()
+  sprite = enemy:create_sprite("enemies/" .. enemy:get_breed())
   sprite:set_animation("sleeping")
-  self:set_pushed_back_when_hurt(false)
-  self:set_attack_arrow(5)
-  self:set_attack_consequence("boomerang", "protected")
 end
 
 function enemy:on_restarted()
+
   if shadow ~= nil then
     shadow:remove()
   end
+  shadow = nil
   grabbed_hero = false
   sprite:set_animation("sleeping")
 
-  sol.timer.start(enemy, math.random(10)*2000, function()
+  sol.timer.start(enemy, 5000, function()
+
+    local hero = map:get_hero()
+
     if not enemy:is_in_same_region(hero) then
       return true
     end
@@ -38,7 +43,7 @@ function enemy:on_restarted()
     local distance = 240  -- Make sure that we start outside the visible screen.
     sprite:set_xy(0, -distance)  -- Display the sprite with an offset.
 
-    -- Move the sprite toward the hero.
+    -- Move the sprite towards the hero.
     local movement = sol.movement.create("straight")
     movement:set_speed(192)
     movement:set_angle(3 * math.pi / 2)
@@ -59,20 +64,20 @@ function enemy:on_restarted()
     shadow = map:create_custom_entity({
       x = hero_x,
       y = hero_y,
-      width = 32,
-      height = 8,
       layer = hero_layer,
+      width = 16,
+      height = 16,
       direction = 0,
     })
-    local shadow_sprite = shadow:create_sprite("enemies/wallmaster")
+    local shadow_sprite = shadow:create_sprite("enemies/" .. enemy:get_breed())
     shadow_sprite:set_animation("shadow")
 
     sol.timer.start(enemy, 500, function()
-      sol.audio.play_sound("jump")
+      sol.audio.play_sound("hero/jump")
     end)
 
     -- Go back.
-    sol.timer.start(enemy, 3000, function()
+    sol.timer.start(enemy, 8000, function()
       if not grabbed_hero then
         movement:set_angle(math.pi / 2)
         movement:set_speed(192)
@@ -87,6 +92,7 @@ end
 
 -- Function called when overlapping the hero.
 function enemy:on_attacking_hero(hero, enemy_sprite)
+
   local movement = sprite:get_movement()
   if movement ~= nil and movement:get_speed() ~= 0 then
     -- Currently moving: don't grab the hero now.
@@ -109,6 +115,7 @@ function enemy:on_attacking_hero(hero, enemy_sprite)
   end
 
   -- Teleport the hero.
+  -- TODO if teleporting to the same map, the map is not reset, take care of separator regions
   grabbed_hero = true
   hero:freeze()
   hero:set_invincible(true, 500)
@@ -127,8 +134,22 @@ function enemy:on_attacking_hero(hero, enemy_sprite)
   end)
 end
 
-function enemy:on_removed()
+function enemy:on_hurt()
   if shadow ~= nil then
     shadow:remove()
   end
+  shadow = nil
+end
+
+local previous_on_removed = enemy.on_removed
+function enemy:on_removed()
+
+  if previous_on_removed then
+    previous_on_removed(enemy)
+  end
+
+  if shadow ~= nil then
+    shadow:remove()
+  end
+  shadow = nil
 end

@@ -5,7 +5,7 @@ local sprite
 -- Snap Dragon.
 
 function enemy:on_created()
-  self:set_life(3); self:set_damage(4)
+  self:set_life(6); self:set_damage(12)
   sprite = self:create_sprite("enemies/outside/snap_dragon")
   self:set_size(16, 16); self:set_origin(8, 13)
   self:set_hurt_style("monster")

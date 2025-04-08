@@ -9,11 +9,11 @@ function companion_manager:init_map(map)
   local sprite = nil
   local model = nil
   local x,y, layer = hero:get_position()
-  if step >= 10 and step < 12 then
+  --if step >= 10 and step < 12 then
     companion = true
-    sprite = "npc/bowwow"
-    model = "bowwow_follow"
-  end
+    sprite = "npc/zelda"
+    model = "follower"
+  --end
   if companion then
     map:create_custom_entity({
         name = "companion",

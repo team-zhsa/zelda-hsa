@@ -70,14 +70,14 @@ function enemy:remove_particle(sprite)
     break
   end
   if not has_sprite then
-    enemy:start_death()
+    enemy:remove()
   end
 end
 
 -- Create additional impact effect on hurt hero.
 enemy:register_event("on_attacking_hero", function(enemy, hero, enemy_sprite)
 
-  hero:start_hurt(2)
+  hero:start_hurt(8)
   enemy:start_impact_effect(enemy_sprite)
 end)
 
@@ -86,6 +86,7 @@ enemy:register_event("on_created", function(enemy)
   enemy:set_life(1)
   enemy:set_size(4, 4)
   enemy:set_origin(2, 2)
+  enemy:set_minimum_shield_needed(2)
 end)
 
 -- Restart settings.
