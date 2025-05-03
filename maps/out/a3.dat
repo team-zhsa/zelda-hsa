@@ -25152,6 +25152,24 @@ tile{
   pattern = "2203",
 }
 
+tile{
+  layer = 0,
+  x = 1088,
+  y = 584,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
+tile{
+  layer = 0,
+  x = 1096,
+  y = 496,
+  width = 16,
+  height = 16,
+  pattern = "1041",
+}
+
 teletransporter{
   layer = 0,
   x = 440,
@@ -26876,15 +26894,6 @@ destination{
   direction = 3,
 }
 
-door{
-  name = "door_mapper",
-  layer = 0,
-  x = 200,
-  y = 920,
-  direction = 3,
-  sprite = "entities/doors/Outside/door_light01",
-}
-
 npc{
   layer = 0,
   x = 88,
@@ -27536,6 +27545,17 @@ stairs{
   y = 184,
   direction = 3,
   subtype = 3,
+}
+
+dynamic_tile{
+  name = "door_mapper",
+  layer = 0,
+  x = 200,
+  y = 920,
+  width = 16,
+  height = 16,
+  pattern = "6020",
+  tileset = "outside_buildings",
 }
 
 tile{
