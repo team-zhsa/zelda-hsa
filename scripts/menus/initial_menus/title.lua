@@ -16,13 +16,13 @@ local mode = sol.shader.create("flashing_rgb") -- or sol.shader.create("flashing
 local surface = sol.surface.create(320, 256)
 
 -- Solarus title sprite.
-local title = sol.surface.create("menus/title_text.png")
+local title = sol.surface.create("menus/title_screen/title_text.png")
 
 -- Solarus background sprite.
-local background = sol.surface.create("menus/title.png")
+local background = sol.surface.create("menus/title_screen/background_hyrule.png")
 
 -- Sword sprite.
-local sword = sol.sprite.create("menus/title_sword")
+local sword = sol.sprite.create("menus/title_screen/title_sword")
 sword:set_animation("sword")
 
 local t = sol.sprite.create("menus/title_triforce")
@@ -56,7 +56,7 @@ local function rebuild_surface()
   
   -- Draw the title (after step 1).
   if animation_step >= 1 then
-    title:draw(surface, 84, 55)
+    title:draw(surface, 80, 80)
   end
 end
 
@@ -85,11 +85,11 @@ end
 -- Animation step 1.
 function title_screen:step1()
   white:draw(surface, 0, 0)
-	surface:set_shader(mode)
+	--surface:set_shader(mode)
 	sol.timer.start(title_screen, 1000, function()
 		surface:set_shader(sol.shader.create("default"))
 	end)
-  title:draw(surface, 52, 0)
+  title:draw(surface)
   animation_step = 1
   sword:stop_movement()
   sword:set_xy(55, 42)
