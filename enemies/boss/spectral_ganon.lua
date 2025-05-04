@@ -198,7 +198,7 @@ enemy:register_event("set_vulnerable", function(enemy)
   	arrow = "protected",
   	boomerang = "protected",
   	explosion = "protected",
-  	sword = on_sword_attack_received,
+  	sword = 1, --on_sword_attack_received,
   	thrown_item = "protected",
   	fire = "protected",
   	jump_on = "ignored",
@@ -206,7 +206,7 @@ enemy:register_event("set_vulnerable", function(enemy)
   	hookshot = "protected",
   	magic_powder = "ignored",
   	shield = "protected",
-  	thrust = function() hurt(2) end
+  	--thrust = function() hurt(2) end
   })
 end)
 

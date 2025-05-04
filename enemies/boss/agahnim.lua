@@ -29,7 +29,7 @@ local function shoot_fireball()
 
   local sprite = enemy:get_sprite()
   sprite:set_animation("preparing_red_fireball")
-	sol.audio.play_sound("boss_charge")
+	sol.audio.play_sound("enemies/boss_charge")
   sol.timer.start(enemy, 300 , function()
     sprite:set_animation("walking")
 
@@ -37,7 +37,7 @@ local function shoot_fireball()
       breed = "boss/fireball_red_big",
       name = projectile_prefix,
     })
-    sol.audio.play_sound("boss_fireball")
+    sol.audio.play_sound("enemies/boss_fireball")
   end)
 
   return true  -- Repeat the timer until hurt.
@@ -87,7 +87,7 @@ local function shoot_rabbit_beam()
       breed = "dungeons/tentacle",
       name = projectile_prefix,
     })
-    sol.audio.play_sound("boss_fireball")
+    sol.audio.play_sound("enemies/boss_fireball")
   end)
 
   should_shoot_rabbit_beam = false
