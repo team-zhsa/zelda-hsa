@@ -15958,9 +15958,18 @@ npc{
   x = 584,
   y = 325,
   direction = 3,
+    properties = {
+    {
+      key = "model",
+      value = "sign",
+    },
+        {
+      key = "dialogue_id",
+      value = "maps.out.north_field.sign_2",
+    },
+  },
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.north_field.sign_2",
 }
 
 teletransporter{
@@ -15994,11 +16003,14 @@ npc{
       key = "model",
       value = "sign",
     },
+            {
+      key = "dialogue_id",
+      value = "maps.out.north_field.sign_1",
+    },
   },
   direction = 3,
   subtype = 0,
   sprite = "entities/sign",
-  behavior = "dialog#maps.out.north_field.sign_1",
 }
 
 teletransporter{

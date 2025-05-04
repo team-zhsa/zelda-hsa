@@ -2,20 +2,28 @@ animation{
   name = "normal",
   src_image = "hud/magic_bar.png",
   directions = {
-    { x = 0, y = 0, frame_width = 44, frame_height = 10, origin_x = 0, origin_y = 0 },
-    { x = 44, y = 0, frame_width = 82, frame_height = 10, origin_x = 0, origin_y = 0 },
-    { x = 126, y = 0, frame_width = 120, frame_height = 10, origin_x = 0, origin_y = 0 },
-    { x = 0, y = 48, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5 },
+    { x = 0, y = 0, frame_width = 41, frame_height = 6, origin_x = 0, origin_y = 0 },
+    { x = 40, y = 0, frame_width = 81, frame_height = 6, origin_x = 0, origin_y = 0 },
+    { x = 120, y = 0, frame_width = 121, frame_height = 6, origin_x = 0, origin_y = 0 },
+  },
+}
+animation{
+  name = "background",
+  src_image = "hud/magic_bar.png",
+  directions = {
+    { x = 0, y = 30, frame_width = 41, frame_height = 6, origin_x = 0, origin_y = 0 },
+    { x = 40, y = 30, frame_width = 81, frame_height = 6, origin_x = 0, origin_y = 0 },
+    { x = 120, y = 30, frame_width = 121, frame_height = 6, origin_x = 0, origin_y = 0 },
   },
 }
 animation{
   name = "decreasing",
   src_image = "hud/magic_bar.png",
-  frame_delay = 200,
+  frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 44, frame_height = 10, origin_x = 0, origin_y = 0, num_frames = 3, num_columns = 1 },
-    { x = 44, y = 0, frame_width = 82, frame_height = 10, origin_x = 0, origin_y = 0, num_frames = 3, num_columns = 1 },
-    { x = 126, y = 0, frame_width = 120, frame_height = 10, origin_x = 0, origin_y = 0, num_frames = 3, num_columns = 1 },
+    { x = 0, y = 0, frame_width = 41, frame_height = 6, origin_x = 0, origin_y = 0, num_frames = 4, num_columns = 1 },
+    { x = 40, y = 0, frame_width = 81, frame_height = 6, origin_x = 0, origin_y = 0, num_frames = 4, num_columns = 1 },
+    { x = 120, y = 0, frame_width = 121, frame_height = 6, origin_x = 0, origin_y = 0, num_frames = 4, num_columns = 1 },
   },
 }

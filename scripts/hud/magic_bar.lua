@@ -10,9 +10,10 @@ function magic_bar_builder:new(game, config)
 
   magic_bar.dst_x = config.x
   magic_bar.dst_y = config.y
-  magic_bar.surface = sol.surface.create(45, 10)
+  magic_bar.surface = sol.surface.create(121, 10)
   magic_bar.magic_bar_img = sol.surface.create("hud/magic_bar.png")
   magic_bar.container_sprite = sol.sprite.create("hud/magic_bar")
+  magic_bar.background_sprite = sol.sprite.create("hud/magic_bar")
   magic_bar.magic_displayed = game:get_magic()
   magic_bar.max_magic_displayed = 0
 
@@ -23,6 +24,8 @@ function magic_bar_builder:new(game, config)
     local max_magic = game:get_max_magic()
     local magic = game:get_magic()
 
+    magic_bar.background_sprite:set_animation("background")
+
     -- Maximum magic.
     if max_magic ~= magic_bar.max_magic_displayed then
       if magic_bar.magic_displayed > max_magic then
@@ -30,7 +33,8 @@ function magic_bar_builder:new(game, config)
       end
       magic_bar.max_magic_displayed = max_magic
       if max_magic > 0 then
-        magic_bar.container_sprite:set_direction(max_magic / 43 - 1)
+        magic_bar.container_sprite:set_direction((max_magic + 1) / 40 - 1)
+        magic_bar.background_sprite:set_direction((max_magic + 1) / 40 - 1)
       end
     end
 
@@ -87,6 +91,7 @@ function magic_bar_builder:new(game, config)
   end
 
   function magic_bar:on_draw(dst_surface)
+    magic_bar.surface:clear()
     -- Is there a magic bar to show?
     if magic_bar.max_magic_displayed > 0 then
       local x, y = magic_bar.dst_x, magic_bar.dst_y
@@ -99,22 +104,16 @@ function magic_bar_builder:new(game, config)
         y = height + y
       end
 
-      -- Max magic.
-      magic_bar.container_sprite:draw(magic_bar.surface, 0, y0)
+      -- Background sprite (on bottom to see current magic)
+      magic_bar.background_sprite:draw(magic_bar.surface, 0, y0)
 
       -- Current magic (with cross-multiplication to adapt the value to the smaller bar)
-      magic_bar.magic_bar_img:draw_region(0, 40, math.floor(magic_bar.magic_displayed * 114 / 150) + 1, 4,
-      magic_bar.surface, 0 + 3, 0 + 3)
+      magic_bar.magic_bar_img:draw_region(1, 25, math.floor(magic_bar.magic_displayed), 4,
+      magic_bar.surface, 0 + 1, 0 + 1)
 
-      -- Fix left and right borders.
-      if magic_bar.magic_displayed == 0 then
-        -- Fix darker pixels on the right border.
-        --dst_surface:fill_color({40, 40, 40}, x + 1, y + 1, 1, 4)
-      end
-      if magic_bar.magic_displayed == magic_bar.max_magic_displayed then
-        -- Fix darker pixels on the right border.
-        magic_bar.magic_bar_img:draw_region(135, 25, 1, 0, magic_bar.surface, 0, 0)
-      end
+      -- Container sprite (on top to see scale)
+      magic_bar.container_sprite:draw(magic_bar.surface, 0, y0)
+
       magic_bar.surface:set_opacity(magic_bar.transparent and 128 or 255)
       magic_bar.surface:draw(dst_surface, x, y)
     end

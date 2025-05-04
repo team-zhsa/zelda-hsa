@@ -19858,7 +19858,17 @@ npc{
   y = 509,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.parapa.sign_2",
+  sprite = "entities/sign",
+  properties = {
+    {
+      key = "dialogue_id",
+      value = "maps.out.parapa.sign_2",
+    },
+    {
+      key = "model",
+      value = "sign",
+    },
+  },
 }
 
 destructible{

@@ -15,6 +15,9 @@ function floor_view_builder:new(game, config)
 
   function floor_view:on_map_changed(map)
 
+  	if self.timer ~= nil then self.timer:stop() end
+  	if self.timer0 ~= nil then self.timer0:stop() end
+
     local need_rebuild = false
     local floor = map:get_floor()
     if floor == floor_view.floor
@@ -22,13 +25,21 @@ function floor_view_builder:new(game, config)
       -- No floor or unchanged floor.
       floor_view.visible = false
     else
-      -- Show the floor view during 3 seconds.
-      floor_view.visible = true
-      local timer = sol.timer.start(floor_view, 3000, function()
-        floor_view.visible = false
-      end)
-      timer:set_suspended_with_map(false)
+
       need_rebuild = true
+      self.timer = sol.timer.start(self, 500, function()
+        floor_view.surface:fade_in(40)
+        floor_view.visible = true
+      end) 
+      self.timer:set_suspended_with_map(false)
+      
+      self.timer0 = sol.timer.start(self, 3500, function()
+        floor_view.visible = false
+        floor_view.surface:fade_out(40, function()
+        end)
+      end)
+      self.timer0:set_suspended_with_map(false)
+
     end
 
     floor_view.floor = floor

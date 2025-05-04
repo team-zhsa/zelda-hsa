@@ -16,13 +16,15 @@ local mode = sol.shader.create("flashing_rgb") -- or sol.shader.create("flashing
 local surface = sol.surface.create(320, 256)
 
 -- Solarus title sprite.
+
 local title = sol.surface.create("menus/title_screen/title_text.png")
 
 -- Solarus background sprite.
 local background = sol.surface.create("menus/title_screen/background_hyrule.png")
 
 -- Sword sprite.
-local sword = sol.sprite.create("menus/title_screen/title_sword")
+local sword = sol.sprite.create("menus/title_screen/title_sword"
+  
 sword:set_animation("sword")
 
 local t = sol.sprite.create("menus/title_triforce")

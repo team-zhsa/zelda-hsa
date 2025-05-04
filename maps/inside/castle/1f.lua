@@ -116,7 +116,7 @@ function play_intro_dialogue()
 	kid_movement_to_position:set_target(position_kid)
 	kid_movement_to_position:set_speed(128)
 
-	map:set_cinematic_mode(true, options)
+	map:set_cinematic_mode(true, false)
 	hero:freeze()
 
 	-- NPC movement to position

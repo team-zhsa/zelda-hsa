@@ -1,116 +1,87 @@
--- Variable
-local follower = ...
-local game = follower:get_game()
-local map = follower:get_map()
-local sprite = follower:get_sprite()
-local hero = game:get_hero()
-local state = "following"
-local movement
+local entity = ...
+local hero = entity:get_map():get_entity("hero")
 
--- Include scripts
-require("scripts/multi_events")
+-- Platform: entity which moves in either horizontally or
+-- vertically (depending on direction) and carries the hero on it.
 
+local speed = 50
+local time_stopped = 1000
 
-local function follow_hero()
+function entity:on_created()
+  local size_x, size_y = self:get_size()
+--  self:set_size(32, 32)
 
-  movement = sol.movement.create("target")
-  movement:set_speed(100)
-  movement:set_ignore_obstacles(true)
-  movement:start(follower)
-  sprite:set_animation("walking")
-  follower:set_state("following")
+--  self:set_origin(16, 16)
+  self:set_can_traverse("jumper", true)
+  self:set_can_traverse_ground("hole", true)
+  self:set_can_traverse_ground("deep_water", true)
+  self:set_can_traverse_ground("traversable", false)
+  self:set_can_traverse_ground("shallow_water", false)
+  self:set_can_traverse_ground("wall", false)
+  self:set_modified_ground("traversable")
+  self:set_layer_independent_collisions(false)
+
+  local m = sol.movement.create("path")
+  local direction4 = self:get_sprite():get_direction()
+  m:set_path{direction4 * 2}
+  m:set_speed(speed)
+  m:set_loop(true)
+  --m:start(self)
+  
+  self:add_collision_test("touching", function(platform, other)
+    if other:get_type() == "wall" and other:get_type() ~= "jumper" then
+      self:on_obstacle_reached(m)
+    end
+  end)
 
 end
 
-local function stop_walking()
-  
-  if follower:get_state() ~= "following" then
-    return false
-  end
-  follower:stop_movement()
-  movement = nil
-  sprite:set_animation("stopped")
-  follower:set_state("stopped")
-    
+function entity:on_obstacle_reached(movement)
+  --Make the platform turn back.
+  movement:stop()
+  movement = sol.movement.create("path")    
+  local direction4 = self:get_sprite():get_direction()
+  direction4 = (direction4+2)%4
+  movement:set_path{direction4 * 2}
+  movement:set_speed(speed)
+  movement:set_loop(true)
+  sol.timer.start(self, time_stopped, function()
+    --movement:start(self)
+  end)
 end
 
--- Event called when the custom entity is initialised.
-follower:register_event("on_created", function()
-    
-  follower:set_optimization_distance(0)
-  follower:set_drawn_in_y_order(true)
-  follower:set_traversable_by(true)
-  follower:set_position(hero:get_position())
-  follower:get_sprite():set_direction(hero:get_direction())
-  follow_hero()
-
-end)
-
-follower:register_event("on_obstacle_reached", function()
-
-  movement = nil
-  sprite:set_animation("stopped")
-
-end)
-
-follower:register_event("on_movement_finished", function()
-
-  movement = nil
-  sprite:set_animation("stopped")
-
-end)
-
-follower:register_event("on_position_changed", function()
-
-  if follower:get_state() == "following" and follower:is_very_close_to_hero() then
-    stop_walking()
+function entity:on_position_changed()
+  -- Moves the hero if located over the platform. 
+  if not self:is_on_platform(hero) or hero:get_state() == "plunging" then
+    return
   end
-
-end)
-
-follower:register_event("on_movement_changed", function()
-
-  local movement = follower:get_movement()
-  if movement:get_speed() > 0 then
-    sprite:set_direction(movement:get_direction4())
+  local hx, hy, hl = hero:get_position()
+  local direction4 = self:get_sprite():get_direction()
+  local dx, dy = 0, 0 --Variables for the translation.
+  if direction4 == 0 then dx = 1
+  elseif direction4 == 1 then dy = -1
+  elseif direction4 == 2 then dx = -1
+  elseif direction4 == 3 then dy = 1
   end
-
-end)
-
--- Get current follower state
-function follower:get_state()
-
-  return state
-  
+  if not hero:test_obstacles(dx, dy, hl) then hero:set_position(hx + dx, hy + dy, hl) end
 end
 
--- Set current follower state
--- following is default state
-function follower:set_state(new_state)
-
-  if new_state == nil then
-    new_state = "following"
-  end
-  
-  state = new_state
-  
+function entity:on_movement_changed(movement)
+  --Change direction of the sprite when the movement changes.
+  local direction4 = movement:get_direction4()
+  self:get_sprite():set_direction(direction4)
 end
 
--- Check if follower is so closed to hero
-function follower:is_very_close_to_hero()
-
-  local distance = follower:get_distance(hero)
-  return distance < 24
-  
+function entity:is_on_platform(other_entity)
+  --Returns true if other_entity is on the platform. 
+  local ox, oy, ol = other_entity:get_position()
+  local ex, ey, el = self:get_center_position()
+  if ol ~= el then return false end
+  local sx, sy = self:get_size()
+  local fudge_x = 3
+  local fudge_y = 6
+  sx = sx + fudge_x
+  sy = sy + fudge_y
+  if math.abs(ox - ex) < sx/2 and math.abs(oy - ey) < sy/2 then return true end
+  return false
 end
-
--- Launch timer on follower
-sol.timer.start(follower, 50, function()
-
-  if movement == nil and not follower:is_very_close_to_hero() and follower:get_state() == "stopped" then
-    follow_hero()
-  end
-
-  return true
-
-end)

@@ -54,12 +54,12 @@ local hud_config = {
 		y = 70,
 	},
 
-	-- Pause icon.
+	--[[ Pause icon.
 	{
 		menu_script = "scripts/hud/pause_icon",
 		x = -126,
 		y = 10,
-	},
+	}, --]]
 
 	-- Attack icon.
 	{
