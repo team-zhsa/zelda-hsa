@@ -23,8 +23,7 @@ local title = sol.surface.create("menus/title_screen/title_text.png")
 local background = sol.surface.create("menus/title_screen/background_hyrule.png")
 
 -- Sword sprite.
-local sword = sol.sprite.create("menus/title_screen/title_sword"
-  
+local sword = sol.sprite.create("menus/title_screen/title_sword")
 sword:set_animation("sword")
 
 local t = sol.sprite.create("menus/title_triforce")
