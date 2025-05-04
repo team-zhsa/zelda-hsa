@@ -54,7 +54,7 @@ end
 
 -- Initialization.
 enemy:register_event("on_created", function(enemy)
-  enemy:set_life(10)
+  enemy:set_life(1)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
   --enemy:set_fire_reaction_sprite(sprite, reaction)

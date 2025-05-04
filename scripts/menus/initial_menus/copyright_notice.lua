@@ -9,7 +9,7 @@ local language_manager = require("scripts/language_manager")
 
 local copyright_notice = {}
 
-local can_skip_menu = false
+local can_skip_menu = true
 
 -- GPLv3 logo
 local gpl_logo
