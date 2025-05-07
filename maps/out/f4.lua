@@ -204,6 +204,7 @@ for npc in map:get_entities("npc_laundry_") do
 			game:start_dialog("maps.out.hyrule_town.laundry_pool.no_magic_bar")
 		elseif game:is_step_last("agahnim_met") then
 			game:start_dialog("maps.out.hyrule_town.laundry_pool.soldiers")
+		else game:start_dialog("maps.out.hyrule_town.laundry_pool.busy")
 		end
 	end)
 end

@@ -86,8 +86,8 @@ end
 -- Animation step 1.
 function title_screen:step1()
   white:draw(surface, 0, 0)
-	--surface:set_shader(mode)
-	sol.timer.start(title_screen, 1000, function()
+	surface:set_shader(mode)
+	sol.timer.start(title_screen, 500, function()
 		surface:set_shader(sol.shader.create("default"))
 	end)
   title:draw(surface)

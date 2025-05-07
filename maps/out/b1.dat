@@ -69900,6 +69900,15 @@ tile{
   pattern = "1079",
 }
 
+tile{
+  layer = 0,
+  x = 112,
+  y = 784,
+  width = 16,
+  height = 16,
+  pattern = "14000",
+}
+
 jumper{
   layer = 0,
   x = 600,
@@ -69914,9 +69923,9 @@ sensor{
   name = "sensor_activate_boulder_6",
   layer = 0,
   x = 616,
-  y = 685,
+  y = 669,
   width = 80,
-  height = 16,
+  height = 32,
 }
 
 sensor{
@@ -71335,7 +71344,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/spectacle_rock_0f",
+  destination_map = "inside/caves/west_mountains/spectacle_rock_0f",
   destination = "from_outside",
 }
 
@@ -71351,7 +71360,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/spectacle_rock_b1",
+  destination_map = "inside/caves/west_mountains/spectacle_rock_b1",
   destination = "from_outside",
 }
 
@@ -71587,7 +71596,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/to_fire_temple",
+  destination_map = "inside/caves/west_mountains/to_fire_temple",
   destination = "from_outside",
 }
 
@@ -71655,7 +71664,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/to_west_upper_mountains_0f",
+  destination_map = "inside/caves/west_mountains/to_west_upper_mountains_0f",
   destination = "from_outside_1",
 }
 
@@ -71671,7 +71680,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/to_west_upper_mountains_0f",
+  destination_map = "inside/caves/west_mountains/to_west_upper_mountains_0f",
   destination = "from_outside_2",
 }
 
@@ -71687,7 +71696,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/to_west_upper_mountains_b1",
+  destination_map = "inside/caves/west_mountains/to_west_upper_mountains_b1",
   destination = "from_outside",
 }
 
@@ -71772,7 +71781,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/to_west_upper_mountains_1f",
+  destination_map = "inside/caves/west_mountains/to_west_upper_mountains_1f",
   destination = "from_outside",
 }
 
@@ -71806,7 +71815,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/mountains/fairy_cave_1",
+  destination_map = "inside/caves/west_mountains/fairy_cave_1",
   destination = "from_outside",
 }
 
@@ -71815,6 +71824,30 @@ destination{
   layer = 0,
   x = 808,
   y = 613,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 648,
+  y = 648,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/caves/west_mountains/mystic_cave",
+  destination = "from_outside",
+}
+
+destination{
+  name = "from_mystic",
+  layer = 0,
+  x = 656,
+  y = 677,
   direction = 3,
 }
 

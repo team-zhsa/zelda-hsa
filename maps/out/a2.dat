@@ -18591,15 +18591,6 @@ teletransporter{
   destination = "_side",
 }
 
-enemy{
-  layer = 0,
-  x = 176,
-  y = 45,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
 destination{
   name = "from_dungeon",
   layer = 0,
@@ -18628,78 +18619,7 @@ npc{
 }
 
 enemy{
-  layer = 0,
-  x = 56,
-  y = 245,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 24,
-  y = 1181,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 72,
-  y = 1069,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 304,
-  y = 1213,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 376,
-  y = 1109,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 600,
-  y = 1389,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 1200,
-  y = 1141,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 1168,
-  y = 1021,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
+  name = "enemy_before_agahnim_1",
   layer = 0,
   x = 1152,
   y = 565,
@@ -18712,15 +18632,6 @@ enemy{
   layer = 0,
   x = 1176,
   y = 685,
-  direction = 0,
-  breed = "outside/blob_green",
-  treasure_name = "random_west",
-}
-
-enemy{
-  layer = 0,
-  x = 1008,
-  y = 37,
   direction = 0,
   breed = "outside/blob_green",
   treasure_name = "random_west",
@@ -20635,6 +20546,186 @@ npc{
   direction = 3,
   subtype = 1,
   sprite = "npc/wise_old_man_green",
+}
+
+enemy{
+  name = "enemy_before_agahnim_2",
+  layer = 0,
+  x = 1080,
+  y = 53,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_3",
+  layer = 0,
+  x = 808,
+  y = 101,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_4",
+  layer = 0,
+  x = 416,
+  y = 29,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_5",
+  layer = 0,
+  x = 80,
+  y = 93,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_6",
+  layer = 0,
+  x = 56,
+  y = 365,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_7",
+  layer = 0,
+  x = 320,
+  y = 909,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_8",
+  layer = 0,
+  x = 48,
+  y = 1093,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_9",
+  layer = 0,
+  x = 648,
+  y = 1357,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_10",
+  layer = 0,
+  x = 352,
+  y = 1141,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_11",
+  layer = 0,
+  x = 320,
+  y = 693,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_12",
+  layer = 0,
+  x = 704,
+  y = 53,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_13",
+  layer = 0,
+  x = 1160,
+  y = 797,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_14",
+  layer = 0,
+  x = 1184,
+  y = 1293,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_15",
+  layer = 0,
+  x = 1072,
+  y = 341,
+  direction = 0,
+  breed = "outside/octorok_red",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_16",
+  layer = 0,
+  x = 336,
+  y = 477,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_17",
+  layer = 0,
+  x = 824,
+  y = 253,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_18",
+  layer = 0,
+  x = 936,
+  y = 1093,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_west",
+}
+
+enemy{
+  name = "enemy_before_agahnim_19",
+  layer = 0,
+  x = 568,
+  y = 725,
+  direction = 0,
+  breed = "outside/zora",
+  treasure_name = "random_west",
 }
 
 tile{

@@ -1,4 +1,4 @@
--- Lua script of map inside/caves/mountains/fairy_cave_1.
+-- Lua script of map inside/caves/west_mountains/to_fire_temple_1f.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

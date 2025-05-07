@@ -1,4 +1,4 @@
--- Lua script of map inside/caves/mountains/goron_town_b1.
+-- Lua script of map inside/caves/west_mountains/fairy_cave_1.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
