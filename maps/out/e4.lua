@@ -12,5 +12,5 @@ local game = map:get_game()
 
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
-  game:show_map_name("north_west_castle")
+  game:show_map_name("around_castle")
 end)

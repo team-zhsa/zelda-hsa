@@ -25302,18 +25302,10 @@ enemy{
 }
 
 enemy{
+  name = "enemy_after_agahnim_1",
   layer = 0,
   x = 408,
   y = 141,
-  direction = 0,
-  breed = "soldiers/soldier_blue",
-  treasure_name = "random_south",
-}
-
-enemy{
-  layer = 0,
-  x = 920,
-  y = 637,
   direction = 0,
   breed = "soldiers/soldier_blue",
   treasure_name = "random_south",
@@ -25328,6 +25320,16 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/b8",
   destination = "_side",
+}
+
+enemy{
+  name = "enemy_after_agahnim_2",
+  layer = 0,
+  x = 224,
+  y = 621,
+  direction = 0,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_south",
 }
 
 tile{

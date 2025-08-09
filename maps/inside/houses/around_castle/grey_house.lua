@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/north_west_castle/treasure_house.
+-- Lua script of map inside/houses/around_castle/grey_house.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

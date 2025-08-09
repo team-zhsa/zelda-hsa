@@ -12,6 +12,6 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
-	game:show_map_name("north_west_castle")
+	game:show_map_name("around_castle")
 	map:set_digging_allowed(true)
 end)
