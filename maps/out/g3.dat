@@ -20949,7 +20949,7 @@ door{
   },
   direction = 3,
   sprite = "entities/doors/outside/cave_door_rock01",
-  savegame_variable = "outside_east_castle_weak_door",
+  savegame_variable = "outside_east_castle_path_weak_door",
   opening_method = "explosion",
 }
 
@@ -21376,6 +21376,196 @@ wall{
   stops_enemies = true,
   stops_blocks = true,
   stops_projectiles = true,
+}
+
+enemy{
+  name = "enemy_before_agahnim_1",
+  layer = 0,
+  x = 360,
+  y = 773,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_2",
+  layer = 0,
+  x = 456,
+  y = 557,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_3",
+  layer = 0,
+  x = 208,
+  y = 141,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_4",
+  layer = 0,
+  x = 80,
+  y = 1061,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_5",
+  layer = 0,
+  x = 816,
+  y = 1389,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_6",
+  layer = 0,
+  x = 1168,
+  y = 1261,
+  direction = 0,
+  breed = "outside/blob_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_7",
+  layer = 0,
+  x = 456,
+  y = 1085,
+  direction = 0,
+  breed = "outside/blob_yellow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_8",
+  layer = 0,
+  x = 832,
+  y = 421,
+  direction = 0,
+  breed = "outside/blob_yellow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_9",
+  layer = 0,
+  x = 976,
+  y = 333,
+  direction = 0,
+  breed = "outside/blob_yellow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_10",
+  layer = 0,
+  x = 200,
+  y = 405,
+  direction = 0,
+  breed = "outside/blob_yellow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_11",
+  layer = 0,
+  x = 464,
+  y = 741,
+  direction = 0,
+  breed = "outside/crow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_before_agahnim_12",
+  layer = 0,
+  x = 544,
+  y = 597,
+  direction = 2,
+  breed = "outside/crow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_1",
+  layer = 0,
+  x = 384,
+  y = 421,
+  direction = 2,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_2",
+  layer = 0,
+  x = 248,
+  y = 77,
+  direction = 2,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_3",
+  layer = 0,
+  x = 80,
+  y = 1013,
+  direction = 2,
+  breed = "soldiers/soldier_blue",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_4",
+  layer = 0,
+  x = 344,
+  y = 1189,
+  direction = 2,
+  breed = "soldiers/knight_yellow",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_5",
+  layer = 0,
+  x = 536,
+  y = 717,
+  direction = 2,
+  breed = "soldiers/soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_6",
+  layer = 0,
+  x = 976,
+  y = 461,
+  direction = 2,
+  breed = "soldiers/soldier_green",
+  treasure_name = "random_central",
+}
+
+enemy{
+  name = "enemy_after_agahnim_7",
+  layer = 0,
+  x = 808,
+  y = 373,
+  direction = 2,
+  breed = "soldiers/soldier_green",
+  treasure_name = "random_central",
 }
 
 tile{
