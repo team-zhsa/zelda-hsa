@@ -1,7 +1,7 @@
 properties{
   x = 8320,
   y = 5112,
-  width = 960,
+  width = 320,
   height = 960,
   min_layer = 0,
   max_layer = 3,
@@ -2927,7 +2927,7 @@ npc{
   y = 293,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.houses.hyrule_town.temple_of_time.need_pendants",
+  behavior = "dialog#maps.houses.east_castle.temple_of_time.need_pendants",
 }
 
 destination{
@@ -4249,14 +4249,6 @@ custom_entity{
   height = 16,
   direction = 0,
   sprite = "entities/sword",
-}
-
-separator{
-  layer = 1,
-  x = 312,
-  y = 0,
-  width = 16,
-  height = 960,
 }
 
 tile{

@@ -139,6 +139,11 @@ map{ id = "inside/caves/west_mountains/to_west_upper_mountains_1f", description 
 map{ id = "inside/caves/west_mountains/to_west_upper_mountains_b1", description = "Cave to Spectacle Rock (Basement 1)" }
 map{ id = "inside/caves/zora_forest/domain_entrance_cave", description = "Domain Entrace Cave" }
 map{ id = "inside/caves/zora_forest/river_cave", description = "River Cave" }
+map{ id = "inside/houses/around_castle/fortune_teller", description = "Fortune Teller" }
+map{ id = "inside/houses/around_castle/grey_house", description = "Grey House" }
+map{ id = "inside/houses/around_castle/poultry_shop", description = "Poultry Shop" }
+map{ id = "inside/houses/around_castle/red_house", description = "Red House (Potion Maker)" }
+map{ id = "inside/houses/around_castle/treasure_house", description = "Treasure House" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia_town/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia_town/pond_house", description = "Pond House" }
@@ -147,6 +152,7 @@ map{ id = "inside/houses/east_castle/blacksmith", description = "Blacksmith" }
 map{ id = "inside/houses/east_castle/garden_blue", description = "Garden blue house" }
 map{ id = "inside/houses/east_castle/garden_house", description = "Garden House" }
 map{ id = "inside/houses/east_castle/shop", description = "East Castle Shop" }
+map{ id = "inside/houses/east_castle/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/gerudo_village/shop", description = "Gerudo shop" }
 map{ id = "inside/houses/gerudo_village/training_grounds", description = "Gerudo training grounds" }
@@ -164,7 +170,6 @@ map{ id = "inside/houses/hyrule_town/library", description = "Library" }
 map{ id = "inside/houses/hyrule_town/pink_house", description = "Pink shop" }
 map{ id = "inside/houses/hyrule_town/purple_house", description = "Purple House" }
 map{ id = "inside/houses/hyrule_town/shop", description = "Shop" }
-map{ id = "inside/houses/hyrule_town/temple_of_time", description = "Temple of Time" }
 map{ id = "inside/houses/hyrule_town/vase_house", description = "Vase House" }
 map{ id = "inside/houses/hyrule_town/wooden_house", description = "Wooden House" }
 map{ id = "inside/houses/kakariko_village/blind_hideout", description = "Blind Hideout" }
@@ -181,11 +186,6 @@ map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/korok_village/shop", description = "Korok Shop" }
 map{ id = "inside/houses/north_field/sanctuary", description = "Sanctuary" }
-map{ id = "inside/houses/around_castle/fortune_teller", description = "Fortune Teller" }
-map{ id = "inside/houses/around_castle/grey_house", description = "Grey House" }
-map{ id = "inside/houses/around_castle/poultry_shop", description = "Poultry Shop" }
-map{ id = "inside/houses/around_castle/red_house", description = "Red House (Potion Maker)" }
-map{ id = "inside/houses/around_castle/treasure_house", description = "Treasure House" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
 map{ id = "inside/houses/south_field/flower_house", description = "Flower House" }
@@ -2240,6 +2240,16 @@ file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.dat", author = 
 file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/river_cave.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/zora_forest/river_cave.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/fortune_teller.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/fortune_teller.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/grey_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/grey_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/poultry_shop.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/poultry_shop.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/red_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/red_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/treasure_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/around_castle/treasure_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.dat", author = "The Unknown", }
@@ -2270,16 +2280,6 @@ file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "The Unkno
 file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/korok_village/shop.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/houses/korok_village/shop.lua", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/inside/houses/around_castle/fortune_teller.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/fortune_teller.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/grey_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/grey_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/poultry_shop.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/poultry_shop.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/red_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/red_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/treasure_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/around_castle/treasure_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_forest/forest_hideout.dat", author = "The Unknown", }
