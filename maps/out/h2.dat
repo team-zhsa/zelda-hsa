@@ -26438,6 +26438,7 @@ destination{
 }
 
 teletransporter{
+  name = "tele_to_mountains_b1_2",
   layer = 0,
   x = 432,
   y = 40,
@@ -26454,6 +26455,7 @@ teletransporter{
 }
 
 teletransporter{
+  name = "tele_to_mountains_b1_1",
   layer = 0,
   x = 600,
   y = 120,
@@ -26478,6 +26480,39 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/h1",
   destination = "_side",
+}
+
+dynamic_tile{
+  name = "invisible_1",
+  layer = 0,
+  x = 608,
+  y = 96,
+  width = 8,
+  height = 16,
+  pattern = "21",
+  tileset = "outside_special",
+}
+
+dynamic_tile{
+  name = "invisible_2",
+  layer = 0,
+  x = 432,
+  y = 16,
+  width = 8,
+  height = 16,
+  pattern = "21",
+  tileset = "outside_special",
+}
+
+dynamic_tile{
+  name = "invisible_3",
+  layer = 0,
+  x = 440,
+  y = 16,
+  width = 8,
+  height = 16,
+  pattern = "14032",
+  tileset = "outside_special",
 }
 
 tile{

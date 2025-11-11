@@ -22,6 +22,7 @@ local steps={
   -- ...
   "dungeon_4_started",
   "dungeon_4_completed",
+  -- Need to unlock dodongo's cavern (locked by key) =>  goron sends link to dungeon to unlock it
   "dungeon_5_started",
   "dungeon_5_completed",
   "zora_flippers_obtained",

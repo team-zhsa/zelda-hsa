@@ -13,6 +13,10 @@ function dynamic_tile_meta:on_created()
     self:set_visible(false)
   end
 
+    if name:match("^invisible_") then
+    self:set_visible(false)
+  end
+
   if name:match("^lens_invisible_tile") then
     self:set_visible(false)
     sol.timer.start(self, 10, function()
