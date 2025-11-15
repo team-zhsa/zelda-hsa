@@ -65625,16 +65625,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 632,
-  y = 952,
-  width = 8,
-  height = 16,
-  pattern = "2",
-  tileset = "outside_special",
-}
-
-tile{
-  layer = 0,
   x = 104,
   y = 432,
   width = 32,
@@ -65725,49 +65715,29 @@ tile{
 
 tile{
   layer = 0,
-  x = 120,
-  y = 424,
-  width = 8,
-  height = 16,
-  pattern = "3",
-  tileset = "outside_special",
-}
-
-tile{
-  layer = 0,
-  x = 304,
-  y = 808,
-  width = 8,
-  height = 16,
-  pattern = "4",
-  tileset = "outside_special",
-}
-
-tile{
-  layer = 0,
   x = 312,
   y = 848,
   width = 8,
   height = 16,
-  pattern = "1108",
-}
-
-tile{
-  layer = 0,
-  x = 288,
-  y = 880,
-  width = 8,
-  height = 16,
-  pattern = "1108",
+  pattern = "1835",
 }
 
 tile{
   layer = 0,
   x = 328,
-  y = 920,
+  y = 904,
   width = 8,
   height = 16,
-  pattern = "1108",
+  pattern = "1835",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 896,
+  width = 8,
+  height = 16,
+  pattern = "1835",
 }
 
 custom_entity{
@@ -66164,5 +66134,49 @@ teletransporter{
   transition = "scrolling",
   destination_map = "out/e8",
   destination = "_side",
+}
+
+dynamic_tile{
+  name = "invisible_11",
+  layer = 1,
+  x = 304,
+  y = 784,
+  width = 8,
+  height = 16,
+  pattern = "14033",
+  tileset = "outside_special",
+}
+
+dynamic_tile{
+  name = "invisible_13",
+  layer = 1,
+  x = 632,
+  y = 912,
+  width = 8,
+  height = 16,
+  pattern = "14032",
+  tileset = "outside_special",
+}
+
+dynamic_tile{
+  name = "invisible_14",
+  layer = 1,
+  x = 312,
+  y = 784,
+  width = 8,
+  height = 16,
+  pattern = "14015",
+  tileset = "outside_special",
+}
+
+dynamic_tile{
+  name = "invisible_12",
+  layer = 1,
+  x = 104,
+  y = 400,
+  width = 8,
+  height = 16,
+  pattern = "14017",
+  tileset = "outside_special",
 }
 
