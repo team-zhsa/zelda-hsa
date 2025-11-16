@@ -24,7 +24,6 @@ local distort_map = sol.surface.create(sol.video.get_quest_size())
 
 local clouds = sol.surface.create("fogs/clouds_reflection.png")
 local clouds_shadow = sol.surface.create("fogs/clouds_shadow.png")
-clouds_shadow:set_opacity(10)
 clouds_shadow:set_blend_mode("multiply")
 
 local effect = sol.surface.create("fogs/fsa_background.png")
@@ -56,7 +55,7 @@ local crw,crh = clouds:get_size()
 function fsa:render_reflection(map)
 	reflection:clear()
 	do
-		local t = sol.main.get_elapsed_time() * clouds_speed;
+		local t = sol.main.get_elapsed_time() * clouds_speed ;
 		local x,y = t,t
 		local cw,ch = reflection:get_size()
 		local tx,ty = x % crw, y % crh
@@ -124,6 +123,7 @@ function fsa:draw_clouds_shadow(dst,cx,cy)
 	local jmax = math.ceil(ch/csh)
 	for i=-1,imax do
 		for j=-1,jmax do
+			clouds_shadow:set_opacity(5)
 			clouds_shadow:draw(dst,tx+i*csw,ty+j*csh)
 		end
 	end
@@ -334,6 +334,7 @@ end
 
 local function setup_inside_lights(map)
 	local house = map:get_id():match("^inside/houses/") ~= nil
+	local cave = map:get_id():match("^inside/caves/") ~= nil
 	light_mgr:init(map,
 		(function()
 			if map.fsa_dark then
@@ -341,33 +342,39 @@ local function setup_inside_lights(map)
 					return {0,0,0} -- Ambient darkness
 				end
 			else
-				if house then
-					-- House ambient light
+				if house then -- House ambient light
 					return {200,190,180}
+				elseif cave then	-- Cave ambient light
+					return {40,40,32}
 				else
-					-- Cave/other light
-					return {105,100,95}
+					-- Cave/other light return {105,100,95}
+					return {125,120,110}
 				end
 			end
 		end)())
 	light_mgr:add_occluder(map:get_hero())
 
--- HERE FOR DARKNESS SYSTEM
-local hero = map:get_hero()
+-- <<DARKNESS SYSTEM>>
+	local hero = map:get_hero()
+	local default_radius = "80"   
+	local default_color = "193,185,80"
+	local default_color_inside_1 = "196,128,200"
+	local default_color_inside_2 = "137,89,140"
 --create hero light
 		if map.fsa_dark then
 			-- Create a smaller hero light
-			local hl = create_light(map,-16,-16,0,"32","193,185,80")
+			local hl = create_light(map,-16,-16,0,"32",default_color)
 			function hl:on_update()
 				if map:get_game():has_item("lamp") then
 					hl:set_position(hero:get_position())
 				end
 			end
+			print("FSA Dark")
 			hl.excluded_occs = {[hero]=true}
 		else
 			if not house then
 				-- Create a normal hero light
-				local hl = create_light(map,-48,-48,0,"64","196,128,200")
+				local hl = create_light(map,-48,-48,0,"48",default_color_inside_2)
 				function hl:on_update()
 					if map:get_game():has_item("lamp") then
 						hl:set_position(hero:get_position())
@@ -375,20 +382,19 @@ local hero = map:get_hero()
 				end
 				hl.excluded_occs = {[hero]=true}
 			end
+						print("FSA Not house")
+
 		end
 
-	--add a static light for each torch pattern in the map
+	--add a static light for each torch pattern tile in the map
 	local map_lights = get_lights_from_map(map)
-	local default_radius = "80"   
-	local default_color = "193,185,80"
 
 	for _,l in ipairs(map_lights) do
 		create_light(map,l.x,l.y,l.layer,l.radius or default_radius,l.color or default_color,
 								 l.dir,l.cut,l.aperture,l.distort_angle)
 	end
 
-
-	--TODO add other non-satic occluders
+	--TDO add other non-static occluders
 	for en in map:get_entities_by_type("enemy") do
 		light_mgr:add_occluder(en)
 	end
@@ -397,20 +403,24 @@ local hero = map:get_hero()
 		light_mgr:add_occluder(en)
 	end
 
-	--generate lights for dynamic torches
+	--generate lights for dynamic torches CE (TDO check why effect not showing => try to disable it when unlit, for now it is always enabled)
 	for en in map:get_entities_by_type("custom_entity") do
 		if en:get_model() == "torch" then
 			local tx,ty,tl = en:get_position()
 			local tw,th = en:get_size()
 			local yoff = -8
-			local light = create_light(map,tx+tw*0.5,ty+th*0.5+yoff,tl,default_radius,default_color)
+			local light = create_light(map,tx,ty+yoff,tl,default_radius,default_color,
+								0,0,1.5,0)
+			
 			en:register_event("on_unlit",function()
 				light:set_enabled(false)
 			end)
 			en:register_event("on_lit",function()
 				  light:set_enabled(true)
 			end)
-			light:set_enabled(en:is_lit())
+				light:set_enabled((en:is_lit()))
+			print(tx.." "..ty.." "..tl.." is lit ")
+			print(en:is_lit())
 		end
 	end
 end

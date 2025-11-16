@@ -24,8 +24,8 @@ local item_names_assignable = {
 	"tunic_blue",													-- Tunic 2
 	-- Row 4
 	"hammer",															-- Hammer
-	"_placeholder", 											-- Magic mirror
-	"_placeholder",												-- ??
+	"_placeholder", 											-- ?
+	"_placeholder",												-- ?
 	"bottle_4",														-- Bottle
 	"tunic_red",													-- Tunic 3
 	"tunic_time",													-- Tunic 4

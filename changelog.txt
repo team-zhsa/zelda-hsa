@@ -515,6 +515,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed the 33N door in the Northern Ruins variable not being saved (#233).
 	FIX: Fixed a Kaepora Gaebora missing ruins dialogue (#234).
 	FIX: Fixed a nil value error when using some special effect teletransporters (#237).
+	FIX: Fix entities going through heavy_object (large stones) (#253).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -535,6 +536,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed pre-alpha screenshots from the sprites folder (#195).
 	REM: Removed support for MacOS Ventura.
 	REM: Removed Minecraftia font.
+	TDO: Fix torch custom entities not creating a fire effect (#252)
+	TDO: Fix Lynel flames still present after Lynel's death (#251)
 	TDO: Setup the quest files for the Solarus launcher.
 	TDO: Overhaul the bow & arrow system such as in OOT (#145).
 	TDO: Redraw hero animations from ALTTD (happy, sad, collapse, ...) (#146).
@@ -551,6 +554,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
 	TDO: Fix Ballchain Knights being incompatible with the separator manager (#223).
 	TDO: Move the option menus to the escape menu (#229).
+	TDO: Fix firebars spawning when using an auto separator (#242)
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Remove *.xcf and *.psd work files from the data files (#169).

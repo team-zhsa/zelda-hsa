@@ -62,7 +62,11 @@ function entity:on_interaction()
       layer = layer,
       width = 16,
       height = 16,
-      stops_hero = true
+      stops_hero = true,
+      stops_npcs = true,
+      stops_enemies = true,
+      stops_blocks = true,
+      stops_projectiles = true
     }
   end)
 end

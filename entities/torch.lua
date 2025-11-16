@@ -30,7 +30,7 @@ function torch:on_created()
   end
 
   if torch:get_property("duration") ~= nil then
-    torch:set_duration(torch:get_property("duration"))
+    torch:set_duration(torch:get_property("duration") * 1000)
   end
 end
 

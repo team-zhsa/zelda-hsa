@@ -2,11 +2,11 @@ local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
 	-- Row 1
-	"_placeholder",												-- Magic cape
+	"magic_cape",												-- Magic cape
 	"magic_mirror",												-- Magic mirror
 	"book_of_mudora",								      -- Book of Mudora
 	"fire_rod",														-- Fire rod
-	"_placeholder",												-- Light rod
+	"light_rod",												-- Light rod
 	"somaria_cane",												-- Somaria cane
 	"wind_rod",														-- Wind rod
 	-- Row 2                                      
@@ -15,7 +15,7 @@ local item_names_assignable = {
 	"healing_wand",												-- Healing wand
 	"ice_rod",									    			-- Ice rod
 	"thunder_rod",												-- Thunder rod
-	"_placeholder",												-- Darkness rod
+	"darkness_rod",												-- Darkness rod
 	"doom_rod",														-- Doom rod
 	-- Row 3
 	"_placeholder", 											-- ?
@@ -29,8 +29,8 @@ local item_names_assignable = {
 	"_placeholder",												-- ?
 	"_placeholder",					    					-- ?
 	"sword_skill_beam", 									-- Sword skill
-	"_placeholder",						     				-- Sword skill
-	"_placeholder",						  					-- Sword skill 
+	"sword_skill_beam",						     				-- Sword skill
+	"sword_skill_beam",						  					-- Sword skill 
 	"_placeholder",						 						-- ?
 	"_placeholder",												-- ?
 }
