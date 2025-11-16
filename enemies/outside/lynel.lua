@@ -13,8 +13,12 @@ function enemy:on_created()
 	self:create_sprite("enemies/" .. enemy:get_breed())
 	self:set_size(32, 32); self:set_origin(16, 27)
 	self:set_pushed_back_when_hurt(false)
-	self:set_attack_consequence("boomerang", "immobilized")
-	self:set_attack_consequence("fire", "protected")
+
+	  enemy:set_hero_weapons_reactions({
+    shield = "protected",
+		fire = "protected",
+		boomerang = "immobilized",
+  })
 end
 
 local function go_hero()

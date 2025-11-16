@@ -17,13 +17,14 @@
 
 local item = ...
 local audio_manager = require("scripts/audio_manager")
+local shield_level = 1
 require("scripts/multi_events")
 require("scripts/ground_effects")
 
 -- Update the sprite z-index regarding the entity depending on direction.
 local function update_z_index(entity, sprite)
 
-  if entity:get_direction() == 1 then
+  if entity:get_direction() == (item.is_used and 1 or 2) then
     entity:bring_sprite_to_back(sprite)
   else
     entity:bring_sprite_to_front(sprite)
@@ -39,13 +40,46 @@ local function set_grabing_abilities_level(level)
   end
 end
 
--- initialise the item.
+-- Set the shield sprite id
+local function set_shield_sprite_id(sprite_id)
+  local game = item:get_game()
+  local hero = game:get_hero()
+  local map = hero:get_map()
+    hero:set_shield_sprite_id(sprite_id)
+
+
+  -- Update z-index on direction changed.
+  local sprite = hero:get_sprite("shield")
+  function sprite:on_direction_changed()
+    update_z_index(hero, sprite)
+  end
+
+  update_z_index(hero, sprite)
+
+  -- Move the sprite offset in sideview maps to match the hero sideview offset.
+  sprite:set_xy(0, 0)
+
+
+  return sprite
+end
+
+-- Initialize the item.
 item:set_savegame_variable("possession_shield_hero")
 function item:on_created()
 
   item:on_variant_changed(item:get_variant())
   item:set_sound_when_brandished(nil)
   item.is_used = false -- Workaround : item:is_being_used() seems buggy when item:set_finished() is called outside item:on_using(), use a flag instead
+
+  -- Setup shield if assigned when the first map starts.
+  -- Workaround : No event to do it only when first map starts, do it in on_map_changed.
+  local game = item:get_game()
+  game:register_event("on_map_changed", function(game, map)
+
+    if game:get_ability("shield") > 0 and not item.is_used then
+      set_shield_sprite_id("hero/shield" .. shield_level.. "_assigned")
+    end
+  end)
 end
 
 -- Set the item assignable if possessed.
@@ -56,8 +90,29 @@ end
 
 -- Play sound on obtaining.
 function item:on_obtaining()
-  
-  audio_manager:play_sound("items/get_major_item")   
+  local game = item:get_game()
+  audio_manager:play_sound("items/fanfare_item_extended")
+  game:set_item_assigned(1, item)
+  game:set_ability("shield", shield_level)
+  set_shield_sprite_id("hero/shield" .. shield_level.. "_assigned")
+end
+
+-- Carry the shield when assigned.
+function item:on_assigned()
+  local game = item:get_game()
+  local hero = game:get_hero()
+  game:set_ability("shield", shield_level)
+  set_shield_sprite_id("hero/shield" .. shield_level.. "_assigned")
+  hero:unfreeze() -- Make the shield sprite appear right now.
+end
+
+-- Take off the shield when unassigned.
+function item:on_unassigned()
+  local game = item:get_game()
+  local hero = game:get_hero()
+  game:set_ability("shield", 0)
+  hero:set_shield_sprite_id("")
+  item:set_finished()
 end
 
 -- Start using the shield.
@@ -71,26 +126,17 @@ function item:on_using()
   local variant = item:get_variant()
 
   -- Don't continue if the hero have no shield or can't use it.
-  local is_shield_usable = hero_state_object and not hero_state_object:get_can_use_item("shield")
+  local is_shield_usable = hero_state_object and not hero_state_object:get_can_use_item("shield_hero")
   if variant == 0 or is_shield_usable or game:is_suspended() or not map:is_solid_ground(hero:get_ground_position()) then
     return
   end
   item.is_used = true
 
-  -- initialise the state.
-  game:set_ability("shield", 1)
-  local shield_sprite = hero:get_sprite("shield")
-
+  -- Initialize the state.
+  set_shield_sprite_id("hero/shield" .. shield_level)
   hero:unfreeze() -- Allow the hero to walk.
-  shield_sprite:set_animation("stopped")
-  update_z_index(hero, shield_sprite)
   set_grabing_abilities_level(0)
-  --audio_manager:play_sound("shield")-- TODO Find a sound for equipping shield
-
-  -- Update z-index on direction changed.
-  function shield_sprite:on_direction_changed()
-    update_z_index(hero, shield_sprite)
-  end
+  audio_manager:play_sound("items/shield")
 
   -- Behavior while the shield is brandished.
   local slot = game:get_item_assigned(1) == item and 1 or 2
@@ -125,12 +171,18 @@ function item:stop_using()
 
   local game = item:get_game()
   local hero = game:get_hero()
+  
+  set_shield_sprite_id("hero/shield" .. shield_level.. "_assigned")
+  hero:unfreeze() -- Resynchronize hero sprites.
   item:set_finished()
-  game:set_ability("shield", 0)
   set_grabing_abilities_level(1)
 end
+-- Workaround: The built-in method seems to return true even after item:set_finished() is called, return item.is_used instead.
+function item:is_being_used()
+  return item.is_used
+end
 
--- initialise the metatable of hero entity.
+-- Initialise the metatable of hero entity.
 local function initialise_hero_meta()
 
   local hero_meta = sol.main.get_metatable("hero")
@@ -141,14 +193,26 @@ local function initialise_hero_meta()
   -- True if there is a pixel collision between the shield and the given enemy, and if the shield is strong enough and not ignored by the enemy.
   function hero_meta:is_shield_protecting(enemy, enemy_sprite)
     local item = self:get_game():get_item("shield_hero")
-    local is_strong_enough = item:get_variant() >= enemy:get_shield_minimum_level()
-    local is_not_ignored = enemy:get_shield_reaction() ~= "ignored"
+    local is_strong_enough = shield_level >= enemy:get_shield_minimum_level()
+    local is_not_ignored = enemy:get_shield_reaction(enemy_sprite) ~= "ignored"
     local is_collision = enemy:overlaps(self, enemy:get_attacking_collision_mode(), enemy_sprite, self:get_sprite("shield"))
     return item.is_used and is_strong_enough and is_not_ignored and is_collision
   end
+
+  -- Hide and show the shield during forbidden passive states.
+  hero_meta:register_event("on_passive_state_started", function(hero, state_name)
+    if state_name == "sideview_swimming" and hero:get_game():get_ability("shield") > 0 then
+      hero:get_sprite("shield"):set_opacity(0)
+    end
+  end)
+  hero_meta:register_event("on_passive_state_stopped", function(hero, state_name)
+    if state_name == "sideview_swimming" and hero:get_game():get_ability("shield") > 0 then
+      hero:get_sprite("shield"):set_opacity(255)
+    end
+  end)
 end
 
--- initialise the metatable of enemy entities to be able to set a reaction on protecting shield.
+-- Initialise the metatable of enemy entities to be able to set a reaction on protecting shield.
 local function initialise_enemy_meta()
 
   local enemy_meta = sol.main.get_metatable("enemy")

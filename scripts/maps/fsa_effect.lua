@@ -394,7 +394,7 @@ local function setup_inside_lights(map)
 								 l.dir,l.cut,l.aperture,l.distort_angle)
 	end
 
-	--TDO add other non-static occluders
+	--TODO add other non-static occluders
 	for en in map:get_entities_by_type("enemy") do
 		light_mgr:add_occluder(en)
 	end
@@ -403,7 +403,7 @@ local function setup_inside_lights(map)
 		light_mgr:add_occluder(en)
 	end
 
-	--generate lights for dynamic torches CE (TDO check why effect not showing => try to disable it when unlit, for now it is always enabled)
+	--generate lights for dynamic torches CE (TODO check why effect not showing => try to disable it when unlit, for now it is always enabled) #252
 	for en in map:get_entities_by_type("custom_entity") do
 		if en:get_model() == "torch" then
 			local tx,ty,tl = en:get_position()

@@ -8,7 +8,6 @@ require("enemies/lib/common_actions").learn(enemy)
 local audio_manager = require("scripts/audio_manager")
 
 local function on_shield_collision()
-  print("shield")
   enemy:remove()
 end
 
