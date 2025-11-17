@@ -86,6 +86,7 @@ dialog:register_event("on_interaction", function()
         game:start_dialog("maps.houses.north_field.sanctuary.priest_5", function()
           return_hero()
         end)
+-- else softlock TODO
       end
     end)
   end)    
