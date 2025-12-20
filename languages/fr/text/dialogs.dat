@@ -1937,6 +1937,29 @@ Non
 }
 
 dialog{
+  id = "maps.caves.castle_town.lamp_cave.wizard_magic_bar",
+  question = "1",
+  text = [[
+Bonjour...
+Je vois que tu m'as trouvé...
+Pour seulement 50 rubis, je
+peux te laisser passer et
+t'apprendre les secrets de
+ma magie...
+Qu'en dis-tu ?
+Oui !
+Non.
+]],
+}
+
+dialog{
+  id = "maps.caves.castle_town.lamp_cave.wizard_magic_bar_no",
+  text = [[
+Alors va-t-en !
+]],
+}
+
+dialog{
   id = "maps.caves.east_castle.to_blacksmith_shop.merchant_welcome",
   text = [[
 Bonjour, jeune héros !
@@ -2075,29 +2098,6 @@ dialog{
   text = [[
 Potion rouge :
 redonne de la vie.
-]],
-}
-
-dialog{
-  id = "maps.caves.castle_town.lamp_cave.wizard_magic_bar",
-  question = "1",
-  text = [[
-Bonjour...
-Je vois que tu m'as trouvé...
-Pour seulement 50 rubis, je
-peux te laisser passer et
-t'apprendre les secrets de
-ma magie...
-Qu'en dis-tu ?
-Oui !
-Non.
-]],
-}
-
-dialog{
-  id = "maps.caves.castle_town.lamp_cave.wizard_magic_bar_no",
-  text = [[
-Alors va-t-en !
 ]],
 }
 
@@ -2917,6 +2917,490 @@ de la magie et de la vie !
 }
 
 dialog{
+  id = "maps.houses.castle_town.archery_house.already_playing",
+  skip = "current",
+  text = [[
+Tu dois tirer sur la cible qui
+bouge !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.not_bow",
+  skip = "current",
+  text = [[
+Bienvenue dans le stand de tir !
+Mais tu n'as pas d'arc$0.$0.$0.$0
+Reviens plus tard !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.not_enough_money",
+  skip = "current",
+  text = [[
+Désolé, mais tu n'as pas assez
+d'argent !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.play_question",
+  question = "1",
+  skip = "current",
+  text = [[
+Bienvenue dans le stand de tir
+de la citadelle ! Pour gagner,
+tu disposes de 10 flèches et tu
+dois tirer au moins 6 fois sur
+la cible.$0 Un prix te sera 
+donné si tu réussis à gagner.
+Une partie coûte 40 rubis.
+
+
+Alors, intéressé?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.playing_end",
+  skip = "current",
+  text = [[
+C'est terminé !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.playing_finished",
+  skip = "current",
+  text = [[
+Ah on dirait que ce générateur
+d'obstacles déconne encore...
+Maudit programme...
+Je m'en charge pour qu'à ton
+retour tout soit à nouveau
+opérationnel ne t'en fais pas !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.playing_no",
+  skip = "current",
+  text = [[
+Oh comme tu veux... 
+Après tout rien ne t'oblige
+à jouer n'est-ce pas ?
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.playing_start",
+  skip = "current",
+  text = [[
+C'est à toi de jouer !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.playing_yes",
+  skip = "current",
+  text = [[
+Super ! Je te prépare tout ça !
+Laisse moi un petit moment...
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.results_calculate",
+  skip = "current",
+  text = [[
+C'est fini jeune homme!
+Alors voyons combien de fois
+tu as touché la cible...
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.results_lose",
+  skip = "current",
+  text = [[
+Ah quel dommage ! Mais bon c'est
+le jeu...$0
+Hum...$0
+Reviens quand tu veux !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.results_win",
+  skip = "current",
+  text = [[
+Félicitations ! Tu es un bon
+tireur ! Voici un cadeau pour
+toi !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.archery_house.results_win_2",
+  skip = "current",
+  text = [[
+Tu es doué vraiment ! Au plaisir
+de te revoir !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bakery.merchant_welcome",
+  text = [[
+Bonjour jeune héros !
+Choisis ce que tu veux.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bakery.product_bread",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bakery.product_croissant",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bakery.product_pie",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bank.teller_welcome",
+  text = [[
+Bienvenue à la Banque Centrale !$0
+Vous avez des économies mais
+vous en savez pas quoi en faire ?
+Faites-nous confiance, on se
+chargera de les garder pour
+vous !
+(voir termes et conditions)
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bank_copy.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bank_copy_copy.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.bank_copy_copy_copy.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.building.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.inn.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_1.content",
+  text = [[
+Le monde d'Hyrule est très vaste.
+Il est occupé par plusieurs 
+peuples :
+les Hyliens, qui occupent des
+villages parsemés autour de la
+Plaine,
+les Gorons, qui résident dans les
+montagnes et qui mangent des
+pierres,
+les Zoras, qui résident au nord-
+est d'Hyrule et qui vivent de
+l'eau, et les Piafs, qui sont
+mi-hommes, mi-oiseaux et qui
+occupent l'est d'Hyrule.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_1.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 4 : LE CHÂTEAU
+
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_2.content",
+  text = [[
+Hyrule est divisé en plusieurs
+zones géographiques ayant chacune
+leurs particularités.
+Le centre est occupé par le
+château et la ville. Il y a de
+nombreuses activités telles
+qu'une salle de sport, une
+bibliothèque, un grand jardin et
+un marché.
+Tout autour, on trouve la Plaine,
+vaste étendue de verdure qui
+sépare la ville des villages.
+On y retrouve le célèbre ranch
+Lonlon avec le meilleur lait
+d'Hyrule !
+Au sud, il y a un vaste marais
+que l'on dit hanté. Les eaux y
+sont vert foncé et sont infestées
+de monstres ! Il y a le Palais
+des Marais.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_2.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 1 : CENTRE ET SUD
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_3.content",
+  text = [[
+Il suffit de marcher quelques
+minutes vers l'ouest pour
+arriver au village Cocorico.
+Habité par des Hyliens, il permet
+notamment d'accéder à des zones
+remarquables.
+Par exemple, il est bordé au nord
+par le lac Hylia, célèbre lac
+abritant le Temple de l'Eau.
+De nombreuses personnes y
+vont chaque année pour admirer
+ces eaux.
+A l'ouest, il y a le cimetière, où
+reposent nombre de personnes.
+Au nord se trouvent les Ruines.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_3.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 2 : NORD-OUEST 
+
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_4.content",
+  text = [[
+Depuis le village Cocorico,
+il suffit de faire quelques pas
+vers le sud pour aller dans les
+Bois Perdus. Par contre, de
+nombreux aventuriers n'en sont
+jamais ressortis et sont devenus
+des Stalfos, monstres sans chair
+maniant les arcs.
+Plus au sud encore, habitent les
+Kokiris, éternels enfants vêtus
+de vert et qui ne sortent jamais.
+On retrouve dans cette zone le
+Temple de la Forêt.
+Encore au sud, il y a la ville
+Parapa.
+A l'est, on retrouve le Désert
+Gerudo, où coule le fleuve
+du même nom.
+Les chaleurs y sont cependant
+écrasantes et il faut beaucoup
+boire.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.library.book_4.question",
+  question = "1",
+  text = [[
+LES ZONES D'HYRULE
+TOME 3 : SUD-OUEST
+ 
+Tu veux le lire ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.shop.merchant_welcome",
+  text = [[
+Bonjour jeune héros !
+Choisis ce que tu veux.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.shop.product_green_potion",
+  text = [[
+Une potion verte qui te restaure
+toute ta magie.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.shop.product_heart",
+  text = [[
+Un coeur pour te régénérer si tu es
+mal en point.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.shop.product_milk",
+  text = [[
+Du lait Meuh-Meuh venu tout
+droit du Pic Eliott.
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.sick_kid.give_piece_of_heart",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.sick_kid.soldier_gate_open",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.sick_kid.soldier_no_magic_bar",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.vase_house.soldier_gate_closed",
+  text = [[
+Les portes de la ville sont
+fermées, tu ne peux pas sortir
+pour l'instant.
+Va jouer ailleurs !
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.vase_house.soldier_gate_open",
+  text = [[
+Qu'est-ce que je m'ennuie ici !$0
+Il ne se passe rien du tout !$0
+Cependant, rien ne t'empêche de
+casser quelques vases...
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.vase_house.soldier_no_magic_bar",
+  text = [[
+Des rumeurs disent qu'un voleur
+caché dans un souterrain peut
+t'apprendre la magie...
+Mais ne le dis à personne,
+d'accord ?
+]],
+}
+
+dialog{
   id = "maps.houses.cordinia_town.chest_house.minigame_already_playing",
   text = [[
 Très bien ! Ouvre le coffre que
@@ -3496,490 +3980,6 @@ château, viens vite !
 }
 
 dialog{
-  id = "maps.houses.castle_town.archery_house.already_playing",
-  skip = "current",
-  text = [[
-Tu dois tirer sur la cible qui
-bouge !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.not_bow",
-  skip = "current",
-  text = [[
-Bienvenue dans le stand de tir !
-Mais tu n'as pas d'arc$0.$0.$0.$0
-Reviens plus tard !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.not_enough_money",
-  skip = "current",
-  text = [[
-Désolé, mais tu n'as pas assez
-d'argent !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.play_question",
-  question = "1",
-  skip = "current",
-  text = [[
-Bienvenue dans le stand de tir
-de la citadelle ! Pour gagner,
-tu disposes de 10 flèches et tu
-dois tirer au moins 6 fois sur
-la cible.$0 Un prix te sera 
-donné si tu réussis à gagner.
-Une partie coûte 40 rubis.
-
-
-Alors, intéressé?
-Oui !
-Non !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.playing_end",
-  skip = "current",
-  text = [[
-C'est terminé !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.playing_finished",
-  skip = "current",
-  text = [[
-Ah on dirait que ce générateur
-d'obstacles déconne encore...
-Maudit programme...
-Je m'en charge pour qu'à ton
-retour tout soit à nouveau
-opérationnel ne t'en fais pas !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.playing_no",
-  skip = "current",
-  text = [[
-Oh comme tu veux... 
-Après tout rien ne t'oblige
-à jouer n'est-ce pas ?
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.playing_start",
-  skip = "current",
-  text = [[
-C'est à toi de jouer !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.playing_yes",
-  skip = "current",
-  text = [[
-Super ! Je te prépare tout ça !
-Laisse moi un petit moment...
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.results_calculate",
-  skip = "current",
-  text = [[
-C'est fini jeune homme!
-Alors voyons combien de fois
-tu as touché la cible...
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.results_lose",
-  skip = "current",
-  text = [[
-Ah quel dommage ! Mais bon c'est
-le jeu...$0
-Hum...$0
-Reviens quand tu veux !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.results_win",
-  skip = "current",
-  text = [[
-Félicitations ! Tu es un bon
-tireur ! Voici un cadeau pour
-toi !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.archery_house.results_win_2",
-  skip = "current",
-  text = [[
-Tu es doué vraiment ! Au plaisir
-de te revoir !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bakery.merchant_welcome",
-  text = [[
-Bonjour jeune héros !
-Choisis ce que tu veux.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bakery.product_bread",
-  text = [[
-Des rumeurs disent qu'un voleur
-caché dans un souterrain peut
-t'apprendre la magie...
-Mais ne le dis à personne,
-d'accord ?
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bakery.product_croissant",
-  text = [[
-Qu'est-ce que je m'ennuie ici !$0
-Il ne se passe rien du tout !$0
-Cependant, rien ne t'empêche de
-casser quelques vases...
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bakery.product_pie",
-  text = [[
-Les portes de la ville sont
-fermées, tu ne peux pas sortir
-pour l'instant.
-Va jouer ailleurs !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bank.teller_welcome",
-  text = [[
-Bienvenue à la Banque Centrale !$0
-Vous avez des économies mais
-vous en savez pas quoi en faire ?
-Faites-nous confiance, on se
-chargera de les garder pour
-vous !
-(voir termes et conditions)
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bank_copy.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bank_copy_copy.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bank_copy_copy_copy.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.building.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.inn.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_1.content",
-  text = [[
-Le monde d'Hyrule est très vaste.
-Il est occupé par plusieurs 
-peuples :
-les Hyliens, qui occupent des
-villages parsemés autour de la
-Plaine,
-les Gorons, qui résident dans les
-montagnes et qui mangent des
-pierres,
-les Zoras, qui résident au nord-
-est d'Hyrule et qui vivent de
-l'eau, et les Piafs, qui sont
-mi-hommes, mi-oiseaux et qui
-occupent l'est d'Hyrule.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_1.question",
-  question = "1",
-  text = [[
-LES ZONES D'HYRULE
-TOME 4 : LE CHÂTEAU
-
-
-Tu veux le lire ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_2.content",
-  text = [[
-Hyrule est divisé en plusieurs
-zones géographiques ayant chacune
-leurs particularités.
-Le centre est occupé par le
-château et la ville. Il y a de
-nombreuses activités telles
-qu'une salle de sport, une
-bibliothèque, un grand jardin et
-un marché.
-Tout autour, on trouve la Plaine,
-vaste étendue de verdure qui
-sépare la ville des villages.
-On y retrouve le célèbre ranch
-Lonlon avec le meilleur lait
-d'Hyrule !
-Au sud, il y a un vaste marais
-que l'on dit hanté. Les eaux y
-sont vert foncé et sont infestées
-de monstres ! Il y a le Palais
-des Marais.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_2.question",
-  question = "1",
-  text = [[
-LES ZONES D'HYRULE
-TOME 1 : CENTRE ET SUD
-
-Tu veux le lire ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_3.content",
-  text = [[
-Il suffit de marcher quelques
-minutes vers l'ouest pour
-arriver au village Cocorico.
-Habité par des Hyliens, il permet
-notamment d'accéder à des zones
-remarquables.
-Par exemple, il est bordé au nord
-par le lac Hylia, célèbre lac
-abritant le Temple de l'Eau.
-De nombreuses personnes y
-vont chaque année pour admirer
-ces eaux.
-A l'ouest, il y a le cimetière, où
-reposent nombre de personnes.
-Au nord se trouvent les Ruines.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_3.question",
-  question = "1",
-  text = [[
-LES ZONES D'HYRULE
-TOME 2 : NORD-OUEST 
-
-Tu veux le lire ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_4.content",
-  text = [[
-Depuis le village Cocorico,
-il suffit de faire quelques pas
-vers le sud pour aller dans les
-Bois Perdus. Par contre, de
-nombreux aventuriers n'en sont
-jamais ressortis et sont devenus
-des Stalfos, monstres sans chair
-maniant les arcs.
-Plus au sud encore, habitent les
-Kokiris, éternels enfants vêtus
-de vert et qui ne sortent jamais.
-On retrouve dans cette zone le
-Temple de la Forêt.
-Encore au sud, il y a la ville
-Parapa.
-A l'est, on retrouve le Désert
-Gerudo, où coule le fleuve
-du même nom.
-Les chaleurs y sont cependant
-écrasantes et il faut beaucoup
-boire.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.library.book_4.question",
-  question = "1",
-  text = [[
-LES ZONES D'HYRULE
-TOME 3 : SUD-OUEST
- 
-Tu veux le lire ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.shop.merchant_welcome",
-  text = [[
-Bonjour jeune héros !
-Choisis ce que tu veux.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.shop.product_green_potion",
-  text = [[
-Une potion verte qui te restaure
-toute ta magie.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.shop.product_heart",
-  text = [[
-Un coeur pour te régénérer si tu es
-mal en point.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.shop.product_milk",
-  text = [[
-Du lait Meuh-Meuh venu tout
-droit du Pic Eliott.
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.sick_kid.give_piece_of_heart",
-  text = [[
-Les portes de la ville sont
-fermées, tu ne peux pas sortir
-pour l'instant.
-Va jouer ailleurs !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.sick_kid.soldier_gate_open",
-  text = [[
-Qu'est-ce que je m'ennuie ici !$0
-Il ne se passe rien du tout !$0
-Cependant, rien ne t'empêche de
-casser quelques vases...
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.sick_kid.soldier_no_magic_bar",
-  text = [[
-Des rumeurs disent qu'un voleur
-caché dans un souterrain peut
-t'apprendre la magie...
-Mais ne le dis à personne,
-d'accord ?
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.vase_house.soldier_gate_closed",
-  text = [[
-Les portes de la ville sont
-fermées, tu ne peux pas sortir
-pour l'instant.
-Va jouer ailleurs !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.vase_house.soldier_gate_open",
-  text = [[
-Qu'est-ce que je m'ennuie ici !$0
-Il ne se passe rien du tout !$0
-Cependant, rien ne t'empêche de
-casser quelques vases...
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.vase_house.soldier_no_magic_bar",
-  text = [[
-Des rumeurs disent qu'un voleur
-caché dans un souterrain peut
-t'apprendre la magie...
-Mais ne le dis à personne,
-d'accord ?
-]],
-}
-
-dialog{
   id = "maps.houses.kakarico_village.blind_hideout_house.gang_hideout",
   text = [[
 Salut $v !
@@ -4522,6 +4522,32 @@ attaques de tes ennemis.
 }
 
 dialog{
+  id = "maps.houses.lanayru_forest.camper_house.gerudo_training_grounds",
+  text = [[
+Salut $v !
+Savais-tu qu'au Gymnase Gerudo
+tu pouvais trouver des bottes
+te permettant de fonçer à toute
+allure ?
+
+Je n'ai jamais essayé mais tu
+devrais y jeter un coup d'oeil.
+]],
+}
+
+dialog{
+  id = "maps.houses.lanayru_forest.camper_house.lonlon_ranch",
+  text = [[
+Salut $v ! Je vois que
+tu as les Bottes de Pégase.
+Tu pourrais te rendre au ranch
+Lon Lon, leur lait Meuh Meuh
+est réputé dans tout le pays
+pour son goût !
+]],
+}
+
+dialog{
   id = "maps.houses.north_field.sanctuary.agahnim_1",
   text = [[
 $2Mouah ! Ah ! Ah ! $0
@@ -4818,32 +4844,6 @@ de la vie.
 }
 
 dialog{
-  id = "maps.houses.lanayru_forest.camper_house.gerudo_training_grounds",
-  text = [[
-Salut $v !
-Savais-tu qu'au Gymnase Gerudo
-tu pouvais trouver des bottes
-te permettant de fonçer à toute
-allure ?
-
-Je n'ai jamais essayé mais tu
-devrais y jeter un coup d'oeil.
-]],
-}
-
-dialog{
-  id = "maps.houses.lanayru_forest.camper_house.lonlon_ranch",
-  text = [[
-Salut $v ! Je vois que
-tu as les Bottes de Pégase.
-Tu pourrais te rendre au ranch
-Lon Lon, leur lait Meuh Meuh
-est réputé dans tout le pays
-pour son goût !
-]],
-}
-
-dialog{
   id = "maps.houses.zora_village.rare_pearl.give_zora_bubble",
   question = "1",
   text = [[
@@ -4940,425 +4940,6 @@ dialog{
 Poulaillerie du Château
 Vente de volaille tous les jours
 de 8h à 15h
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.shop.bombs",
-  text = [[
-Trois bombes, pour tout démolir !
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.give_mushroom",
-  question = "1",
-  text = [[
-Voilà un beau champignon que
-tu as là ! $0 Je peux t'en faire
-de la poudre magique !
-Donner le champignon ?
-Oui !
-Non !
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.needs_mushroom",
-  text = [[
-Je cherche des champignons de
-Paris pour faire de la poudre
-magique...$0
-Tu sais où en trouver ?
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.powder_not_ready",
-  text = [[
-Merci beaucoup !$0
-Reviens plus tard à la boutique
-magique pour récupérer ta
-poudre magique !
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.powder_ready",
-  text = [[
-Tiens, voilà ta poudre magique !$0
-Saupoudre-la sur ce que tu veux !
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.trading_ask_straw",
-  question = "1",
-  text = [[
-Ah ! $0 Voilà une belle paille que
-tu as là ! Je pourrais en faire
-des graines !
-Donner la paille ?
-Oui !
-Non !
-]],
-}
-
-dialog{
-  id = "maps.out.cordinia_town.witch.trading_no_straw",
-  text = [[
-Garde-là pour toi, alors !
-]],
-}
-
-dialog{
-  id = "maps.out.death_mountains.sign_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.death_mountains.sign_2",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.gardener.blacksmith",
-  text = [[
-La forge ?$0 Le chemin qui y mène est sous
-l'eau$0.$0.$0.$0
-Mais si tu suis les pavés vers
-la pépinière, tu verras un petit
-escalier qui t'amènera vers
-la forge !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.gardener.rainfall",
-  text = [[
-Bonjour !
-Je suis le jardinier du château ! $0
-
-Après les violentes pluies de la
-semaine dernière, la route a été
-inondée donc j'essaie de faire
-du mieux que je peux pour
-nettoyer tout ça.$0
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.gardener.tip_lift",
-  text = [[
-T'as l'air plutôt costaud pour
-un enfant. Combien tu peux
-soulever ? Appuie sur le
-bouton \[controller_a\] en touchant un
-objet pour le soulever.
-
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.gardener.tip_speak",
-  text = [[
-En nous parlant, tu vas
-apprendre plein de choses !
-Tu comprendras plus tard !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.gardener.tip_sword",
-  text = [[
-Je parie que tu meurs d'envie
-de te servir d'une épée !
-Quand tu en auras une,
-appuie sur le bouton \[controller_B\]
-pour t'en servir.
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.master_sword_obtained",
-  text = [[
-$2$v...$0 $v...$0 $v...$0
-Tu as enfin recouvré tes
-pouvoirs.
-Il est temps pour toi de sauver
-le Royaume. $0Rends-toi au
-Château d’Hyrule.
-Je crois en toi !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_1",
-  skip = "all",
-  text = [[
-Est : Forge
-Sud : Château d'Hyrule
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_2",
-  skip = "all",
-  text = [[
-Est : Cordinia
-Sud-Ouest : Ranch Lonlon
-Ouest : Caverne
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_3",
-  skip = "all",
-  text = [[
-Nord : Caverne
-Sud : Ranch Lonlon
-Ouest : Château d'Hyrule 
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_4",
-  skip = "all",
-  text = [[
-Nord-est : Domaine Zora
-Est : Forge
-Sud-ouest : Château
-Nord-ouest : Village Cocorico
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_5",
-  skip = "all",
-  text = [[
-Route barrée
-Est : La pépinière
-Sud : Le temple du temps
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.sign_6",
-  skip = "all",
-  text = [[
-Nord : La forge
-Nord-Est : Domaine Zora
-Sud : Temple du Temps
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.soldiers.soldiers_day",
-  text = [[
-Que fais-tu ici, petit ?$0
-C'est dangereux de t'aventurer
-tout seul, rentre dans la ville !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.soldiers.soldiers_night",
-  text = [[
-Hé ! Que fais tu encore debout
-à cette heure-ci ?$0
-Maintenant rentre dans la ville !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.soldiers.tip_lift",
-  text = [[
-T'as l'air plutôt costaud pour
-un enfant. Combien tu peux
-soulever ? Appuie sur le
-bouton \[controller_a\] en touchant un
-objet pour le soulever.
-
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.soldiers.tip_speak",
-  text = [[
-En nous parlant, tu vas
-apprendre plein de choses !
-Tu comprendras plus tard !
-]],
-}
-
-dialog{
-  id = "maps.out.east_castle.soldiers.tip_sword",
-  text = [[
-Je parie que tu meurs d'envie
-de te servir d'une épée !
-Quand tu en auras une,
-appuie sur le bouton \[controller_B\]
-pour t'en servir.
-]],
-}
-
-dialog{
-  id = "maps.out.east_mountains.sign_1",
-  text = [[
-Est : Village Goron
-Ouest : Montagnes de l'Ouest
-]],
-}
-
-dialog{
-  id = "maps.out.east_mountains.sign_2",
-  text = [[
-Est : Pic des Neiges
-Sud : Montagnes de l'Ouest
-Ouest : Pic César
-]],
-}
-
-dialog{
-  id = "maps.out.east_mountains.sign_3",
-  text = [[
-Aucune vie n'est possible à
-cette altitude en temps normal !
-
-Il y a peut être un sage en
-haut de cette tour !
-]],
-}
-
-dialog{
-  id = "maps.out.east_mountains.sign_4",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.eventide_island.sign_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_already_finished",
-  text = [[
-Le jeu est terminé. Reviens voir
-mon frère aux ruines si tu veux
-rejouer !
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_finished_higher",
-  text = [[
-Ton temps est de $v.$0
-C'est dommage, tu aurais
-pu faire un peu mieux...
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_finished_lower",
-  text = [[
-Ton temps est de $v.$0
-Félicitations ! La prochaine
-fois, peut-être que tu pourras
-faire encore mieux !
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_piece_of_heart",
-  text = [[
-Tu as fait beaucoup d'efforts.
-Voici un quart de coeur pour
-toi.
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.marathon_man.marathon_rupees",
-  text = [[
-Tiens, voici des rubis pour toi.
-]],
-}
-
-dialog{
-  id = "maps.out.faron_woods.sign_1",
-  text = [[
-<<<
-]],
-}
-
-dialog{
-  id = "maps.out.gerudo_desert.kaepora_gaebora",
-  text = [[
-$2Hou ! C'est moi Kaepora
-Gaebora !$0 Tu es devant le
-Colosse du Désert !
-Le Palais du Désert se trouve
-en haut de l'escalier. Il abrite
-le Gant de Puissance qui te
-permettra de soulever des
-choses plus lourdes.
-
-Cet endroit était jadis un repère
-pour les Gerudos, voleurs qui
-sévissaient à travers tout le
-pays. Depuis que Ganon s'est
-libéré, ce palais est devenu
-une ruine en proie aux forces
-du Mal.
-Le premier des descendants des
-Sept Sages y est enfermé, je
-compte sur toi pour le libérer !
-
-
-As-tu tout compris ?
-Non, pas du tout !
-Oui
-]],
-}
-
-dialog{
-  id = "maps.out.gerudo_desert.sign_1",
-  text = [[
-Nord : Village Gerudo
-Est : Plaine
-Ouest : Désert
-]],
-}
-
-dialog{
-  id = "maps.out.gerudo_desert.sign_2",
-  text = [[
-Attention : Courant très fort
-Risque de noyade élevé
-]],
-}
-
-dialog{
-  id = "maps.out.gerudo_desert.song_learnt",
-  text = [[
-Je vais t'apprendre le requiem
-de l'Esprit, qui te servira à te
-téléporter ici.
-]],
-}
-
-dialog{
-  id = "maps.out.haunted_forest.sign_1",
-  text = [[
-<<<
 ]],
 }
 
@@ -5786,6 +5367,438 @@ Ne les vole pas !
 }
 
 dialog{
+  id = "maps.out.castle_town.tingle.owl_statues",
+  text = [[
+Un autre petit détail :
+Quand tu arrives pour la
+première fois dans une nouvelle
+région, il faut activer la carte
+en interagissant avec une statue
+hibou en appyant sur \[controller_a\] !
+Essaie avec celle-ci pour voir !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.shop.bombs",
+  text = [[
+Trois bombes, pour tout démolir !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.give_mushroom",
+  question = "1",
+  text = [[
+Voilà un beau champignon que
+tu as là ! $0 Je peux t'en faire
+de la poudre magique !
+Donner le champignon ?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.needs_mushroom",
+  text = [[
+Je cherche des champignons de
+Paris pour faire de la poudre
+magique...$0
+Tu sais où en trouver ?
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.powder_not_ready",
+  text = [[
+Merci beaucoup !$0
+Reviens plus tard à la boutique
+magique pour récupérer ta
+poudre magique !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.powder_ready",
+  text = [[
+Tiens, voilà ta poudre magique !$0
+Saupoudre-la sur ce que tu veux !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.trading_ask_straw",
+  question = "1",
+  text = [[
+Ah ! $0 Voilà une belle paille que
+tu as là ! Je pourrais en faire
+des graines !
+Donner la paille ?
+Oui !
+Non !
+]],
+}
+
+dialog{
+  id = "maps.out.cordinia_town.witch.trading_no_straw",
+  text = [[
+Garde-là pour toi, alors !
+]],
+}
+
+dialog{
+  id = "maps.out.death_mountains.sign_1",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.death_mountains.sign_2",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.gardener.blacksmith",
+  text = [[
+La forge ?$0 Le chemin qui y mène est sous
+l'eau$0.$0.$0.$0
+Mais si tu suis les pavés vers
+la pépinière, tu verras un petit
+escalier qui t'amènera vers
+la forge !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.gardener.rainfall",
+  text = [[
+Bonjour !
+Je suis le jardinier du château ! $0
+
+Après les violentes pluies de la
+semaine dernière, la route a été
+inondée donc j'essaie de faire
+du mieux que je peux pour
+nettoyer tout ça.$0
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.gardener.tip_lift",
+  text = [[
+T'as l'air plutôt costaud pour
+un enfant. Combien tu peux
+soulever ? Appuie sur le
+bouton \[controller_a\] en touchant un
+objet pour le soulever.
+
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.gardener.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !
+Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.gardener.tip_sword",
+  text = [[
+Je parie que tu meurs d'envie
+de te servir d'une épée !
+Quand tu en auras une,
+appuie sur le bouton \[controller_B\]
+pour t'en servir.
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.master_sword_obtained",
+  text = [[
+$2$v...$0 $v...$0 $v...$0
+Tu as enfin recouvré tes
+pouvoirs.
+Il est temps pour toi de sauver
+le Royaume. $0Rends-toi au
+Château d’Hyrule.
+Je crois en toi !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_1",
+  skip = "all",
+  text = [[
+Est : Forge
+Sud : Château d'Hyrule
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_2",
+  skip = "all",
+  text = [[
+Est : Cordinia
+Sud-Ouest : Ranch Lonlon
+Ouest : Caverne
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_3",
+  skip = "all",
+  text = [[
+Nord : Caverne
+Sud : Ranch Lonlon
+Ouest : Château d'Hyrule 
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_4",
+  skip = "all",
+  text = [[
+Nord-est : Domaine Zora
+Est : Forge
+Sud-ouest : Château
+Nord-ouest : Village Cocorico
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_5",
+  skip = "all",
+  text = [[
+Route barrée
+Est : La pépinière
+Sud : Le temple du temps
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.sign_6",
+  skip = "all",
+  text = [[
+Nord : La forge
+Nord-Est : Domaine Zora
+Sud : Temple du Temps
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.soldiers_day",
+  text = [[
+Que fais-tu ici, petit ?$0
+C'est dangereux de t'aventurer
+tout seul, rentre dans la ville !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.soldiers_night",
+  text = [[
+Hé ! Que fais tu encore debout
+à cette heure-ci ?$0
+Maintenant rentre dans la ville !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_lift",
+  text = [[
+T'as l'air plutôt costaud pour
+un enfant. Combien tu peux
+soulever ? Appuie sur le
+bouton \[controller_a\] en touchant un
+objet pour le soulever.
+
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_speak",
+  text = [[
+En nous parlant, tu vas
+apprendre plein de choses !
+Tu comprendras plus tard !
+]],
+}
+
+dialog{
+  id = "maps.out.east_castle.soldiers.tip_sword",
+  text = [[
+Je parie que tu meurs d'envie
+de te servir d'une épée !
+Quand tu en auras une,
+appuie sur le bouton \[controller_B\]
+pour t'en servir.
+]],
+}
+
+dialog{
+  id = "maps.out.east_mountains.sign_1",
+  text = [[
+Est : Village Goron
+Ouest : Montagnes de l'Ouest
+]],
+}
+
+dialog{
+  id = "maps.out.east_mountains.sign_2",
+  text = [[
+Est : Pic des Neiges
+Sud : Montagnes de l'Ouest
+Ouest : Pic César
+]],
+}
+
+dialog{
+  id = "maps.out.east_mountains.sign_3",
+  text = [[
+Aucune vie n'est possible à
+cette altitude en temps normal !
+
+Il y a peut être un sage en
+haut de cette tour !
+]],
+}
+
+dialog{
+  id = "maps.out.east_mountains.sign_4",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.eventide_island.sign_1",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_already_finished",
+  text = [[
+Le jeu est terminé. Reviens voir
+mon frère aux ruines si tu veux
+rejouer !
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_finished_higher",
+  text = [[
+Ton temps est de $v.$0
+C'est dommage, tu aurais
+pu faire un peu mieux...
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_finished_lower",
+  text = [[
+Ton temps est de $v.$0
+Félicitations ! La prochaine
+fois, peut-être que tu pourras
+faire encore mieux !
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_piece_of_heart",
+  text = [[
+Tu as fait beaucoup d'efforts.
+Voici un quart de coeur pour
+toi.
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.marathon_man.marathon_rupees",
+  text = [[
+Tiens, voici des rubis pour toi.
+]],
+}
+
+dialog{
+  id = "maps.out.faron_woods.sign_1",
+  text = [[
+<<<
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.kaepora_gaebora",
+  text = [[
+$2Hou ! C'est moi Kaepora
+Gaebora !$0 Tu es devant le
+Colosse du Désert !
+Le Palais du Désert se trouve
+en haut de l'escalier. Il abrite
+le Gant de Puissance qui te
+permettra de soulever des
+choses plus lourdes.
+
+Cet endroit était jadis un repère
+pour les Gerudos, voleurs qui
+sévissaient à travers tout le
+pays. Depuis que Ganon s'est
+libéré, ce palais est devenu
+une ruine en proie aux forces
+du Mal.
+Le premier des descendants des
+Sept Sages y est enfermé, je
+compte sur toi pour le libérer !
+
+
+As-tu tout compris ?
+Non, pas du tout !
+Oui
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.sign_1",
+  text = [[
+Nord : Village Gerudo
+Est : Plaine
+Ouest : Désert
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.sign_2",
+  text = [[
+Attention : Courant très fort
+Risque de noyade élevé
+]],
+}
+
+dialog{
+  id = "maps.out.gerudo_desert.song_learnt",
+  text = [[
+Je vais t'apprendre le requiem
+de l'Esprit, qui te servira à te
+téléporter ici.
+]],
+}
+
+dialog{
+  id = "maps.out.haunted_forest.sign_1",
+  text = [[
+<<<
+]],
+}
+
+dialog{
   id = "maps.out.kakarico_village.bottle_merchant.merchant_no",
   text = [[
 Reviens plus tard alors !
@@ -6069,6 +6082,44 @@ dialog{
   id = "maps.out.kokiri_village.sign_1",
   text = [[
 <<<
+]],
+}
+
+dialog{
+  id = "maps.out.lanayru_forest.sign_1",
+  skip = "all",
+  text = [[
+Est : Village Zora
+Sud : Village Piaf
+Ouest : Forge
+]],
+}
+
+dialog{
+  id = "maps.out.lanayru_forest.sign_2",
+  skip = "all",
+  text = [[
+Est : Cascades Zora
+Ouest : Maison du campeur
+Nord : Domaine Zora
+]],
+}
+
+dialog{
+  id = "maps.out.lanayru_forest.sign_3",
+  skip = "all",
+  text = [[
+Est : Cascades Zora
+Sud : Forêt Zora
+Ouest : Village Zora
+]],
+}
+
+dialog{
+  id = "maps.out.lanayru_forest.sign_4",
+  skip = "all",
+  text = [[
+Etable abandonnée
 ]],
 }
 
@@ -6673,44 +6724,6 @@ dialog{
 Sud : Forêt de Firone
 Ouest : Why le Bûcheron
 Nord : Village Piaf
-]],
-}
-
-dialog{
-  id = "maps.out.lanayru_forest.sign_1",
-  skip = "all",
-  text = [[
-Est : Village Zora
-Sud : Village Piaf
-Ouest : Forge
-]],
-}
-
-dialog{
-  id = "maps.out.lanayru_forest.sign_2",
-  skip = "all",
-  text = [[
-Est : Cascades Zora
-Ouest : Maison du campeur
-Nord : Domaine Zora
-]],
-}
-
-dialog{
-  id = "maps.out.lanayru_forest.sign_3",
-  skip = "all",
-  text = [[
-Est : Cascades Zora
-Sud : Forêt Zora
-Ouest : Village Zora
-]],
-}
-
-dialog{
-  id = "maps.out.lanayru_forest.sign_4",
-  skip = "all",
-  text = [[
-Etable abandonnée
 ]],
 }
 

@@ -367,9 +367,10 @@ local function setup_inside_lights(map)
 			function hl:on_update()
 				local slot_1 = map:get_game():get_item_assigned(1)
 				local slot_2 = map:get_game():get_item_assigned(2)
-				if slot_1:get_name() == "lamp" or slot_2:get_name() == "lamp" then
+				if (slot_1 ~= nil and slot_1:get_name() == "lamp")
+				 or (slot_2 ~= nil and slot_2:get_name() == "lamp") then
 						hl:set_position(hero:get_position())
-				elseif slot_1:get_name() ~= "lamp" and slot_2:get_name() ~= "lamp" then
+				else
 					hl:set_position(-320, -320)
 				end
 			end
@@ -382,9 +383,10 @@ local function setup_inside_lights(map)
 				function hl:on_update()
 					local slot_1 = map:get_game():get_item_assigned(1)
 					local slot_2 = map:get_game():get_item_assigned(2)
-					if slot_1:get_name() == "lamp" or slot_2:get_name() == "lamp" then
+				if (slot_1 ~= nil and slot_1:get_name() == "lamp")
+				 or (slot_2 ~= nil and slot_2:get_name() == "lamp") then
 							hl:set_position(hero:get_position())
-					elseif slot_1:get_name() ~= "lamp" and slot_2:get_name() ~= "lamp" then
+					else
 						hl:set_position(-320, -320)
 					end
 				end

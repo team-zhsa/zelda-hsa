@@ -13932,7 +13932,7 @@ npc{
   y = 245,
   direction = 3,
   subtype = 1,
-  sprite = "npc/hylian_impa",
+  sprite = "npc/impa",
 }
 
 custom_entity{
@@ -18460,6 +18460,51 @@ tile{
   tileset = "outside_buildings",
 }
 
+tile{
+  layer = 1,
+  x = 968,
+  y = 512,
+  width = 16,
+  height = 8,
+  pattern = "1123",
+}
+
+tile{
+  layer = 1,
+  x = 984,
+  y = 512,
+  width = 8,
+  height = 32,
+  pattern = "1124",
+}
+
+tile{
+  layer = 1,
+  x = 968,
+  y = 520,
+  width = 16,
+  height = 16,
+  pattern = "1125",
+}
+
+tile{
+  layer = 1,
+  x = 968,
+  y = 536,
+  width = 16,
+  height = 8,
+  pattern = "1126",
+}
+
+tile{
+  layer = 1,
+  x = 960,
+  y = 512,
+  width = 8,
+  height = 32,
+  pattern = "1122",
+}
+
 teletransporter{
   layer = 1,
   x = 1280,
@@ -18682,5 +18727,37 @@ jumper{
   height = 8,
   direction = 6,
   jump_length = 64,
+}
+
+destination{
+  name = "from_wooden_top_2",
+  layer = 1,
+  x = 976,
+  y = 533,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 1,
+  x = 968,
+  y = 520,
+  properties = {
+    {
+      key = "effect",
+      value = "radial_fade_out",
+    },
+  },
+  width = 16,
+  height = 16,
+  destination_map = "inside/houses/castle_town/wooden_house",
+  destination = "from_roof",
+}
+
+stairs{
+  layer = 1,
+  x = 968,
+  y = 520,
+  direction = 1,
+  subtype = 3,
 }
 

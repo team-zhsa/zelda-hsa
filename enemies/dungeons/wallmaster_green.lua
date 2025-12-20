@@ -9,7 +9,7 @@ local grabbed_hero
 
 function enemy:on_created()
 
-  enemy:set_life(4)
+  enemy:set_life(8)
   enemy:set_damage(0)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
@@ -30,7 +30,7 @@ function enemy:on_restarted()
   	explosion = 4,
   	sword = 1,
   	thrown_item = 4,
-  	fire = 2,
+  	fire = 4,
     jump_on = "ignored",
   	hammer = 4,
   	hookshot = "ignored",
