@@ -8,7 +8,7 @@ properties{
   world = "dungeon_3",
   floor = -1,
   tileset = "absolute_dungeon_06",
-  music = "dungeons/10_forgotten",
+  music = "dungeons/03_fire",
 }
 
 tile{
@@ -13014,11 +13014,16 @@ door{
   layer = 0,
   x = 1400,
   y = 744,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 1,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_17_23",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -13026,11 +13031,16 @@ door{
   layer = 0,
   x = 1400,
   y = 680,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_17_23",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 enemy{
@@ -13140,11 +13150,16 @@ door{
   layer = 0,
   x = 1112,
   y = 1224,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 1,
   sprite = "entities/doors/inside/door_d1_very_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -13152,11 +13167,16 @@ door{
   layer = 0,
   x = 1112,
   y = 1160,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/inside/door_d1_very_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_34",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 dynamic_tile{
@@ -13184,11 +13204,16 @@ door{
   layer = 0,
   x = 1240,
   y = 1064,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 0,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -13196,11 +13221,16 @@ door{
   layer = 0,
   x = 1304,
   y = 1064,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 2,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_28_29",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 chest{
@@ -13328,11 +13358,16 @@ door{
   layer = 0,
   x = 1528,
   y = 1224,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 1,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_29_35",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 door{
@@ -13340,11 +13375,16 @@ door{
   layer = 0,
   x = 1528,
   y = 1160,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_3_b1_door_29_35",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 crystal{

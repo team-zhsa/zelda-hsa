@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/zora_forest/camper_house.
+-- Lua script of map inside/houses/lanayru_forest/camper_house.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.
@@ -19,7 +19,7 @@ end
 
 npc_camper:register_event("on_interaction", function()
 	if game:has_item("pegasus_boots") then
-		game:start_dialog("maps.houses.zora_forest.camper_house.lonlon_ranch", game:get_player_name())
-	else game:start_dialog("maps.houses.zora_forest.camper_house.gerudo_training_grounds", game:get_player_name())
+		game:start_dialog("maps.houses.lanayru_forest.camper_house.lonlon_ranch", game:get_player_name())
+	else game:start_dialog("maps.houses.lanayru_forest.camper_house.gerudo_training_grounds", game:get_player_name())
 	end
 end)

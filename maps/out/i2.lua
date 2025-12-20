@@ -23,7 +23,7 @@ map.overlay_opacity = 96
 
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
-  game:show_map_name("zora_forest")
+  game:show_map_name("lanayru_forest")
 	map:set_overlay()
 end)
 

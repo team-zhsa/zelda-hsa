@@ -127,6 +127,8 @@ map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
 map{ id = "inside/caves/hyrule_town/lamp_cave", description = "Lamp Cave" }
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
+map{ id = "inside/caves/lanayru_forest/domain_entrance_cave", description = "Domain Entrace Cave" }
+map{ id = "inside/caves/lanayru_forest/river_cave", description = "River Cave" }
 map{ id = "inside/caves/miracles_coast/magical_maze_cave", description = "Magical Maze Cave" }
 map{ id = "inside/caves/north_field/hylia_to_kakarico", description = "Hylia to Kakarico" }
 map{ id = "inside/caves/north_field/marathon_man_building", description = "Marathon Man building" }
@@ -160,8 +162,6 @@ map{ id = "inside/caves/west_mountains/c1_camp_upper_0f", description = "C1 2 Ca
 map{ id = "inside/caves/west_mountains/c1_camp_upper_1f", description = "C1 2 Camp to upper mountains (1st Floor)" }
 map{ id = "inside/caves/west_mountains/c1_camp_upper_2f", description = "C1 2 Camp to upper mountains (2nd Floor)" }
 map{ id = "inside/caves/west_mountains/c1_fairy_cave", description = "C1 1 Fairy cave" }
-map{ id = "inside/caves/zora_forest/domain_entrance_cave", description = "Domain Entrace Cave" }
-map{ id = "inside/caves/zora_forest/river_cave", description = "River Cave" }
 map{ id = "inside/houses/around_castle/fortune_teller", description = "Fortune Teller" }
 map{ id = "inside/houses/around_castle/grey_house", description = "Grey House" }
 map{ id = "inside/houses/around_castle/poultry_shop", description = "Poultry Shop" }
@@ -208,6 +208,9 @@ map{ id = "inside/houses/kakariko_village/sahasrahla", description = "Sahasrahla
 map{ id = "inside/houses/kakariko_village/shop", description = "Kakarico Shop" }
 map{ id = "inside/houses/kakariko_village/windmill", description = "Windmill" }
 map{ id = "inside/houses/korok_village/shop", description = "Korok Shop" }
+map{ id = "inside/houses/lanayru_forest/camper_house", description = "Camper's House" }
+map{ id = "inside/houses/lanayru_forest/forest_hideout", description = "Forest Hideout" }
+map{ id = "inside/houses/lanayru_forest/red_hut", description = "Red Hut" }
 map{ id = "inside/houses/north_field/sanctuary", description = "Sanctuary" }
 map{ id = "inside/houses/parapa_town/blue_shop", description = "Blue Shop" }
 map{ id = "inside/houses/snowpeaks/shop", description = "Snow Shop" }
@@ -215,9 +218,6 @@ map{ id = "inside/houses/south_field/flower_house", description = "Flower House"
 map{ id = "inside/houses/south_field/lost_woods_map_house", description = "Lost Woods Map House" }
 map{ id = "inside/houses/south_field/ravios_house", description = "Ravio's House" }
 map{ id = "inside/houses/west_forest/deku_tree", description = "Deku Tree Entrance" }
-map{ id = "inside/houses/zora_forest/camper_house", description = "Camper's House" }
-map{ id = "inside/houses/zora_forest/forest_hideout", description = "Forest Hideout" }
-map{ id = "inside/houses/zora_forest/red_hut", description = "Red Hut" }
 map{ id = "inside/houses/zora_village/shop", description = "Zora Shop" }
 map{ id = "inside/houses/zora_village/trading_house", description = "Rare Pearl House" }
 map{ id = "inside/houses/zora_village/zora_king", description = "Zora King" }
@@ -281,7 +281,7 @@ map{ id = "out/e8", description = "E8 (Miracles Coast)" }
 map{ id = "out/e9", description = "E9 (Sea)" }
 map{ id = "out/f1", description = "F1 (Death Mountain, Dodongo's Cavern)" }
 map{ id = "out/f2", description = "F2 (N Field)" }
-map{ id = "out/f3", description = "F3 (Around Castle)" }
+map{ id = "out/f3", description = "F3 (Around the Castle)" }
 map{ id = "out/f4", description = "F4 (Castle Town)" }
 map{ id = "out/f5", description = "F5 (S Field)" }
 map{ id = "out/f6", description = "F6 (S Field)" }
@@ -289,7 +289,7 @@ map{ id = "out/f7", description = "F7 (Great Swamp)" }
 map{ id = "out/f8", description = "F8 (Miracles Coast)" }
 map{ id = "out/f9", description = "F9 (Sea)" }
 map{ id = "out/g1", description = "G1 (E Mountains, Cesar's Peak)" }
-map{ id = "out/g2", description = "G2 (East of the Castle)" }
+map{ id = "out/g2", description = "G2 (Zora River)" }
 map{ id = "out/g3", description = "G3 (East of the Castle)" }
 map{ id = "out/g4", description = "G4 (East of the Castle, Temple of Time)" }
 map{ id = "out/g5", description = "G5 (S Field)" }
@@ -1356,6 +1356,7 @@ music{ id = "cutscenes/master_sword", description = "Master sword" }
 music{ id = "cutscenes/prologue", description = "Prologue" }
 music{ id = "cutscenes/raining", description = "Beginning" }
 music{ id = "cutscenes/savegames", description = "Savegames" }
+music{ id = "cutscenes/sneaking_into_cavern", description = "Sneaking into the Cavern" }
 music{ id = "cutscenes/song_learned", description = "Song learned" }
 music{ id = "cutscenes/title_screen", description = "Title Screen" }
 music{ id = "cutscenes/victory", description = "Victory" }
@@ -1388,7 +1389,6 @@ music{ id = "inside/castle_courtyard", description = "Castle Courtyard" }
 music{ id = "inside/cave", description = "Cave" }
 music{ id = "inside/cave_ordeals", description = "Ordeals Cave" }
 music{ id = "inside/fairy", description = "Fairy" }
-music{ id = "inside/fishing", description = "Fishing Hole" }
 music{ id = "inside/fortune", description = "Fortune" }
 music{ id = "inside/gerudo_airship", description = "Gerudo Airship" }
 music{ id = "inside/gerutones", description = "Gerutones" }
@@ -1421,29 +1421,32 @@ music{ id = "outside/black_mist", description = "Black Mist" }
 music{ id = "outside/celesbourg", description = "Celesbourg" }
 music{ id = "outside/clock_town", description = "Clock Town" }
 music{ id = "outside/dark_world", description = "Dark World" }
-music{ id = "outside/east_lost_woods", description = "East Lost Woods" }
 music{ id = "outside/faron_woods", description = "Faron Woods" }
 music{ id = "outside/field_4", description = "Hyrule Field (Rock)" }
-music{ id = "outside/field_tp", description = "Hyrule Field (TP)" }
 music{ id = "outside/gerudo", description = "Gerudo Desert" }
 music{ id = "outside/graveyard", description = "Graveyard" }
 music{ id = "outside/hylia_lake", description = "Hylia Lake" }
-music{ id = "outside/hyrule_field_day", description = "Hyrule Field (Day)" }
-music{ id = "outside/hyrule_field_intro_day", description = "Hyrule Field (Intro, day)" }
-music{ id = "outside/hyrule_field_intro_night", description = "Hyrule Field (Intro, night)" }
-music{ id = "outside/hyrule_field_night", description = "Hyrule Field (Night)" }
 music{ id = "outside/hyrule_town", description = "Hyrule Town" }
 music{ id = "outside/kakarico", description = "Kakarico Village" }
 music{ id = "outside/kokiri", description = "Kokiri Forest" }
+music{ id = "outside/lanayru_forest", description = "Zora Forest" }
 music{ id = "outside/lonlon", description = "Lonlon Ranch" }
 music{ id = "outside/lost_woods", description = "Lost Woods" }
 music{ id = "outside/mountains", description = "Death Mountains" }
 music{ id = "outside/mudora", description = "Mudora" }
+music{ id = "outside/north_field_day", description = "N Field (Day)" }
+music{ id = "outside/north_field_intro_day", description = "Hyrule Field (Intro, day)" }
+music{ id = "outside/north_field_intro_night", description = "Hyrule Field (Intro, night)" }
+music{ id = "outside/north_field_night", description = "N Field (Night)" }
 music{ id = "outside/north_korea", description = "North Korea" }
 music{ id = "outside/parapa_town", description = "Parapa Town" }
 music{ id = "outside/rito_village", description = "Rito Village" }
+music{ id = "outside/sacred_grove", description = "Sacred Grove" }
 music{ id = "outside/sea", description = "Great Sea" }
 music{ id = "outside/snowpeaks", description = "Snowpeaks" }
+music{ id = "outside/south_field_day", description = "S Field (Day)" }
+music{ id = "outside/south_field_intro_day", description = "S Field (Intro, day)" }
+music{ id = "outside/south_field_night", description = "S Field (Night)" }
 music{ id = "outside/southern_hyrule", description = "Southern Hyrule" }
 music{ id = "outside/subrosia", description = "Underworld" }
 music{ id = "outside/swamp", description = "Swamp" }
@@ -1451,7 +1454,6 @@ music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
 music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/west_mountains", description = "West Mountains" }
 music{ id = "outside/zora", description = "Zora Domain" }
-music{ id = "outside/zora_forest", description = "Zora Forest" }
 
 sound{ id = "arrow_hit", description = "Empty sound" }
 sound{ id = "boomerang", description = "Empty sound" }
@@ -2265,14 +2267,14 @@ file{ path = "maps/inside/caves/faron_woods/island_cave.dat", author = "The Unkn
 file{ path = "maps/inside/caves/faron_woods/island_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.dat", author = "The Unknown", }
 file{ path = "maps/inside/caves/gerudo_valley/cave_fairy_1.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/lanayru_forest/domain_entrance_cave.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/lanayru_forest/domain_entrance_cave.lua", author = "The Unknown", }
+file{ path = "maps/inside/caves/lanayru_forest/river_cave.dat", author = "The Unknown", }
+file{ path = "maps/inside/caves/lanayru_forest/river_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/caves/miracles_coast/magical_maze_cave.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/miracles_coast/magical_maze_cave.lua", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/south_field/swamp_fairy_cave.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/caves/south_field/swamp_fairy_cave.lua", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.dat", author = "The Unknown", }
-file{ path = "maps/inside/caves/zora_forest/domain_entrance_cave.lua", author = "The Unknown", }
-file{ path = "maps/inside/caves/zora_forest/river_cave.dat", author = "The Unknown", }
-file{ path = "maps/inside/caves/zora_forest/river_cave.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/around_castle/fortune_teller.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/around_castle/fortune_teller.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/around_castle/grey_house.dat", author = "The Unknown", }
@@ -2311,12 +2313,10 @@ file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "The Unkno
 file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/korok_village/shop.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/houses/korok_village/shop.lua", author = "The Unknown", license = "GPL v3" }
+file{ path = "maps/inside/houses/lanayru_forest/forest_hideout.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/lanayru_forest/red_hut.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/west_forest/deku_tree.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/zora_forest/forest_hideout.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/zora_forest/forest_hideout.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/zora_forest/red_hut.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/zora_forest/red_hut.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/shop.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/zora_village/trading_house.dat", author = "The Unknown", }
@@ -2568,11 +2568,11 @@ file{ path = "musics/inside/shop.ogg", license = "Proprietary" }
 file{ path = "musics/inside/temple_time.ogg", license = "Proprietary" }
 file{ path = "musics/inside/windmill.ogg", license = "Proprietary" }
 file{ path = "musics/outside/dark_world.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
-file{ path = "musics/outside/east_lost_woods.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
-file{ path = "musics/outside/hyrule_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
-file{ path = "musics/outside/hyrule_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/outside/lanayru_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
+file{ path = "musics/outside/north_field_intro_day.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
+file{ path = "musics/outside/north_field_intro_night.ogg", author = "Koji Kondo", license = "Proprietary" }
+file{ path = "musics/outside/sacred_grove.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
 file{ path = "musics/outside/west_mountains.ogg", author = "Ryo Nagamatsu", license = "Proprietary" }
-file{ path = "musics/outside/zora_forest.ogg", author = "Manaka Kataoka, Yasuaki Iwata", }
 file{ path = "scripts/audio_manager.lua", license = "GPL v3" }
 file{ path = "scripts/automation", author = "Olivier Cl�ro", license = "BSD, GPL v3" }
 file{ path = "scripts/automation/automation.lua", author = "Olivier Cl�ro", license = "GPL v3" }

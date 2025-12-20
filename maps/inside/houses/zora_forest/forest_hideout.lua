@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/zora_forest/forest_hideout.
+-- Lua script of map inside/houses/lanayru_forest/forest_hideout.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

@@ -14,7 +14,7 @@ map.overlay_opacity = 96
 
 map:register_event("on_started", function()
 	map:set_digging_allowed(true)
-	game:show_map_name("east_lost_woods")
+	game:show_map_name("sacred_grove")
 	map:set_overlay()
 	for custom_entity in map:get_entities("squirrel") do
 		local movement = sol.movement.create("random")
@@ -120,7 +120,7 @@ function owl_dialog()
         owl_movement_leave:set_speed(60)
         owl_movement_leave:start(owl_8, function()
           map:set_cinematic_mode(false, options)
-          audio_manager:play_music_fade(map, "outside/east_lost_woods")
+          audio_manager:play_music_fade(map, "outside/sacred_grove")
           hero:unfreeze()
         end)
       end) 
