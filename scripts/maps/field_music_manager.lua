@@ -3,6 +3,7 @@
 local field_music_manager = {}
 local audio_manager = require("scripts/audio_manager")
 local map_meta = sol.main.get_metatable("map")
+local playing_time = ""
 require("scripts/multi_events")
 
 local north_field_id = {
@@ -41,81 +42,90 @@ local function map_is_south_field(id)
 			return true
 		end
 	end
-end
-
-function field_music_manager:play_day(map, game)
-	if map_is_north_field(map:get_id()) then
-
-		if not game:is_step_done("dungeon_1_started") then -- Intro music
-			audio_manager:play_music_fade(map, "outside/north_field_intro_day")
-		elseif game:is_step_last("priest_kidnapped") then
-			audio_manager:play_music_fade(map, "cutscenes/cutscene_danger")
-		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
-			or	game:is_step_done("agahnim_met") then -- Normal music
-			audio_manager:play_music_fade(map, "outside/north_field_day")
-		end
-		
-	elseif map_is_south_field(map:get_id()) then
-
-		if not game:is_step_done("dungeon_1_started") then -- Intro music
-				audio_manager:play_music_fade(map, "outside/south_field_intro_day")
-		elseif game:is_step_last("priest_kidnapped") then
-			audio_manager:play_music_fade(map, "cutscenes/cutscene_danger")
-		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
-					or	game:is_step_done("agahnim_met") then -- Normal music
-				audio_manager:play_music_fade(map, "outside/south_field_day")
-		end
-
-	else audio_manager:play_music_fade(map, map:get_music())
-	
-	end
-end
-
-function field_music_manager:play_night(map, game)
-	if map_is_north_field(map:get_id()) then
-
-		if not game:is_step_done("dungeon_1_started") then -- Intro music
-			audio_manager:play_music_fade(map, "outside/north_field_intro_night")
-		elseif game:is_step_last("priest_kidnapped") then
-			audio_manager:play_music_fade(map, "cutscenes/cutscene_danger")
-		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
-			or	game:is_step_done("agahnim_met") then -- Normal music
-			audio_manager:play_music_fade(map, "outside/north_field_night")
-		end
-		
-	elseif map_is_south_field(map:get_id()) then
-
-		if not game:is_step_done("dungeon_1_started") then -- Intro music
-				audio_manager:play_music_fade(map, "outside/south_field_night")
-		elseif game:is_step_last("priest_kidnapped") then
-			audio_manager:play_music_fade(map, "cutscenes/cutscene_danger")
-		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
-					or	game:is_step_done("agahnim_met") then -- Normal music
-				audio_manager:play_music_fade(map, "outside/south_field_night")
-		end
-
-	else audio_manager:play_music_fade(map, map:get_music())
-	
-	end
-end
-
-function field_music_manager:play_music(map, game)
-	if game:get_value("time_of_day") == "day" or game:get_value("time_of_day") == nil then
-		field_music_manager:play_day(map, game)
-	elseif game:get_value("time_of_day") == "night" then
-		field_music_manager:play_night(map, game)
-	end
-
-	sol.timer.start(game, 10000, function()
-		field_music_manager:play_music(map, game)
-		return true
-	end)
 
 end
 
 map_meta:register_event("on_started", function(map)
   local game = map:get_game()
-	field_music_manager:play_music(map, game)
+	if map_is_south_field(map:get_id()) or map_is_north_field(map:get_id()) then
+		field_music_manager:check_time(map)
+		field_music_manager:play_music(map, game, playing_time)
+		sol.timer.start(map, 1000, function()
+			field_music_manager:check_time(map)
+			return true
+		end)
+	end
 end)
+
+function field_music_manager:check_time(map)
+	local game = sol.main.get_game()
+	local current_time = game:get_value("time_of_day")
+	if playing_time ~= current_time then
+		playing_time = current_time
+		
+		field_music_manager:play_music(map, playing_time)
+		print("check_time new playing "..playing_time)
+	end
+
+end
+
+function field_music_manager:play_music(map, playing_time)
+		if playing_time == "night" then
+			field_music_manager:play_night(map)
+		elseif playing_time == "day" or "dawn" or "sunset" or "twilight" then
+			field_music_manager:play_day(map)
+		end
+
+end
+
+function field_music_manager:play_day(map)
+	local game = sol.main.get_game()
+	if map_is_north_field(map:get_id()) then
+		if not game:is_step_done("dungeon_1_started") then -- Intro music
+			audio_manager:play_music("outside/north_field_intro_day")
+		elseif game:is_step_last("priest_kidnapped") then
+			audio_manager:play_music("cutscenes/cutscene_danger")
+		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
+			or	game:is_step_done("agahnim_met") then -- Normal music
+			audio_manager:play_music("outside/north_field_day")
+		end
+		
+	elseif map_is_south_field(map:get_id()) then
+		if not game:is_step_done("dungeon_1_started") then -- Intro music
+				audio_manager:play_music("outside/south_field_intro_day")
+		elseif game:is_step_last("priest_kidnapped") then
+			audio_manager:play_music("cutscenes/cutscene_danger")
+		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
+					or	game:is_step_done("agahnim_met") then -- Normal music
+				audio_manager:play_music("outside/south_field_day")
+		end
+	end
+
+end
+
+function field_music_manager:play_night(map)
+	local game = sol.main.get_game()
+	if map_is_north_field(map:get_id()) then
+		if not game:is_step_done("dungeon_1_started") then -- Intro music
+			audio_manager:play_music("outside/north_field_intro_night")
+		elseif game:is_step_last("priest_kidnapped") then
+			audio_manager:play_music("cutscenes/cutscene_danger")
+		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
+			or	game:is_step_done("agahnim_met") then -- Normal music
+			audio_manager:play_music("outside/north_field_night")
+		end
+		
+	elseif map_is_south_field(map:get_id()) then
+		if not game:is_step_done("dungeon_1_started") then -- Intro music
+				audio_manager:play_music("outside/south_field_night")
+		elseif game:is_step_last("priest_kidnapped") then
+			audio_manager:play_music("cutscenes/cutscene_danger")
+		elseif (game:is_step_done("dungeon_1_started") and not game:is_step_done("priest_kidnapped"))
+					or	game:is_step_done("agahnim_met") then -- Normal music
+				audio_manager:play_music("outside/south_field_night")
+		end
+	end
+
+end
 
 return field_music_manager

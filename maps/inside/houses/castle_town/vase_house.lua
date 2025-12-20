@@ -9,9 +9,9 @@ local treasure_manager = require("scripts/maps/treasure_manager")
 
 npc_soldier:register_event("on_interaction", function()
   if game:is_step_last("ocarina_obtained") then
-    game:start_dialog("maps.houses.hyrule_town.vase_house.soldier_no_magic_bar")
+    game:start_dialog("maps.houses.castle_town.vase_house.soldier_no_magic_bar")
   elseif not game:is_step_done("world_map_obtained") then
-    game:start_dialog("maps.houses.hyrule_town.vase_house.soldier_gate_closed")
-  else game:start_dialog("maps.houses.hyrule_town.vase_house.soldier_gate_open")
+    game:start_dialog("maps.houses.castle_town.vase_house.soldier_gate_closed")
+  else game:start_dialog("maps.houses.castle_town.vase_house.soldier_gate_open")
   end
 end)

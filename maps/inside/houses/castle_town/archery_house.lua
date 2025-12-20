@@ -23,42 +23,42 @@ function end_minigame()
   hero:teleport(map:get_id(),"front_manager")
   sol.timer.start(1000,function()
     sol.audio.play_music("inside/house")
-    game:start_dialog("maps.houses.hyrule_town.archery_house.results_calculate",function()
+    game:start_dialog("maps.houses.castle_town.archery_house.results_calculate",function()
       hero:freeze()
       manager:get_sprite():set_direction(0)
       sol.timer.start(1000,function()
         manager:get_sprite():set_direction(3)
         hero:unfreeze()
         if hits >= 8 then
-          game:start_dialog("maps.houses.hyrule_town.archery_house.results_win",function()
-              if game:get_value("inside_hyrule_town_archery_game_piece_of_heart") ~= true then
+          game:start_dialog("maps.houses.castle_town.archery_house.results_win",function()
+              if game:get_value("inside_castle_town_archery_game_piece_of_heart") ~= true then
                 -- First time playing, give piece of heart.
-                hero:start_treasure("piece_of_heart", 1, "inside_hyrule_town_archery_game_piece_of_heart", function()
-                  game:start_dialog("maps.houses.hyrule_town.archery_house.results_win")
+                hero:start_treasure("piece_of_heart", 1, "inside_castle_town_archery_game_piece_of_heart", function()
+                  game:start_dialog("maps.houses.castle_town.archery_house.results_win")
                 end)
               else
                 if game:get_value("get_quiver_3") then
                     --Mini-jeu déjà gagné, on donne au joueur de l'argent
                     hero:start_treasure("rupee",4,"",function()
-                      game:start_dialog("maps.houses.hyrule_town.archery_house.results_win_2")
+                      game:start_dialog("maps.houses.castle_town.archery_house.results_win_2")
                     end)
                 else
                   if game:get_value("great_fairy_1_offering_done") then
                   --On donne l'upgrade 2 du carquois
                     hero:start_treasure("quiver",3,"get_quiver_3",function()
-                      game:start_dialog("maps.houses.hyrule_town.archery_house.results_win_2")
+                      game:start_dialog("maps.houses.castle_town.archery_house.results_win_2")
                     end)
                   else
                     --Mini-jeu déjà gagné, on donne au joueur de l'argent
                     hero:start_treasure("rupee",4,"",function()
-                      game:start_dialog("maps.houses.hyrule_town.archery_house.results_win_2")
+                      game:start_dialog("maps.houses.castle_town.archery_house.results_win_2")
                     end)
                   end
                 end
               end
           end)
         else
-          game:start_dialog("maps.houses.hyrule_town.archery_house.results_lose")
+          game:start_dialog("maps.houses.castle_town.archery_house.results_lose")
         end
       end)
     end)
@@ -84,7 +84,7 @@ function minigame_manager()
     if arrows_remaining == 0 then
       arrows_remaining = 1000
       sol.timer.start(1200,function()
-        game:start_dialog("maps.houses.hyrule_town.archery_house.playing_end",function()
+        game:start_dialog("maps.houses.castle_town.archery_house.playing_end",function()
           game:get_item("bow"):set_amount(current_arrows)
           map:set_entities_enabled("cannon_1",false)
           map:set_entities_enabled("target",false)
@@ -103,25 +103,25 @@ end
 
 function manager:on_interaction()
   if playing_archery then
-    game:start_dialog("maps.houses.hyrule_town.archery_house.already_playing")
+    game:start_dialog("maps.houses.castle_town.archery_house.already_playing")
   elseif not game:has_item("bow") then
-    game:start_dialog("maps.houses.hyrule_town.archery_house.not_bow")
+    game:start_dialog("maps.houses.castle_town.archery_house.not_bow")
   else
     if minigame_done then
-      game:start_dialog("maps.houses.hyrule_town.archery_house.playing_finished")
+      game:start_dialog("maps.houses.castle_town.archery_house.playing_finished")
     else
-      game:start_dialog("maps.houses.hyrule_town.archery_house.play_question",function(answer)
+      game:start_dialog("maps.houses.castle_town.archery_house.play_question",function(answer)
         if answer == 1 then
           -- Checking if Link has enough money.
           if game:get_money() >= 40 then
             game:remove_money(40)
-            game:start_dialog("maps.houses.hyrule_town.archery_house.playing_yes",function()
+            game:start_dialog("maps.houses.castle_town.archery_house.playing_yes",function()
               manager:get_sprite():set_direction(3)
               current_arrows = game:get_item("bow"):get_amount()
               game:get_item("bow"):set_amount(10)
               hero:teleport(map:get_id(),"minigame_start")
               sol.timer.start(1000,function()
-                game:start_dialog("maps.houses.hyrule_town.archery_house.playing_start",function()
+                game:start_dialog("maps.houses.castle_town.archery_house.playing_start",function()
                   map:set_entities_enabled("cannon_1",true)
                   map:set_entities_enabled("target",true)
                   map:set_entities_enabled("display_target",true)
@@ -135,10 +135,10 @@ function manager:on_interaction()
             end)
           else
             sol.audio.play_sound("common/wrong")
-            game:start_dialog("maps.houses.hyrule_town.archery_house.not_enough_money")
+            game:start_dialog("maps.houses.castle_town.archery_house.not_enough_money")
           end
         else
-          game:start_dialog("maps.houses.hyrule_town.archery_house.playing_no")
+          game:start_dialog("maps.houses.castle_town.archery_house.playing_no")
         end
       end) 
     end

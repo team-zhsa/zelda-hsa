@@ -1,4 +1,4 @@
--- Lua script of map inside/houses/hyrule_town/garden_green.
+-- Lua script of map inside/houses/castle_town/shop.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

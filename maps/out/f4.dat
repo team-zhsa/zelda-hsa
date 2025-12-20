@@ -12806,7 +12806,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/library",
+  destination_map = "inside/houses/castle_town/library",
   destination = "from_outside",
 }
 
@@ -12822,7 +12822,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/purple_house",
+  destination_map = "inside/houses/castle_town/purple_house",
   destination = "from_outside",
 }
 
@@ -12854,7 +12854,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/vase_house",
+  destination_map = "inside/houses/castle_town/vase_house",
   destination = "from_outside",
 }
 
@@ -12914,7 +12914,7 @@ npc{
   y = 861,
   direction = 3,
   subtype = 1,
-  sprite = "npc/fortune_teller_red",
+  sprite = "npc/merchant_hooded_orange",
 }
 
 shop_treasure{
@@ -12925,7 +12925,7 @@ shop_treasure{
   treasure_variant = 3,
   price = 70,
   font = "white_digits",
-  dialog = "maps.out.hyrule_town.shop.bombs",
+  dialog = "maps.out.castle_town.shop.bombs",
 }
 
 shop_treasure{
@@ -12935,7 +12935,7 @@ shop_treasure{
   treasure_name = "wine",
   price = 15,
   font = "white_digits",
-  dialog = "maps.out.hyrule_town.shop.wine",
+  dialog = "maps.out.castle_town.shop.wine",
 }
 
 shop_treasure{
@@ -12945,7 +12945,7 @@ shop_treasure{
   treasure_name = "rupee",
   price = 110,
   font = "white_digits",
-  dialog = "maps.out.hyrule_town.shop.rupee",
+  dialog = "maps.out.castle_town.shop.rupee",
 }
 
 teletransporter{
@@ -12960,7 +12960,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/archery_house",
+  destination_map = "inside/houses/castle_town/archery_house",
 }
 
 destination{
@@ -12983,7 +12983,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/shop",
+  destination_map = "inside/houses/castle_town/shop",
   destination = "from_outside",
 }
 
@@ -13357,7 +13357,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/inn",
+  destination_map = "inside/houses/castle_town/inn",
 }
 
 teletransporter{
@@ -13590,7 +13590,7 @@ pickable{
   x = 312,
   y = 365,
   treasure_name = "piece_of_heart",
-  treasure_savegame_variable = "outside_hyrule_town_piece_of_heart",
+  treasure_savegame_variable = "outside_castle_town_piece_of_heart",
 }
 
 chest{
@@ -13599,7 +13599,7 @@ chest{
   y = 1045,
   treasure_name = "rupee",
   treasure_variant = 3,
-  treasure_savegame_variable = "outside_hyrule_town_rupees_1",
+  treasure_savegame_variable = "outside_castle_town_rupees_1",
   sprite = "entities/chests/chest_normal",
 }
 
@@ -13609,7 +13609,7 @@ chest{
   y = 781,
   treasure_name = "rupee",
   treasure_variant = 3,
-  treasure_savegame_variable = "outside_hyrule_town_rupees_2",
+  treasure_savegame_variable = "outside_castle_town_rupees_2",
   sprite = "entities/chests/chest_normal",
 }
 
@@ -13633,7 +13633,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/wooden_house",
+  destination_map = "inside/houses/castle_town/wooden_house",
   destination = "from_outside",
 }
 
@@ -13668,7 +13668,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/caves/hyrule_town/lamp_cave",
+  destination_map = "inside/caves/castle_town/lamp_cave",
 }
 
 stairs{
@@ -13712,7 +13712,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/wooden_house",
+  destination_map = "inside/houses/castle_town/wooden_house",
   destination = "from_roof",
 }
 
@@ -13882,7 +13882,7 @@ npc{
     },
     {
       key = "dialogue_id",
-      value = "maps.out.hyrule_town.sign_1",
+      value = "maps.out.castle_town.sign_1",
     },
   },
   direction = 3,
@@ -13965,7 +13965,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/fisher_house",
+  destination_map = "inside/houses/castle_town/fisher_house",
   destination = "from_outside",
 }
 
@@ -14088,7 +14088,7 @@ npc{
   y = 445,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.hyrule_town.sign_6",
+  behavior = "dialog#maps.out.castle_town.sign_6",
 }
 
 npc{
@@ -14097,7 +14097,7 @@ npc{
   y = 509,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.hyrule_town.sign_5",
+  behavior = "dialog#maps.out.castle_town.sign_5",
 }
 
 npc{
@@ -14106,7 +14106,7 @@ npc{
   y = 925,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.hyrule_town.sign_7",
+  behavior = "dialog#maps.out.castle_town.sign_7",
 }
 
 npc{
@@ -14115,7 +14115,7 @@ npc{
   y = 1085,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.hyrule_town.sign_8",
+  behavior = "dialog#maps.out.castle_town.sign_8",
 }
 
 npc{
@@ -14124,7 +14124,7 @@ npc{
   y = 653,
   direction = 3,
   subtype = 0,
-  behavior = "dialog#maps.out.hyrule_town.sign_4",
+  behavior = "dialog#maps.out.castle_town.sign_4",
 }
 
 dynamic_tile{
@@ -14169,7 +14169,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/bank",
+  destination_map = "inside/houses/castle_town/bank",
   destination = "from_outside",
 }
 
@@ -14219,7 +14219,7 @@ npc{
   properties = {
     {
       key = "dialog",
-      value = "maps.out.hyrule_town.sign_2",
+      value = "maps.out.castle_town.sign_2",
     },
     {
       key = "model",
@@ -14449,7 +14449,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/grey_house",
+  destination_map = "inside/houses/castle_town/grey_house",
   destination = "from_outside",
 }
 
@@ -14471,7 +14471,7 @@ npc{
   properties = {
     {
       key = "dialog",
-      value = "maps.out.hyrule_town.sign_9",
+      value = "maps.out.castle_town.sign_9",
     },
     {
       key = "model",
@@ -14538,7 +14538,7 @@ teletransporter{
   },
   width = 16,
   height = 16,
-  destination_map = "inside/houses/hyrule_town/bank",
+  destination_map = "inside/houses/castle_town/bank",
   destination = "from_outside",
 }
 
@@ -14702,7 +14702,7 @@ switch{
     },
     {
       key = "area",
-      value = "hyrule_town",
+      value = "castle_town",
     },
   },
   subtype = "solid",

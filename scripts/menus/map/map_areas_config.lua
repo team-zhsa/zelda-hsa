@@ -64,7 +64,7 @@ local map_area_config = { -- Indicates the minimum and maximum coordinates of a 
 		{id = "out/f1", region = "death_mountains", key = "map.out.death_mountains"}, -- F1 (Death Mountain, Dodongo's Cavern)
 		{id = "out/f2", region = "north_field", key = "map.out.north_field"}, -- F2 (N Field)
 		{id = "out/f3", region = "north_field", key = "map.out.around_castle"}, -- F3 (North West Castle)
-		{id = "out/f4", region = "hyrule_town", key = "map.out.hyrule_town"}, -- F4 (Castle Town)
+		{id = "out/f4", region = "castle_town", key = "map.out.castle_town"}, -- F4 (Castle Town)
 		{id = "out/f5", region = "south_field", key = "map.out.south_field"}, -- F5 (S Field)
 		{id = "out/f6", region = "south_field", key = "map.out.south_field"}, -- F6 (S Field)
 		{id = "out/f7", region = "swamp", key = "map.out.swamp"}, -- F7 (Great Swamp)

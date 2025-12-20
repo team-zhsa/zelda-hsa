@@ -1,4 +1,4 @@
--- Lua script of map inside/caves/hyrule_town/lamp_cave.
+-- Lua script of map inside/caves/castle_town/lamp_cave.
 -- This script is executed every time the hero enters this map.
 
 -- Feel free to modify the code below.

@@ -94,6 +94,7 @@ map{ id = "extensions/southern_hyrule/out/map_20", description = "Map 20" }
 map{ id = "extensions/southern_hyrule/out/map_26", description = "Map 26" }
 map{ id = "inside/castle/0f", description = "Castle (Ground Floor)" }
 map{ id = "inside/castle/1f", description = "Castle (Bedrooms)" }
+map{ id = "inside/caves/castle_town/lamp_cave", description = "Lamp Cave" }
 map{ id = "inside/caves/cordinia_town/fairy_cave", description = "Fairy Cave" }
 map{ id = "inside/caves/death_mountains/d1_fairy_cave", description = "D1 5 Great Fairy cave" }
 map{ id = "inside/caves/death_mountains/d1_island_cave", description = "D1 6 To E1 island" }
@@ -125,7 +126,6 @@ map{ id = "inside/caves/east_mountains/h1_to_east_castle_b1", description = "H1 
 map{ id = "inside/caves/faron_woods/island_cave", description = "Island Cave" }
 map{ id = "inside/caves/gerudo_valley/cave_fairy_1", description = "Gerudo Fairy Cave 1" }
 map{ id = "inside/caves/gerudo_valley/north_east_desert_cave_1f", description = "North East Desert Cave (1st Floor)" }
-map{ id = "inside/caves/hyrule_town/lamp_cave", description = "Lamp Cave" }
 map{ id = "inside/caves/kakarico_village/north_cave", description = "North Cave" }
 map{ id = "inside/caves/lanayru_forest/domain_entrance_cave", description = "Domain Entrace Cave" }
 map{ id = "inside/caves/lanayru_forest/river_cave", description = "River Cave" }
@@ -167,6 +167,22 @@ map{ id = "inside/houses/around_castle/grey_house", description = "Grey House" }
 map{ id = "inside/houses/around_castle/poultry_shop", description = "Poultry Shop" }
 map{ id = "inside/houses/around_castle/red_house", description = "Red House (Potion Maker)" }
 map{ id = "inside/houses/around_castle/treasure_house", description = "Treasure House" }
+map{ id = "inside/houses/castle_town/archery_house", description = "Archery Minigame" }
+map{ id = "inside/houses/castle_town/bakery", description = "Bakery" }
+map{ id = "inside/houses/castle_town/bank", description = "Bank" }
+map{ id = "inside/houses/castle_town/courtyard_house", description = "Courtyard house" }
+map{ id = "inside/houses/castle_town/fisher_house", description = "Fisher's House" }
+map{ id = "inside/houses/castle_town/fortune_teller", description = "Fortune teller" }
+map{ id = "inside/houses/castle_town/garden_blue", description = "Garden blue house" }
+map{ id = "inside/houses/castle_town/grey_house", description = "Grey House" }
+map{ id = "inside/houses/castle_town/inn", description = "Hyrule Town Inn" }
+map{ id = "inside/houses/castle_town/laundry_house", description = "Laundry House" }
+map{ id = "inside/houses/castle_town/library", description = "Library" }
+map{ id = "inside/houses/castle_town/pink_house", description = "Pink shop" }
+map{ id = "inside/houses/castle_town/purple_house", description = "Purple House" }
+map{ id = "inside/houses/castle_town/shop", description = "Shop" }
+map{ id = "inside/houses/castle_town/vase_house", description = "Vase House" }
+map{ id = "inside/houses/castle_town/wooden_house", description = "Wooden House" }
 map{ id = "inside/houses/cordinia_town/chest_house", description = "Chest house" }
 map{ id = "inside/houses/cordinia_town/green_hut", description = "Green Hut" }
 map{ id = "inside/houses/cordinia_town/pond_house", description = "Pond House" }
@@ -179,22 +195,6 @@ map{ id = "inside/houses/east_castle/temple_of_time", description = "Temple of T
 map{ id = "inside/houses/faron_woods/mapper_house", description = "Mapper's House" }
 map{ id = "inside/houses/gerudo_village/shop", description = "Gerudo shop" }
 map{ id = "inside/houses/gerudo_village/training_grounds", description = "Gerudo training grounds" }
-map{ id = "inside/houses/hyrule_town/archery_house", description = "Archery Minigame" }
-map{ id = "inside/houses/hyrule_town/bakery", description = "Bakery" }
-map{ id = "inside/houses/hyrule_town/bank", description = "Bank" }
-map{ id = "inside/houses/hyrule_town/courtyard_house", description = "Courtyard house" }
-map{ id = "inside/houses/hyrule_town/fisher_house", description = "Fisher's House" }
-map{ id = "inside/houses/hyrule_town/fortune_teller", description = "Fortune teller" }
-map{ id = "inside/houses/hyrule_town/garden_blue", description = "Garden blue house" }
-map{ id = "inside/houses/hyrule_town/grey_house", description = "Grey House" }
-map{ id = "inside/houses/hyrule_town/inn", description = "Hyrule Town Inn" }
-map{ id = "inside/houses/hyrule_town/laundry_house", description = "Laundry House" }
-map{ id = "inside/houses/hyrule_town/library", description = "Library" }
-map{ id = "inside/houses/hyrule_town/pink_house", description = "Pink shop" }
-map{ id = "inside/houses/hyrule_town/purple_house", description = "Purple House" }
-map{ id = "inside/houses/hyrule_town/shop", description = "Shop" }
-map{ id = "inside/houses/hyrule_town/vase_house", description = "Vase House" }
-map{ id = "inside/houses/hyrule_town/wooden_house", description = "Wooden House" }
 map{ id = "inside/houses/kakariko_village/blind_hideout", description = "Blind Hideout" }
 map{ id = "inside/houses/kakariko_village/chest_house", description = "Chest House" }
 map{ id = "inside/houses/kakariko_village/chicken_house", description = "Chicken House" }
@@ -1429,7 +1429,7 @@ music{ id = "outside/hylia_lake", description = "Hylia Lake" }
 music{ id = "outside/hyrule_town", description = "Hyrule Town" }
 music{ id = "outside/kakarico", description = "Kakarico Village" }
 music{ id = "outside/kokiri", description = "Kokiri Forest" }
-music{ id = "outside/lanayru_forest", description = "Zora Forest" }
+music{ id = "outside/lanayru_forest", description = "Lanayru" }
 music{ id = "outside/lonlon", description = "Lonlon Ranch" }
 music{ id = "outside/lost_woods", description = "Lost Woods" }
 music{ id = "outside/mountains", description = "Death Mountains" }
@@ -1454,7 +1454,7 @@ music{ id = "outside/tmc_minish_woods", description = "Minish Woods" }
 music{ id = "outside/town_ruto", description = "(Outset Island)" }
 music{ id = "outside/west_mountains", description = "West Mountains" }
 music{ id = "outside/zora", description = "Zora Domain" }
-music{ id = "same", description = "same" }
+music{ id = "samen", description = "same" }
 
 sound{ id = "arrow_hit", description = "Empty sound" }
 sound{ id = "boomerang", description = "Empty sound" }
@@ -2286,30 +2286,30 @@ file{ path = "maps/inside/houses/around_castle/red_house.dat", author = "The Unk
 file{ path = "maps/inside/houses/around_castle/red_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/around_castle/treasure_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/around_castle/treasure_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/bakery.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/bakery.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/fisher_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/fisher_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/fortune_teller.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/fortune_teller.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/garden_blue.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/garden_blue.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/inn.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/inn.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/library.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/library.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/pink_house.dat", author = "The Unknown", license = "CC-BY-NC-SA" }
+file{ path = "maps/inside/houses/castle_town/pink_house.lua", author = "The Unknown", license = "CC-BY-NC-SA" }
+file{ path = "maps/inside/houses/castle_town/vase_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/vase_house.lua", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/wooden_house.dat", author = "The Unknown", }
+file{ path = "maps/inside/houses/castle_town/wooden_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/cordinia_town/pond_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/east_castle/garden_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/gerudo_village/training_grounds.dat", author = "The Unknown", license = "GPL v3" }
 file{ path = "maps/inside/houses/gerudo_village/training_grounds.lua", author = "The Unknown", license = "GPL v3" }
-file{ path = "maps/inside/houses/hyrule_town/bakery.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/bakery.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/fisher_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/fisher_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/fortune_teller.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/fortune_teller.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/garden_blue.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/garden_blue.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/inn.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/inn.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/library.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/library.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/pink_house.dat", author = "The Unknown", license = "CC-BY-NC-SA" }
-file{ path = "maps/inside/houses/hyrule_town/pink_house.lua", author = "The Unknown", license = "CC-BY-NC-SA" }
-file{ path = "maps/inside/houses/hyrule_town/vase_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/vase_house.lua", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/wooden_house.dat", author = "The Unknown", }
-file{ path = "maps/inside/houses/hyrule_town/wooden_house.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/kakariko_village/shop.dat", author = "The Unknown", }
 file{ path = "maps/inside/houses/kakariko_village/shop.lua", author = "The Unknown", }
 file{ path = "maps/inside/houses/korok_village/shop.dat", author = "The Unknown", license = "GPL v3" }

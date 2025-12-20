@@ -25,7 +25,7 @@ function map:on_opening_transition_finished()
 end
 
 function sleep_npc:on_interaction()
-  game:start_dialog("maps.houses.hyrule_town.building.sleep", function(answer)
+  game:start_dialog("maps.houses.castle_town.building.sleep", function(answer)
     if answer==2 then
       if game:get_money() >=20 then
         game:remove_money(20)

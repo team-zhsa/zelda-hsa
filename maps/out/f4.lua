@@ -21,7 +21,7 @@ function map:on_draw(dst_surface)
 end
 
 map:register_event("on_started", function(map, destination)
-	game:show_map_name("hyrule_town")
+	game:show_map_name("castle_town")
 	map:set_digging_allowed(true)
 	npc_impa:set_enabled(false)
 	if game:get_time_of_day() == "day" then
@@ -95,16 +95,16 @@ end
 for npc in map:get_entities("npc_soldier_") do
 	npc:register_event("on_interaction", function()
 		if num_dialogue == 0 then
-			game:start_dialog("maps.out.hyrule_town.soldiers.no_lamp")
+			game:start_dialog("maps.out.castle_town.soldiers.no_lamp")
 			num_dialogue = 1
 		elseif num_dialogue == 1 then
-			game:start_dialog("maps.out.hyrule_town.soldiers.tip_item")
+			game:start_dialog("maps.out.castle_town.soldiers.tip_item")
 			num_dialogue = 2
 		elseif num_dialogue == 2 then
-			game:start_dialog("maps.out.hyrule_town.soldiers.tip_pause")
+			game:start_dialog("maps.out.castle_town.soldiers.tip_pause")
 			num_dialogue = 3
 		elseif num_dialogue == 3 then
-			game:start_dialog("maps.out.hyrule_town.soldiers.tip_speak")
+			game:start_dialog("maps.out.castle_town.soldiers.tip_speak")
 			num_dialogue = 0
 		end
 	end)
@@ -125,7 +125,7 @@ sensor_ocarina_cutscene:register_event("on_activated", function()
 		impa_movement_to_position:set_ignore_suspend(true)
 		impa_movement_to_position:set_speed(100)
 		impa_movement_to_position:start(npc_impa, function()
-			game:start_dialog("maps.out.hyrule_town.impa.intro_1", game:get_player_name(), function()
+			game:start_dialog("maps.out.castle_town.impa.intro_1", game:get_player_name(), function()
 				ocarina_dialogue()
 			end)
 		end)
@@ -133,11 +133,11 @@ sensor_ocarina_cutscene:register_event("on_activated", function()
 end)
 
 function ocarina_dialogue()
-	game:start_dialog("maps.out.hyrule_town.impa.intro_2", game:get_player_name(), function(answer)
+	game:start_dialog("maps.out.castle_town.impa.intro_2", game:get_player_name(), function(answer)
 		if answer == 1 then
 			ocarina_dialogue()
 		elseif answer == 2 then
-			game:start_dialog("maps.out.hyrule_town.impa.song_learnt", function()
+			game:start_dialog("maps.out.castle_town.impa.song_learnt", function()
 				hero:start_treasure("song_10_zelda", 1,nil, function()
 					game:set_step_done("ocarina_obtained")
 					local impa_movement_leave = sol.movement.create("target")
@@ -201,31 +201,31 @@ end)
 for npc in map:get_entities("npc_laundry_") do
 	npc:register_event("on_interaction", function()
 		if game:is_step_last("ocarina_obtained") then
-			game:start_dialog("maps.out.hyrule_town.laundry_pool.no_magic_bar")
+			game:start_dialog("maps.out.castle_town.laundry_pool.no_magic_bar")
 		elseif game:is_step_last("agahnim_met") then
-			game:start_dialog("maps.out.hyrule_town.laundry_pool.soldiers")
-		else game:start_dialog("maps.out.hyrule_town.laundry_pool.busy")
+			game:start_dialog("maps.out.castle_town.laundry_pool.soldiers")
+		else game:start_dialog("maps.out.castle_town.laundry_pool.busy")
 		end
 	end)
 end
 
 npc_drunk_man:register_event("on_interaction", function()
 	if game:is_step_last("ocarina_obtained") then
-		game:start_dialog("maps.out.hyrule_town.drunk_man.no_lamp")
+		game:start_dialog("maps.out.castle_town.drunk_man.no_lamp")
 	elseif game:is_step_last("lamp_obtained") then
-		game:start_dialog("maps.out.hyrule_town.drunk_man.no_sword")
-	else game:start_dialog("maps.out.hyrule_town.drunk_man.sleeping")
+		game:start_dialog("maps.out.castle_town.drunk_man.no_sword")
+	else game:start_dialog("maps.out.castle_town.drunk_man.sleeping")
 	end
 end)
 
 npc_fisher:register_event("on_interaction", function()
 	if game:is_step_last("ocarina_obtained") then
-		game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_lamp")
+		game:start_dialog("maps.out.castle_town.fisher.welcome_no_lamp")
 	elseif game:is_step_last("lamp_obtained") then
-		game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_sword")
+		game:start_dialog("maps.out.castle_town.fisher.welcome_no_sword")
 	elseif not game:is_step_last("dungeon_3_completed") then
-		game:start_dialog("maps.out.hyrule_town.fisher.welcome_no_fish")
-	else game:start_dialog("maps.out.hyrule_town.fisher.welcome")
+		game:start_dialog("maps.out.castle_town.fisher.welcome_no_fish")
+	else game:start_dialog("maps.out.castle_town.fisher.welcome")
 	end
 end)
 
