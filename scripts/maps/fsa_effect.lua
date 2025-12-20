@@ -363,10 +363,14 @@ local function setup_inside_lights(map)
 --create hero light
 		if map.fsa_dark then
 			-- Create a smaller hero light
-			local hl = create_light(map,-16,-16,0,"32",default_color)
+			local hl = create_light(map,-320,-320,0,"32",default_color)
 			function hl:on_update()
-				if map:get_game():has_item("lamp") then
-					hl:set_position(hero:get_position())
+				local slot_1 = map:get_game():get_item_assigned(1)
+				local slot_2 = map:get_game():get_item_assigned(2)
+				if slot_1:get_name() == "lamp" or slot_2:get_name() == "lamp" then
+						hl:set_position(hero:get_position())
+				elseif slot_1:get_name() ~= "lamp" and slot_2:get_name() ~= "lamp" then
+					hl:set_position(-320, -320)
 				end
 			end
 			print("FSA Dark")
@@ -376,8 +380,12 @@ local function setup_inside_lights(map)
 				-- Create a normal hero light
 				local hl = create_light(map,-48,-48,0,"48",default_color_inside_2)
 				function hl:on_update()
-					if map:get_game():has_item("lamp") then
-						hl:set_position(hero:get_position())
+					local slot_1 = map:get_game():get_item_assigned(1)
+					local slot_2 = map:get_game():get_item_assigned(2)
+					if slot_1:get_name() == "lamp" or slot_2:get_name() == "lamp" then
+							hl:set_position(hero:get_position())
+					elseif slot_1:get_name() ~= "lamp" and slot_2:get_name() ~= "lamp" then
+						hl:set_position(-320, -320)
 					end
 				end
 				hl.excluded_occs = {[hero]=true}

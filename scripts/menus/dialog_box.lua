@@ -564,8 +564,8 @@ local function initialise_dialog_box_features(game)
     -- Draw the text.
     local left_padding = -5
     local text_x = x + (self.icon_index == nil and 16 or 48) + left_padding
-    local text_y = y - 12 + 3
-    local line_spacing = dialog_box.font_size * 2
+    local text_y = y - 12
+    local line_spacing = (dialog_box.font_size -2) * 2
     for i = 1, nb_visible_lines do
       text_y = text_y + line_spacing
       if self.selected_answer ~= nil
