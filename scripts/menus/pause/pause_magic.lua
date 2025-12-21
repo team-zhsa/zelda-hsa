@@ -5,18 +5,18 @@ local item_names_assignable_top = { -- top
 	"_placeholder",												-- Hylia shield
 	"_placeholder",											-- Mirror shield
 	"healing_wand",														-- Bottle
-	"fire_rod",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
-	"wind_rod",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
-	"light_rod",																-- Fire / ice bow
+	"rod_fire",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
+	"rod_wind",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
+	"rod_light",																-- Fire / ice bow
 	"somaria_cane",																-- Fire / ice bow
 	-- Row 2                                         
 	"_placeholder",																-- Lamp      
 	"_placeholder",													-- Boomerang / Great boomerang
 	"book_of_mudora",												-- Bomb
-	"ice_rod",														-- Bottle
-	"thunder_rod",																-- Bomb bow
-	"darkness_rod",																-- Fire / ice bow
-	"doom_rod",																-- Fire / ice bow
+	"rod_ice",														-- Bottle
+	"rod_thunder",																-- Bomb bow
+	"rod_darkness",																-- Fire / ice bow
+	"rod_doom",																-- Fire / ice bow
 }
 
 local item_names_assignable_bottom = { -- bottom
@@ -319,6 +319,7 @@ function inventory_submenu:set_cursor_position(row, column)
 	local item_icon_opacity = 128
 	if variant > 0 then
 		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
+		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
 		self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
       self.game:set_hud_mode("pause_assign")
@@ -327,6 +328,7 @@ function inventory_submenu:set_cursor_position(row, column)
 		end
 	else
 		self:set_caption(nil)
+		self:set_infos_text(nil)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end

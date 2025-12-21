@@ -1092,15 +1092,15 @@ sprite{ id = "hero/item/bow/bow_moving_with_arrow_tunic1", description = "2b" }
 sprite{ id = "hero/item/bow/bow_shoot_tunic1", description = "3" }
 sprite{ id = "hero/item/ocarina/learned.tunic_1", description = "Learned song" }
 sprite{ id = "hero/item/ocarina/ocarina.tunic_1", description = "Ocarina" }
-sprite{ id = "hero/item/rods/darkness_rod", description = "Darkness rod" }
-sprite{ id = "hero/item/rods/doom_rod", description = "Doom rod" }
-sprite{ id = "hero/item/rods/fire_rod", description = "Fire Rod" }
+sprite{ id = "hero/item/rods/rod_darkness", description = "Darkness rod" }
+sprite{ id = "hero/item/rods/rod_doom", description = "Doom rod" }
+sprite{ id = "hero/item/rods/rod_fire", description = "Fire Rod" }
 sprite{ id = "hero/item/rods/healing_wand", description = "Healing Wand" }
-sprite{ id = "hero/item/rods/ice_rod", description = "Ice Rod" }
-sprite{ id = "hero/item/rods/light_rod", description = "Light rod" }
+sprite{ id = "hero/item/rods/rod_ice", description = "Ice Rod" }
+sprite{ id = "hero/item/rods/rod_light", description = "Light rod" }
 sprite{ id = "hero/item/rods/somaria_cane", description = "Somaria Cane" }
-sprite{ id = "hero/item/rods/thunder_rod", description = "Thunder rod" }
-sprite{ id = "hero/item/rods/wind_rod", description = "Wind Rod" }
+sprite{ id = "hero/item/rods/rod_thunder", description = "Thunder rod" }
+sprite{ id = "hero/item/rods/rod_wind", description = "Wind Rod" }
 sprite{ id = "hero/item/sword_beam", description = "Sword Beam" }
 sprite{ id = "hero/link_sad", description = "Link sad" }
 sprite{ id = "hero/shield1", description = "Hero shield 1" }
@@ -1592,7 +1592,7 @@ sound{ id = "items/bow", description = "Bow" }
 sound{ id = "items/bow_no_arrows", description = "No arrows shoot" }
 sound{ id = "items/cane", description = "Cane" }
 sound{ id = "items/farore_wind/cast", description = "items/farore_wind/cast" }
-sound{ id = "items/fire_rod", description = "Shoot" }
+sound{ id = "items/rod_fire", description = "Shoot" }
 sound{ id = "items/get_heart", description = "Heart" }
 sound{ id = "items/get_heart_container", description = "Heart container" }
 sound{ id = "items/get_major_item", description = "items/get_major_item" }
@@ -1611,7 +1611,7 @@ sound{ id = "items/hookshot/firing_loop", description = "Firing loop" }
 sound{ id = "items/hookshot/firing_start", description = "Firing start" }
 sound{ id = "items/hookshot/hit_valid_target", description = "Hit valid target" }
 sound{ id = "items/hookshot/link_tracted", description = "Link tracted" }
-sound{ id = "items/ice_rod", description = "Shoot" }
+sound{ id = "items/rod_ice", description = "Shoot" }
 sound{ id = "items/item_metal_collision_wall", description = "Item metal collision" }
 sound{ id = "items/lamp/off", description = "Lamp (Off)" }
 sound{ id = "items/lamp/on", description = "Lamp (On)" }
@@ -1637,7 +1637,7 @@ sound{ id = "items/shovel", description = "items/shovel" }
 sound{ id = "items/sword_beam", description = "Sword Beam" }
 sound{ id = "items/sword_out_of_pedestal", description = "Sword out of pedestal" }
 sound{ id = "items/sword_shown", description = "Sword shown" }
-sound{ id = "items/wind_rod", description = "wind" }
+sound{ id = "items/rod_wind", description = "wind" }
 sound{ id = "jump", description = "Empty sound" }
 sound{ id = "lift", description = "Empty sound" }
 sound{ id = "menus/cursor", description = "Cursor" }
@@ -1726,14 +1726,11 @@ item{ id = "crystal_4", description = "Crystal 4" }
 item{ id = "crystal_5", description = "Crystal 5" }
 item{ id = "crystal_6", description = "Crystal 6" }
 item{ id = "crystal_7", description = "Crystal 7" }
-item{ id = "darkness_rod", description = "Darkness rod" }
 item{ id = "din_flame", description = "Din's Flame" }
 item{ id = "divine_ore", description = "Divine Ore" }
-item{ id = "doom_rod", description = "Bird key" }
 item{ id = "fairy", description = "Fairy" }
 item{ id = "farore_quake", description = "Farore's quake" }
 item{ id = "feather", description = "Feather" }
-item{ id = "fire_rod", description = "Fire rod" }
 item{ id = "flippers", description = "Flippers" }
 item{ id = "food/fish", description = "Fish" }
 item{ id = "goron_amber", description = "Goron Amber" }
@@ -1744,10 +1741,8 @@ item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
 item{ id = "heart_triple", description = "Triple heart" }
 item{ id = "hookshot", description = "Hookshot" }
-item{ id = "ice_rod", description = "Ice rod" }
 item{ id = "lamp", description = "Lamp" }
 item{ id = "lens_of_truth", description = "Lens of Truth" }
-item{ id = "light_rod", description = "Light rod" }
 item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_cape", description = "Magic cape" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
@@ -1777,6 +1772,13 @@ item{ id = "random_mountains", description = "Random (Mountains)" }
 item{ id = "random_south", description = "Random (South Hyrule)" }
 item{ id = "random_west", description = "Random (West Hyrule)" }
 item{ id = "red_key", description = "Red Key" }
+item{ id = "rod_darkness", description = "Darkness rod" }
+item{ id = "rod_doom", description = "Bird key" }
+item{ id = "rod_fire", description = "Fire rod" }
+item{ id = "rod_ice", description = "Ice rod" }
+item{ id = "rod_light", description = "Light rod" }
+item{ id = "rod_thunder", description = "Beak of stone" }
+item{ id = "rod_wind", description = "Wind Rod" }
 item{ id = "rupee", description = "Rupee (1 / 5 / 20 / 50 / 100 / 200 / 500 / 1000)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "seas_map", description = "Seas map" }
@@ -1804,14 +1806,12 @@ item{ id = "song_8_shadow", description = "Song 8 (Nocturne of Shadow)" }
 item{ id = "song_9_healing", description = "Song 9 (Song of Healing)" }
 item{ id = "sword", description = "Sword" }
 item{ id = "sword_skill_beam", description = "Sword Beam" }
-item{ id = "thunder_rod", description = "Beak of stone" }
 item{ id = "trading_1", description = "Trading (Seas Map)" }
 item{ id = "trading_2", description = "Trading 2 (Better Magic Bar)" }
 item{ id = "tunic_blue", description = "Blue tunic" }
 item{ id = "tunic_green", description = "Green Tunic" }
 item{ id = "tunic_red", description = "Red tunic" }
 item{ id = "tunic_time", description = "Time tunic" }
-item{ id = "wind_rod", description = "Wind Rod" }
 item{ id = "wine", description = "Wine" }
 item{ id = "world_map", description = "World Map" }
 
@@ -2788,17 +2788,17 @@ file{ path = "sprites/entities/utils/cliff.dat", author = "Christopho", license 
 file{ path = "sprites/entities/utils/cliff.png", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hero/hammer.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "sprites/hero/hookshot.shield.png", author = "Nintendo", license = "Proprietary (Fair use)" }
-file{ path = "sprites/hero/item/rods/darkness_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/doom_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/fire_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_darkness.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_doom.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_fire.dat", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/healing_wand.dat", author = "Linkff", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/ice_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/light_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_ice.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_light.dat", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/rod.moving.entity.png", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/rod.png", author = "Linkff", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hero/item/rods/somaria_cane.dat", author = "Nintendo, Mister Man", license = "Proprietary" }
-file{ path = "sprites/hero/item/rods/thunder_rod.dat", author = "Linkff", license = "CC-BY-NC-SA" }
-file{ path = "sprites/hero/item/rods/wind_rod.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_thunder.dat", author = "Linkff", license = "CC-BY-NC-SA" }
+file{ path = "sprites/hero/item/rods/rod_wind.dat", author = "LinkFF", license = "CC-BY-NC-SA" }
 file{ path = "sprites/hud/weather.dat", author = "The Unknown", }
 file{ path = "sprites/maps/room_layout.dat", author = "The Unknown", }
 file{ path = "sprites/menus/game_over/game_over_fade.dat", author = "Olivier Cléro", license = "CC BY-SA 4.0" }

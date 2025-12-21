@@ -22,9 +22,9 @@ local treasure_savegame_variables = {
   "possession_bow",
   "possession_hookshot",
   "possession_boomerang",  -- Boomerang.
-  "possession_fire_rod",
-  "possession_wind_rod",
-  "possession_ice_rod",
+  "possession_rod_fire",
+  "possession_rod_wind",
+  "possession_rod_ice",
   "possession_bomb_counter",
   "possession_somaria_cane",
   "possession_hammer",

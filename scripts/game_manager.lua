@@ -61,7 +61,7 @@ function game_manager:create(file)
   game:register_event("on_world_changed", function()
     local map = game:get_map()
     if not game.teleport_in_progress then -- play custom transition at game startup
-    if (game:get_value("time_saved") < 1763308127) then
+    if (game:get_value("time_saved") < 1766346617) then
       game:check_variables()
     end
       game:set_suspended(true)
@@ -122,6 +122,13 @@ function game_manager:create(file)
         game:convert_variables("chest_a7_1","outside_parapa_town_chest_rupees")
         game:convert_variables("ravios_shop_healing_wand","inside_ravios_shop_healing_wand")
         game:convert_variables("ravios_shop_bottle","inside_ravios_shop_bottle")
+        --21/12/2025
+        game:convert_variables("possession_light_rod","possession_rod_light")
+        game:convert_variables("possession_wind_rod","possession_rod_wind")
+        game:convert_variables("possession_thunder_rod","possession_rod_thunder")
+        game:convert_variables("possession_darkness_rod","possession_rod_darkness")
+        game:convert_variables("possession_ice_rod","possession_rod_ice")
+        game:convert_variables("possession_fire_rod","possession_rod_fire")
       else sol.main.reset()
       end
     end)

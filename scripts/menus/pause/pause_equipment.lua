@@ -328,6 +328,7 @@ function inventory_submenu:set_cursor_position(row, column)
 		end
 	else
 		self:set_caption(nil)
+		self:set_infos_text(nil)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end

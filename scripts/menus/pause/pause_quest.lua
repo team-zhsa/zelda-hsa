@@ -109,7 +109,7 @@ function quest_submenu:on_finished()
 	-- Nothing.
 end
 -- #255
-function inventory_submenu:on_draw(dst_surface)
+function quest_submenu:on_draw(dst_surface)
 
 	local width, height = dst_surface:get_size()
 	local center_x, center_y = width / 2, height / 2
@@ -396,6 +396,7 @@ function quest_submenu:set_cursor_position(row, column)
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
 			self.game:set_custom_command_effect("action", "info")
+			--[[
 	elseif item_name =="goron_amber" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
@@ -425,13 +426,14 @@ function quest_submenu:set_cursor_position(row, column)
 		if item:get_amount() > 0 then
 			self:set_caption_key("inventory.caption.item.monster_tail_counter.1")
 			self.game:set_custom_command_effect("action", "info")
-	 end
+	 end--]]
 	else
 		local item = item_name and self.game:get_item(item_name) or nil
 		local variant = item and item:get_variant()
 		local item_icon_opacity = 128
 		if variant > 0 then
-			self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
+		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
+		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
 			self.game:set_custom_command_effect("action", "info")
 			if item:is_assignable() then
 				self.game:set_hud_mode("normal")
@@ -439,7 +441,8 @@ function quest_submenu:set_cursor_position(row, column)
 				self.game:set_hud_mode("pause")
 			end
 		else
-			self:set_caption(nil)
+		self:set_caption(nil)
+		self:set_infos_text(nil)
 			self.game:set_custom_command_effect("action", nil)
 			self.game:set_hud_mode("pause")
 		end

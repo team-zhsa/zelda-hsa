@@ -5,11 +5,11 @@ local magic_needed = 1 -- Number of magic points required.
 
 function item:on_created()
   self:set_sound_when_brandished("items/get_major_item")
-  item:set_savegame_variable("possession_fire_rod")
+  item:set_savegame_variable("possession_rod_ice")
   item:set_assignable(true)
 end
 
--- Shoots some fire on the map.
+-- Shoots some ice on the map.
 function item:shoot()
 
   local map = item:get_map()
@@ -17,8 +17,8 @@ function item:shoot()
   local direction = hero:get_direction()
 
   local x, y, layer = hero:get_center_position()
-  local fire = map:create_custom_entity({
-    model = "fire",
+  local ice = map:create_custom_entity({
+    model = "ice",
     x = x,
     y = y + 3,
     layer = layer,
@@ -27,13 +27,13 @@ function item:shoot()
     direction = direction,
   })
 
-	sol.audio.play_sound("items/fire_rod")
+	sol.audio.play_sound("items/rod_ice")
   local angle = direction * math.pi / 2
   local movement = sol.movement.create("straight")
   movement:set_speed(192)
   movement:set_angle(angle)
   movement:set_smooth(false)
-  movement:start(fire)
+  movement:start(ice)
 end
 
 function item:on_using()
@@ -43,81 +43,81 @@ function item:on_using()
   local direction = hero:get_direction()
   hero:set_animation("rod")
 
-  -- Give the hero the animation of using the fire rod.
+  -- Give the hero the animation of using the ice rod.
   local x, y, layer = hero:get_position()
-  local fire_rod = map:create_custom_entity({
+  local rod_ice = map:create_custom_entity({
     x = x,
     y = y,
     layer = layer,
     width = 16,
     height = 16,
     direction = direction,
-    sprite = "hero/item/rods/fire_rod",
+    sprite = "hero/item/rods/rod_ice",
   })
 
-  -- Shoot fire if there is enough magic.
+  -- Shoot ice if there is enough magic.
   if game:get_magic() >= magic_needed then
     --sol.audio.play_sound("lamp")
     game:remove_magic(magic_needed)
     item:shoot()
   end
 
-  -- Make sure that the fire rod stays on the hero.
+  -- Make sure that the ice rod stays on the hero.
   -- Even if he is using this item, he can move
   -- because of holes or ice.
-  sol.timer.start(fire_rod, 10, function()
-    fire_rod:set_position(hero:get_position())
+  sol.timer.start(rod_ice, 10, function()
+    rod_ice:set_position(hero:get_position())
     return true
   end)
 
-  -- Remove the fire rod and restore control after a delay.
+  -- Remove the ice rod and restore control after a delay.
   sol.timer.start(hero, 300, function()
-    fire_rod:remove()
+    rod_ice:remove()
     item:set_finished()
   end)
 end
 
--- initialise the metatable of appropriate entities to work with the fire.
+-- initialise the metatable of appropriate entities to work with the ice.
 local function initialise_meta()
 
-  -- Add Lua fire properties to enemies.
+  -- Add Lua ice properties to enemies.
   local enemy_meta = sol.main.get_metatable("enemy")
-  if enemy_meta.get_fire_reaction ~= nil then
+  if enemy_meta.get_ice_reaction ~= nil then
     -- Already done.
     return
   end
 
-  enemy_meta.fire_reaction = 3  -- 3 life points by default.
-  enemy_meta.fire_reaction_sprite = {}
-  function enemy_meta:get_fire_reaction(sprite)
+  enemy_meta.ice_reaction = 3  -- 3 life points by default.
+  enemy_meta.ice_reaction_sprite = {}
+  function enemy_meta:get_ice_reaction(sprite)
 
-    if sprite ~= nil and self.fire_reaction_sprite[sprite] ~= nil then
-      return self.fire_reaction_sprite[sprite]
+    if sprite ~= nil and self.ice_reaction_sprite[sprite] ~= nil then
+      return self.ice_reaction_sprite[sprite]
     end
-    return self.fire_reaction
+    return self.ice_reaction
   end
 
-  function enemy_meta:set_fire_reaction(reaction, sprite)
+  function enemy_meta:set_ice_reaction(reaction, sprite)
 
-    self.fire_reaction = reaction
+    self.ice_reaction = reaction
   end
 
-  function enemy_meta:set_fire_reaction_sprite(sprite, reaction)
+  function enemy_meta:set_ice_reaction_sprite(sprite, reaction)
 
-    self.fire_reaction_sprite[sprite] = reaction
+    self.ice_reaction_sprite[sprite] = reaction
   end
 
   -- Change the default enemy:set_invincible() to also
-  -- take into account the fire.
+  -- take into account the ice.
   local previous_set_invincible = enemy_meta.set_invincible
   function enemy_meta:set_invincible()
     previous_set_invincible(self)
-    self:set_fire_reaction("ignored")
+    self:set_ice_reaction("ignored")
   end
   local previous_set_invincible_sprite = enemy_meta.set_invincible_sprite
   function enemy_meta:set_invincible_sprite(sprite)
     previous_set_invincible_sprite(self, sprite)
-    self:set_fire_reaction_sprite(sprite, "ignored")
+    self:set_ice_reaction_sprite(sprite, "ignored")
   end
 
 end

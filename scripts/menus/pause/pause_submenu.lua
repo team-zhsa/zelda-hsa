@@ -86,25 +86,18 @@ function submenu:on_started()
 	self.text_stroke_color = {72, 72, 72}
 	self.infos_lines = {} -- Table containing each info text line
 	self.infos_text_line = {} -- Table containing each info text line surface
+	self.infos_max_lines = 5
+	self.infos_text_master = ""
 
-	self.infos_text_master = sol.text_surface.create{
-		horizontal_alignment = "center",
-		vertical_alignment = "middle",
-		font = dialog_font,
-		font_size = dialog_font_size - 2,
-		color = self.text_color,
-	}
-
-  for i = 0, 10 do
+  for i = 0, self.infos_max_lines do
     self.infos_text_line[i] = sol.text_surface.create{
 			horizontal_alignment = "left",
 			vertical_alignment = "middle",
 			font = dialog_font,
-			font_size = dialog_font_size,
+			font_size = 10,
 			color = self.text_color,
     }
   end
-
 
 	-- Create captions.
 	local menu_font, menu_font_size = language_manager:get_menu_font()
@@ -148,30 +141,41 @@ end
 -- <<ITEMS DESCRIPTION>> #257
 
 function submenu:set_infos_key(text_key)
+
 	if text_key == nil then
 		self:set_infos_text(nil)
 	else
-		local text = sol.language.get_dialog(text_key).text
-		self:set_infos_text(text)
+		local info_dialog = sol.language.get_dialog(text_key)
+		if info_dialog ~= nil then
+			local text = info_dialog.text
+			self:set_infos_text(text)
+			print("TEXT" .. text)
+		end
 	end
-	print(text_key)
 end
 
 function submenu:set_infos_text(text)
 	if text == nil then
-		self.infos_text_master:set_text(nil)
+		self.infos_text_master = ""
+		for i = 0,self.infos_max_lines do
+			self.infos_text_line[i]:set_text("")
+		end
+		print("case AAAA")
 	else
-	-- Standardise all line endings to \n
-		text = text:gsub("\r\n", "\n"):gsub("\r", "\n")
-		i = 0
+		print("case BBBB")
+		-- Standardise all line endings to \n
+		self.infos_text_master = text:gsub("\r\n", "\n"):gsub("\r", "\n")
 		-- Insert each line's text into the info_lines table
-		for line in text:gmatch("([^\n]*)\n") do
-			i = i + 1
-	     table.insert(self.infos_lines, line);
-			 		self.infos_text_line[i]:set_text(line)
-			 print(line)
-	  end
-
+			i=0
+			for i = 0,self.infos_max_lines do
+				self.infos_text_line[i]:set_text("")
+			end
+			for line in self.infos_text_master:gmatch("([^\n]*)\n") do
+				i=i+1				
+				table.insert(self.infos_lines, line)
+				self.infos_text_line[i]:set_text(line)
+				print(i)
+			end
 	end
 end
 
@@ -188,13 +192,13 @@ function submenu:draw_infos_text(dst_surface)
 		local infos_center_x = infos_x + infos_background_center_x
 		local infos_center_y = infos_y + infos_background_center_y
 
-		if self.infos_text:get_text():len() ~= 0 then
-			self.infos_background:draw(dst_surface, infos_x, infos_y)
+		for i = 0, self.infos_max_lines do -- Fro each line
+		if self.infos_text_line[i]:get_text():len() ~= 0 then
+			--self.infos_background:draw(dst_surface, infos_x, infos_y)
 			-- Draw infos frame if there is text (how many hearts retrieved, magic...).
 			-- Draw infos text if there is text.
 			local cell_size = 28
 			local cell_spacing = 4
-			for i = 0, 10 do
 				self.infos_text_line[i]:set_xy(infos_x + cell_spacing, infos_y + self.font_y_shift + 10 * i)
 				text_fx_helper:draw_text_with_shadow(dst_surface, self.infos_text_line[i], self.text_stroke_color)
 			end

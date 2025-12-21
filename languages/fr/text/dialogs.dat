@@ -461,7 +461,7 @@ descendant des Sept Sages !
 }
 
 dialog{
-  id = "_treasure.darkness_rod.1",
+  id = "_treasure.rod_darkness.1",
   icon = "41",
   text = [[
 Tu as obtenu le Sceptre des
@@ -500,7 +500,7 @@ Va à la forge pour améliorer ton
 }
 
 dialog{
-  id = "_treasure.doom_rod.1",
+  id = "_treasure.rod_doom.1",
   icon = "37",
   text = [[
 Tu as obtenu le Sceptre du
@@ -556,7 +556,7 @@ que l'air !
 }
 
 dialog{
-  id = "_treasure.fire_rod.1",
+  id = "_treasure.rod_fire.1",
   icon = "30",
   text = [[
 Tu as trouvé la Baguette de Feu !$0
@@ -567,7 +567,7 @@ Magique !
 }
 
 dialog{
-  id = "_treasure.fire_rod.2",
+  id = "_treasure.rod_fire.2",
   icon = "31",
   text = [[
 Tu as trouvé la Super Baguette
@@ -722,7 +722,7 @@ beaucoup d'objets !
 }
 
 dialog{
-  id = "_treasure.ice_rod.1",
+  id = "_treasure.rod_ice.1",
   icon = "38",
   text = [[
 Tu as obtenu la Baguette de
@@ -733,7 +733,7 @@ des passages secrets !
 }
 
 dialog{
-  id = "_treasure.ice_rod.2",
+  id = "_treasure.rod_ice.2",
   icon = "39",
   text = [[
 Tu as obtenu la Super Baguette de
@@ -770,7 +770,7 @@ ton Compteur Magique !
 }
 
 dialog{
-  id = "_treasure.light_rod.1",
+  id = "_treasure.rod_light.1",
   icon = "36",
   text = [[
 Tu as trouvé la Baguette de
@@ -1654,7 +1654,7 @@ collectionneur de Firone !
 }
 
 dialog{
-  id = "_treasure.wind_rod.1",
+  id = "_treasure.rod_wind.1",
   icon = "40",
   text = [[
 Tu as obtenu le bâton de Vent !$0
@@ -7185,18 +7185,8 @@ dialog{
   icon = "150",
   skip = "all",
   text = [[
-Cet objet ne sert à rien.
-]],
-}
-
-dialog{
-  id = "scripts.menus.pause_inventory.blue_tunic.1",
-  icon = "121",
-  skip = "all",
-  text = [[
-Une tunique bleue qui te
-protège du froid et te permet
-de respirer sous l'eau.
+Cet objet ne sert à
+rien.
 ]],
 }
 
@@ -7866,7 +7856,7 @@ Vents.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.darkness_rod.1",
+  id = "scripts.menus.pause_inventory.rod_darkness.1",
   icon = "41",
   skip = "all",
   text = [[
@@ -7899,7 +7889,7 @@ que ton épée soit plus puissante.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.doom_rod.1",
+  id = "scripts.menus.pause_inventory.rod_doom.1",
   icon = "37",
   skip = "all",
   text = [[
@@ -7924,13 +7914,14 @@ dialog{
   icon = "15",
   skip = "all",
   text = [[
-Utilise la Plume pour sauter et
-franchir des obstacles.
+Une plume qui te permet
+de devenir plus léger
+que l'air !
 ]],
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.fire_rod.1",
+  id = "scripts.menus.pause_inventory.rod_fire.1",
   icon = "30",
   skip = "all",
   text = [[
@@ -7941,7 +7932,7 @@ destructrices.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.fire_rod.2",
+  id = "scripts.menus.pause_inventory.rod_fire.2",
   icon = "31",
   skip = "all",
   text = [[
@@ -7956,9 +7947,8 @@ dialog{
   icon = "117",
   skip = "all",
   text = [[
-Les Palmes te
-permettent de nager
-dans l'eau profonde.
+Des palmes de Zora pour
+nager en eau profonde.
 ]],
 }
 
@@ -7973,7 +7963,7 @@ Des Ambres Gorons qui peuvent
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.green_tunic.1",
+  id = "scripts.menus.pause_inventory.tunic_green.1",
   icon = "110",
   text = [[
 Une tunique verte, rien que
@@ -7986,8 +7976,9 @@ dialog{
   icon = "13",
   skip = "all",
   text = [[
-Le Marteau te permet de retourner
-et d'écraser tes ennemis !
+Ce marteau te permet
+d'écraser tout ce que
+tu trouves devant toi.
 ]],
 }
 
@@ -7996,8 +7987,9 @@ dialog{
   icon = "13",
   skip = "all",
   text = [[
-Le Super Marteau te permet
-de retourner tes ennemis sur une
+Le Super Marteau te
+permet de retourner
+tes ennemis sur une
 plus grande surface.
 ]],
 }
@@ -8037,8 +8029,9 @@ dialog{
   icon = "16",
   skip = "all",
   text = [[
-Hisse-toi à des endroits
-inaccessibles grâce au Grappin.
+Hisse-toi à des
+endroits inaccessibles
+grâce au Grappin.
 ]],
 }
 
@@ -8054,18 +8047,19 @@ d'atteindre des cibles plus
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.ice_rod.1",
+  id = "scripts.menus.pause_inventory.rod_ice.1",
   icon = "38",
   skip = "all",
   text = [[
-La Baguette de Glace te permet
-de givrer tes ennemis et de geler
-le sol !
+La Baguette de Glace
+te permet de givrer
+tes ennemis et de
+geler le sol !
 ]],
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.ice_rod.2",
+  id = "scripts.menus.pause_inventory.rod_ice.2",
   icon = "39",
   skip = "all",
   text = [[
@@ -8095,7 +8089,7 @@ l'invisible.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.light_rod.1",
+  id = "scripts.menus.pause_inventory.rod_light.1",
   icon = "36",
   skip = "all",
   text = [[
@@ -8483,8 +8477,11 @@ dialog{
   icon = "121",
   skip = "all",
   text = [[
-Permet de repousser
-tes ennemis.
+Ce petit bouclier a
+l'air un peu abîmé,
+mais il reste capable
+de te protéger de tes
+ennemis.
 ]],
 }
 
@@ -8493,7 +8490,9 @@ dialog{
   icon = "122",
   skip = "all",
   text = [[
-Permet de repousser
+Bouclier de la famille
+royale d'Hyrule,
+capable de repousser
 les attaques de feu.
 ]],
 }
@@ -8503,8 +8502,10 @@ dialog{
   icon = "123",
   skip = "all",
   text = [[
-Permet de repousser
-les rayons lasers.
+Un bouclier poli par
+les techniques Gerudo.
+Tu peux dévier les
+rayons laser avec.
 ]],
 }
 
@@ -8806,7 +8807,19 @@ vieux monsieur.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.wind_rod.1",
+  id = "scripts.menus.pause_inventory.tunic_blue.1",
+  icon = "121",
+  skip = "all",
+  text = [[
+Une tunique bleue qui
+te protège du froid
+et te permet de
+respirer sous l'eau.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.rod_wind.1",
   icon = "40",
   skip = "all",
   text = [[
