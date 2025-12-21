@@ -1,4 +1,6 @@
 local item = ...
+local game = item:get_game()
+local hero = game:get_hero()
 
 function item:on_created()
   self:set_savegame_variable("possession_monster_tail")

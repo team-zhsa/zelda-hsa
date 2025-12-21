@@ -104,6 +104,7 @@ function inventory_submenu:on_draw(dst_surface)
 	
 	-- Draw the cursor caption.
 	self:draw_caption(dst_surface)
+	self:draw_infos_text(dst_surface)
 
 	-- Draw each inventory static item.
 	local x = center_x + grid_coords_x + sprite_origin_x

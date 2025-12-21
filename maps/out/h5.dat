@@ -16219,6 +16219,33 @@ tile{
   pattern = "1109",
 }
 
+tile{
+  layer = 0,
+  x = 248,
+  y = 64,
+  width = 32,
+  height = 32,
+  pattern = "1085",
+}
+
+tile{
+  layer = 0,
+  x = 616,
+  y = 8,
+  width = 32,
+  height = 32,
+  pattern = "1085",
+}
+
+tile{
+  layer = 0,
+  x = 648,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "1040",
+}
+
 sensor{
   name = "layer_up_sensor_3",
   layer = 0,
@@ -16634,6 +16661,17 @@ enemy{
   direction = 0,
   breed = "outside/octorok_green",
   treasure_name = "random_east",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h4",
+  destination = "_side",
 }
 
 tile{

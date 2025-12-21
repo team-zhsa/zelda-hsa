@@ -34,6 +34,16 @@ local item_names_static_bottom = {
 	"world_map",
 }
 
+local cell_size = 28
+local cell_spacing = 4
+local max_row, max_column = 4,7
+local grid_coords_x, grid_coords_y = -120,-60
+local sprite_origin_x, sprite_origin_y = 8,16
+local cursor_origin_x, cursor_origin_y = 9,12
+local cursor_sound = "menus/cursor"
+local assign_sound = "throw"
+local menu_name = "quest"
+
 function quest_submenu:on_started()
 	self.quest_items_surface = sol.surface.create(320, 240)
 	submenu.on_started(self)
@@ -53,8 +63,8 @@ function quest_submenu:on_started()
 
 	-- initialise the cursor.
 	local index = self.game:get_value("pause_inventory_last_item_index") or 0
-	local row = math.floor(index / 7)
-	local column = index % 7
+	local row = index % max_row
+	local column = index % max_column
 	self:set_cursor_position(row, column)
 
 	-- Load Items.
@@ -98,11 +108,9 @@ end
 function quest_submenu:on_finished()
 	-- Nothing.
 end
+-- #255
+function inventory_submenu:on_draw(dst_surface)
 
-function quest_submenu:on_draw(dst_surface)
-
-	local cell_size = 28
-	local cell_spacing = 4
 	local width, height = dst_surface:get_size()
 	local center_x, center_y = width / 2, height / 2
 
@@ -111,28 +119,25 @@ function quest_submenu:on_draw(dst_surface)
 	
 	-- Draw the cursor caption.
 	self:draw_caption(dst_surface)
+	self:draw_infos_text(dst_surface)
 
 	-- Draw each inventory static item left.
-	local y = center_y + 2
+	local x = center_x + grid_coords_x + sprite_origin_x
+	local y = center_y + grid_coords_y + sprite_origin_y
 	local k = 0
+
 	for i = 0, 2 do
-		local x = center_x - 96
 		for j = 0, 2 do
-			if x == 1 and x == 1 then
-				x = x + 1
-			end
 			k = k + 1
-			if item_names_static_left[k] ~= nil then
-				local item = self.game:get_item(item_names_static_left[k])
-				if item:get_variant() > 0 then
-					-- The player has this item: draw it.
-					if item_names_static_left[k] == "magnifying_lens" then
-						self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-					else
-						self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-					end
-					self.sprites_static_left[k]:draw(dst_surface, x, y)
+			local item = self.game:get_item(item_names_static_left[k])
+			if item:get_variant() > 0 then
+				-- The player has this item: draw it.
+				if item_names_static_left[k] == "magnifying_lens" then
+					self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
+				else
+					self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
 				end
+				self.sprites_static_left[k]:draw(dst_surface, x, y)
 			end
 			x = x + cell_size + cell_spacing
 		end
@@ -140,14 +145,11 @@ function quest_submenu:on_draw(dst_surface)
 	end
 	
 	-- Draw each inventory static item right.
-	local y = center_y + 2
+	local x = center_x + grid_coords_x + sprite_origin_x + 5 * (cell_size + cell_spacing)
+	local y = center_y + grid_coords_y + sprite_origin_y
   local k = 0
   for i = 0, 2 do
-		local x = center_x + 32
 		for j = 0, 2 do
-			if x == 1 and x == 1 then
-				x = x + 1
-			end
 			k = k + 1
 			if item_names_static_right[k] ~= nil then
 				local item = self.game:get_item(item_names_static_right[k])
@@ -171,8 +173,8 @@ function quest_submenu:on_draw(dst_surface)
   end
 
 	-- Draw each inventory static item top.
-	local y = center_y - 30
-	local x = center_x - 96
+	local x = center_x + grid_coords_x + sprite_origin_x 
+	local y = center_y + grid_coords_y + sprite_origin_y + 3 * (cell_size + cell_spacing)
 	local k = 0
 	for i = 0, 2 do
 		k = k + 1
@@ -180,16 +182,7 @@ function quest_submenu:on_draw(dst_surface)
 			local item = self.game:get_item(item_names_static_top[k])
 			if item:get_variant() > 0 then
 				-- The player has this item: draw it.
-				if i == 0 then
-					x = center_x - 96
-					y = center_y - 30
-				elseif i == 1 then
-					x = center_x - 32
-					y = center_y - 30
-				elseif i == 2 then
-					x = center_x + 64
-					y = center_y - 30
-				end
+					x = center_x + grid_coords_x + sprite_origin_x + i * (cell_size + cell_spacing)
 				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
 				self.sprites_static_top[k]:draw(dst_surface, x, y)
 			end
@@ -198,30 +191,21 @@ function quest_submenu:on_draw(dst_surface)
 	end
 
 	-- Draw each inventory static item bottom.
-	local y = center_y + 66
+	local x = center_x + grid_coords_x + sprite_origin_x + 5 * (cell_size + cell_spacing)
+	local y = center_y + grid_coords_y + sprite_origin_y + 3 * (cell_size + cell_spacing)
 	local k = 0
 	for i = 0, 2 do
-		local x = center_x + 32
-		for j = 0, 2 do
-			if x == 1 and x == 1 then
-				x = x + 1
+		k = k + 1
+		if item_names_static_top[k] ~= nil then
+			local item = self.game:get_item(item_names_static_top[k])
+			if item:get_variant() > 0 then
+				-- The player has this item: draw it.
+					x = center_x + grid_coords_x + sprite_origin_x + i * (cell_size + cell_spacing)
+				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
+				self.sprites_static_top[k]:draw(dst_surface, x, y)
 			end
-			k = k + 1
-			if item_names_static_bottom[k] ~= nil then
-				local item = self.game:get_item(item_names_static_bottom[k])
-				if item:get_variant() > 0 then
-					-- The player has this item: draw it.
-					if item_names_static_bottom[k] == "magnifying_lens" then
-						self.sprites_static_bottom[k]:set_direction(item:get_variant() - 1)
-					else
-						self.sprites_static_bottom[k]:set_direction(item:get_variant() - 1)
-					end
-					self.sprites_static_bottom[k]:draw(dst_surface, x, y)
-				end
-			end
-			x = x + cell_size + cell_spacing
 		end
-		y = y + cell_size + cell_spacing
+		x = x + cell_size + cell_spacing
 	end
 
 	-- Pieces of heart.
@@ -232,7 +216,7 @@ function quest_submenu:on_draw(dst_surface)
 		pieces_of_heart_x, 0,                 -- region position in image
 		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
 		dst_surface,                          -- destination surface
-		center_x - 13, center_y + 47          -- position in destination surface
+		center_x - 13, center_y + 47          -- position in destination surface -- TODO check
 	)
 	
 -- Game time.
@@ -255,8 +239,8 @@ function quest_submenu:on_draw(dst_surface)
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then
 		self.cursor_sprite:draw(dst_surface,
-		center_x - 96 + (cell_size + cell_spacing) * self.cursor_column,
-		center_y - 34 + (cell_size + cell_spacing) * self.cursor_row)
+		center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * self.cursor_column,
+		center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * self.cursor_row)
 	end
 
 	-- Draw save dialog if necessary.
@@ -296,9 +280,9 @@ function quest_submenu:on_command_pressed(command)
 
 		elseif command == "right" then
 			if self.cursor_column == 5 and self.cursor_row == 0
-					or self.cursor_column == 6 and  self.cursor_row == 1
-					or self.cursor_column == 6 and  self.cursor_row == 2 
-					or self.cursor_column == 6 and  self.cursor_row == 3  then
+					or self.cursor_column == max_column - 1 and  self.cursor_row == 1
+					or self.cursor_column == max_column - 1 and  self.cursor_row == 2 
+					or self.cursor_column == max_column - 1 and  self.cursor_row == 3  then
 				self:next_submenu()
 			else
 				sol.audio.play_sound("menus/cursor")
@@ -322,9 +306,9 @@ function quest_submenu:on_command_pressed(command)
 				if self.cursor_column == 1 and self.cursor_row == 1
 					or self.cursor_column == 4 and self.cursor_row == 1
 					or self.cursor_column == 6 and self.cursor_row == 1 then
-					self:set_cursor_position((self.cursor_row + 2) % 4, self.cursor_column)
+					self:set_cursor_position((self.cursor_row + 2) % max_row, self.cursor_column)
 				else
-					self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
+					self:set_cursor_position((self.cursor_row + 3) % max_row, self.cursor_column)
 				end
 			end
 			handled = true
@@ -332,12 +316,12 @@ function quest_submenu:on_command_pressed(command)
 		elseif command == "down" then
 			if self.cursor_column ~= 3 then
 				sol.audio.play_sound("menus/cursor")
-				if self.cursor_column == 1 and self.cursor_row == 3
-					or self.cursor_column == 4 and self.cursor_row == 3
-					or self.cursor_column == 6 and self.cursor_row == 3 then
-					self:set_cursor_position((self.cursor_row - 2) % 4, self.cursor_column)
+				if self.cursor_column == 1 and self.cursor_row == max_row - 1
+					or self.cursor_column == 4 and self.cursor_row == max_row - 1
+					or self.cursor_column == 6 and self.cursor_row == max_row - 1 then
+					self:set_cursor_position((self.cursor_row - 2) % max_row, self.cursor_column)
 				else
-					self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
+					self:set_cursor_position((self.cursor_row + 1) % max_row, self.cursor_column)
 				end
 			end
 			handled = true

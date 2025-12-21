@@ -3,21 +3,11 @@ properties{
   y = 4320,
   width = 1280,
   height = 1440,
-  min_layer = -1,
+  min_layer = 0,
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
   music = "outside/lonlon",
-}
-
-custom_entity{
-  layer = -1,
-  x = 128,
-  y = 197,
-  width = 1280,
-  height = 1440,
-  direction = 0,
-  sprite = "maps/a2",
 }
 
 tile{
@@ -1612,6 +1602,28 @@ teletransporter{
   height = 1440,
   transition = "scrolling",
   destination_map = "out/i4",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h3",
+  destination = "_side",
+}
+
+teletransporter{
+  layer = 0,
+  x = 0,
+  y = 1440,
+  width = 1280,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "out/h5",
   destination = "_side",
 }
 

@@ -1,38 +1,31 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
-local item_names_assignable = {
+local item_names_assignable_top = { -- top
 	-- Row 1
 	"shield_hero",												-- Hero shield
 	"shield_hylia",												-- Hylia shield
-	"shield_mirror",											-- Mirror shield
+	"bow",											-- Mirror shield
 	"bottle_1",														-- Bottle
-	"bow",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
-	"bow",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
-	"bow",																-- Fire / ice bow
+	"bottle_2",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
+	"tunic_green",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
+	"tunic_blue",																-- Fire / ice bow
 	-- Row 2                                      
+	"shield_mirror",																-- Lamp      
 	"lamp",																-- Lamp      
-	"lamp",																-- Lamp      
-	"boomerang",													-- Boomerang / Great boomerang
-	"bomb_counter",												-- Bomb
-	"bottle_2",														-- Bottle
-	"bow",																-- Bomb bow
-	"bow",																-- Fire / ice bow
-	-- Row 3
-	"shovel", 														-- Shovel
-	"shovel", 														-- Shovel
-	"hookshot",														-- Hookshot
-	"feather",														-- Feather
-	"bottle_3",														-- Bottle
-	"tunic_green",												-- Tunic 1
-	"tunic_blue",													-- Tunic 2
-	-- Row 4
-	"hammer",															-- Hammer
-	"_placeholder", 											-- ?
-	"_placeholder", 											-- ?
-	"_placeholder",												-- ?
+	"bow",													-- Boomerang / Great boomerang
+	"bottle_3",												-- Bomb
 	"bottle_4",														-- Bottle
-	"tunic_red",													-- Tunic 3
-	"tunic_time",													-- Tunic 4
+	"tunic_red",																-- Bomb bow
+	"tunic_time",																-- Fire / ice bow
+}
+
+local item_names_assignable_bottom = { -- bottom
+	"boomerang",												-- Hero shield
+	"bomb_counter",												-- Hero shield
+	"hookshot",												-- Hero shield
+	"shovel",												-- Hero shield
+	"feather",												-- Hero shield
+	"hammer",												-- Hero shield
 }
 
 local item_names_static = {
@@ -44,21 +37,28 @@ local item_names_static = {
 
 local cell_size = 28
 local cell_spacing = 4
-local max_row, max_column = 4,7
+local max_row, max_column = 3,7
+local min_row_top, min_column_top = 0, 1
+local max_row_top, max_column_top = 1, 7
+local min_row_bottom, min_column_bottom = 2, 1
+local max_row_bottom, max_column_bottom = 3, 3
 local grid_coords_x, grid_coords_y = -120,-60
 local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_origin_x, cursor_origin_y = 9,12
 local cursor_sound = "menus/cursor"
 local assign_sound = "throw"
 local menu_name = "equipment"
+local digits_font = "green_digits" or "white_digits"
 
 function inventory_submenu:on_started()
 	submenu.on_started(self)
 	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
-	self.sprites_assignables = {}
+	self.sprites_assignables_top = {}
+	self.sprites_assignables_bottom = {}
 	self.sprites_static = {}
 	self.captions = {}
-	self.counters = {}
+	self.counters_top = {}
+	self.counters_bottom = {}
 	self.menu_ocarina = true
 
 	-- Set the title.
@@ -71,20 +71,39 @@ function inventory_submenu:on_started()
 	self:set_cursor_position(row, column)
 
 	-- Load Items
-	for i,item_name in ipairs(item_names_assignable) do
+	for i,item_name in ipairs(item_names_assignable_top) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_assignables[i] = sol.sprite.create("entities/items")
-		self.sprites_assignables[i]:set_animation(item_name)
+		self.sprites_assignables_top[i] = sol.sprite.create("entities/items")
+		self.sprites_assignables_top[i]:set_animation(item_name)
 		if item:has_amount() then
 			-- Show a counter in this case.
 			local amount = item:get_amount()
 			local maximum = item:get_max_amount()
-			self.counters[i] = sol.text_surface.create{
+			self.counters_top[i] = sol.text_surface.create{
 				horizontal_alignment = "center",
 				vertical_alignment = "top",
 				text = item:get_amount(),
-				font = (amount == maximum) and "green_digits" or "white_digits",
+				font = (amount == maximum) and digits_font,
+			}
+		end
+	end
+
+	for i,item_name in ipairs(item_names_assignable_bottom) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_assignables_bottom[i] = sol.sprite.create("entities/items")
+		self.sprites_assignables_bottom[i]:set_animation(item_name)
+		print(item_name)
+		if item:has_amount() then
+			-- Show a counter in this case.
+			local amount = item:get_amount()
+			local maximum = item:get_max_amount()
+			self.counters_bottom[i] = sol.text_surface.create{
+				horizontal_alignment = "center",
+				vertical_alignment = "top",
+				text = item:get_amount(),
+				font = (amount == maximum) and digits_font,
 			}
 		end
 	end
@@ -98,6 +117,9 @@ function inventory_submenu:on_started()
 end
 
 function inventory_submenu:on_finished()
+	if inventory_submenu:is_assigning_item() then
+		inventory_submenu:finish_assigning_item()
+	end
 	-- Nothing.
 end
 -- #255
@@ -111,14 +133,14 @@ function inventory_submenu:on_draw(dst_surface)
 	
 	-- Draw the cursor caption.
 	self:draw_caption(dst_surface)
-
+	self:draw_infos_text(dst_surface)
 
 	-- Draw each inventory static item.
 	local x = center_x + grid_coords_x + sprite_origin_x
 	local y = center_y + grid_coords_y + sprite_origin_y
 	local k = 0
 
-	for j = 0, max_row - 1 do
+	for j = 0, max_row do
 		k = k + 1
 		local item = self.game:get_item(item_names_static[k])
 		if item:get_variant() > 0 then
@@ -131,22 +153,22 @@ function inventory_submenu:on_draw(dst_surface)
 	end
 
 	-- Draw each inventory assignable item.
-
-	local y = center_y + grid_coords_y + sprite_origin_y
+	local x = center_x + grid_coords_x + sprite_origin_x
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_top * (cell_size + cell_spacing)
 	local k = 0
 
-	for i = 0, max_row - 1 do
-		local x = center_x + grid_coords_x + sprite_origin_x + cell_size + cell_spacing
-		for j = 0, max_column - 1 do
+	for j = min_row_top, max_row_top do
+		local x = center_x + grid_coords_x + sprite_origin_x + min_column_top * (cell_size + cell_spacing)
+		for i = min_column_top, max_column_top do
 			k = k + 1
-			if item_names_assignable[k] ~= nil then
-				local item = self.game:get_item(item_names_assignable[k])
+			if item_names_assignable_top[k] ~= nil then
+				local item = self.game:get_item(item_names_assignable_top[k])
 				if item:get_variant() >= 1 then
 					-- The player has this item: draw it.
-					self.sprites_assignables[k]:set_direction(item:get_variant() - 1)
-					self.sprites_assignables[k]:draw(dst_surface, x, y)
-					if self.counters[k] ~= nil then
-						self.counters[k]:draw(dst_surface, x, y)
+					self.sprites_assignables_top[k]:set_direction(item:get_variant() - 1)
+					self.sprites_assignables_top[k]:draw(dst_surface, x, y)
+					if self.counters_top[k] ~= nil then
+						self.counters_top[k]:draw(dst_surface, x, y)
 					end
 				end
 			end
@@ -154,7 +176,29 @@ function inventory_submenu:on_draw(dst_surface)
 		end
 		y = y + cell_size + cell_spacing
 	end
-
+	
+	local x = center_x + grid_coords_x + sprite_origin_x
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_bottom * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_bottom, max_row_bottom do
+		local x = center_x + grid_coords_x + sprite_origin_x + min_column_bottom * (cell_size + cell_spacing)
+		for i = min_column_bottom, max_column_bottom do
+			k = k + 1
+			if item_names_assignable_bottom[k] ~= nil then
+				local item = self.game:get_item(item_names_assignable_bottom[k])
+				if item:get_variant() >= 1 then
+					-- The player has this item: draw it.
+					self.sprites_assignables_bottom[k]:set_direction(item:get_variant() - 1)
+					self.sprites_assignables_bottom[k]:draw(dst_surface, x, y)
+					if self.counters_bottom[k] ~= nil then
+						self.counters_bottom[k]:draw(dst_surface, x, y)
+					end
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
 
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then
@@ -172,6 +216,7 @@ function inventory_submenu:on_draw(dst_surface)
 	self:draw_save_dialog_if_any(dst_surface)
 end
 
+-- CURSOR MOVEMENTS
 function inventory_submenu:on_command_pressed(command)
 	
 	local handled = submenu.on_command_pressed(self, command)
@@ -195,7 +240,8 @@ function inventory_submenu:on_command_pressed(command)
 				handled = true
 			end
 		elseif command == "left"  then
-			if self.cursor_column == 0 then
+			if self.cursor_column == 0
+			 then
 				self:previous_submenu()
 			else
 				sol.audio.play_sound(cursor_sound)
@@ -205,26 +251,35 @@ function inventory_submenu:on_command_pressed(command)
 
 		elseif command == "right"  then
 			local limit = max_column
-			if self.cursor_column == limit then
+			if self.cursor_column == limit
+				or (self.cursor_column == max_column_top and self.cursor_row < max_row_top + 1)
+			 then
 				self:next_submenu()
-			else
+			elseif 
+				(self.cursor_column < max_column_top and self.cursor_row < max_row_top + 1)
+				or (self.cursor_column < max_column_bottom and self.cursor_row > min_row_bottom - 1)
+				then
 				sol.audio.play_sound(cursor_sound)
-				self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
+				self:set_cursor_position(self.cursor_row, self.cursor_column + 1)			
 			end
 			handled = true
 
 		elseif command == "up" and self.cursor_column < max_column + 1 then
 			sol.audio.play_sound(cursor_sound)
-			self:set_cursor_position((self.cursor_row + (max_row - 1)) % max_row, self.cursor_column)
+			self:set_cursor_position((self.cursor_row - 1) % (max_row + 1), self.cursor_column)
 			handled = true
 
-		elseif command == "down" and self.cursor_column < max_column + 1  then
-			sol.audio.play_sound(cursor_sound)
-			self:set_cursor_position((self.cursor_row + 1) % max_row, self.cursor_column)
-			handled = true
-
+		elseif command == "down" then
+			if (self.cursor_column < max_column_bottom + 1)
+			or (self.cursor_column < max_column_top + 1 and self.cursor_row < max_row_top)
+			then
+				sol.audio.play_sound(cursor_sound)
+				self:set_cursor_position((self.cursor_row + 1) % (max_row + 1), self.cursor_column)
+				handled = true
+			end
 		end
 	end
+	print(self.cursor_row, self.cursor_column)
 
 	return handled
 
@@ -264,6 +319,7 @@ function inventory_submenu:set_cursor_position(row, column)
 	local item_icon_opacity = 128
 	if variant > 0 then
 		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
+		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
 		self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
       self.game:set_hud_mode("pause_assign")
@@ -275,15 +331,18 @@ function inventory_submenu:set_cursor_position(row, column)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end
-
+	print(item_name)
 end
 
 function inventory_submenu:get_item_name(row, column)
 
-	 if column > 0 and column < max_column + 1 then
-			index = row * (max_column) + column - 1
-			item_name = item_names_assignable[index + 1]
-	 else
+	if (column > 0 and column < max_column_top + 1) and (row==0 or row == 1) then
+			index = row * (max_column_top) + column - 1
+			item_name = item_names_assignable_top[index + 1]
+	elseif (column > 0 and column < max_column_bottom + 1) and (row==2 or row == 3) then
+			index = (row - 2) * (max_column_bottom) + column - 1
+			item_name = item_names_assignable_bottom[index + 1]
+		elseif column == 0 then
 			index = row 
 			item_name = item_names_static[index + 1]
 	end
@@ -345,7 +404,7 @@ function inventory_submenu:assign_item(slot)
 			self.item_assigned_sprite:set_xy(x1, y1)
 			local movement = sol.movement.create("target")
 			movement:set_target(x2, y2)
-			movement:set_speed(300)
+			movement:set_speed(400)
 			movement:start(self.item_assigned_sprite, function()
 				self:finish_assigning_item()
 			end)
@@ -355,9 +414,7 @@ end
 
 -- Returns whether an item is currently being thrown to an icon.
 function inventory_submenu:is_assigning_item()
-
 	return self.item_assigned_sprite ~= nil
-
 end
 
 -- Stops assigning the item right now.
@@ -381,6 +438,5 @@ function inventory_submenu:finish_assigning_item()
 	self.item_assigned = nil
 
 end
-
 
 return inventory_submenu

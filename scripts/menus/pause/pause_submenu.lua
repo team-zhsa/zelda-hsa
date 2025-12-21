@@ -4,8 +4,9 @@ local submenu = {}
 
 local language_manager = require("scripts/language_manager")
 local messagebox = require("scripts/menus/messagebox")
-local text_fx_helper = require("scripts/text_fx_helper")
 local audio_manager = require("scripts/audio_manager")
+local text_utils = require("scripts/tools/text_utils")
+local text_fx_helper = require("scripts/text_fx_helper")
 
 function submenu:new(game)
 
@@ -23,6 +24,8 @@ function submenu:on_started()
 	self.width, self.height = img_width / 4, img_height
 	self.title_l_arrow = sol.surface.create("hud/text_icons/controller_l_icon.png")
 	self.title_r_arrow = sol.surface.create("hud/text_icons/controller_r_icon.png")
+	self.infos_background = sol.surface.create("menus/pause/submenus_caption.png")
+	self.infos_background_w, self.infos_background_h = self.infos_background:get_size()
 	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png")
 	self.caption_background_w, self.caption_background_h = self.caption_background:get_size()
 	self.title_background = sol.surface.create("menus/pause/submenus_title.png")
@@ -76,6 +79,33 @@ function submenu:on_started()
 		font_size = menu_font_size,
 	}
 
+	-- Create infos text..
+	local dialog_font, dialog_font_size = language_manager:get_dialog_font()
+	self.font_size = dialog_font_size
+	self.text_color = { 224, 224, 224 }
+	self.text_stroke_color = {72, 72, 72}
+	self.infos_lines = {} -- Table containing each info text line
+	self.infos_text_line = {} -- Table containing each info text line surface
+
+	self.infos_text_master = sol.text_surface.create{
+		horizontal_alignment = "center",
+		vertical_alignment = "middle",
+		font = dialog_font,
+		font_size = dialog_font_size - 2,
+		color = self.text_color,
+	}
+
+  for i = 0, 10 do
+    self.infos_text_line[i] = sol.text_surface.create{
+			horizontal_alignment = "left",
+			vertical_alignment = "middle",
+			font = dialog_font,
+			font_size = dialog_font_size,
+			color = self.text_color,
+    }
+  end
+
+
 	-- Create captions.
 	local menu_font, menu_font_size = language_manager:get_menu_font()
 	self.font_size = menu_font_size
@@ -114,6 +144,65 @@ function submenu:on_started()
 	self.game:set_custom_command_effect("action", nil)
 	self.game:set_custom_command_effect("attack", "save")
 end
+
+-- <<ITEMS DESCRIPTION>> #257
+
+function submenu:set_infos_key(text_key)
+	if text_key == nil then
+		self:set_infos_text(nil)
+	else
+		local text = sol.language.get_dialog(text_key).text
+		self:set_infos_text(text)
+	end
+	print(text_key)
+end
+
+function submenu:set_infos_text(text)
+	if text == nil then
+		self.infos_text_master:set_text(nil)
+	else
+	-- Standardise all line endings to \n
+		text = text:gsub("\r\n", "\n"):gsub("\r", "\n")
+		i = 0
+		-- Insert each line's text into the info_lines table
+		for line in text:gmatch("([^\n]*)\n") do
+			i = i + 1
+	     table.insert(self.infos_lines, line);
+			 		self.infos_text_line[i]:set_text(line)
+			 print(line)
+	  end
+
+	end
+end
+
+function submenu:draw_infos_text(dst_surface)
+		-- Draw only if save dialog is not displayed.
+	if not self.dialog_opened then
+		local width, height = dst_surface:get_size()
+		local center_x, center_y = width / 2, height / 2
+		local infos_coords_x, infos_coords_y = 0,0
+		local infos_background_center_x, infos_background_center_y = self.infos_background_w / 2,self.infos_background_h / 2
+
+		local infos_x = center_x + infos_coords_x 
+		local infos_y = center_y + infos_coords_y 
+		local infos_center_x = infos_x + infos_background_center_x
+		local infos_center_y = infos_y + infos_background_center_y
+
+		if self.infos_text:get_text():len() ~= 0 then
+			self.infos_background:draw(dst_surface, infos_x, infos_y)
+			-- Draw infos frame if there is text (how many hearts retrieved, magic...).
+			-- Draw infos text if there is text.
+			local cell_size = 28
+			local cell_spacing = 4
+			for i = 0, 10 do
+				self.infos_text_line[i]:set_xy(infos_x + cell_spacing, infos_y + self.font_y_shift + 10 * i)
+				text_fx_helper:draw_text_with_shadow(dst_surface, self.infos_text_line[i], self.text_stroke_color)
+			end
+		end
+	end
+end
+
+-- <<CAPTION>>
 
 -- Sets the caption text key.
 function submenu:set_caption_key(text_key)
@@ -158,11 +247,12 @@ function submenu:draw_caption(dst_surface)
 		-- Draw caption frame if there is text.
 		local caption_x = center_x + caption_coords_x 
 		local caption_y = center_y + caption_coords_y 
+		local caption_center_x = caption_x + caption_background_center_x
+		local caption_center_y = caption_y + caption_background_center_y
+
 		if self.caption_text_1:get_text():len() ~= 0 then
 			self.caption_background:draw(dst_surface, caption_x, caption_y)
 		end
-		local caption_center_x = caption_x + caption_background_center_x
-		local caption_center_y = caption_y + caption_background_center_y
 
 		-- Draw caption text.
 		if self.caption_text_2:get_text():len() == 0 then
@@ -183,6 +273,58 @@ function submenu:draw_caption(dst_surface)
 	end
 end
 
+-- <<TITLE>>
+
+-- Sets the title text key.
+function submenu:set_title_key(text_key)
+	if text_key == nil then
+		self:set_title(nil)
+	else
+		local text = sol.language.get_string(text_key)
+		self:set_title(text)
+	end
+end
+
+-- Sets the caption text.
+-- The caption text can have one or two lines, with 20 characters maximum for each line.
+-- If the text you want to display has two lines, use the '$' character to separate them.
+-- A value of nil removes the previous caption if any.
+function submenu:set_title(text)
+	if text == nil then
+		self.title_text:set_text(nil)
+	else
+		local line1 = text:match("([^$]+)")
+		self.title_text:set_text(text)
+	end
+end
+
+-- Draw the caption text previously set.
+function submenu:draw_title(dst_surface)
+	-- Draw only if save dialog is not displayed.
+	if not self.dialog_opened then
+		local width, height = dst_surface:get_size()
+		local center_x, center_y = width / 2, height / 2
+		local title_coords_x, title_coords_y = -24,-104
+		local title_background_center_x, title_background_center_y = self.title_background_w / 2,self.title_background_h / 2
+		-- Draw caption frame if there is text.
+		local title_x = center_x + title_coords_x 
+		local title_y = center_y + title_coords_y 
+		if self.title_text:get_text():len() ~= 0 then
+			self.title_background:draw(dst_surface, title_x, title_y)
+		end
+		local title_center_x = title_x + title_background_center_x
+		local title_center_y = title_y + title_background_center_y
+
+		-- Draw caption text, center vertically the only line.
+			self.title_text:set_xy(title_center_x, title_center_y + self.font_y_shift)
+			text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, self.title_text, self.text_stroke_color, self.title_shadow_color)
+		local arrow_surface_w, arrow_surface_h = self.title_l_arrow:get_size()
+		self.title_l_arrow:draw(dst_surface, title_center_x - 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
+		self.title_r_arrow:draw(dst_surface, title_center_x + 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
+		--self.title_arrows:draw_region(14, 0, 14, 12, dst_surface, center_x + 57, center_y - 80)
+
+	end
+end
 
 function submenu:next_submenu()
 
@@ -345,56 +487,7 @@ function submenu:draw_save_dialog_if_any(dst_surface)
 	end
 end
 
--- Sets the title text key.
-function submenu:set_title_key(text_key)
-	if text_key == nil then
-		self:set_title(nil)
-	else
-		local text = sol.language.get_string(text_key)
-		self:set_title(text)
-	end
-end
 
--- Sets the caption text.
--- The caption text can have one or two lines, with 20 characters maximum for each line.
--- If the text you want to display has two lines, use the '$' character to separate them.
--- A value of nil removes the previous caption if any.
-function submenu:set_title(text)
-	if text == nil then
-		self.title_text:set_text(nil)
-	else
-		local line1 = text:match("([^$]+)")
-		self.title_text:set_text(text)
-	end
-end
-
--- Draw the caption text previously set.
-function submenu:draw_title(dst_surface)
-	-- Draw only if save dialog is not displayed.
-	if not self.dialog_opened then
-		local width, height = dst_surface:get_size()
-		local center_x, center_y = width / 2, height / 2
-		local title_coords_x, title_coords_y = -24,-104
-		local title_background_center_x, title_background_center_y = self.title_background_w / 2,self.title_background_h / 2
-		-- Draw caption frame if there is text.
-		local title_x = center_x + title_coords_x 
-		local title_y = center_y + title_coords_y 
-		if self.title_text:get_text():len() ~= 0 then
-			self.title_background:draw(dst_surface, title_x, title_y)
-		end
-		local title_center_x = title_x + title_background_center_x
-		local title_center_y = title_y + title_background_center_y
-
-		-- Draw caption text, center vertically the only line.
-			self.title_text:set_xy(title_center_x, title_center_y + self.font_y_shift)
-			text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, self.title_text, self.text_stroke_color, self.title_shadow_color)
-		local arrow_surface_w, arrow_surface_h = self.title_l_arrow:get_size()
-		self.title_l_arrow:draw(dst_surface, title_center_x - 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
-		self.title_r_arrow:draw(dst_surface, title_center_x + 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
-		--self.title_arrows:draw_region(14, 0, 14, 12, dst_surface, center_x + 57, center_y - 80)
-
-	end
-end
 
 
 
