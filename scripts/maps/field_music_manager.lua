@@ -49,8 +49,7 @@ map_meta:register_event("on_started", function(map)
   local game = map:get_game()
 	if map_is_south_field(map:get_id()) or map_is_north_field(map:get_id()) then
 		field_music_manager:check_time(map)
-		field_music_manager:play_music(map, game, playing_time)
-		sol.timer.start(map, 1000, function()
+		sol.timer.start(map, math.random(4000, 10000), function()
 			field_music_manager:check_time(map)
 			return true
 		end)
@@ -63,15 +62,16 @@ function field_music_manager:check_time(map)
 	if playing_time ~= current_time then
 		playing_time = current_time
 		
-		field_music_manager:play_music(map, playing_time)
+
 		print("check_time new playing "..playing_time)
 	end
-
+		field_music_manager:play_music(map, playing_time)
 end
 
 function field_music_manager:play_music(map, playing_time)
 		if playing_time == "night" then
 			field_music_manager:play_night(map)
+
 		elseif playing_time == "day" or "dawn" or "sunset" or "twilight" then
 			field_music_manager:play_day(map)
 		end

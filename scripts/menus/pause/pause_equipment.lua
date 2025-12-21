@@ -7,8 +7,10 @@ local item_names_assignable = {
 	"shield_mirror",											-- Mirror shield
 	"bottle_1",														-- Bottle
 	"bow",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
+	"bow",																-- Bow / Great bow (3 arrows) / light bow (5 arrows)
 	"bow",																-- Fire / ice bow
 	-- Row 2                                      
+	"lamp",																-- Lamp      
 	"lamp",																-- Lamp      
 	"boomerang",													-- Boomerang / Great boomerang
 	"bomb_counter",												-- Bomb
@@ -17,6 +19,7 @@ local item_names_assignable = {
 	"bow",																-- Fire / ice bow
 	-- Row 3
 	"shovel", 														-- Shovel
+	"shovel", 														-- Shovel
 	"hookshot",														-- Hookshot
 	"feather",														-- Feather
 	"bottle_3",														-- Bottle
@@ -24,6 +27,7 @@ local item_names_assignable = {
 	"tunic_blue",													-- Tunic 2
 	-- Row 4
 	"hammer",															-- Hammer
+	"_placeholder", 											-- ?
 	"_placeholder", 											-- ?
 	"_placeholder",												-- ?
 	"bottle_4",														-- Bottle
@@ -40,6 +44,13 @@ local item_names_static = {
 
 local cell_size = 28
 local cell_spacing = 4
+local max_row, max_column = 4,7
+local grid_coords_x, grid_coords_y = -120,-60
+local sprite_origin_x, sprite_origin_y = 8,16
+local cursor_origin_x, cursor_origin_y = 9,12
+local cursor_sound = "menus/cursor"
+local assign_sound = "throw"
+local menu_name = "equipment"
 
 function inventory_submenu:on_started()
 	submenu.on_started(self)
@@ -51,12 +62,12 @@ function inventory_submenu:on_started()
 	self.menu_ocarina = true
 
 	-- Set the title.
-	self:set_title(sol.language.get_string("inventory.title_inventory_1"))
+	self:set_title(sol.language.get_string("inventory.title_"..menu_name))
 
 	-- Initialise the cursor
 	local index = self.game:get_value("pause_inventory_last_item_index") or 0
-	local row = math.floor(index / 4)
-	local column = index % 7
+	local row = index % max_row
+	local column = index % max_column
 	self:set_cursor_position(row, column)
 
 	-- Load Items
@@ -89,7 +100,7 @@ end
 function inventory_submenu:on_finished()
 	-- Nothing.
 end
-
+-- #255
 function inventory_submenu:on_draw(dst_surface)
 
 	local width, height = dst_surface:get_size()
@@ -101,11 +112,13 @@ function inventory_submenu:on_draw(dst_surface)
 	-- Draw the cursor caption.
 	self:draw_caption(dst_surface)
 
+
 	-- Draw each inventory static item.
-	local y = center_y - 30
+	local x = center_x + grid_coords_x + sprite_origin_x
+	local y = center_y + grid_coords_y + sprite_origin_y
 	local k = 0
-	local x = center_x - 96
-	for j = 0, 3 do
+
+	for j = 0, max_row - 1 do
 		k = k + 1
 		local item = self.game:get_item(item_names_static[k])
 		if item:get_variant() > 0 then
@@ -118,12 +131,13 @@ function inventory_submenu:on_draw(dst_surface)
 	end
 
 	-- Draw each inventory assignable item.
-	local y = center_y - 30
+
+	local y = center_y + grid_coords_y + sprite_origin_y
 	local k = 0
 
-	for i = 0, 3 do
-		local x = center_x - 65
-		for j = 0, 5 do
+	for i = 0, max_row - 1 do
+		local x = center_x + grid_coords_x + sprite_origin_x + cell_size + cell_spacing
+		for j = 0, max_column - 1 do
 			k = k + 1
 			if item_names_assignable[k] ~= nil then
 				local item = self.game:get_item(item_names_assignable[k])
@@ -132,7 +146,7 @@ function inventory_submenu:on_draw(dst_surface)
 					self.sprites_assignables[k]:set_direction(item:get_variant() - 1)
 					self.sprites_assignables[k]:draw(dst_surface, x, y)
 					if self.counters[k] ~= nil then
-						self.counters[k]:draw(dst_surface, x + 8, y)
+						self.counters[k]:draw(dst_surface, x, y)
 					end
 				end
 			end
@@ -145,8 +159,8 @@ function inventory_submenu:on_draw(dst_surface)
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then
 		self.cursor_sprite:draw(dst_surface,
-		center_x - 96 + (cell_size + cell_spacing) * self.cursor_column,
-		center_y - 34 + (cell_size + cell_spacing) * self.cursor_row)
+		center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * self.cursor_column,
+		center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * self.cursor_row)
 	end
 
 	-- Draw the item being assigned if any.
@@ -184,29 +198,29 @@ function inventory_submenu:on_command_pressed(command)
 			if self.cursor_column == 0 then
 				self:previous_submenu()
 			else
-				sol.audio.play_sound("menus/cursor")
+				sol.audio.play_sound(cursor_sound)
 				self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
 			end
 			handled = true
 
 		elseif command == "right"  then
-			local limit = 6
+			local limit = max_column
 			if self.cursor_column == limit then
 				self:next_submenu()
 			else
-				sol.audio.play_sound("menus/cursor")
+				sol.audio.play_sound(cursor_sound)
 				self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
 			end
 			handled = true
 
-		elseif command == "up" and self.cursor_column < 7 then
-			sol.audio.play_sound("menus/cursor")
-			self:set_cursor_position((self.cursor_row + 3) % 4, self.cursor_column)
+		elseif command == "up" and self.cursor_column < max_column + 1 then
+			sol.audio.play_sound(cursor_sound)
+			self:set_cursor_position((self.cursor_row + (max_row - 1)) % max_row, self.cursor_column)
 			handled = true
 
-		elseif command == "down" and self.cursor_column < 7 then
-			sol.audio.play_sound("menus/cursor")
-			self:set_cursor_position((self.cursor_row + 1) % 4, self.cursor_column)
+		elseif command == "down" and self.cursor_column < max_column + 1  then
+			sol.audio.play_sound(cursor_sound)
+			self:set_cursor_position((self.cursor_row + 1) % max_row, self.cursor_column)
 			handled = true
 
 		end
@@ -252,7 +266,7 @@ function inventory_submenu:set_cursor_position(row, column)
 		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
 		self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
-      self.game:set_hud_mode("normal")
+      self.game:set_hud_mode("pause_assign")
     else
       self.game:set_hud_mode("pause")
 		end
@@ -266,8 +280,8 @@ end
 
 function inventory_submenu:get_item_name(row, column)
 
-	 if column > 0 and column < 7 then
-			index = row * 6 + column - 1
+	 if column > 0 and column < max_column + 1 then
+			index = row * (max_column) + column - 1
 			item_name = item_names_assignable[index + 1]
 	 else
 			index = row 
@@ -315,16 +329,18 @@ function inventory_submenu:assign_item(slot)
 			self.item_assigned_destination = slot
 
 			-- Play the sound.
-			sol.audio.play_sound("throw")
+			sol.audio.play_sound(assign_sound)
 
 			local screen_w, screen_h = sol.video.get_quest_size()
+			local center_x, center_y = screen_w / 2, screen_h / 2
 
 			-- Compute the movement.
-			local x1 = (screen_w / 2) - 96 + (cell_size + cell_spacing) * self.cursor_column
-			local y1 = (screen_h / 2) - 34 + (cell_size + cell_spacing) * self.cursor_row
-			
-			local x2 = (slot == 1) and (screen_w - 95) or (screen_w - 45)
-			local y2 = 16
+
+			local x1 = center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * self.cursor_column
+			local y1 = center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * self.cursor_row
+
+			local x2 = (slot == 1) and (screen_w - 76) or (screen_w - 28) + 16
+			local y2 = 4 + 16
 
 			self.item_assigned_sprite:set_xy(x1, y1)
 			local movement = sol.movement.create("target")

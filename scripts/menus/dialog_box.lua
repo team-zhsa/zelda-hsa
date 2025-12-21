@@ -195,11 +195,11 @@ local function initialise_dialog_box_features(game)
 
 		-- Set the coordinates of graphic objects.
 		local screen_width, screen_height = sol.video.get_quest_size()
-		local x = screen_width / 2 - 110
+		local x = screen_width / 2 - box_width / 2
 		local y = top and 32 or (screen_height - 80)
 
 		if self.style == "empty" then
-			x = screen_width / 2 - 110
+			x = screen_width / 2 - box_width / 2
 			y = y + (top and -32 or -32)
 		end
 

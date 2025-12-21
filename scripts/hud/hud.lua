@@ -257,7 +257,7 @@ local function initialize_hud_features(game)
   -- Ex: During a dialog, move the action icon and the sword icon, and hides the
   -- item icons.
   function hud:set_mode(mode)
-    if mode == "normal" or mode == "dialog" or mode == "pause" 
+    if mode == "normal" or mode == "dialog" or mode == "pause" or mode == "pause_assign" 
     or mode == "no_buttons" or mode == "no_hud" then
       hud.mode = mode
       hud:adapt_to_curent_mode()
@@ -291,32 +291,62 @@ local function initialize_hud_features(game)
         end
       end
     elseif hud.mode == "pause" then
+      print("pause hud")
       if attack_icon ~= nil then
-        attack_icon:set_dst_position(attack_icon:get_normal_position())
+        attack_icon:set_dst_position(-320,-320)--(attack_icon:get_normal_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
-        attack_icon:set_enabled(effect ~= nil)
-        attack_icon:set_active(true)
+        attack_icon:set_enabled(false)
+        attack_icon:set_active(false)
       end
 
       if action_icon ~= nil then
-        action_icon:set_dst_position(action_icon:get_normal_position())
+        action_icon:set_dst_position(-320,-320)--(action_icon:get_normal_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
-        action_icon:set_enabled(effect ~= nil)
-        action_icon:set_active(true)
+        action_icon:set_enabled(false)
+        action_icon:set_active(false)
       end
 
       if pause_icon ~= nil then
-        pause_icon:set_enabled(false)
-        pause_icon:set_active(false)
+        pause_icon:set_enabled(true)
+        pause_icon:set_active(true)
+      end
+
+      for _, item_icon in ipairs(item_icons) do
+        if item_icon ~= nil then
+          item_icon:set_enabled(false)
+          item_icon:set_active(false)
+        end
+      end
+    elseif hud.mode == "pause_assign" then
+      print("pause assign hud")
+      if attack_icon ~= nil then
+        attack_icon:set_dst_position(-320,-320)--(attack_icon:get_normal_position())
+        local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
+        attack_icon:set_enabled(false)
+        attack_icon:set_active(false)
+      end
+
+      if action_icon ~= nil then
+        action_icon:set_dst_position(-320,-320)--(action_icon:get_normal_position())
+        local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
+        action_icon:set_enabled(false)
+        action_icon:set_active(false)
+      end
+
+      if pause_icon ~= nil then
+        pause_icon:set_enabled(true)
+        pause_icon:set_active(true)
       end
 
       for _, item_icon in ipairs(item_icons) do
         if item_icon ~= nil then
           item_icon:set_enabled(true)
-          item_icon:set_active(false)
+          item_icon:set_active(true)
         end
       end
     elseif hud.mode == "normal" then
+            print("normal hud")
+
       if attack_icon ~= nil then
         attack_icon:set_dst_position(attack_icon:get_normal_position())
         local attack_icon_enabled = false

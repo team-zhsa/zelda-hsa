@@ -1,31 +1,38 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
-  "song_1_forest",
-	"song_2_fire",
-  "song_3_water",
-  "song_4_spirit",
-	"song_5_lorule",
-  "song_8_shadow",
-  "song_10_zelda",
-	"song_11_time",
-  "song_12_secret",
-	"song_13_light",
-	"song_14_storms",
-	"song_15_sun",
-	"song_16_epona",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow",
-	"bow"
-
+	-- Row 1
+	"magic_cape",												-- Magic cape
+	"magic_mirror",												-- Magic mirror
+	"book_of_mudora",								      -- Book of Mudora
+	"fire_rod",														-- Fire rod
+	"light_rod",												-- Light rod
+	"somaria_cane",												-- Somaria cane
+	"wind_rod",														-- Wind rod
+	-- Row 2                                      
+	"_placeholder",												-- ?      
+	"lens_of_truth",											-- Lens of truth    
+	"healing_wand",												-- Healing wand
+	"ice_rod",									    			-- Ice rod
+	"thunder_rod",												-- Thunder rod
+	"darkness_rod",												-- Darkness rod
+	"doom_rod",														-- Doom rod
+	-- Row 3
+	"_placeholder", 											-- ?
+	"_placeholder",												-- ?
+	"din_flame",								  				-- Din Flame
+	"farore_quake",												-- Farore Quake
+	"nayru_ether",												-- Nayru Ether
+	"_placeholder",												-- ?
+	"_placeholder",												-- ?
+	-- Row 4
+	"_placeholder",												-- ?
+	"_placeholder",					    					-- ?
+	"sword_skill_beam", 									-- Sword skill
+	"sword_skill_beam",						     				-- Sword skill
+	"sword_skill_beam",						  					-- Sword skill 
+	"_placeholder",						 						-- ?
+	"_placeholder",												-- ?
 }
 
 local item_names_static = {
@@ -43,7 +50,7 @@ local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_origin_x, cursor_origin_y = 9,12
 local cursor_sound = "menus/cursor"
 local assign_sound = "throw"
-local menu_name = "ocarina"
+local menu_name = "magic"
 
 function inventory_submenu:on_started()
 	submenu.on_started(self)

@@ -9,7 +9,7 @@ local grabbed_hero
 
 function enemy:on_created()
 
-  enemy:set_life(8)
+  enemy:set_life(4)
   enemy:set_damage(0)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
@@ -146,6 +146,7 @@ function enemy:on_attacking_hero(hero, enemy_sprite)
   sol.audio.play_sound("hero_hurt")
   hero:set_visible(false)
   local game = hero:get_game()
+
   local hero_x, hero_y, hero_layer = hero:get_position()
   hero_sprite_ce = map:create_custom_entity({
     x = hero_x,
