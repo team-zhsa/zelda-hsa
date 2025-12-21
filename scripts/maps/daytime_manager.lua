@@ -342,7 +342,11 @@ function tone_manager:create(game)
       	    effects.torch:draw(light, xx - cam_x - 32, yy - cam_y - 32)
           end
         end
-        if game:has_item("lamp") and game:get_magic() > 0 then
+					local slot_1 = map:get_game():get_item_assigned(1)
+					local slot_2 = map:get_game():get_item_assigned(2)
+				if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
+				 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
+				 and map:get_game():get_magic() > 0 then
           if game:get_time_of_day() == "night" then
             effects.torch_hero:draw(light, x - cam_x - 64, y - cam_y - 68)
           end

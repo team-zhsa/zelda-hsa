@@ -365,10 +365,11 @@ local function setup_inside_lights(map)
 			-- Create a smaller hero light
 			local hl = create_light(map,-320,-320,0,"32",default_color)
 			function hl:on_update()
-				local slot_1 = map:get_game():get_item_assigned(1)
-				local slot_2 = map:get_game():get_item_assigned(2)
-				if (slot_1 ~= nil and slot_1:get_name() == "lamp")
-				 or (slot_2 ~= nil and slot_2:get_name() == "lamp") then
+					local slot_1 = map:get_game():get_item_assigned(1)
+					local slot_2 = map:get_game():get_item_assigned(2)
+				if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
+				 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
+				 and map:get_game():get_magic() > 0 then
 						hl:set_position(hero:get_position())
 				else
 					hl:set_position(-320, -320)
@@ -383,8 +384,9 @@ local function setup_inside_lights(map)
 				function hl:on_update()
 					local slot_1 = map:get_game():get_item_assigned(1)
 					local slot_2 = map:get_game():get_item_assigned(2)
-				if (slot_1 ~= nil and slot_1:get_name() == "lamp")
-				 or (slot_2 ~= nil and slot_2:get_name() == "lamp") then
+				if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
+				 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
+				 and map:get_game():get_magic() > 0 then
 							hl:set_position(hero:get_position())
 					else
 						hl:set_position(-320, -320)
