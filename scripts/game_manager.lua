@@ -129,6 +129,9 @@ function game_manager:create(file)
         game:convert_variables("possession_darkness_rod","possession_rod_darkness")
         game:convert_variables("possession_ice_rod","possession_rod_ice")
         game:convert_variables("possession_fire_rod","possession_rod_fire")
+        --22/12/2025
+        game:convert_variables("possession_song_16","possession_song_6")
+        game:convert_variables("possession_song_17","possession_song_7")
       else sol.main.reset()
       end
     end)

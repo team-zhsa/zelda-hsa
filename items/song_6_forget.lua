@@ -3,8 +3,8 @@ local game = item:get_game()
 local config = require("items/song_manager")
 
 local properties = {
-	savegame_variable = "possession_song_16",
-  music = "items/ocarina/song/16_epona",
+	savegame_variable = "possession_song_6",
+  music = "items/ocarina/song/6_epona",
 	type = "skip_dialogue",
 	effect = function()
 		item:song_effect()

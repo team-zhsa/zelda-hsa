@@ -1002,6 +1002,28 @@ tes ennemis !
 }
 
 dialog{
+  id = "_treasure.ocarina.1",
+  icon = "95",
+  note = "<<< todo icons",
+  text = [[
+Impa t'a donné un ocarina ! $0
+Tu peux jouer un chant que tu
+as appris depuis le menu
+d'inventaire.$0
+Appuie sur \[controller_start\].
+]],
+}
+
+dialog{
+  id = "_treasure.ocarina.all_ores_obtained",
+  icon = "95",
+  text = [[
+Va à la forge pour améliorer ton
+épée !
+]],
+}
+
+dialog{
   id = "_treasure.pegasus_boots.1",
   icon = "118",
   text = [[
@@ -7208,8 +7230,10 @@ dialog{
   icon = "11",
   skip = "all",
   text = [[
-Utilise la Super Bombe pour
-faire exploser plus d'obstacles.
+Utilise la Super
+Bombe pour faire
+exploser plus
+d'obstacles.
 ]],
 }
 
@@ -7218,9 +7242,10 @@ dialog{
   icon = "5",
   skip = "all",
   text = [[
-Utilise le Boomerang pour
-immobiliser les ennemis ou
-attraper des objets à distance.
+Utilise le Boomerang
+pour immobiliser les
+ennemis ou attraper
+des objets à distance.
 ]],
 }
 
@@ -7229,9 +7254,11 @@ dialog{
   icon = "6",
   skip = "all",
   text = [[
-Utilise le Super Boomerang pour
-immobiliser les ennemis ou
-attraper des objets à distance.
+Utilise le Super
+Boomerang pour
+immobiliser les
+ennemis ou attraper
+des objets à distance.
 ]],
 }
 
@@ -7765,8 +7792,9 @@ dialog{
   icon = "1",
   skip = "all",
   text = [[
-Tire des Flèches pour vaincre
-des ennemis coriaces.
+Tire des flèches
+pour vaincre tes
+ennemis à distance.
 ]],
 }
 
@@ -7870,11 +7898,10 @@ dialog{
   icon = "95",
   skip = "all",
   text = [[
-Les fragments de Roche Divine
-te permettent d'améliorer ton
+Apporte huit fragments
+de roche à la forge
+pour améliorer ton
 épée.
-Apportes-en huit à la forge pour
-que ton épée soit plus puissante.
 ]],
 }
 
@@ -7904,8 +7931,9 @@ dialog{
   icon = "117",
   skip = "all",
   text = [[
-Des palmes de Zora pour
-nager en eau profonde.
+Des palmes de Zora
+pour nager en eau
+profonde.
 ]],
 }
 
@@ -7914,8 +7942,9 @@ dialog{
   icon = "94",
   skip = "all",
   text = [[
-Des Ambres Gorons qui peuvent
-être troquées ou vendues.
+Des Ambres Gorons
+qui peuvent être
+troquées ou vendues.
 ]],
 }
 
@@ -8017,6 +8046,19 @@ l'invisible.
 }
 
 dialog{
+  id = "scripts.menus.pause_inventory.magic_bar.1",
+  icon = "44",
+  skip = "all",
+  text = [[
+Certains objets
+utilisent la magie
+dans cette fiole pour
+fonctionner. Mais elle
+se vide très vite !
+]],
+}
+
+dialog{
   id = "scripts.menus.pause_inventory.magic_cape.1",
   icon = "44",
   skip = "all",
@@ -8038,7 +8080,7 @@ donjon.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.magic_powders_counter.1",
+  id = "scripts.menus.pause_inventory.magic_powder_counter.1",
   icon = "26",
   skip = "all",
   text = [[
@@ -8254,8 +8296,20 @@ dialog{
   icon = "47",
   skip = "all",
   text = [[
-L'éther de Nayru envoir un éclair
+L'éther de Nayru envoie un éclair
 saissant autour de toi.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.ocarina.1",
+  icon = "95",
+  skip = "all",
+  text = [[
+L'ocarina qu'Impa
+t'a donné. Tu peux
+jouer des mélodies
+avec.
 ]],
 }
 
@@ -8264,8 +8318,9 @@ dialog{
   icon = "128",
   skip = "all",
   text = [[
-Fonce à toute allure grâce aux
-Bottes de Pégase. Appuie sur \[controller_a\]
+Fonce à toute allure
+grâce aux Bottes de
+Pégase. Appuie sur A
 pour courir.
 ]],
 }
@@ -8275,7 +8330,8 @@ dialog{
   icon = "140",
   skip = "all",
   text = [[
-C'est le pendentif du Courage.
+C'est le pendentif du
+Courage.
 ]],
 }
 
@@ -8284,7 +8340,8 @@ dialog{
   icon = "141",
   skip = "all",
   text = [[
-C'est le pendentif du Pouvoir.
+C'est le pendentif du
+Pouvoir.
 ]],
 }
 
@@ -8293,8 +8350,8 @@ dialog{
   icon = "142",
   skip = "all",
   text = [[
-C'est le pendentif de la
-Sagesse.
+C'est le pendentif de
+la Sagesse.
 ]],
 }
 
@@ -8344,9 +8401,9 @@ dialog{
   icon = "112",
   skip = "all",
   text = [[
-Une tunique rouge qui te
-protège du feu et de la
-chaleur.
+Une tunique rouge qui
+te protège du feu et
+de la chaleur.
 ]],
 }
 
@@ -8521,8 +8578,8 @@ dialog{
   icon = "12",
   skip = "all",
   text = [[
-La pelle te permet de déterrer
-des trésors du sol
+La pelle te permet de
+déterrer des trésors du sol
 ]],
 }
 
@@ -8597,7 +8654,7 @@ nuit et de la nuit au jour.
 }
 
 dialog{
-  id = "scripts.menus.pause_inventory.song_16_epona.1",
+  id = "scripts.menus.pause_inventory.song_6_epona.1",
   icon = "165",
   skip = "all",
   text = [[
@@ -8708,8 +8765,8 @@ dialog{
   icon = "106",
   skip = "all",
   text = [[
-L'épée de Légende, maniée par
-de véritables héros.
+L'épée de Légende, maniée
+par de véritables héros.
 ]],
 }
 
@@ -8738,7 +8795,7 @@ dialog{
   icon = "109",
   skip = "all",
   text = [[
-L'épée blue, inflige
+L'épée bleue, inflige
 énormément de dégâts.
 ]],
 }
@@ -8839,8 +8896,8 @@ dialog{
   id = "scripts.menus.pause_inventory.tunic_green.1",
   icon = "110",
   text = [[
-Une tunique verte, rien que
-pour toi !
+Une tunique verte,
+rien que pour toi !
 ]],
 }
 

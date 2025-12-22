@@ -479,6 +479,15 @@ animation{
   },
 }
 animation{
+  name = "ocarina",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 208, y = 96, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "pegasus_boots",
   src_image = "entities/items.png",
   directions = {
@@ -771,13 +780,6 @@ animation{
   },
 }
 animation{
-  name = "song_16_epona",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 240, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-  },
-}
-animation{
   name = "song_1_forest",
   src_image = "entities/items.png",
   directions = {
@@ -820,7 +822,7 @@ animation{
   },
 }
 animation{
-  name = "song_7_winds",
+  name = "song_7_lanayru",
   src_image = "entities/items.png",
   directions = {
     { x = 96, y = 192, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },

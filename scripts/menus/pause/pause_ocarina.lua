@@ -13,7 +13,7 @@ local item_names_assignable_top = { -- top
 	"song_13_light",
 	"song_14_storms",
 	"song_15_sun",
-	"song_16_epona",
+	"song_6_epona",
 		"_placeholder",
 }
 

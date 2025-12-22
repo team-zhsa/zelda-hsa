@@ -1,19 +1,22 @@
-	-- Draw each inventory static item quest map
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_bag * (cell_size + cell_spacing)
+	-- Draw each item
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_center * (cell_size + cell_spacing)
 	local k = 0
-	for j = min_row_bag, max_row_bag do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_column_bag * (cell_size + cell_spacing)
-		for i = min_column_bag, max_column_bag do
+	for j = min_row_center/2, max_row_center/2 do
+		local x = center_x + grid_coords_x + sprite_origin_x + min_col_center * (cell_size + cell_spacing)
+		for i = min_col_center/2, max_col_center/2 do
 			k = k + 1
-			if item_names_static_bag[k] ~= nil then
-				local item = self.game:get_item(item_names_static_bag[k])
+			if item_names_center[k] ~= nil then
+				local item = self.game:get_item(item_names_center[k])
 				if item:get_variant() > 0 then
 					-- The player has this item: draw it.
-					self.sprites_static_bag[k]:set_direction(item:get_variant() - 1)
-					self.sprites_static_bag[k]:draw(dst_surface, x, y)
+					self.sprites_center[k]:set_direction(item:get_variant() - 1)
+					self.sprites_center[k]:draw(dst_surface, x, y)
+					if self.counters_center[k] ~= nil then
+						self.counters_center[k]:draw(dst_surface, x, y)
+					end
 				end
 			end
-			x = x + cell_size + cell_spacing
+			x = x + 2 * (cell_size + cell_spacing)
 		end
-		y = y + cell_size + cell_spacing
+		y = y + 2 * (cell_size + cell_spacing)
 	end
