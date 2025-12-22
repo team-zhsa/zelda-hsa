@@ -45,12 +45,16 @@ local item_names_assignable = {
 }
 local item_names_static_right = {
 	"monster_gut",
+	"monster_horn",
 	"monster_claw",
 	"monster_horn",
 	"monster_tail",
 	"goron_amber",
+	"monster_horn",
+	"monster_tail",
 	"divine_ore",
 	"_placeholder",
+	"divine_ore",
 	"_placeholder",
 }
 
@@ -79,8 +83,9 @@ local min_row_assignable, min_column_assignable = 0, 6
 local max_row_assignable, max_column_assignable = 4, 6
 
 local min_row_right, min_column_right = 0, 8
-local max_row_right, max_column_right = 2, 15
+local max_row_right, max_column_right = 2, 14
 
+local piece_of_heart_coords_x, piece_of_heart_coords_y = -64,32
 local grid_coords_x, grid_coords_y = -120,-60
 local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_origin_x, cursor_origin_y = 9,12
@@ -370,7 +375,7 @@ function quest_submenu:draw_items(dst_surface)
 	local k = 0
 	for j = min_row_right, max_row_right do
 		local x = center_x + grid_coords_x + sprite_origin_x + min_column_right * (cell_size + cell_spacing)
-		for i = min_column_right, max_column_right do
+		for i = min_column_right, max_column_right  do
 			k = k + 1
 			if item_names_static_right[k] ~= nil then
 				local item = self.game:get_item(item_names_static_right[k])
@@ -383,7 +388,7 @@ function quest_submenu:draw_items(dst_surface)
 					end
 				end
 			end
-			x = x + 2 * (cell_size + cell_spacing)
+			x = x + 1 * (cell_size + cell_spacing)
 		end
 		y = y + 2 * (cell_size + cell_spacing)
 	end
@@ -414,7 +419,8 @@ function quest_submenu:on_draw(dst_surface)
 		pieces_of_heart_x, 0,                 -- region position in image
 		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
 		dst_surface,                          -- destination surface
-		center_x - 13, center_y + 47          -- position in destination surface -- TODO check
+		center_x + piece_of_heart_coords_x + cell_spacing,
+		center_y + piece_of_heart_coords_y + cell_spacing         -- position in destination surface -- TODO check 
 	)
 	
 	-- Game time.
@@ -469,11 +475,11 @@ function quest_submenu:on_command_pressed(command)
 			end
 
 		elseif command == "left"  then
-			local limit = min_column
+			local limit = 0
 			if self.cursor_column == limit then
 				self:previous_submenu()
 			else
-				if self.cursor_column < max_column_quest_row_1 + 1  then -- in sidebar
+				if self.cursor_column <= max_column_quest_row_1  then -- in sidebar
 							sol.audio.play_sound(cursor_sound)
 							self:set_cursor_position(self.cursor_row, self.cursor_column - 1)					
 				else 
@@ -489,9 +495,23 @@ function quest_submenu:on_command_pressed(command)
 							sol.audio.play_sound(cursor_sound)
 							self:set_cursor_position(self.cursor_row, max_column_quest_row_1)	
 						end
-					elseif self.cursor_column >= min_column_assignable then
-							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(self.cursor_row, self.cursor_column - 2)								
+					else
+						if self.cursor_column == min_column_assignable then
+							if self.cursor_row <= max_row_assignable then
+								sol.audio.play_sound(cursor_sound)
+								self:set_cursor_position(self.cursor_row, self.cursor_column - 2)								
+							end
+						elseif self.cursor_column == min_column_right then
+							if self.cursor_row <= max_row_right then
+								sol.audio.play_sound(cursor_sound)
+								self:set_cursor_position(self.cursor_row, self.cursor_column -2)								
+							end
+						elseif self.cursor_column > min_column_right then
+							if self.cursor_row <= max_row_right then
+								sol.audio.play_sound(cursor_sound)
+								self:set_cursor_position(self.cursor_row, self.cursor_column -1)								
+							end
+						end					
 					end
 				end
 			end
@@ -536,9 +556,9 @@ function quest_submenu:on_command_pressed(command)
 							self:set_cursor_position(self.cursor_row, self.cursor_column + 2)								
 						end
 					elseif self.cursor_column >= min_column_right then
-						if self.cursor_row < max_row_right then
+						if self.cursor_row <= max_row_right then
 							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(self.cursor_row, self.cursor_column + 2)								
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 1)								
 						end
 					end
 				end
@@ -556,12 +576,23 @@ function quest_submenu:on_command_pressed(command)
 						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)							
 				else -- triple row
 					if self.cursor_column == max_column_quest_row_1 then
-							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column - 1)		
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column - 1)		
 					else 
-							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)						
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)						
 					end
+				end
+			else
+				if self.cursor_column == min_column_bag then
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row - 2) % (max_row_bag + 2)), self.cursor_column)						
+				elseif self.cursor_column == min_column_assignable then
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row - 2) % (max_row_assignable + 2)), self.cursor_column)
+				else
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row - 2) % (max_row_right + 2)), self.cursor_column)
 				end
 			end
 			handled = true
@@ -577,12 +608,23 @@ function quest_submenu:on_command_pressed(command)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)							
 				else -- triple row
 					if self.cursor_column == max_column_quest_row_1 then
-							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column - 1)		
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column - 1)		
 					else 
-							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)						
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)						
 					end
+				end
+			else
+				if self.cursor_column == min_column_bag then
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row + 2)) % (max_row_bag + 2), self.cursor_column)						
+				elseif self.cursor_column == min_column_assignable then
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row + 2)) % (max_row_assignable + 2), self.cursor_column)
+				else 	
+					sol.audio.play_sound(cursor_sound)
+					self:set_cursor_position(((self.cursor_row + 2)) % (max_row_right + 2), self.cursor_column)
 				end
 			end
 			handled = true
@@ -654,10 +696,10 @@ function quest_submenu:set_cursor_position(row, column)
 
 	-- Update the caption text and the action icon.
 	local item_name = self:get_item_name(row, column)
-	if item_name =="piece_of_heart" then
+	if item_name =="pieces_of_heart" then
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
-			self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
+			self:set_infos_key("scripts.menus.pause_inventory.piece_of_heart.1")
 			self.game:set_custom_command_effect("action", "info")
 
 	elseif item_name =="triforce" then
@@ -709,6 +751,20 @@ function quest_submenu:get_item_name(row, column)
 		elseif row == 6 then -- Quest row 4
 			index = (row - min_row_quest_map) * (max_column_quest_map + 1) + column
 			item_name = item_names_static_quest_map[index + 1]
+		end
+	else
+		if column == 4 and row < 6 then -- bag
+			index = (row - min_row_bag)/2 * (max_column_bag - column + 1)
+			item_name = item_names_static_bag[index + 1]		
+		elseif column == 4 and row == 6 then
+			item_name = "pieces_of_heart"
+		elseif column == 6 then
+			index = (row - min_row_assignable)/2 * (max_column_assignable - column + 1)
+			item_name = item_names_assignable[index + 1]
+		else
+			index = (row - min_row_right)/2 * (max_column_right)/2  + column - min_column_right
+			print(index)
+			item_name = item_names_static_right[index + 1]			
 		end
 	end
 
