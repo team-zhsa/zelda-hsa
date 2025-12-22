@@ -47,7 +47,7 @@ local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_origin_x, cursor_origin_y = 9,12
 local cursor_sound = "menus/cursor"
 local assign_sound = "throw"
-local menu_name = "equipment"
+local menu_name = "magic"
 local digits_font = "green_digits" or "white_digits"
 
 function inventory_submenu:on_started()
@@ -94,7 +94,6 @@ function inventory_submenu:on_started()
 		local variant = item:get_variant()
 		self.sprites_assignables_bottom[i] = sol.sprite.create("entities/items")
 		self.sprites_assignables_bottom[i]:set_animation(item_name)
-		print(item_name)
 		if item:has_amount() then
 			-- Show a counter in this case.
 			local amount = item:get_amount()
@@ -225,7 +224,7 @@ function inventory_submenu:on_command_pressed(command)
 
 		if command == "action"  then
 			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
-				self:show_info_message()
+			--	self:show_info_message()
 				handled = true
 			end
 
@@ -279,7 +278,6 @@ function inventory_submenu:on_command_pressed(command)
 			end
 		end
 	end
-	print(self.cursor_row, self.cursor_column)
 
 	return handled
 
@@ -332,7 +330,6 @@ function inventory_submenu:set_cursor_position(row, column)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end
-	print(item_name)
 end
 
 function inventory_submenu:get_item_name(row, column)

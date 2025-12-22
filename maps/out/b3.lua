@@ -13,6 +13,7 @@ local camera = map:get_camera()
 local outside_kakarico_playing_maze
 local outside_kakarico_won_maze
 local num_dialogue = 0
+local timer_manager = require("scripts/maps/timer_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
@@ -74,7 +75,7 @@ function npc_maze_game:on_interaction()
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze.maze_yes")
 					outside_kakarico_playing_maze = true
-					sol.timer.start(map, 15000, function() --Timer for 15 seconds
+					timer_manager:start_timer(map, 15000, "countdown", function() --Timer for 15 seconds
 						--outside_kakarico_playing_maze = false
 						if not switch_maze_game:is_activated() then
 							game:start_dialog("maps.out.kakarico_village.maze.maze_loose")
@@ -82,12 +83,6 @@ function npc_maze_game:on_interaction()
 							outside_kakarico_playing_maze = false
 							outside_kakarico_won_maze = false
 						end
-					end)
-					local num_calls = 0 --Timer for timer sound
-					sol.timer.start(map, 1000, function()
-			  		sol.audio.play_sound("menus/danger")
-			  		num_calls = num_calls + 1
-			  		return num_calls < 15	
 					end)
 				elseif game:get_money() < 20 then
 					game:start_dialog("_shop.not_enough_money")

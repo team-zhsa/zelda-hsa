@@ -61,17 +61,12 @@ local hud_config = {
 		y = 10,
 	}, --]]
 
-	-- Attack icon.
-	{
-		menu_script = "scripts/hud/attack_icon",
-		x = -52,
-		y = 16,
-	},
+
 
 	-- Action icon.
 	{
 		menu_script = "scripts/hud/action_icon",
-		x = -100,
+		x = -102,
 		y = 16,
 	},
 
@@ -89,6 +84,13 @@ local hud_config = {
 		x = -28,
 		y = 4,
 		slot = 2,  -- Item slot (1 or 2).
+	},
+
+	-- Attack icon.
+	{
+		menu_script = "scripts/hud/attack_icon",
+		x = -52,
+		y = 16,
 	},
 
 }

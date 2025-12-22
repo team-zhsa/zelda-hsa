@@ -94,7 +94,6 @@ function inventory_submenu:on_started()
 		local variant = item:get_variant()
 		self.sprites_assignables_bottom[i] = sol.sprite.create("entities/items")
 		self.sprites_assignables_bottom[i]:set_animation(item_name)
-		print(item_name)
 		if item:has_amount() then
 			-- Show a counter in this case.
 			local amount = item:get_amount()
@@ -163,7 +162,7 @@ function inventory_submenu:on_draw(dst_surface)
 			k = k + 1
 			if item_names_assignable_top[k] ~= nil then
 				local item = self.game:get_item(item_names_assignable_top[k])
-				if item:get_variant() >= 1 then
+				if item:get_variant() > 0 then
 					-- The player has this item: draw it.
 					self.sprites_assignables_top[k]:set_direction(item:get_variant() - 1)
 					self.sprites_assignables_top[k]:draw(dst_surface, x, y)
@@ -186,7 +185,7 @@ function inventory_submenu:on_draw(dst_surface)
 			k = k + 1
 			if item_names_assignable_bottom[k] ~= nil then
 				local item = self.game:get_item(item_names_assignable_bottom[k])
-				if item:get_variant() >= 1 then
+				if item:get_variant() > 0 then
 					-- The player has this item: draw it.
 					self.sprites_assignables_bottom[k]:set_direction(item:get_variant() - 1)
 					self.sprites_assignables_bottom[k]:draw(dst_surface, x, y)
@@ -225,7 +224,7 @@ function inventory_submenu:on_command_pressed(command)
 
 		if command == "action"  then
 			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
-				self:show_info_message()
+			--	self:show_info_message()
 				handled = true
 			end
 
@@ -279,7 +278,6 @@ function inventory_submenu:on_command_pressed(command)
 			end
 		end
 	end
-	print(self.cursor_row, self.cursor_column)
 
 	return handled
 
@@ -332,7 +330,6 @@ function inventory_submenu:set_cursor_position(row, column)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end
-	print(item_name)
 end
 
 function inventory_submenu:get_item_name(row, column)
@@ -341,7 +338,7 @@ function inventory_submenu:get_item_name(row, column)
 			index = row * (max_column_top) + column - 1
 			item_name = item_names_assignable_top[index + 1]
 	elseif (column > 0 and column < max_column_bottom + 1) and (row==2 or row == 3) then
-			index = (row - 2) * (max_column_bottom) + column - 1
+			index = (row - min_row_bottom) * (max_column_bottom) + column - 1
 			item_name = item_names_assignable_bottom[index + 1]
 		elseif column == 0 then
 			index = row 

@@ -149,20 +149,17 @@ function submenu:set_infos_key(text_key)
 		if info_dialog ~= nil then
 			local text = info_dialog.text
 			self:set_infos_text(text)
-			print("TEXT" .. text)
+		else self:set_infos_text(nil)
 		end
 	end
 end
 
 function submenu:set_infos_text(text)
 	if text == nil then
-		self.infos_text_master = ""
 		for i = 0,self.infos_max_lines do
 			self.infos_text_line[i]:set_text("")
 		end
-		print("case AAAA")
 	else
-		print("case BBBB")
 		-- Standardise all line endings to \n
 		self.infos_text_master = text:gsub("\r\n", "\n"):gsub("\r", "\n")
 		-- Insert each line's text into the info_lines table
@@ -174,7 +171,6 @@ function submenu:set_infos_text(text)
 				i=i+1				
 				table.insert(self.infos_lines, line)
 				self.infos_text_line[i]:set_text(line)
-				print(i)
 			end
 	end
 end
@@ -323,8 +319,8 @@ function submenu:draw_title(dst_surface)
 			self.title_text:set_xy(title_center_x, title_center_y + self.font_y_shift)
 			text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, self.title_text, self.text_stroke_color, self.title_shadow_color)
 		local arrow_surface_w, arrow_surface_h = self.title_l_arrow:get_size()
-		self.title_l_arrow:draw(dst_surface, title_center_x - 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
-		self.title_r_arrow:draw(dst_surface, title_center_x + 42 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
+		self.title_l_arrow:draw(dst_surface, title_center_x - 48 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
+		self.title_r_arrow:draw(dst_surface, title_center_x + 48 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
 		--self.title_arrows:draw_region(14, 0, 14, 12, dst_surface, center_x + 57, center_y - 80)
 
 	end

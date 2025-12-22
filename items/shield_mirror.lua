@@ -64,10 +64,9 @@ local function set_shield_sprite_id(sprite_id)
 end
 
 -- Initialize the item.
-item:set_savegame_variable("possession_shield_hero")
+item:set_savegame_variable("possession_shield_mirror")
 function item:on_created()
 
-  item:on_variant_changed(item:get_variant())
   item:set_sound_when_brandished(nil)
   item.is_used = false -- Workaround : item:is_being_used() seems buggy when item:set_finished() is called outside item:on_using(), use a flag instead
 
@@ -80,12 +79,7 @@ function item:on_created()
       set_shield_sprite_id("hero/shield" .. shield_level.. "_assigned")
     end
   end)
-end
-
--- Set the item assignable if possessed.
-function item:on_variant_changed(variant)
-
-  item:set_assignable(variant > 0)
+  item:set_assignable(true)
 end
 
 -- Play sound on obtaining.

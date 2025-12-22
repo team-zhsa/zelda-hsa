@@ -3,21 +3,45 @@ local language_manager = require("scripts/language_manager")
 local text_fx_helper = require("scripts/text_fx_helper")
 local quest_submenu = submenu:new()
 
-local item_names_static_top = {
-	"crystal_1",
-	"crystal_7",
-	"rupee_bag",
+local item_names_static_quest_triforce = {
+"_placeholder",
+"_placeholder",
+"_placeholder",
+"_placeholder",
 }
-local item_names_static_left = {
-	"crystal_2",
-	"crystal_2", -- Triforce
-	"crystal_6",
-	"crystal_3",
-	"crystal_4",
-	"crystal_5",
-	"pendant_1",
-	"pendant_2",
-	"pendant_3",
+
+local item_names_static_quest_row_1 = {
+"_placeholder",
+"_placeholder",
+"_placeholder",
+}
+local item_names_static_quest_row_2 = {
+"_placeholder",
+"_placeholder",
+}
+local item_names_static_quest_row_3 = {
+"_placeholder",
+"_placeholder",
+"_placeholder",
+}
+local item_names_static_quest_row_4 = {
+"_placeholder",
+"_placeholder",
+}
+local item_names_static_quest_map = {
+	"world_map",
+	"world_map",
+	"world_map",
+}
+local item_names_static_bag = {
+"_placeholder",
+"_placeholder",
+"_placeholder",
+}
+local item_names_assignable = {
+	"_placeholder",
+	"_placeholder",
+	"_placeholder",
 }
 local item_names_static_right = {
 	"monster_gut",
@@ -26,23 +50,44 @@ local item_names_static_right = {
 	"monster_tail",
 	"goron_amber",
 	"divine_ore",
+	"_placeholder",
+	"_placeholder",
 }
 
-local item_names_static_bottom = {
-	"world_map",
-	"world_map",
-	"world_map",
-}
+local cell_size = 14
+local cell_spacing = 2
+local max_row, max_column = 6,14
+local min_row_quest_triforce, min_column_quest_triforce = 0, 0
+local max_row_quest_triforce, max_column_quest_triforce = 1, 1
 
-local cell_size = 28
-local cell_spacing = 4
-local max_row, max_column = 4,7
+local min_row_quest_row_1, min_column_quest_row_1 = 2, 0
+local max_row_quest_row_1, max_column_quest_row_1 = 2, 2
+local min_row_quest_row_2, min_column_quest_row_2 = 3, 0
+local max_row_quest_row_2, max_column_quest_row_2 = 3, 1
+local min_row_quest_row_3, min_column_quest_row_3 = 4, 0
+local max_row_quest_row_3, max_column_quest_row_3 = 4, 2
+local min_row_quest_row_4, min_column_quest_row_4 = 5, 0
+local max_row_quest_row_4, max_column_quest_row_4 = 5, 1
+
+local min_row_quest_map, min_column_quest_map = 6, 0
+local max_row_quest_map, max_column_quest_map = 6, 2
+
+local min_row_bag, min_column_bag = 0, 4
+local max_row_bag, max_column_bag = 6, 4
+
+local min_row_assignable, min_column_assignable = 0, 6
+local max_row_assignable, max_column_assignable = 4, 6
+
+local min_row_right, min_column_right = 0, 8
+local max_row_right, max_column_right = 2, 15
+
 local grid_coords_x, grid_coords_y = -120,-60
 local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_origin_x, cursor_origin_y = 9,12
 local cursor_sound = "menus/cursor"
 local assign_sound = "throw"
 local menu_name = "quest"
+local digits_font = "white_digits"
 
 function quest_submenu:on_started()
 	self.quest_items_surface = sol.surface.create(320, 240)
@@ -50,10 +95,15 @@ function quest_submenu:on_started()
 	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
 	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
 	self.counters = {}
-	self.sprites_static_left = {}
+	self.sprites_static_quest_triforce = {}
+	self.sprites_static_quest_row_1 = {}
+	self.sprites_static_quest_row_2 = {}
+	self.sprites_static_quest_row_3 = {}
+	self.sprites_static_quest_row_4 = {}
+	self.sprites_static_quest_map = {}
+	self.sprites_static_bag = {}
+	self.sprites_assignable = {}
 	self.sprites_static_right = {}
-	self.sprites_static_top = {}
-	self.sprites_static_bottom = {}
 	self.caption_text_keys = {}
 
 	 local item_sprite = sol.sprite.create("entities/items")
@@ -68,11 +118,57 @@ function quest_submenu:on_started()
 	self:set_cursor_position(row, column)
 
 	-- Load Items.
-	for i,item_name in ipairs(item_names_static_left) do
+	-- Quest sidebar
+	for i,item_name in ipairs(item_names_static_quest_triforce) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_left[i] = sol.sprite.create("entities/items")
-		self.sprites_static_left[i]:set_animation(item_name)
+		self.sprites_static_quest_triforce[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_triforce[i]:set_animation(item_name)
+	end
+
+	for i,item_name in ipairs(item_names_static_quest_row_1) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_row_1[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_1[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_row_2) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_row_2[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_2[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_row_3) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_row_3[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_3[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_row_4) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_row_4[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_4[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_map) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_map[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_map[i]:set_animation(item_name)
+	end
+
+	-- Normal items	
+	for i,item_name in ipairs(item_names_static_bag) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_bag[i] = sol.sprite.create("entities/items")
+		self.sprites_static_bag[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_assignable) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_assignable[i] = sol.sprite.create("entities/items")
+		self.sprites_assignable[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_right) do
 		local item = self.game:get_item(item_name)
@@ -87,28 +183,213 @@ function quest_submenu:on_started()
 				horizontal_alignment = "center",
 				vertical_alignment = "top",
 				text = item:get_amount(),
-				font = (amount == maximum) and "green_digits" or "white_digits",
+				font = digits_font,
 			}
 		end
-	end
-	for i,item_name in ipairs(item_names_static_top) do
-		local item = self.game:get_item(item_name)
-		local variant = item:get_variant()
-		self.sprites_static_top[i] = sol.sprite.create("entities/items")
-		self.sprites_static_top[i]:set_animation(item_name)
-	end
-	for i,item_name in ipairs(item_names_static_bottom) do
-		local item = self.game:get_item(item_name)
-		local variant = item:get_variant()
-		self.sprites_static_bottom[i] = sol.sprite.create("entities/items")
-		self.sprites_static_bottom[i]:set_animation(item_name)
 	end
 end
 
 function quest_submenu:on_finished()
+	if quest_submenu:is_assigning_item() then
+		quest_submenu:finish_assigning_item()
+	end
 	-- Nothing.
 end
 -- #255
+
+function quest_submenu:draw_sidebar(dst_surface)
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
+	-- Draw each inventory static item sidebar triforce.
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_triforce * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_triforce, max_row_quest_triforce do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_triforce * (cell_size + cell_spacing)
+		for i = min_column_quest_triforce, max_column_quest_triforce do
+			k = k + 1
+			if item_names_static_quest_triforce[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_triforce[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_triforce[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_triforce[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+	-- Draw each inventory static item quest row 1.
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_1 * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_row_1, max_row_quest_row_1 do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_row_1 * (cell_size + cell_spacing)
+		for i = min_column_quest_row_1, max_column_quest_row_1 do
+			k = k + 1
+			if item_names_static_quest_row_1[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_row_1[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_row_1[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_row_1[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+		-- Draw each inventory static item quest row 2.
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_2 * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_row_2, max_row_quest_row_2 do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_row_2 * (cell_size + cell_spacing)
+		for i = min_column_quest_row_2, max_column_quest_row_2 do
+			k = k + 1
+			if item_names_static_quest_row_2[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_row_2[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_row_2[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_row_2[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+		-- Draw each inventory static item quest row 3.
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_3 * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_row_3, max_row_quest_row_3 do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_row_3 * (cell_size + cell_spacing)
+		for i = min_column_quest_row_3, max_column_quest_row_3 do
+			k = k + 1
+			if item_names_static_quest_row_3[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_row_3[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_row_3[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_row_3[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+	-- Draw each inventory static item quest row 4.
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_4 * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_row_4, max_row_quest_row_4 do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_row_4 * (cell_size + cell_spacing)
+		for i = min_column_quest_row_4, max_column_quest_row_4 do
+			k = k + 1
+			if item_names_static_quest_row_4[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_row_4[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_row_4[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_row_4[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+		-- Draw each inventory static item quest map
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_map * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_quest_map, max_row_quest_map do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_quest_map * (cell_size + cell_spacing)
+		for i = min_column_quest_map, max_column_quest_map do
+			k = k + 1
+			if item_names_static_quest_map[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_map[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_map[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_map[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+end
+
+function quest_submenu:draw_items(dst_surface)
+	local width, height = dst_surface:get_size()
+	local center_x, center_y = width / 2, height / 2
+
+		-- Draw each inventory static bag
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_bag * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_bag, max_row_bag do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_column_bag * (cell_size + cell_spacing)
+		for i = min_column_bag, max_column_bag do
+			k = k + 1
+			if item_names_static_bag[k] ~= nil then
+				local item = self.game:get_item(item_names_static_bag[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_bag[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_bag[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + 2 * (cell_size + cell_spacing)
+		end
+		y = y + 2 * (cell_size + cell_spacing)
+	end
+
+	-- Draw each assignable item
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_assignable * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_assignable, max_row_assignable do
+		local x = center_x + grid_coords_x + sprite_origin_x + min_column_assignable * (cell_size + cell_spacing)
+		for i = min_column_assignable, max_column_assignable do
+			k = k + 1
+			if item_names_assignable[k] ~= nil then
+				local item = self.game:get_item(item_names_assignable[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_assignable[k]:set_direction(item:get_variant() - 1)
+					self.sprites_assignable[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + 2 * (cell_size + cell_spacing)
+		end
+		y = y + 2 * (cell_size + cell_spacing)
+	end
+
+	-- Draw each static right item
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_right * (cell_size + cell_spacing)
+	local k = 0
+	for j = min_row_right, max_row_right do
+		local x = center_x + grid_coords_x + sprite_origin_x + min_column_right * (cell_size + cell_spacing)
+		for i = min_column_right, max_column_right do
+			k = k + 1
+			if item_names_static_right[k] ~= nil then
+				local item = self.game:get_item(item_names_static_right[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_right[k]:draw(dst_surface, x, y)
+					if self.counters[k] ~= nil then
+						self.counters[k]:draw(dst_surface, x, y)
+					end
+				end
+			end
+			x = x + 2 * (cell_size + cell_spacing)
+		end
+		y = y + 2 * (cell_size + cell_spacing)
+	end
+
+end
+
 function quest_submenu:on_draw(dst_surface)
 
 	local width, height = dst_surface:get_size()
@@ -121,92 +402,9 @@ function quest_submenu:on_draw(dst_surface)
 	self:draw_caption(dst_surface)
 	self:draw_infos_text(dst_surface)
 
-	-- Draw each inventory static item left.
-	local x = center_x + grid_coords_x + sprite_origin_x
-	local y = center_y + grid_coords_y + sprite_origin_y
-	local k = 0
-
-	for i = 0, 2 do
-		for j = 0, 2 do
-			k = k + 1
-			local item = self.game:get_item(item_names_static_left[k])
-			if item:get_variant() > 0 then
-				-- The player has this item: draw it.
-				if item_names_static_left[k] == "magnifying_lens" then
-					self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-				else
-					self.sprites_static_left[k]:set_direction(item:get_variant() - 1)
-				end
-				self.sprites_static_left[k]:draw(dst_surface, x, y)
-			end
-			x = x + cell_size + cell_spacing
-		end
-		y = y + cell_size + cell_spacing
-	end
-	
-	-- Draw each inventory static item right.
-	local x = center_x + grid_coords_x + sprite_origin_x + 5 * (cell_size + cell_spacing)
-	local y = center_y + grid_coords_y + sprite_origin_y
-  local k = 0
-  for i = 0, 2 do
-		for j = 0, 2 do
-			k = k + 1
-			if item_names_static_right[k] ~= nil then
-				local item = self.game:get_item(item_names_static_right[k])
-				if item:get_variant() > 0 then
-					-- The player has this item: draw it.
-					if self.counters[k] ~= nil then
-						if item:get_amount() > 0 then
-							self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
-							self.sprites_static_right[k]:draw(dst_surface, x, y)
-							self.counters[k]:draw(dst_surface, x + 8, y)
-						end
-					else
-						self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
-						self.sprites_static_right[k]:draw(dst_surface, x, y)
-					end
-				end
-			end
-			x = x + cell_size + cell_spacing
-		end
-		y = y + cell_size + cell_spacing
-  end
-
-	-- Draw each inventory static item top.
-	local x = center_x + grid_coords_x + sprite_origin_x 
-	local y = center_y + grid_coords_y + sprite_origin_y + 3 * (cell_size + cell_spacing)
-	local k = 0
-	for i = 0, 2 do
-		k = k + 1
-		if item_names_static_top[k] ~= nil then
-			local item = self.game:get_item(item_names_static_top[k])
-			if item:get_variant() > 0 then
-				-- The player has this item: draw it.
-					x = center_x + grid_coords_x + sprite_origin_x + i * (cell_size + cell_spacing)
-				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
-				self.sprites_static_top[k]:draw(dst_surface, x, y)
-			end
-		end
-		x = x + cell_size + cell_spacing
-	end
-
-	-- Draw each inventory static item bottom.
-	local x = center_x + grid_coords_x + sprite_origin_x + 5 * (cell_size + cell_spacing)
-	local y = center_y + grid_coords_y + sprite_origin_y + 3 * (cell_size + cell_spacing)
-	local k = 0
-	for i = 0, 2 do
-		k = k + 1
-		if item_names_static_top[k] ~= nil then
-			local item = self.game:get_item(item_names_static_top[k])
-			if item:get_variant() > 0 then
-				-- The player has this item: draw it.
-					x = center_x + grid_coords_x + sprite_origin_x + i * (cell_size + cell_spacing)
-				self.sprites_static_top[k]:set_direction(item:get_variant() - 1)
-				self.sprites_static_top[k]:draw(dst_surface, x, y)
-			end
-		end
-		x = x + cell_size + cell_spacing
-	end
+	-- Draw items
+	self:draw_sidebar(dst_surface)
+	self:draw_items(dst_surface)
 
 	-- Pieces of heart.
 	local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
@@ -219,7 +417,7 @@ function quest_submenu:on_draw(dst_surface)
 		center_x - 13, center_y + 47          -- position in destination surface -- TODO check
 	)
 	
--- Game time.
+	-- Game time.
 	local menu_font, menu_font_size = language_manager:get_menu_font()
 	self.chronometer_txt = sol.text_surface.create({
 		horizontal_alignment = "center",
@@ -253,81 +451,145 @@ function quest_submenu:on_command_pressed(command)
 
 	if not handled then
 
-		if command == "action" then
+		if command == "action"  then
 			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
-				self:show_info_message()
+			--	self:show_info_message()
 				handled = true
 			end
 
-		elseif command == "left" then
-			if self.cursor_column == 0 then
+		elseif command == "item_1" then
+			if self:is_item_selected() or (self.cursor_row == 0 and self.cursor_column > 4)  then
+				self:assign_item(1)
+				handled = true
+			end
+		elseif command == "item_2" then
+			if self:is_item_selected()  or (self.cursor_row == 0 and self.cursor_column > 4) then
+				self:assign_item(2)
+				handled = true
+			end
+
+		elseif command == "left"  then
+			local limit = min_column
+			if self.cursor_column == limit then
 				self:previous_submenu()
 			else
-				sol.audio.play_sound("menus/cursor")
-				if self.cursor_column == 2 and self.cursor_row == 0 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
-				elseif self.cursor_column == 5 and self.cursor_row == 0 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column - 3)
-				elseif self.cursor_column == 4 and self.cursor_row == 1 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
-				elseif self.cursor_column == 4 and self.cursor_row == 2 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column - 2)
-				else
-					self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
+				if self.cursor_column < max_column_quest_row_1 + 1  then -- in sidebar
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column - 1)					
+				else 
+					if self.cursor_column == min_column_bag then
+						if (self.cursor_row == 0
+					or self.cursor_row == 1
+					or self.cursor_row == 3
+					or self.cursor_row == 5)
+					then -- double row
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, max_column_quest_row_2)	
+						else -- triple row
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, max_column_quest_row_1)	
+						end
+					elseif self.cursor_column >= min_column_assignable then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column - 2)								
+					end
 				end
 			end
 			handled = true
 
-		elseif command == "right" then
-			if self.cursor_column == 5 and self.cursor_row == 0
-					or self.cursor_column == max_column - 1 and  self.cursor_row == 1
-					or self.cursor_column == max_column - 1 and  self.cursor_row == 2 
-					or self.cursor_column == max_column - 1 and  self.cursor_row == 3  then
+		elseif command == "right"  then
+			local limit = max_column
+			if self.cursor_column == limit then
 				self:next_submenu()
 			else
-				sol.audio.play_sound("menus/cursor")
-				if self.cursor_column == 0 and self.cursor_row == 0 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
-				elseif self.cursor_column == 2 and self.cursor_row == 0 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column + 3)
-				elseif self.cursor_column == 2 and self.cursor_row == 1 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
-				elseif self.cursor_column == 2 and self.cursor_row == 2 then
-					self:set_cursor_position(self.cursor_row, self.cursor_column + 2)
-				else
-					self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
+				if self.cursor_column <= max_column_quest_row_1  then -- in sidebar
+					if (self.cursor_row == 0
+					or self.cursor_row == 1
+					or self.cursor_row == 3
+					or self.cursor_row == 5)
+					then -- double row
+						if self.cursor_column == max_column_quest_row_2 then--go to right side
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(math.floor(self.cursor_row/2)*2, min_column_bag)							
+						else 
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 1)	
+						end
+					else -- triple row
+						if self.cursor_column == max_column_quest_row_1 then--go to right side
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(math.floor(self.cursor_row/2)*2, min_column_bag)
+						else 
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 1)	
+						end					
+					end
+				else 
+					if self.cursor_column == min_column_bag then
+						if self.cursor_row < max_row_bag then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 2)								
+						end
+					elseif self.cursor_column == min_column_assignable then
+						if self.cursor_row < max_row_assignable then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 2)								
+						end
+					elseif self.cursor_column >= min_column_right then
+						if self.cursor_row < max_row_right then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(self.cursor_row, self.cursor_column + 2)								
+						end
+					end
 				end
 			end
 			handled = true
 
-		elseif command == "up" then
-			if self.cursor_column ~= 3 then
-				sol.audio.play_sound("menus/cursor")
-				if self.cursor_column == 1 and self.cursor_row == 1
-					or self.cursor_column == 4 and self.cursor_row == 1
-					or self.cursor_column == 6 and self.cursor_row == 1 then
-					self:set_cursor_position((self.cursor_row + 2) % max_row, self.cursor_column)
-				else
-					self:set_cursor_position((self.cursor_row + 3) % max_row, self.cursor_column)
+		elseif command == "up" and self.cursor_column < max_column + 1 then
+			if self.cursor_column <= max_column_quest_row_1 then -- in sidebar
+				if (self.cursor_row == 0
+					or self.cursor_row == 1
+					or self.cursor_row == 3
+					or self.cursor_row == 5)
+					then -- double row
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)							
+				else -- triple row
+					if self.cursor_column == max_column_quest_row_1 then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column - 1)		
+					else 
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)						
+					end
 				end
 			end
 			handled = true
 
 		elseif command == "down" then
-			if self.cursor_column ~= 3 then
-				sol.audio.play_sound("menus/cursor")
-				if self.cursor_column == 1 and self.cursor_row == max_row - 1
-					or self.cursor_column == 4 and self.cursor_row == max_row - 1
-					or self.cursor_column == 6 and self.cursor_row == max_row - 1 then
-					self:set_cursor_position((self.cursor_row - 2) % max_row, self.cursor_column)
-				else
-					self:set_cursor_position((self.cursor_row + 1) % max_row, self.cursor_column)
+			if self.cursor_column <= max_column_quest_row_1 then -- in sidebar
+				if (self.cursor_row == 0
+					or self.cursor_row == 1
+					or self.cursor_row == 3
+					or self.cursor_row == 5)
+					then -- double row
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)							
+				else -- triple row
+					if self.cursor_column == max_column_quest_row_1 then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column - 1)		
+					else 
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)						
+					end
 				end
 			end
 			handled = true
 		end
 	end
 
+	print(self.cursor_row, self.cursor_column)
 	return handled
 
 end
@@ -395,38 +657,15 @@ function quest_submenu:set_cursor_position(row, column)
 	if item_name =="piece_of_heart" then
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
+			self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
 			self.game:set_custom_command_effect("action", "info")
-			--[[
-	elseif item_name =="goron_amber" then
+
+	elseif item_name =="triforce" then
 		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.goron_amber.1")
-			self.game:set_custom_command_effect("action", "info")
-		end
-	elseif item_name =="monster_claw_counter" then
-		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.monster_claw_counter.1")
-			self.game:set_custom_command_effect("action", "info")
-		end
-	elseif item_name =="monster_gut_counter" then
-		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.monster_gut_counter.1")
-			self.game:set_custom_command_effect("action", "info")
-	 end
-	elseif item_name =="monster_horn_counter" then
-		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.monster_horn_counter.1")
-			self.game:set_custom_command_effect("action", "info")
-	 end
-	elseif item_name =="monster_tail_counter" then
-		local item = item_name and self.game:get_item(item_name) or nil
-		if item:get_amount() > 0 then
-			self:set_caption_key("inventory.caption.item.monster_tail_counter.1")
-			self.game:set_custom_command_effect("action", "info")
-	 end--]]
+		self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
+		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. ".1")
+		self.game:set_custom_command_effect("action", "info")
+
 	else
 		local item = item_name and self.game:get_item(item_name) or nil
 		local variant = item and item:get_variant()
@@ -451,29 +690,117 @@ end
 
 function quest_submenu:get_item_name(row, column)
 
-		if column < 3 and row > 0 then
-			index = ((row + 2) % 3) * 3 + column
-			item_name = item_names_static_left[index + 1]
-		elseif column > 3 and (row > 0 and row < 3) then
-			index = ((row + 2) % 3) * 3 + ((column + 2) % 3)
-			item_name = item_names_static_right[index + 1]
-		elseif column == 0 and row == 0 then
-			item_name = "crystal_1"
-		elseif column == 2 and row == 0 then
-			item_name = "crystal_7"
-		elseif column == 5 and row == 0 then
-			item_name = "rupee_bag"
-		elseif column == 3 and row == 3 then
-			item_name = "piece_of_heart"
-		elseif column == 4 and row == 3 then
-			item_name = "world_map"
-		elseif column == 5 and row == 3 then
-			item_name = "world_map"
-		elseif column == 6 and row == 3 then
-			item_name = "world_map"
+	if column < 3 and row >= 0 then -- Sidebar
+		if row == 0 or row == 1 then -- Triforce
+			index = row * (max_column_quest_triforce + 1) + column
+			item_name = item_names_static_quest_triforce[index + 1]
+		elseif row == 2 then -- Quest row 1
+			index = (row - min_row_quest_row_1) * (max_column_quest_row_1 + 1) + column
+			item_name = item_names_static_quest_row_1[index + 1]
+		elseif row == 3 then -- Quest row 2
+			index = (row - min_row_quest_row_2) * (max_column_quest_row_2 + 1) + column
+			item_name = item_names_static_quest_row_2[index + 1]
+		elseif row == 4 then -- Quest row 3
+			index = (row - min_row_quest_row_3) * (max_column_quest_row_3 + 1) + column
+			item_name = item_names_static_quest_row_3[index + 1]
+		elseif row == 5 then -- Quest row 4
+			index = (row - min_row_quest_row_4) * (max_column_quest_row_4 + 1) + column
+			item_name = item_names_static_quest_row_4[index + 1]
+		elseif row == 6 then -- Quest row 4
+			index = (row - min_row_quest_map) * (max_column_quest_map + 1) + column
+			item_name = item_names_static_quest_map[index + 1]
 		end
+	end
 
 	return item_name
+end
+
+function quest_submenu:is_item_selected()
+
+	local item_name = self:get_item_name(self.cursor_row, self.cursor_column)
+
+	return self.game:get_item(item_name):get_variant() > 0
+
+end
+
+-- Assigns the selected item to a slot (1 or 2).
+-- The operation does not take effect immediately: the item picture is thrown to
+-- its destination icon, then the assignment is done.
+-- Nothing is done if the item is not assignable.
+function quest_submenu:assign_item(slot)
+
+	local item_name = self:get_item_name(self.cursor_row, self.cursor_column)
+	local item = self.game:get_item(item_name)
+	local assignable = false
+
+	-- If this item is not assignable, do nothing.
+	if not item:is_assignable() then
+		return
+	end
+	-- If another item is being assigned, finish it immediately.
+	if self:is_assigning_item() then
+		self:finish_assigning_item()
+	end
+		assignable = true
+
+	if assignable then
+		-- Memorize this item.
+			self.item_assigned = item
+			self.item_assigned_sprite = sol.sprite.create("entities/items")
+			self.item_assigned_sprite:set_animation(item_name)
+			self.item_assigned_sprite:set_direction(item:get_variant() - 1)
+			self.item_assigned_destination = slot
+
+			-- Play the sound.
+			sol.audio.play_sound(assign_sound)
+
+			local screen_w, screen_h = sol.video.get_quest_size()
+			local center_x, center_y = screen_w / 2, screen_h / 2
+
+			-- Compute the movement.
+
+			local x1 = center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * self.cursor_column
+			local y1 = center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * self.cursor_row
+
+			local x2 = (slot == 1) and (screen_w - 76) or (screen_w - 28) + 16
+			local y2 = 4 + 16
+
+			self.item_assigned_sprite:set_xy(x1, y1)
+			local movement = sol.movement.create("target")
+			movement:set_target(x2, y2)
+			movement:set_speed(400)
+			movement:start(self.item_assigned_sprite, function()
+				self:finish_assigning_item()
+			end)
+	end
+
+end
+
+-- Returns whether an item is currently being thrown to an icon.
+function quest_submenu:is_assigning_item()
+	return self.item_assigned_sprite ~= nil
+end
+
+-- Stops assigning the item right now.
+-- This function is called when we want to assign the item without
+-- waiting for its throwing movement to end, for example when the inventory submenu
+-- is being closed.
+function quest_submenu:finish_assigning_item()
+
+	-- If the item to assign is already assigned to the other icon, switch both items.
+	local slot = self.item_assigned_destination
+	local current_item = self.game:get_item_assigned(slot)
+	local other_item = self.game:get_item_assigned(3 - slot)
+
+	if other_item == self.item_assigned then
+		self.game:set_item_assigned(3 - slot, current_item)
+	end
+	self.game:set_item_assigned(slot, self.item_assigned)
+
+	self.item_assigned_sprite:stop_movement()
+	self.item_assigned_sprite = nil
+	self.item_assigned = nil
+
 end
 
 return quest_submenu

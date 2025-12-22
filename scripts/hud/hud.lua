@@ -291,12 +291,12 @@ local function initialize_hud_features(game)
         end
       end
     elseif hud.mode == "pause" then
-      print("pause hud")
+      hud:bring_to_front()
       if attack_icon ~= nil then
-        attack_icon:set_dst_position(-320,-320)--(attack_icon:get_normal_position())
+        attack_icon:set_dst_position(-52,4)--(attack_icon:get_normal_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
-        attack_icon:set_enabled(false)
-        attack_icon:set_active(false)
+        attack_icon:set_enabled(true)
+        attack_icon:set_active(true)
       end
 
       if action_icon ~= nil then
@@ -318,12 +318,12 @@ local function initialize_hud_features(game)
         end
       end
     elseif hud.mode == "pause_assign" then
-      print("pause assign hud")
+      hud:bring_to_front()
       if attack_icon ~= nil then
-        attack_icon:set_dst_position(-320,-320)--(attack_icon:get_normal_position())
+        attack_icon:set_dst_position(-52,4)--(attack_icon:get_normal_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
-        attack_icon:set_enabled(false)
-        attack_icon:set_active(false)
+        attack_icon:set_enabled(true)
+        attack_icon:set_active(true)
       end
 
       if action_icon ~= nil then
