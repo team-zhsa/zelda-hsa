@@ -13,10 +13,20 @@ animation{
   src_image = "hero/boomerang.shield.png",
   frame_delay = 100,
   directions = {
-    { x = 0, y = 128, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
     { x = 0, y = 160, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
-    { x = 0, y = 192, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
     { x = 0, y = 224, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21, num_frames = 2 },
+  },
+}
+animation{
+  name = "hookshot",
+  src_image = "hero/hookshot.shield.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+    { x = 0, y = 64, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
+    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 21 },
   },
 }
 animation{
@@ -56,9 +66,9 @@ animation{
   frame_delay = 40,
   frame_to_loop_on = 1,
   directions = {
-    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0, num_frames = 7 },
+    { x = 0, y = 128, frame_width = 40, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 7 },
     { x = 0, y = 152, frame_width = 24, frame_height = 40, origin_x = 12, origin_y = 37, num_frames = 7 },
-    { x = 0, y = 0, frame_width = 1, frame_height = 1, origin_x = 0, origin_y = 0, num_frames = 7 },
+    { x = 0, y = 192, frame_width = 40, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 7 },
     { x = 0, y = 216, frame_width = 24, frame_height = 40, origin_x = 12, origin_y = 21, num_frames = 7 },
   },
 }
