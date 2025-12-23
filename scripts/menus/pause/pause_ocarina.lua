@@ -50,7 +50,7 @@ local digits_font = "green_digits" or "white_digits"
 
 function inventory_submenu:on_started()
 	submenu.on_started(self)
-	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
 	self.sprites_assignables_top = {}
 	self.sprites_assignables_bottom = {}
 	self.sprites_static = {}

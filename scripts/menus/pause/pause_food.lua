@@ -63,7 +63,7 @@ local item_sprite = "entities/items"
 
 function quest_submenu:on_started()
 	submenu.on_started(self)
-	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
 	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
 
 	self.counters_top_left = {}

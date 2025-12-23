@@ -97,7 +97,7 @@ local item_sprite = "entities/items"
 
 function quest_submenu:on_started()
 	submenu.on_started(self)
-	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
 	self.cursor_sprite:set_animation("normal")
 	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
 
@@ -497,15 +497,32 @@ function quest_submenu:on_command_pressed(command)
 
 		elseif command == "up" and self.cursor_column < max_col + 1 then
 			if self.cursor_column <= max_col_top_left then -- in left
-				if self.cursor_row <= max_row_top_left or (self.cursor_row >= min_row_center and self.cursor_column == min_col_center) then -- top left or center
+				if self.cursor_row <= max_row_top_left and self.cursor_row > min_row_top_left then -- top left except topmost row
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 2) % (max_row + 1)), self.cursor_column)		
+				elseif self.cursor_row == min_row_top_left then -- top left topmost row
+					if self.cursor_column == min_col_center then -- go to row 6
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(math.floor(((self.cursor_row - 1) % (max_row + 1))/2)*2, self.cursor_column)							
+					else -- go to row 7 ocarina
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position((self.cursor_row - 1) % (max_row + 1), self.cursor_column)		
+					end
+				elseif (self.cursor_row >= min_row_center and self.cursor_column == min_col_center) then -- center 
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row - 2) % (max_row_center + 2)), self.cursor_column)			
 				elseif self.cursor_row == min_row_middle_left then -- middle, go up 2
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row - 2) % (max_row + 1)), self.cursor_column)		
-				elseif self.cursor_row >= min_row_bottom_left then -- bottom left go up 1 except rightmost col (go down left)
+				elseif self.cursor_row == min_row_bottom_left and self.cursor_column <= max_col_bottom_left then -- bottom left topmost row (snap to even grid))
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), math.floor(self.cursor_column/2)*2)		
+				elseif self.cursor_row > min_row_bottom_left and self.cursor_column <= max_col_bottom_left then --  bottom left  go up 1 except 
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)		
+				else -- snap to grid
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(math.floor(((self.cursor_row - 1) % (max_row + 1))/2)*2, math.floor(self.cursor_column/2)*2)	
 				end
 			else -- in top right
 				sol.audio.play_sound(cursor_sound)
@@ -521,9 +538,14 @@ function quest_submenu:on_command_pressed(command)
 				elseif self.cursor_row == min_row_middle_left then -- middle, go down one
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)		
-				elseif self.cursor_row >= min_row_bottom_left then -- bottom left go one down except rightmost col (go down left)
+				elseif self.cursor_row >= min_row_bottom_left then -- bottom left go one down except bottom most row (snap to even grid)
+					if self.cursor_row == max_row_bottom_left then
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), math.floor(self.cursor_column/2)*2)		
+					else
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)		
+					end 
 				end
 			else -- in top right
 				sol.audio.play_sound(cursor_sound)

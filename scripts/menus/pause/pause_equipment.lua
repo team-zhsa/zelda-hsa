@@ -56,14 +56,14 @@ local sprite_origin_x, sprite_origin_y = 8,16
 local cursor_sound = "menus/cursor"
 local cursor_origin_x, cursor_origin_y = 0,0
 local assign_sound = "throw"
-local menu_name = "quest"
+local menu_name = "equipment"
 local digits_font_max = "green_digits"
 local digits_font = "white_digits"
 local item_sprite = "entities/items"
 
 function quest_submenu:on_started()
 	submenu.on_started(self)
-	self.cursor_sprite = sol.sprite.create("menus/pause/pause_cursor")
+	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
 	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
 
 	self.counters_top_left = {}
