@@ -17,7 +17,6 @@ function submenu:new(game)
 end
 
 function submenu:on_started()
-
 	sol.menu.bring_to_front(submenu)
 	self.background_surfaces = sol.surface.create("menus/pause/pause_submenus.png")
 	local img_width, img_height = self.background_surfaces:get_size()
@@ -28,8 +27,8 @@ function submenu:on_started()
 	self.infos_background_w, self.infos_background_h = self.infos_background:get_size()
 	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png")
 	self.caption_background_w, self.caption_background_h = self.caption_background:get_size()
-	self.title_background = sol.surface.create("menus/pause/submenus_title.png")
-	self.title_background_w, self.title_background_h = self.title_background:get_size()
+	self.title_background = sol.surface.create("menus/pause/pause_icons.png")
+	self.title_background_w, self.title_background_h = 96, 32
 	self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
 	self.save_dialog_cursor = sol.sprite.create("menus/pause/dialog_cursor")
 	self.save_dialog_cursor_pos = "left"
@@ -310,7 +309,7 @@ function submenu:draw_title(dst_surface)
 		local title_x = center_x + title_coords_x 
 		local title_y = center_y + title_coords_y 
 		if self.title_text:get_text():len() ~= 0 then
-			self.title_background:draw(dst_surface, title_x, title_y)
+			self.title_background:draw_region(0,32, self.title_background_w, self.title_background_h, dst_surface, title_x, title_y)
 		end
 		local title_center_x = title_x + title_background_center_x
 		local title_center_y = title_y + title_background_center_y

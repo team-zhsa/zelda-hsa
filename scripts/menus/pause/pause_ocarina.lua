@@ -60,7 +60,7 @@ function inventory_submenu:on_started()
 	self.menu_ocarina = true
 
 	-- Set the title.
-	self:set_title(sol.language.get_string("inventory.title_"..menu_name))
+	self:set_title(sol.language.get_string("pause.title_"..menu_name))
 
 	-- Initialise the cursor
 	local index = self.game:get_value("pause_inventory_last_item_index") or 0
@@ -188,7 +188,7 @@ function inventory_submenu:on_draw(dst_surface)
 					self.sprites_assignables_bottom[k]:set_direction(item:get_variant() - 1)
 					self.sprites_assignables_bottom[k]:draw(dst_surface, x, y)
 					if self.counters_bottom[k] ~= nil then
-						self.counters_bottom[k]:draw(dst_surface, x, y)
+						self.counters_bottom[k]:draw(dst_surface, x + 8, y)
 					end
 				end
 			end
@@ -293,7 +293,7 @@ function inventory_submenu:show_info_message()
 
 	self.game:set_custom_command_effect("action", nil)
 	self.game:set_custom_command_effect("attack", nil)
-	game:start_dialog("scripts.menus.pause_inventory." .. item_name .. "." .. variant, function()
+	game:start_dialog("menus..pause_inventory." .. item_name .. "." .. variant, function()
 		self.game:set_custom_command_effect("action", "info")
 		self.game:set_custom_command_effect("attack", "save")
 	end)
@@ -314,8 +314,8 @@ function inventory_submenu:set_cursor_position(row, column)
 	local variant = item and item:get_variant()
 	local item_icon_opacity = 128
 	if variant > 0 then
-		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
-		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
+		self:set_caption_key("pause.caption.item." .. item_name .. "." .. variant)
+		self:set_infos_key("menus..pause_inventory." .. item_name .. "." .. variant)
 		self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
       self.game:set_hud_mode("pause_assign")

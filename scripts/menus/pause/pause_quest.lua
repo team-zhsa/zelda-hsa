@@ -91,12 +91,13 @@ local max_row_right, max_col_right = 2, 14
 local piece_of_heart_coords_x, piece_of_heart_coords_y = -64,32
 local grid_coords_x, grid_coords_y = -120,-60
 local sprite_origin_x, sprite_origin_y = 8,16
-local cursor_origin_x, cursor_origin_y = 9,12
+local cursor_origin_x, cursor_origin_y = 0,0
 local cursor_sound = "menus/cursor"
 local assign_sound = "throw"
 local menu_name = "quest"
 local digits_font_max = "green_digits"
 local digits_font = "white_digits"
+local item_sprite = "entities/items"
 
 function quest_submenu:on_started()
 	submenu.on_started(self)
@@ -114,10 +115,8 @@ function quest_submenu:on_started()
 	self.sprites_static_right = {}
 	self.caption_text_keys = {}
 
-	 local item_sprite = sol.sprite.create("entities/items")
-
 	-- Set the title.
-	self:set_title(sol.language.get_string("quest_status.title"))
+	self:set_title(sol.language.get_string("pause.title_"..menu_name))
 
 	-- initialise the cursor.
 	local index = self.game:get_value("pause_inventory_last_item_index") or 0
@@ -130,38 +129,38 @@ function quest_submenu:on_started()
 	for i,item_name in ipairs(item_names_static_quest_triforce) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_triforce[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_triforce[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_triforce[i]:set_animation(item_name)
 	end
 
 	for i,item_name in ipairs(item_names_static_quest_row_1) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_1[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_1[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_row_1[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_row_2) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_2[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_2[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_row_2[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_row_3) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_3[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_3[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_row_3[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_row_4) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_4[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_row_4[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_row_4[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_map) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_map[i] = sol.sprite.create("entities/items")
+		self.sprites_static_quest_map[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_quest_map[i]:set_animation(item_name)
 	end
 
@@ -169,19 +168,19 @@ function quest_submenu:on_started()
 	for i,item_name in ipairs(item_names_static_bag) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_bag[i] = sol.sprite.create("entities/items")
+		self.sprites_static_bag[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_bag[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_assignable) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_assignable[i] = sol.sprite.create("entities/items")
+		self.sprites_assignable[i] = sol.sprite.create(item_sprite)
 		self.sprites_assignable[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_right) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_right[i] = sol.sprite.create("entities/items")
+		self.sprites_static_right[i] = sol.sprite.create(item_sprite)
 		self.sprites_static_right[i]:set_animation(item_name)
 		if item:has_amount() then
 			-- Show a counter in this case.
@@ -387,7 +386,7 @@ function quest_submenu:draw_items(dst_surface)
 					self.sprites_static_right[k]:set_direction(item:get_variant() - 1)
 					self.sprites_static_right[k]:draw(dst_surface, x, y)
 					if self.counters[k] ~= nil then
-						self.counters[k]:draw(dst_surface, x, y)
+						self.counters[k]:draw(dst_surface, x + 8, y)
 					end
 				end
 			end
@@ -409,7 +408,7 @@ function quest_submenu:on_draw(dst_surface)
 	-- Draw the cursor caption.
 	self:draw_caption(dst_surface)
 	self:draw_infos_text(dst_surface)
-
+	self:draw_title(dst_surface)
 	-- Draw items
 	self:draw_sidebar(dst_surface)
 	self:draw_items(dst_surface)
@@ -655,35 +654,35 @@ function quest_submenu:show_info_message()
 	self.game:set_custom_command_effect("action", nil)
 	self.game:set_custom_command_effect("attack", nil)
 	if item_name == "piece_of_heart" then
-		dialog_id =  "scripts.menus.pause_inventory.piece_of_heart.1" 
+		dialog_id =  "menus..pause_inventory.piece_of_heart.1" 
 	elseif item_name == "monster_claw_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.monster_claw_counter.1" 
+			dialog_id =  "menus..pause_inventory.monster_claw_counter.1" 
 		end
 	elseif item_name == "monster_gut_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.monster_gut_counter.1" 
+			dialog_id =  "menus..pause_inventory.monster_gut_counter.1" 
 		end
 	elseif item_name == "monster_horn_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.monster_horn_counter.1" 
+			dialog_id =  "menus..pause_inventory.monster_horn_counter.1" 
 		end
 	elseif item_name == "monster_tail_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.monster_tail_counter.1" 
+			dialog_id =  "menus..pause_inventory.monster_tail_counter.1" 
 		end
 	elseif item_name == "goron_amber_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "scripts.menus.pause_inventory.goron_amber_counter.1" 
+			dialog_id =  "menus..pause_inventory.goron_amber_counter.1" 
 		end
 	else
 		local variant = self.game:get_item(item_name):get_variant()
-		dialog_id = "scripts.menus.pause_inventory." .. item_name .. "." .. variant
+		dialog_id = "menus..pause_inventory." .. item_name .. "." .. variant
 	end
 	if dialog_id then
 		game:start_dialog(dialog_id, function()
@@ -706,13 +705,13 @@ function quest_submenu:set_cursor_position(row, column)
 	local item_name = self:get_item_name(row, column)
 	if item_name =="pieces_of_heart" then
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
-			self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
-			self:set_infos_key("scripts.menus.pause_inventory.piece_of_heart.1")
+			self:set_caption_key("pause.caption.item.piece_of_heart."..num_pieces_of_heart)
+			self:set_infos_key("menus..pause_inventory.piece_of_heart.1")
 			self.game:set_custom_command_effect("action", "info")
 
 	elseif item_name =="triforce" then
-		self:set_caption_key("inventory.caption.item.piece_of_heart."..num_pieces_of_heart)
-		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. ".1")
+		self:set_caption_key("pause.caption.item.piece_of_heart."..num_pieces_of_heart)
+		self:set_infos_key("menus..pause_inventory." .. item_name .. ".1")
 		self.game:set_custom_command_effect("action", "info")
 
 	else
@@ -720,8 +719,8 @@ function quest_submenu:set_cursor_position(row, column)
 		local variant = item and item:get_variant()
 		local item_icon_opacity = 128
 		if variant > 0 then
-		self:set_caption_key("inventory.caption.item." .. item_name .. "." .. variant)
-		self:set_infos_key("scripts.menus.pause_inventory." .. item_name .. "." .. variant)
+		self:set_caption_key("pause.caption.item." .. item_name .. "." .. variant)
+		self:set_infos_key("menus..pause_inventory." .. item_name .. "." .. variant)
 			self.game:set_custom_command_effect("action", "info")
 			if item:is_assignable() then
 				self.game:set_hud_mode("pause_assign")
@@ -808,7 +807,7 @@ function quest_submenu:assign_item(slot)
 	if assignable then
 		-- Memorize this item.
 			self.item_assigned = item
-			self.item_assigned_sprite = sol.sprite.create("entities/items")
+			self.item_assigned_sprite = sol.sprite.create(item_sprite)
 			self.item_assigned_sprite:set_animation(item_name)
 			self.item_assigned_sprite:set_direction(item:get_variant() - 1)
 			self.item_assigned_destination = slot
