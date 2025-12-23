@@ -27,18 +27,19 @@ function floor_view_builder:new(game, config)
     else
 
       need_rebuild = true
-      self.timer = sol.timer.start(self, 500, function()
+      self.timer = sol.timer.start(game, 500, function()
         floor_view.surface:fade_in(40)
         floor_view.visible = true
+        self.timer0 = sol.timer.start(game, 3500, function()
+          floor_view.surface:fade_out(40, function()
+            floor_view.visible = false
+          end)
+        end)
+        self.timer0:set_suspended_with_map(false)
       end) 
       self.timer:set_suspended_with_map(false)
       
-      self.timer0 = sol.timer.start(self, 3500, function()
-        floor_view.surface:fade_out(40, function()
-          floor_view.visible = false
-        end)
-      end)
-      self.timer0:set_suspended_with_map(false)
+
 
     end
 
