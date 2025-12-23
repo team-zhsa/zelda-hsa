@@ -76,7 +76,7 @@ function game_manager:create(file)
   end)
     
   function game:check_variables()
-    game:start_dialog("scripts.menus.version_checker.update_question", function(answer)
+    game:start_dialog("menus..version_checker.update_question", function(answer)
       if answer == 1 then
         game:assign_variables("dungeon_2_b2_24_pool_full", true, "dungeon_2_water_level", "high")
         game:assign_variables("dungeon_2_b2_24_pool_full",false, "dungeon_2_water_level",  "low")

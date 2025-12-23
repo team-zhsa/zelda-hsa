@@ -111,7 +111,7 @@ function sensor_4_collapse:on_collision_explosion()
 end
 
 function npc_fairy:on_interaction()
-	game:start_dialog("scripts.meta.map.fairy", function()
+	game:start_dialog("_big_fairy", function()
 		game:set_life(game:get_max_life())
 	end)
 end

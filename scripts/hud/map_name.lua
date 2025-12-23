@@ -52,7 +52,7 @@ function map_name:show_name(name, extra)
 	if self.timer0 ~= nil then self.timer0:stop() end
 	
 	if (type(extra) == "string" and extra ~= "boss_name") or type(extra) == "nil" then
-	 	self.map_name:set_text_key("map.out." .. self.name)
+	 	self.map_name:set_text_key("maps.out." .. self.name)
 		self.mx, self.my = self.map_name:get_size()
 		self.map_name_surface = sol.surface.create(self.mx * 2, self.my)
 		self.map_name_surface:set_opacity(0)
@@ -61,7 +61,7 @@ function map_name:show_name(name, extra)
 	else
 		self.display_boss_name = true		
 		local i = 0
-		local text_group = sol.language.get_string("map.gameplay.boss_name."..self.game.map_name_string)
+		local text_group = sol.language.get_string("maps.gameplay.boss_name."..self.game.map_name_string)
 		for text_lines in string.gmatch(text_group, "[^$]+") do
 			i = i + 1
 			if i == 1 then

@@ -26,7 +26,7 @@ function end_credits:on_started()
   local speed = 12 -- scroll speed in px/s (set it to 8)
 
   -- Credits dialog
-  self.dialog = sol.language.get_dialog("scripts.menus.credits")
+  self.dialog = sol.language.get_dialog("menus..credits")
 
   -- Break dialog text into a table of lines
   local lines = self.dialog.text

@@ -24,7 +24,7 @@ function map:on_opening_transition_finished()
 end
 
 function npc_fairy:on_interaction()
-	game:start_dialog("scripts.meta.map.fairy", function()
+	game:start_dialog("_big_fairy", function()
 		game:set_life(game:get_max_life())
 	end)
 end

@@ -147,7 +147,7 @@ function map_submenu:init_coordinates(zoom_mode)
 		self.dungeon_index = self.game:get_dungeon_index()
 
 		-- Caption text.
-		self:set_caption("map.dungeons.dungeon_" .. self.dungeon_index .. "_name")
+		self:set_caption("maps.dungeons.dungeon_" .. self.dungeon_index .. "_name")
 
 		-- Item icons.
 		self.dungeon_map_background_img = sol.surface.create("menus/map/dungeon_map_background.png")
@@ -350,7 +350,7 @@ function map_submenu:draw_world_map(dst_surface)
 	end
 	if map_shown then
 		self:set_caption(map_areas_config[self.current_map_index.x][self.current_map_index.y].key)
-	else self:set_caption("map.title") end
+	else self:set_caption("maps.title") end
 	self.map_cursor_img:draw(dst_surface, center_x - self.box_x, center_y - self.box_y)
 end
 

@@ -16,7 +16,7 @@ function fairy_manager:launch_fairy_if_hero_not_max_life(map, fairy_name, music_
       fairy:set_enabled(true)
       sol.audio.play_music("scripts/meta/map/fairy_fountain")
       fairy:get_sprite():fade_in(100, function()
-        game:start_dialog("scripts.meta.map.fairy", function()
+        game:start_dialog("_big_fairy", function()
           local hearts = {}
           fairy_manager:create_hearts(map, 0, fairy_name, hearts, music_name)
         end)
