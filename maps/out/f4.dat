@@ -13928,8 +13928,8 @@ sensor{
 npc{
   name = "npc_impa",
   layer = 0,
-  x = 640,
-  y = 245,
+  x = 656,
+  y = 421,
   direction = 3,
   subtype = 1,
   sprite = "npc/impa",
@@ -14693,8 +14693,8 @@ npc{
 switch{
   name = "owl_statue",
   layer = 0,
-  x = 1088,
-  y = 416,
+  x = 888,
+  y = 656,
   properties = {
     {
       key = "type",
@@ -14717,6 +14717,16 @@ destination{
   x = 600,
   y = 189,
   direction = 3,
+}
+
+npc{
+  name = "npc_tingle",
+  layer = 0,
+  x = 664,
+  y = 653,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/tingle",
 }
 
 tile{

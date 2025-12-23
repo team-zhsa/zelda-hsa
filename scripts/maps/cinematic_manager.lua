@@ -2,6 +2,7 @@ local cinematic_manager = {}
 local map_meta = sol.main.get_metatable("map")
 require("scripts/multi_events")
 
+local audio_manager = require("scripts/audio_manager")
 -- Create the black stripe surface.
 local quest_w, quest_h = sol.video.get_quest_size()
 local black_stripe_h = 25
@@ -23,7 +24,7 @@ function map_meta:set_cinematic_mode(is_cinematic, options)
   local game = map:get_game()
   local hero = map:get_hero()
   local camera = map:get_camera()
-
+  audio_manager:play_sound("common/bars_npc_dialog")
   local hud_mode = is_cinematic and "dialog" or "normal"
   game:set_hud_enabled(not is_cinematic)
   --game:set_suspended(is_cinematic)

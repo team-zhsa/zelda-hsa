@@ -8,7 +8,7 @@
 if not sol.file.exists("debug") and not sol.file.exists("debug.lua") then
   return true
 end
-
+local parchment = require("scripts/menus/parchment")
 local console = require("scripts/console")
 local game_manager = require("scripts/game_manager")	
 local statistics_manager = require("scripts/menus/statistics")
@@ -153,6 +153,12 @@ function debug:on_update()
       end
     end
 
+    if parchment:is_started(true) then
+      if sol.input.is_key_pressed("left shift") or sol.input.is_key_pressed("right shift") then
+        parchment:hide()
+      end
+    end
+
     local hero = game:get_hero()
     if hero ~= nil then
       if hero:get_movement() ~= hero_movement then
@@ -249,9 +255,12 @@ function debug:on_draw(dst_surface)
       debug_informations_text:set_color({255,255,255})
       show_text(270,0,"Page "..(debug_info_page+1).."/"..debug_info_num_pages)
       if debug_info_page==0 then
-        show_text(0, 0, "HP: "..game:get_life().."/"..game:get_max_life())
+        show_text(0, 0, "Life: "..game:get_life().."/"..game:get_max_life())
         if game:get_max_magic() > 0 then
-          show_text(0, 10, "MP: "..game:get_magic().."/"..game:get_max_magic())
+          show_text(0, 10, "Magic: "..game:get_magic().."/"..game:get_max_magic())
+        end
+        if game:get_max_money() > 0 then
+          show_text(0, 10, "Money: "..game:get_money().."/"..game:get_max_money())
         end
         if map then
           local x,y,layer=hero:get_position()

@@ -15,6 +15,13 @@ local parchment = {}
 --  on_opened_callback: Called when menu is opened.
 --  on_closing_callback: Called when menu is about to close.
 --  on_closed_callback: Called when menu is closed.
+
+function parchment:is_started(value)
+  if parchment.started then
+    return parchment.started
+  end
+end
+
 function parchment:show(context, type, position, delay, text_line_1, text_line_2, on_opened_callback, on_closing_callback, on_closed_callback)
   
   if parchment.started then
@@ -166,25 +173,26 @@ function parchment:initialise()
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     text = parchment.text_line_1,
-    font = "alttp",
-    font_size = 8,
+    font = menu_font,
+    font_size = menu_font_size,
     color = text_line_1_color,
   }
   text_line_surface_1:set_xy(parchment.surface_w / 2, 13)
-  text_line_surface_1:draw(parchment.text_lines_surface)
+ -- text_line_surface_1:draw(parchment.text_lines_surface)
 
-  --text_fx_helper:draw_text_with_stroke_and_shadow(parchment.text_lines_surface, text_line_surface_1, text_line_1_stroke_color, text_line_1_shadow_color)
+  text_fx_helper:draw_text_with_stroke_and_shadow(parchment.text_lines_surface, text_line_surface_1, text_line_1_stroke_color, text_line_1_shadow_color)
 
   -- Create and draw second text line.
+  local dialog_font, dialog_font_size = language_manager:get_dialog_font()
   local text_line_surface_2 = sol.text_surface.create{
     horizontal_alignment = "center",
     vertical_alignment = "middle",
     text = parchment.text_line_2,
-    font = "04b03",
-    font_size = 8,
+    font = dialog_font,
+    font_size = dialog_font_size,
     color = text_line_2_color,
   }
-  text_line_surface_2:draw(parchment.text_lines_surface, parchment.surface_w / 2, parchment.surface_h - 6)
+  text_line_surface_2:draw(parchment.text_lines_surface, parchment.surface_w / 2, parchment.surface_h - 8)
 
   parchment.state = "fading_out"
 

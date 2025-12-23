@@ -64,6 +64,7 @@ function water_level_manager:lower_water_level(map)
   sol.audio.play_sound("environment/water_drain")
 	sol.timer.start(map, 10, function()
 		hero:freeze()
+		map:set_cinematic_mode(true)
 	end)
 	sol.timer.start(map, water_delay, function()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
@@ -82,7 +83,11 @@ function water_level_manager:lower_water_level(map)
 		end
 		water_animation_step_index = water_animation_step_index - 1
 		if water_animation_step_index == -1 then
+			hero:set_direction(1)
 			hero:unfreeze()
+			if map:is_cinematic(true) then
+				map:set_cinematic_mode(false)
+			end
       return false
 		end
 		game:set_value("dungeon_"..game:get_dungeon_index().."_water_level", "low")
@@ -98,6 +103,7 @@ function water_level_manager:raise_water_level(map)
   sol.audio.play_sound("environment/water_fill")
 	sol.timer.start(map, 10, function()
 		hero:freeze()
+		map:set_cinematic_mode(true)
 	end)
 	sol.timer.start(map, water_delay, function()
 		local current_tile_id = water_tile_dynamic_id.."0_"..(water_animation_step_index).."_"
@@ -116,7 +122,11 @@ function water_level_manager:raise_water_level(map)
 		end
 		water_animation_step_index = water_animation_step_index + 1
 		if water_animation_step_index == 2 then
+			hero:set_direction(1)
       hero:unfreeze()
+			if map:is_cinematic(true) then
+				map:set_cinematic_mode(false)
+			end
 			return false
 		end
 		game:set_value("dungeon_"..game:get_dungeon_index().."_water_level", "high")

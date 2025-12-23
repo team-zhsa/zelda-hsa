@@ -48,9 +48,9 @@ enemy:register_event("on_restarted", function(enemy)
   local m = sol.movement.create("random")
   m:set_speed(12)
   m:start(enemy)
-  if math.random(10) < 5 then
+  sol.timer.start(enemy, math.random(8)*1000, function()
     enemy:shock()
-  end
+  end)
 
   enemy:set_hero_weapons_reactions({
   	arrow = 2,
