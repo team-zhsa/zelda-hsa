@@ -422,8 +422,8 @@ function quest_submenu:set_cursor_position(row, column)
 	else
 	self:set_caption(nil)
 	self:set_infos_text(nil)
-		self.game:set_custom_command_effect("action", nil)
-		self.game:set_hud_mode("pause")
+	self.game:set_custom_command_effect("action", nil)
+	self.game:set_hud_mode("pause")
 	end
 end
 

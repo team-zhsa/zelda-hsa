@@ -8,7 +8,8 @@ local properties = {
 	type = "teleportation",
   destination_map = "out/k1",
 	destination = "from_north_hut",
-	duration = 3000,
+	duration = 13000,
+	demo_duration = 3000,
 	dialogue = "items.ocarina.teleport.song_12_secret",
 }
 config:create(item, properties)

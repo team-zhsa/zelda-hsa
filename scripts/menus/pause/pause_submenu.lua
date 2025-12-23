@@ -27,7 +27,7 @@ function submenu:on_started()
 	self.infos_background = sol.surface.create("menus/pause/submenus_caption.png")
 	self.infos_background_w, self.infos_background_h = self.infos_background:get_size()
 	self.caption_background = sol.surface.create("menus/pause/pause_icons.png")
-	self.caption_background_w, self.caption_background_h = 192,32
+	self.caption_background_w, self.caption_background_h = 160,32
 	self.caption_background_reg_x, self.caption_background_reg_y = 96, 64
 	self.title_background = sol.surface.create("menus/pause/pause_icons.png")
 	self.title_background_w, self.title_background_h = 96, 32

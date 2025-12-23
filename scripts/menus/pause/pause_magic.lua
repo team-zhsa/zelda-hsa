@@ -1,7 +1,7 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local inventory_submenu = submenu:new()
 
-
+local audio_manager = require("scripts/audio_manager")
 local submenu = require("scripts/menus/pause/pause_submenu")
 local language_manager = require("scripts/language_manager")
 local text_fx_helper = require("scripts/text_fx_helper")
@@ -94,7 +94,7 @@ local menu_name = "magic"
 local digits_font_max = "green_digits"
 local digits_font = "white_digits"
 local item_sprite = "entities/items"
-
+	local ocarina_sound_playing = false
 function quest_submenu:on_started()
 	submenu.on_started(self)
 	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
@@ -410,7 +410,8 @@ function quest_submenu:on_command_pressed(command)
 	if not handled then
 
 		if command == "action"  then
-			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "info" then
+			if self.game:get_command_effect("action") == nil and self.game:get_custom_command_effect("action") == "listen" then
+				self:play_ocarina_music()
 			--	self:show_info_message()
 				handled = true
 			end
@@ -560,6 +561,22 @@ function quest_submenu:on_command_pressed(command)
 
 end
 
+-- Plays the selected ocarina music (needs to be in bottom left)
+function quest_submenu:play_ocarina_music()
+	local item_name = self:get_item_name(self.cursor_row, self.cursor_column)
+	local item = item_name and self.game:get_item(item_name) or nil
+	local game = self.game
+	if item_name:match("^song_") then -- The item is an ocarina song
+		if not ocarina_sound_playing == true then
+			ocarina_sound_playing = true
+			audio_manager:play_sound(item:get_song_name() .. "_demo")
+			sol.timer.start(self, item:get_demo_duration(), function()
+				ocarina_sound_playing = false
+			end)
+		end
+	end
+end
+
 -- Shows a message describing the item currently selected.
 -- The player is supposed to have this item.
 function quest_submenu:show_info_message()
@@ -626,15 +643,23 @@ function quest_submenu:set_cursor_position(row, column)
 	if variant > 0 then
 	self:set_caption_key("pause.caption.item." .. item_name .. "." .. variant)
 	self:set_infos_key("menus..pause_inventory." .. item_name .. "." .. variant)
-		self.game:set_custom_command_effect("action", "info")
-		if item:is_assignable() then
-			self.game:set_hud_mode("pause_assign")
+
+		-- Change action icon to listen for ocarina
+		if self.cursor_column <= max_col_bottom_left
+			and (self.cursor_row >= min_row_bottom_left and self.cursor_row <= max_row_bottom_left) then
+			self.game:set_custom_command_effect("action", "listen")
+			self.game:set_hud_mode("pause_ocarina")
 		else
-			self.game:set_hud_mode("pause")
+			if item:is_assignable() then
+				self.game:set_hud_mode("pause_assign")
+			else
+				self.game:set_hud_mode("pause")
+			end
 		end
+
 	else
-	self:set_caption(nil)
-	self:set_infos_text(nil)
+		self:set_caption(nil)
+		self:set_infos_text(nil)
 		self.game:set_custom_command_effect("action", nil)
 		self.game:set_hud_mode("pause")
 	end

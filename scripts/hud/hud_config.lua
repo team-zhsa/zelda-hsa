@@ -70,6 +70,8 @@ local hud_config = {
 		x = -76,
 		y = 4,
 		slot = 1,  -- Item slot (1 or 2).
+		pause_x = -64,
+		pause_y = 4
 	},
 
 	-- Item icon for slot 2.
@@ -78,6 +80,8 @@ local hud_config = {
 		x = -28,
 		y = 4,
 		slot = 2,  -- Item slot (1 or 2).
+		pause_x = -28,
+		pause_y = 4
 	},
 
 	-- Attack icon.
@@ -85,6 +89,8 @@ local hud_config = {
 		menu_script = "scripts/hud/attack_icon",
 		x = -52,
 		y = 16,
+		pause_x = -40,
+		pause_y = -28
 	},
 	
 		-- Action icon.
@@ -92,6 +98,8 @@ local hud_config = {
 		menu_script = "scripts/hud/action_icon",
 		x = -102,
 		y = 16,
+		pause_x = -88,
+		pause_y = -28
 	},
 
 }

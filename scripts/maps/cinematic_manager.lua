@@ -5,7 +5,7 @@ require("scripts/multi_events")
 local audio_manager = require("scripts/audio_manager")
 -- Create the black stripe surface.
 local quest_w, quest_h = sol.video.get_quest_size()
-local black_stripe_h = 25
+local black_stripe_h = 32
 local black_stripe_top = sol.surface.create(quest_w, black_stripe_h)
 local black_stripe_bottom = sol.surface.create(quest_w, black_stripe_h)
 local m_black_stripe_top = sol.movement.create("target")

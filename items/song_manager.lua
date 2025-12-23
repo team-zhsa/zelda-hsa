@@ -21,7 +21,7 @@ function config:create(item, properties)
     local music_volume = sol.audio.get_music_volume()
 
 		sol.audio.set_music_volume(10)
- 	  hero:freeze()
+		map:set_cinematic_mode(true)
   	hero:set_animation("playing_ocarina")
 
 		-- Wait for the hero animation
@@ -38,7 +38,6 @@ function config:create(item, properties)
 			sol.audio.play_sound(properties.music)
 			sol.timer.start(map, properties.duration, function()
 				sol.audio.set_music_volume(music_volume)
-	    	hero:unfreeze()
 				hero:set_direction(3)
 	    	notes:remove()
 				if not game:is_in_dungeon() then
@@ -47,22 +46,37 @@ function config:create(item, properties)
 						game:start_dialog(properties.dialogue, function(answer)
 							if answer == 1 then
 								if properties.type == "teleportation" then
+									map:set_cinematic_mode(false)
 									hero:teleport(properties.destination_map, properties.destination)
 								else
-									properties.effect()
+									map:set_cinematic_mode(false)
 								end
 							end
 						end)
 					elseif properties.type == "skip_dialogue" then
 						if properties.type == "teleportation" then
+							map:set_cinematic_mode(false)
 							hero:teleport(properties.destination_map, properties.destination)
 						else
+							map:set_cinematic_mode(false)
 							properties.effect()
 						end
 					end
 				end
 			end)
   	end)
+	end
+
+	function item:get_song_duration()
+		return properties.duration
+	end
+	
+	function item:get_demo_duration()
+		return properties.duration
+	end
+
+	function item:get_song_name()
+		return properties.music
 	end
 
   function item:summon_bird()

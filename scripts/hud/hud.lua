@@ -257,9 +257,11 @@ local function initialize_hud_features(game)
   -- Ex: During a dialog, move the action icon and the sword icon, and hides the
   -- item icons.
   function hud:set_mode(mode)
-    if mode == "normal" or mode == "dialog" or mode == "pause" or mode == "pause_assign" 
+    if mode == "normal" or mode == "dialog"
+    or mode == "pause" or mode == "pause_assign" or mode == "pause_ocarina"
     or mode == "no_buttons" or mode == "no_hud" then
       hud.mode = mode
+      print("HUD mode:" ..hud.mode)
       hud:adapt_to_curent_mode()
     else
       print("HUD mode is not supported: "..mode)
@@ -269,6 +271,7 @@ local function initialize_hud_features(game)
 
   -- Adapts the icons to the current mode.
   function hud:adapt_to_curent_mode()
+    -- Dialog mode
     if hud.mode == "dialog" then
       if attack_icon ~= nil then
         attack_icon:set_dst_position(attack_icon:get_dialog_position())
@@ -290,17 +293,21 @@ local function initialize_hud_features(game)
           item_icon:set_active(false)
         end
       end
+
+    -- Pause (non assignable)
     elseif hud.mode == "pause" then
-      hud:bring_to_front()
+      hud:bring_rupees_to_front()
+      hud:bring_bars_to_front()
+      hud:bring_icons_to_front()
       if attack_icon ~= nil then
-        attack_icon:set_dst_position(-52,4)--(attack_icon:get_normal_position())
+        attack_icon:set_dst_position(attack_icon:get_pause_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
         attack_icon:set_enabled(true)
         attack_icon:set_active(true)
       end
 
       if action_icon ~= nil then
-        action_icon:set_dst_position(-320,-320)--(action_icon:get_normal_position())
+        action_icon:set_dst_position(-320,-320)
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
         action_icon:set_enabled(false)
         action_icon:set_active(false)
@@ -313,21 +320,30 @@ local function initialize_hud_features(game)
 
       for _, item_icon in ipairs(item_icons) do
         if item_icon ~= nil then
+          item_icon:set_dst_position(item_icon:get_pause_position())
           item_icon:set_enabled(false)
           item_icon:set_active(false)
         end
       end
+
+      if clock ~= nil then
+        hud:set_clock_enabled(false)
+      end
+
+    -- Pause (assignable)
     elseif hud.mode == "pause_assign" then
-      hud:bring_to_front()
+      hud:bring_rupees_to_front()
+      hud:bring_bars_to_front()
+      hud:bring_icons_to_front()
       if attack_icon ~= nil then
-        attack_icon:set_dst_position(-52,4)--(attack_icon:get_normal_position())
+        attack_icon:set_dst_position(attack_icon:get_pause_position())
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
         attack_icon:set_enabled(true)
         attack_icon:set_active(true)
       end
 
       if action_icon ~= nil then
-        action_icon:set_dst_position(-320,-320)--(action_icon:get_normal_position())
+        action_icon:set_dst_position(-320,-320)
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
         action_icon:set_enabled(false)
         action_icon:set_active(false)
@@ -340,13 +356,54 @@ local function initialize_hud_features(game)
 
       for _, item_icon in ipairs(item_icons) do
         if item_icon ~= nil then
+          item_icon:set_dst_position(item_icon:get_pause_position())
           item_icon:set_enabled(true)
           item_icon:set_active(true)
         end
       end
-    elseif hud.mode == "normal" then
-            print("normal hud")
+    
+      if clock ~= nil then
+        hud:set_clock_enabled(false)
+      end
 
+    -- Pause (ocarina, action to listen)
+    elseif hud.mode == "pause_ocarina" then
+      hud:bring_rupees_to_front()
+      hud:bring_bars_to_front()
+      hud:bring_icons_to_front()
+      if attack_icon ~= nil then
+        attack_icon:set_dst_position(attack_icon:get_pause_position())
+        local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
+        attack_icon:set_enabled(true)
+        attack_icon:set_active(true)
+      end
+      
+      if action_icon ~= nil then
+        action_icon:set_dst_position(action_icon:get_pause_position())
+        local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("action") or game:get_command_effect("action")
+        action_icon:set_enabled(true)
+        action_icon:set_active(true)
+      end
+      
+      if pause_icon ~= nil then
+        pause_icon:set_enabled(true)
+        pause_icon:set_active(true)
+      end
+      
+      for _, item_icon in ipairs(item_icons) do
+        if item_icon ~= nil then
+          item_icon:set_dst_position(item_icon:get_pause_position())
+          item_icon:set_enabled(true)
+          item_icon:set_active(true)
+        end
+      end
+      
+      if clock ~= nil then
+        hud:set_clock_enabled(false)
+      end
+      
+    elseif hud.mode == "normal" then      
+      hud:bring_to_front()
       if attack_icon ~= nil then
         attack_icon:set_dst_position(attack_icon:get_normal_position())
         local attack_icon_enabled = false
@@ -376,10 +433,16 @@ local function initialize_hud_features(game)
 
       for _, item_icon in ipairs(item_icons) do
         if item_icon ~= nil then
+          item_icon:set_dst_position(item_icon:get_normal_position())
           item_icon:set_enabled(true)
           item_icon:set_active(true)
         end
       end
+
+      if clock ~= nil then
+        hud:set_clock_enabled(true)
+      end
+
     elseif hud.mode == "no_buttons" then
       if attack_icon ~= nil then
         attack_icon:set_dst_position(attack_icon:get_normal_position())
@@ -400,6 +463,7 @@ local function initialize_hud_features(game)
 
       for _, item_icon in ipairs(item_icons) do
         if item_icon ~= nil then
+          item_icon:set_dst_position(item_icon:get_normal_position())
           item_icon:set_enabled(false)
           item_icon:set_active(false)
         end
@@ -539,6 +603,29 @@ local function initialize_hud_features(game)
       if item_icon then
         sol.menu.bring_to_front(item_icon)
       end
+    end
+  end
+
+  -- Brings hearts and magic bar to the front.
+  function hud:bring_bars_to_front()
+    if hearts then
+      sol.menu.bring_to_front(hearts)
+    end
+    if magic_bar then
+      sol.menu.bring_to_front(magic_bar)
+    end
+  end
+  
+  -- Brings rupees to the front.
+  function hud:bring_rupees_to_front()
+    if rupees then
+      sol.menu.bring_to_front(rupees)
+    end
+  end
+
+  function hud:bring_clock_to_front()
+    if clock then
+      sol.menu.bring_to_front(clock)
     end
   end
 

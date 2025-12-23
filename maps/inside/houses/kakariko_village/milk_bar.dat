@@ -1597,11 +1597,16 @@ door{
   layer = 0,
   x = 152,
   y = 24,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 1,
   sprite = "entities/doors/inside/door_d1_very_weak_wall",
   savegame_variable = "outside_kakarico_milk_bar_door",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 npc{

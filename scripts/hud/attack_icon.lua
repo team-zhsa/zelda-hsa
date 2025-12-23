@@ -9,7 +9,7 @@ function attack_icon_builder:new(game, config)
   local attack_icon = {}
 
   -- Creates the hud icon delegate.
-  attack_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.dialog_x, config.dialog_y)
+  attack_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.dialog_x, config.dialog_y, config.pause_x, config.pause_y)
   attack_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/attack_icon"))
   
   -- Initializes the icon.
@@ -90,6 +90,11 @@ function attack_icon_builder:new(game, config)
   -- Gets the dialog position of the icon.
   function attack_icon:get_dialog_position()
     return attack_icon.hud_icon:get_dialog_position()
+  end
+
+  -- Gets the pause position of the icon.
+  function attack_icon:get_pause_position()
+    return attack_icon.hud_icon:get_pause_position()
   end
 
   -- Called when the command effect changes.

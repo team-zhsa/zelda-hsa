@@ -10,7 +10,7 @@ function item_icon_builder:new(game, config)
   item_icon.slot = config.slot or 1
 
   -- Creates the hud icon delegate.
-  item_icon.hud_icon = hud_icon_builder:new(config.x, config.y)
+  item_icon.hud_icon = hud_icon_builder:new(config.x, config.y, config.dialog_x, config.dialog_y, config.pause_x, config.pause_y)
   item_icon.hud_icon:set_background_sprite(sol.sprite.create("hud/item_icon_"..item_icon.slot))
   
   -- Initializes the icon.
@@ -90,7 +90,36 @@ function item_icon_builder:new(game, config)
   function item_icon:set_transparent(transparent)
     item_icon.hud_icon:set_transparent(transparent)
   end
-  
+
+  -- Gets the position of the icon.
+  function item_icon:get_dst_position()
+    return item_icon.hud_icon:get_dst_position()
+  end
+
+  -- Sets the position of the icon.
+  function item_icon:set_dst_position(x, y)
+    item_icon.hud_icon:set_dst_position(x, y)
+  end
+
+  -- Gets the normal position of the icon.
+  function item_icon:get_normal_position()
+    return item_icon.hud_icon:get_normal_position()
+  end
+
+  -- Gets the dialog position of the icon.
+  function item_icon:get_dialog_position()
+    return item_icon.hud_icon:get_dialog_position()
+  end
+
+  -- Gets the pause position of the icon.
+  function item_icon:get_pause_position()
+    return item_icon.hud_icon:get_pause_position()
+  end
+
+  -- Called when the command effect changes.
+  function item_icon:on_command_effect_changed(effect)
+  end
+
   -- Checks periodically if the icon needs to be redrawn.
   function item_icon:check()
     local need_rebuild = false

@@ -9,6 +9,7 @@ local properties = {
 	effect = function()
 		item:song_effect()
 	end,
+	demo_duration = 4000,
 	duration = 9000,
 }
 

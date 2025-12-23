@@ -5,7 +5,7 @@ local text_fx_helper = require("scripts/text_fx_helper")
 
 local hud_icon_builder = {}
 
-function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)  
+function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y, pause_icon_x, pause_icon_y)  
   local hud_icon = {}
   hud_icon.x, hud_icon.y = icon_x, icon_y
 
@@ -16,6 +16,7 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
   -- Save
   hud_icon.normal_x, hud_icon.normal_y = icon_x, icon_y
   hud_icon.dialog_x, hud_icon.dialog_y = dialog_icon_x, dialog_icon_y
+  hud_icon.pause_x, hud_icon.pause_y = pause_icon_x, pause_icon_y
 
   -- Initialise layers.
   hud_icon.surface = nil
@@ -252,6 +253,11 @@ function hud_icon_builder:new(icon_x, icon_y, dialog_icon_x, dialog_icon_y)
   -- Gets the dialog position of the icon.
   function hud_icon:get_dialog_position()
     return hud_icon.dialog_x, hud_icon.dialog_y
+  end
+  
+  -- Gets the pause position of the icon.
+  function hud_icon:get_pause_position()
+    return hud_icon.pause_x, hud_icon.pause_y
   end
 
   -- Create a text foreground.
