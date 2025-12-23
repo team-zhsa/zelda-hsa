@@ -25,8 +25,8 @@ function submenu:on_started()
 	self.title_r_arrow = sol.surface.create("hud/text_icons/controller_r_icon.png")
 	self.infos_background = sol.surface.create("menus/pause/submenus_caption.png")
 	self.infos_background_w, self.infos_background_h = self.infos_background:get_size()
-	self.caption_background = sol.surface.create("menus/pause/submenus_caption.png")
-	self.caption_background_w, self.caption_background_h = self.caption_background:get_size()
+	self.caption_background = sol.surface.create("menus/pause/pause_icons.png")
+	self.caption_background_w, self.caption_background_h = 176,32
 	self.title_background = sol.surface.create("menus/pause/pause_icons.png")
 	self.title_background_w, self.title_background_h = 96, 32
 	self.save_dialog_background = sol.surface.create("menus/pause/dialog_background.png")
@@ -102,7 +102,8 @@ function submenu:on_started()
 	local menu_font, menu_font_size = language_manager:get_menu_font()
 	self.font_size = menu_font_size
 	self.text_color = { 224, 224, 224 }
-	self.text_stroke_color = {72, 72, 72}
+	self.text_stroke_color = {105, 76, 8}
+	self.text_shadow_color = {56, 42, 28}
 	self.caption_text_1 = sol.text_surface.create{
 		horizontal_alignment = "center",
 		vertical_alignment = "middle",
@@ -120,15 +121,12 @@ function submenu:on_started()
 
 	-- Create title.
 	self.title = ""
-	self.title_text_color = {224, 224, 224}
-	self.title_stroke_color = {72, 72, 72}
-	self.title_shadow_color = {52, 52, 52}
 	self.title_text = sol.text_surface.create{
 		horizontal_alignment = "center",
 		vertical_alignment = "middle",
 		font = menu_font,
 		font_size = menu_font_size,
-		color = self.title_text_color,
+		color = self.text_color,
 	}
 
 	self.title_surface = sol.surface.create(128, 32)
@@ -195,7 +193,7 @@ function submenu:draw_infos_text(dst_surface)
 			local cell_size = 28
 			local cell_spacing = 4
 				self.infos_text_line[i]:set_xy(infos_x + cell_spacing, infos_y + self.font_y_shift + 10 * i)
-				text_fx_helper:draw_text_with_shadow(dst_surface, self.infos_text_line[i], self.text_stroke_color)
+				text_fx_helper:draw_text_with_shadow(dst_surface, self.infos_text_line[i], self.text_shadow_color)
 			end
 		end
 	end
@@ -250,7 +248,7 @@ function submenu:draw_caption(dst_surface)
 		local caption_center_y = caption_y + caption_background_center_y
 
 		if self.caption_text_1:get_text():len() ~= 0 then
-			self.caption_background:draw(dst_surface, caption_x, caption_y)
+			self.caption_background:draw_region(0,64,self.caption_background_w,self.caption_background_h , dst_surface, caption_x, caption_y)
 		end
 
 		-- Draw caption text.
@@ -316,7 +314,7 @@ function submenu:draw_title(dst_surface)
 
 		-- Draw caption text, center vertically the only line.
 			self.title_text:set_xy(title_center_x, title_center_y + self.font_y_shift)
-			text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, self.title_text, self.text_stroke_color, self.title_shadow_color)
+			text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, self.title_text, self.text_stroke_color, self.text_shadow_color)
 		local arrow_surface_w, arrow_surface_h = self.title_l_arrow:get_size()
 		self.title_l_arrow:draw(dst_surface, title_center_x - 48 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
 		self.title_r_arrow:draw(dst_surface, title_center_x + 48 - arrow_surface_w/2, title_center_y - arrow_surface_h / 2)
