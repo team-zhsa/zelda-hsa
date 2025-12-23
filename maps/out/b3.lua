@@ -75,7 +75,7 @@ function npc_maze_game:on_interaction()
 					sol.audio.play_music("inside/minigame_alttp")
 					game:start_dialog("maps.out.kakarico_village.maze.maze_yes")
 					outside_kakarico_playing_maze = true
-					timer_manager:start_timer(map, 15000, "countdown", function() --Timer for 15 seconds
+					timer_manager:start_timer(map, 15000, "countdown", true, true, function() --Timer for 15 seconds
 						--outside_kakarico_playing_maze = false
 						if not switch_maze_game:is_activated() then
 							game:start_dialog("maps.out.kakarico_village.maze.maze_loose")

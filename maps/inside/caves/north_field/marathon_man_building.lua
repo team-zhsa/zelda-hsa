@@ -10,6 +10,7 @@
 local map = ...
 local game = map:get_game()
 local minigame_manager = require("scripts/maps/minigame_manager")
+local time_limit = 240
 
 npc_marathon:register_event("on_interaction", function()
   local function play_question()
@@ -19,13 +20,13 @@ npc_marathon:register_event("on_interaction", function()
 
         if not game:get_value("outside_marathon_minigame_piece_of_heart")
         and not game:get_value("outside_marathon_minigame_rupees") then
-          game:set_value("marathon_minigame_time_limit", 240)
+          time_limit = 240
         elseif not game:get_value("outside_marathon_minigame_rupees") then
-          game:set_value("marathon_minigame_time_limit", 210)
-        else game:set_value("marathon_minigame_time_limit", game:get_value("marathon_minigame_record_time"))
+          time_limit = 210
+        else time_limit = game:get_value("marathon_minigame_record_time")
         end
 
-        local total_seconds = game:get_value("marathon_minigame_time_limit")
+        local total_seconds = time_limit
         local seconds = total_seconds % 60
         local total_minutes = math.floor(total_seconds / 60)
         local minutes = total_minutes % 60

@@ -1,4 +1,20 @@
+--[[ Author: The Unknown, License: CC-BY-NC-SA
+Usage: local minigame_manager = require("scripts/maps/minigame_manager")
+Functions:
+
+--]] 
+
 local minigame_manager = {}
+local timer_manager = require("scripts/maps/timer_manager")
+
+-- Functions specific to each minigame.
+function minigame_manager:start_marathon(map, time_limit)
+	local game = map:get_game()
+	minigame_manager:start_chronometer(map, "marathon", time_limit)
+	minigame_manager:start_minigame(map, "marathon")
+end
+
+-- Standard functions for all minigames.
 
 function minigame_manager:start_minigame(map, minigame)
 	local game = map:get_game()
@@ -14,23 +30,18 @@ function minigame_manager:start_chronometer(map, minigame, time_limit)
 	local game = map:get_game()
 	game:set_value(minigame.."_minigame_time_limit", time_limit)
 	chrono_playing = true
+
 	local time = 0 --game:get_value(minigame.."_minigame_time") or 512000
-	local timer = sol.timer.start(game, 1000, function()
-		game:set_value(minigame.."_minigame_time", time)
-		time = time + 1
-		print(time.." out of "..time_limit)
-		if time < time_limit and chrono_playing == true then
-			chrono_playing = true --< game:get_value(minigame.."_minigame_time_limit") * 100 then
-			return true  -- Repeat the timer.
-		else-- chrono_playing == false then
-			if not game:get_value(minigame.."_minigame_winning", true) then
-				minigame_manager:on_chronometer_timeout(map, minigame)
-			end
-			return false
+	timer_manager:start_timer(game, time_limit * 1000, "chronometer", true, true,
+	function()
+		if not game:get_value(minigame.."_minigame_winning", true) then
+			minigame_manager:on_chronometer_timeout(map, minigame)
 		end
-		
+	end,
+	function()
+		time = time + 1
+		game:set_value(minigame.."_minigame_time", time)
 	end)
-	timer:set_suspended_with_map(true)
 
 end
 
@@ -81,12 +92,5 @@ function minigame_manager:is_playing(map, minigame)
 	local game = map:get_game()
 	return game:get_value(minigame.."_minigame_playing")
 end
-
-function minigame_manager:start_marathon(map, time_limit)
-	local game = map:get_game()
-	minigame_manager:start_chronometer(map, "marathon", time_limit)
-	minigame_manager:start_minigame(map, "marathon")
-end
-
 
 return minigame_manager

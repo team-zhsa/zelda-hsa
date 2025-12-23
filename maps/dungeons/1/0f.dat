@@ -6595,9 +6595,9 @@ door{
 }
 
 switch{
-  name = "switch_door_22",
+  name = "switch_door_23",
   layer = 0,
-  x = 368,
+  x = 816,
   y = 1008,
   subtype = "walkable",
   sprite = "entities/switch",
@@ -7358,7 +7358,7 @@ sensor{
 chest{
   name = "chest_22_map",
   layer = 0,
-  x = 392,
+  x = 384,
   y = 1021,
   treasure_name = "map",
   treasure_savegame_variable = "dungeon_1_map",
@@ -7561,6 +7561,24 @@ door{
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_1_0f_door_28_29",
   opening_method = "explosion",
+}
+
+sensor{
+  name = "sensor_18_door",
+  layer = 0,
+  x = 688,
+  y = 917,
+  width = 64,
+  height = 16,
+}
+
+sensor{
+  name = "sensor_23_door",
+  layer = 0,
+  x = 696,
+  y = 1013,
+  width = 32,
+  height = 16,
 }
 
 tile{

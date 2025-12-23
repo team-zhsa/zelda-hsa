@@ -1,7 +1,12 @@
 --[[ Author: The Unknown, License: CC-BY-NC-SA
 Usage: local timer_manager = require("scripts/maps/timer_manager")
 Functions:
-	timer_manager:start_timer(context, duration,hud_type ("countdown" or "chronometer" or nil), callback)
+	timer_manager:start_timer(
+		context, duration, type ("countdown" or "chronometer" or nil),
+		hud_shown(true or false),
+		suspended_with_map (true or false),
+		callback,
+		update_callback)
 	timer_manager:stop_all_timers(context)
 
 This script will create a customisable timer. An optional HUD can be displyed to show the remaining seconds.
@@ -18,40 +23,53 @@ local chronometer_surface = sol.text_surface.create({
 })
 local chronometer_menu = {}
 
-function timer_manager:start_timer(context, duration, hud_type, callback)
-	timer_calls = 0
+function timer_manager:update_chronometer(duration, type, hud_shown)
 
-	if hud_type == "countdown" then
+	if type == "countdown" then
 		chronometer_value = math.floor(duration / 1000) - timer_calls
-	elseif hud_type == "chronometer" then
+	elseif type == "chronometer" then
 		chronometer_value = timer_calls
 	end
 
-	if hud_type == "countdown" or hud_type == "chronometer" then
-		sol.menu.start(context, chronometer_menu, true)
-		-- Show how many seconds are left/have passed.
+	if hud_shown == true then
 		chronometer_surface:set_text(chronometer_value)
-	elseif not (hud_type == "countdown" or hud_type == "chronometer") then
-		-- No HUD shown
 	end
 
-	sol.timer.start(context, duration, function()
-		sol.menu.stop(chronometer_menu)
-		if callback ~= nil then callback() end
-	end)
+	-- Call a function every update if needed (for minigames, update the playing time value)
+	if update_callback ~= nil then
+		update_callback()
+	end
+
+end
+
+function timer_manager:start_timer(context, duration, type, hud_shown, suspended_with_map, callback, update_callback)
+	timer_calls = 0
+
+	-- Set default values
+	if type == nil then
+		type = "chronometer"
+	end
+	if hud_shown == nil then
+		hud_shown = true
+	end
+	if suspended_with_map == nil then
+		suspended_with_map = true
+	end
+
+	if hud_shown == true then
+		sol.menu.start(context, chronometer_menu, true)
+		sol.timer.start(context, duration, function()
+			sol.menu.stop(chronometer_menu)
+			if callback ~= nil then callback() end
+		end)
+	end
+
+	timer_manager:update_chronometer(duration, type, hud_shown, update_callback)
 
 	sol.timer.start(context, 1000, function()
     sol.audio.play_sound("menus/danger")
     timer_calls = timer_calls + 1
-		-- Update the chronometer value
-		if hud_type == "countdown" then
-			chronometer_value = math.ceil(duration / 1000) - timer_calls
-		elseif hud_type == "chronometer" then
-			chronometer_value = timer_calls
-		end
-		if hud_type == "countdown" or hud_type == "chronometer" then
-			chronometer_surface:set_text(chronometer_value)
-		end
+		timer_manager:update_chronometer(duration, type, hud_shown, update_callback)
     return timer_calls < math.floor(duration / 1000)
   end)
 

@@ -1,6 +1,6 @@
 local text_fx_helper = require("scripts/text_fx_helper")
 local language_manager = require("scripts/language_manager")
-
+local audio_manager = require("scripts/audio_manager")
 local parchment = {}
 
 ------------------------------ Specific functions -----------------------------
@@ -111,6 +111,7 @@ function parchment:hide(animate)
     -- Go!
     parchment.parchment_shadow_sprite:set_paused(false)
     parchment.parchment_sprite:set_paused(false)
+    audio_manager:play_sound("menus/scroll_close")
 
   elseif current_animation == "closed" then
     -- Fade-out the menu, then close it.
@@ -225,7 +226,6 @@ function parchment:start()
   parchment.parchment_shadow_sprite:set_animation("closed")
   parchment.parchment_sprite:set_opacity(0)
   parchment.parchment_shadow_sprite:set_opacity(0)
-
   if parchment.finished then
     return
   end
@@ -234,6 +234,7 @@ function parchment:start()
   
   -- Launch animation.
   parchment.state = "opening"
+  audio_manager:play_sound("menus/scroll_open")
   parchment.parchment_shadow_sprite:set_animation("opening")
   parchment.parchment_sprite:set_animation("opening", function()
 

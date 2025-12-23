@@ -405,6 +405,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added Wallmaster colour variations.
 	ADD: Created a movement for the hero when grabbed by a Wallmaster (#254).
 	ADD: Added item descriptions directly in the inventory (#257).
+	ADD: Added item descriptions in the inventory without pressing action (#257).
+	ADD: Created a movement for the hero when grabbed by a Wallmaster (#254).
+	ADD: Added the time_manager script to minigames.
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -525,6 +528,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed a Kaepora Gaebora missing ruins dialogue (#234).
 	FIX: Fixed a nil value error when using some special effect teletransporters (#237).
 	FIX: Fixed entities going through heavy_object (large stones) (#253).
+	FIX: Fixed a crash when using the hylia shield after the sword (#260).
+	FIX: Fixed Bari shocking themselves immediately when restarted (#259).
+	FIX: Fixed shield appearing in inventory without having them (#258).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -546,6 +552,9 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed support for MacOS Ventura.
 	REM: Removed Minecraftia font.
 	REM: Removed musics.
+	TDO: Move timer manager timer into its own menu to be able to stop it (#261).
+	TDO: Fix a wrong parallax tile in I6 (#256).
+	TDO: Adapt menus to widescreen aspect ratio (#255).
 	TDO: Fix torch custom entities not creating a fire effect (#252)
 	TDO: Fix Lynel flames still present after Lynel's death (#251)
 	TDO: Setup the quest files for the Solarus launcher.
