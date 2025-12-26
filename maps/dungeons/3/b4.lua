@@ -12,10 +12,9 @@ local separator_manager = require("scripts/maps/separator_manager")
 local switch_manager = require("scripts/maps/switch_manager")
 local treasure_manager = require("scripts/maps/treasure_manager")
 local is_boss_active = false
--- Map events
-
 
 map:register_event("on_started", function()
+	map.fsa_heat_wave = true
 	separator_manager:manage_map(map)
 	if heart_container ~= nil and boss ~= nil then
 		treasure_manager:disappear_pickable(map, "heart_container")

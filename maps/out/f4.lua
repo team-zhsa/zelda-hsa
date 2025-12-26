@@ -41,7 +41,6 @@ map:register_event("on_started", function(map, destination)
 
 	if game:is_step_last("game_started") then
 		npc_impa:set_enabled(true)
-		npc_impa:set_visible(false)
 	else npc_impa:set_enabled(false)
 	end
 
@@ -111,24 +110,28 @@ for npc in map:get_entities("npc_soldier_") do
 end
 
 -- Impa cutscene
+function map:start_impa_cutscene()
+	npc_impa:set_enabled(true)
+	map:set_cinematic_mode(true)
+	hero:set_direction(1)
+	audio_manager:play_music("cutscenes/cutscene_zelda")
+	local impa_movement_to_position = sol.movement.create("target")
+	impa_movement_to_position:set_target(impa_position)
+	impa_movement_to_position:set_ignore_obstacles(true)
+	impa_movement_to_position:set_ignore_suspend(true)
+	impa_movement_to_position:set_speed(100)
+	impa_movement_to_position:start(npc_impa, function()
+		game:start_dialog("maps.out.castle_town.impa.intro_1", game:get_player_name(), function()
+			ocarina_dialogue()
+		end)
+	end)
+
+end
+
 sensor_ocarina_cutscene:register_event("on_activated", function()
 	if game:is_step_last("game_started") then
-		npc_impa:set_enabled(true)
-		npc_impa:set_visible(true)
-		map:set_cinematic_mode(true, options)
-		hero:freeze()
-		hero:set_direction(1)
-		audio_manager:play_music("cutscenes/cutscene_zelda")
-		local impa_movement_to_position = sol.movement.create("target")
-		impa_movement_to_position:set_target(impa_position)
-		impa_movement_to_position:set_ignore_obstacles(true)
-		impa_movement_to_position:set_ignore_suspend(true)
-		impa_movement_to_position:set_speed(100)
-		impa_movement_to_position:start(npc_impa, function()
-			game:start_dialog("maps.out.castle_town.impa.intro_1", game:get_player_name(), function()
-				ocarina_dialogue()
-			end)
-		end)
+		map:start_impa_cutscene()
+
 	end
 end)
 
@@ -155,6 +158,8 @@ function ocarina_dialogue()
 		end
 	end)
 end
+
+-- Camera tour cutscene
 
 -- Door events
 open_house_door_castle_sensor:register_event("on_activated", function()

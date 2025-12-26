@@ -3133,28 +3133,6 @@ place !
 }
 
 dialog{
-  id = "maps.houses.castle_town.bank_copy_copy.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
-  id = "maps.houses.castle_town.bank_copy_copy_copy.sleep",
-  question = "1",
-  text = [[
-Bienvenue !
-Je t'offrirais bien un lit pour te
-reposer, mais je n'ai plus de
-place !
-]],
-}
-
-dialog{
   id = "maps.houses.castle_town.building.sleep",
   question = "1",
   text = [[
@@ -3320,6 +3298,26 @@ TOME 3 : SUD-OUEST
 Tu veux le lire ?
 Oui
 Non
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.overpriced_store.sleep",
+  text = [[
+Bienvenue
+<<<
+cirer chaussure 50  rubis
+]],
+}
+
+dialog{
+  id = "maps.houses.castle_town.overpriced_store_copy.sleep",
+  question = "1",
+  text = [[
+Bienvenue !
+Je t'offrirais bien un lit pour te
+reposer, mais je n'ai plus de
+place !
 ]],
 }
 

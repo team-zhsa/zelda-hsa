@@ -169,16 +169,19 @@ function debug:on_update()
             and not hero_movement:get_ignore_obstacles() then
           -- Also traverse obstacles in the new movement.
           hero_movement:set_ignore_obstacles(true)
+          hero:set_invincible(true)
         end
       end
       if hero_movement ~= nil then
         if not ctrl_pressed
-            and (sol.input.is_key_pressed("left control") or sol.input.is_key_pressed("right control")) then
+        and (sol.input.is_key_pressed("left control") or sol.input.is_key_pressed("right control")) then
           hero_movement:set_ignore_obstacles(true)
+          hero:set_invincible(true)
           ctrl_pressed = true
         elseif ctrl_pressed
-            and (not sol.input.is_key_pressed("left control") and not sol.input.is_key_pressed("right control")) then
-          hero_movement:set_ignore_obstacles(false)
+          and (not sol.input.is_key_pressed("left control") and not sol.input.is_key_pressed("right control")) then
+            hero_movement:set_ignore_obstacles(false)
+            hero:set_invincible(false)
           ctrl_pressed = false
         end
       end

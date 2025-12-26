@@ -65,7 +65,9 @@ function field_music_manager:check_time(map)
 
 		print("check_time new playing "..playing_time)
 	end
+	if not map:is_cinematic() then
 		field_music_manager:play_music(map, playing_time)
+	end
 end
 
 function field_music_manager:play_music(map, playing_time)

@@ -21,6 +21,7 @@ local timer_manager = require("scripts/maps/timer_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
+	map.fsa_lava = hero:is_in_same_region(chest_compass) or hero:is_in_same_region(door_10_1)
 	separator_manager:manage_map(map)
 	door_manager:open_when_enemies_dead(map, "enemy_2_", "door_2_e", sound)
 	door_manager:open_when_enemies_dead(map, "enemy_2_", "door_2_s", sound)
@@ -36,6 +37,22 @@ map:register_event("on_started", function()
   flying_tile_manager:reset(map, "enemy_19")
   for tile in map:get_entities("tile_5_floor") do
     tile:set_enabled(false)
+  end
+end)
+
+auto_separator_3:register_event("on_activating", function(separator, direction4)
+  if direction4 == 0 then
+    map.fsa_lava = true
+  elseif direction4 == 2 then
+    map.fsa_lava = false
+  end
+end)
+
+auto_separator_9:register_event("on_activating", function(separator, direction4)
+  if direction4 == 1 then
+    map.fsa_lava = true
+  elseif direction4 == 3 then
+    map.fsa_lava = false
   end
 end)
 

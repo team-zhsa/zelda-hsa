@@ -5,7 +5,7 @@ properties{
   height = 640,
   min_layer = -2,
   max_layer = 2,
-  tileset = "Full Hyrule",
+  tileset = "outside_main",
 }
 
 custom_entity{
@@ -16,15 +16,6 @@ custom_entity{
   height = 640,
   direction = 0,
   sprite = "maps/underwater",
-}
-
-dynamic_tile{
-  layer = -2,
-  x = 0,
-  y = 0,
-  width = 2240,
-  height = 640,
-  pattern = "10439",
 }
 
 block{

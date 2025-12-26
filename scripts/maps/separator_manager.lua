@@ -144,8 +144,8 @@ function separator_manager:manage_map(map)
   end
 
   for separator in map:get_entities("auto_separator") do
-    separator.on_activating = separator_on_activating
-    separator.on_activated = separator_on_activated
+    separator:register_event("on_activating", separator_on_activating)
+    separator:register_event("on_activated", separator_on_activated)
   end
 
   -- Store the position and properties of enemies.
