@@ -102,7 +102,7 @@ local item_sprite = "entities/items"
 function quest_submenu:on_started()
 	submenu.on_started(self)
 	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
-	self.hearts = sol.surface.create("menus/pause/quest/pieces_of_heart.png")
+	self.hearts = sol.surface.create("menus/pause/pause_icons.png")
 	self.counters = {}
 	self.sprites_static_quest_triforce = {}
 	self.sprites_static_quest_row_1 = {}
@@ -417,8 +417,9 @@ function quest_submenu:on_draw(dst_surface)
 	local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 	local pieces_of_heart_w = 28
 	local pieces_of_heart_x = pieces_of_heart_w * num_pieces_of_heart
+	local pieces_of_heart_y = 32
 	self.hearts:draw_region(
-		pieces_of_heart_x, 0,                 -- region position in image
+		pieces_of_heart_x, pieces_of_heart_y,                 -- region position in image
 		pieces_of_heart_w, pieces_of_heart_w, -- region size in image
 		dst_surface,                          -- destination surface
 		center_x + piece_of_heart_coords_x + cell_spacing,

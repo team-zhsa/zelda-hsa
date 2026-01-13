@@ -24,8 +24,7 @@ function submenu:on_started()
 	self.width, self.height = img_width / 4, img_height
 	self.title_l_arrow = sol.surface.create("hud/text_icons/controller_l_icon.png")
 	self.title_r_arrow = sol.surface.create("hud/text_icons/controller_r_icon.png")
-	self.infos_background = sol.surface.create("menus/pause/submenus_caption.png")
-	self.infos_background_w, self.infos_background_h = self.infos_background:get_size()
+	self.infos_background_w, self.infos_background_h = 138,62
 	self.caption_background = sol.surface.create("menus/pause/pause_icons.png")
 	self.caption_background_w, self.caption_background_h = 160,32
 	self.caption_background_reg_x, self.caption_background_reg_y = 96, 64
