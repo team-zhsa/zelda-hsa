@@ -4110,14 +4110,14 @@ tile{
   x = 112,
   y = 760,
   width = 24,
-  height = 64,
+  height = 32,
   pattern = "wall.3-5",
 }
 
 tile{
   layer = 0,
   x = 88,
-  y = 816,
+  y = 784,
   width = 32,
   height = 24,
   pattern = "wall.1-5",
@@ -4126,9 +4126,9 @@ tile{
 tile{
   layer = 0,
   x = 64,
-  y = 840,
+  y = 808,
   width = 24,
-  height = 64,
+  height = 96,
   pattern = "wall.3-5",
 }
 
@@ -4171,7 +4171,7 @@ tile{
 tile{
   layer = 0,
   x = 64,
-  y = 816,
+  y = 784,
   width = 24,
   height = 24,
   pattern = "wall.corner.1-5",
@@ -4180,7 +4180,7 @@ tile{
 tile{
   layer = 0,
   x = 112,
-  y = 816,
+  y = 784,
   width = 24,
   height = 24,
   pattern = "wall.corner_reverse.1-5",
@@ -9139,9 +9139,9 @@ tile{
 tile{
   layer = 0,
   x = 96,
-  y = 848,
+  y = 816,
   width = 64,
-  height = 16,
+  height = 48,
   pattern = "floor.13-1",
 }
 
@@ -9501,7 +9501,7 @@ tile{
   x = 144,
   y = 768,
   width = 16,
-  height = 80,
+  height = 48,
   pattern = "floor.13-1",
 }
 
@@ -10455,7 +10455,7 @@ tile{
   x = 136,
   y = 768,
   width = 8,
-  height = 80,
+  height = 48,
   pattern = "wall_border.3-5",
 }
 
@@ -10678,7 +10678,7 @@ tile{
 tile{
   layer = 0,
   x = 96,
-  y = 840,
+  y = 808,
   width = 48,
   height = 8,
   pattern = "wall_border.1-5",
@@ -10696,9 +10696,9 @@ tile{
 tile{
   layer = 0,
   x = 88,
-  y = 848,
+  y = 816,
   width = 8,
-  height = 48,
+  height = 80,
   pattern = "wall_border.3-5",
 }
 
@@ -12010,7 +12010,7 @@ tile{
 tile{
   layer = 0,
   x = 88,
-  y = 840,
+  y = 808,
   width = 8,
   height = 8,
   pattern = "wall_border.corner.1-5",
@@ -12019,7 +12019,7 @@ tile{
 tile{
   layer = 0,
   x = 136,
-  y = 840,
+  y = 808,
   width = 8,
   height = 8,
   pattern = "wall_border.corner_reverse.1-5",
@@ -20641,8 +20641,8 @@ enemy{
 
 enemy{
   layer = 0,
-  x = 456,
-  y = 845,
+  x = 760,
+  y = 781,
   direction = 0,
   breed = "dungeons/pike_auto",
 }
@@ -23288,16 +23288,16 @@ tile{
   x = 0,
   y = 736,
   width = 112,
-  height = 80,
+  height = 40,
   pattern = "ceiling.1",
 }
 
 tile{
   layer = 2,
   x = 0,
-  y = 816,
+  y = 776,
   width = 64,
-  height = 112,
+  height = 152,
   pattern = "ceiling.1",
 }
 
@@ -24089,7 +24089,7 @@ separator{
   layer = 2,
   x = 0,
   y = 232,
-  width = 960,
+  width = 1280,
   height = 16,
 }
 

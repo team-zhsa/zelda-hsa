@@ -260,7 +260,7 @@ function debug:on_draw(dst_surface)
       if debug_info_page==0 then
         show_text(0, 0, "Life: "..game:get_life().."/"..game:get_max_life())
         if game:get_max_magic() > 0 then
-          show_text(0, 10, "Magic: "..game:get_magic().."/"..game:get_max_magic())
+          show_text(80, 0, "Magic: "..game:get_magic().."/"..game:get_max_magic())
         end
         if game:get_max_money() > 0 then
           show_text(0, 10, "Money: "..game:get_money().."/"..game:get_max_money())

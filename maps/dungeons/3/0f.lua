@@ -22,7 +22,7 @@ map:register_event("on_started", function()
 
 -- Treasures
 	treasure_manager:disappear_pickable(map, "pickable_35_small_key")
-	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_35_", "pickable_35_small_key")
+	treasure_manager:appear_pickable_when_enemies_dead(map, "enemy_35", "pickable_35_small_key")
 
 -- Doors
   map:set_doors_open("door_35_n", true)
@@ -30,7 +30,7 @@ map:register_event("on_started", function()
   map:set_doors_open("door_15_n", false)
   map:set_doors_open("door_16_s", false)
   map:set_doors_open("door_21_n", false)
-	door_manager:open_when_enemies_dead(map, "enemy_35_", "door_35_n", sound)
+	door_manager:open_when_enemies_dead(map, "enemy_35", "door_35_n", false)
   door_manager:open_when_switch_activated(map, "switch_9_door", "door_9_n")
 	door_manager:open_when_switch_activated(map, "switch_15_door", "door_15_n")
 	door_manager:open_when_switch_activated(map, "switch_16_door", "door_16_s")
@@ -40,5 +40,5 @@ map:register_event("on_started", function()
 end)
 
 sensor_35_door:register_event("on_activated", function()
-	door_manager:close_if_enemies_not_dead(map, "enemy_35_", "door_35_n")
+	door_manager:close_if_enemies_not_dead(map, "enemy_35", "door_35_n")
 end)
