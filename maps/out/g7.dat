@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outside_main",
-  music = "same",
+  music = "outside/beach",
 }
 
 tile{
@@ -8967,15 +8967,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1264,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "963",
-}
-
-tile{
-  layer = 0,
   x = 384,
   y = 48,
   width = 16,
@@ -9256,15 +9247,6 @@ tile{
 tile{
   layer = 0,
   x = 1104,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "960",
-}
-
-tile{
-  layer = 0,
-  x = 1264,
   y = 0,
   width = 16,
   height = 16,
@@ -9518,7 +9500,7 @@ tile{
   layer = 0,
   x = 1248,
   y = 0,
-  width = 16,
+  width = 32,
   height = 16,
   pattern = "957",
 }
@@ -17911,6 +17893,97 @@ tile{
   pattern = "117",
 }
 
+tile{
+  layer = 0,
+  x = 728,
+  y = 40,
+  width = 32,
+  height = 8,
+  pattern = "14881",
+}
+
+tile{
+  layer = 0,
+  x = 752,
+  y = 24,
+  width = 8,
+  height = 24,
+  pattern = "990",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 24,
+  width = 16,
+  height = 24,
+  pattern = "992",
+}
+
+tile{
+  layer = 0,
+  x = 728,
+  y = 24,
+  width = 8,
+  height = 24,
+  pattern = "989",
+}
+
+tile{
+  layer = 0,
+  x = 968,
+  y = 72,
+  width = 32,
+  height = 8,
+  pattern = "14667",
+}
+
+tile{
+  layer = 0,
+  x = 992,
+  y = 56,
+  width = 8,
+  height = 24,
+  pattern = "990",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 56,
+  width = 16,
+  height = 24,
+  pattern = "992",
+}
+
+tile{
+  layer = 0,
+  x = 968,
+  y = 56,
+  width = 8,
+  height = 24,
+  pattern = "989",
+}
+
+tile{
+  layer = 0,
+  x = 1024,
+  y = 96,
+  width = 32,
+  height = 16,
+  pattern = "14004",
+  tileset = "outside_buildings",
+}
+
+tile{
+  layer = 0,
+  x = 1056,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "14000",
+}
+
 teletransporter{
   layer = 0,
   x = -16,
@@ -18143,5 +18216,49 @@ jumper{
   height = 24,
   direction = 4,
   jump_length = 56,
+}
+
+destination{
+  name = "from_brown_cave",
+  layer = 0,
+  x = 744,
+  y = 53,
+  direction = 3,
+}
+
+destination{
+  name = "from_camper_cave",
+  layer = 0,
+  x = 984,
+  y = 85,
+  direction = 3,
+}
+
+tile{
+  layer = 1,
+  x = 968,
+  y = 48,
+  width = 32,
+  height = 8,
+  pattern = "991",
+}
+
+tile{
+  layer = 1,
+  x = 728,
+  y = 16,
+  width = 32,
+  height = 8,
+  pattern = "991",
+}
+
+tile{
+  layer = 1,
+  x = 1024,
+  y = 80,
+  width = 32,
+  height = 16,
+  pattern = "14005",
+  tileset = "outside_buildings",
 }
 
