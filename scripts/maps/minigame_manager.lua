@@ -46,6 +46,7 @@ function minigame_manager:start_chronometer(map, minigame, time_limit)
 end
 
 function minigame_manager:on_chronometer_timeout(map, minigame)
+	timer_manager:stop_timer()
 	local game = map:get_game()
 	if minigame == "marathon" then
 		-- Set winning value to FALSE = losing.
@@ -57,6 +58,7 @@ function minigame_manager:on_chronometer_timeout(map, minigame)
 end
 
 function minigame_manager:stop_minigame(map, minigame)
+	timer_manager:stop_timer()
 	local game = map:get_game()
 	
 	if game:get_value(minigame.."_minigame_winning", true) then

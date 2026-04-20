@@ -58,7 +58,7 @@ function timer_manager:start_timer(context, duration, type, hud_shown, suspended
 
 	if hud_shown == true then
 		sol.menu.start(context, chronometer_menu, true)
-		sol.timer.start(context, duration, function()
+		sol.timer.start(chronometer_menu, duration, function()
 			sol.menu.stop(chronometer_menu)
 			if callback ~= nil then callback() end
 		end)
@@ -66,13 +66,19 @@ function timer_manager:start_timer(context, duration, type, hud_shown, suspended
 
 	timer_manager:update_chronometer(duration, type, hud_shown, update_callback)
 
-	sol.timer.start(context, 1000, function()
+	sol.timer.start(chronometer_menu, 1000, function()
     sol.audio.play_sound("menus/danger")
     timer_calls = timer_calls + 1
 		timer_manager:update_chronometer(duration, type, hud_shown, update_callback)
     return timer_calls < math.floor(duration / 1000)
   end)
 
+end
+
+function timer_manager:stop_timer(callback)
+	sol.timer.stop_all(chronometer_menu)
+	sol.menu.stop(chronometer_menu)
+	if callback ~= nil then callback() end
 end
 
 function chronometer_menu:on_draw(dst_surface)

@@ -20,9 +20,9 @@ npc_marathon:register_event("on_interaction", function()
 
         if not game:get_value("outside_marathon_minigame_piece_of_heart")
         and not game:get_value("outside_marathon_minigame_rupees") then
-          time_limit = 240
+          time_limit = 20
         elseif not game:get_value("outside_marathon_minigame_rupees") then
-          time_limit = 210
+          time_limit = 10
         else time_limit = game:get_value("marathon_minigame_record_time")
         end
 

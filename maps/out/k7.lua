@@ -29,6 +29,10 @@ npc_marathon:register_event("on_interaction", function()
 		minigame_manager:end_minigame(map, "marathon")
 		if (game:get_value("marathon_minigame_time")
 		< game:get_value("marathon_minigame_time_limit")) then
+
+      print(game:get_value("marathon_minigame_time"))
+
+      
 			-- New record
 			game:start_dialog("maps.out.faron_woods.marathon_man.marathon_finished_lower", game:get_value("marathon_minigame_time"), function()
 
