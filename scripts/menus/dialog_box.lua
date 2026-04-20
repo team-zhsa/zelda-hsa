@@ -177,9 +177,6 @@ local function initialise_dialog_box_features(game)
 		local map = game:get_map()
 		local camera_x, camera_y, camera_width, camera_height = map:get_camera():get_bounding_box()
 		local hero = map:get_entity("hero")
-		if hero:get_animation() == "walking" then
-			hero:set_animation("stopped")
-		end
 		local top = false
 		if self.vertical_position == "top" then
 			top = true
