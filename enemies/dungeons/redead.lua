@@ -1,3 +1,5 @@
+--ReDeads look very similar to that of a zombie. When a ReDead sees Link, it emits a scream, immobilizing him temporarily, giving it a chance to jump on his back and start damaging him. This can damage Link greatly in a short amount of time, dealing half a heart of damage roughly every half-second. If this happens, the best way to escape is to rapidly press the A button to try and get out of its grip. ReDeads are best attacked from behind, as they can only immobilize Link when they see him. After Link defeats a ReDead, other ones gather around its deceased body until it disappears, ignoring him in the process. ReDeads can be stunned for thirty seconds with the Sun's Song, which acts as a great weapon against them. 
+
 local enemy = ...
 	local audio_manager = require("scripts/audio_manager.lua")
   local attacking_hero = false

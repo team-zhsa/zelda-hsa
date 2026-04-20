@@ -1,0 +1,1 @@
+-- Ormas, a reverse Armos Weeping Angel-type enemy that only moves when not observed. Usually found in dark and reduced visibility environments.
