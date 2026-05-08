@@ -34,9 +34,9 @@ local item_names_static_quest_map = {
 	"world_map",
 }
 local item_names_static_bag = {
-"_placeholder",
-"_placeholder",
-"_placeholder",
+"bomb_bag",
+"quiver",
+"rupee_bag",
 }
 local item_names_assignable = {
 	"_placeholder",
@@ -58,7 +58,6 @@ local item_names_static_right = { -- Collectibles
 	"_placeholder",
 	"_placeholder",
 	"divine_ore",
-	"_placeholder",
 }
 
 local cell_size = 14

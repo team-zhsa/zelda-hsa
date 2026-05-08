@@ -15,12 +15,12 @@ local item_names_top_left = {
 }
 
 local item_names_top_right = {
-"tunic_green",
-"tunic_blue",
+"bottle_1",
+"bottle_2",
 "sword",
 "power_gloves",--
-"tunic_red",
-"tunic_time",
+"bottle_3",
+"bottle_4",
 "flippers",
 "pegasus_boots",
 }
