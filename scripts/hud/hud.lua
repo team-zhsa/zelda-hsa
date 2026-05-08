@@ -294,6 +294,10 @@ local function initialize_hud_features(game)
         end
       end
 
+      if clock ~= nil then
+        hud:set_clock_enabled(false)
+      end
+
     -- Pause (non assignable)
     elseif hud.mode == "pause" then
       hud:bring_rupees_to_front()

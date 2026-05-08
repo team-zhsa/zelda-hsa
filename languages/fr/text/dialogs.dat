@@ -5626,6 +5626,15 @@ Maintenant rentre dans la ville !
 }
 
 dialog{
+  id = "maps.out.east_castle.soldiers.tip_chest",
+  text = [[
+Tu savais que certains coffres
+contenaient des objets précieux ?
+Place-toi devant et appuie sur \[controller_a\] !
+]],
+}
+
+dialog{
   id = "maps.out.east_castle.soldiers.tip_lift",
   text = [[
 T'as l'air plutôt costaud pour
@@ -6862,7 +6871,7 @@ Je ne faisais que passer !
 }
 
 dialog{
-  id = "menus..credits",
+  id = "menus.credits",
   text = [[
 Crédits :
 
@@ -7057,7 +7066,7 @@ Hyrule's Adventure
 }
 
 dialog{
-  id = "menus..introduction.intro_1",
+  id = "menus.introduction.intro_1",
   text = [[
 $1Il y a longtemps, dans le beau
 Royaume d'Hyrule entouré de
@@ -7066,7 +7075,7 @@ montagnes et de forêts$0.$0.$0.
 }
 
 dialog{
-  id = "menus..introduction.intro_10",
+  id = "menus.introduction.intro_10",
   text = [[
 $1Or Ganon attendait toujours,
 tapi dans l'ombre, l'instant
@@ -7090,7 +7099,7 @@ familière dans son sommeil...
 }
 
 dialog{
-  id = "menus..introduction.intro_2",
+  id = "menus.introduction.intro_2",
   text = [[
 $1Des légendes racontaient
 l'histoire de la Triforce, seule
@@ -7108,7 +7117,7 @@ dans le Saint Royaume.
 }
 
 dialog{
-  id = "menus..introduction.intro_3",
+  id = "menus.introduction.intro_3",
   text = [[
 $1Un jour, un groupe de voleurs
 menés par leur chef Ganondorf
@@ -7120,7 +7129,7 @@ pour conquérir Hyrule.$0
 }
 
 dialog{
-  id = "menus..introduction.intro_4",
+  id = "menus.introduction.intro_4",
   text = [[
 $1Un pouvoir diabolique émanant
 alors du Saint Royaume, le Roi
@@ -7132,7 +7141,7 @@ Ce sceau aurait dû demeurer
 }
 
 dialog{
-  id = "menus..introduction.intro_5",
+  id = "menus.introduction.intro_5",
   text = [[
 $1Quelques années plus tard,
 un apprenti du forgeron du nom
@@ -7153,7 +7162,7 @@ auparavant.
 }
 
 dialog{
-  id = "menus..introduction.intro_6",
+  id = "menus.introduction.intro_6",
   text = [[
 $1C'est alors que $v le détruisit,
 restaurant la paix au Royaume$0.$0.$0.
@@ -7162,7 +7171,7 @@ Mais cela ne dura pas.
 }
 
 dialog{
-  id = "menus..introduction.intro_7",
+  id = "menus.introduction.intro_7",
   text = [[
 $1Une nuit bien sombre, un sorcier
 venu d'un autre monde invoqua
@@ -7177,7 +7186,7 @@ jadis tué, l'ancêtre de $v.
 }
 
 dialog{
-  id = "menus..introduction.intro_8",
+  id = "menus.introduction.intro_8",
   text = [[
 $1Agahnim provoqua alors un 
 terrible tremblement de terre
@@ -7186,52 +7195,12 @@ qui bouleversa l'ordre hylien.
 }
 
 dialog{
-  id = "menus..introduction.intro_9",
+  id = "menus.introduction.intro_9",
   text = [[
 $1Il fallut trois ans pour
 reconstruire le pays, hommes
 et femmes oeuvrant sans relâche
 pour bâtir des créatures divines.
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.continue",
-  question = "1",
-  text = [[
-Quitter la partie ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.save",
-  text = [[
-Votre partie a été sauvegardée.
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.secret_continue",
-  question = "1",
-  text = [[
-Avez-vous plus de 18 ans ?
-Entrer
-Entrer
-]],
-}
-
-dialog{
-  id = "menus..version_checker.update_question",
-  question = "1",
-  text = [[
-Votre sauvegarde n'est pas à jour.
-Elle sera mise à jour vers la
-dernière version du jeu.
-Mettre à jour la sauvegarde ?
-Oui
-Non (retour au menu)
 ]],
 }
 
@@ -8950,6 +8919,46 @@ dialog{
 La carte d'Hyrule, te permettant
 de te repérer dans ce vaste
 pays.
+]],
+}
+
+dialog{
+  id = "menus.quit_menu.continue",
+  question = "1",
+  text = [[
+Quitter la partie ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "menus.quit_menu.save",
+  text = [[
+Votre partie a été sauvegardée.
+]],
+}
+
+dialog{
+  id = "menus.quit_menu.secret_continue",
+  question = "1",
+  text = [[
+Avez-vous plus de 18 ans ?
+Entrer
+Entrer
+]],
+}
+
+dialog{
+  id = "menus.version_checker.update_question",
+  question = "1",
+  text = [[
+Votre sauvegarde n'est pas à jour.
+Elle sera mise à jour vers la
+dernière version du jeu.
+Mettre à jour la sauvegarde ?
+Oui
+Non (retour au menu)
 ]],
 }
 
