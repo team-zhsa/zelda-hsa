@@ -360,43 +360,44 @@ local function setup_inside_lights(map)
 	local default_color = "193,185,80"
 	local default_color_inside_1 = "196,128,200"
 	local default_color_inside_2 = "137,89,140"
+	local default_color_inside_3 = "197,200,198"
 --create hero light
-		if map.fsa_dark then
-			-- Create a smaller hero light
-			local hl = create_light(map,-320,-320,0,"32",default_color)
+	if map.fsa_dark then
+		-- Create a smaller hero light
+		local hl = create_light(map,-320,-320,0,"32",default_color)
+		function hl:on_update()
+				local slot_1 = map:get_game():get_item_assigned(1)
+				local slot_2 = map:get_game():get_item_assigned(2)
+			if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
+			 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
+			 and map:get_game():get_magic() > 0 then
+					hl:set_position(hero:get_position())
+			else
+				hl:set_position(-320, -320)
+			end
+		end
+		print("FSA Dark")
+		hl.excluded_occs = {[hero]=true}
+	else
+		if not house then
+			-- Create a normal hero light
+			local hl = create_light(map,-48,-48,0,"48",default_color_inside_2)
 			function hl:on_update()
-					local slot_1 = map:get_game():get_item_assigned(1)
-					local slot_2 = map:get_game():get_item_assigned(2)
-				if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
-				 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
-				 and map:get_game():get_magic() > 0 then
+				local slot_1 = map:get_game():get_item_assigned(1)
+				local slot_2 = map:get_game():get_item_assigned(2)
+			if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
+			 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
+			 and map:get_game():get_magic() > 0 then
 						hl:set_position(hero:get_position())
 				else
 					hl:set_position(-320, -320)
 				end
 			end
-			print("FSA Dark")
 			hl.excluded_occs = {[hero]=true}
-		else
-			if not house then
-				-- Create a normal hero light
-				local hl = create_light(map,-48,-48,0,"48",default_color_inside_2)
-				function hl:on_update()
-					local slot_1 = map:get_game():get_item_assigned(1)
-					local slot_2 = map:get_game():get_item_assigned(2)
-				if ((slot_1 ~= nil and slot_1:get_name() == "lamp")
-				 or (slot_2 ~= nil and slot_2:get_name() == "lamp"))
-				 and map:get_game():get_magic() > 0 then
-							hl:set_position(hero:get_position())
-					else
-						hl:set_position(-320, -320)
-					end
-				end
-				hl.excluded_occs = {[hero]=true}
-			end
-						print("FSA Not house")
-
 		end
+					print("FSA Not house")
+
+	end
 
 	--add a static light for each torch pattern tile in the map
 	local map_lights = get_lights_from_map(map)
@@ -421,7 +422,7 @@ local function setup_inside_lights(map)
 			local tx,ty,tl = en:get_position()
 			local tw,th = en:get_size()
 			local yoff = -8
-			local light = create_light(map,tx,ty+yoff,tl,default_radius,default_color,
+			local light = create_light(map,tx,ty+yoff,tl,"default_radius",default_color,
 								0,0,1.5,0)
 			
 			en:register_event("on_unlit",function()
@@ -435,6 +436,26 @@ local function setup_inside_lights(map)
 			print(en:is_lit())
 		end
 	end
+
+	-- generate lights for fairies
+	for en in map:get_entities_by_type("pickable") do
+		if en:get_treasure():get_name() == "fairy" then
+			local tx,ty,tl = en:get_position()
+			local tw,th = en:get_size()
+			local yoff = -8
+			local light = create_light(map,tx,ty,tl,"16",default_color_inside_3)
+			light:set_enabled(true)
+
+			function light:on_update()
+				if en:exists() then
+					tx,ty,tl = en:get_position()
+					light:set_position(tx,ty+yoff,tl)
+				else light:set_enabled(false)
+				end
+				
+			end
+		end
+	end	
 end
 
 local water_grounds = {deep_water=true,shallow_water=true}
