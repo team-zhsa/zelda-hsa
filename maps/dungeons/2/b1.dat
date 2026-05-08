@@ -13808,10 +13808,15 @@ door{
   layer = 0,
   x = 1112,
   y = 200,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 dynamic_tile{
@@ -14441,11 +14446,16 @@ door{
   layer = 0,
   x = 152,
   y = 440,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 3,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b1_door_6_11",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 dynamic_tile{
@@ -14463,11 +14473,16 @@ door{
   layer = 0,
   x = 152,
   y = 504,
+  properties = {
+    {
+      key = "opening_method",
+      value = "explosion",
+    },
+  },
   direction = 1,
   sprite = "entities/doors/inside/door_d1_weak_wall",
   savegame_variable = "dungeon_2_b1_door_6_11",
   opening_method = "explosion",
-   properties = {{key = "opening_method",value = "explosion",},},
 }
 
 destructible{
