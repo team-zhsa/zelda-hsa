@@ -14,6 +14,7 @@ local outside_kakarico_playing_maze
 local outside_kakarico_won_maze
 local num_dialogue = 0
 local timer_manager = require("scripts/maps/timer_manager")
+local minigame_manager = require("scripts/maps/minigame_manager")
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
@@ -63,69 +64,78 @@ function grandma:on_interaction()
 end
 
 -- Maze Game
-function npc_maze_game:on_interaction()
-	if not outside_kakarico_playing_maze
-	and not outside_kakarico_won_maze then --not playing
+local time_limit = 30
+
+npc_maze_game:register_event("on_interaction", function()
+
+	local function play_question()
 		game:start_dialog("maps.out.kakarico_village.maze.maze_welcome", function(answer)
-			if answer == 1 then
-				if game:get_money() >= 20 then
-					game:remove_money(20)
+			if answer == 1 and game:get_money() >= 20 then -- Play game
+			
+			  local total_seconds = time_limit
+        local seconds = total_seconds % 60
+        local total_minutes = math.floor(total_seconds / 60)
+        local minutes = total_minutes % 60
+        local time_limit_str = string.format("%02d:%02d", total_minutes, seconds)
+
+				game:start_dialog("maps.out.kakarico_village.maze.maze_yes",
+        time_limit_str, function()
+          minigame_manager:start_kakarico_maze(map, total_seconds)
 					switch_maze_game:set_activated(false)
 					npc_maze_game:set_traversable(true)
 					sol.audio.play_music("inside/minigame_alttp")
-					game:start_dialog("maps.out.kakarico_village.maze.maze_yes")
-					outside_kakarico_playing_maze = true
-					timer_manager:start_timer(map, 15000, "countdown", true, true, function() --Timer for 15 seconds
-						--outside_kakarico_playing_maze = false
-						if not switch_maze_game:is_activated() then
-							game:start_dialog("maps.out.kakarico_village.maze.maze_loose")
-							sol.audio.play_music("outside/kakarico")
-							outside_kakarico_playing_maze = false
-							outside_kakarico_won_maze = false
-						end
-					end)
-				elseif game:get_money() < 20 then
-					game:start_dialog("_shop.not_enough_money")
-				end
-			elseif answer == 2 then
-				game:start_dialog("maps.out.kakarico_village.maze.maze_no")
-			end
+          game:remove_money(20)
+        end)
+
+      elseif answer == 1 and game:get_money() < 20 then
+        game:start_dialog("_shop.not_enough_money")
+
+      elseif answer == 2 then
+        game:start_dialog("maps.out.kakarico_village.maze.maze_no")
+      end
 		end)
-	elseif outside_kakarico_playing_maze
-		and not outside_kakarico_won_maze then -- playing
-		game:start_dialog("maps.out.kakarico_village.maze.maze_activate_switch")
-	elseif outside_kakarico_playing_maze
-		and outside_kakarico_won_maze
-		and not game:get_value("outside_kakarico_maze_piece_of_heart", true) then -- piece of heart
-		game:start_dialog("maps.out.kakarico_village.maze.maze_piece_of_heart", function()
-			hero:start_treasure("piece_of_heart")
-		end)
-		game:set_value("outside_kakarico_maze_piece_of_heart", true)
-		sol.audio.play_music("outside/kakarico")
-		outside_kakarico_playing_maze = false
-		outside_kakarico_won_maze = false
-		hero:teleport("out/b3", "end_maze")
-	elseif outside_kakarico_playing_maze and outside_kakarico_won_maze and game:get_value("outside_kakarico_maze_piece_of_heart", true) then
-		game:start_dialog("maps.out.kakarico_village.maze.maze_rupee", function()
-			hero:start_treasure("rupee", 4)
-		end)
-		outside_kakarico_playing_maze = false
-		outside_kakarico_won_maze = false
-		sol.audio.play_music("outside/kakarico")
-		hero:teleport("out/b3", "end_maze")
-	else
-		game:start_dialog("maps.out.kakarico_village.maze.maze_loose")
 	end
-end
+
+	local function get_prize()
+
+		if not game:get_value("outside_kakarico_maze_piece_of_heart", true) then -- piece of heart
+			game:start_dialog("maps.out.kakarico_village.maze.maze_piece_of_heart", function()
+				hero:start_treasure("piece_of_heart")
+			end)
+			game:set_value("outside_kakarico_maze_piece_of_heart", true)
+		else 
+			game:start_dialog("maps.out.kakarico_village.maze.maze_rupee", function()
+				hero:start_treasure("rupee", 4)
+			end)
+		end
+	end
+
+	if minigame_manager:is_playing(map, "kakarico_maze") == true and
+	not minigame_manager:has_won(map, "kakarico_maze") == true then
+		game:start_dialog("maps.out.kakarico_village.maze.maze_already_playing")
+		print("a")
+	elseif minigame_manager:is_playing(map, "kakarico_maze") == true and
+	minigame_manager:has_won(map, "kakarico_maze") == true then
+		print("b")
+		get_prize()
+		minigame_manager:stop_minigame(map, "kakarico_maze")
+	elseif not minigame_manager:is_playing(map, "kakarico_maze") == true and
+	not minigame_manager:has_won(map, "kakarico_maze") == true then
+		print("c")
+		play_question()
+	elseif not minigame_manager:is_playing(map, "kakarico_maze") == true and
+	 minigame_manager:has_won(map, "kakarico_maze") == true then
+		print("d")
+		play_question()
+	end
+
+end)
 
 function switch_maze_game:on_activated()
-	if outside_kakarico_playing_maze and not outside_kakarico_won_maze then
-		sol.timer.stop_all(map)
-		game:start_dialog("maps.out.kakarico_village.maze.maze_win", function()
-			outside_kakarico_won_maze = true
-			outside_kakarico_playing_maze = true
-		end)
-	elseif not outside_kakarico_playing_maze then
+	if minigame_manager:is_playing(map, "kakarico_maze") == true then
+		minigame_manager:win_minigame(map, "kakarico_maze")
+		game:start_dialog("maps.out.kakarico_village.maze.maze_win")
+	else 
 		sol.audio.play_sound("common/wrong")
 		switch_maze_game:set_activated(false)
 	end

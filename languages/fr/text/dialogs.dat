@@ -5922,7 +5922,7 @@ dialog{
 }
 
 dialog{
-  id = "maps.out.kakarico_village.maze.maze_activate_switch",
+  id = "maps.out.kakarico_village.maze.maze_already_playing",
   text = [[
 Tu dois activer l'interrupteur
 là-bas pour gagner.
@@ -7192,6 +7192,46 @@ $1Il fallut trois ans pour
 reconstruire le pays, hommes
 et femmes oeuvrant sans relâche
 pour bâtir des créatures divines.
+]],
+}
+
+dialog{
+  id = "menus..quit_menu.continue",
+  question = "1",
+  text = [[
+Quitter la partie ?
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "menus..quit_menu.save",
+  text = [[
+Votre partie a été sauvegardée.
+]],
+}
+
+dialog{
+  id = "menus..quit_menu.secret_continue",
+  question = "1",
+  text = [[
+Avez-vous plus de 18 ans ?
+Entrer
+Entrer
+]],
+}
+
+dialog{
+  id = "menus..version_checker.update_question",
+  question = "1",
+  text = [[
+Votre sauvegarde n'est pas à jour.
+Elle sera mise à jour vers la
+dernière version du jeu.
+Mettre à jour la sauvegarde ?
+Oui
+Non (retour au menu)
 ]],
 }
 
@@ -8910,46 +8950,6 @@ dialog{
 La carte d'Hyrule, te permettant
 de te repérer dans ce vaste
 pays.
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.continue",
-  question = "1",
-  text = [[
-Quitter la partie ?
-Oui
-Non
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.save",
-  text = [[
-Votre partie a été sauvegardée.
-]],
-}
-
-dialog{
-  id = "menus..quit_menu.secret_continue",
-  question = "1",
-  text = [[
-Avez-vous plus de 18 ans ?
-Entrer
-Entrer
-]],
-}
-
-dialog{
-  id = "menus..version_checker.update_question",
-  question = "1",
-  text = [[
-Votre sauvegarde n'est pas à jour.
-Elle sera mise à jour vers la
-dernière version du jeu.
-Mettre à jour la sauvegarde ?
-Oui
-Non (retour au menu)
 ]],
 }
 

@@ -7,7 +7,6 @@ local playing_time = ""
 require("scripts/multi_events")
 
 local north_field_id = {
-"out/a1",
 "out/b2",
 "out/c2", "out/c3",
 "out/d2", "out/d3",

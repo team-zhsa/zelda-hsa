@@ -26,7 +26,8 @@ npc_marathon:register_event("on_interaction", function()
 	if not minigame_manager:is_playing(map, "marathon") then
 		game:start_dialog("maps.out.faron_woods.marathon_man.marathon_already_finished")
 	else
-		minigame_manager:end_minigame(map, "marathon")
+		minigame_manager:win_minigame(map, "marathon")
+		minigame_manager:stop_minigame(map, "marathon")
 		if (game:get_value("marathon_minigame_time")
 		< game:get_value("marathon_minigame_time_limit")) then
 

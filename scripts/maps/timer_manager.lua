@@ -17,9 +17,10 @@ local language_manager = require("scripts/language_manager")
 local timer_calls = 0
 local chronometer_value
 local chronometer_surface = sol.text_surface.create({
-	horizontal_alignment = "center",
+	horizontal_alignment = "right",
 	vertical_alignment = "middle", 
-	font = "green_digits",
+	font = "kubasta",
+	font_size = 9,
 })
 local chronometer_menu = {}
 
@@ -32,7 +33,12 @@ function timer_manager:update_chronometer(duration, type, hud_shown)
 	end
 
 	if hud_shown == true then
-		chronometer_surface:set_text(chronometer_value)
+ 		local total_seconds = chronometer_value
+    local seconds = total_seconds % 60
+    local total_minutes = math.floor(total_seconds / 60)
+    local minutes = total_minutes % 60
+    local formatted = string.format("%02d:%02d", minutes, seconds)
+		chronometer_surface:set_text(formatted)
 	end
 
 	-- Call a function every update if needed (for minigames, update the playing time value)
@@ -83,7 +89,7 @@ end
 
 function chronometer_menu:on_draw(dst_surface)
 	local screen_width, screen_height = dst_surface:get_size()
-	chronometer_surface:set_xy(screen_width / 2, screen_height - 20)
+	chronometer_surface:set_xy(screen_width -8 , screen_height - 20)
 	chronometer_surface:draw(dst_surface)
 end
 

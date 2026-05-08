@@ -12,6 +12,7 @@ local game = map:get_game()
 local minigame_manager = require("scripts/maps/minigame_manager")
 local time_limit = 240
 
+-- See out/k7 for minigame end
 npc_marathon:register_event("on_interaction", function()
   local function play_question()
     game:start_dialog("maps.caves.north_field.marathon_man.marathon_question", function(answer)
@@ -57,6 +58,7 @@ npc_marathon:register_event("on_interaction", function()
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_no_shoes")
       
       else
+      if game:get_value("marathon_minigame_times_played") == 0 then game:set_value("marathon_minigame_record_time", time_limit) end
         game:start_dialog("maps.caves.north_field.marathon_man.marathon_intro", function()
           if game:get_value("marathon_minigame_record_time") ~= nil then
 
