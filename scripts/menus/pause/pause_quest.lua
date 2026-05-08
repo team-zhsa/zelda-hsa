@@ -654,35 +654,35 @@ function quest_submenu:show_info_message()
 	self.game:set_custom_command_effect("action", nil)
 	self.game:set_custom_command_effect("attack", nil)
 	if item_name == "piece_of_heart" then
-		dialog_id =  "menus..pause_inventory.piece_of_heart.1" 
+		dialog_id =  "menus.pause_inventory.piece_of_heart.1" 
 	elseif item_name == "monster_claw_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "menus..pause_inventory.monster_claw_counter.1" 
+			dialog_id =  "menus.pause_inventory.monster_claw_counter.1" 
 		end
 	elseif item_name == "monster_gut_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "menus..pause_inventory.monster_gut_counter.1" 
+			dialog_id =  "menus.pause_inventory.monster_gut_counter.1" 
 		end
 	elseif item_name == "monster_horn_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "menus..pause_inventory.monster_horn_counter.1" 
+			dialog_id =  "menus.pause_inventory.monster_horn_counter.1" 
 		end
 	elseif item_name == "monster_tail_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "menus..pause_inventory.monster_tail_counter.1" 
+			dialog_id =  "menus.pause_inventory.monster_tail_counter.1" 
 		end
 	elseif item_name == "goron_amber_counter" then
 		local item = item_name and self.game:get_item(item_name) or nil
 		if item:get_amount() > 0 then
-			dialog_id =  "menus..pause_inventory.goron_amber_counter.1" 
+			dialog_id =  "menus.pause_inventory.goron_amber_counter.1" 
 		end
 	else
 		local variant = self.game:get_item(item_name):get_variant()
-		dialog_id = "menus..pause_inventory." .. item_name .. "." .. variant
+		dialog_id = "menus.pause_inventory." .. item_name .. "." .. variant
 	end
 	if dialog_id then
 		game:start_dialog(dialog_id, function()
@@ -706,12 +706,12 @@ function quest_submenu:set_cursor_position(row, column)
 	if item_name =="pieces_of_heart" then
 			local num_pieces_of_heart = self.game:get_item("piece_of_heart"):get_num_pieces_of_heart()
 			self:set_caption_key("pause.caption.item.piece_of_heart."..num_pieces_of_heart)
-			self:set_infos_key("menus..pause_inventory.piece_of_heart.1")
+			self:set_infos_key("menus.pause_inventory.piece_of_heart.1")
 			self.game:set_custom_command_effect("action", "info")
 
 	elseif item_name =="triforce" then
 		self:set_caption_key("pause.caption.item.piece_of_heart."..num_pieces_of_heart)
-		self:set_infos_key("menus..pause_inventory." .. item_name .. ".1")
+		self:set_infos_key("menus.pause_inventory." .. item_name .. ".1")
 		self.game:set_custom_command_effect("action", "info")
 
 	else
@@ -720,7 +720,7 @@ function quest_submenu:set_cursor_position(row, column)
 		local item_icon_opacity = 128
 		if variant > 0 then
 		self:set_caption_key("pause.caption.item." .. item_name .. "." .. variant)
-		self:set_infos_key("menus..pause_inventory." .. item_name .. "." .. variant)
+		self:set_infos_key("menus.pause_inventory." .. item_name .. "." .. variant)
 			self.game:set_custom_command_effect("action", "info")
 			if item:is_assignable() then
 				self.game:set_hud_mode("pause_assign")

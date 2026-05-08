@@ -470,6 +470,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Removed the hero light when the lamp isn't assigned.
 	CHG: Redrew the inventory menu for widescreen aspect ratios (#255).
 	CHG: Renamed rod files to "rod_*".
+	CHG: Moved timer manager timer into its own menu to be able to stop it (#261).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -532,6 +533,8 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed a crash when using the hylia shield after the sword (#260).
 	FIX: Fixed Bari shocking themselves immediately when restarted (#259).
 	FIX: Fixed shield appearing in inventory without having them (#258).
+	FIX: Fixed Ballchain Knights being incompatible with the separator manager (#223).
+	FIX: Fixed firebars spawning when using an auto separator (#242)
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -553,7 +556,6 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	REM: Removed support for MacOS Ventura.
 	REM: Removed Minecraftia font.
 	REM: Removed musics.
-	TDO: Move timer manager timer into its own menu to be able to stop it (#261).
 	TDO: Fix a wrong parallax tile in I6 (#256).
 	TDO: Adapt menus to widescreen aspect ratio (#255).
 	TDO: Fix torch custom entities not creating a fire effect (#252)
@@ -572,9 +574,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Add a quick swap feature (#196).
 	TDO: Remove the tofu character at the end of lines in the enter_command_mono font (#184).
 	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
-	TDO: Fix Ballchain Knights being incompatible with the separator manager (#223).
 	TDO: Move the option menus to the escape menu (#229).
-	TDO: Fix firebars spawning when using an auto separator (#242)
 
 Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Remove *.xcf and *.psd work files from the data files (#169).

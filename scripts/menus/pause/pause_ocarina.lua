@@ -293,7 +293,7 @@ function inventory_submenu:show_info_message()
 
 	self.game:set_custom_command_effect("action", nil)
 	self.game:set_custom_command_effect("attack", nil)
-	game:start_dialog("menus..pause_inventory." .. item_name .. "." .. variant, function()
+	game:start_dialog("menus.pause_inventory." .. item_name .. "." .. variant, function()
 		self.game:set_custom_command_effect("action", "info")
 		self.game:set_custom_command_effect("attack", "save")
 	end)
@@ -315,7 +315,7 @@ function inventory_submenu:set_cursor_position(row, column)
 	local item_icon_opacity = 128
 	if variant > 0 then
 		self:set_caption_key("pause.caption.item." .. item_name .. "." .. variant)
-		self:set_infos_key("menus..pause_inventory." .. item_name .. "." .. variant)
+		self:set_infos_key("menus.pause_inventory." .. item_name .. "." .. variant)
 		self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then
       self.game:set_hud_mode("pause_assign")
