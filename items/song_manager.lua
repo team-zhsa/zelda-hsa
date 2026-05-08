@@ -62,6 +62,8 @@ function config:create(item, properties)
 							properties.effect()
 						end
 					end
+				else
+					map:set_cinematic_mode(false) -- Return to normal #270
 				end
 			end)
   	end)
