@@ -22772,15 +22772,15 @@ teletransporter{
 
 teletransporter{
   layer = 0,
-  x = 792,
+  x = 784,
   y = 120,
   properties = {
     {
       key = "effect",
-      value = "distorsion",
+      value = "distorsion_white",
     },
   },
-  width = 16,
+  width = 32,
   height = 16,
   destination_map = "out/i4",
   destination = "from_field_2",
@@ -22795,7 +22795,7 @@ npc{
       key = "model",
       value = "sign",
     },
-                          {
+    {
       key = "dialogue_id",
       value = "maps.out.south_field.sign_4",
     },
@@ -22880,15 +22880,15 @@ custom_entity{
 
 teletransporter{
   layer = 0,
-  x = 264,
+  x = 256,
   y = 120,
   properties = {
     {
       key = "effect",
-      value = "distorsion",
+      value = "distorsion_white",
     },
   },
-  width = 16,
+  width = 32,
   height = 16,
   destination_map = "out/i4",
   destination = "from_field",

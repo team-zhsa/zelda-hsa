@@ -7379,7 +7379,7 @@ teletransporter{
   properties = {
     {
       key = "effect",
-      value = "pixellisation",
+      value = "distorsion_white",
     },
   },
   width = 72,
@@ -7392,9 +7392,14 @@ teletransporter{
   layer = 0,
   x = 1280,
   y = 0,
+  properties = {
+    {
+      key = "effect",
+      value = "distorsion_white",
+    },
+  },
   width = 16,
   height = 1440,
-  transition = "scrolling",
   destination_map = "out/j4",
   destination = "_side",
 }
@@ -7417,12 +7422,11 @@ teletransporter{
   properties = {
     {
       key = "effect",
-      value = "pixellisation",
+      value = "distorsion_white",
     },
   },
   width = 16,
   height = 1440,
-  transition = "scrolling",
   destination_map = "out/h4",
   destination = "_side",
 }
