@@ -87,6 +87,7 @@ dialog:register_event("on_interaction", function()
           return_hero()
         end)
 -- else softlock TODO
+      else          return_hero()
       end
     end)
   end)    
