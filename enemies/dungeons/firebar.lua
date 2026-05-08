@@ -75,3 +75,11 @@ function enemy:on_disabled()
   son3:set_enabled(false)
   son4:set_enabled(false)
 end
+
+-- Remove children along with master #242
+function enemy:on_removed()
+  son1:remove()
+  son2:remove()
+  son3:remove()
+  son4:remove()
+end
