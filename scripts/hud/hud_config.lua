@@ -62,7 +62,14 @@ local hud_config = {
 	}, --]]
 
 
-
+	-- Attack icon.
+	{
+		menu_script = "scripts/hud/attack_icon",
+		x = -52,
+		y = 16,
+		pause_x = -40,
+		pause_y = -28
+	},
 
 	-- Item icon for slot 1.
 	{
@@ -84,14 +91,7 @@ local hud_config = {
 		pause_y = 4
 	},
 
-	-- Attack icon.
-	{
-		menu_script = "scripts/hud/attack_icon",
-		x = -52,
-		y = 16,
-		pause_x = -40,
-		pause_y = -28
-	},
+
 	
 		-- Action icon.
 	{
