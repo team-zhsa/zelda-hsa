@@ -279,12 +279,12 @@ function quest_submenu:draw_items(dst_surface)
 	-- Draw each item
 	-- x_offset: Shift second row icons to make them less cramped
 	-- y_offset: Shift down icons to fit them in the bottom frame
-	local x_offset, y_offset = 0, 1
-	local y = center_y + grid_coords_y + sprite_origin_y/2 + (min_row_bottom_left + y_offset) * (cell_size + cell_spacing)
+	local x_offset, y_offset = 0, 16
+	local y = center_y + grid_coords_y + sprite_origin_y/2 + min_row_bottom_left * (cell_size + cell_spacing) + y_offset
 	local k = 0
 	for j = min_row_bottom_left, max_row_bottom_left do
-		if j == 6 then x_offset = 1	else x_offset = 0 end
-		local x = center_x + grid_coords_x + sprite_origin_x/2 - 4 + (min_col_bottom_left + 0.5 * x_offset) * (cell_size + cell_spacing)
+		if j == 6 then x_offset = 8	else x_offset = 0 end
+		local x = center_x + grid_coords_x + sprite_origin_x/2 - 4 + (min_col_bottom_left) * (cell_size + cell_spacing) + x_offset
 		for i = min_col_bottom_left, max_col_bottom_left do
 			k = k + 1
 			if item_names_bottom_left[k] ~= nil then
@@ -376,10 +376,10 @@ function quest_submenu:on_draw(dst_surface)
 			and (self.cursor_row >= min_row_bottom_left and self.cursor_row <= max_row_bottom_left) then
 				if self.cursor_row == 5 then
 					cursor_x_offset= 0
-					cursor_y_offset= 1
+					cursor_y_offset= 16
 				elseif self.cursor_row == 6 then
-					cursor_x_offset= 0.5
-					cursor_y_offset= 0.5
+					cursor_x_offset= 8
+					cursor_y_offset= 8
 				elseif self.cursor_row == 7 then
 					cursor_x_offset= 0
 					cursor_y_offset= 0
@@ -388,8 +388,8 @@ function quest_submenu:on_draw(dst_surface)
 			cursor_x_offset= 0
 			cursor_y_offset= 0
 		end
-		cursor_x = center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * (self.cursor_column + cursor_x_offset)
-		cursor_y = center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * (self.cursor_row + cursor_y_offset)
+		cursor_x = center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * (self.cursor_column) + cursor_x_offset
+		cursor_y = center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * (self.cursor_row) + cursor_y_offset
 			self.cursor_sprite:draw(dst_surface, cursor_x,	cursor_y)
 	end
 

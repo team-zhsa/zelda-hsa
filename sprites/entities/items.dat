@@ -843,6 +843,27 @@ animation{
   },
 }
 animation{
+  name = "spiritual_stone_1",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 64, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "spiritual_stone_2",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 80, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "spiritual_stone_3",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 96, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "sword",
   src_image = "entities/items.png",
   directions = {
@@ -882,6 +903,33 @@ animation{
     { x = 128, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
     { x = 144, y = 160, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "triforce_1",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 112, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "triforce_2",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 112, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "triforce_3",
+  src_image = "entities/items.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 112, y = 176, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
   },
 }
 animation{

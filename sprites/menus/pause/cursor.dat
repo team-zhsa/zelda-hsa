@@ -16,3 +16,21 @@ animation{
     { x = 160, y = 32, frame_width = 10, frame_height = 15, origin_x = 5, origin_y = 3, num_frames = 2 },
   },
 }
+animation{
+  name = "quest_pendant",
+  src_image = "menus/pause/pause_icons.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 192, y = 32, frame_width = 16, frame_height = 16, origin_x = 0, origin_y = -3, num_frames = 2 },
+  },
+}
+animation{
+  name = "triforce",
+  src_image = "menus/pause/pause_icons.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 224, y = 32, frame_width = 16, frame_height = 16, origin_x = 0, origin_y = -3, num_frames = 2 },
+  },
+}

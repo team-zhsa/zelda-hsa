@@ -11,22 +11,22 @@ local item_names_static_quest_triforce = {
 }
 
 local item_names_static_quest_row_1 = {
-"_placeholder",
-"_placeholder",
-"_placeholder",
+"spiritual_stone_1",
+"spiritual_stone_2",
+"spiritual_stone_3",
 }
 local item_names_static_quest_row_2 = {
-"_placeholder",
-"_placeholder",
+"crystal_3",
+"crystal_4",
 }
 local item_names_static_quest_row_3 = {
-"_placeholder",
-"_placeholder",
-"_placeholder",
+"crystal_1",
+"pendant_3",
+"crystal_2",
 }
 local item_names_static_quest_row_4 = {
-"_placeholder",
-"_placeholder",
+"pendant_1",
+"pendant_2",
 }
 local item_names_static_quest_map = {
 	"world_map",
@@ -101,6 +101,7 @@ local item_sprite = "entities/items"
 function quest_submenu:on_started()
 	submenu.on_started(self)
 	self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
+	self.cursor_sprite:set_animation("normal")
 	self.hearts = sol.surface.create("menus/pause/pause_icons.png")
 	self.counters = {}
 	self.sprites_static_quest_triforce = {}
@@ -132,28 +133,30 @@ function quest_submenu:on_started()
 		self.sprites_static_quest_triforce[i]:set_animation(item_name)
 	end
 
+	-- Crystals
 	for i,item_name in ipairs(item_names_static_quest_row_1) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_1[i] = sol.sprite.create(item_sprite)
+		self.sprites_static_quest_row_1[i] = sol.sprite.create("menus/pause/pause_icons")
 		self.sprites_static_quest_row_1[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_row_2) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_2[i] = sol.sprite.create(item_sprite)
+		self.sprites_static_quest_row_2[i] = sol.sprite.create("menus/pause/pause_icons")
 		self.sprites_static_quest_row_2[i]:set_animation(item_name)
 	end
+	-- Pendants
 	for i,item_name in ipairs(item_names_static_quest_row_3) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_3[i] = sol.sprite.create(item_sprite)
+		self.sprites_static_quest_row_3[i] = sol.sprite.create("menus/pause/pause_icons")
 		self.sprites_static_quest_row_3[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_row_4) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_row_4[i] = sol.sprite.create(item_sprite)
+		self.sprites_static_quest_row_4[i] = sol.sprite.create("menus/pause/pause_icons")
 		self.sprites_static_quest_row_4[i]:set_animation(item_name)
 	end
 	for i,item_name in ipairs(item_names_static_quest_map) do
@@ -227,10 +230,12 @@ function quest_submenu:draw_sidebar(dst_surface)
 	end
 
 	-- Draw each inventory static item quest row 1.
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_1 * (cell_size + cell_spacing)
+	local y_offset = -2
+	local x_offset = 0
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_1 * (cell_size + cell_spacing) + (min_row_quest_row_1 - 1) * (-2) --+ y_offset
 	local k = 0
 	for j = min_row_quest_row_1, max_row_quest_row_1 do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_1 * (cell_size + cell_spacing)
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_1 * (cell_size + cell_spacing) + x_offset
 		for i = min_col_quest_row_1, max_col_quest_row_1 do
 			k = k + 1
 			if item_names_static_quest_row_1[k] ~= nil then
@@ -247,10 +252,12 @@ function quest_submenu:draw_sidebar(dst_surface)
 	end
 
 		-- Draw each inventory static item quest row 2.
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_2 * (cell_size + cell_spacing)
+	local y_offset = -4
+	local x_offset = 8
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_2 * (cell_size + cell_spacing) + (min_row_quest_row_2 - 1) * (-2)
 	local k = 0
 	for j = min_row_quest_row_2, max_row_quest_row_2 do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_2 * (cell_size + cell_spacing)
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_2 * (cell_size + cell_spacing) + x_offset
 		for i = min_col_quest_row_2, max_col_quest_row_2 do
 			k = k + 1
 			if item_names_static_quest_row_2[k] ~= nil then
@@ -267,10 +274,12 @@ function quest_submenu:draw_sidebar(dst_surface)
 	end
 
 		-- Draw each inventory static item quest row 3.
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_3 * (cell_size + cell_spacing)
+	local y_offset = -6
+	local x_offset = 0
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_3 * (cell_size + cell_spacing) + (min_row_quest_row_3 - 1) * (-2)
 	local k = 0
 	for j = min_row_quest_row_3, max_row_quest_row_3 do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_3 * (cell_size + cell_spacing)
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_3 * (cell_size + cell_spacing) + x_offset
 		for i = min_col_quest_row_3, max_col_quest_row_3 do
 			k = k + 1
 			if item_names_static_quest_row_3[k] ~= nil then
@@ -287,10 +296,12 @@ function quest_submenu:draw_sidebar(dst_surface)
 	end
 
 	-- Draw each inventory static item quest row 4.
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_4 * (cell_size + cell_spacing)
+	local y_offset = -8
+	local x_offset = 8
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_row_4 * (cell_size + cell_spacing) + (min_row_quest_row_4 - 1) * (-2)
 	local k = 0
 	for j = min_row_quest_row_4, max_row_quest_row_4 do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_4 * (cell_size + cell_spacing)
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_row_4 * (cell_size + cell_spacing)+ x_offset
 		for i = min_col_quest_row_4, max_col_quest_row_4 do
 			k = k + 1
 			if item_names_static_quest_row_4[k] ~= nil then
@@ -444,9 +455,24 @@ function quest_submenu:on_draw(dst_surface)
 
 	-- Draw cursor only when the save dialog is not displayed.
 	if self.save_dialog_state == 0 then
-		self.cursor_sprite:draw(dst_surface,
-		center_x + grid_coords_x + cursor_origin_x + (cell_size + cell_spacing) * self.cursor_column,
-		center_y + grid_coords_y + cursor_origin_y + (cell_size + cell_spacing) * self.cursor_row)
+
+-- If special case (sidebar), draw cursor with an offset instead of real location
+		local cursor_x, cursor_y = 0,0
+		local cursor_x_offset, cursor_y_offset = 0,0
+		if self.cursor_column < min_col_bag then
+			if (self.cursor_row >= min_row_quest_row_1 and self.cursor_row <= max_row_quest_row_4) then
+				cursor_y_offset = (self.cursor_row - 1) * (-2)
+				if self.cursor_row == 3 or self.cursor_row == 5 then -- Triple row, offset x to +8
+					cursor_x_offset = 8
+				end
+			end
+		else
+			cursor_x_offset= 0
+			cursor_y_offset= 0
+		end
+		cursor_x = center_x + grid_coords_x + cursor_origin_x + (self.cursor_column) * (cell_size + cell_spacing) + cursor_x_offset
+		cursor_y = center_y + grid_coords_y + cursor_origin_y + (self.cursor_row) * (cell_size + cell_spacing)  + cursor_y_offset
+			self.cursor_sprite:draw(dst_surface, cursor_x,	cursor_y)
 	end
 
 		-- Draw the item being assigned if any.
@@ -584,7 +610,7 @@ function quest_submenu:on_command_pressed(command)
 				else -- triple row
 					if self.cursor_column == max_col_quest_row_1 then
 						sol.audio.play_sound(cursor_sound)
-						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), math.floor(self.cursor_column/2)*2)		
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column - 1)		
 					else 
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)						
@@ -616,7 +642,7 @@ function quest_submenu:on_command_pressed(command)
 				else -- triple row
 					if self.cursor_column == max_col_quest_row_1 then
 						sol.audio.play_sound(cursor_sound)
-						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), math.floor(self.cursor_column/2)*2)		
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column - 1)		
 					else 
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)						
@@ -733,6 +759,16 @@ function quest_submenu:set_cursor_position(row, column)
 			self.game:set_custom_command_effect("action", nil)
 			self.game:set_hud_mode("pause")
 		end
+	end
+
+	if self.cursor_column < min_col_bag then
+		if (self.cursor_row >= min_row_quest_row_1 and self.cursor_row <= max_row_quest_row_4) then
+			self.cursor_sprite:set_animation("quest_pendant")
+		else
+			self.cursor_sprite:set_animation("normal")
+		end
+	else
+		self.cursor_sprite:set_animation("normal")
 	end
 end
 
