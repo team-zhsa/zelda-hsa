@@ -6,8 +6,16 @@ local quest_submenu = submenu:new()
 local item_names_static_quest_triforce = {
 "_placeholder",
 "_placeholder",
+"triforce_1",
+"triforce_2",
+}
+local item_names_static_quest_triforce_t = {
+"triforce_3",
+}
+local item_names_static_quest_triforce_b = {
+"triforce_1",
 "_placeholder",
-"_placeholder",
+"triforce_2",
 }
 
 local item_names_static_quest_row_1 = {
@@ -65,6 +73,10 @@ local cell_spacing = 2
 local max_row, max_col = 6,14
 local min_row_quest_triforce, min_col_quest_triforce = 0, 0
 local max_row_quest_triforce, max_col_quest_triforce = 1, 1
+local min_row_quest_triforce_t, min_col_quest_triforce_t = 0, 0
+local max_row_quest_triforce_t, max_col_quest_triforce_t = 0, 0
+local min_row_quest_triforce_b, min_col_quest_triforce_b = 1, 0
+local max_row_quest_triforce_b, max_col_quest_triforce_b = 1, 2
 
 local min_row_quest_row_1, min_col_quest_row_1 = 2, 0
 local max_row_quest_row_1, max_col_quest_row_1 = 2, 2
@@ -104,7 +116,9 @@ function quest_submenu:on_started()
 	self.cursor_sprite:set_animation("normal")
 	self.hearts = sol.surface.create("menus/pause/pause_icons.png")
 	self.counters = {}
+	self.sprites_static_quest_triforce_t = {}
 	self.sprites_static_quest_triforce = {}
+	self.sprites_static_quest_triforce_b = {}
 	self.sprites_static_quest_row_1 = {}
 	self.sprites_static_quest_row_2 = {}
 	self.sprites_static_quest_row_3 = {}
@@ -129,8 +143,20 @@ function quest_submenu:on_started()
 	for i,item_name in ipairs(item_names_static_quest_triforce) do
 		local item = self.game:get_item(item_name)
 		local variant = item:get_variant()
-		self.sprites_static_quest_triforce[i] = sol.sprite.create(item_sprite)
+		self.sprites_static_quest_triforce[i] = sol.sprite.create("menus/pause/pause_icons")
 		self.sprites_static_quest_triforce[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_triforce_t) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_triforce_t[i] = sol.sprite.create("menus/pause/pause_icons")
+		self.sprites_static_quest_triforce_t[i]:set_animation(item_name)
+	end
+	for i,item_name in ipairs(item_names_static_quest_triforce_b) do
+		local item = self.game:get_item(item_name)
+		local variant = item:get_variant()
+		self.sprites_static_quest_triforce_b[i] = sol.sprite.create("menus/pause/pause_icons")
+		self.sprites_static_quest_triforce_b[i]:set_animation(item_name)
 	end
 
 	-- Crystals
@@ -209,19 +235,41 @@ end
 function quest_submenu:draw_sidebar(dst_surface)
 	local width, height = dst_surface:get_size()
 	local center_x, center_y = width / 2, height / 2
-	-- Draw each inventory static item sidebar triforce.
-	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_triforce * (cell_size + cell_spacing)
+	-- Draw each inventory static item sidebar triforce top.
+	local x_offset = 0
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_triforce_t * (cell_size + cell_spacing) + (min_row_quest_triforce_t - 1) * (-2) --+ y_offset
 	local k = 0
-	for j = min_row_quest_triforce, max_row_quest_triforce do
-	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_triforce * (cell_size + cell_spacing)
-		for i = min_col_quest_triforce, max_col_quest_triforce do
+	for j = min_row_quest_triforce_t, max_row_quest_triforce_t do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_triforce_t * (cell_size + cell_spacing) + x_offset
+		for i = min_col_quest_triforce_t, max_col_quest_triforce_t do
 			k = k + 1
-			if item_names_static_quest_triforce[k] ~= nil then
-				local item = self.game:get_item(item_names_static_quest_triforce[k])
+			if item_names_static_quest_triforce_t[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_triforce_t[k])
 				if item:get_variant() > 0 then
 					-- The player has this item: draw it.
-					self.sprites_static_quest_triforce[k]:set_direction(item:get_variant() - 1)
-					self.sprites_static_quest_triforce[k]:draw(dst_surface, x, y)
+					self.sprites_static_quest_triforce_t[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_triforce_t[k]:draw(dst_surface, x, y)
+				end
+			end
+			x = x + cell_size + cell_spacing
+		end
+		y = y + cell_size + cell_spacing
+	end
+
+	local y_offset = -5
+	local x_offset = 9
+	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_triforce_b * (cell_size + cell_spacing) + y_offset
+	local k = 0
+	for j = min_row_quest_triforce_b, max_row_quest_triforce_b do
+	local x = center_x + grid_coords_x + sprite_origin_x + min_col_quest_triforce_b * (cell_size + cell_spacing) + x_offset
+		for i = min_col_quest_triforce_b, max_col_quest_triforce_b do
+			k = k + 1
+			if item_names_static_quest_triforce_b[k] ~= nil then
+				local item = self.game:get_item(item_names_static_quest_triforce_b[k])
+				if item:get_variant() > 0 then
+					-- The player has this item: draw it.
+					self.sprites_static_quest_triforce_b[k]:set_direction(item:get_variant() - 1)
+					self.sprites_static_quest_triforce_b[k]:draw(dst_surface, x, y)
 				end
 			end
 			x = x + cell_size + cell_spacing
@@ -517,16 +565,15 @@ function quest_submenu:on_command_pressed(command)
 							self:set_cursor_position(self.cursor_row, self.cursor_column - 1)					
 				else 
 					if self.cursor_column == min_col_bag then
-						if (self.cursor_row == 0
-					or self.cursor_row == 1
-					or self.cursor_row == 3
-					or self.cursor_row == 5)
-					then -- double row
+						if self.cursor_row == 1 or self.cursor_row == 3 or self.cursor_row == 5 		then -- double row
 							sol.audio.play_sound(cursor_sound)
 							self:set_cursor_position(self.cursor_row, max_col_quest_row_2)	
-						else -- triple row
+						elseif self.cursor_row == 0 then
 							sol.audio.play_sound(cursor_sound)
-							self:set_cursor_position(self.cursor_row, max_col_quest_row_1)	
+							self:set_cursor_position(self.cursor_row, 0)								
+						else -- triple row
+								sol.audio.play_sound(cursor_sound)
+								self:set_cursor_position(self.cursor_row, max_col_quest_row_1)	
 						end
 					else
 						if self.cursor_column == min_col_assignable then
@@ -556,11 +603,7 @@ function quest_submenu:on_command_pressed(command)
 				self:next_submenu()
 			else
 				if self.cursor_column <= max_col_quest_row_1  then -- in sidebar
-					if (self.cursor_row == 0
-					or self.cursor_row == 1
-					or self.cursor_row == 3
-					or self.cursor_row == 5)
-					then -- double row
+					if (self.cursor_row == 3 or self.cursor_row == 5)	then -- double row
 						if self.cursor_column == max_col_quest_row_2 then--go to right side
 							sol.audio.play_sound(cursor_sound)
 							self:set_cursor_position(math.floor(self.cursor_row/2)*2, min_col_bag)							
@@ -568,6 +611,9 @@ function quest_submenu:on_command_pressed(command)
 							sol.audio.play_sound(cursor_sound)
 							self:set_cursor_position(self.cursor_row, self.cursor_column + 1)	
 						end
+					elseif self.cursor_row == 0 then
+							sol.audio.play_sound(cursor_sound)
+							self:set_cursor_position(math.floor(self.cursor_row/2)*2, min_col_bag)						
 					else -- triple row
 						if self.cursor_column == max_col_quest_row_1 then--go to right side
 							sol.audio.play_sound(cursor_sound)
@@ -600,13 +646,15 @@ function quest_submenu:on_command_pressed(command)
 
 		elseif command == "up" and self.cursor_column < max_col + 1 then
 			if self.cursor_column <= max_col_quest_row_1 then -- in sidebar
-				if (self.cursor_row == 0
-					or self.cursor_row == 1
+				if (self.cursor_row == 2
 					or self.cursor_row == 3
 					or self.cursor_row == 5)
 					then -- double row
 						sol.audio.play_sound(cursor_sound)
-						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)							
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), self.cursor_column)
+					elseif self.cursor_row == 1 then -- go to top left
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row - 1) % (max_row + 1)), 0)
 				else -- triple row
 					if self.cursor_column == max_col_quest_row_1 then
 						sol.audio.play_sound(cursor_sound)
@@ -639,7 +687,10 @@ function quest_submenu:on_command_pressed(command)
 					then -- double row
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column)							
-				else -- triple row
+					elseif self.cursor_row == 6 then
+						sol.audio.play_sound(cursor_sound)
+						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), 0)		
+					else -- triple row
 					if self.cursor_column == max_col_quest_row_1 then
 						sol.audio.play_sound(cursor_sound)
 						self:set_cursor_position(((self.cursor_row + 1) % (max_row + 1)), self.cursor_column - 1)		
@@ -775,9 +826,12 @@ end
 function quest_submenu:get_item_name(row, column)
 
 	if column < 3 and row >= 0 then -- Sidebar
-		if row == 0 or row == 1 then -- Triforce
-			index = row * (max_col_quest_triforce + 1) + column
-			item_name = item_names_static_quest_triforce[index + 1]
+		if row == 0 then -- Triforce top
+			index = (row - min_row_quest_triforce_t) * (max_col_quest_triforce_t + 1) + column
+			item_name = item_names_static_quest_triforce_t[index + 1]
+		elseif row == 1 then -- Triforce bottom
+			index = (row - min_row_quest_triforce_b) * (max_col_quest_triforce_b + 1) + column
+			item_name = item_names_static_quest_triforce_b[index + 1]
 		elseif row == 2 then -- Quest row 1
 			index = (row - min_row_quest_row_1) * (max_col_quest_row_1 + 1) + column
 			item_name = item_names_static_quest_row_1[index + 1]
