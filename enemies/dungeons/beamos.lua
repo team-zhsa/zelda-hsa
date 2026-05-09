@@ -84,7 +84,7 @@ enemy:register_event("on_created", function(enemy)
   	fire = "protected",
   	jump_on = "ignored",
   	hammer = "protected",
-  	hookshot = "protected",
+  	hookshot = "ignored", -- Hookshot moving back #272
   	magic_powder = "ignored",
   	shield = "protected",
   	thrust = "protected"
