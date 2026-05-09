@@ -257,7 +257,7 @@ function quest_submenu:draw_sidebar(dst_surface)
 	end
 
 	local y_offset = -5
-	local x_offset = 9
+	local x_offset = 8
 	local y = center_y + grid_coords_y + sprite_origin_y + min_row_quest_triforce_b * (cell_size + cell_spacing) + y_offset
 	local k = 0
 	for j = min_row_quest_triforce_b, max_row_quest_triforce_b do
