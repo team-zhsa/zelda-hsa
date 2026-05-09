@@ -203,6 +203,39 @@ open_house_door_bank_sensor:register_event("on_activated", function()
 end)
 
 -- NPC events
+
+npc_tingle:register_event("on_interaction", function()
+	if not game:get_value("tingle_first_interaction", true) then
+		game:start_dialog("maps.out.castle_town.tingle.first_time", function()
+			game:start_dialog("maps.out.castle_town.tingle.buy_map", function(answer)
+				if answer == 1 and game:get_money() >= 40 then
+					game:start_dialog("maps.out.castle_town.tingle.map_yes", function()
+						hero:start_treasure("world_map",1,"tingle_world_map", function ()
+							game:start_dialog("maps.out.castle_town.tingle.owl_statues")
+						end)
+					end)
+				elseif answer == 1 and game:get_money() < 40 then
+					game:start_dialog("_shop.not_enough_money")
+				else game:start_dialog("maps.out.castle_town.tingle.map_no")
+				end
+			end)
+		end)
+	else
+		game:start_dialog("maps.out.castle_town.tingle.buy_map", function(answer)
+				if answer == 1 and game:get_money() >= 40 then
+					game:start_dialog("maps.out.castle_town.tingle.map_yes", function()
+						hero:start_treasure("world_map",1,"tingle_world_map", function ()
+							game:start_dialog("maps.out.castle_town.tingle.owl_statues")
+						end)
+					end)
+				elseif answer == 1 and game:get_money() < 40 then
+					game:start_dialog("_shop.not_enough_money")
+				else game:start_dialog("maps.out.castle_town.tingle.map_no")
+				end
+			end)
+	end
+end)
+
 for npc in map:get_entities("npc_laundry_") do
 	npc:register_event("on_interaction", function()
 		if game:is_step_last("ocarina_obtained") then

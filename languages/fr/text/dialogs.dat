@@ -5345,13 +5345,12 @@ Une autre fois
 
 dialog{
   id = "maps.out.castle_town.tingle.first_time",
-  next = "maps.out.castle_town.tingle.buy_map",
   text = [[
 Salut ! Moi, c'est Tingle !$0
 Je suis la réincarnation d'une
 magique fée des bois !
 Cela fait 35 ans que j'attends
-qu'une fée vienne me voir$0.$0.$0.
+qu'une fée vienne me voir...
 Mais aucune n'est venue...
 Mon père me dit de grandir et
 d'agir en adulte responsable.$0
@@ -5871,7 +5870,7 @@ dialog{
   text = [[
 Depuis que les ponts sont tombés,
 on doit passer par le lac Hylia.
-$0.$0.$0.$0Quelle perte de temps !
+...Quelle perte de temps !
 Moi, je reste ici en profitant du
 village !
 ]],
@@ -8502,9 +8501,9 @@ dialog{
   icon = "127",
   skip = "all",
   text = [[
-La Petite Bourse, qui permet
-de transporter jusqu'à 199
-rubis.
+La Petite Bourse, qui 
+permet de transporter
+jusqu'à 199 rubis.
 ]],
 }
 
@@ -8513,8 +8512,9 @@ dialog{
   icon = "128",
   skip = "all",
   text = [[
-La Grande Bourse, qui permet
-de transporter jusqu'à 499 rubis.
+La Grande Bourse, qui
+permet de transporter
+jusqu'à 499 rubis.
 ]],
 }
 
@@ -8523,8 +8523,9 @@ dialog{
   icon = "129",
   skip = "all",
   text = [[
-La Bourse de Géant, qui permet
-de transporter jusqu'à 999 rubis
+La Bourse de Géant, qui
+permet de transporter
+jusqu'à 999 rubis
 ]],
 }
 
@@ -8680,8 +8681,8 @@ dialog{
   icon = "152",
   skip = "all",
   text = [[
-Permet de se téléporter au
-centre du Lac Hylia.
+Permet de se téléporter
+au centre du Lac Hylia.
 ]],
 }
 
@@ -8900,6 +8901,24 @@ dialog{
   text = [[
 Une tunique verte,
 rien que pour toi !
+]],
+}
+
+dialog{
+  id = "menus.pause_inventory.tunic_red.1",
+  icon = "110",
+  text = [[
+Une tunique rouge, te
+protégeant du chaud !
+]],
+}
+
+dialog{
+  id = "menus.pause_inventory.tunic_time.1",
+  icon = "110",
+  text = [[
+La tunique du héros du
+temps.
 ]],
 }
 
