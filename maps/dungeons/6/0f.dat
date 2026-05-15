@@ -3611,7 +3611,7 @@ stairs{
 
 stairs{
   layer = -1,
-  x = 152,
+  x = 160,
   y = 1104,
   direction = 0,
   subtype = 4,
@@ -4114,6 +4114,24 @@ sensor{
 
 tile{
   layer = 0,
+  x = 1120,
+  y = 936,
+  width = 24,
+  height = 48,
+  pattern = "wall.3-5",
+}
+
+tile{
+  layer = 0,
+  x = 1000,
+  y = 976,
+  width = 144,
+  height = 24,
+  pattern = "wall.1-5",
+}
+
+tile{
+  layer = 0,
   x = 808,
   y = 1176,
   width = 24,
@@ -4447,7 +4465,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1032,
+  x = 1160,
   y = 936,
   width = 24,
   height = 48,
@@ -4456,9 +4474,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 1032,
+  x = 1160,
   y = 976,
-  width = 208,
+  width = 80,
   height = 24,
   pattern = "wall.1-5",
 }
@@ -5230,15 +5248,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 992,
-  y = 936,
-  width = 24,
-  height = 48,
-  pattern = "wall.3-5",
-}
-
-tile{
-  layer = 0,
   x = 752,
   y = 936,
   width = 24,
@@ -5619,7 +5628,7 @@ tile{
   layer = 0,
   x = 792,
   y = 920,
-  width = 224,
+  width = 352,
   height = 24,
   pattern = "wall.2-5",
 }
@@ -6301,9 +6310,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 1032,
+  x = 1160,
   y = 920,
-  width = 208,
+  width = 80,
   height = 24,
   pattern = "wall.2-5",
 }
@@ -6970,15 +6979,6 @@ tile{
   x = 680,
   y = 976,
   width = 96,
-  height = 24,
-  pattern = "wall.1-5",
-}
-
-tile{
-  layer = 0,
-  x = 1000,
-  y = 976,
-  width = 16,
   height = 24,
   pattern = "wall.1-5",
 }
@@ -10396,7 +10396,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1008,
+  x = 1136,
   y = 984,
   width = 8,
   height = 16,
@@ -10405,7 +10405,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1016,
+  x = 1144,
   y = 984,
   width = 16,
   height = 16,
@@ -10414,7 +10414,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1016,
+  x = 1144,
   y = 920,
   width = 16,
   height = 16,
@@ -10423,7 +10423,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1008,
+  x = 1136,
   y = 920,
   width = 8,
   height = 16,
@@ -10432,7 +10432,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1032,
+  x = 1160,
   y = 920,
   width = 8,
   height = 16,
@@ -10441,7 +10441,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1032,
+  x = 1160,
   y = 984,
   width = 8,
   height = 16,
@@ -10450,7 +10450,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1016,
+  x = 1144,
   y = 936,
   width = 16,
   height = 48,
@@ -13024,15 +13024,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 1784,
-  y = 624,
-  width = 16,
-  height = 32,
-  pattern = "water_pool_ladder.4",
-}
-
-tile{
-  layer = 0,
   x = 1384,
   y = 648,
   width = 16,
@@ -13946,33 +13937,6 @@ tile{
   y = 624,
   width = 96,
   height = 16,
-  pattern = "water",
-}
-
-tile{
-  layer = 0,
-  x = 1552,
-  y = 528,
-  width = 208,
-  height = 64,
-  pattern = "water",
-}
-
-tile{
-  layer = 0,
-  x = 1696,
-  y = 592,
-  width = 64,
-  height = 80,
-  pattern = "water",
-}
-
-tile{
-  layer = 0,
-  x = 1760,
-  y = 608,
-  width = 32,
-  height = 64,
   pattern = "water",
 }
 
@@ -16318,7 +16282,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1168,
+  x = 1176,
   y = 912,
   width = 16,
   height = 32,
@@ -16327,7 +16291,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1104,
+  x = 1112,
   y = 912,
   width = 16,
   height = 32,
@@ -16786,7 +16750,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1608,
+  x = 1624,
   y = 496,
   width = 16,
   height = 32,
@@ -16795,7 +16759,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1656,
+  x = 1672,
   y = 496,
   width = 16,
   height = 32,
@@ -16804,7 +16768,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 1704,
+  x = 1720,
   y = 496,
   width = 16,
   height = 32,
@@ -16854,15 +16818,6 @@ tile{
   width = 16,
   height = 32,
   pattern = "wall_pillar.2-1",
-}
-
-tile{
-  layer = 0,
-  x = 1752,
-  y = 496,
-  width = 16,
-  height = 32,
-  pattern = "wall_pillar.1-1",
 }
 
 tile{
@@ -17151,6 +17106,258 @@ tile{
   width = 16,
   height = 24,
   pattern = "barrier_big.2-1",
+}
+
+tile{
+  layer = 0,
+  x = 928,
+  y = 1056,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 1080,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 736,
+  y = 1224,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 944,
+  y = 1368,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.2",
+}
+
+tile{
+  layer = 0,
+  x = 1080,
+  y = 1184,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 976,
+  y = 1184,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 984,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 1040,
+  y = 920,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.2",
+}
+
+tile{
+  layer = 0,
+  x = 1584,
+  y = 600,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.2",
+}
+
+tile{
+  layer = 0,
+  x = 1584,
+  y = 808,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 1496,
+  y = 704,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 1704,
+  y = 704,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 1368,
+  y = 704,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 1800,
+  y = 704,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 1584,
+  y = 840,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.2",
+}
+
+tile{
+  layer = 0,
+  x = 1584,
+  y = 504,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 872,
+  y = 344,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 816,
+  y = 24,
+  width = 32,
+  height = 16,
+  pattern = "wall_torch.1",
+}
+
+tile{
+  layer = 0,
+  x = 1032,
+  y = 344,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 344,
+  y = 528,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 824,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.3",
+}
+
+tile{
+  layer = 0,
+  x = 600,
+  y = 824,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 888,
+  width = 16,
+  height = 32,
+  pattern = "wall_torch.4",
+}
+
+tile{
+  layer = 0,
+  x = 1752,
+  y = 560,
+  width = 16,
+  height = 32,
+  pattern = "water_pool_ladder.4",
+}
+
+tile{
+  layer = 0,
+  x = 1784,
+  y = 624,
+  width = 16,
+  height = 32,
+  pattern = "water_pool_ladder.4",
+}
+
+tile{
+  layer = 0,
+  x = 1552,
+  y = 528,
+  width = 208,
+  height = 64,
+  pattern = "water",
+}
+
+tile{
+  layer = 0,
+  x = 1696,
+  y = 592,
+  width = 64,
+  height = 80,
+  pattern = "water",
+}
+
+tile{
+  layer = 0,
+  x = 1760,
+  y = 608,
+  width = 32,
+  height = 64,
+  pattern = "water",
 }
 
 sensor{
@@ -17735,7 +17942,7 @@ wall{
 
 wall{
   layer = 0,
-  x = 1016,
+  x = 1144,
   y = 920,
   width = 16,
   height = 16,
@@ -17746,7 +17953,7 @@ wall{
 
 wall{
   layer = 0,
-  x = 1016,
+  x = 1144,
   y = 984,
   width = 16,
   height = 16,
@@ -20145,8 +20352,8 @@ enemy{
 enemy{
   name = "auto_enemy_28",
   layer = 0,
-  x = 880,
-  y = 549,
+  x = 968,
+  y = 789,
   direction = 0,
   breed = "dungeons/bari_blue",
   treasure_name = "random_west",
@@ -20215,7 +20422,7 @@ enemy{
 enemy{
   name = "auto_enemy_35",
   layer = 0,
-  x = 1024,
+  x = 1056,
   y = 653,
   direction = 0,
   breed = "dungeons/tentacle_blue",
@@ -20225,8 +20432,8 @@ enemy{
 enemy{
   name = "auto_enemy_36",
   layer = 0,
-  x = 888,
-  y = 677,
+  x = 784,
+  y = 549,
   direction = 0,
   breed = "dungeons/tentacle_blue",
   treasure_name = "random_west",
@@ -20843,7 +21050,7 @@ sensor{
 sensor{
   name = "dungeon_room_15_6",
   layer = 0,
-  x = 1024,
+  x = 1152,
   y = 957,
   width = 16,
   height = 16,
@@ -21122,7 +21329,7 @@ sensor{
 sensor{
   name = "dungeon_room_28_1",
   layer = 0,
-  x = 1024,
+  x = 1152,
   y = 973,
   width = 16,
   height = 16,
@@ -21191,6 +21398,46 @@ jumper{
   height = 16,
   direction = 4,
   jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 1792,
+  y = 632,
+  width = 8,
+  height = 16,
+  direction = 4,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 1792,
+  y = 808,
+  width = 8,
+  height = 16,
+  direction = 4,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 1384,
+  y = 656,
+  width = 8,
+  height = 16,
+  direction = 0,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 864,
+  y = 296,
+  width = 8,
+  height = 16,
+  direction = 4,
+  jump_length = 32,
 }
 
 tile{
@@ -21510,7 +21757,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 1016,
+  x = 1144,
   y = 976,
   width = 16,
   height = 8,
@@ -21519,7 +21766,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 1016,
+  x = 1144,
   y = 936,
   width = 16,
   height = 8,
@@ -21528,7 +21775,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 1008,
+  x = 1136,
   y = 936,
   width = 32,
   height = 8,
@@ -21537,7 +21784,7 @@ tile{
 
 tile{
   layer = 1,
-  x = 1008,
+  x = 1136,
   y = 976,
   width = 32,
   height = 8,
@@ -22584,7 +22831,7 @@ separator{
   x = 952,
   y = 0,
   width = 16,
-  height = 480,
+  height = 720,
 }
 
 separator{
@@ -22608,9 +22855,9 @@ separator{
 separator{
   name = "auto_separator_9",
   layer = 2,
-  x = 1280,
+  x = 640,
   y = 712,
-  width = 640,
+  width = 1280,
   height = 16,
 }
 

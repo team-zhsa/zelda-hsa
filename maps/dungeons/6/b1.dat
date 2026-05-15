@@ -32,18 +32,18 @@ tile{
 tile{
   layer = -1,
   x = 944,
-  y = 1064,
+  y = 1096,
   width = 8,
-  height = 240,
+  height = 208,
   pattern = "wall_low_border.3-5",
 }
 
 tile{
   layer = -1,
   x = 968,
-  y = 1080,
+  y = 1096,
   width = 8,
-  height = 224,
+  height = 208,
   pattern = "wall_low_border.4-5",
 }
 
@@ -788,16 +788,16 @@ tile{
 tile{
   layer = -1,
   x = 920,
-  y = 1072,
+  y = 1088,
   width = 24,
-  height = 208,
+  height = 192,
   pattern = "wall_low.3-1",
 }
 
 tile{
   layer = -1,
   x = 920,
-  y = 1048,
+  y = 1064,
   width = 24,
   height = 24,
   pattern = "wall_low.corner.1-1",
@@ -806,16 +806,16 @@ tile{
 tile{
   layer = -1,
   x = 976,
-  y = 1072,
+  y = 1088,
   width = 24,
-  height = 208,
+  height = 192,
   pattern = "wall_low.4-1",
 }
 
 tile{
   layer = -1,
   x = 944,
-  y = 1048,
+  y = 1064,
   width = 32,
   height = 24,
   pattern = "wall_low.1-1",
@@ -824,7 +824,7 @@ tile{
 tile{
   layer = -1,
   x = 976,
-  y = 1048,
+  y = 1064,
   width = 24,
   height = 24,
   pattern = "wall_low.corner.2-1",
@@ -941,7 +941,7 @@ tile{
 tile{
   layer = -1,
   x = 952,
-  y = 1072,
+  y = 1088,
   width = 16,
   height = 8,
   pattern = "wall_low_border.1-5",
@@ -950,7 +950,7 @@ tile{
 tile{
   layer = -1,
   x = 944,
-  y = 1072,
+  y = 1088,
   width = 8,
   height = 8,
   pattern = "wall_low_border.corner.1-5",
@@ -959,7 +959,7 @@ tile{
 tile{
   layer = -1,
   x = 968,
-  y = 1072,
+  y = 1088,
   width = 8,
   height = 8,
   pattern = "wall_low_border.corner.2-5",
@@ -1301,7 +1301,7 @@ tile{
 tile{
   layer = -1,
   x = 952,
-  y = 1080,
+  y = 1096,
   width = 16,
   height = 48,
   pattern = "floor_pot",
@@ -1593,7 +1593,7 @@ destructible{
   name = "auto_destructible_2",
   layer = -1,
   x = 960,
-  y = 1093,
+  y = 1109,
   treasure_name = "small_key",
   treasure_savegame_variable = "dungeon_6_b1_27_pot_small_key",
   sprite = "entities/destructibles/vase_skull",
@@ -1605,7 +1605,7 @@ destructible{
   name = "auto_destructible_3",
   layer = -1,
   x = 960,
-  y = 1109,
+  y = 1125,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase_skull",
   destruction_sound = "environment/skull_shatter",
@@ -1616,7 +1616,7 @@ destructible{
   name = "auto_destructible_4",
   layer = -1,
   x = 960,
-  y = 1125,
+  y = 1141,
   treasure_name = "magic_flask",
   sprite = "entities/destructibles/vase_skull",
   destruction_sound = "environment/skull_shatter",
@@ -1647,9 +1647,9 @@ dynamic_tile{
   name = "water_dynamic_0_0_12",
   layer = -1,
   x = 944,
-  y = 1072,
+  y = 1088,
   width = 32,
-  height = 224,
+  height = 208,
   pattern = "water.transparent",
 }
 
@@ -1657,9 +1657,9 @@ dynamic_tile{
   name = "water_dynamic_0_1_12",
   layer = -1,
   x = 936,
-  y = 1064,
+  y = 1080,
   width = 48,
-  height = 224,
+  height = 208,
   pattern = "water.transparent",
 }
 
@@ -1721,6 +1721,22 @@ dynamic_tile{
   width = 48,
   height = 48,
   pattern = "water.transparent",
+}
+
+stairs{
+  layer = -1,
+  x = 848,
+  y = 1280,
+  direction = 1,
+  subtype = 4,
+}
+
+stairs{
+  layer = -1,
+  x = 1040,
+  y = 1336,
+  direction = 3,
+  subtype = 4,
 }
 
 tile{
@@ -2204,7 +2220,7 @@ tile{
   layer = 0,
   x = 776,
   y = 1000,
-  width = 144,
+  width = 224,
   height = 64,
   pattern = "floor_low.6-1",
 }
@@ -11194,9 +11210,9 @@ tile{
 tile{
   layer = 0,
   x = 1000,
-  y = 1048,
+  y = 1064,
   width = 8,
-  height = 56,
+  height = 40,
   pattern = "barrier.2-1",
 }
 
@@ -11310,15 +11326,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 920,
-  y = 1000,
-  width = 80,
-  height = 48,
-  pattern = "floor_low.6-1",
-}
-
-tile{
-  layer = 0,
   x = 784,
   y = 1000,
   width = 352,
@@ -11337,35 +11344,17 @@ tile{
 
 tile{
   layer = 0,
-  x = 912,
-  y = 1040,
-  width = 8,
-  height = 8,
-  pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
   x = 1000,
-  y = 1040,
+  y = 1056,
   width = 8,
   height = 8,
   pattern = "barrier.border-1",
-}
-
-tile{
-  layer = 0,
-  x = 912,
-  y = 1048,
-  width = 8,
-  height = 8,
-  pattern = "barrier.2-1",
 }
 
 tile{
   layer = 0,
   x = 920,
-  y = 1040,
+  y = 1056,
   width = 80,
   height = 8,
   pattern = "barrier.1-1",
@@ -15159,9 +15148,9 @@ dynamic_tile{
   name = "water_dynamic_0_2_5",
   layer = 0,
   x = 928,
-  y = 1056,
+  y = 1072,
   width = 64,
-  height = 224,
+  height = 208,
   pattern = "water.transparent",
 }
 
@@ -15238,10 +15227,10 @@ dynamic_tile{
 
 crystal_block{
   layer = 0,
-  x = 880,
+  x = 872,
   y = 1000,
-  width = 32,
-  height = 16,
+  width = 16,
+  height = 32,
   subtype = 0,
 }
 
@@ -15378,6 +15367,34 @@ dynamic_tile{
   width = 48,
   height = 64,
   pattern = "water.transparent",
+}
+
+crystal_block{
+  layer = 0,
+  x = 888,
+  y = 1016,
+  width = 16,
+  height = 16,
+  subtype = 0,
+}
+
+crystal_block{
+  layer = 0,
+  x = 904,
+  y = 1000,
+  width = 16,
+  height = 32,
+  subtype = 0,
+}
+
+jumper{
+  layer = 0,
+  x = 1000,
+  y = 1112,
+  width = 8,
+  height = 32,
+  direction = 4,
+  jump_length = 40,
 }
 
 tile{

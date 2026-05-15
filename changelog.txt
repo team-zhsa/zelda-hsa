@@ -405,9 +405,10 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	ADD: Added Wallmaster colour variations.
 	ADD: Created a movement for the hero when grabbed by a Wallmaster (#254).
 	ADD: Added item descriptions directly in the inventory (#257).
-	ADD: Added item descriptions in the inventory without pressing action (#257).
 	ADD: Created a movement for the hero when grabbed by a Wallmaster (#254).
 	ADD: Added the time_manager script to minigames.
+	ADD: Added item descriptions in the inventory without pressing action (#257).
+	ADD: Created a movement for the hero when grabbed by a Wallmaster (#254).
 	CHG: Redone Spectral Ganon's sprite (#29).
 	CHG: Changed Spectral Ganon's settings according to the sprite (#29).
 	CHG: Moved the green house in the east of the castle.
@@ -471,6 +472,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	CHG: Redrew the inventory menu for widescreen aspect ratios (#255).
 	CHG: Renamed rod files to "rod_*".
 	CHG: Moved timer manager timer into its own menu to be able to stop it (#261).
+	CHG: Moved timer manager timer into its own menu to be able to stop timers (#261).
 	FIX: Fixed the fairy cave teletransporter in the West Mountains linking to a wrong destination (#130).
 	FIX: Fixed changing stream direction not changing sprite direction in the Water Temple (0F) (#55).
 	FIX: Fixed case sensibility issues (#133).
@@ -535,6 +537,13 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	FIX: Fixed shield appearing in inventory without having them (#258).
 	FIX: Fixed Ballchain Knights being incompatible with the separator manager (#223).
 	FIX: Fixed firebars spawning when using an auto separator (#242)
+	FIX: Fixed Beamos moving back when hit with hookshot (#272).
+	FIX: Fixed softlock when using the ocarina in a dungeon (#270).
+	FIX: Fixed a softlock in the sanctuary (#269).
+	FIX: Fixed the dungeon map not showing (#267).
+	FIX: Fixed walking animation when a dialogue is started if arrow pressed before (#262).
+	FIX: Fixed a crash when using the hylia shield after the sword (#260).
+	FIX: Fixed a wrong parallax tile in I6 (#256).
 	REM: Removed streams disabling for the feather as it caused them to be reset everytime (#133).
 	REM: Removed variant specific tunic, sword and shield hero sprites (#27).
 	REM: Removed the old unused dialogue box script.
@@ -576,7 +585,7 @@ Alpha 1.17 (started 03/05/23) "Needlefish Update":
 	TDO: Fix Stalfos jumping over barrier onto lower layers (#214).
 	TDO: Move the option menus to the escape menu (#229).
 
-Alpha 1.17.1 (//23) "Needlefish Update":
+R1:
 	TDO: Remove *.xcf and *.psd work files from the data files (#169).
 	TDO: Add night entities to maps (#67).
 	TDO: Add hook entities to trees (#103). 
@@ -598,7 +607,7 @@ Alpha 1.17.1 (//23) "Needlefish Update":
 	TDO: Make rod improvement shrines (#224).
 	TDO: Add side quests (#95).
 
-Alpha 1.17.2 (//23) "Needlefish Update":
+R2:
 	TDO: Add maps.
 	TDO: Add food (#20).
 	TDO: Fix Link being able to run on water right after jumping from a cliff (#18).

@@ -13229,7 +13229,7 @@ separator{
   layer = 0,
   x = 320,
   y = 1192,
-  width = 1280,
+  width = 320,
   height = 16,
 }
 
@@ -13638,20 +13638,10 @@ teletransporter{
 }
 
 enemy{
-  name = "auto_enemy_21",
-  layer = 0,
-  x = 1192,
-  y = 1005,
-  direction = 0,
-  breed = "dungeons/bubble_red",
-  treasure_name = "random_west",
-}
-
-enemy{
   name = "auto_enemy_22",
   layer = 0,
-  x = 1088,
-  y = 1157,
+  x = 1016,
+  y = 1069,
   direction = 0,
   breed = "dungeons/bubble_red",
   treasure_name = "random_west",
@@ -15578,6 +15568,15 @@ teletransporter{
   height = 16,
   destination_map = "dungeons/2/b1",
   destination = "from_0f_4",
+}
+
+separator{
+  name = "auto_separator_13",
+  layer = 0,
+  x = -8,
+  y = 1128,
+  width = 320,
+  height = 16,
 }
 
 tile{
