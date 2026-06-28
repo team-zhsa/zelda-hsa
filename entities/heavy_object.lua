@@ -10,6 +10,11 @@ function entity:on_created()
   self:set_traversable_by(false)
 end
 
+-- Tell the hookshot that it can hook to us.
+function entity:is_hookable()
+  return true
+end
+
 function entity:on_interaction()
 
   local lift = tonumber(entity:get_property("lift")) or 2
